@@ -325,11 +325,22 @@ body {
 	text-align: center;
 }
 .body-wrapper {
-	height: 100%;
-	width: 100%;
-	border: 6px solid $color;
-	@include animation(bordercolors $animation-duration $default-easing 0s);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	@include colorAnimation;
+	z-index: -1;
 }
+	.body-white {
+		position: fixed;
+		top: 6px;
+		right: 6px;
+		bottom: 6px;
+		left: 6px;
+		background: white;
+	}
 .flamingo-animation-wrapper {
 	height: 100%;
 	width: 100%;
@@ -355,8 +366,8 @@ body {
 
 	.flamingo {
 		@include inline-block;
-		@include colorAnimation;
 		cursor: pointer;
+		@include colorAnimation;
 		@include transition(transform .3s $default-easing 0s);
 	}
 

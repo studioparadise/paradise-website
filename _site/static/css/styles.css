@@ -2936,13 +2936,29 @@ body {
   text-align: center; }
 
 .body-wrapper {
-  height: 100%;
-  width: 100%;
-  border: 6px solid #f3bcaa;
-  -webkit-animation: bordercolors 15s cubic-bezier(0.77, 0, 0.175, 1) 0s;
-  -moz-animation: bordercolors 15s cubic-bezier(0.77, 0, 0.175, 1) 0s;
-  -o-animation: bordercolors 15s cubic-bezier(0.77, 0, 0.175, 1) 0s;
-  animation: bordercolors 15s cubic-bezier(0.77, 0, 0.175, 1) 0s; }
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-animation: bgcolors 15s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  -moz-animation: bgcolors 15s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  -o-animation: bgcolors 15s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  animation: bgcolors 15s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  z-index: -1; }
+
+.body-white {
+  position: fixed;
+  top: 6px;
+  right: 6px;
+  bottom: 6px;
+  left: 6px;
+  background: white; }
 
 .flamingo-animation-wrapper {
   height: 100%;
@@ -2978,6 +2994,7 @@ body {
   display: inline-block;
   vertical-align: top;
   zoom: 1;
+  cursor: pointer;
   -webkit-animation: bgcolors 15s cubic-bezier(0.77, 0, 0.175, 1) 0s;
   -moz-animation: bgcolors 15s cubic-bezier(0.77, 0, 0.175, 1) 0s;
   -o-animation: bgcolors 15s cubic-bezier(0.77, 0, 0.175, 1) 0s;
@@ -2987,7 +3004,6 @@ body {
   -ms-animation-iteration-count: infinite;
   -o-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
-  cursor: pointer;
   -webkit-transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0s;
   -moz-transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0s;
   -ms-transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0s;
