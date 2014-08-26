@@ -1,0 +1,385 @@
+---
+---
+
+
+
+/* SCSS Mixins */
+@mixin clearfix {
+	&:before,
+	&:after {
+			content: " "; /* 1 */
+			display: table; /* 2 */
+	}
+	&:after {
+			clear: both;
+	}
+
+}
+
+@mixin inline-block {
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: top;
+	zoom: 1;
+}
+
+@mixin transition($x...) {
+	-webkit-transition: $x;
+	-moz-transition: $x;
+	-ms-transition: $x;
+	-o-transition: $x;
+	transition: $x;
+}
+
+@mixin experimental($key, $value...) {
+	-webkit-#{$key}: $value;
+	-moz-#{$key}: $value;
+	-ms-#{$key}: $value;
+	-o-#{$key}: $value;
+	#{$key}: $value;
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}
+
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
+}
+
+
+@include keyframes(slotMachine) {  
+  // slide down / slide back from above.
+  0% {
+    @include experimental(transform, translateY(0));
+    opacity: 1;
+  }
+  49% {
+    @include experimental(transform, translateY(-30px));
+    opacity: 0;
+    @include experimental(animation-timing-function, steps(1, end));
+  }
+  50% {
+    @include experimental(transform, translateY(30px));
+    opacity: 0;
+  }
+  100% {
+    @include experimental(transform, translateY(0));
+    opacity: 1;
+  }
+}
+
+@include keyframes(fadeInDown) {
+  0% {
+    opacity: 0;
+    @include experimental(transform, translate3d(0, -100%, 0));
+  }
+
+  100% {
+    opacity: 1;
+	@include experimental(transform, None);
+  }
+}
+
+@include keyframes(fadeInUp) {
+  0% {
+    opacity: 0;
+    @include experimental(transform, translate3d(0, 100%, 0));
+  }
+
+  100% {
+    opacity: 1;
+	@include experimental(transform, None);
+  }
+}
+
+.animation-slot-machine.animated {
+	@include animation(slotMachine .3s linear 0s);
+}
+
+
+// utils
+@mixin inherit {
+	color: inherit;
+	text-decoration: inherit;
+	&:visited {
+		color: inherit;
+		text-decoration: inherit;
+	}
+}
+
+// simple responsive function. define widths later.
+@mixin responsive($bp) {
+	@if $bp == 'mobile' {
+		@media only screen and (max-width: 900px) {
+			@content;
+		}
+	} @else {
+		@media only screen and (min-width: 900px) {
+			@content;
+		}
+	}
+}
+
+// simple platform based rules like .is-mobile, .is-safari, etc.
+@mixin platform($cls) {
+	.#{$cls} & {
+		@content;
+	}
+}
+
+
+
+
+
+
+// grid system
+$grid_columns: 12;
+$touch-gutter: 20px;
+$desktop-gutter: 80px;
+$mobile-gutter: 20px;
+
+
+
+@mixin container {
+	margin: 0 auto;
+	max-width: 1800px;
+	padding-left: $desktop-gutter;
+	padding-right: $desktop-gutter;
+	clear: both;
+	@include clearfix;
+
+	@include responsive(mobile) {
+		padding-left: $mobile-gutter;
+		padding-right: $mobile-gutter;
+	}
+}
+
+.container {
+	@include container;
+}
+
+.relative {
+	position: relative;
+}
+
+@function calculate-width($col, $grid_columns: $grid_columns) {
+	@return ($col/$grid_columns) * 100%;
+}
+
+@mixin column($col, $grid_columns: $grid_columns) {
+	width: calculate-width($col, $grid_columns);
+	float: left;
+}
+
+@mixin column-no-pad($col, $grid_columns: $grid_columns) {
+	width: calculate-width($col, $grid_columns);
+	float: left;
+}
+
+@mixin isolation-span($col-span, $start) {
+	/*
+	Isolation span: give column span width and start position.
+	*/
+	$start: $start - 1;
+	@include column($col-span);
+	margin-left: calculate-width($start);
+	margin-right: -100%;
+}
+
+@mixin isolation-span-no-pad($col-span, $start) {
+	$start: $start - 1;
+	@include column-no-pad($col-span);
+	margin-left: calculate-width($start); 
+	margin-right: -100%;
+}
+
+@for $i from 1 through 12 {
+	.g#{$i} {
+		@include column($i);
+	}
+	.g#{$i}-no-pad {
+		@include column-no-pad($i);
+	}
+
+	@for $start from 1 through 12 {
+		.isolation-g#{$i}-#{$start} {
+			@include isolation-span($i, $start);
+		}
+		.isolation-g#{$i}-#{$start}-no-pad {
+			@include isolation-span-no-pad($i, $start);
+		}
+	}
+}
+
+@for $grid-columns from 4 through 12 {
+	@for $col from 1 through $grid-columns {
+		.col-#{$col}-#{$grid-columns} {
+			@include column($col, $grid-columns);
+		}
+	}
+}
+
+@mixin row() {
+	@include clearfix;
+	$gutter: -1 * $touch-gutter/2;
+	margin-left: $gutter;
+	margin-right: $gutter;
+}
+.row, .grid {
+	@include row;
+}
+.row-no-pad {
+	@include clearfix;
+}
+
+
+
+// global
+html, body {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	min-height: 100%;
+	min-width: 800px;
+}
+* {
+	@include experimental(box-sizing, border-box);
+	margin: 0;
+}
+
+
+
+$color-1: #f3bcaa;
+$color-2: #b6d7df;
+$color-3: #bed7c3;
+
+$color: $color-1;
+
+@include keyframes(bgcolors) {  
+  // slide down / slide back from above.
+  0% {
+  	background-color: $color-1;
+  }
+  33% {
+  	background-color: $color-2;
+  }
+  66% {
+  	background-color: $color-3;
+  }
+  100% {
+  	background-color: $color-1;
+  }
+}
+@include keyframes(bordercolors) {  
+  // slide down / slide back from above.
+  0% {
+
+  	border-color: $color-1;
+  }
+  33% {
+  	border-color: $color-2;
+  }
+  66% {
+  	border-color: $color-3;
+  }
+  100% {
+  	border-color: $color-1;
+  }
+}
+
+$default-easing: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+$animation-duration: 15s;
+
+@mixin colorAnimation() {
+	@include animation(bgcolors $animation-duration $default-easing 0s);
+	@include experimental(animation-iteration-count, infinite);
+}
+
+
+body {
+	text-align: center;
+}
+.body-wrapper {
+	height: 100%;
+	width: 100%;
+	border: 6px solid $color;
+	@include animation(bordercolors $animation-duration $default-easing 0s);
+}
+.flamingo-animation-wrapper {
+	height: 100%;
+	width: 100%;
+	@include transition(transform 4s $default-easing 0s);
+	&.is-flamingo {
+		// @include experimental(transform, rotate(180deg));
+		@include experimental(transform, rotateX(9720deg));
+
+		.flamingo {
+			@include experimental(transform, rotate(360deg));			
+		}
+	}
+}
+
+.flamingo-wrapper {
+	text-align: center;
+	position: fixed;
+	top: 6px;
+	left: 0;
+	right: 0;
+	z-index: 100;
+}
+
+	.flamingo {
+		@include inline-block;
+		@include colorAnimation;
+		cursor: pointer;
+		@include transition(transform .3s $default-easing 0s);
+	}
+
+.content-wrapper {
+	top: 50%;
+	@include experimental(transform, translateY(-50%));
+	position: relative;
+}
+
+	.content {
+		@include inline-block;
+		@include colorAnimation;
+	}
+
+.footer-wrapper {
+	text-align: center;
+	position: fixed;
+	bottom: 30px;
+	left: 0;
+	right: 0;
+}
+	.footer {
+		@include inline-block;
+		background: $color;
+		@include colorAnimation;
+	}

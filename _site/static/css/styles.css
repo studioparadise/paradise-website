@@ -1,0 +1,3042 @@
+/* SCSS Mixins */
+@-webkit-keyframes slotMachine {
+  0% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; }
+  49% {
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -o-transform: translateY(-30px);
+    transform: translateY(-30px);
+    opacity: 0;
+    -webkit-animation-timing-function: steps(1, end);
+    -moz-animation-timing-function: steps(1, end);
+    -ms-animation-timing-function: steps(1, end);
+    -o-animation-timing-function: steps(1, end);
+    animation-timing-function: steps(1, end); }
+  50% {
+    -webkit-transform: translateY(30px);
+    -moz-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    -o-transform: translateY(30px);
+    transform: translateY(30px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
+@-moz-keyframes slotMachine {
+  0% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; }
+  49% {
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -o-transform: translateY(-30px);
+    transform: translateY(-30px);
+    opacity: 0;
+    -webkit-animation-timing-function: steps(1, end);
+    -moz-animation-timing-function: steps(1, end);
+    -ms-animation-timing-function: steps(1, end);
+    -o-animation-timing-function: steps(1, end);
+    animation-timing-function: steps(1, end); }
+  50% {
+    -webkit-transform: translateY(30px);
+    -moz-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    -o-transform: translateY(30px);
+    transform: translateY(30px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
+@-ms-keyframes slotMachine {
+  0% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; }
+  49% {
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -o-transform: translateY(-30px);
+    transform: translateY(-30px);
+    opacity: 0;
+    -webkit-animation-timing-function: steps(1, end);
+    -moz-animation-timing-function: steps(1, end);
+    -ms-animation-timing-function: steps(1, end);
+    -o-animation-timing-function: steps(1, end);
+    animation-timing-function: steps(1, end); }
+  50% {
+    -webkit-transform: translateY(30px);
+    -moz-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    -o-transform: translateY(30px);
+    transform: translateY(30px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
+@keyframes slotMachine {
+  0% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; }
+  49% {
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -o-transform: translateY(-30px);
+    transform: translateY(-30px);
+    opacity: 0;
+    -webkit-animation-timing-function: steps(1, end);
+    -moz-animation-timing-function: steps(1, end);
+    -ms-animation-timing-function: steps(1, end);
+    -o-animation-timing-function: steps(1, end);
+    animation-timing-function: steps(1, end); }
+  50% {
+    -webkit-transform: translateY(30px);
+    -moz-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    -o-transform: translateY(30px);
+    transform: translateY(30px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    -moz-transform: translate3d(0, -100%, 0);
+    -ms-transform: translate3d(0, -100%, 0);
+    -o-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: None;
+    -moz-transform: None;
+    -ms-transform: None;
+    -o-transform: None;
+    transform: None; } }
+@-moz-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    -moz-transform: translate3d(0, -100%, 0);
+    -ms-transform: translate3d(0, -100%, 0);
+    -o-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: None;
+    -moz-transform: None;
+    -ms-transform: None;
+    -o-transform: None;
+    transform: None; } }
+@-ms-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    -moz-transform: translate3d(0, -100%, 0);
+    -ms-transform: translate3d(0, -100%, 0);
+    -o-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: None;
+    -moz-transform: None;
+    -ms-transform: None;
+    -o-transform: None;
+    transform: None; } }
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    -moz-transform: translate3d(0, -100%, 0);
+    -ms-transform: translate3d(0, -100%, 0);
+    -o-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: None;
+    -moz-transform: None;
+    -ms-transform: None;
+    -o-transform: None;
+    transform: None; } }
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    -moz-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+    -o-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: None;
+    -moz-transform: None;
+    -ms-transform: None;
+    -o-transform: None;
+    transform: None; } }
+@-moz-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    -moz-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+    -o-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: None;
+    -moz-transform: None;
+    -ms-transform: None;
+    -o-transform: None;
+    transform: None; } }
+@-ms-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    -moz-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+    -o-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: None;
+    -moz-transform: None;
+    -ms-transform: None;
+    -o-transform: None;
+    transform: None; } }
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    -moz-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+    -o-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: None;
+    -moz-transform: None;
+    -ms-transform: None;
+    -o-transform: None;
+    transform: None; } }
+.animation-slot-machine.animated {
+  -webkit-animation: slotMachine 0.3s linear 0s;
+  -moz-animation: slotMachine 0.3s linear 0s;
+  -o-animation: slotMachine 0.3s linear 0s;
+  animation: slotMachine 0.3s linear 0s; }
+
+.container {
+  margin: 0 auto;
+  max-width: 1800px;
+  padding-left: 80px;
+  padding-right: 80px;
+  clear: both; }
+  .container:before, .container:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */ }
+  .container:after {
+    clear: both; }
+  @media only screen and (max-width: 900px) {
+    .container {
+      padding-left: 20px;
+      padding-right: 20px; } }
+
+.relative {
+  position: relative; }
+
+.g1 {
+  width: 8.33333%;
+  float: left; }
+
+.g1-no-pad {
+  width: 8.33333%;
+  float: left; }
+
+.isolation-g1-1 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 8.33333%;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%; }
+
+.isolation-g1-1-no-pad {
+  width: 8.33333%;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%; }
+
+.isolation-g1-2 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 8.33333%;
+  float: left;
+  margin-left: 8.33333%;
+  margin-right: -100%; }
+
+.isolation-g1-2-no-pad {
+  width: 8.33333%;
+  float: left;
+  margin-left: 8.33333%;
+  margin-right: -100%; }
+
+.isolation-g1-3 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 8.33333%;
+  float: left;
+  margin-left: 16.66667%;
+  margin-right: -100%; }
+
+.isolation-g1-3-no-pad {
+  width: 8.33333%;
+  float: left;
+  margin-left: 16.66667%;
+  margin-right: -100%; }
+
+.isolation-g1-4 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 8.33333%;
+  float: left;
+  margin-left: 25%;
+  margin-right: -100%; }
+
+.isolation-g1-4-no-pad {
+  width: 8.33333%;
+  float: left;
+  margin-left: 25%;
+  margin-right: -100%; }
+
+.isolation-g1-5 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 8.33333%;
+  float: left;
+  margin-left: 33.33333%;
+  margin-right: -100%; }
+
+.isolation-g1-5-no-pad {
+  width: 8.33333%;
+  float: left;
+  margin-left: 33.33333%;
+  margin-right: -100%; }
+
+.isolation-g1-6 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 8.33333%;
+  float: left;
+  margin-left: 41.66667%;
+  margin-right: -100%; }
+
+.isolation-g1-6-no-pad {
+  width: 8.33333%;
+  float: left;
+  margin-left: 41.66667%;
+  margin-right: -100%; }
+
+.isolation-g1-7 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 8.33333%;
+  float: left;
+  margin-left: 50%;
+  margin-right: -100%; }
+
+.isolation-g1-7-no-pad {
+  width: 8.33333%;
+  float: left;
+  margin-left: 50%;
+  margin-right: -100%; }
+
+.isolation-g1-8 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 8.33333%;
+  float: left;
+  margin-left: 58.33333%;
+  margin-right: -100%; }
+
+.isolation-g1-8-no-pad {
+  width: 8.33333%;
+  float: left;
+  margin-left: 58.33333%;
+  margin-right: -100%; }
+
+.isolation-g1-9 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 8.33333%;
+  float: left;
+  margin-left: 66.66667%;
+  margin-right: -100%; }
+
+.isolation-g1-9-no-pad {
+  width: 8.33333%;
+  float: left;
+  margin-left: 66.66667%;
+  margin-right: -100%; }
+
+.isolation-g1-10 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 8.33333%;
+  float: left;
+  margin-left: 75%;
+  margin-right: -100%; }
+
+.isolation-g1-10-no-pad {
+  width: 8.33333%;
+  float: left;
+  margin-left: 75%;
+  margin-right: -100%; }
+
+.isolation-g1-11 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 8.33333%;
+  float: left;
+  margin-left: 83.33333%;
+  margin-right: -100%; }
+
+.isolation-g1-11-no-pad {
+  width: 8.33333%;
+  float: left;
+  margin-left: 83.33333%;
+  margin-right: -100%; }
+
+.isolation-g1-12 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 8.33333%;
+  float: left;
+  margin-left: 91.66667%;
+  margin-right: -100%; }
+
+.isolation-g1-12-no-pad {
+  width: 8.33333%;
+  float: left;
+  margin-left: 91.66667%;
+  margin-right: -100%; }
+
+.g2 {
+  width: 16.66667%;
+  float: left; }
+
+.g2-no-pad {
+  width: 16.66667%;
+  float: left; }
+
+.isolation-g2-1 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 16.66667%;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%; }
+
+.isolation-g2-1-no-pad {
+  width: 16.66667%;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%; }
+
+.isolation-g2-2 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 16.66667%;
+  float: left;
+  margin-left: 8.33333%;
+  margin-right: -100%; }
+
+.isolation-g2-2-no-pad {
+  width: 16.66667%;
+  float: left;
+  margin-left: 8.33333%;
+  margin-right: -100%; }
+
+.isolation-g2-3 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 16.66667%;
+  float: left;
+  margin-left: 16.66667%;
+  margin-right: -100%; }
+
+.isolation-g2-3-no-pad {
+  width: 16.66667%;
+  float: left;
+  margin-left: 16.66667%;
+  margin-right: -100%; }
+
+.isolation-g2-4 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 16.66667%;
+  float: left;
+  margin-left: 25%;
+  margin-right: -100%; }
+
+.isolation-g2-4-no-pad {
+  width: 16.66667%;
+  float: left;
+  margin-left: 25%;
+  margin-right: -100%; }
+
+.isolation-g2-5 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 16.66667%;
+  float: left;
+  margin-left: 33.33333%;
+  margin-right: -100%; }
+
+.isolation-g2-5-no-pad {
+  width: 16.66667%;
+  float: left;
+  margin-left: 33.33333%;
+  margin-right: -100%; }
+
+.isolation-g2-6 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 16.66667%;
+  float: left;
+  margin-left: 41.66667%;
+  margin-right: -100%; }
+
+.isolation-g2-6-no-pad {
+  width: 16.66667%;
+  float: left;
+  margin-left: 41.66667%;
+  margin-right: -100%; }
+
+.isolation-g2-7 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 16.66667%;
+  float: left;
+  margin-left: 50%;
+  margin-right: -100%; }
+
+.isolation-g2-7-no-pad {
+  width: 16.66667%;
+  float: left;
+  margin-left: 50%;
+  margin-right: -100%; }
+
+.isolation-g2-8 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 16.66667%;
+  float: left;
+  margin-left: 58.33333%;
+  margin-right: -100%; }
+
+.isolation-g2-8-no-pad {
+  width: 16.66667%;
+  float: left;
+  margin-left: 58.33333%;
+  margin-right: -100%; }
+
+.isolation-g2-9 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 16.66667%;
+  float: left;
+  margin-left: 66.66667%;
+  margin-right: -100%; }
+
+.isolation-g2-9-no-pad {
+  width: 16.66667%;
+  float: left;
+  margin-left: 66.66667%;
+  margin-right: -100%; }
+
+.isolation-g2-10 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 16.66667%;
+  float: left;
+  margin-left: 75%;
+  margin-right: -100%; }
+
+.isolation-g2-10-no-pad {
+  width: 16.66667%;
+  float: left;
+  margin-left: 75%;
+  margin-right: -100%; }
+
+.isolation-g2-11 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 16.66667%;
+  float: left;
+  margin-left: 83.33333%;
+  margin-right: -100%; }
+
+.isolation-g2-11-no-pad {
+  width: 16.66667%;
+  float: left;
+  margin-left: 83.33333%;
+  margin-right: -100%; }
+
+.isolation-g2-12 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 16.66667%;
+  float: left;
+  margin-left: 91.66667%;
+  margin-right: -100%; }
+
+.isolation-g2-12-no-pad {
+  width: 16.66667%;
+  float: left;
+  margin-left: 91.66667%;
+  margin-right: -100%; }
+
+.g3 {
+  width: 25%;
+  float: left; }
+
+.g3-no-pad {
+  width: 25%;
+  float: left; }
+
+.isolation-g3-1 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 25%;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%; }
+
+.isolation-g3-1-no-pad {
+  width: 25%;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%; }
+
+.isolation-g3-2 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 25%;
+  float: left;
+  margin-left: 8.33333%;
+  margin-right: -100%; }
+
+.isolation-g3-2-no-pad {
+  width: 25%;
+  float: left;
+  margin-left: 8.33333%;
+  margin-right: -100%; }
+
+.isolation-g3-3 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 25%;
+  float: left;
+  margin-left: 16.66667%;
+  margin-right: -100%; }
+
+.isolation-g3-3-no-pad {
+  width: 25%;
+  float: left;
+  margin-left: 16.66667%;
+  margin-right: -100%; }
+
+.isolation-g3-4 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 25%;
+  float: left;
+  margin-left: 25%;
+  margin-right: -100%; }
+
+.isolation-g3-4-no-pad {
+  width: 25%;
+  float: left;
+  margin-left: 25%;
+  margin-right: -100%; }
+
+.isolation-g3-5 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 25%;
+  float: left;
+  margin-left: 33.33333%;
+  margin-right: -100%; }
+
+.isolation-g3-5-no-pad {
+  width: 25%;
+  float: left;
+  margin-left: 33.33333%;
+  margin-right: -100%; }
+
+.isolation-g3-6 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 25%;
+  float: left;
+  margin-left: 41.66667%;
+  margin-right: -100%; }
+
+.isolation-g3-6-no-pad {
+  width: 25%;
+  float: left;
+  margin-left: 41.66667%;
+  margin-right: -100%; }
+
+.isolation-g3-7 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 25%;
+  float: left;
+  margin-left: 50%;
+  margin-right: -100%; }
+
+.isolation-g3-7-no-pad {
+  width: 25%;
+  float: left;
+  margin-left: 50%;
+  margin-right: -100%; }
+
+.isolation-g3-8 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 25%;
+  float: left;
+  margin-left: 58.33333%;
+  margin-right: -100%; }
+
+.isolation-g3-8-no-pad {
+  width: 25%;
+  float: left;
+  margin-left: 58.33333%;
+  margin-right: -100%; }
+
+.isolation-g3-9 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 25%;
+  float: left;
+  margin-left: 66.66667%;
+  margin-right: -100%; }
+
+.isolation-g3-9-no-pad {
+  width: 25%;
+  float: left;
+  margin-left: 66.66667%;
+  margin-right: -100%; }
+
+.isolation-g3-10 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 25%;
+  float: left;
+  margin-left: 75%;
+  margin-right: -100%; }
+
+.isolation-g3-10-no-pad {
+  width: 25%;
+  float: left;
+  margin-left: 75%;
+  margin-right: -100%; }
+
+.isolation-g3-11 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 25%;
+  float: left;
+  margin-left: 83.33333%;
+  margin-right: -100%; }
+
+.isolation-g3-11-no-pad {
+  width: 25%;
+  float: left;
+  margin-left: 83.33333%;
+  margin-right: -100%; }
+
+.isolation-g3-12 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 25%;
+  float: left;
+  margin-left: 91.66667%;
+  margin-right: -100%; }
+
+.isolation-g3-12-no-pad {
+  width: 25%;
+  float: left;
+  margin-left: 91.66667%;
+  margin-right: -100%; }
+
+.g4 {
+  width: 33.33333%;
+  float: left; }
+
+.g4-no-pad {
+  width: 33.33333%;
+  float: left; }
+
+.isolation-g4-1 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 33.33333%;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%; }
+
+.isolation-g4-1-no-pad {
+  width: 33.33333%;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%; }
+
+.isolation-g4-2 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 33.33333%;
+  float: left;
+  margin-left: 8.33333%;
+  margin-right: -100%; }
+
+.isolation-g4-2-no-pad {
+  width: 33.33333%;
+  float: left;
+  margin-left: 8.33333%;
+  margin-right: -100%; }
+
+.isolation-g4-3 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 33.33333%;
+  float: left;
+  margin-left: 16.66667%;
+  margin-right: -100%; }
+
+.isolation-g4-3-no-pad {
+  width: 33.33333%;
+  float: left;
+  margin-left: 16.66667%;
+  margin-right: -100%; }
+
+.isolation-g4-4 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 33.33333%;
+  float: left;
+  margin-left: 25%;
+  margin-right: -100%; }
+
+.isolation-g4-4-no-pad {
+  width: 33.33333%;
+  float: left;
+  margin-left: 25%;
+  margin-right: -100%; }
+
+.isolation-g4-5 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 33.33333%;
+  float: left;
+  margin-left: 33.33333%;
+  margin-right: -100%; }
+
+.isolation-g4-5-no-pad {
+  width: 33.33333%;
+  float: left;
+  margin-left: 33.33333%;
+  margin-right: -100%; }
+
+.isolation-g4-6 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 33.33333%;
+  float: left;
+  margin-left: 41.66667%;
+  margin-right: -100%; }
+
+.isolation-g4-6-no-pad {
+  width: 33.33333%;
+  float: left;
+  margin-left: 41.66667%;
+  margin-right: -100%; }
+
+.isolation-g4-7 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 33.33333%;
+  float: left;
+  margin-left: 50%;
+  margin-right: -100%; }
+
+.isolation-g4-7-no-pad {
+  width: 33.33333%;
+  float: left;
+  margin-left: 50%;
+  margin-right: -100%; }
+
+.isolation-g4-8 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 33.33333%;
+  float: left;
+  margin-left: 58.33333%;
+  margin-right: -100%; }
+
+.isolation-g4-8-no-pad {
+  width: 33.33333%;
+  float: left;
+  margin-left: 58.33333%;
+  margin-right: -100%; }
+
+.isolation-g4-9 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 33.33333%;
+  float: left;
+  margin-left: 66.66667%;
+  margin-right: -100%; }
+
+.isolation-g4-9-no-pad {
+  width: 33.33333%;
+  float: left;
+  margin-left: 66.66667%;
+  margin-right: -100%; }
+
+.isolation-g4-10 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 33.33333%;
+  float: left;
+  margin-left: 75%;
+  margin-right: -100%; }
+
+.isolation-g4-10-no-pad {
+  width: 33.33333%;
+  float: left;
+  margin-left: 75%;
+  margin-right: -100%; }
+
+.isolation-g4-11 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 33.33333%;
+  float: left;
+  margin-left: 83.33333%;
+  margin-right: -100%; }
+
+.isolation-g4-11-no-pad {
+  width: 33.33333%;
+  float: left;
+  margin-left: 83.33333%;
+  margin-right: -100%; }
+
+.isolation-g4-12 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 33.33333%;
+  float: left;
+  margin-left: 91.66667%;
+  margin-right: -100%; }
+
+.isolation-g4-12-no-pad {
+  width: 33.33333%;
+  float: left;
+  margin-left: 91.66667%;
+  margin-right: -100%; }
+
+.g5 {
+  width: 41.66667%;
+  float: left; }
+
+.g5-no-pad {
+  width: 41.66667%;
+  float: left; }
+
+.isolation-g5-1 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 41.66667%;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%; }
+
+.isolation-g5-1-no-pad {
+  width: 41.66667%;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%; }
+
+.isolation-g5-2 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 41.66667%;
+  float: left;
+  margin-left: 8.33333%;
+  margin-right: -100%; }
+
+.isolation-g5-2-no-pad {
+  width: 41.66667%;
+  float: left;
+  margin-left: 8.33333%;
+  margin-right: -100%; }
+
+.isolation-g5-3 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 41.66667%;
+  float: left;
+  margin-left: 16.66667%;
+  margin-right: -100%; }
+
+.isolation-g5-3-no-pad {
+  width: 41.66667%;
+  float: left;
+  margin-left: 16.66667%;
+  margin-right: -100%; }
+
+.isolation-g5-4 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 41.66667%;
+  float: left;
+  margin-left: 25%;
+  margin-right: -100%; }
+
+.isolation-g5-4-no-pad {
+  width: 41.66667%;
+  float: left;
+  margin-left: 25%;
+  margin-right: -100%; }
+
+.isolation-g5-5 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 41.66667%;
+  float: left;
+  margin-left: 33.33333%;
+  margin-right: -100%; }
+
+.isolation-g5-5-no-pad {
+  width: 41.66667%;
+  float: left;
+  margin-left: 33.33333%;
+  margin-right: -100%; }
+
+.isolation-g5-6 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 41.66667%;
+  float: left;
+  margin-left: 41.66667%;
+  margin-right: -100%; }
+
+.isolation-g5-6-no-pad {
+  width: 41.66667%;
+  float: left;
+  margin-left: 41.66667%;
+  margin-right: -100%; }
+
+.isolation-g5-7 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 41.66667%;
+  float: left;
+  margin-left: 50%;
+  margin-right: -100%; }
+
+.isolation-g5-7-no-pad {
+  width: 41.66667%;
+  float: left;
+  margin-left: 50%;
+  margin-right: -100%; }
+
+.isolation-g5-8 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 41.66667%;
+  float: left;
+  margin-left: 58.33333%;
+  margin-right: -100%; }
+
+.isolation-g5-8-no-pad {
+  width: 41.66667%;
+  float: left;
+  margin-left: 58.33333%;
+  margin-right: -100%; }
+
+.isolation-g5-9 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 41.66667%;
+  float: left;
+  margin-left: 66.66667%;
+  margin-right: -100%; }
+
+.isolation-g5-9-no-pad {
+  width: 41.66667%;
+  float: left;
+  margin-left: 66.66667%;
+  margin-right: -100%; }
+
+.isolation-g5-10 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 41.66667%;
+  float: left;
+  margin-left: 75%;
+  margin-right: -100%; }
+
+.isolation-g5-10-no-pad {
+  width: 41.66667%;
+  float: left;
+  margin-left: 75%;
+  margin-right: -100%; }
+
+.isolation-g5-11 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 41.66667%;
+  float: left;
+  margin-left: 83.33333%;
+  margin-right: -100%; }
+
+.isolation-g5-11-no-pad {
+  width: 41.66667%;
+  float: left;
+  margin-left: 83.33333%;
+  margin-right: -100%; }
+
+.isolation-g5-12 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 41.66667%;
+  float: left;
+  margin-left: 91.66667%;
+  margin-right: -100%; }
+
+.isolation-g5-12-no-pad {
+  width: 41.66667%;
+  float: left;
+  margin-left: 91.66667%;
+  margin-right: -100%; }
+
+.g6 {
+  width: 50%;
+  float: left; }
+
+.g6-no-pad {
+  width: 50%;
+  float: left; }
+
+.isolation-g6-1 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 50%;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%; }
+
+.isolation-g6-1-no-pad {
+  width: 50%;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%; }
+
+.isolation-g6-2 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 50%;
+  float: left;
+  margin-left: 8.33333%;
+  margin-right: -100%; }
+
+.isolation-g6-2-no-pad {
+  width: 50%;
+  float: left;
+  margin-left: 8.33333%;
+  margin-right: -100%; }
+
+.isolation-g6-3 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 50%;
+  float: left;
+  margin-left: 16.66667%;
+  margin-right: -100%; }
+
+.isolation-g6-3-no-pad {
+  width: 50%;
+  float: left;
+  margin-left: 16.66667%;
+  margin-right: -100%; }
+
+.isolation-g6-4 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 50%;
+  float: left;
+  margin-left: 25%;
+  margin-right: -100%; }
+
+.isolation-g6-4-no-pad {
+  width: 50%;
+  float: left;
+  margin-left: 25%;
+  margin-right: -100%; }
+
+.isolation-g6-5 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 50%;
+  float: left;
+  margin-left: 33.33333%;
+  margin-right: -100%; }
+
+.isolation-g6-5-no-pad {
+  width: 50%;
+  float: left;
+  margin-left: 33.33333%;
+  margin-right: -100%; }
+
+.isolation-g6-6 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 50%;
+  float: left;
+  margin-left: 41.66667%;
+  margin-right: -100%; }
+
+.isolation-g6-6-no-pad {
+  width: 50%;
+  float: left;
+  margin-left: 41.66667%;
+  margin-right: -100%; }
+
+.isolation-g6-7 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 50%;
+  float: left;
+  margin-left: 50%;
+  margin-right: -100%; }
+
+.isolation-g6-7-no-pad {
+  width: 50%;
+  float: left;
+  margin-left: 50%;
+  margin-right: -100%; }
+
+.isolation-g6-8 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 50%;
+  float: left;
+  margin-left: 58.33333%;
+  margin-right: -100%; }
+
+.isolation-g6-8-no-pad {
+  width: 50%;
+  float: left;
+  margin-left: 58.33333%;
+  margin-right: -100%; }
+
+.isolation-g6-9 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 50%;
+  float: left;
+  margin-left: 66.66667%;
+  margin-right: -100%; }
+
+.isolation-g6-9-no-pad {
+  width: 50%;
+  float: left;
+  margin-left: 66.66667%;
+  margin-right: -100%; }
+
+.isolation-g6-10 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 50%;
+  float: left;
+  margin-left: 75%;
+  margin-right: -100%; }
+
+.isolation-g6-10-no-pad {
+  width: 50%;
+  float: left;
+  margin-left: 75%;
+  margin-right: -100%; }
+
+.isolation-g6-11 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 50%;
+  float: left;
+  margin-left: 83.33333%;
+  margin-right: -100%; }
+
+.isolation-g6-11-no-pad {
+  width: 50%;
+  float: left;
+  margin-left: 83.33333%;
+  margin-right: -100%; }
+
+.isolation-g6-12 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 50%;
+  float: left;
+  margin-left: 91.66667%;
+  margin-right: -100%; }
+
+.isolation-g6-12-no-pad {
+  width: 50%;
+  float: left;
+  margin-left: 91.66667%;
+  margin-right: -100%; }
+
+.g7 {
+  width: 58.33333%;
+  float: left; }
+
+.g7-no-pad {
+  width: 58.33333%;
+  float: left; }
+
+.isolation-g7-1 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 58.33333%;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%; }
+
+.isolation-g7-1-no-pad {
+  width: 58.33333%;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%; }
+
+.isolation-g7-2 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 58.33333%;
+  float: left;
+  margin-left: 8.33333%;
+  margin-right: -100%; }
+
+.isolation-g7-2-no-pad {
+  width: 58.33333%;
+  float: left;
+  margin-left: 8.33333%;
+  margin-right: -100%; }
+
+.isolation-g7-3 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 58.33333%;
+  float: left;
+  margin-left: 16.66667%;
+  margin-right: -100%; }
+
+.isolation-g7-3-no-pad {
+  width: 58.33333%;
+  float: left;
+  margin-left: 16.66667%;
+  margin-right: -100%; }
+
+.isolation-g7-4 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 58.33333%;
+  float: left;
+  margin-left: 25%;
+  margin-right: -100%; }
+
+.isolation-g7-4-no-pad {
+  width: 58.33333%;
+  float: left;
+  margin-left: 25%;
+  margin-right: -100%; }
+
+.isolation-g7-5 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 58.33333%;
+  float: left;
+  margin-left: 33.33333%;
+  margin-right: -100%; }
+
+.isolation-g7-5-no-pad {
+  width: 58.33333%;
+  float: left;
+  margin-left: 33.33333%;
+  margin-right: -100%; }
+
+.isolation-g7-6 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 58.33333%;
+  float: left;
+  margin-left: 41.66667%;
+  margin-right: -100%; }
+
+.isolation-g7-6-no-pad {
+  width: 58.33333%;
+  float: left;
+  margin-left: 41.66667%;
+  margin-right: -100%; }
+
+.isolation-g7-7 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 58.33333%;
+  float: left;
+  margin-left: 50%;
+  margin-right: -100%; }
+
+.isolation-g7-7-no-pad {
+  width: 58.33333%;
+  float: left;
+  margin-left: 50%;
+  margin-right: -100%; }
+
+.isolation-g7-8 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 58.33333%;
+  float: left;
+  margin-left: 58.33333%;
+  margin-right: -100%; }
+
+.isolation-g7-8-no-pad {
+  width: 58.33333%;
+  float: left;
+  margin-left: 58.33333%;
+  margin-right: -100%; }
+
+.isolation-g7-9 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 58.33333%;
+  float: left;
+  margin-left: 66.66667%;
+  margin-right: -100%; }
+
+.isolation-g7-9-no-pad {
+  width: 58.33333%;
+  float: left;
+  margin-left: 66.66667%;
+  margin-right: -100%; }
+
+.isolation-g7-10 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 58.33333%;
+  float: left;
+  margin-left: 75%;
+  margin-right: -100%; }
+
+.isolation-g7-10-no-pad {
+  width: 58.33333%;
+  float: left;
+  margin-left: 75%;
+  margin-right: -100%; }
+
+.isolation-g7-11 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 58.33333%;
+  float: left;
+  margin-left: 83.33333%;
+  margin-right: -100%; }
+
+.isolation-g7-11-no-pad {
+  width: 58.33333%;
+  float: left;
+  margin-left: 83.33333%;
+  margin-right: -100%; }
+
+.isolation-g7-12 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 58.33333%;
+  float: left;
+  margin-left: 91.66667%;
+  margin-right: -100%; }
+
+.isolation-g7-12-no-pad {
+  width: 58.33333%;
+  float: left;
+  margin-left: 91.66667%;
+  margin-right: -100%; }
+
+.g8 {
+  width: 66.66667%;
+  float: left; }
+
+.g8-no-pad {
+  width: 66.66667%;
+  float: left; }
+
+.isolation-g8-1 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 66.66667%;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%; }
+
+.isolation-g8-1-no-pad {
+  width: 66.66667%;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%; }
+
+.isolation-g8-2 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 66.66667%;
+  float: left;
+  margin-left: 8.33333%;
+  margin-right: -100%; }
+
+.isolation-g8-2-no-pad {
+  width: 66.66667%;
+  float: left;
+  margin-left: 8.33333%;
+  margin-right: -100%; }
+
+.isolation-g8-3 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 66.66667%;
+  float: left;
+  margin-left: 16.66667%;
+  margin-right: -100%; }
+
+.isolation-g8-3-no-pad {
+  width: 66.66667%;
+  float: left;
+  margin-left: 16.66667%;
+  margin-right: -100%; }
+
+.isolation-g8-4 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 66.66667%;
+  float: left;
+  margin-left: 25%;
+  margin-right: -100%; }
+
+.isolation-g8-4-no-pad {
+  width: 66.66667%;
+  float: left;
+  margin-left: 25%;
+  margin-right: -100%; }
+
+.isolation-g8-5 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 66.66667%;
+  float: left;
+  margin-left: 33.33333%;
+  margin-right: -100%; }
+
+.isolation-g8-5-no-pad {
+  width: 66.66667%;
+  float: left;
+  margin-left: 33.33333%;
+  margin-right: -100%; }
+
+.isolation-g8-6 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 66.66667%;
+  float: left;
+  margin-left: 41.66667%;
+  margin-right: -100%; }
+
+.isolation-g8-6-no-pad {
+  width: 66.66667%;
+  float: left;
+  margin-left: 41.66667%;
+  margin-right: -100%; }
+
+.isolation-g8-7 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 66.66667%;
+  float: left;
+  margin-left: 50%;
+  margin-right: -100%; }
+
+.isolation-g8-7-no-pad {
+  width: 66.66667%;
+  float: left;
+  margin-left: 50%;
+  margin-right: -100%; }
+
+.isolation-g8-8 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 66.66667%;
+  float: left;
+  margin-left: 58.33333%;
+  margin-right: -100%; }
+
+.isolation-g8-8-no-pad {
+  width: 66.66667%;
+  float: left;
+  margin-left: 58.33333%;
+  margin-right: -100%; }
+
+.isolation-g8-9 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 66.66667%;
+  float: left;
+  margin-left: 66.66667%;
+  margin-right: -100%; }
+
+.isolation-g8-9-no-pad {
+  width: 66.66667%;
+  float: left;
+  margin-left: 66.66667%;
+  margin-right: -100%; }
+
+.isolation-g8-10 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 66.66667%;
+  float: left;
+  margin-left: 75%;
+  margin-right: -100%; }
+
+.isolation-g8-10-no-pad {
+  width: 66.66667%;
+  float: left;
+  margin-left: 75%;
+  margin-right: -100%; }
+
+.isolation-g8-11 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 66.66667%;
+  float: left;
+  margin-left: 83.33333%;
+  margin-right: -100%; }
+
+.isolation-g8-11-no-pad {
+  width: 66.66667%;
+  float: left;
+  margin-left: 83.33333%;
+  margin-right: -100%; }
+
+.isolation-g8-12 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 66.66667%;
+  float: left;
+  margin-left: 91.66667%;
+  margin-right: -100%; }
+
+.isolation-g8-12-no-pad {
+  width: 66.66667%;
+  float: left;
+  margin-left: 91.66667%;
+  margin-right: -100%; }
+
+.g9 {
+  width: 75%;
+  float: left; }
+
+.g9-no-pad {
+  width: 75%;
+  float: left; }
+
+.isolation-g9-1 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 75%;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%; }
+
+.isolation-g9-1-no-pad {
+  width: 75%;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%; }
+
+.isolation-g9-2 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 75%;
+  float: left;
+  margin-left: 8.33333%;
+  margin-right: -100%; }
+
+.isolation-g9-2-no-pad {
+  width: 75%;
+  float: left;
+  margin-left: 8.33333%;
+  margin-right: -100%; }
+
+.isolation-g9-3 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 75%;
+  float: left;
+  margin-left: 16.66667%;
+  margin-right: -100%; }
+
+.isolation-g9-3-no-pad {
+  width: 75%;
+  float: left;
+  margin-left: 16.66667%;
+  margin-right: -100%; }
+
+.isolation-g9-4 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 75%;
+  float: left;
+  margin-left: 25%;
+  margin-right: -100%; }
+
+.isolation-g9-4-no-pad {
+  width: 75%;
+  float: left;
+  margin-left: 25%;
+  margin-right: -100%; }
+
+.isolation-g9-5 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 75%;
+  float: left;
+  margin-left: 33.33333%;
+  margin-right: -100%; }
+
+.isolation-g9-5-no-pad {
+  width: 75%;
+  float: left;
+  margin-left: 33.33333%;
+  margin-right: -100%; }
+
+.isolation-g9-6 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 75%;
+  float: left;
+  margin-left: 41.66667%;
+  margin-right: -100%; }
+
+.isolation-g9-6-no-pad {
+  width: 75%;
+  float: left;
+  margin-left: 41.66667%;
+  margin-right: -100%; }
+
+.isolation-g9-7 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 75%;
+  float: left;
+  margin-left: 50%;
+  margin-right: -100%; }
+
+.isolation-g9-7-no-pad {
+  width: 75%;
+  float: left;
+  margin-left: 50%;
+  margin-right: -100%; }
+
+.isolation-g9-8 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 75%;
+  float: left;
+  margin-left: 58.33333%;
+  margin-right: -100%; }
+
+.isolation-g9-8-no-pad {
+  width: 75%;
+  float: left;
+  margin-left: 58.33333%;
+  margin-right: -100%; }
+
+.isolation-g9-9 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 75%;
+  float: left;
+  margin-left: 66.66667%;
+  margin-right: -100%; }
+
+.isolation-g9-9-no-pad {
+  width: 75%;
+  float: left;
+  margin-left: 66.66667%;
+  margin-right: -100%; }
+
+.isolation-g9-10 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 75%;
+  float: left;
+  margin-left: 75%;
+  margin-right: -100%; }
+
+.isolation-g9-10-no-pad {
+  width: 75%;
+  float: left;
+  margin-left: 75%;
+  margin-right: -100%; }
+
+.isolation-g9-11 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 75%;
+  float: left;
+  margin-left: 83.33333%;
+  margin-right: -100%; }
+
+.isolation-g9-11-no-pad {
+  width: 75%;
+  float: left;
+  margin-left: 83.33333%;
+  margin-right: -100%; }
+
+.isolation-g9-12 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 75%;
+  float: left;
+  margin-left: 91.66667%;
+  margin-right: -100%; }
+
+.isolation-g9-12-no-pad {
+  width: 75%;
+  float: left;
+  margin-left: 91.66667%;
+  margin-right: -100%; }
+
+.g10 {
+  width: 83.33333%;
+  float: left; }
+
+.g10-no-pad {
+  width: 83.33333%;
+  float: left; }
+
+.isolation-g10-1 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 83.33333%;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%; }
+
+.isolation-g10-1-no-pad {
+  width: 83.33333%;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%; }
+
+.isolation-g10-2 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 83.33333%;
+  float: left;
+  margin-left: 8.33333%;
+  margin-right: -100%; }
+
+.isolation-g10-2-no-pad {
+  width: 83.33333%;
+  float: left;
+  margin-left: 8.33333%;
+  margin-right: -100%; }
+
+.isolation-g10-3 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 83.33333%;
+  float: left;
+  margin-left: 16.66667%;
+  margin-right: -100%; }
+
+.isolation-g10-3-no-pad {
+  width: 83.33333%;
+  float: left;
+  margin-left: 16.66667%;
+  margin-right: -100%; }
+
+.isolation-g10-4 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 83.33333%;
+  float: left;
+  margin-left: 25%;
+  margin-right: -100%; }
+
+.isolation-g10-4-no-pad {
+  width: 83.33333%;
+  float: left;
+  margin-left: 25%;
+  margin-right: -100%; }
+
+.isolation-g10-5 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 83.33333%;
+  float: left;
+  margin-left: 33.33333%;
+  margin-right: -100%; }
+
+.isolation-g10-5-no-pad {
+  width: 83.33333%;
+  float: left;
+  margin-left: 33.33333%;
+  margin-right: -100%; }
+
+.isolation-g10-6 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 83.33333%;
+  float: left;
+  margin-left: 41.66667%;
+  margin-right: -100%; }
+
+.isolation-g10-6-no-pad {
+  width: 83.33333%;
+  float: left;
+  margin-left: 41.66667%;
+  margin-right: -100%; }
+
+.isolation-g10-7 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 83.33333%;
+  float: left;
+  margin-left: 50%;
+  margin-right: -100%; }
+
+.isolation-g10-7-no-pad {
+  width: 83.33333%;
+  float: left;
+  margin-left: 50%;
+  margin-right: -100%; }
+
+.isolation-g10-8 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 83.33333%;
+  float: left;
+  margin-left: 58.33333%;
+  margin-right: -100%; }
+
+.isolation-g10-8-no-pad {
+  width: 83.33333%;
+  float: left;
+  margin-left: 58.33333%;
+  margin-right: -100%; }
+
+.isolation-g10-9 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 83.33333%;
+  float: left;
+  margin-left: 66.66667%;
+  margin-right: -100%; }
+
+.isolation-g10-9-no-pad {
+  width: 83.33333%;
+  float: left;
+  margin-left: 66.66667%;
+  margin-right: -100%; }
+
+.isolation-g10-10 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 83.33333%;
+  float: left;
+  margin-left: 75%;
+  margin-right: -100%; }
+
+.isolation-g10-10-no-pad {
+  width: 83.33333%;
+  float: left;
+  margin-left: 75%;
+  margin-right: -100%; }
+
+.isolation-g10-11 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 83.33333%;
+  float: left;
+  margin-left: 83.33333%;
+  margin-right: -100%; }
+
+.isolation-g10-11-no-pad {
+  width: 83.33333%;
+  float: left;
+  margin-left: 83.33333%;
+  margin-right: -100%; }
+
+.isolation-g10-12 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 83.33333%;
+  float: left;
+  margin-left: 91.66667%;
+  margin-right: -100%; }
+
+.isolation-g10-12-no-pad {
+  width: 83.33333%;
+  float: left;
+  margin-left: 91.66667%;
+  margin-right: -100%; }
+
+.g11 {
+  width: 91.66667%;
+  float: left; }
+
+.g11-no-pad {
+  width: 91.66667%;
+  float: left; }
+
+.isolation-g11-1 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 91.66667%;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%; }
+
+.isolation-g11-1-no-pad {
+  width: 91.66667%;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%; }
+
+.isolation-g11-2 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 91.66667%;
+  float: left;
+  margin-left: 8.33333%;
+  margin-right: -100%; }
+
+.isolation-g11-2-no-pad {
+  width: 91.66667%;
+  float: left;
+  margin-left: 8.33333%;
+  margin-right: -100%; }
+
+.isolation-g11-3 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 91.66667%;
+  float: left;
+  margin-left: 16.66667%;
+  margin-right: -100%; }
+
+.isolation-g11-3-no-pad {
+  width: 91.66667%;
+  float: left;
+  margin-left: 16.66667%;
+  margin-right: -100%; }
+
+.isolation-g11-4 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 91.66667%;
+  float: left;
+  margin-left: 25%;
+  margin-right: -100%; }
+
+.isolation-g11-4-no-pad {
+  width: 91.66667%;
+  float: left;
+  margin-left: 25%;
+  margin-right: -100%; }
+
+.isolation-g11-5 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 91.66667%;
+  float: left;
+  margin-left: 33.33333%;
+  margin-right: -100%; }
+
+.isolation-g11-5-no-pad {
+  width: 91.66667%;
+  float: left;
+  margin-left: 33.33333%;
+  margin-right: -100%; }
+
+.isolation-g11-6 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 91.66667%;
+  float: left;
+  margin-left: 41.66667%;
+  margin-right: -100%; }
+
+.isolation-g11-6-no-pad {
+  width: 91.66667%;
+  float: left;
+  margin-left: 41.66667%;
+  margin-right: -100%; }
+
+.isolation-g11-7 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 91.66667%;
+  float: left;
+  margin-left: 50%;
+  margin-right: -100%; }
+
+.isolation-g11-7-no-pad {
+  width: 91.66667%;
+  float: left;
+  margin-left: 50%;
+  margin-right: -100%; }
+
+.isolation-g11-8 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 91.66667%;
+  float: left;
+  margin-left: 58.33333%;
+  margin-right: -100%; }
+
+.isolation-g11-8-no-pad {
+  width: 91.66667%;
+  float: left;
+  margin-left: 58.33333%;
+  margin-right: -100%; }
+
+.isolation-g11-9 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 91.66667%;
+  float: left;
+  margin-left: 66.66667%;
+  margin-right: -100%; }
+
+.isolation-g11-9-no-pad {
+  width: 91.66667%;
+  float: left;
+  margin-left: 66.66667%;
+  margin-right: -100%; }
+
+.isolation-g11-10 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 91.66667%;
+  float: left;
+  margin-left: 75%;
+  margin-right: -100%; }
+
+.isolation-g11-10-no-pad {
+  width: 91.66667%;
+  float: left;
+  margin-left: 75%;
+  margin-right: -100%; }
+
+.isolation-g11-11 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 91.66667%;
+  float: left;
+  margin-left: 83.33333%;
+  margin-right: -100%; }
+
+.isolation-g11-11-no-pad {
+  width: 91.66667%;
+  float: left;
+  margin-left: 83.33333%;
+  margin-right: -100%; }
+
+.isolation-g11-12 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 91.66667%;
+  float: left;
+  margin-left: 91.66667%;
+  margin-right: -100%; }
+
+.isolation-g11-12-no-pad {
+  width: 91.66667%;
+  float: left;
+  margin-left: 91.66667%;
+  margin-right: -100%; }
+
+.g12 {
+  width: 100%;
+  float: left; }
+
+.g12-no-pad {
+  width: 100%;
+  float: left; }
+
+.isolation-g12-1 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 100%;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%; }
+
+.isolation-g12-1-no-pad {
+  width: 100%;
+  float: left;
+  margin-left: 0%;
+  margin-right: -100%; }
+
+.isolation-g12-2 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 100%;
+  float: left;
+  margin-left: 8.33333%;
+  margin-right: -100%; }
+
+.isolation-g12-2-no-pad {
+  width: 100%;
+  float: left;
+  margin-left: 8.33333%;
+  margin-right: -100%; }
+
+.isolation-g12-3 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 100%;
+  float: left;
+  margin-left: 16.66667%;
+  margin-right: -100%; }
+
+.isolation-g12-3-no-pad {
+  width: 100%;
+  float: left;
+  margin-left: 16.66667%;
+  margin-right: -100%; }
+
+.isolation-g12-4 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 100%;
+  float: left;
+  margin-left: 25%;
+  margin-right: -100%; }
+
+.isolation-g12-4-no-pad {
+  width: 100%;
+  float: left;
+  margin-left: 25%;
+  margin-right: -100%; }
+
+.isolation-g12-5 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 100%;
+  float: left;
+  margin-left: 33.33333%;
+  margin-right: -100%; }
+
+.isolation-g12-5-no-pad {
+  width: 100%;
+  float: left;
+  margin-left: 33.33333%;
+  margin-right: -100%; }
+
+.isolation-g12-6 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 100%;
+  float: left;
+  margin-left: 41.66667%;
+  margin-right: -100%; }
+
+.isolation-g12-6-no-pad {
+  width: 100%;
+  float: left;
+  margin-left: 41.66667%;
+  margin-right: -100%; }
+
+.isolation-g12-7 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 100%;
+  float: left;
+  margin-left: 50%;
+  margin-right: -100%; }
+
+.isolation-g12-7-no-pad {
+  width: 100%;
+  float: left;
+  margin-left: 50%;
+  margin-right: -100%; }
+
+.isolation-g12-8 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 100%;
+  float: left;
+  margin-left: 58.33333%;
+  margin-right: -100%; }
+
+.isolation-g12-8-no-pad {
+  width: 100%;
+  float: left;
+  margin-left: 58.33333%;
+  margin-right: -100%; }
+
+.isolation-g12-9 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 100%;
+  float: left;
+  margin-left: 66.66667%;
+  margin-right: -100%; }
+
+.isolation-g12-9-no-pad {
+  width: 100%;
+  float: left;
+  margin-left: 66.66667%;
+  margin-right: -100%; }
+
+.isolation-g12-10 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 100%;
+  float: left;
+  margin-left: 75%;
+  margin-right: -100%; }
+
+.isolation-g12-10-no-pad {
+  width: 100%;
+  float: left;
+  margin-left: 75%;
+  margin-right: -100%; }
+
+.isolation-g12-11 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 100%;
+  float: left;
+  margin-left: 83.33333%;
+  margin-right: -100%; }
+
+.isolation-g12-11-no-pad {
+  width: 100%;
+  float: left;
+  margin-left: 83.33333%;
+  margin-right: -100%; }
+
+.isolation-g12-12 {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 100%;
+  float: left;
+  margin-left: 91.66667%;
+  margin-right: -100%; }
+
+.isolation-g12-12-no-pad {
+  width: 100%;
+  float: left;
+  margin-left: 91.66667%;
+  margin-right: -100%; }
+
+.col-1-4 {
+  width: 25%;
+  float: left; }
+
+.col-2-4 {
+  width: 50%;
+  float: left; }
+
+.col-3-4 {
+  width: 75%;
+  float: left; }
+
+.col-4-4 {
+  width: 100%;
+  float: left; }
+
+.col-1-5 {
+  width: 20%;
+  float: left; }
+
+.col-2-5 {
+  width: 40%;
+  float: left; }
+
+.col-3-5 {
+  width: 60%;
+  float: left; }
+
+.col-4-5 {
+  width: 80%;
+  float: left; }
+
+.col-5-5 {
+  width: 100%;
+  float: left; }
+
+.col-1-6 {
+  width: 16.66667%;
+  float: left; }
+
+.col-2-6 {
+  width: 33.33333%;
+  float: left; }
+
+.col-3-6 {
+  width: 50%;
+  float: left; }
+
+.col-4-6 {
+  width: 66.66667%;
+  float: left; }
+
+.col-5-6 {
+  width: 83.33333%;
+  float: left; }
+
+.col-6-6 {
+  width: 100%;
+  float: left; }
+
+.col-1-7 {
+  width: 14.28571%;
+  float: left; }
+
+.col-2-7 {
+  width: 28.57143%;
+  float: left; }
+
+.col-3-7 {
+  width: 42.85714%;
+  float: left; }
+
+.col-4-7 {
+  width: 57.14286%;
+  float: left; }
+
+.col-5-7 {
+  width: 71.42857%;
+  float: left; }
+
+.col-6-7 {
+  width: 85.71429%;
+  float: left; }
+
+.col-7-7 {
+  width: 100%;
+  float: left; }
+
+.col-1-8 {
+  width: 12.5%;
+  float: left; }
+
+.col-2-8 {
+  width: 25%;
+  float: left; }
+
+.col-3-8 {
+  width: 37.5%;
+  float: left; }
+
+.col-4-8 {
+  width: 50%;
+  float: left; }
+
+.col-5-8 {
+  width: 62.5%;
+  float: left; }
+
+.col-6-8 {
+  width: 75%;
+  float: left; }
+
+.col-7-8 {
+  width: 87.5%;
+  float: left; }
+
+.col-8-8 {
+  width: 100%;
+  float: left; }
+
+.col-1-9 {
+  width: 11.11111%;
+  float: left; }
+
+.col-2-9 {
+  width: 22.22222%;
+  float: left; }
+
+.col-3-9 {
+  width: 33.33333%;
+  float: left; }
+
+.col-4-9 {
+  width: 44.44444%;
+  float: left; }
+
+.col-5-9 {
+  width: 55.55556%;
+  float: left; }
+
+.col-6-9 {
+  width: 66.66667%;
+  float: left; }
+
+.col-7-9 {
+  width: 77.77778%;
+  float: left; }
+
+.col-8-9 {
+  width: 88.88889%;
+  float: left; }
+
+.col-9-9 {
+  width: 100%;
+  float: left; }
+
+.col-1-10 {
+  width: 10%;
+  float: left; }
+
+.col-2-10 {
+  width: 20%;
+  float: left; }
+
+.col-3-10 {
+  width: 30%;
+  float: left; }
+
+.col-4-10 {
+  width: 40%;
+  float: left; }
+
+.col-5-10 {
+  width: 50%;
+  float: left; }
+
+.col-6-10 {
+  width: 60%;
+  float: left; }
+
+.col-7-10 {
+  width: 70%;
+  float: left; }
+
+.col-8-10 {
+  width: 80%;
+  float: left; }
+
+.col-9-10 {
+  width: 90%;
+  float: left; }
+
+.col-10-10 {
+  width: 100%;
+  float: left; }
+
+.col-1-11 {
+  width: 9.09091%;
+  float: left; }
+
+.col-2-11 {
+  width: 18.18182%;
+  float: left; }
+
+.col-3-11 {
+  width: 27.27273%;
+  float: left; }
+
+.col-4-11 {
+  width: 36.36364%;
+  float: left; }
+
+.col-5-11 {
+  width: 45.45455%;
+  float: left; }
+
+.col-6-11 {
+  width: 54.54545%;
+  float: left; }
+
+.col-7-11 {
+  width: 63.63636%;
+  float: left; }
+
+.col-8-11 {
+  width: 72.72727%;
+  float: left; }
+
+.col-9-11 {
+  width: 81.81818%;
+  float: left; }
+
+.col-10-11 {
+  width: 90.90909%;
+  float: left; }
+
+.col-11-11 {
+  width: 100%;
+  float: left; }
+
+.col-1-12 {
+  width: 8.33333%;
+  float: left; }
+
+.col-2-12 {
+  width: 16.66667%;
+  float: left; }
+
+.col-3-12 {
+  width: 25%;
+  float: left; }
+
+.col-4-12 {
+  width: 33.33333%;
+  float: left; }
+
+.col-5-12 {
+  width: 41.66667%;
+  float: left; }
+
+.col-6-12 {
+  width: 50%;
+  float: left; }
+
+.col-7-12 {
+  width: 58.33333%;
+  float: left; }
+
+.col-8-12 {
+  width: 66.66667%;
+  float: left; }
+
+.col-9-12 {
+  width: 75%;
+  float: left; }
+
+.col-10-12 {
+  width: 83.33333%;
+  float: left; }
+
+.col-11-12 {
+  width: 91.66667%;
+  float: left; }
+
+.col-12-12 {
+  width: 100%;
+  float: left; }
+
+.row, .grid {
+  margin-left: -10px;
+  margin-right: -10px; }
+  .row:before, .row:after, .grid:before, .grid:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */ }
+  .row:after, .grid:after {
+    clear: both; }
+
+.row-no-pad:before, .row-no-pad:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+.row-no-pad:after {
+  clear: both; }
+
+html, body {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  min-height: 100%;
+  min-width: 800px; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0; }
+
+@-webkit-keyframes bgcolors {
+  0% {
+    background-color: #f3bcaa; }
+  33% {
+    background-color: #b6d7df; }
+  66% {
+    background-color: #bed7c3; }
+  100% {
+    background-color: #f3bcaa; } }
+@-moz-keyframes bgcolors {
+  0% {
+    background-color: #f3bcaa; }
+  33% {
+    background-color: #b6d7df; }
+  66% {
+    background-color: #bed7c3; }
+  100% {
+    background-color: #f3bcaa; } }
+@-ms-keyframes bgcolors {
+  0% {
+    background-color: #f3bcaa; }
+  33% {
+    background-color: #b6d7df; }
+  66% {
+    background-color: #bed7c3; }
+  100% {
+    background-color: #f3bcaa; } }
+@keyframes bgcolors {
+  0% {
+    background-color: #f3bcaa; }
+  33% {
+    background-color: #b6d7df; }
+  66% {
+    background-color: #bed7c3; }
+  100% {
+    background-color: #f3bcaa; } }
+@-webkit-keyframes bordercolors {
+  0% {
+    border-color: #f3bcaa; }
+  33% {
+    border-color: #b6d7df; }
+  66% {
+    border-color: #bed7c3; }
+  100% {
+    border-color: #f3bcaa; } }
+@-moz-keyframes bordercolors {
+  0% {
+    border-color: #f3bcaa; }
+  33% {
+    border-color: #b6d7df; }
+  66% {
+    border-color: #bed7c3; }
+  100% {
+    border-color: #f3bcaa; } }
+@-ms-keyframes bordercolors {
+  0% {
+    border-color: #f3bcaa; }
+  33% {
+    border-color: #b6d7df; }
+  66% {
+    border-color: #bed7c3; }
+  100% {
+    border-color: #f3bcaa; } }
+@keyframes bordercolors {
+  0% {
+    border-color: #f3bcaa; }
+  33% {
+    border-color: #b6d7df; }
+  66% {
+    border-color: #bed7c3; }
+  100% {
+    border-color: #f3bcaa; } }
+body {
+  text-align: center; }
+
+.body-wrapper {
+  height: 100%;
+  width: 100%;
+  border: 6px solid #f3bcaa;
+  -webkit-animation: bordercolors 15s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  -moz-animation: bordercolors 15s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  -o-animation: bordercolors 15s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  animation: bordercolors 15s cubic-bezier(0.77, 0, 0.175, 1) 0s; }
+
+.flamingo-animation-wrapper {
+  height: 100%;
+  width: 100%;
+  -webkit-transition: transform 4s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  -moz-transition: transform 4s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  -ms-transition: transform 4s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  -o-transition: transform 4s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  transition: transform 4s cubic-bezier(0.77, 0, 0.175, 1) 0s; }
+  .flamingo-animation-wrapper.is-flamingo {
+    -webkit-transform: rotateX(9720deg);
+    -moz-transform: rotateX(9720deg);
+    -ms-transform: rotateX(9720deg);
+    -o-transform: rotateX(9720deg);
+    transform: rotateX(9720deg); }
+    .flamingo-animation-wrapper.is-flamingo .flamingo {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg); }
+
+.flamingo-wrapper {
+  text-align: center;
+  position: fixed;
+  top: 6px;
+  left: 0;
+  right: 0;
+  z-index: 100; }
+
+.flamingo {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  -webkit-animation: bgcolors 15s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  -moz-animation: bgcolors 15s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  -o-animation: bgcolors 15s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  animation: bgcolors 15s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  cursor: pointer;
+  -webkit-transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  -moz-transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  -ms-transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  -o-transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0s; }
+
+.content-wrapper {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: relative; }
+
+.content {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  -webkit-animation: bgcolors 15s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  -moz-animation: bgcolors 15s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  -o-animation: bgcolors 15s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  animation: bgcolors 15s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
+.footer-wrapper {
+  text-align: center;
+  position: fixed;
+  bottom: 30px;
+  left: 0;
+  right: 0; }
+
+.footer {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  background: #f3bcaa;
+  -webkit-animation: bgcolors 15s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  -moz-animation: bgcolors 15s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  -o-animation: bgcolors 15s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  animation: bgcolors 15s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
