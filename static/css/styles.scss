@@ -347,7 +347,7 @@ body {
 	@include transition(transform 4s $default-easing 0s);
 	&.is-flamingo {
 		// @include experimental(transform, rotate(180deg));
-		@include experimental(transform, rotateX(9720deg));
+		@include experimental(transform, rotateX(1890deg));
 
 		.flamingo {
 			@include experimental(transform, rotate(360deg));			
@@ -362,7 +362,7 @@ body {
 	left: 0;
 	right: 0;
 	z-index: 100;
-	
+
 }
 
 	.flamingo {

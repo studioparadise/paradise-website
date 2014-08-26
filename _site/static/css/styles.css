@@ -2969,11 +2969,11 @@ body {
   -o-transition: transform 4s cubic-bezier(0.77, 0, 0.175, 1) 0s;
   transition: transform 4s cubic-bezier(0.77, 0, 0.175, 1) 0s; }
   .flamingo-animation-wrapper.is-flamingo {
-    -webkit-transform: rotateX(9720deg);
-    -moz-transform: rotateX(9720deg);
-    -ms-transform: rotateX(9720deg);
-    -o-transform: rotateX(9720deg);
-    transform: rotateX(9720deg); }
+    -webkit-transform: rotateX(1890deg);
+    -moz-transform: rotateX(1890deg);
+    -ms-transform: rotateX(1890deg);
+    -o-transform: rotateX(1890deg);
+    transform: rotateX(1890deg); }
     .flamingo-animation-wrapper.is-flamingo .flamingo {
       -webkit-transform: rotate(360deg);
       -moz-transform: rotate(360deg);
