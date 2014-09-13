@@ -404,6 +404,7 @@ body {
 		@include animation(paradise-logo .5s linear 1.5s);
 		@include experimental(animation-fill-mode, forwards);
 		z-index: 11;
+		width: 104px;
 		img {
 			width: 104px;
 		}
@@ -427,10 +428,16 @@ body {
 		@include animation(fadeIn .5s linear 2s);
 		@include experimental(animation-fill-mode, forwards);
 		z-index: 11;
+		img {
+			width: 521px;
+		}
 	}
 	.paradise-intro.mobile {
 		display: none;
 		width: 200px;
+		img {
+			width: 200px;
+		}
 		margin-left: (-200px/2);
 		margin-top: (-180px/2);
 	}
