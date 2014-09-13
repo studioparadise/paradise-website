@@ -3148,6 +3148,12 @@ body {
   -o-animation-fill-mode: forwards;
   animation-fill-mode: forwards; }
 
+.paradise-intro.mobile {
+  display: none;
+  width: 200px;
+  margin-left: -100px;
+  margin-top: -90px; }
+
 @-webkit-keyframes paradise-contact {
   0% {
     opacity: 0;
@@ -3228,3 +3234,10 @@ body {
   z-index: 11; }
   .paradise-contact img {
     width: 120px; }
+
+@media only screen and (max-width: 320px) {
+  .paradise-intro {
+    display: none; }
+
+  .paradise-intro.mobile {
+    display: block; } }

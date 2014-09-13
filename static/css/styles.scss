@@ -423,6 +423,13 @@ body {
 		opacity: 0;
 		@include animation(fadeIn .5s linear 2s);
 		@include experimental(animation-fill-mode, forwards);
+
+	}
+	.paradise-intro.mobile {
+		display: none;
+		width: 200px;
+		margin-left: (-200px/2);
+		margin-top: (-180px/2);
 	}
 	@include keyframes(paradise-contact) {
 		0% {
@@ -449,3 +456,18 @@ body {
 			width: 120px;
 		}
 	}
+
+
+
+
+
+
+// responsive
+@media only screen and (max-width: 320px) {
+	.paradise-intro {
+		display: none;
+	}
+	.paradise-intro.mobile {
+		display: block;
+	}
+}
