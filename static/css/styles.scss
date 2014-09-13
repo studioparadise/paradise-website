@@ -353,7 +353,8 @@ body {
 	background: black;
 
 }
-
+		
+	$baseTime: 1.5s;
 	.intro-splash {
 		position: fixed;
 		top: 0;
@@ -362,7 +363,7 @@ body {
 		bottom: 0;
 		background: black;
 		z-index: 9;
-		@include animation(fadeOut .5s $default-easing 2s);
+		@include animation(fadeOut .5s $default-easing 1.5s);
 		@include experimental(animation-fill-mode, forwards);
 	}
 		.intro-loading-bar {
@@ -401,7 +402,7 @@ body {
 		width: 104px;
 		margin-left: (-104px/2);
 		opacity: 0;
-		@include animation(paradise-logo .5s linear 2.5s);
+		@include animation(paradise-logo .5s linear 1.5s);
 		@include experimental(animation-fill-mode, forwards);
 	}
 	@include keyframes(fadeIn) {  
@@ -420,7 +421,7 @@ body {
 		width: 521px;
 		margin-left: (-521px/2);
 		opacity: 0;
-		@include animation(fadeIn .5s linear 2.8s);
+		@include animation(fadeIn .5s linear 1.8s);
 		@include experimental(animation-fill-mode, forwards);
 	}
 	@include keyframes(paradise-contact) {
@@ -441,9 +442,9 @@ body {
 		left: 0;
 		right: 0;
 		opacity: 0;
-		@include animation(paradise-contact .5s linear 2.8s);
+		@include animation(paradise-contact .5s linear 1.8s);
 		@include experimental(animation-fill-mode, forwards);
-
+		z-index: 11;
 		img {
 			width: 120px;
 		}
