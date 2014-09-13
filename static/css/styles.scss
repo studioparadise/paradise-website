@@ -312,6 +312,33 @@ $color: $color-1;
   }
 }
 
+@include keyframes(width) {  
+  // slide down / slide back from above.
+  0% {
+  	width: 0%;
+  }
+  100% {
+  	width: 100%;
+  }
+}
+
+
+@include keyframes(fadeOut) {  
+  // slide down / slide back from above.
+  0% {
+  	opacity: 1;
+  }
+  99% {
+  	opacity: 0;
+  }
+  100% {
+  	opacity: 0;
+  	display: none;
+  	pointer-events: none;
+  }
+}
+
+
 $default-easing: cubic-bezier(0.770, 0.000, 0.175, 1.000);
 $animation-duration: 15s;
 
@@ -323,75 +350,101 @@ $animation-duration: 15s;
 
 body {
 	text-align: center;
-}
-.body-wrapper {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	@include colorAnimation;
-	z-index: -1;
-}
-	.body-white {
-		position: fixed;
-		top: 6px;
-		right: 6px;
-		bottom: 6px;
-		left: 6px;
-		background: white;
-	}
-.flamingo-animation-wrapper {
-	height: 100%;
-	width: 100%;
-	@include transition(transform 4s $default-easing 0s);
-	&.is-flamingo {
-		// @include experimental(transform, rotate(180deg));
-		@include experimental(transform, rotateX(1890deg));
+	background: black;
 
-		.flamingo {
-			@include experimental(transform, rotate(360deg));			
+}
+
+	.intro-splash {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: black;
+		z-index: 9;
+		@include animation(fadeOut .5s $default-easing 2s);
+		@include experimental(animation-fill-mode, forwards);
+	}
+		.intro-loading-bar {
+			bottom: 0;
+			left: 0;
+			position: fixed;
+			height: 6px;
+			background: white;
+			z-index: 10;
+			@include animation(width 2s $default-easing 0s);
+			@include experimental(animation-fill-mode, forwards);
+		}
+		.intro-logo {
+			width: 172px;
+			position: absolute;
+			left: 50%;
+			top: 45%;
+			margin-left: (-172px/2);
+		}
+
+
+	@include keyframes(paradise-logo) {  
+		0% {
+			@include experimental(transform, translateY(-20px));
+			opacity: 0;
+		}
+		100% {
+			@include experimental(transform, translateY(0px));
+			opacity: 1;
 		}
 	}
-}
-
-.flamingo-wrapper {
-	text-align: center;
-	position: fixed;
-	top: 6px;
-	left: 0;
-	right: 0;
-	z-index: 100;
-
-}
-
-	.flamingo {
-		@include inline-block;
-		cursor: pointer;
-		@include colorAnimation;
-		@include transition(transform .3s $default-easing 0s);
+	.paradise-logo {
+		position: fixed;
+		top: 60px;
+		left: 50%;
+		width: 104px;
+		margin-left: (-104px/2);
+		opacity: 0;
+		@include animation(paradise-logo .5s linear 2.5s);
+		@include experimental(animation-fill-mode, forwards);
 	}
-
-.content-wrapper {
-	top: 50%;
-	@include experimental(transform, translateY(-50%));
-	position: relative;
-}
-
-	.content {
-		@include inline-block;
-		@include colorAnimation;
+	@include keyframes(fadeIn) {  
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
 	}
+	.paradise-intro {
+		position: fixed;
+		top: 50%;
+		margin-top: -50px;
+		left: 50%;
+		width: 521px;
+		margin-left: (-521px/2);
+		opacity: 0;
+		@include animation(fadeIn .5s linear 2.8s);
+		@include experimental(animation-fill-mode, forwards);
+	}
+	@include keyframes(paradise-contact) {
+		0% {
+			opacity: 0;
+			@include experimental(transform, translateY(-5px));
+		}
+		100% {
+			opacity: 1;
+			@include experimental(transform, translateY(0px));
+		}
+	}
+	.paradise-contact {
+		position: fixed;
+		bottom: 60px;
+		width: 100%;
+		text-align: center;
+		left: 0;
+		right: 0;
+		opacity: 0;
+		@include animation(paradise-contact .5s linear 2.8s);
+		@include experimental(animation-fill-mode, forwards);
 
-.footer-wrapper {
-	text-align: center;
-	position: fixed;
-	bottom: 30px;
-	left: 0;
-	right: 0;
-}
-	.footer {
-		@include inline-block;
-		background: $color;
-		@include colorAnimation;
+		img {
+			width: 120px;
+		}
 	}
