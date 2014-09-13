@@ -265,7 +265,7 @@ html, body {
 	margin: 0;
 	text-align: center;
 	min-height: 100%;
-	min-width: 800px;
+	// min-width: 600px;
 }
 * {
 	@include experimental(box-sizing, border-box);
@@ -421,7 +421,7 @@ body {
 		width: 521px;
 		margin-left: (-521px/2);
 		opacity: 0;
-		@include animation(fadeIn .5s linear 1.8s);
+		@include animation(fadeIn .5s linear 2s);
 		@include experimental(animation-fill-mode, forwards);
 	}
 	@include keyframes(paradise-contact) {
@@ -442,7 +442,7 @@ body {
 		left: 0;
 		right: 0;
 		opacity: 0;
-		@include animation(paradise-contact .5s linear 1.8s);
+		@include animation(paradise-contact .5s linear 2s);
 		@include experimental(animation-fill-mode, forwards);
 		z-index: 11;
 		img {
