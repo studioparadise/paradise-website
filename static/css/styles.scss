@@ -471,3 +471,22 @@ body {
 		display: block;
 	}
 }
+
+// iphone landscape
+@media only screen 
+and (min-device-width : 320px)
+and (max-device-width : 568px) 
+and (orientation : landscape) {
+	.paradise-intro {
+		display: none !important;
+	}
+	.paradise-contact {
+		bottom: 20px;
+	}
+	.paradise-logo {
+		top: 20px;
+	}
+	body {
+		height: 600px;
+	}
+}
