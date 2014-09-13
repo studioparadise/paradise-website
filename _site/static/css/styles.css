@@ -3097,7 +3097,6 @@ body {
   position: fixed;
   top: 60px;
   left: 50%;
-  width: 104px;
   margin-left: -52px;
   opacity: 0;
   -webkit-animation: paradise-logo 0.5s linear 1.5s;
@@ -3108,7 +3107,10 @@ body {
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards; }
+  animation-fill-mode: forwards;
+  z-index: 11; }
+  .paradise-logo img {
+    width: 104px; }
 
 @-webkit-keyframes fadeIn {
   0% {
@@ -3146,7 +3148,8 @@ body {
   -moz-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards; }
+  animation-fill-mode: forwards;
+  z-index: 11; }
 
 .paradise-intro.mobile {
   display: none;

@@ -399,11 +399,14 @@ body {
 		position: fixed;
 		top: 60px;
 		left: 50%;
-		width: 104px;
 		margin-left: (-104px/2);
 		opacity: 0;
 		@include animation(paradise-logo .5s linear 1.5s);
 		@include experimental(animation-fill-mode, forwards);
+		z-index: 11;
+		img {
+			width: 104px;
+		}
 	}
 	@include keyframes(fadeIn) {  
 		0% {
@@ -423,7 +426,7 @@ body {
 		opacity: 0;
 		@include animation(fadeIn .5s linear 2s);
 		@include experimental(animation-fill-mode, forwards);
-
+		z-index: 11;
 	}
 	.paradise-intro.mobile {
 		display: none;
