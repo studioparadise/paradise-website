@@ -41,7 +41,7 @@
 
 @mixin keyframes($name) {
   @-webkit-keyframes #{$name} {
-    @content; 
+    @content;
   }
   @-moz-keyframes #{$name} {
     @content;
@@ -51,7 +51,7 @@
   }
   @keyframes #{$name} {
     @content;
-  } 
+  }
 }
 
 @mixin animation($animate...) {
@@ -72,7 +72,7 @@
 }
 
 
-@include keyframes(slotMachine) {  
+@include keyframes(slotMachine) {
   // slide down / slide back from above.
   0% {
     @include experimental(transform, translateY(0));
@@ -214,7 +214,7 @@ $mobile-gutter: 20px;
 @mixin isolation-span-no-pad($col-span, $start) {
 	$start: $start - 1;
 	@include column-no-pad($col-span);
-	margin-left: calculate-width($start); 
+	margin-left: calculate-width($start);
 	margin-right: -100%;
 }
 
@@ -280,7 +280,7 @@ $color-3: #bed7c3;
 
 $color: $color-1;
 
-@include keyframes(bgcolors) {  
+@include keyframes(bgcolors) {
   // slide down / slide back from above.
   0% {
   	background-color: $color-1;
@@ -295,7 +295,7 @@ $color: $color-1;
   	background-color: $color-1;
   }
 }
-@include keyframes(bordercolors) {  
+@include keyframes(bordercolors) {
   // slide down / slide back from above.
   0% {
 
@@ -312,7 +312,7 @@ $color: $color-1;
   }
 }
 
-@include keyframes(width) {  
+@include keyframes(width) {
   // slide down / slide back from above.
   0% {
   	width: 0%;
@@ -323,7 +323,7 @@ $color: $color-1;
 }
 
 
-@include keyframes(fadeOut) {  
+@include keyframes(fadeOut) {
   // slide down / slide back from above.
   0% {
   	opacity: 1;
@@ -353,7 +353,7 @@ body {
 	background: black;
 
 }
-		
+
 	$baseTime: 1.5s;
 	.intro-splash {
 		position: fixed;
@@ -385,7 +385,7 @@ body {
 		}
 
 
-	@include keyframes(paradise-logo) {  
+	@include keyframes(paradise-logo) {
 		0% {
 			@include experimental(transform, translateY(-20px));
 			opacity: 0;
@@ -409,7 +409,7 @@ body {
 			width: 104px;
 		}
 	}
-	@include keyframes(fadeIn) {  
+	@include keyframes(fadeIn) {
 		0% {
 			opacity: 0;
 		}
@@ -418,18 +418,20 @@ body {
 		}
 	}
 	.paradise-intro {
+		padding: 20px;
 		position: fixed;
 		top: 50%;
 		margin-top: -50px;
-		left: 50%;
-		width: 521px;
-		margin-left: (-521px/2);
+		width: 100%;
+		left: 0;
+		right: 0;
 		opacity: 0;
 		@include animation(fadeIn .5s linear 2s);
 		@include experimental(animation-fill-mode, forwards);
 		z-index: 11;
 		img {
-			width: 521px;
+			max-width: 520px;
+			width: 100%;
 		}
 	}
 	.paradise-intro.mobile {
@@ -462,6 +464,13 @@ body {
 		@include animation(paradise-contact .5s linear 2s);
 		@include experimental(animation-fill-mode, forwards);
 		z-index: 11;
+		font-family: calibre, sans-serif;
+		color: white;
+		text-decoration: none;
+		line-height: 22px;
+		font-weight: 100;
+		font-size: 16px;
+
 		img {
 			width: 120px;
 		}
@@ -483,9 +492,9 @@ body {
 }
 
 // iphone landscape
-@media only screen 
+@media only screen
 and (min-device-width : 320px)
-and (max-device-width : 568px) 
+and (max-device-width : 568px)
 and (orientation : landscape) {
 	.paradise-intro {
 		display: none !important;

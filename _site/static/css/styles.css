@@ -3134,12 +3134,13 @@ body {
   100% {
     opacity: 1; } }
 .paradise-intro {
+  padding: 20px;
   position: fixed;
   top: 50%;
   margin-top: -50px;
-  left: 50%;
-  width: 521px;
-  margin-left: -260.5px;
+  width: 100%;
+  left: 0;
+  right: 0;
   opacity: 0;
   -webkit-animation: fadeIn 0.5s linear 2s;
   -moz-animation: fadeIn 0.5s linear 2s;
@@ -3152,7 +3153,8 @@ body {
   animation-fill-mode: forwards;
   z-index: 11; }
   .paradise-intro img {
-    width: 521px; }
+    max-width: 520px;
+    width: 100%; }
 
 .paradise-intro.mobile {
   display: none;
@@ -3239,7 +3241,13 @@ body {
   -ms-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  z-index: 11; }
+  z-index: 11;
+  font-family: calibre, sans-serif;
+  color: white;
+  text-decoration: none;
+  line-height: 22px;
+  font-weight: 100;
+  font-size: 16px; }
   .paradise-contact img {
     width: 120px; }
 
