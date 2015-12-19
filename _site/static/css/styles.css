@@ -6,6 +6,10 @@
   font-family: 'Calibre';
   font-weight: 500;
   src: url("/static/fonts/CalibreWeb-Semibold.eot?") format("eot"), url("/static/fonts/CalibreWeb-Semibold.woff") format("woff"); }
+@font-face {
+  font-family: 'Domaine';
+  font-weight: normal;
+  src: url("/static/fonts/DomaineDisplayCondensedWeb-Medium.eot?") format("eot"), url("/static/fonts/DomaineDisplayCondensedWeb-Medium.woff") format("woff"); }
 /* SCSS Mixins */
 @-webkit-keyframes slotMachine {
   0% {
@@ -2857,8 +2861,7 @@ html, body {
   padding: 0;
   margin: 0;
   text-align: left;
-  min-height: 100%;
-  font-family: "Calibre", sans-serif; }
+  min-height: 100%; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -2997,6 +3000,7 @@ html, body {
     display: none;
     pointer-events: none; } }
 body {
+  font-family: "Calibre", sans-serif;
   text-align: left;
   background: black;
   color: white; }
@@ -3038,10 +3042,12 @@ body {
 .paradise-hello {
   position: absolute;
   bottom: 0;
-  right: 0; }
+  right: 0;
+  font-family: "Domaine", sans-serif;
+  font-size: 20px; }
   .paradise-hello a {
     color: white;
-    text-decoration: underline; }
+    text-decoration: none; }
 
 .paradise-body {
   margin-bottom: 80px;
@@ -3082,6 +3088,16 @@ body {
 .email {
   width: 50%;
   float: left; }
+
+.email__input {
+  background: transparent;
+  -webkit-appearance: none;
+  font-size: 20px;
+  font-family: "Domaine", sans-serif;
+  color: white;
+  border: none;
+  padding-bottom: 5px;
+  border-bottom: 1px solid white; }
 
 .social {
   width: 50%;
