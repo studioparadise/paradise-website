@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Calibre';
+  font-weight: normal;
+  src: url("/static/fonts/CalibreWeb-Light.eot?") format("eot"), url("/static/fonts/CalibreWeb-Light.woff") format("woff"); }
+@font-face {
+  font-family: 'Calibre';
+  font-weight: 500;
+  src: url("/static/fonts/CalibreWeb-Semibold.eot?") format("eot"), url("/static/fonts/CalibreWeb-Semibold.woff") format("woff"); }
 /* SCSS Mixins */
 @-webkit-keyframes slotMachine {
   0% {
@@ -2848,8 +2856,9 @@
 html, body {
   padding: 0;
   margin: 0;
-  text-align: center;
-  min-height: 100%; }
+  text-align: left;
+  min-height: 100%;
+  font-family: "Calibre", sans-serif; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -2988,284 +2997,92 @@ html, body {
     display: none;
     pointer-events: none; } }
 body {
-  text-align: center;
-  background: black; }
-
-.intro-splash {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  text-align: left;
   background: black;
-  z-index: 9;
-  -webkit-animation: fadeOut 0.5s cubic-bezier(0.77, 0, 0.175, 1) 1.5s;
-  -moz-animation: fadeOut 0.5s cubic-bezier(0.77, 0, 0.175, 1) 1.5s;
-  -o-animation: fadeOut 0.5s cubic-bezier(0.77, 0, 0.175, 1) 1.5s;
-  animation: fadeOut 0.5s cubic-bezier(0.77, 0, 0.175, 1) 1.5s;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards; }
+  color: white; }
 
-.intro-loading-bar {
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  height: 6px;
-  background: white;
-  z-index: 10;
-  -webkit-animation: width 2s cubic-bezier(0.77, 0, 0.175, 1) 0s;
-  -moz-animation: width 2s cubic-bezier(0.77, 0, 0.175, 1) 0s;
-  -o-animation: width 2s cubic-bezier(0.77, 0, 0.175, 1) 0s;
-  animation: width 2s cubic-bezier(0.77, 0, 0.175, 1) 0s;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards; }
+.container {
+  padding: 40px; }
 
-.intro-logo {
-  width: 172px;
-  position: absolute;
-  left: 50%;
-  top: 45%;
-  margin-left: -86px; }
+.splash-marquee {
+  position: relative; }
+  .splash-marquee .swiper-wrapper {
+    height: auto; }
+  .splash-marquee .swiper-slide {
+    height: 400px;
+    padding-bottom: 35%;
+    background: rgba(255, 255, 255, 0.1); }
+  .splash-marquee .swiper-scrollbar {
+    height: 7px;
+    background: transparent;
+    left: 0;
+    right: 0;
+    width: 100%;
+    bottom: 0;
+    border-radius: 0;
+    cursor: pointer; }
+  .splash-marquee .swiper-scrollbar-drag {
+    background: white;
+    border-radius: 0;
+    cursor: move; }
 
-@-webkit-keyframes paradise-logo {
-  0% {
-    -webkit-transform: translateY(-20px);
-    -moz-transform: translateY(-20px);
-    -ms-transform: translateY(-20px);
-    -o-transform: translateY(-20px);
-    transform: translateY(-20px);
-    opacity: 0; }
-  100% {
-    -webkit-transform: translateY(0px);
-    -moz-transform: translateY(0px);
-    -ms-transform: translateY(0px);
-    -o-transform: translateY(0px);
-    transform: translateY(0px);
-    opacity: 1; } }
-@-moz-keyframes paradise-logo {
-  0% {
-    -webkit-transform: translateY(-20px);
-    -moz-transform: translateY(-20px);
-    -ms-transform: translateY(-20px);
-    -o-transform: translateY(-20px);
-    transform: translateY(-20px);
-    opacity: 0; }
-  100% {
-    -webkit-transform: translateY(0px);
-    -moz-transform: translateY(0px);
-    -ms-transform: translateY(0px);
-    -o-transform: translateY(0px);
-    transform: translateY(0px);
-    opacity: 1; } }
-@-ms-keyframes paradise-logo {
-  0% {
-    -webkit-transform: translateY(-20px);
-    -moz-transform: translateY(-20px);
-    -ms-transform: translateY(-20px);
-    -o-transform: translateY(-20px);
-    transform: translateY(-20px);
-    opacity: 0; }
-  100% {
-    -webkit-transform: translateY(0px);
-    -moz-transform: translateY(0px);
-    -ms-transform: translateY(0px);
-    -o-transform: translateY(0px);
-    transform: translateY(0px);
-    opacity: 1; } }
-@keyframes paradise-logo {
-  0% {
-    -webkit-transform: translateY(-20px);
-    -moz-transform: translateY(-20px);
-    -ms-transform: translateY(-20px);
-    -o-transform: translateY(-20px);
-    transform: translateY(-20px);
-    opacity: 0; }
-  100% {
-    -webkit-transform: translateY(0px);
-    -moz-transform: translateY(0px);
-    -ms-transform: translateY(0px);
-    -o-transform: translateY(0px);
-    transform: translateY(0px);
-    opacity: 1; } }
-.paradise-logo {
-  position: fixed;
-  top: 60px;
-  left: 50%;
-  margin-left: -52px;
-  opacity: 0;
-  -webkit-animation: paradise-logo 0.5s linear 1.5s;
-  -moz-animation: paradise-logo 0.5s linear 1.5s;
-  -o-animation: paradise-logo 0.5s linear 1.5s;
-  animation: paradise-logo 0.5s linear 1.5s;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  z-index: 11;
-  width: 104px; }
-  .paradise-logo img {
-    width: 104px; }
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-@-moz-keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-@-ms-keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-@keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
 .paradise-intro {
-  padding: 20px;
-  position: fixed;
-  top: 50%;
-  margin-top: -50px;
-  width: 100%;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  -webkit-animation: fadeIn 0.5s linear 2s;
-  -moz-animation: fadeIn 0.5s linear 2s;
-  -o-animation: fadeIn 0.5s linear 2s;
-  animation: fadeIn 0.5s linear 2s;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  z-index: 11; }
-  .paradise-intro img {
-    max-width: 520px;
-    width: 100%; }
+  margin-top: 40px;
+  margin-bottom: 80px;
+  position: relative; }
+  .paradise-intro.is-sticky .paradise-hello {
+    position: fixed;
+    top: 100px;
+    right: 40px; }
 
-.paradise-intro.mobile {
-  display: none;
-  width: 200px;
-  margin-left: -100px;
-  margin-top: -110px; }
-  .paradise-intro.mobile img {
-    width: 200px; }
+.paradise-hello {
+  position: absolute;
+  bottom: 0;
+  right: 0; }
+  .paradise-hello a {
+    color: white;
+    text-decoration: underline; }
 
-@-webkit-keyframes paradise-contact {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-5px);
-    -moz-transform: translateY(-5px);
-    -ms-transform: translateY(-5px);
-    -o-transform: translateY(-5px);
-    transform: translateY(-5px); }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-    -moz-transform: translateY(0px);
-    -ms-transform: translateY(0px);
-    -o-transform: translateY(0px);
-    transform: translateY(0px); } }
-@-moz-keyframes paradise-contact {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-5px);
-    -moz-transform: translateY(-5px);
-    -ms-transform: translateY(-5px);
-    -o-transform: translateY(-5px);
-    transform: translateY(-5px); }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-    -moz-transform: translateY(0px);
-    -ms-transform: translateY(0px);
-    -o-transform: translateY(0px);
-    transform: translateY(0px); } }
-@-ms-keyframes paradise-contact {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-5px);
-    -moz-transform: translateY(-5px);
-    -ms-transform: translateY(-5px);
-    -o-transform: translateY(-5px);
-    transform: translateY(-5px); }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-    -moz-transform: translateY(0px);
-    -ms-transform: translateY(0px);
-    -o-transform: translateY(0px);
-    transform: translateY(0px); } }
-@keyframes paradise-contact {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-5px);
-    -moz-transform: translateY(-5px);
-    -ms-transform: translateY(-5px);
-    -o-transform: translateY(-5px);
-    transform: translateY(-5px); }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-    -moz-transform: translateY(0px);
-    -ms-transform: translateY(0px);
-    -o-transform: translateY(0px);
-    transform: translateY(0px); } }
-.paradise-contact {
-  position: fixed;
-  bottom: 60px;
-  width: 100%;
-  text-align: center;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  -webkit-animation: paradise-contact 0.5s linear 2s;
-  -moz-animation: paradise-contact 0.5s linear 2s;
-  -o-animation: paradise-contact 0.5s linear 2s;
-  animation: paradise-contact 0.5s linear 2s;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  z-index: 11;
-  font-family: calibre, sans-serif;
-  color: white;
-  text-decoration: none;
-  line-height: 22px;
-  font-weight: 100;
-  font-size: 16px; }
-  .paradise-contact img {
-    width: 120px; }
+.paradise-body {
+  margin-bottom: 80px;
+  font-size: 26px; }
+  .paradise-body:before, .paradise-body:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */ }
+  .paradise-body:after {
+    clear: both; }
+  .paradise-body a {
+    color: white;
+    text-decoration: underline; }
 
-@media only screen and (max-width: 320px) {
-  .paradise-intro {
-    display: none; }
+.paradise-body__col {
+  width: 75%;
+  float: left; }
 
-  .paradise-intro.mobile {
-    display: block; } }
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
-  .paradise-intro {
-    display: none !important; }
+.paradise-offerings {
+  margin-bottom: 160px;
+  font-size: 14px; }
+  .paradise-offerings:before, .paradise-offerings:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */ }
+  .paradise-offerings:after {
+    clear: both; }
 
-  .paradise-contact {
-    bottom: 20px; }
+.paradise-offerings__col {
+  width: 16.66667%;
+  float: left; }
 
-  .paradise-logo {
-    top: 20px; }
+.paradise-offerings__heading {
+  font-weight: 500; }
 
-  body {
-    height: 600px; } }
+.email {
+  width: 50%;
+  float: left; }
+
+.social {
+  width: 50%;
+  float: left; }

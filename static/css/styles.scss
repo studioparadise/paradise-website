@@ -1,6 +1,19 @@
 ---
 ---
-
+@font-face {
+	font-family: 'Calibre';
+	font-weight: normal;
+	src: 
+		url('/static/fonts/CalibreWeb-Light.eot?') format('eot'),
+		url('/static/fonts/CalibreWeb-Light.woff') format('woff');
+}
+@font-face {
+	font-family: 'Calibre';
+	font-weight: 500;
+	src: 
+		url('/static/fonts/CalibreWeb-Semibold.eot?') format('eot'),
+		url('/static/fonts/CalibreWeb-Semibold.woff') format('woff');
+}
 
 
 /* SCSS Mixins */
@@ -263,8 +276,9 @@ $mobile-gutter: 20px;
 html, body {
 	padding: 0;
 	margin: 0;
-	text-align: center;
+	text-align: left;
 	min-height: 100%;
+	font-family: "Calibre", sans-serif;
 	// min-width: 600px;
 }
 * {
@@ -349,163 +363,125 @@ $animation-duration: 15s;
 
 
 body {
-	text-align: center;
+	text-align: left;
 	background: black;
-
+	color: white;
 }
 
-	$baseTime: 1.5s;
-	.intro-splash {
-		position: fixed;
-		top: 0;
+.container {
+	padding: 40px;
+}
+
+.splash-marquee {
+	position: relative;
+	.swiper-wrapper {
+		height: auto;
+	}
+	.swiper-slide {
+		height: 400px;
+		padding-bottom: 35%;
+		background: rgba(white, .1);
+	}
+	.swiper-scrollbar {
+		height: 7px;
+		background: transparent;
 		left: 0;
 		right: 0;
+		width: 100%;
 		bottom: 0;
-		background: black;
-		z-index: 9;
-		@include animation(fadeOut .5s $default-easing 1.5s);
-		@include experimental(animation-fill-mode, forwards);
+		border-radius: 0;
+		cursor: pointer;
 	}
-		.intro-loading-bar {
-			bottom: 0;
-			left: 0;
+	.swiper-scrollbar-drag {
+		background: white;
+		border-radius: 0;
+		cursor: move;
+	}
+}
+
+
+.paradise-intro {
+	margin-top: 40px;
+	margin-bottom: 80px;
+	position: relative;
+	&.is-sticky {
+		.paradise-hello {
 			position: fixed;
-			height: 6px;
-			background: white;
-			z-index: 10;
-			@include animation(width 2s $default-easing 0s);
-			@include experimental(animation-fill-mode, forwards);
-		}
-		.intro-logo {
-			width: 172px;
-			position: absolute;
-			left: 50%;
-			top: 45%;
-			margin-left: (-172px/2);
-		}
-
-
-	@include keyframes(paradise-logo) {
-		0% {
-			@include experimental(transform, translateY(-20px));
-			opacity: 0;
-		}
-		100% {
-			@include experimental(transform, translateY(0px));
-			opacity: 1;
+			top: 100px;
+			right: 40px;
 		}
 	}
-	.paradise-logo {
-		position: fixed;
-		top: 60px;
-		left: 50%;
-		margin-left: (-104px/2);
-		opacity: 0;
-		@include animation(paradise-logo .5s linear 1.5s);
-		@include experimental(animation-fill-mode, forwards);
-		z-index: 11;
-		width: 104px;
-		img {
-			width: 104px;
-		}
-	}
-	@include keyframes(fadeIn) {
-		0% {
-			opacity: 0;
-		}
-		100% {
-			opacity: 1;
-		}
-	}
-	.paradise-intro {
-		padding: 20px;
-		position: fixed;
-		top: 50%;
-		margin-top: -50px;
-		width: 100%;
-		left: 0;
+}
+	.paradise-hello {
+		position: absolute;
+		bottom: 0;
 		right: 0;
-		opacity: 0;
-		@include animation(fadeIn .5s linear 2s);
-		@include experimental(animation-fill-mode, forwards);
-		z-index: 11;
-		img {
-			max-width: 520px;
-			width: 100%;
+		a {
+			color: white;
+			text-decoration: underline;
 		}
 	}
-	.paradise-intro.mobile {
-		display: none;
-		width: 200px;
-		img {
-			width: 200px;
-		}
-		margin-left: (-200px/2);
-		margin-top: (-220px/2);
-	}
-	@include keyframes(paradise-contact) {
-		0% {
-			opacity: 0;
-			@include experimental(transform, translateY(-5px));
-		}
-		100% {
-			opacity: 1;
-			@include experimental(transform, translateY(0px));
-		}
-	}
-	.paradise-contact {
-		position: fixed;
-		bottom: 60px;
-		width: 100%;
-		text-align: center;
-		left: 0;
-		right: 0;
-		opacity: 0;
-		@include animation(paradise-contact .5s linear 2s);
-		@include experimental(animation-fill-mode, forwards);
-		z-index: 11;
-		font-family: calibre, sans-serif;
+
+.paradise-body {
+	margin-bottom: 80px;
+	@include clearfix;
+	font-size: 26px;
+	a {
 		color: white;
-		text-decoration: none;
-		line-height: 22px;
-		font-weight: 100;
-		font-size: 16px;
+		text-decoration: underline;
+	}
+}
+	.paradise-body__col {
+		@include column(9);
+	}
 
-		img {
-			width: 120px;
+.paradise-offerings {
+	@include clearfix;
+	margin-bottom: 160px;
+	font-size: 14px;
+}
+	.paradise-offerings__col {
+		@include column(2);
+	}
+		.paradise-offerings__heading {
+			font-weight: 500;
 		}
-	}
 
-
-
-
-
-
-// responsive
-@media only screen and (max-width: 320px) {
-	.paradise-intro {
-		display: none;
-	}
-	.paradise-intro.mobile {
-		display: block;
-	}
+.footer {
 }
+	.email {
+		@include column(6);
+	}
+	.social {
+		@include column(6);
+	}
 
-// iphone landscape
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 568px)
-and (orientation : landscape) {
-	.paradise-intro {
-		display: none !important;
-	}
-	.paradise-contact {
-		bottom: 20px;
-	}
-	.paradise-logo {
-		top: 20px;
-	}
-	body {
-		height: 600px;
-	}
-}
+
+// // responsive
+// @media only screen and (max-width: 320px) {
+// 	.paradise-intro {
+// 		display: none;
+// 	}
+// 	.paradise-intro.mobile {
+// 		display: block;
+// 	}
+// }
+
+// // iphone landscape
+// @media only screen
+// and (min-device-width : 320px)
+// and (max-device-width : 568px)
+// and (orientation : landscape) {
+// 	.paradise-intro {
+// 		display: none !important;
+// 	}
+// 	.paradise-contact {
+// 		bottom: 20px;
+// 	}
+// 	.paradise-logo {
+// 		top: 20px;
+// 	}
+// 	body {
+// 		height: 600px;
+// 	}
+// }
