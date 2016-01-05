@@ -436,6 +436,11 @@ body {
 		a {
 			color: white;
 			text-decoration: none;
+			padding-bottom: 8px;
+			&:hover {
+				opacity: .8;
+				border-bottom: 1px solid white;
+			}
 		}
 	}
 
@@ -443,6 +448,7 @@ body {
 	margin-bottom: 80px;
 	@include clearfix;
 	font-size: 26px;
+
 	a {
 		color: white;
 		text-decoration: underline;
@@ -465,9 +471,10 @@ body {
 		}
 
 .footer {
+	@include clearfix;
 }
 	.email {
-		@include column(6);
+		@include isolation-span(6, 1);
 	}
 
 		.email__input {
@@ -479,10 +486,45 @@ body {
 			border: none;
 			padding-bottom: 5px;
 			border-bottom: 1px solid white;
+			width: 100%;
 		}
 	.social {
-		@include column(6);
+		@include isolation-span(3, 13-3);
 	}
+
+
+
+@media screen and (max-width: 1240px) {
+	.paradise-body {
+		font-size: 22px;
+	}
+}
+@media screen and (max-width: 1024px) {
+	.paradise-body {
+		font-size: 18px;
+	}
+	.paradise-offerings {
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.paradise-body {
+		font-size: 16px;
+		width: 100%;
+	}
+	.paradise-offerings {
+		// font-size: 12px;
+	}
+	.footer {
+		.email, .social {
+			clear: both;
+			width: 100%;
+			margin: 0;
+		}
+	}
+}
+
 
 
 // // responsive
