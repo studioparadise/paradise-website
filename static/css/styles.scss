@@ -436,11 +436,12 @@ body {
 	}
 	.paradise-intro.mobile {
 		display: none;
-		width: 200px;
 		img {
 			width: 200px;
 		}
-		margin-left: (-200px/2);
+		width: 100%;
+		// width: 200px;
+		// margin-left: (-200px/2);
 		margin-top: (-220px/2);
 	}
 	@include keyframes(paradise-contact) {
