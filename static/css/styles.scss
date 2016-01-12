@@ -25,6 +25,31 @@
 
 
 /* SCSS Mixins */
+
+
+@mixin fulljustify {
+	text-align: justify;
+	&:after {
+		content: "";
+		display: inline-block;
+		width: 100%;
+	}
+}
+
+@mixin calc($key, $value) {
+	/* Firefox */
+	#{$key}: -moz-calc(#{$value});
+	/* WebKit */
+	#{$key}: -webkit-calc(#{$value});
+	/* Opera */
+	#{$key}: -o-calc(#{$value});
+	/* Standard */
+	#{$key}: calc(#{$value});
+	/* IE-OLD */
+	#{$key}: expression(#{$value});
+}
+
+
 @mixin clearfix {
 	&:before,
 	&:after {
@@ -362,9 +387,10 @@ $color: $color-1;
 @mixin style-body {
 	font-family: "Calibre", sans-serif;
 }
+
 @mixin style-serif {
 	font-family: "Domaine", sans-serif;
-
+	letter-spacing: .02em;
 }
 
 $default-easing: cubic-bezier(0.770, 0.000, 0.175, 1.000);
@@ -385,10 +411,18 @@ body {
 
 .container {
 	padding: 40px;
+	@media screen and (max-width: 768px) {
+		padding: 20px;
+	}
 }
 
 .splash-marquee {
 	position: relative;
+	@media screen and (max-width: 768px) {
+		margin-left: -20px;
+		margin-right: -20px;
+		margin-top: -20px;
+	}
 	.swiper-wrapper {
 		height: auto;
 	}
@@ -399,6 +433,9 @@ body {
 	}
 	.swiper-scrollbar {
 		height: 7px;
+		@media screen and (max-width: 768px) {
+			height: 4px;
+		}
 		background: transparent;
 		left: 0;
 		right: 0;
@@ -426,7 +463,17 @@ body {
 			right: 40px;
 		}
 	}
+
+	// temporary
+	@include style-serif;
+	font-size: 120px;
+	line-height: 120px;
 }
+	.paradise-intro__gif {
+		// height: 90px;
+		width: 55%;
+	}
+
 	.paradise-hello {
 		position: absolute;
 		bottom: 0;
@@ -441,6 +488,17 @@ body {
 				opacity: .8;
 				border-bottom: 1px solid white;
 			}
+			position: relative;
+			padding-bottom: 8px;
+			&:after {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				border-bottom: 1px solid white;
+				width: 100%;
+				left: 0;
+				right: 0;
+			}
 		}
 	}
 
@@ -448,6 +506,19 @@ body {
 	margin-bottom: 80px;
 	@include clearfix;
 	font-size: 26px;
+	@media screen and (max-width: 1240px) {
+		font-size: 22px;		
+	}
+	@media screen and (max-width: 1024px) {
+		font-size: 18px;
+	}
+	@media screen and (max-width: 768px) {
+		font-size: 16px;
+		.paradise-body__col {
+			width: 100%;
+		}
+	}
+
 
 	a {
 		color: white;
@@ -462,9 +533,21 @@ body {
 	@include clearfix;
 	margin-bottom: 160px;
 	font-size: 14px;
+	@media screen and (max-width: 1024px) {
+		font-size: 12px;
+	}
 }
 	.paradise-offerings__col {
 		@include column(2);
+		@media screen and (max-width: 1024px) {
+			@include column(3);
+		}
+		@media screen and (max-width: 768px) {
+			@include column(6);
+			&:last-child {
+				margin-top: 40px;
+			}
+		}
 	}
 		.paradise-offerings__heading {
 			font-weight: 500;
@@ -478,6 +561,9 @@ body {
 	}
 
 		.email__input {
+			&:focus {
+				outline: none;
+			}
 			background: transparent;
 			-webkit-appearance: none;
 			font-size: 20px;
@@ -490,7 +576,49 @@ body {
 		}
 	.social {
 		@include isolation-span(3, 13-3);
+		@include calc(margin-left, "100% - 267px");
+		width: 267px;
+
 	}
+		.social__icons {
+			@media screen and (min-width: 769px) {
+				@include fulljustify;
+			}
+
+			margin-bottom: (30px-8px); // 30 is the desired distance. 8 is existing padding.
+		}
+			.social__icon {
+				@media screen and (max-width: 768px) {
+					margin-right: 30px;
+					margin-top: 30px;
+				}
+				display: inline-block;
+				font-size: 20px;
+				@include style-serif;
+				color: white;
+				text-decoration: none;
+				&:active, &:visited {
+					color: white;
+					text-decoration: none;
+				}
+				&:hover {
+					&:after {
+						opacity: 1;
+					}
+				}
+				position: relative;
+				padding-bottom: 8px;
+				&:after {
+					opacity: 0;
+					content: "";
+					position: absolute;
+					bottom: 0;
+					border-bottom: 1px solid white;
+					width: 100%;
+					left: 0;
+					right: 0;
+				}
+			}
 
 
 
