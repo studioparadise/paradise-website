@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -20,19 +21,28 @@
 		<div class="splash-marquee swiper-container">
 
 			<div class="swiper-wrapper">
-				<div class="swiper-slide"></div>
-				<div class="swiper-slide"></div>
-				<div class="swiper-slide"></div>
-				<div class="swiper-slide"></div>
-				<div class="swiper-slide"></div>
 
+				<div class="swiper-slide">
+					<img src="/static/img/1.jpg">
+				</div>
+				<div class="swiper-slide">
+					<img src="/static/img/3.jpg">
+				</div>
+				<div class="swiper-slide">
+					<img src="/static/img/4.jpg">
+				</div>
+				<div class="swiper-slide">
+					<img src="/static/img/2.jpg">
+				</div>
 			</div>
 			<!-- If we need scrollbar -->
 			<div class="swiper-scrollbar"></div>
 		</div>
 		<div class="paradise-intro">
-			Welcome to Paradise
-			<!-- <img class="paradise-intro__gif" src="/static/img/logo.svg" />-->
+			<div class="paradise-body__col">
+				<img class="paradise-intro__svg" src="/static/img/welcome_to_paradise.svg" />
+			</div>
+			<!-- <img class="paradise-intro__gif"s src="/static/img/logo.svg" />-->
 			<div class="paradise-hello">
 				<a target="_blank" href="mailto:hello@studioparadise.com?subject=Hello it's me">
 					Say Hello
@@ -48,7 +58,7 @@
 				<a target="_blank" href="http://leaderbagco.com">Leader&nbsp;Bag&nbsp;Co.</a>
 				and 
 				<a target="_blank" href="http://convicts.nyc">Convicts&nbsp;NYC.</a>
-				
+
 			</div>
 		</div>
 		<div class="paradise-offerings">
@@ -105,7 +115,10 @@
 
 		<div class="footer">
 			<div class="email">
-				<input class="email__input" type="email" placeholder="Email, please">
+				<input class="email__input" type="email" placeholder="Email, please" js-email-input>
+				<div class="email__checkmark">
+					<img src="/static/img/checkmark.svg" js-email-submit />
+				</div>
 			</div>
 			<div class="social">
 				<div class="social__icons">
@@ -123,7 +136,6 @@
 					153 Centre St Suite 206, New York NY 10013
 				</div>
 			</div>
-
 		</div>
 	</div>
 </body>

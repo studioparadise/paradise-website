@@ -21,13 +21,21 @@ components.stickyElement = function($element, args) {
       }
     });
   };
+  var $hello = $(".paradise-hello");
   controller.enableSticky = function() {
-    $element.addClass('is-sticky');
+
+    // set distance from top to height of element at stick time
+    var height =  $hello.position().top;
+    $hello.css({
+      top: height
+    });
     controller.isSticky = true;
+    $element.addClass('is-sticky');
   };
   controller.disableSticky = function() {
     $element.removeClass('is-sticky');
     controller.isSticky = false;
+    $hello.css({top: ''});
   };
   controller.init();
   return args;
@@ -103,8 +111,9 @@ components.emailSignup = function($element, args) {
       hide: true
     });
   }
-
+  console.log ("Attaching email hanlder to", $email);
   $email.on('keyup', function(ev) {
+    console.log("Keyup");
     var valid = api.validateEmail();
     if (valid) {
       $element.addClass('-is-valid');
@@ -117,16 +126,56 @@ components.emailSignup = function($element, args) {
       api.submitEmail();
     }
   });
+
+  $element.find("[js-email-submit]").on('click', api.submitEmail);
 }
 
 
 $(function() {
   $(".swiper-container").swiper({
+    calculateHeight: true,
     scrollbar: '.swiper-scrollbar',
     scrollbarHide: false,
     scrollbarDraggable: true,
-    scrollbarSnapOnRelease: true
+    scrollbarSnapOnRelease: true,
+    effect: 'fade',
+    speed: 2000,
+    autoplay: 3000,
+    autoplayOnInteraction: true,
+    fade: {
+      crossFade: true
+    },
+    slidesPerView: 'auto',
+    onInit: function(swiper) {
+      calculateHeight();
+    }
   })
+
+  function calculateHeight() { 
+    $(".swiper-wrapper").css({height: ''});
+    var targetHeight = $(".swiper-slide").height();
+    var outerHeight = $(".paradise-intro").outerHeight();
+
+    var minHeight = targetHeight + outerHeight;
+    var windowHeight = $(window).height();
+    var minHeight = $(".paradise-intro").outerHeight() 
+      + $(".paradise-intro").offset().top + 30;
+
+    console.log("TH", targetHeight, " MH", minHeight, " OH", outerHeight, "WH", windowHeight);
+
+    if (windowHeight < minHeight) {
+      targetHeight -= (minHeight - windowHeight);
+      // $(".swiper-container").addClass('-short');
+    } else {
+      // $(".swiper-container").removeClass('-short');
+
+    }
+
+    $(".swiper-wrapper").css({
+      height: targetHeight
+    })
+  }
+  $(window).on('resize', calculateHeight);
 
   var $intro = $(".paradise-intro");
   components.stickyElement($intro, {});

@@ -198,7 +198,23 @@
 	}
 }
 
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
 
+    &:-moz-placeholder { /* Firefox 18- */
+        @content;
+    }
+
+    &::-moz-placeholder {  /* Firefox 19+ */
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
 
 
 
@@ -426,18 +442,28 @@ body {
 
 .splash-marquee {
 	position: relative;
+	.swiper-wrapper, .swiper-slide {
+		overflow: hidden;
+	}
 	@media screen and (max-width: 768px) {
 		margin-left: -20px;
 		margin-right: -20px;
 		margin-top: -20px;
 	}
-	.swiper-wrapper {
-		height: auto;
-	}
+	// &.-short {
+	// 	height: 300px;
+	// }
+
+	// .swiper-wrapper {
+	// 	height: auto;
+	// }
 	.swiper-slide {
-		height: 400px;
-		padding-bottom: 35%;
+		// height: 400px;
+		// padding-bottom: 35%;
 		background: rgba(white, .1);
+		img {
+			width: 100%;
+		}
 	}
 	.swiper-scrollbar {
 		height: 7px;
@@ -451,6 +477,7 @@ body {
 		bottom: 0;
 		border-radius: 0;
 		cursor: pointer;
+		background: black;
 	}
 	.swiper-scrollbar-drag {
 		background: white;
@@ -463,13 +490,17 @@ body {
 .paradise-intro {
 	margin-top: 40px;
 	margin-bottom: 80px;
+	@media screen and (max-width: 768px) {
+		margin-bottom: 40px;
+	}
 	position: relative;
 	&.is-sticky {
 		@media screen and (min-width: 768px) {
 			.paradise-hello {
 				position: fixed;
 				top: 100px;
-				right: 40px;				
+				right: 40px;
+				bottom: auto;
 			}
 		}
 	}
@@ -483,7 +514,6 @@ body {
 		// height: 90px;
 		width: 55%;
 	}
-
 	.paradise-hello {
 		position: absolute;
 		bottom: 0;
@@ -491,26 +521,35 @@ body {
 		@include style-serif;
 		font-size: 20px;
 		a {
+			line-height: 40px;
+			@media screen and (min-width: 768px) {
+				position: absolute;
+				line-height: normal;
+			}
+			width: 68px;
+			bottom: -5px;
+			right: 0;
 			color: white;
 			text-decoration: none;
 			padding-bottom: 8px;
 			&:hover {
 				opacity: .8;
-				border-bottom: 1px solid white;
+				border-bottom: 1px solid transparent;
 			}
-			position: relative;
+			border-bottom: 1px solid white;
 			padding-bottom: 8px;
-			&:after {
-				content: "";
-				position: absolute;
-				bottom: 0;
-				border-bottom: 1px solid white;
-				width: 100%;
-				left: 0;
-				right: 0;
-			}
+			@include transition(all .2s ease 0s);
+			// &:after {
+			// 	content: "";
+			// 	position: absolute;
+			// 	bottom: 0;
+			// 	border-bottom: 1px solid white;
+			// 	width: 100%;
+			// 	left: 0;
+			// 	right: 0;
+			// 	opacity: 0;
+			// }
 		}
-
 
 		@media screen and (max-width: 768px) {
 			position: fixed;
@@ -542,9 +581,7 @@ body {
 
 	@media screen and (max-width: 768px) {
 		font-size: 16px;
-		.paradise-body__col {
-			width: 100%;
-		}
+		margin-bottom: 60px;
 	}
 	@media screen and (min-width: 768px) {
 		font-size: 18px;
@@ -556,21 +593,30 @@ body {
 		font-size: 26px;		
 	}
 
+	@include transition(opacity .3s ease 0s);
 	a {
 		color: white;
 		text-decoration: underline;
+		&:hover {
+			opacity: .8;
+		}
 	}
 }
 	.paradise-body__col {
-		@include column(9);
+		width: 75%;
+		@media screen and (max-width: 768px) {
+			width: 100%;
+		}
+
 	}
 
 .paradise-offerings {
 	@include clearfix;
 	margin-bottom: 160px;
 	font-size: 14px;
-	@media screen and (max-width: 767px) {
+	@media screen and (max-width: 768px) {
 		font-size: 12px;
+		margin-bottom: 120px;
 	}
 }
 	.paradise-offerings__col {
@@ -619,11 +665,15 @@ body {
 			width: 20px;
 			height: 20px;
 			bottom: 6px;
+			cursor: pointer;
 		}
 
 		.email__input {
 			&:focus {
 				outline: none;
+			}
+			@include placeholder {
+				// color: white;
 			}
 			background: transparent;
 			-webkit-appearance: none;
@@ -664,19 +714,23 @@ body {
 				@include style-serif;
 				color: white;
 				text-decoration: none;
+				opacity: 1;
 				&:active, &:visited {
 					color: white;
 					text-decoration: none;
 				}
 				&:hover {
+					opacity: .8;
 					&:after {
-						opacity: 1;
+						opacity: 0;
 					}
 				}
 				position: relative;
 				padding-bottom: 8px;
+				@include transition(all .2s ease 0s);
 				&:after {
-					opacity: 0;
+					@include transition(all .2s ease 0s);
+					opacity: 1;
 					content: "";
 					position: absolute;
 					bottom: 0;

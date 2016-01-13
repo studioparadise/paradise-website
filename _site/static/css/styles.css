@@ -3020,17 +3020,17 @@ body {
 
 .splash-marquee {
   position: relative; }
+  .splash-marquee .swiper-wrapper, .splash-marquee .swiper-slide {
+    overflow: hidden; }
   @media screen and (max-width: 768px) {
     .splash-marquee {
       margin-left: -20px;
       margin-right: -20px;
       margin-top: -20px; } }
-  .splash-marquee .swiper-wrapper {
-    height: auto; }
   .splash-marquee .swiper-slide {
-    height: 400px;
-    padding-bottom: 35%;
     background: rgba(255, 255, 255, 0.1); }
+    .splash-marquee .swiper-slide img {
+      width: 100%; }
   .splash-marquee .swiper-scrollbar {
     height: 7px;
     background: transparent;
@@ -3039,7 +3039,8 @@ body {
     width: 100%;
     bottom: 0;
     border-radius: 0;
-    cursor: pointer; }
+    cursor: pointer;
+    background: black; }
     @media screen and (max-width: 768px) {
       .splash-marquee .swiper-scrollbar {
         height: 4px; } }
@@ -3056,11 +3057,15 @@ body {
   letter-spacing: .02em;
   font-size: 120px;
   line-height: 120px; }
+  @media screen and (max-width: 768px) {
+    .paradise-intro {
+      margin-bottom: 40px; } }
   @media screen and (min-width: 768px) {
     .paradise-intro.is-sticky .paradise-hello {
       position: fixed;
       top: 100px;
-      right: 40px; } }
+      right: 40px;
+      bottom: auto; } }
 
 .paradise-intro__gif {
   width: 55%; }
@@ -3073,22 +3078,27 @@ body {
   letter-spacing: .02em;
   font-size: 20px; }
   .paradise-hello a {
+    line-height: 40px;
+    width: 68px;
+    bottom: -5px;
+    right: 0;
     color: white;
     text-decoration: none;
     padding-bottom: 8px;
-    position: relative;
-    padding-bottom: 8px; }
+    border-bottom: 1px solid white;
+    padding-bottom: 8px;
+    -webkit-transition: all 0.2s ease 0s;
+    -moz-transition: all 0.2s ease 0s;
+    -ms-transition: all 0.2s ease 0s;
+    -o-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s; }
+    @media screen and (min-width: 768px) {
+      .paradise-hello a {
+        position: absolute;
+        line-height: normal; } }
     .paradise-hello a:hover {
       opacity: .8;
-      border-bottom: 1px solid white; }
-    .paradise-hello a:after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      border-bottom: 1px solid white;
-      width: 100%;
-      left: 0;
-      right: 0; }
+      border-bottom: 1px solid transparent; }
   @media screen and (max-width: 768px) {
     .paradise-hello {
       position: fixed;
@@ -3111,7 +3121,12 @@ body {
   22px at 1239-1024
   18px at 1023-768
   16px at -767
-  */ }
+  */
+  -webkit-transition: opacity 0.3s ease 0s;
+  -moz-transition: opacity 0.3s ease 0s;
+  -ms-transition: opacity 0.3s ease 0s;
+  -o-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s; }
   .paradise-body:before, .paradise-body:after {
     content: " ";
     /* 1 */
@@ -3121,9 +3136,8 @@ body {
     clear: both; }
   @media screen and (max-width: 768px) {
     .paradise-body {
-      font-size: 16px; }
-      .paradise-body .paradise-body__col {
-        width: 100%; } }
+      font-size: 16px;
+      margin-bottom: 60px; } }
   @media screen and (min-width: 768px) {
     .paradise-body {
       font-size: 18px; } }
@@ -3136,10 +3150,14 @@ body {
   .paradise-body a {
     color: white;
     text-decoration: underline; }
+    .paradise-body a:hover {
+      opacity: .8; }
 
 .paradise-body__col {
-  width: 75%;
-  float: left; }
+  width: 75%; }
+  @media screen and (max-width: 768px) {
+    .paradise-body__col {
+      width: 100%; } }
 
 .paradise-offerings {
   margin-bottom: 160px;
@@ -3151,9 +3169,10 @@ body {
     /* 2 */ }
   .paradise-offerings:after {
     clear: both; }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     .paradise-offerings {
-      font-size: 12px; } }
+      font-size: 12px;
+      margin-bottom: 120px; } }
 
 .paradise-offerings__col {
   width: 16.66667%;
@@ -3206,7 +3225,8 @@ body {
   right: 0;
   width: 20px;
   height: 20px;
-  bottom: 6px; }
+  bottom: 6px;
+  cursor: pointer; }
 
 .email__input {
   background: transparent;
@@ -3221,6 +3241,10 @@ body {
   width: 100%; }
   .email__input:focus {
     outline: none; }
+  .email__input:-moz-placeholder {
+    /* Firefox 18- */ }
+  .email__input::-moz-placeholder {
+    /* Firefox 19+ */ }
 
 .social {
   width: 267px;
@@ -3248,8 +3272,14 @@ body {
   letter-spacing: .02em;
   color: white;
   text-decoration: none;
+  opacity: 1;
   position: relative;
-  padding-bottom: 8px; }
+  padding-bottom: 8px;
+  -webkit-transition: all 0.2s ease 0s;
+  -moz-transition: all 0.2s ease 0s;
+  -ms-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s; }
   @media screen and (max-width: 1023px) {
     .social__icon {
       margin-right: 30px;
@@ -3257,10 +3287,17 @@ body {
   .social__icon:active, .social__icon:visited {
     color: white;
     text-decoration: none; }
-  .social__icon:hover:after {
-    opacity: 1; }
+  .social__icon:hover {
+    opacity: .8; }
+    .social__icon:hover:after {
+      opacity: 0; }
   .social__icon:after {
-    opacity: 0;
+    -webkit-transition: all 0.2s ease 0s;
+    -moz-transition: all 0.2s ease 0s;
+    -ms-transition: all 0.2s ease 0s;
+    -o-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
+    opacity: 1;
     content: "";
     position: absolute;
     bottom: 0;
