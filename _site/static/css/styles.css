@@ -3000,10 +3000,17 @@ html, body {
     display: none;
     pointer-events: none; } }
 body {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   font-family: "Calibre", sans-serif;
   text-align: left;
   background: black;
   color: white; }
+  @media screen and (max-width: 768px) {
+    body {
+      padding-bottom: 60px; } }
 
 .container {
   padding: 40px; }
@@ -3049,10 +3056,11 @@ body {
   letter-spacing: .02em;
   font-size: 120px;
   line-height: 120px; }
-  .paradise-intro.is-sticky .paradise-hello {
-    position: fixed;
-    top: 100px;
-    right: 40px; }
+  @media screen and (min-width: 768px) {
+    .paradise-intro.is-sticky .paradise-hello {
+      position: fixed;
+      top: 100px;
+      right: 40px; } }
 
 .paradise-intro__gif {
   width: 55%; }
@@ -3081,10 +3089,29 @@ body {
       width: 100%;
       left: 0;
       right: 0; }
+  @media screen and (max-width: 768px) {
+    .paradise-hello {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 40px;
+      line-height: 40px;
+      background: white;
+      text-align: center;
+      z-index: 10; }
+      .paradise-hello a {
+        color: black; } }
 
 .paradise-body {
   margin-bottom: 80px;
-  font-size: 26px; }
+  font-size: 26px;
+  /*
+  26px at 1240+
+  22px at 1239-1024
+  18px at 1023-768
+  16px at -767
+  */ }
   .paradise-body:before, .paradise-body:after {
     content: " ";
     /* 1 */
@@ -3092,17 +3119,20 @@ body {
     /* 2 */ }
   .paradise-body:after {
     clear: both; }
-  @media screen and (max-width: 1240px) {
-    .paradise-body {
-      font-size: 22px; } }
-  @media screen and (max-width: 1024px) {
-    .paradise-body {
-      font-size: 18px; } }
   @media screen and (max-width: 768px) {
     .paradise-body {
       font-size: 16px; }
       .paradise-body .paradise-body__col {
         width: 100%; } }
+  @media screen and (min-width: 768px) {
+    .paradise-body {
+      font-size: 18px; } }
+  @media screen and (min-width: 1024px) {
+    .paradise-body {
+      font-size: 22px; } }
+  @media screen and (min-width: 1240px) {
+    .paradise-body {
+      font-size: 26px; } }
   .paradise-body a {
     color: white;
     text-decoration: underline; }
@@ -3121,14 +3151,14 @@ body {
     /* 2 */ }
   .paradise-offerings:after {
     clear: both; }
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 767px) {
     .paradise-offerings {
       font-size: 12px; } }
 
 .paradise-offerings__col {
   width: 16.66667%;
   float: left; }
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1023px) {
     .paradise-offerings__col {
       width: 25%;
       float: left; } }
@@ -3151,13 +3181,32 @@ body {
   clear: both; }
 
 .email {
-  /*
-  Isolation span: give column span width and start position.
-  */
-  width: 50%;
+  width: 100%;
   float: left;
-  margin-left: 0%;
-  margin-right: -100%; }
+  position: relative; }
+  @media screen and (min-width: 768px) {
+    .email {
+      width: 636px; } }
+  .email.-is-valid .email__checkmark {
+    opacity: 1; }
+
+.email-error {
+  margin-top: 5px;
+  font-size: 14px;
+  position: absolute; }
+
+.email__checkmark {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease 0s;
+  -moz-transition: opacity 0.3s ease 0s;
+  -ms-transition: opacity 0.3s ease 0s;
+  -o-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+  position: absolute;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  bottom: 6px; }
 
 .email__input {
   background: transparent;
@@ -3174,28 +3223,17 @@ body {
     outline: none; }
 
 .social {
-  /*
-  Isolation span: give column span width and start position.
-  */
-  width: 25%;
-  float: left;
-  margin-left: 75%;
-  margin-right: -100%;
-  /* Firefox */
-  margin-left: -moz-calc(100% - 267px);
-  /* WebKit */
-  margin-left: -webkit-calc(100% - 267px);
-  /* Opera */
-  margin-left: -o-calc(100% - 267px);
-  /* Standard */
-  margin-left: calc(100% - 267px);
-  /* IE-OLD */
-  margin-left: expression(100% - 267px);
-  width: 267px; }
+  width: 267px;
+  float: right; }
+  @media screen and (max-width: 1023px) {
+    .social {
+      clear: both;
+      float: none;
+      width: 100%; } }
 
 .social__icons {
   margin-bottom: 22px; }
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 1024px) {
     .social__icons {
       text-align: justify; }
       .social__icons:after {
@@ -3212,7 +3250,7 @@ body {
   text-decoration: none;
   position: relative;
   padding-bottom: 8px; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1023px) {
     .social__icon {
       margin-right: 30px;
       margin-top: 30px; } }
@@ -3230,22 +3268,3 @@ body {
     width: 100%;
     left: 0;
     right: 0; }
-
-@media screen and (max-width: 1240px) {
-  .paradise-body {
-    font-size: 22px; } }
-@media screen and (max-width: 1024px) {
-  .paradise-body {
-    font-size: 18px; }
-
-  .paradise-offerings {
-    font-size: 12px; } }
-@media screen and (max-width: 768px) {
-  .paradise-body {
-    font-size: 16px;
-    width: 100%; }
-
-  .footer .email, .footer .social {
-    clear: both;
-    width: 100%;
-    margin: 0; } }
