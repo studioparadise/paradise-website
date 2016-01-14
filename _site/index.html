@@ -1,8 +1,13 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+	<script type="text/javascript" src="/static/libs/swiper.jquery.min.js"></script>
+	<link rel="stylesheet" href="/static/libs/swiper.min.css" />
+
 	<script type="text/javascript" src="/static/js/main.js"></script>
-	<link rel="stylesheet" href="/static/css/styles.css?cache-bust=9" />
+	<link rel="stylesheet" href="/static/css/styles.css?cache-bust=10" />
 	<meta name="description" content="Studio Paradise">
 	<meta name="viewport" content="width=device-width, minimal-ui">
 	<title>
@@ -11,32 +16,126 @@
 	<meta name="description" content="Paradise is a digital design studio in New York. We concieve and develop engaging brands, products and digital experiences."/>
 </head>
 <body>
-	<!-- splash -->
-	<div class="intro-splash">
-		<img class="intro-logo" src="/static/img/logo-large.png" />
-		<div class="intro-loading-bar"></div>
+	<div class="container">
+		<div class="splash-marquee swiper-container">
+
+			<div class="swiper-wrapper">
+
+				<div class="swiper-slide">
+					<img src="/static/img/1.jpg">
+				</div>
+				<div class="swiper-slide">
+					<img src="/static/img/3.jpg">
+				</div>
+				<div class="swiper-slide">
+					<img src="/static/img/4.jpg">
+				</div>
+				<div class="swiper-slide">
+					<img src="/static/img/2.jpg">
+				</div>
+			</div>
+			<!-- If we need scrollbar -->
+			<div class="swiper-scrollbar"></div>
+		</div>
+		<div class="paradise-intro">
+			<div class="paradise-body__col">
+				<img class="paradise-intro__svg" src="/static/img/welcome_to_paradise.svg" />
+			</div>
+			<!-- <img class="paradise-intro__gif"s src="/static/img/logo.svg" />-->
+			<div class="paradise-hello">
+				<a target="_blank" href="mailto:hello@studioparadise.com?subject=Hello it's me">
+					Say Hello
+				</a>
+			</div>
+		</div>
+		<div class="paradise-body">
+			<div class="paradise-body__col">
+				Paradise was founded on the shared belief that impactful brands are built holistically. We define a company's essence and translate it into a cohesive experience across three pillars: brand, product and digital. This process has produced thoughtful and purposeful results for a variety of clients including
+
+				<a target="_blank" href="http://grovemade.com/">Grovemade</a>,
+				<a target="_blank" href="http://grovemade.com/">Jack&nbsp;Erwin</a>,
+				<a target="_blank" href="http://leaderbagco.com">Leader&nbsp;Bag&nbsp;Co.</a>
+				and 
+				<a target="_blank" href="http://convicts.nyc">Convicts&nbsp;NYC.</a>
+
+			</div>
+		</div>
+		<div class="paradise-offerings">
+			<div class="paradise-offerings__col">
+				<div class="paradise-offerings__heading">
+					Brand
+				</div>
+				<div class="paradise-offerings__item">
+					Brand Strategy
+				</div>
+				<div class="paradise-offerings__item">
+					Brand Identity
+				</div>
+				<div class="paradise-offerings__item">
+					Print, Packaging
+				</div>
+				<div class="paradise-offerings__item">
+					Environment
+				</div>
+			</div>
+			<div class="paradise-offerings__col">
+				<div class="paradise-offerings__heading">
+					Product
+				</div>
+				<div class="paradise-offerings__item">
+					Industrial Design
+				</div>
+				<div class="paradise-offerings__item">
+					Sourcing & Production
+				</div>
+				<div class="paradise-offerings__item">
+					Product Strategy
+				</div>
+				<div class="paradise-offerings__item">
+					Point Of Sale
+				</div>
+			</div>
+			<div class="paradise-offerings__col">
+				<div class="paradise-offerings__heading">
+					Digital
+				</div>
+				<div class="paradise-offerings__item">
+					Web Development
+				</div>
+				<div class="paradise-offerings__item">
+					UI/UX Design
+				</div>
+				<div class="paradise-offerings__item">
+					ECommerce
+				</div>
+			</div>           
+		</div>
+
+
+		<div class="footer">
+			<div class="email">
+				<input class="email__input" type="email" placeholder="Email, please" js-email-input>
+				<div class="email__checkmark">
+					<img src="/static/img/checkmark.svg" js-email-submit />
+				</div>
+			</div>
+			<div class="social">
+				<div class="social__icons">
+					<a class="social__icon" href="https://www.facebook.com/studioparadisenyc" target="_blank">
+						Facebook
+					</a>
+					<a class="social__icon" href="https://www.instagram.com/studioparadisenyc/" target="_blank">
+						Instagram
+					</a>
+					<a class="social__icon">
+						Twitter
+					</a>
+				</div>
+				<div class="social__text">
+					153 Centre St Suite 206, New York NY 10013
+				</div>
+			</div>
+		</div>
 	</div>
-
-	<!-- logo  -->
-	<a class="paradise-logo" href="mailto:hello@studioparadise.com" target="_blank">
-		<img src="/static/img/logo.png" />
-	</a>
-
-	<!-- intro paragraph  -->
-	<a class="paradise-intro" href="mailto:hello@studioparadise.com" target="_blank">
-		<img src="/static/img/intro.png" />
-	</a>
-	<a class="paradise-intro mobile" href="mailto:hello@studioparadise.com" target="_blank">
-		<img src="/static/img/intro-mobile.png" />
-	</a>
-
-	<!-- contact info  -->
-	<a class="paradise-contact" href="mailto:hello@studioparadise.com" target="_blank">
-		153 Centre St #206<br>
-		New York, NY 10013, USA<br>
-		hello@studioparadise.com
-		<!-- <img src="/static/img/contact.png" /> -->
-	</a>
-
 </body>
 </html>
