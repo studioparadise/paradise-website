@@ -3161,7 +3161,7 @@ body {
 
 .paradise-offerings {
   margin-bottom: 160px;
-  font-size: 14px; }
+  font-size: 15px; }
   .paradise-offerings:before, .paradise-offerings:after {
     content: " ";
     /* 1 */
@@ -3171,7 +3171,7 @@ body {
     clear: both; }
   @media screen and (max-width: 768px) {
     .paradise-offerings {
-      font-size: 12px;
+      font-size: 13px;
       margin-bottom: 120px; } }
 
 .paradise-offerings__col {
