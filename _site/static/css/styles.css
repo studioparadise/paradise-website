@@ -3209,7 +3209,7 @@ body {
   position: relative; }
   @media screen and (min-width: 768px) {
     .email {
-      width: 636px; } }
+      width: 615px; } }
   .email.-is-valid .email__checkmark {
     opacity: 1; }
 
@@ -3251,23 +3251,23 @@ body {
     /* Firefox 19+ */ }
 
 .social {
-  width: 267px;
+  width: 288px;
   float: right; }
   @media screen and (max-width: 1023px) {
     .social {
       clear: both;
-      float: none;
+      float: none; } }
+  @media screen and (max-width: 767px) {
+    .social {
       width: 100%; } }
 
 .social__icons {
+  text-align: justify;
   margin-bottom: 22px; }
-  @media screen and (max-width: 768px) {
-    .social__icons {
-      text-align: justify; }
-      .social__icons:after {
-        content: "";
-        display: inline-block;
-        width: 100%; } }
+  .social__icons:after {
+    content: "";
+    display: inline-block;
+    width: 100%; }
 
 .social__icon {
   display: inline-block;
@@ -3287,9 +3287,6 @@ body {
   @media screen and (max-width: 1023px) {
     .social__icon {
       margin-top: 30px; } }
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .social__icon {
-      margin-right: 30px; } }
   .social__icon:active, .social__icon:visited {
     color: white;
     text-decoration: none; }
