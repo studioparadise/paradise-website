@@ -165,7 +165,7 @@ $(function() {
     console.log("TH", targetHeight, " MH", minHeight, " OH", outerHeight, "WH", windowHeight);
 
     if (windowHeight < minHeight) {
-      // targetHeight -= (minHeight - windowHeight);
+      targetHeight -= (minHeight - windowHeight);
       // $(".swiper-container").addClass('-short');
     } else {
       // $(".swiper-container").removeClass('-short');

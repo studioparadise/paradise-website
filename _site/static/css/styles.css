@@ -3195,13 +3195,15 @@ body {
 .paradise-offerings__item {
   line-height: 135%; }
 
-.footer:before, .footer:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */ }
-.footer:after {
-  clear: both; }
+.footer {
+  margin-bottom: 40px; }
+  .footer:before, .footer:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */ }
+  .footer:after {
+    clear: both; }
 
 .email {
   width: 100%;
@@ -3245,10 +3247,16 @@ body {
   width: 100%; }
   .email__input:focus {
     outline: none; }
+  .email__input::-webkit-input-placeholder {
+    color: white; }
   .email__input:-moz-placeholder {
-    /* Firefox 18- */ }
+    /* Firefox 18- */
+    color: white; }
   .email__input::-moz-placeholder {
-    /* Firefox 19+ */ }
+    /* Firefox 19+ */
+    color: white; }
+  .email__input:-ms-input-placeholder {
+    color: white; }
 
 .social {
   width: 288px;

@@ -638,6 +638,7 @@ body {
 		}
 .footer {
 	@include clearfix;
+	margin-bottom: 40px;
 }
 	.email {
 		// @include isolation-span(6, 1);
@@ -674,7 +675,7 @@ body {
 				outline: none;
 			}
 			@include placeholder {
-				// color: white;
+				color: white;
 			}
 			background: transparent;
 			-webkit-appearance: none;
