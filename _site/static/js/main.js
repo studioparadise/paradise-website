@@ -146,7 +146,7 @@ $(function() {
       crossFade: true
     },
     slidesPerView: 'auto',
-    onInit: function(swiper) {
+    onImagesReady: function(swiper) {
       calculateHeight();
     }
   })
