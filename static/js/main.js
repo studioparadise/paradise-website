@@ -147,11 +147,11 @@ $(function() {
     },
     slidesPerView: 'auto',
     onImagesReady: function(swiper) {
-      calculateHeight();
+      calculateHeight(swiper);
     }
   })
 
-  function calculateHeight() { 
+  function calculateHeight(swiper) { 
     $(".swiper-wrapper").css({height: ''});
 
     var targetHeight = $(".swiper-slide").height();
@@ -173,7 +173,11 @@ $(function() {
 
     $(".swiper-wrapper").css({
       height: targetHeight
-    })
+    });
+
+    if (swiper) {
+      swiper.update();
+    }
   }
   $(window).on('resize', calculateHeight);
 
