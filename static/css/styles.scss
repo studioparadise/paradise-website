@@ -1,5 +1,6 @@
 ---
 ---
+$underline: true;
 @font-face {
 	font-family: 'Calibre';
 	font-weight: normal;
@@ -420,10 +421,12 @@ $animation-duration: 15s;
 
 
 body {
-	-moz-user-select: none;
-	-webkit-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+	// -moz-user-select: none;
+	// -webkit-user-select: none;
+	// -ms-user-select: none;
+	// user-select: none;
+
+	
 	@include style-body;
 	text-align: left;
 	background: black;
@@ -532,8 +535,16 @@ body {
 			&:hover {
 				opacity: .8;
 				border-bottom: 1px solid white;
+				@if ($underline == true) {
+					border-bottom: 1px solid transparent;
+				}
+
 			}
 			border-bottom: 1px solid transparent;
+			@if ($underline == true) {
+				border-bottom: 1px solid white;
+			}
+
 			padding-bottom: 8px;
 			@include transition(all .2s ease 0s);
 			// &:after {
@@ -728,6 +739,10 @@ body {
 					opacity: .8;
 					&:after {
 						opacity: 1;
+						@if ($underline == true) {
+							opacity: 0;
+						}
+
 					}
 				}
 				position: relative;
@@ -736,6 +751,9 @@ body {
 				&:after {
 					@include transition(all .2s ease 0s);
 					opacity: 0;
+					@if ($underline == true) {
+						opacity: 1;
+					}
 					content: "";
 					position: absolute;
 					bottom: 0;
