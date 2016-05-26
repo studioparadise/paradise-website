@@ -3019,15 +3019,22 @@ body {
   position: relative; }
   .splash-marquee .swiper-wrapper, .splash-marquee .swiper-slide {
     overflow: hidden; }
+  .splash-marquee .swiper-slide {
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%; }
+    .splash-marquee .swiper-slide img {
+      opacity: 0; }
   @media screen and (max-width: 768px) {
     .splash-marquee {
       margin-left: -20px;
       margin-right: -20px;
       margin-top: -20px; } }
-  .splash-marquee .swiper-slide {
-    background: rgba(255, 255, 255, 0.1); }
-    .splash-marquee .swiper-slide img {
-      width: 100%; }
+  .splash-marquee .swiper-slide img {
+    width: 100%; }
   .splash-marquee .swiper-scrollbar {
     height: 7px;
     background: transparent;
@@ -3152,13 +3159,13 @@ body {
       opacity: .8; }
 
 .paradise-body__col {
-  width: 75%; }
+  width: 60%; }
   @media screen and (max-width: 768px) {
     .paradise-body__col {
       width: 100%; } }
 
 .paradise-offerings {
-  margin-bottom: 160px;
+  margin-bottom: 80px;
   font-size: 15px; }
   .paradise-offerings:before, .paradise-offerings:after {
     content: " ";
@@ -3258,7 +3265,7 @@ body {
 
 .social {
   width: 288px;
-  float: right; }
+  float: left; }
   @media screen and (max-width: 1023px) {
     .social {
       clear: both;
@@ -3268,12 +3275,7 @@ body {
       width: 100%; } }
 
 .social__icons {
-  text-align: justify;
   margin-bottom: 22px; }
-  .social__icons:after {
-    content: "";
-    display: inline-block;
-    width: 100%; }
 
 .social__icon {
   display: inline-block;
@@ -3289,7 +3291,8 @@ body {
   -moz-transition: all 0.2s ease 0s;
   -ms-transition: all 0.2s ease 0s;
   -o-transition: all 0.2s ease 0s;
-  transition: all 0.2s ease 0s; }
+  transition: all 0.2s ease 0s;
+  margin-right: 40px; }
   @media screen and (max-width: 1023px) {
     .social__icon {
       margin-top: 30px; } }

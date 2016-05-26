@@ -449,6 +449,17 @@ body {
 	.swiper-wrapper, .swiper-slide {
 		overflow: hidden;
 	}
+	.swiper-slide {
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		background-position: center center;
+		height: 100%;
+		width: 100%;
+		img {
+			opacity: 0;
+		}
+	}
 	@media screen and (max-width: 768px) {
 		margin-left: -20px;
 		margin-right: -20px;
@@ -464,7 +475,7 @@ body {
 	.swiper-slide {
 		// height: 400px;
 		// padding-bottom: 35%;
-		background: rgba(white, .1);
+		// background: rgba(white, .1);
 		img {
 			width: 100%;
 		}
@@ -509,6 +520,9 @@ body {
 			}
 		}
 	}
+
+}
+.paradise-intro__svg {
 }
 	.paradise-intro__gif {
 		// height: 90px;
@@ -612,16 +626,21 @@ body {
 	}
 }
 	.paradise-body__col {
-		width: 75%;
+		width: 60%;
 		@media screen and (max-width: 768px) {
 			width: 100%;
 		}
-
 	}
+	// .paradise-body__col--logo {
+	// 	width: 200px;
+	// }
+	// .paradise-intro {
+	// 	margin-bottom: 2em;
+	// }
 
 .paradise-offerings {
 	@include clearfix;
-	margin-bottom: 160px;
+	margin-bottom: 80px;
 	font-size: 15px;
 	@media screen and (max-width: 768px) {
 		font-size: 13px;
@@ -703,7 +722,7 @@ body {
 		// @include isolation-span(3, 13-3);
 		// @include calc(margin-left, "100% - 267px");
 		width: 288px;
-		float: right;
+		float: left;
 		@media screen and (max-width: 1023px) {
 			clear: both;
 			float: none;
@@ -713,7 +732,7 @@ body {
 		}
 	}
 		.social__icons {
-			@include fulljustify;
+			// @include fulljustify;
 			// @media screen and (max-width: 768px) {
 			// }
 			margin-bottom: (30px-8px); // 30 is the desired distance. 8 is existing padding.
@@ -748,6 +767,7 @@ body {
 				position: relative;
 				padding-bottom: 8px;
 				@include transition(all .2s ease 0s);
+				margin-right: 40px;
 				&:after {
 					@include transition(all .2s ease 0s);
 					opacity: 0;

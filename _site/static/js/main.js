@@ -132,27 +132,8 @@ components.emailSignup = function($element, args) {
 
 
 $(function() {
-  $(".swiper-container").swiper({
-    calculateHeight: true,
-    scrollbar: '.swiper-scrollbar',
-    scrollbarHide: false,
-    scrollbarDraggable: true,
-    scrollbarSnapOnRelease: true,
-    effect: 'fade',
-    speed: 2000,
-    autoplay: 3000,
-    autoplayOnInteraction: true,
-    fade: {
-      crossFade: true
-    },
-    slidesPerView: 'auto',
-    onImagesReady: function(swiper) {
-      calculateHeight(swiper);
-    }
-  })
-
   function calculateHeight(swiper) { 
-    $(".swiper-wrapper").css({height: ''});
+    $(".swiper-wrapper, .swiper-slide").css({height: ''});
 
     var targetHeight = $(".swiper-slide").height();
     var outerHeight = $(".paradise-intro").outerHeight();
@@ -171,14 +152,33 @@ $(function() {
       // $(".swiper-container").removeClass('-short');
     }
 
-    $(".swiper-wrapper").css({
+
+    $(".swiper-wrapper, .swiper-slide").css({ 
       height: targetHeight
     });
 
-    if (swiper) {
+    if (swiper.update) {
       swiper.update();
     }
   }
+  $(".swiper-container").swiper({
+    calculateHeight: true,
+    scrollbar: '.swiper-scrollbar',
+    scrollbarHide: false,
+    scrollbarDraggable: true,
+    scrollbarSnapOnRelease: true,
+    effect: 'fade',
+    speed: 750,
+    autoplay: 3000,
+    autoplayOnInteraction: true,
+    fade: {
+      crossFade: true
+    },
+    slidesPerView: 'auto',
+    onImagesReady: function(swiper) {
+      calculateHeight(swiper);
+    }
+  })
   $(window).on('resize', calculateHeight);
 
   var $intro = $(".paradise-intro");
