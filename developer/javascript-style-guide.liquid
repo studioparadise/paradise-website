@@ -1,0 +1,98 @@
+Procedural, basic jQuery.
+	<script>
+	$(function() {
+		function myJSFunction($) {
+			$(".my-link").on('click', function() {
+				console.log("Clicked!");
+			});
+		}
+		myJsFunction();
+	});
+	</script>
+
+	<a class="my-link">
+		A Link With JS Behavior
+	</a>
+
+Converted to be stored in controllers object.
+
+	controllers.myJsFunction = function() {
+		$(".my-link").click();
+	}
+
+	controllers.myJsFunction();
+
+
+Let's auto initialize these functions, so that
+
+- It is clear what JS is executed from a DOM element
+- It is clear what DOM scope JS is executed for
+- Precedent comes from absolute clarity in angular.js tying DOM elements to JS behavior
+
+$("[js-controller]").each(function(index, el) {
+	var func = $(el).attr('js-controller');
+	controllers[func]();
+});
+
+<div js-controller="myJsFunction">
+	<a class="my-link">
+		A Link With JS Behavior
+	</a>
+</div>
+
+
+Finally, let's give each function the element invoking the function to allow local DOM scope access only.
+
+This has the benefit of allowing multiple elements to function independently, as well as enforce local modification only.
+
+
+	controllers.myJsFunction = function() {
+		$element.find('[js-my-link]').click();
+	}
+
+
+	$("[js-controller]").each(function(index, el) {
+		var func = $(el).attr('js-controller');
+		controllers[func]($(el));
+	});
+
+	<div js-controller="myJsFunction">
+		<a class="my-link" js-my-link>
+			A Link With JS Behavior
+		</a>
+	</div>
+
+In this latest example, vs the first ones, there is added clarity around multiple issues
+
+- It is clear `.my-link` can be renamed, moved, because classes are not used as JS selectors
+- It is clear `js-my-link` can be moved without affecting functionality such as when needing to wrap the element with CSS
+- It is clear there is JS functionality associated with itm whether the trigger or target
+- It is somewhat clear that the immediate controller is responsible for the behavior
+
+
+
+
+# Controllers vs Components
+
+There is no technical difference between Controllers and Components. 
+
+**Controllers**
+Project specific JS behavior
+
+**Components**
+Non project specific, portable JS behavior. The expectation is that components do not rely on the project, and can be used elsewhere.
+
+We may copy and paste components from other projects to any other project to re-use already created functionality, such as..
+
+- Scroll To Top
+- Add Sticky class upon reaching top of screen
+- AJAX Mailchimp behavior
+
+# Refining components
+Over time, it becomes easy to add additional functionality to already existing components, for the simpel fact we didn't tneed to create the component in the first place.
+
+For example, a `stickyAtTop` component might start off hard coded with a 0px offset, but it would become easy to then accept an argument to have a per-element offset.
+
+	<div js-component="stickyAtTop" js-args="{offset: 5}">	
+	</div>
+
