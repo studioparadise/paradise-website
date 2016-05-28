@@ -37,8 +37,8 @@ excerpt: This is the greatest website on earth. Share! Like! Subscribe! I'm dead
 
 {% assign links = 'The Flower Shop,Abbott,Grovemade,Convicts,Leader Bag,Saturdays,Jack Erwin,St Archer,Raen,Mikoh,Kaelen' | split: "," %}
 
-
-{% for project in site.projects %}
+{% assign projects = site.projects | sort: "position" %}
+{% for project in projects %}
 	<div class="row">
 		<div class="content-grid-spacer">&nbsp;</div>
 		<article class="index-project g6" js-index-project="{{ project.title | slugify }}" js-controller="indexProject">
