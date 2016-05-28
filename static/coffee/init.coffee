@@ -1,5 +1,6 @@
 ---
 ---
+
 root = exports ? this
 
 console.log "init.coffee"
