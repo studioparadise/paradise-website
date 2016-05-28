@@ -1,0 +1,4 @@
+django==1.6.5
+suit
+south
+sorl-thumbnail
