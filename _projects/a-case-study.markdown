@@ -30,4 +30,3 @@ modules:
       url: 
 ---
 
-![journey-img3--cape.jpg](/uploads/journey-img3--cape.jpg)
