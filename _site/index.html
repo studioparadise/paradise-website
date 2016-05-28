@@ -45,7 +45,7 @@
 		<!--[if lt IE 8]>
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
-		<div class="navbar">
+		<div class="navbar" js-controller="navbar">
 	<div class="navbar__column navbar__column--2">
 		<div class="navbar__logo">
 			Paradise
@@ -105,32 +105,32 @@
 
 	<div class="row">
 		<div class="content-grid-spacer">&nbsp;</div>
-		<div class="index-project g6" js-index-project="a-case-study" js-controller="indexProject">
+		<article class="index-project g6" js-index-project="a-case-study" js-controller="indexProject">
 			A Case Study
 			<a href="/projects/a-case-study.html">
 				Open Project
 			</a>
-		</div>
+		</article>
 	</div>
 
 	<div class="row">
 		<div class="content-grid-spacer">&nbsp;</div>
-		<div class="index-project g6" js-index-project="leader-bag" js-controller="indexProject">
+		<article class="index-project g6" js-index-project="leader-bag" js-controller="indexProject">
 			Leader Bag
 			<a href="/projects/leader-bag.html">
 				Open Project
 			</a>
-		</div>
+		</article>
 	</div>
 
 	<div class="row">
 		<div class="content-grid-spacer">&nbsp;</div>
-		<div class="index-project g6" js-index-project="the-flower-shop" js-controller="indexProject">
+		<article class="index-project g6" js-index-project="the-flower-shop" js-controller="indexProject">
 			The Flower Shop
 			<a href="/projects/the-flower-shop.html">
 				Open Project
 			</a>
-		</div>
+		</article>
 	</div>
 
 			</div>
@@ -159,6 +159,7 @@
 		<!-- Loading in some scripts here -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
+<script type="text/javascript" src="static/js/libraries-aggregated.min.js"></script>
 <script type="text/javascript" src="static/coffee/init.js"></script>
 <!--
 <script type="text/javascript" src="static/coffee/controllers.js"></script>
@@ -181,7 +182,10 @@
 </script>
 <div class="debug-bar">
 	<div js-debug-bar-toggle>
-		Grid Debug
+		Toggle Grid Debug.
+
+		Debugger: 
+		<span js-debug-txt></span>
 	</div>
 </div>
 <div class="grid-debug-container">

@@ -26,11 +26,11 @@ excerpt: This is the greatest website on earth. Share! Like! Subscribe! I'm dead
 {% for project in site.projects %}
 	<div class="row">
 		<div class="content-grid-spacer">&nbsp;</div>
-		<div class="index-project g6" js-index-project="{{ project.title | slugify }}" js-controller="indexProject">
+		<article class="index-project g6" js-index-project="{{ project.title | slugify }}" js-controller="indexProject">
 			{{ project.title }}
 			<a href="{{ project.url }}">
 				Open Project
 			</a>
-		</div>
+		</article>
 	</div>
 {% endfor %}
