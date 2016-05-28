@@ -49,7 +49,7 @@ excerpt: This is the greatest website on earth. Share! Like! Subscribe! I'm dead
 				</a>
 
 				{% for module in project.modules %}
-					Module {{ module }}
+					{% include render_module.html %}
 				{% endfor %}
 			</div>
 		</article>
