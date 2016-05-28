@@ -1,5 +1,6 @@
 ---
 ---
+
 root = exports ? this
 
 root.controllers.navbar = ($element, args) ->
