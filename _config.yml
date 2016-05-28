@@ -1,0 +1,16 @@
+---
+title: Paradise Test
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  projects:
+    title: Projects
+    output: true
+    A: A
+    B: B
+    C: C
+  uploads:
+    title: Uploads
+    output: true
