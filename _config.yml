@@ -23,3 +23,7 @@ exclude: [.scss, README.md, node_modules, gruntfile.js, package.json]
 
 gems:
   - 'jekyll-coffeescript'
+
+collections:
+  projects:
+    layout: project

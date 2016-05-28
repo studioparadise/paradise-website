@@ -6499,6 +6499,22 @@ input[type="search"]::-webkit-search-decoration {
   position: relative;
   min-height: 90vh; }
 
+.primary-slide {
+  height: 100vh;
+  padding: 60px 0; }
+
+.index-swiper {
+  width: 75%;
+  float: left; }
+  @media screen and (min-width: 850px) {
+    .index-swiper {
+      padding-left: 17.5px;
+      padding-right: 17.5px; } }
+  @media screen and (max-width: 849px) {
+    .index-swiper {
+      padding-left: 17.5px;
+      padding-right: 17.5px; } }
+
 .footer {
   background: white;
   position: relative;

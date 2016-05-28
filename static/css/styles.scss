@@ -1218,6 +1218,7 @@ $desktop-margin: 35px;
 		@include isolation-span(1, 2);
 	}
 }
+
 .navbar__valign {
 	@include gvalign-child;
 	background: rgba(black, .05);
@@ -1227,6 +1228,7 @@ $desktop-margin: 35px;
 	text-decoration: none;
 	padding: 2px 0;
 	text-decoration: none;
+	font-size: 14px;
 }
 .navbar__logo {
 	position: absolute;
@@ -1252,6 +1254,20 @@ $desktop-margin: 35px;
 
 }
 
+.primary-slide {
+	height: 100vh;
+	padding: 60px 0;
+}
+//index
+//index
+//index
+.index-swiper {
+	@include column(6);
+}
+
+//footer
+//footer
+//footer
 .footer {
 	background: white;
 	position: relative;
