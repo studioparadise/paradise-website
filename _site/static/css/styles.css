@@ -6540,6 +6540,9 @@ input[type="search"]::-webkit-search-decoration {
   background: rgba(0, 0, 0, 0.1);
   height: 2000px; }
 
+.module img {
+  max-width: 100%; }
+
 .footer {
   background: white;
   position: relative;
