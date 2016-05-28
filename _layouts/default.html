@@ -18,11 +18,33 @@
 				{{ content }}
 			</div>
 		</div>
-		<br><br><br><br><br><br><br><br><br><br><br>
-		{% include grid-debug.html %}
-		{% include grid-debug-bg.html %}
 		{% include footer.html %}
 		{% include footer_scripts.html %}		
+
+
+
+		<script>
+			$(function() {
+				$("[js-debug-bar-toggle]").on('click', function() {
+
+					var $container = $(".grid-debug-container");
+					if ($container.is(':visible')) {
+						$container.fadeOut();
+					} else {
+						$container.fadeIn();
+					}
+				});
+			})
+		</script>
+		<div class="debug-bar">
+			<div js-debug-bar-toggle>
+				Grid Debug
+			</div>
+		</div>
+		<div class="grid-debug-container">
+			{% include grid-debug.html %}
+			{% include grid-debug-bg.html %}
+		</div>
 	</body>
 </html>
 
