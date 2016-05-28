@@ -20,5 +20,6 @@ modules:
   images:
   - "/uploads/test.jpg"
   - "/uploads/test.jpg"
+  variation: 2up
 ---
 
