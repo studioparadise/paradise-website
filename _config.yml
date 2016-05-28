@@ -20,8 +20,8 @@ twitter: twusername
 github: ghusername
 googleplus: gusername
 instagram: igusername
-phone: ''
-email: ''
+phone: 
+email: 
 exclude:
 - README.md
 - node_modules
