@@ -27,5 +27,6 @@ exclude:
 - node_modules
 - gruntfile.js
 - package.json
+- vendor/
 gems:
 - jekyll-coffeescript
