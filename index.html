@@ -11,27 +11,17 @@ excerpt: This is the greatest website on earth. Share! Like! Subscribe! I'm dead
 
 <div class="index-swiper swiper-container">
 	<div class="swiper-wrapper">
-		<div class="swiper-slide">
-			<img src="/static/img/swiper-1.jpg" />
+		<div class="swiper-slide" style="background-image: url(/static/img/swiper-1.jpg);">
 		</div>
 	</div>
 </div>
 
 
-<div class="g2">
-	<div class="grid-debug">
-		g2
-	</div>
-</div>
-<div class="g2">
-	<div class="grid-debug">
-		g2
-	</div>
-</div>
-<div class="g2">
-	<div class="grid-debug">
-		g2
-	</div>
-</div>
+{% assign links = 'The Flower Shop,Abbott,Grovemade,Convicts,Leader Bag,Saturdays,Jack Erwin,St Archer,Raen,Mikoh,Kaelen' | split: "," %}
 
 
+{% for link in links %}
+<div class="index-project" js-index-project="{{ link | slugify }}">
+	{{ link | slugify: "pretty" }}
+</div>
+{% endfor %}

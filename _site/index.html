@@ -124,35 +124,114 @@
 
 <div class="index-swiper swiper-container">
 	<div class="swiper-wrapper">
-		<div class="swiper-slide">
-			<img src="/static/img/swiper-1.jpg" />
+		<div class="swiper-slide" style="background-image: url(/static/img/swiper-1.jpg);">
 		</div>
 	</div>
 </div>
 
 
-<div class="g2">
-	<div class="grid-debug">
-		g2
-	</div>
-</div>
-<div class="g2">
-	<div class="grid-debug">
-		g2
-	</div>
-</div>
-<div class="g2">
-	<div class="grid-debug">
-		g2
-	</div>
-</div>
 
 
+
+
+<div class="index-project" js-index-project="The Flower Shop">
+	The Flower Shop
+</div>
+
+<div class="index-project" js-index-project="Abbott">
+	Abbott
+</div>
+
+<div class="index-project" js-index-project="Grovemade">
+	Grovemade
+</div>
+
+<div class="index-project" js-index-project="Convicts">
+	Convicts
+</div>
+
+<div class="index-project" js-index-project="Leader Bag">
+	Leader Bag
+</div>
+
+<div class="index-project" js-index-project="Saturdays">
+	Saturdays
+</div>
+
+<div class="index-project" js-index-project="Jack Erwin">
+	Jack Erwin
+</div>
+
+<div class="index-project" js-index-project="St Archer">
+	St Archer
+</div>
+
+<div class="index-project" js-index-project="Raen">
+	Raen
+</div>
+
+<div class="index-project" js-index-project="Mikoh">
+	Mikoh
+</div>
+
+<div class="index-project" js-index-project="Kaelen">
+	Kaelen
+</div>
 
 			</div>
 		</div>
-		<br><br><br><br><br><br><br><br><br><br><br>
-		
+		<footer class="footer">
+	<div class="footer__contact">
+		Footer
+	</div>
+	<div class="footer__spacer">
+		&nbsp;
+	</div>
+	<div class="footer__address1">
+		Footer Address1
+	</div>
+	<div class="footer__address2">
+		Footer Address1
+	</div>
+	<div class="footer__spacer">
+		&nbsp;
+	</div>
+	<div class="footer__email">
+		Email
+	</div>
+</footer>
+
+		<!-- Loading in some scripts here -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<script type="text/javascript" src="static/coffee/init.js"></script>
+<!--
+<script type="text/javascript" src="static/coffee/controllers.js"></script>
+<script type="text/javascript" src="static/coffee/components.js"></script>
+ -->		
+
+
+
+		<script>
+			$(function() {
+				$("[js-debug-bar-toggle]").on('click', function() {
+
+					var $container = $(".grid-debug-container");
+					if ($container.is(':visible')) {
+						$container.fadeOut();
+					} else {
+						$container.fadeIn();
+					}
+				});
+			})
+		</script>
+		<div class="debug-bar">
+			<div js-debug-bar-toggle>
+				Grid Debug
+			</div>
+		</div>
+		<div class="grid-debug-container">
+			
 <center class="grid-debug-heading">
 	Grid
 </center>
@@ -363,7 +442,7 @@
 		</div>
 	</div>
 </div>
-		<div class="container-row grid-debug-bg">
+			<div class="container-row grid-debug-bg">
 	
 		<div class="g1">
 			<div class="grid-debug">
@@ -416,32 +495,7 @@
 </div>
 
 
-		<footer class="footer">
-	<div class="footer__contact">
-		Footer
-	</div>
-	<div class="footer__spacer">
-		&nbsp;
-	</div>
-	<div class="footer__address1">
-		Footer Address1
-	</div>
-	<div class="footer__address2">
-		Footer Address1
-	</div>
-	<div class="footer__spacer">
-		&nbsp;
-	</div>
-	<div class="footer__email">
-		Email
-	</div>
-</footer>
-
-		<!-- Loading in some scripts here -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script type="text/javascript" src="static/coffee/init.js"></script>
-<script type="text/javascript" src="static/coffee/controllers.js"></script>
-<script type="text/javascript" src="static/coffee/components.js"></script>		
+		</div>
 	</body>
 </html>
 

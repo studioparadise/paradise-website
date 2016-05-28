@@ -125,7 +125,8 @@
 
 html, body {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  font-family: Arial; }
 
 html.navbar-mobile-open {
   position: relative;
@@ -6516,6 +6517,15 @@ input[type="search"]::-webkit-search-decoration {
       padding-left: 17.5px;
       padding-right: 17.5px; } }
 
+.swiper-slide {
+  margin-top: 60px;
+  height: calc(100vh - 120px);
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center center; }
+
 .footer {
   background: white;
   position: relative;
@@ -6605,3 +6615,16 @@ input[type="search"]::-webkit-search-decoration {
     .footer__email {
       padding-left: 17.5px;
       padding-right: 17.5px; } }
+
+.debug-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 12px;
+  z-index: 100;
+  padding-left: 35px;
+  cursor: pointer; }
+
+.grid-debug-container {
+  display: none; }
