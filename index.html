@@ -27,10 +27,12 @@ excerpt: This is the greatest website on earth. Share! Like! Subscribe! I'm dead
 	<div class="row">
 		<div class="content-grid-spacer">&nbsp;</div>
 		<article class="index-project g6" js-index-project="{{ project.title | slugify }}" js-controller="indexProject">
-			{{ project.title }}
-			<a href="{{ project.url }}">
-				Open Project
-			</a>
+			<div class="index-project__inner">
+				{{ project.title }}
+				<a href="{{ project.url }}">
+					Open Project
+				</a>
+			</div>
 		</article>
 	</div>
 {% endfor %}

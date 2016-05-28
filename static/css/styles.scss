@@ -1230,12 +1230,14 @@ $desktop-margin: 35px;
 	top: 0;
 	bottom: 0;
 	right: 0;
-	z-index: 1;
+  z-index: 3;
 }
 .navbar__column {
 	// @include column(4);
 	height: 100vh;
 	// background: rgba(red, .1);
+  position: relative;
+  z-index: 3;
 	@include gvalign;
 	&:first-child {
 		@include isolation-span(1, 1);
@@ -1248,6 +1250,11 @@ $desktop-margin: 35px;
 .navbar__valign {
 	@include gvalign-child;
 	background: rgba(black, .05);
+  position: relative;  // used to calculation position() from JS
+}
+.navbar__secondary {
+  position: relative;
+  @include transition(margin .3s ease 0s);
 }
 .navbar__link {
 	display: block;
@@ -1255,6 +1262,10 @@ $desktop-margin: 35px;
 	padding: 2px 0;
 	text-decoration: none;
 	font-size: 14px;
+  color: #999;
+}
+.navbar__link--active {
+  color: black;
 }
 .navbar__logo {
 	position: absolute;
@@ -1267,6 +1278,7 @@ $desktop-margin: 35px;
 //content
 .content-wrapper {
 	@include container;
+  z-index: 2;
 }
 .content-grid-spacer {
 	@include column(2);
@@ -1297,9 +1309,12 @@ $desktop-margin: 35px;
 }
 
 .index-project {
-  height: 1500px;
-  background: rgba(black, .1);
   margin: 60px 0;
+}
+
+.index-project__inner {
+  background: rgba(black, .1);
+  height: 2000px;
 }
 
 //footer

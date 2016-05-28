@@ -25,21 +25,70 @@ root.controllers.navbar = ($element, args) ->
 	calculateOffsetForProject = (project) ->
 
 
-	getCurrentProject = ->
-		tolerance = $(window).height() * .3
-		$projects = $("[js-index-project]:in-viewport(#{tolerance})")
-		output = ''
-		for project in $projects		
-			output += ' ' + $(project).attr 'js-index-project' 
-		debug output
 
-	$(window).on 'scroll', ->
-		getCurrentProject()		
+
+	$primaryNav = $element.find '[js-navbar-primary]'
+	$primaryNavValign = $element.find '[js-navbar-primary-valign]'
+	$secondaryNav = $element.find '[js-navbar-secondary]'
+	$secondaryNavValign = $element.find '[js-navbar-secondary-valign]'
+
+	do handleSecondaryNav = ->
+		$navs = $element.find '[js-navbar-project]'
+		navLinkActiveClass = 'navbar__link--active'
+
+
+		getCurrentProject = ->
+			tolerance = $(window).height() * .3
+			$project = $("[js-index-project]:in-viewport(#{tolerance}):first")
+
+			projectSlug = $project.attr('js-index-project')
+			debug projectSlug
+			return projectSlug
+
+		alignSecondaryNavToPrimary = ($nav) ->
+			# animate offset
+			activeNavPosition = $nav.position().top
+			console.log "Active Nav Position: #{activeNavPosition}"
+			primaryNavOffset = $primaryNavValign.position().top
+
+			$parent = $nav.parent()
+			$parent.css
+				marginTop: primaryNavOffset - activeNavPosition
+
+		alignSecondaryNavToPrimary $navs.filter("[js-navbar-project]:first")
+
+		activateSecondaryNav = (project) ->
+			$nav = $navs.filter("[js-navbar-project=\"#{project}\"]:first")
+			$navs.removeClass navLinkActiveClass
+			$nav.addClass navLinkActiveClass
+			alignSecondaryNavToPrimary $nav
+
+
+		getProject = (project) ->
+			return $("[js-index-project=\"#{project}\"]")
+
+		scrollToProject = (project) ->
+			$project = getProject project
+			debug "scrolling to project #{project}"
+			console.log $project
+
+			$('html, body').animate
+				scrollTop: $project.offset().top
+			, 1000
+
+		$navs.on 'click', (ev) ->
+			ev.preventDefault()
+			scrollToProject($(this).attr 'js-navbar-project')
+
+		$(window).on 'scroll', ->
+			project = getCurrentProject()
+			if project
+				activateSecondaryNav project
 
 
 debug = (msg) ->
 	$("[js-debug-txt]").html msg
-
+	console.log msg
 $ ->
 	root.utils.bindOneController('indexProject')
 	root.utils.bindOneController('navbar')
