@@ -1664,6 +1664,12 @@ input[type="search"]::-webkit-search-decoration {
   display: inline-block;
   vertical-align: middle; }
 
+.no-transition {
+  -moz-transition: none !important;
+  -webkit-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important; }
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -6543,6 +6549,75 @@ input[type="search"]::-webkit-search-decoration {
 .module img {
   max-width: 100%; }
 
+.module-text {
+  margin-top: 70px;
+  margin-bottom: 140px; }
+  .module-text:after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media screen and (max-width: 849px) {
+    .module-text {
+      margin-left: -17.5px;
+      margin-right: -17.5px; } }
+  @media screen and (min-width: 850px) {
+    .module-text {
+      margin-left: -17.5px;
+      margin-right: -17.5px; } }
+
+.module-text__excerpt {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 37.5%;
+  float: left;
+  margin-left: 12.5%;
+  margin-right: -100%;
+  font-size: 26px;
+  line-height: 1.07; }
+  @media screen and (min-width: 850px) {
+    .module-text__excerpt {
+      padding-left: 17.5px;
+      padding-right: 17.5px; } }
+  @media screen and (max-width: 849px) {
+    .module-text__excerpt {
+      padding-left: 17.5px;
+      padding-right: 17.5px; } }
+
+.module-text__view-full {
+  margin-top: 28px; }
+
+.module-text__body {
+  /*
+  Isolation span: give column span width and start position.
+  */
+  width: 37.5%;
+  float: left;
+  margin-left: 62.5%;
+  margin-right: -100%;
+  font-size: 13px;
+  letter-spacing: .1em;
+  line-height: 1.5; }
+  @media screen and (min-width: 850px) {
+    .module-text__body {
+      padding-left: 17.5px;
+      padding-right: 17.5px; } }
+  @media screen and (max-width: 849px) {
+    .module-text__body {
+      padding-left: 17.5px;
+      padding-right: 17.5px; } }
+  .module-text__body p {
+    margin: 28px 0; }
+    .module-text__body p:first-child {
+      margin-top: 0; }
+  .module-text__body ul {
+    padding-left: 0;
+    margin-top: 35px; }
+  .module-text__body li {
+    display: inline-block;
+    width: 48%;
+    padding-right: 35px; }
+
 .footer {
   background: white;
   position: relative;
@@ -6645,3 +6720,13 @@ input[type="search"]::-webkit-search-decoration {
 
 .grid-debug-container {
   display: none; }
+
+.supports-js body {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease 0s;
+  -moz-transition: opacity 0.3s ease 0s;
+  -o-transition: opacity 0.3s ease 0s; }
+  .supports-js body.is-loading {
+    opacity: 1; }
+  .supports-js body.is-unloading {
+    opacity: 0; }

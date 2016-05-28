@@ -12,8 +12,14 @@
 			<img src="{{ module.image }}" />
 		</div>
 	{% when 'text' %}
-		<div class="">
-			{{ module.body }}
+		<div class="module-text__excerpt">
+			{{ module.excerpt }}
+			<div class="module-text__view-full" js-index-view-full-project>
+				View Full Project
+			</div>
+		</div>
+		<div class="module-text__body">
+			{{ module.body | markdownify }}
 		</div>
 	{% endcase %}
 </div>
