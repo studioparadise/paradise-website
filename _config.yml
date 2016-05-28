@@ -1,3 +1,4 @@
+
 # Site settings
 title: My Little Website
 tagline: "Changing the world, one uninspired quote at a time"
@@ -29,7 +30,7 @@ collections:
     layout: project
 
 ---
-title: Paradise Test
+title: My Little Website
 timezone: UTC
 collections:
   posts:
@@ -37,10 +38,25 @@ collections:
     output: true
   projects:
     title: Projects
-    output: true
-    A: A
-    B: B
-    C: C
+    output: false
+    layout: theme
   uploads:
     title: Uploads
     output: true
+tagline: Changing the world, one uninspired quote at a time
+url: http://yourwebsite.com
+socialimg: "/img/social.jpg"
+facebook: fbusername
+twitter: twusername
+github: ghusername
+googleplus: gusername
+instagram: igusername
+phone: ''
+email: ''
+exclude:
+- README.md
+- node_modules
+- gruntfile.js
+- package.json
+gems:
+- jekyll-coffeescript

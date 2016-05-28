@@ -1,6 +1,6 @@
 ---
 title: Home Page
-layout: default
+layout: theme
 fulltitle: My New Website | Update Coming August 2004
 excerpt: This is the greatest website on earth. Share! Like! Subscribe! I'm dead inside!
 ---
@@ -9,19 +9,28 @@ excerpt: This is the greatest website on earth. Share! Like! Subscribe! I'm dead
 <!-- excerpt: If this isn't set, it'll pull your {{site.tagline}} for meta description-->
 
 
-<div class="index-swiper swiper-container">
-	<div class="swiper-wrapper">
-		<div class="swiper-slide" style="background-image: url(/static/img/swiper-1.jpg);">
+<div class="row">
+	 <div class="content-grid-spacer">&nbsp;</div>
+	<div class="index-swiper swiper-container">
+
+		<div class="swiper-wrapper">
+			<div class="swiper-slide" style="background-image: url(/static/img/swiper-1.jpg);">
+			</div>
 		</div>
 	</div>
 </div>
 
-
 {% assign links = 'The Flower Shop,Abbott,Grovemade,Convicts,Leader Bag,Saturdays,Jack Erwin,St Archer,Raen,Mikoh,Kaelen' | split: "," %}
 
 
-{% for link in links %}
-<div class="index-project" js-index-project="{{ link | slugify }}">
-	{{ link | slugify: "pretty" }}
-</div>
+{% for project in site.projects %}
+	<div class="row">
+		<div class="content-grid-spacer">&nbsp;</div>
+		<div class="index-project g6" js-index-project="{{ project.title | slugify }}" js-controller="indexProject">
+			{{ project.title }}
+			<a href="{{ project.url }}">
+				Open Project
+			</a>
+		</div>
+	</div>
 {% endfor %}

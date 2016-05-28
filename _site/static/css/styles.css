@@ -6475,14 +6475,6 @@ input[type="search"]::-webkit-search-decoration {
     .content-wrapper {
       padding-left: 20px;
       padding-right: 20px; } }
-  @media screen and (min-width: 850px) {
-    .content-wrapper {
-      padding-left: 17.5px;
-      padding-right: 17.5px; } }
-  @media screen and (max-width: 849px) {
-    .content-wrapper {
-      padding-left: 2.5px;
-      padding-right: 2.5px; } }
 
 .content-grid-spacer {
   width: 25%;
@@ -6525,6 +6517,11 @@ input[type="search"]::-webkit-search-decoration {
   -moz-background-size: cover;
   background-size: cover;
   background-position: center center; }
+
+.index-project {
+  height: 1500px;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 60px 0; }
 
 .footer {
   background: white;
