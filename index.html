@@ -11,12 +11,27 @@ excerpt: This is the greatest website on earth. Share! Like! Subscribe! I'm dead
 
 <div class="row">
 	 <div class="content-grid-spacer">&nbsp;</div>
-	<div class="index-swiper swiper-container">
+	<div class="index-swiper">
+		<div class="swiper-container" js-component="swiper" js-args="{
+			autoplay: 3000,
+			effect: 'fade',
+			fade: {
+				crossFade: true
+			},
+			speed: 500
+		}">
 
 		<div class="swiper-wrapper">
-			<div class="swiper-slide" style="background-image: url(/static/img/swiper-1.jpg);">
-			</div>
+			<div class="swiper-slide" style="background-image: url(/static/img/swiper-1.jpg);"></div>
+			<div class="swiper-slide" style="background-image: url(/static/img/1.jpg);"></div>
+			<div class="swiper-slide" style="background-image: url(/static/img/2.jpg);"></div>
+			<div class="swiper-slide" style="background-image: url(/static/img/3.jpg);"></div>
+			<div class="swiper-slide" style="background-image: url(/static/img/4.jpg);"></div>
+			<div class="swiper-slide" style="background-image: url(/static/img/5.jpg);"></div>
+
+
 		</div>
+	</div>
 	</div>
 </div>
 
@@ -32,6 +47,10 @@ excerpt: This is the greatest website on earth. Share! Like! Subscribe! I'm dead
 				<a href="{{ project.url }}">
 					Open Project
 				</a>
+
+				{% for module in project.modules %}
+					{% include render_module.html %}
+				{% endfor %}
 			</div>
 		</article>
 	</div>

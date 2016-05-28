@@ -1,0 +1,19 @@
+<!--
+<ul>
+	<li>Module type:{{ module.type }}</li>
+	<li>Module data {{ module }}</li>
+</ul>
+-->
+{% capture cls %}module-{{ module.type }}{% endcapture %}
+<div class="module {{ cls }} {{ cls }}--{{ module.variation }}">
+	{% case module.type %}
+	{% when 'image' %}
+		<div class="m-hero">
+			<img src="{{ module.image }}" />
+		</div>
+	{% when 'text' %}
+		<div class="">
+			{{ module.body }}
+		</div>
+	{% endcase %}
+</div>

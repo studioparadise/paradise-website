@@ -1301,6 +1301,7 @@ $desktop-margin: 35px;
 //index
 .index-swiper {
 	@include column(6);
+  margin-right: -30px;
 }
 .swiper-slide {
   margin-top: 60px;
@@ -1315,6 +1316,15 @@ $desktop-margin: 35px;
 .index-project__inner {
   background: rgba(black, .1);
   height: 2000px;
+}
+
+//modules
+//modules
+//modules
+.module {
+  img {
+    max-width: 100%;
+  }
 }
 
 //footer
