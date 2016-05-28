@@ -12,10 +12,17 @@
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
 		{% include navbar.html %}
-		<div class="content">
-			{{ content }}
+		<div class="content-wrapper">
+			<div class="content-grid-spacer">&nbsp;</div>
+			<div class="content">
+				{{ content }}
+			</div>
 		</div>
-		{% include footer_before_body.html %}		
+		<br><br><br><br><br><br><br><br><br><br><br>
+		{% include grid-debug.html %}
+		{% include grid-debug-bg.html %}
+		{% include footer.html %}
+		{% include footer_scripts.html %}		
 	</body>
 </html>
 

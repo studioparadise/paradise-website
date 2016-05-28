@@ -803,20 +803,21 @@ $class-type: unquote(".");
 
 @mixin gvalign() {
   // useful method if pixellation results from translate
-  &:before {
+  white-space: nowrap;
+  &:after {
     content: '';
     display: inline-block;
     vertical-align: middle;
     height: 100%;
     width: .1px;
-    // white-space: nowrap;
   }
 }
 
 @mixin gvalign-child {
-  width: 96%;
-  display: inline-block;
-  vertical-align: middle;
+	white-space: normal;
+	width: 100%;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .gvalign {
@@ -1108,6 +1109,19 @@ $desktop-margin: 35px;
   margin-bottom: 10px;
 }
 
+// grid debug in background
+.grid-debug-bg {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: -1;
+	.grid-debug {
+		height: 100vh;
+		background: rgba(red, .1);
+	}
+}
 
 
 
@@ -1170,9 +1184,102 @@ $desktop-margin: 35px;
   @include animation(0s, .4s, fadeInUp);
 }
 
+@function global-grid($target-columns, $nested-columns) {
+	// get a global grid size in a nested column.
+	// i.e. 2 columns inside of a 6 column container, that is equal to the width of 2 columns in a root level container.
+	// math is $target-columns/$grid-columns * $grid-column/$nested
+	$target-percentage: $target-columns/$grid-columns;
+	$nested-columns-percentage: $grid-columns/$nested-columns;
 
+	@return ($target-percentage * $nested-columns-percentage)*100%;
+}
 
 
 .navbar {
+	// @include column-no-pad(2);
+	// padding-left: $desktop-margin;
+	@include container-row;
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+}
+.navbar__column {
+	// @include column(4);
+	height: 100vh;
+	// background: rgba(red, .1);
+	@include gvalign;
+	&:first-child {
+		@include isolation-span(1, 1);
+	}
+	&:last-child {
+		@include isolation-span(1, 2);
+	}
+}
+.navbar__valign {
+	@include gvalign-child;
+	background: rgba(black, .05);
+}
+.navbar__link {
+	display: block;
+	text-decoration: none;
+	padding: 2px 0;
+	text-decoration: none;
+}
+.navbar__logo {
+	position: absolute;
+	top: 35px;
+	left: 35px;
+}
+
+//content
+//content
+//content
+.content-wrapper {
+	@include container-row;
+}
+.content-grid-spacer {
+	@include column(2);
+}
+.content {
+	// @include column(6);
+	z-index: 2;
+	position: relative;
+	// @include isolation-span(6, 3);
+	min-height: 90vh;
 
 }
+
+.footer {
+	background: white;
+	position: relative;
+	z-index: 3;
+	margin-top: 300px;
+	padding-top: 65px;
+	padding-bottom: 35px;
+	@include container-row;
+}
+.footer__contact {
+	@include column(1);
+}
+.footer__address1 {
+	@include column(1);
+}
+.footer__address2 {
+	@include column(1);
+}
+.footer__spacer {
+	@include column(1);
+}
+.footer__email {
+	@include column(3);
+}
+
+
+// .g2-in-g6 {
+// 	width: global-grid(2, 6);
+// 	float: left;
+// 	padding: 0 $desktop-gutter/2;
+// }

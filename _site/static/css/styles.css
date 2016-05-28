@@ -1648,15 +1648,18 @@ input[type="search"]::-webkit-search-decoration {
   PULL
     - Pull classes, to move grid items back to the left by certain amounts
 ==============================================================================*/
-.gvalign:before {
-  content: '';
-  display: inline-block;
-  vertical-align: middle;
-  height: 100%;
-  width: .1px; }
+.gvalign {
+  white-space: nowrap; }
+  .gvalign:after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: .1px; }
 
 .gvalign-child {
-  width: 96%;
+  white-space: normal;
+  width: 100%;
   display: inline-block;
   vertical-align: middle; }
 
@@ -6120,6 +6123,17 @@ input[type="search"]::-webkit-search-decoration {
   height: 20px;
   margin-bottom: 10px; }
 
+.grid-debug-bg {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1; }
+  .grid-debug-bg .grid-debug {
+    height: 100vh;
+    background: rgba(255, 0, 0, 0.1); }
+
 @-webkit-keyframes $animation_name {
   0% {
     -ms-transform: translateY(7px);
@@ -6353,3 +6367,224 @@ input[type="search"]::-webkit-search-decoration {
   animation-name: fadeInUp;
   animation-fill-mode: forwards;
   /* this prevents the animation from restarting! */ }
+
+.navbar {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1500px;
+  clear: both;
+  padding-left: 35px;
+  padding-right: 35px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1; }
+  .navbar:after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media screen and (max-width: 849px) {
+    .navbar {
+      padding-left: 20px;
+      padding-right: 20px; } }
+  @media screen and (min-width: 850px) {
+    .navbar {
+      padding-left: 17.5px;
+      padding-right: 17.5px; } }
+  @media screen and (max-width: 849px) {
+    .navbar {
+      padding-left: 2.5px;
+      padding-right: 2.5px; } }
+
+.navbar__column {
+  height: 100vh;
+  white-space: nowrap; }
+  .navbar__column:after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: .1px; }
+  .navbar__column:first-child {
+    /*
+    Isolation span: give column span width and start position.
+    */
+    width: 12.5%;
+    float: left;
+    margin-left: 0%;
+    margin-right: -100%; }
+    @media screen and (min-width: 850px) {
+      .navbar__column:first-child {
+        padding-left: 17.5px;
+        padding-right: 17.5px; } }
+    @media screen and (max-width: 849px) {
+      .navbar__column:first-child {
+        padding-left: 17.5px;
+        padding-right: 17.5px; } }
+  .navbar__column:last-child {
+    /*
+    Isolation span: give column span width and start position.
+    */
+    width: 12.5%;
+    float: left;
+    margin-left: 12.5%;
+    margin-right: -100%; }
+    @media screen and (min-width: 850px) {
+      .navbar__column:last-child {
+        padding-left: 17.5px;
+        padding-right: 17.5px; } }
+    @media screen and (max-width: 849px) {
+      .navbar__column:last-child {
+        padding-left: 17.5px;
+        padding-right: 17.5px; } }
+
+.navbar__valign {
+  white-space: normal;
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  background: rgba(0, 0, 0, 0.05); }
+
+.navbar__link {
+  display: block;
+  text-decoration: none;
+  padding: 2px 0;
+  text-decoration: none; }
+
+.navbar__logo {
+  position: absolute;
+  top: 35px;
+  left: 35px; }
+
+.content-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1500px;
+  clear: both;
+  padding-left: 35px;
+  padding-right: 35px; }
+  .content-wrapper:after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media screen and (max-width: 849px) {
+    .content-wrapper {
+      padding-left: 20px;
+      padding-right: 20px; } }
+  @media screen and (min-width: 850px) {
+    .content-wrapper {
+      padding-left: 17.5px;
+      padding-right: 17.5px; } }
+  @media screen and (max-width: 849px) {
+    .content-wrapper {
+      padding-left: 2.5px;
+      padding-right: 2.5px; } }
+
+.content-grid-spacer {
+  width: 25%;
+  float: left; }
+  @media screen and (min-width: 850px) {
+    .content-grid-spacer {
+      padding-left: 17.5px;
+      padding-right: 17.5px; } }
+  @media screen and (max-width: 849px) {
+    .content-grid-spacer {
+      padding-left: 17.5px;
+      padding-right: 17.5px; } }
+
+.content {
+  z-index: 2;
+  position: relative;
+  min-height: 90vh; }
+
+.footer {
+  background: white;
+  position: relative;
+  z-index: 3;
+  margin-top: 300px;
+  padding-top: 65px;
+  padding-bottom: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1500px;
+  clear: both;
+  padding-left: 35px;
+  padding-right: 35px; }
+  .footer:after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media screen and (max-width: 849px) {
+    .footer {
+      padding-left: 20px;
+      padding-right: 20px; } }
+  @media screen and (min-width: 850px) {
+    .footer {
+      padding-left: 17.5px;
+      padding-right: 17.5px; } }
+  @media screen and (max-width: 849px) {
+    .footer {
+      padding-left: 2.5px;
+      padding-right: 2.5px; } }
+
+.footer__contact {
+  width: 12.5%;
+  float: left; }
+  @media screen and (min-width: 850px) {
+    .footer__contact {
+      padding-left: 17.5px;
+      padding-right: 17.5px; } }
+  @media screen and (max-width: 849px) {
+    .footer__contact {
+      padding-left: 17.5px;
+      padding-right: 17.5px; } }
+
+.footer__address1 {
+  width: 12.5%;
+  float: left; }
+  @media screen and (min-width: 850px) {
+    .footer__address1 {
+      padding-left: 17.5px;
+      padding-right: 17.5px; } }
+  @media screen and (max-width: 849px) {
+    .footer__address1 {
+      padding-left: 17.5px;
+      padding-right: 17.5px; } }
+
+.footer__address2 {
+  width: 12.5%;
+  float: left; }
+  @media screen and (min-width: 850px) {
+    .footer__address2 {
+      padding-left: 17.5px;
+      padding-right: 17.5px; } }
+  @media screen and (max-width: 849px) {
+    .footer__address2 {
+      padding-left: 17.5px;
+      padding-right: 17.5px; } }
+
+.footer__spacer {
+  width: 12.5%;
+  float: left; }
+  @media screen and (min-width: 850px) {
+    .footer__spacer {
+      padding-left: 17.5px;
+      padding-right: 17.5px; } }
+  @media screen and (max-width: 849px) {
+    .footer__spacer {
+      padding-left: 17.5px;
+      padding-right: 17.5px; } }
+
+.footer__email {
+  width: 37.5%;
+  float: left; }
+  @media screen and (min-width: 850px) {
+    .footer__email {
+      padding-left: 17.5px;
+      padding-right: 17.5px; } }
+  @media screen and (max-width: 849px) {
+    .footer__email {
+      padding-left: 17.5px;
+      padding-right: 17.5px; } }
