@@ -1259,7 +1259,7 @@ $desktop-margin: 35px;
 
 .navbar__valign {
 	@include gvalign-child;
-	background: rgba(black, .05);
+	// background: rgba(black, .05);
   position: relative;  // used to calculation position() from JS
 }
 .navbar__secondary {

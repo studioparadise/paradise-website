@@ -6454,7 +6454,6 @@ input[type="search"]::-webkit-search-decoration {
   width: 100%;
   display: inline-block;
   vertical-align: middle;
-  background: rgba(0, 0, 0, 0.05);
   position: relative; }
 
 .navbar__secondary {
