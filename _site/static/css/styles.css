@@ -6519,8 +6519,7 @@ input[type="search"]::-webkit-search-decoration {
 
 .index-swiper {
   width: 75%;
-  float: left;
-  margin-right: -30px; }
+  float: left; }
   @media screen and (min-width: 850px) {
     .index-swiper {
       padding-left: 17.5px;
@@ -6529,6 +6528,8 @@ input[type="search"]::-webkit-search-decoration {
     .index-swiper {
       padding-left: 17.5px;
       padding-right: 17.5px; } }
+  .index-swiper .swiper-container {
+    margin-right: -35px; }
 
 .swiper-slide {
   margin-top: 60px;
@@ -6540,14 +6541,28 @@ input[type="search"]::-webkit-search-decoration {
   background-position: center center; }
 
 .index-project {
-  margin: 60px 0; }
+  margin: 60px 0;
+  position: relative; }
+
+.index-project-debug {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 12px;
+  background: rgba(255, 0, 0, 0.5);
+  color: white;
+  padding: 5px 10px; }
+  .index-project-debug a {
+    color: white; }
 
 .index-project__inner {
-  background: rgba(0, 0, 0, 0.1);
   height: 2000px; }
 
 .module img {
   max-width: 100%; }
+
+.module-image {
+  margin-right: -35px; }
 
 .module-text {
   margin-top: 70px;

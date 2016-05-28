@@ -1311,7 +1311,9 @@ $desktop-margin: 35px;
 //index
 .index-swiper {
 	@include column(6);
-  margin-right: -30px;
+  .swiper-container {
+    margin-right: -1 * $desktop-margin;
+  }
 }
 .swiper-slide {
   margin-top: 60px;
@@ -1321,10 +1323,23 @@ $desktop-margin: 35px;
 
 .index-project {
   margin: 60px 0;
+  position: relative;
+}
+.index-project-debug {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 12px;
+  background: rgba(red, .5);
+  color: white;
+  padding: 5px 10px;
+  a {
+    color: white;
+  }
 }
 
 .index-project__inner {
-  background: rgba(black, .1);
+  // background: rgba(black, .1);
   height: 2000px;
 }
 
@@ -1336,6 +1351,12 @@ $desktop-margin: 35px;
     max-width: 100%;
   }
 }
+
+
+.module-image {
+  margin-right: -1 * $desktop-margin;
+}
+
 
 .module-text {
   @include row;

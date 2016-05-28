@@ -8,9 +8,7 @@
 <div class="module {{ cls }} {{ cls }}--{{ module.variation }}">
 	{% case module.type %}
 	{% when 'image' %}
-		<div class="m-hero">
-			<img src="{{ module.image }}" />
-		</div>
+		<img src="{{ module.image }}" />
 	{% when 'text' %}
 		<div class="module-text__excerpt">
 			{{ module.excerpt }}
