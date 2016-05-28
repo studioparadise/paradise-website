@@ -46,11 +46,11 @@
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
 		<div class="navbar" js-controller="navbar">
-	<div class="navbar__column navbar__column--2">
+	<div class="navbar__column navbar__column--2" js-navbar-primary>
 		<div class="navbar__logo">
 			Paradise
 		</div>
-		<div class="navbar__valign">
+		<div class="navbar__valign" js-navbar-primary-valign>
 
 			<a class="navbar__link" href="">
 				Work
@@ -63,12 +63,8 @@
 			</a>
 		</div>
 	</div>
-	<div class="navbar__column navbar__column--2">
-		<div class="navbar__valign">
-			
-				<a class="navbar__link" href="" js-navbar-project="a-case-study">
-					A Case Study
-				</a>
+	<div class="navbar__column navbar__column--2" js-navbar-secondary>
+		<div class="navbar__secondary" js-navbar-secondary-valign>
 			
 				<a class="navbar__link" href="" js-navbar-project="leader-bag">
 					Leader Bag
@@ -113,51 +109,49 @@
 
 	<div class="row">
 		<div class="content-grid-spacer">&nbsp;</div>
-		<article class="index-project g6" js-index-project="a-case-study" js-controller="indexProject">
-			A Case Study
-			<a href="/projects/a-case-study.html">
-				Open Project
-			</a>
-		</article>
-	</div>
-
-	<div class="row">
-		<div class="content-grid-spacer">&nbsp;</div>
 		<article class="index-project g6" js-index-project="leader-bag" js-controller="indexProject">
-			Leader Bag
-			<a href="/projects/leader-bag.html">
-				Open Project
-			</a>
+			<div class="index-project__inner">
+				Leader Bag
+				<a href="/projects/leader-bag.html">
+					Open Project
+				</a>
+			</div>
 		</article>
 	</div>
 
 	<div class="row">
 		<div class="content-grid-spacer">&nbsp;</div>
 		<article class="index-project g6" js-index-project="the-flower-shop" js-controller="indexProject">
-			The Flower Shop
-			<a href="/projects/the-flower-shop.html">
-				Open Project
-			</a>
+			<div class="index-project__inner">
+				The Flower Shop
+				<a href="/projects/the-flower-shop.html">
+					Open Project
+				</a>
+			</div>
 		</article>
 	</div>
 
 	<div class="row">
 		<div class="content-grid-spacer">&nbsp;</div>
 		<article class="index-project g6" js-index-project="grovemade" js-controller="indexProject">
-			Grovemade
-			<a href="/projects/grovemade.html">
-				Open Project
-			</a>
+			<div class="index-project__inner">
+				Grovemade
+				<a href="/projects/grovemade.html">
+					Open Project
+				</a>
+			</div>
 		</article>
 	</div>
 
 	<div class="row">
 		<div class="content-grid-spacer">&nbsp;</div>
 		<article class="index-project g6" js-index-project="nixon" js-controller="indexProject">
-			Nixon
-			<a href="/projects/nixon.html">
-				Open Project
-			</a>
+			<div class="index-project__inner">
+				Nixon
+				<a href="/projects/nixon.html">
+					Open Project
+				</a>
+			</div>
 		</article>
 	</div>
 

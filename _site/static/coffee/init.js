@@ -20,27 +20,72 @@
   };
 
   root.controllers.navbar = function($element, args) {
-    var calculateOffsetForProject, getCurrentProject;
+    var $primaryNav, $primaryNavValign, $secondaryNav, $secondaryNavValign, calculateOffsetForProject, handleSecondaryNav;
     console.log('navbar');
     calculateOffsetForProject = function(project) {};
-    getCurrentProject = function() {
-      var $projects, i, len, output, project, tolerance;
-      tolerance = $(window).height() * .3;
-      $projects = $("[js-index-project]:in-viewport(" + tolerance + ")");
-      output = '';
-      for (i = 0, len = $projects.length; i < len; i++) {
-        project = $projects[i];
-        output += ' ' + $(project).attr('js-index-project');
-      }
-      return debug(output);
-    };
-    return $(window).on('scroll', function() {
-      return getCurrentProject();
-    });
+    $primaryNav = $element.find('[js-navbar-primary]');
+    $primaryNavValign = $element.find('[js-navbar-primary-valign]');
+    $secondaryNav = $element.find('[js-navbar-secondary]');
+    $secondaryNavValign = $element.find('[js-navbar-secondary-valign]');
+    return (handleSecondaryNav = function() {
+      var $navs, activateSecondaryNav, alignSecondaryNavToPrimary, getCurrentProject, getProject, navLinkActiveClass, scrollToProject;
+      $navs = $element.find('[js-navbar-project]');
+      navLinkActiveClass = 'navbar__link--active';
+      getCurrentProject = function() {
+        var $project, projectSlug, tolerance;
+        tolerance = $(window).height() * .3;
+        $project = $("[js-index-project]:in-viewport(" + tolerance + "):first");
+        projectSlug = $project.attr('js-index-project');
+        debug(projectSlug);
+        return projectSlug;
+      };
+      alignSecondaryNavToPrimary = function($nav) {
+        var $parent, activeNavPosition, primaryNavOffset;
+        activeNavPosition = $nav.position().top;
+        console.log("Active Nav Position: " + activeNavPosition);
+        primaryNavOffset = $primaryNavValign.position().top;
+        $parent = $nav.parent();
+        return $parent.css({
+          marginTop: primaryNavOffset - activeNavPosition
+        });
+      };
+      alignSecondaryNavToPrimary($navs.filter("[js-navbar-project]:first"));
+      activateSecondaryNav = function(project) {
+        var $nav;
+        $nav = $navs.filter("[js-navbar-project=\"" + project + "\"]:first");
+        $navs.removeClass(navLinkActiveClass);
+        $nav.addClass(navLinkActiveClass);
+        return alignSecondaryNavToPrimary($nav);
+      };
+      getProject = function(project) {
+        return $("[js-index-project=\"" + project + "\"]");
+      };
+      scrollToProject = function(project) {
+        var $project;
+        $project = getProject(project);
+        debug("scrolling to project " + project);
+        console.log($project);
+        return $('html, body').animate({
+          scrollTop: $project.offset().top
+        }, 1000);
+      };
+      $navs.on('click', function(ev) {
+        ev.preventDefault();
+        return scrollToProject($(this).attr('js-navbar-project'));
+      });
+      return $(window).on('scroll', function() {
+        var project;
+        project = getCurrentProject();
+        if (project) {
+          return activateSecondaryNav(project);
+        }
+      });
+    })();
   };
 
   debug = function(msg) {
-    return $("[js-debug-txt]").html(msg);
+    $("[js-debug-txt]").html(msg);
+    return console.log(msg);
   };
 
   $(function() {
