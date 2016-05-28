@@ -1,5 +1,6 @@
 ---
 ---
+
 root = exports ? this
 
 root.components.swiper = ($element, args) ->
