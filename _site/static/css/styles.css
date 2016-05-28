@@ -6451,7 +6451,8 @@ input[type="search"]::-webkit-search-decoration {
   display: block;
   text-decoration: none;
   padding: 2px 0;
-  text-decoration: none; }
+  text-decoration: none;
+  font-size: 14px; }
 
 .navbar__logo {
   position: absolute;
