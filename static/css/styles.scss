@@ -1333,13 +1333,14 @@ $desktop-margin: 35px;
   background: rgba(red, .5);
   color: white;
   padding: 5px 10px;
+
   a {
     color: white;
   }
 }
 
 .index-project__inner {
-  // background: rgba(black, .1);
+  background: rgba(black, .05);
   height: 2000px;
 }
 
@@ -1355,6 +1356,12 @@ $desktop-margin: 35px;
 
 .module-image {
   margin-right: -1 * $desktop-margin;
+}
+
+@for $i from 1 through 8 {
+  .module-image__#{$i}up {
+    @include column(6/$i);
+  }
 }
 
 

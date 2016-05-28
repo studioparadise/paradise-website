@@ -169,7 +169,9 @@
 
 <div class="module module-image module-image--">
 	
-		<img src="/uploads/test.jpg" />
+		
+			<img src="/uploads/test.jpg" />
+		
 	
 </div>
 
@@ -210,13 +212,23 @@
 					<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"image"=>"/uploads/test.jpg", "type"=>"image"}</li>
+	<li>Module data {"type"=>"image", "images"=>["/uploads/test.jpg", "/uploads/test.jpg"], "variation"=>"2up"}</li>
 </ul>
 -->
 
-<div class="module module-image module-image--">
+<div class="module module-image module-image--2up">
 	
-		<img src="/uploads/test.jpg" />
+		
+			
+				<div class="module-image__2up">
+					<img src="/uploads/test.jpg" />
+				</div>
+			
+				<div class="module-image__2up">
+					<img src="/uploads/test.jpg" />
+				</div>
+			
+		
 	
 </div>
 
