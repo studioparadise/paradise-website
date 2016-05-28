@@ -36,6 +36,7 @@
 	<meta name="twitter:image" content="http://yourwebsite.com/img/social.jpg">
 	<meta name="twitter:url" content="http://yourwebsite.com/">
 	
+	<link rel="stylesheet" href="static/css/libraries_aggregated.min.css">
 	<!-- CSS & fonts -->
 	<link rel="stylesheet" href="static/css/styles.css">
 	<!-- Put your fonts here -->
@@ -82,6 +83,30 @@
 					Nixon
 				</a>
 			
+				<a class="navbar__link" href="" js-navbar-project="jack-erwin">
+					Jack Erwin
+				</a>
+			
+				<a class="navbar__link" href="" js-navbar-project="abbott">
+					Abbott
+				</a>
+			
+				<a class="navbar__link" href="" js-navbar-project="kaelen">
+					Kaelen
+				</a>
+			
+				<a class="navbar__link" href="" js-navbar-project="raen">
+					Raen
+				</a>
+			
+				<a class="navbar__link" href="" js-navbar-project="saturdays">
+					Saturdays
+				</a>
+			
+				<a class="navbar__link" href="" js-navbar-project="st-archer">
+					St Archer
+				</a>
+			
 		</div>
 	</div>
 </div>
@@ -94,12 +119,27 @@
 
 <div class="row">
 	 <div class="content-grid-spacer">&nbsp;</div>
-	<div class="index-swiper swiper-container">
+	<div class="index-swiper">
+		<div class="swiper-container" js-component="swiper" js-args="{
+			autoplay: 3000,
+			effect: 'fade',
+			fade: {
+				crossFade: true
+			},
+			speed: 500
+		}">
 
 		<div class="swiper-wrapper">
-			<div class="swiper-slide" style="background-image: url(/static/img/swiper-1.jpg);">
-			</div>
+			<div class="swiper-slide" style="background-image: url(/static/img/swiper-1.jpg);"></div>
+			<div class="swiper-slide" style="background-image: url(/static/img/1.jpg);"></div>
+			<div class="swiper-slide" style="background-image: url(/static/img/2.jpg);"></div>
+			<div class="swiper-slide" style="background-image: url(/static/img/3.jpg);"></div>
+			<div class="swiper-slide" style="background-image: url(/static/img/4.jpg);"></div>
+			<div class="swiper-slide" style="background-image: url(/static/img/5.jpg);"></div>
+
+
 		</div>
+	</div>
 	</div>
 </div>
 
@@ -115,6 +155,8 @@
 				<a href="/projects/leader-bag.html">
 					Open Project
 				</a>
+
+				
 			</div>
 		</article>
 	</div>
@@ -127,6 +169,8 @@
 				<a href="/projects/the-flower-shop.html">
 					Open Project
 				</a>
+
+				
 			</div>
 		</article>
 	</div>
@@ -139,6 +183,8 @@
 				<a href="/projects/grovemade.html">
 					Open Project
 				</a>
+
+				
 			</div>
 		</article>
 	</div>
@@ -151,6 +197,92 @@
 				<a href="/projects/nixon.html">
 					Open Project
 				</a>
+
+				
+			</div>
+		</article>
+	</div>
+
+	<div class="row">
+		<div class="content-grid-spacer">&nbsp;</div>
+		<article class="index-project g6" js-index-project="jack-erwin" js-controller="indexProject">
+			<div class="index-project__inner">
+				Jack Erwin
+				<a href="/projects/jack-erwin.html">
+					Open Project
+				</a>
+
+				
+			</div>
+		</article>
+	</div>
+
+	<div class="row">
+		<div class="content-grid-spacer">&nbsp;</div>
+		<article class="index-project g6" js-index-project="abbott" js-controller="indexProject">
+			<div class="index-project__inner">
+				Abbott
+				<a href="/projects/abbott.html">
+					Open Project
+				</a>
+
+				
+			</div>
+		</article>
+	</div>
+
+	<div class="row">
+		<div class="content-grid-spacer">&nbsp;</div>
+		<article class="index-project g6" js-index-project="kaelen" js-controller="indexProject">
+			<div class="index-project__inner">
+				Kaelen
+				<a href="/projects/kaelen.html">
+					Open Project
+				</a>
+
+				
+			</div>
+		</article>
+	</div>
+
+	<div class="row">
+		<div class="content-grid-spacer">&nbsp;</div>
+		<article class="index-project g6" js-index-project="raen" js-controller="indexProject">
+			<div class="index-project__inner">
+				Raen
+				<a href="/projects/raen.html">
+					Open Project
+				</a>
+
+				
+			</div>
+		</article>
+	</div>
+
+	<div class="row">
+		<div class="content-grid-spacer">&nbsp;</div>
+		<article class="index-project g6" js-index-project="saturdays" js-controller="indexProject">
+			<div class="index-project__inner">
+				Saturdays
+				<a href="/projects/saturdays.html">
+					Open Project
+				</a>
+
+				
+			</div>
+		</article>
+	</div>
+
+	<div class="row">
+		<div class="content-grid-spacer">&nbsp;</div>
+		<article class="index-project g6" js-index-project="st-archer" js-controller="indexProject">
+			<div class="index-project__inner">
+				St Archer
+				<a href="/projects/st-archer.html">
+					Open Project
+				</a>
+
+				
 			</div>
 		</article>
 	</div>
@@ -178,15 +310,14 @@
 	</div>
 </footer>
 
-		<!-- Loading in some scripts here -->
+		
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 <script type="text/javascript" src="static/js/libraries-aggregated.min.js"></script>
 <script type="text/javascript" src="static/coffee/init.js"></script>
-<!--
 <script type="text/javascript" src="static/coffee/controllers.js"></script>
 <script type="text/javascript" src="static/coffee/components.js"></script>
- -->		
+		
 
 
 		<script>

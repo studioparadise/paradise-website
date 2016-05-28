@@ -1301,6 +1301,7 @@ $desktop-margin: 35px;
 //index
 .index-swiper {
 	@include column(6);
+  margin-right: -30px;
 }
 .swiper-slide {
   margin-top: 60px;
