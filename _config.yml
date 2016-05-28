@@ -1,35 +1,5 @@
-# Site settings
-title: My Little Website
-tagline: "Changing the world, one uninspired quote at a time"
-url: "http://yourwebsite.com" # The base hostname & protocol for your site. Use it if you need absolute URL's
-
-# Social
-socialimg: /img/social.jpg # be sure to change this image
-facebook: fbusername
-twitter: twusername
-github: ghusername
-googleplus: gusername
-instagram: igusername
-
-# Contact
-phone: "" # This is my real number. You should text me.
-email: "" # This is my real email address. Please don't email me.
-
-# Use this for production
-#sass:
-#    style: :compressed
-
-exclude: [README.md, node_modules, gruntfile.js, package.json]
-
-gems:
-  - 'jekyll-coffeescript'
-
-collections:
-  projects:
-    layout: project
-
 ---
-title: Paradise Test
+title: My Little Website
 timezone: UTC
 collections:
   posts:
@@ -37,10 +7,25 @@ collections:
     output: true
   projects:
     title: Projects
-    output: true
-    A: A
-    B: B
-    C: C
+    output: false
+    layout: project
   uploads:
     title: Uploads
     output: true
+tagline: Changing the world, one uninspired quote at a time
+url: http://yourwebsite.com
+socialimg: "/img/social.jpg"
+facebook: fbusername
+twitter: twusername
+github: ghusername
+googleplus: gusername
+instagram: igusername
+phone: ''
+email: ''
+exclude:
+- README.md
+- node_modules
+- gruntfile.js
+- package.json
+gems:
+- jekyll-coffeescript
