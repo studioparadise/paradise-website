@@ -903,6 +903,13 @@ $class-type: unquote(".");
   @include backface($args);
 }
 
+.no-transition {
+    -moz-transition: none !important;
+    -webkit-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+
 @mixin clearfix {
   &:after {
     content: "";
@@ -1220,6 +1227,9 @@ $desktop-margin: 35px;
   letter-spacing: .1em;
   line-height: 1.5;
 }
+@mixin style-body {
+  @include style-h4;
+}
 
 .navbar {
 	// @include column-no-pad(2);
@@ -1301,7 +1311,9 @@ $desktop-margin: 35px;
 //index
 .index-swiper {
 	@include column(6);
-  margin-right: -30px;
+  .swiper-container {
+    margin-right: -1 * $desktop-margin;
+  }
 }
 .swiper-slide {
   margin-top: 60px;
@@ -1311,10 +1323,24 @@ $desktop-margin: 35px;
 
 .index-project {
   margin: 60px 0;
+  position: relative;
+}
+.index-project-debug {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 12px;
+  background: rgba(red, .5);
+  color: white;
+  padding: 5px 10px;
+
+  a {
+    color: white;
+  }
 }
 
 .index-project__inner {
-  background: rgba(black, .1);
+  background: rgba(black, .05);
   height: 2000px;
 }
 
@@ -1326,6 +1352,52 @@ $desktop-margin: 35px;
     max-width: 100%;
   }
 }
+
+
+.module-image {
+  margin-right: -1 * $desktop-margin;
+}
+
+@for $i from 1 through 8 {
+  .module-image__#{$i}up {
+    @include column(6/$i);
+  }
+}
+
+
+.module-text {
+  @include row;
+  margin-top: 70px;
+  margin-bottom: 140px;
+}
+.module-text__excerpt {
+  @include isolation-span(3, 2);
+  @include style-h1;
+}
+.module-text__view-full {
+  margin-top: 28px;
+}
+
+.module-text__body {
+  @include isolation-span(3, 6);
+  @include style-body;
+  p {
+    margin: 28px 0;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  ul {
+    padding-left: 0;
+    margin-top: 35px;
+  }
+  li {
+    display: inline-block;
+    width: 48%;
+    padding-right: $desktop-gutter;
+  }
+}
+
 
 //footer
 //footer
@@ -1374,3 +1446,21 @@ $desktop-margin: 35px;
 // 	float: left;
 // 	padding: 0 $desktop-gutter/2;
 // }
+// animation
+// animation
+// animation
+
+.supports-js {
+  body {
+    opacity: 0;
+    @include transition(opacity .3s ease 0s);
+
+    &.is-loading {
+      opacity: 1;
+    }
+    &.is-unloading {
+      opacity: 0;
+    }
+  }
+}
+

@@ -8,12 +8,24 @@
 <div class="module {{ cls }} {{ cls }}--{{ module.variation }}">
 	{% case module.type %}
 	{% when 'image' %}
-		<div class="m-hero">
+		{% if module.images.size > 1 %}
+			{% for image in module.images %}
+				<div class="{{ cls }}__{{ module.images.size }}up">
+					<img src="{{ image }}" />
+				</div>
+			{% endfor %}
+		{% else %}
 			<img src="{{ module.image }}" />
-		</div>
+		{% endif %}
 	{% when 'text' %}
-		<div class="">
-			{{ module.body }}
+		<div class="module-text__excerpt">
+			{{ module.excerpt }}
+			<div class="module-text__view-full" js-index-view-full-project>
+				View Full Project
+			</div>
+		</div>
+		<div class="module-text__body">
+			{{ module.body | markdownify }}
 		</div>
 	{% endcase %}
 </div>

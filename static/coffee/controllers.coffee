@@ -29,13 +29,21 @@ root.controllers.navbar = ($element, args) ->
 			debug projectSlug
 			return projectSlug
 
+		alignFirstTime = true
 		alignSecondaryNavToPrimary = ($nav) ->
 			# animate offset
 			activeNavPosition = $nav.position().top
 			console.log "Active Nav Position: #{activeNavPosition}"
+			# offset from active nav element
 			primaryNavOffset = $primaryNavValign.position().top
 
 			$parent = $nav.parent()
+			if alignFirstTime
+				alignFirstTime = false
+				$parent.addClass 'no-transition'
+				setTimeout ->
+					$parent.removeClass 'no-transition'
+				, 500
 			$parent.css
 				marginTop: primaryNavOffset - activeNavPosition
 
@@ -79,3 +87,12 @@ root.controllers.navbar = ($element, args) ->
 			project = getCurrentProject()
 			if project
 				activateSecondaryNav project
+
+root.controllers.indexProject = ($element, args) ->
+	do handleViewFullProject = ->
+		$trigger = $element.find '[js-index-view-full-project]'
+		$trigger.on 'click', ->
+			if $('html').hasClass 'viewing-full-project'
+				$('html').removeClass 'viewing-full-project'
+			else
+				$('html').addClass 'viewing-full-project'
