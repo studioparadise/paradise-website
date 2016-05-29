@@ -13,22 +13,21 @@ collections:
     title: Uploads
     output: true
 defaults:
-  -
-    scope:
-      path: ""
-      type: "projects"
-    values:
-      layout: "default"
-      modules:
-        - type: 'hero'
-          title: ''
-          image: ''
-        - type: 'text'
-        - text:
-          variation: 'centered'
-        - type: 'images'
-          image1: ''
-          image2: ''
+- scope:
+    path: ''
+    type: projects
+  values:
+    layout: default
+    modules:
+    - type: hero
+      title: ''
+      image: ''
+    - type: text
+    - text: 
+      variation: centered
+    - type: images
+      image1: ''
+      image2: ''
 tagline: Changing the world, one uninspired quote at a time
 url: http://yourwebsite.com
 socialimg: "/img/social.jpg"
@@ -47,4 +46,3 @@ exclude:
 - vendor/
 gems:
 - jekyll-coffeescript
-
