@@ -24,7 +24,7 @@ defaults:
           title: ''
           image: ''
         - type: 'text'
-        - text:
+          text:
           variation: 'centered'
         - type: 'images'
           image1: ''
