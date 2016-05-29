@@ -30,3 +30,15 @@ exclude:
 - vendor/
 gems:
 - jekyll-coffeescript
+defaults:
+  -
+    scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "default"
+      modules:
+        - hero:
+          type: 'hero'
+          title: ''
+
