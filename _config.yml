@@ -38,9 +38,12 @@ defaults:
     values:
       layout: "default"
       modules:
-        - hero:
-          type: 'hero'
+        - type: 'hero'
           title: ''
+          image: ''
+        - type: 'text'
         - text:
-          type: 'text'
           variation: 'centered'
+        - type: 'images'
+          image1: ''
+          image2: ''
