@@ -41,4 +41,6 @@ defaults:
         - hero:
           type: 'hero'
           title: ''
-
+        - text:
+          type: 'text'
+          variation: 'centered'
