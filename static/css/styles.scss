@@ -152,31 +152,30 @@ $socialIconFontStack: 'icons';
 //   font-style: normal;
 // }
 
-// @font-face {
-//     font-family: 'C';
-//     src: url('c-l-webfont.eot');
-//     src: url('c-l-webfont.eot?#iefix') format('embedded-opentype'),
-//          url('c-l-webfont.woff2') format('woff2'),
-//          url('c-l-webfont.woff') format('woff'),
-//          url('c-l-webfont.ttf') format('truetype'),
-//          url('c-l-webfont.svg#C') format('svg');
-//     font-weight: normal;
-//     font-style: normal;
-// }
+@font-face {
+    font-family: 'C';
+    src: url('../fonts/c-l-webfont.eot');
+    src: url('../fonts/c-l-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/c-l-webfont.woff2') format('woff2'),
+         url('../fonts/c-l-webfont.woff') format('woff'),
+         url('../fonts/c-l-webfont.ttf') format('truetype'),
+         url('../fonts/c-l-webfont.svg#C') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
-// @font-face {
-//     font-family: 'C';
-//     src: url('c-sb-webfont.eot');
-//     src: url('c-sb-webfont.eot?#iefix') format('embedded-opentype'),
-//          url('c-sb-webfont.woff2') format('woff2'),
-//          url('c-sb-webfont.woff') format('woff'),
-//          url('c-sb-webfont.ttf') format('truetype'),
-//          url('c-sb-webfont.svg#C') format('svg');
-//     font-weight: 500;
-//     font-style: normal;
-// }
+@font-face {
+    font-family: 'C';
+    src: url('../fonts/c-sb-webfont.eot');
+    src: url('../fonts/c-sb-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/c-sb-webfont.woff2') format('woff2'),
+         url('../fonts/c-sb-webfont.woff') format('woff'),
+         url('../fonts/c-sb-webfont.ttf') format('truetype'),
+         url('../fonts/c-sb-webfont.svg#C') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
 
-    // .isolation-g#{$i}-#{$start}-no-pad {
 @mixin font-face($filename-without-extension, $name, $weight: 'normal', $style: 'normal') {
   @font-face {
       font-family: $name;
@@ -1204,9 +1203,17 @@ $desktop-margin: 35px;
 }
 
 
-//styles
-//styles
-//styles
+
+// global styles
+// global styles
+// global styles
+body {
+  font-family: 'C';
+}
+
+// typography
+// typography
+// typography
 @mixin style-h1 {
   font-size: 26px;
   line-height: 1.07;
@@ -1239,9 +1246,9 @@ $desktop-margin: 35px;
 	left: 0;
 	top: 0;
 	bottom: 0;
-	right: 0;
-  z-index: 3;
+  z-index: 100;
 }
+
 .navbar__column {
 	// @include column(4);
 	height: 100vh;
@@ -1249,14 +1256,17 @@ $desktop-margin: 35px;
   position: relative;
   z-index: 3;
 	@include gvalign;
-	&:first-child {
-		@include isolation-span(1, 1);
-	}
-	&:last-child {
-		@include isolation-span(1, 2);
-	}
+
+  float: left;
+  padding: 0 ($desktop-gutter/2);
+  @include rm {
+    padding: 0 ($mobile-gutter/2);
+  }
 }
 
+.navbar__column--projects {
+  // display: none;
+}
 .navbar__valign {
 	@include gvalign-child;
 	// background: rgba(black, .05);
@@ -1280,7 +1290,11 @@ $desktop-margin: 35px;
 .navbar__logo {
 	position: absolute;
 	top: 35px;
-	left: 35px;
+	left: 17.5px;
+  svg {
+    width: 82px;
+    height: 20px;
+  }
 }
 
 //content
@@ -1298,7 +1312,8 @@ $desktop-margin: 35px;
 	z-index: 2;
 	position: relative;
 	// @include isolation-span(6, 3);
-	min-height: 90vh;
+	// min-height: 90vh;
+  height: calc(100vh - 230px)
 
 }
 

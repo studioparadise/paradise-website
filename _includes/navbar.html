@@ -1,7 +1,7 @@
 <div class="navbar" js-controller="navbar">
 	<div class="navbar__column navbar__column--2" js-navbar-primary>
 		<div class="navbar__logo">
-			Paradise
+			{% include svg.html type='logo--word' %}
 		</div>
 		<div class="navbar__valign" js-navbar-primary-valign>
 
@@ -16,7 +16,7 @@
 			</a>
 		</div>
 	</div>
-	<div class="navbar__column navbar__column--2" js-navbar-secondary>
+	<div class="navbar__column navbar__column--2 navbar__column--projects" js-navbar-secondary>
 		<div class="navbar__secondary" js-navbar-secondary-valign>
 			{% assign projects = site.projects | sort: "position" %}
 			{% for project in projects %}
@@ -26,4 +26,19 @@
 			{% endfor %}
 		</div>
 	</div>
+	<!-- 
+	<div class="navbar__column navbar__column--2 navbar__column--studio" js-navbar-secondary>
+		<div class="navbar__secondary" js-navbar-secondary-valign>
+			<a class="navbar__link" href="" js-navbar-project="{{ project.title | slugify }}">
+				Approach
+			</a>
+		</div>
+	</div>
+	<div class="navbar__column navbar__column--2 navbar__column--journal" js-navbar-secondary>
+		<div class="navbar__secondary" js-navbar-secondary-valign>
+			<a class="navbar__link" href="">
+				Journal X
+			</a>
+		</div>
+	</div>-->
 </div>

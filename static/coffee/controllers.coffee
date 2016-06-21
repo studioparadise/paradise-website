@@ -6,20 +6,45 @@ root = exports ? this
 root.controllers.navbar = ($element, args) ->
 	# handle secondary navbar offset
 	console.log 'navbar'
-	calculateOffsetForProject = (project) ->
-
-
-
 
 	$primaryNav = $element.find '[js-navbar-primary]'
 	$primaryNavValign = $element.find '[js-navbar-primary-valign]'
 	$secondaryNav = $element.find '[js-navbar-secondary]'
 	$secondaryNavValign = $element.find '[js-navbar-secondary-valign]'
 
+	do handleColumnSizing = ->
+		### Handle column sizing. 
+		Can't do with pure CSS, therefore use JS to emulate.
+		### 
+		$navbarColumns = $ ".navbar__column"
+
+		getColumnWidth = ->
+			### There are 2 columns each being 1/8 wide.
+			Padding is 20px.
+			Total width is composed of:
+			[LEFT MARGIN][GUTTER][COLUMN][GUTTER][COLUMN][GUTTER]
+
+			Rows contain -1/2 gutter margin.
+			Given window width of 1000px
+				Usable space is 1000-30 margins = 970px
+				970*1/8
+			###
+			MARGIN = 30
+			windowWidth = $(window).width() 
+			usableSpace = windowWidth - MARGIN
+			columnWidth = usableSpace * (1/8)
+			console.log "Calculated usable column width of #{columnWidth}"
+			return columnWidth
+
+		width = getColumnWidth()
+		$navbarColumns.css
+			width: width
+
+	$(window).on 'resize', handleColumnSizing
+
 	do handleSecondaryNav = ->
 		$navs = $element.find '[js-navbar-project]'
 		navLinkActiveClass = 'navbar__link--active'
-
 
 		getCurrentProject = ->
 			tolerance = $(window).height() * .3
@@ -56,7 +81,6 @@ root.controllers.navbar = ($element, args) ->
 			alignSecondaryNavToPrimary $nav
 			window.location.hash = project
 
-
 		getProject = (project) ->
 			return $("[js-index-project=\"#{project}\"]")
 
@@ -68,8 +92,6 @@ root.controllers.navbar = ($element, args) ->
 			$('html, body').animate
 				scrollTop: $project.offset().top
 			, 1000, 'easeInOutExpo'
-
-
 
 		do initialLoadHash = ->
 			if window.location.hash
