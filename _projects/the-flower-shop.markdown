@@ -22,8 +22,13 @@ modules:
 - type: image
   variation: w
   image: "/uploads/ph-project-fullwidth.jpg"
-- type: 2up-images
-  image-1: 
-  variation: 2up
+- type: images--2up
+  images:
+  - image: "/uploads/ph-project-2up.jpg"
+    caption: This is a caption style, in the case we'd like to call something out
+      that is very very important.
+  - image: "/uploads/ph-project-2up.jpg"
+    caption: This is a caption style, in the case we'd like to call something out
+      that is very very important.
 ---
 
