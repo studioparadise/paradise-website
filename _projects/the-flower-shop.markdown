@@ -20,6 +20,8 @@ modules:
     and truly reflected the men purchasing and wearing JE shoes. \n\n\n* List Item
     1\n* List Item 2\n* List Item 3\n* List Item 4\n* List Item 5"
 - type: image
+  caption: |
+    Full Width Image Caption
   image: "/uploads/ph-project-fullwidth.jpg"
 - type: images-2up
   images:
