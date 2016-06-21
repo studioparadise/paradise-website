@@ -17,8 +17,8 @@ modules:
     evolved the logo mark, introduced consistent color and textures, art directed
     campaigns shot by Bjorn Iooss and Joss Mckinley, and introduced an intuitive e-commerce
     experience. The results was a brand that was confident, aspirational, understated,
-    and truly reflected the men purchasing and wearing JE shoes. \n\n\n* List Item
-    1\n* List Item 2\n* List Item 3\n* List Item 4\n* List Item 5"
+    and truly reflected the men purchasing and wearing JE shoes. \n\n\n* *Art Direction*\n*
+    *Brand Strategy*\n* *Brand Identity*\n* *Web Design*\n* *Web Development*"
   full-project-title: Jack Erwin
 - type: image
   caption: |
