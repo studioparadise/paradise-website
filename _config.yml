@@ -13,7 +13,6 @@ collections:
     title: Uploads
     output: true
 defaults:
-
 - scope:
     path: ''
     type: projects
@@ -29,7 +28,6 @@ defaults:
     - type: images
       image1: ''
       image2: ''
-
 tagline: Changing the world, one uninspired quote at a time
 url: http://yourwebsite.com
 socialimg: "/img/social.jpg"

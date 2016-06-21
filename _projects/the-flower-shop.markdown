@@ -3,9 +3,12 @@ title: The Flower Shop
 date: 2016-05-28 04:03:00 Z
 position: 0
 modules:
-- image: "/uploads/test.jpg"
-  type: image
+- type: image
+  title: 
+  image: "/uploads/ph-project-hero.jpg"
 - type: text
+  text: 
+  variation: centered
   excerpt: 'We needed to create a vision that provoked the same trust between cobbler
     and man. Guarantee quality, product - and lifestyle. '
   body: "Jack Erwin is a direct-to-consumer luxury mens shoe brand. After two years
@@ -17,9 +20,15 @@ modules:
     and truly reflected the men purchasing and wearing JE shoes. \n\n\n* List Item
     1\n* List Item 2\n* List Item 3\n* List Item 4\n* List Item 5"
 - type: image
+  variation: w
+  image: "/uploads/ph-project-fullwidth.jpg"
+- type: images--2up
   images:
-  - "/uploads/test.jpg"
-  - "/uploads/test.jpg"
-  variation: 2up
+  - image: "/uploads/ph-project-2up.jpg"
+    caption: This is a caption style, in the case we'd like to call something out
+      that is very very important.
+  - image: "/uploads/ph-project-2up.jpg"
+    caption: This is a caption style, in the case we'd like to call something out
+      that is very very important.
 ---
 
