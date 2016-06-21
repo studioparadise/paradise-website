@@ -23,7 +23,7 @@ modules:
   caption: |
     Full Width Image Caption
   image: "/uploads/ph-project-fullwidth.jpg"
-- type: images
+- type: images-2up
   images:
   - image: "/uploads/ph-project-2up.jpg"
     caption: This is a caption style, in the case we'd like to call something out
@@ -31,6 +31,5 @@ modules:
   - image: "/uploads/ph-project-2up.jpg"
     caption: This is a caption style, in the case we'd like to call something out
       that is very very important.
-  variation: 2up
 ---
 
