@@ -28,7 +28,7 @@ modules:
   - image: "/uploads/ph-project-2up.jpg"
     caption: This is a caption style, in the case we'd like to call something out
       that is very very important.
-  - image: "/uploads/ph-project-2up.jpg"
+  - image: "/uploads/ph-project-2up-2.jpg"
     caption: This is a caption style, in the case we'd like to call something out
       that is very very important.
 ---
