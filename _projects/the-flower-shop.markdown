@@ -19,6 +19,7 @@ modules:
     experience. The results was a brand that was confident, aspirational, understated,
     and truly reflected the men purchasing and wearing JE shoes. \n\n\n* List Item
     1\n* List Item 2\n* List Item 3\n* List Item 4\n* List Item 5"
+  full-project-title: Jack Erwin
 - type: image
   caption: |
     Full Width Image Caption
