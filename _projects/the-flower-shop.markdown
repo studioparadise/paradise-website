@@ -22,6 +22,7 @@ modules:
 - type: image
   caption: |
     Full Width Image Caption
+  variation: 2up
   image: "/uploads/ph-project-fullwidth.jpg"
 - type: images
   images:
