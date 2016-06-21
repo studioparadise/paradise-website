@@ -38,8 +38,18 @@ modules:
 - type: image
   image: "/uploads/ph-project-fullwidth-3-081c98.jpg"
 - type: credits
-  column1_text: Project Credits
-  column2_text: "[*Photography* Some Someone](http://google.com)"
-  column3_text: "[*Collaborating Artist* Dan Danman](http://google.com)"
+  credits:
+  - url: http://google.com
+    emphasis: Photography
+    name: Yuji Tomita
+  - url: 
+    emphasis: Logo Design
+    name: Some Someone
+  - url: 
+    emphasis: Model
+    name: Gina Powell
+  - url: 
+    emphasis: Development
+    name: Eric Wang
 ---
 
