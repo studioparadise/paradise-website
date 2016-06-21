@@ -7,51 +7,57 @@ excerpt: This is the greatest website on earth. Share! Like! Subscribe! I'm dead
 
 <!-- fulltitle: This overrides the default page title, which is "{{page.tite}} | {{site.title}}" -->
 <!-- excerpt: If this isn't set, it'll pull your {{site.tagline}} for meta description-->
+<div class="content-wrapper">
+	<div class="content">
+		<div class="row">
+			 <div class="content-navbar-grid-spacer">&nbsp;</div>
+			<div class="index-swiper">
+				<div class="swiper-container" js-component="swiper" js-args="{
+					autoplay: 3000,
+					effect: 'fade',
+					fade: {
+						crossFade: true
+					},
+					speed: 500
+				}">
+
+				<div class="swiper-wrapper">
+					<!-- <div class="swiper-slide" style="background-image: url(/static/img/swiper-1.jpg);"></div> -->
+					<div class="swiper-slide" style="background-image: url(/static/img/1.jpg);"></div>
+					<div class="swiper-slide" style="background-image: url(/static/img/2.jpg);"></div>
+					<div class="swiper-slide" style="background-image: url(/static/img/3.jpg);"></div>
+					<div class="swiper-slide" style="background-image: url(/static/img/4.jpg);"></div>
+					<div class="swiper-slide" style="background-image: url(/static/img/5.jpg);"></div>
 
 
-<div class="row">
-	 <div class="content-grid-spacer">&nbsp;</div>
-	<div class="index-swiper">
-		<div class="swiper-container" js-component="swiper" js-args="{
-			autoplay: 3000,
-			effect: 'fade',
-			fade: {
-				crossFade: true
-			},
-			speed: 500
-		}">
-
-		<div class="swiper-wrapper">
-			<!-- <div class="swiper-slide" style="background-image: url(/static/img/swiper-1.jpg);"></div> -->
-			<div class="swiper-slide" style="background-image: url(/static/img/1.jpg);"></div>
-			<div class="swiper-slide" style="background-image: url(/static/img/2.jpg);"></div>
-			<div class="swiper-slide" style="background-image: url(/static/img/3.jpg);"></div>
-			<div class="swiper-slide" style="background-image: url(/static/img/4.jpg);"></div>
-			<div class="swiper-slide" style="background-image: url(/static/img/5.jpg);"></div>
+				</div>
+			</div>
+			</div>
 		</div>
-	</div>
+
+		{% assign links = 'The Flower Shop,Abbott,Grovemade,Convicts,Leader Bag,Saturdays,Jack Erwin,St Archer,Raen,Mikoh,Kaelen' | split: "," %}
+
+		{% assign projects = site.projects | sort: "position" %}
+		{% for project in projects %}
+			<div class="row">
+				<div class="content-navbar-grid-spacer">&nbsp;</div>
+				<article class="index-project" js-index-project="{{ project.title | slugify }}" js-controller="project">
+					<div class="index-project__close show-on-full-project">
+						X
+					</div>
+					<div class="index-project__inner">
+						<span class="index-project-debug">
+							{{ project.title }}
+							<a href="{{ project.url }}">
+								Open Project
+							</a>
+						</span>
+						{% for module in project.modules %}
+							{% include render_module.html %}
+						{% endfor %}
+					</div>
+				</article>
+			</div>
+		{% endfor %}
 	</div>
 </div>
-
-{% assign links = 'The Flower Shop,Abbott,Grovemade,Convicts,Leader Bag,Saturdays,Jack Erwin,St Archer,Raen,Mikoh,Kaelen' | split: "," %}
-
-{% assign projects = site.projects | sort: "position" %}
-{% for project in projects %}
-	<div class="row">
-		<div class="content-grid-spacer">&nbsp;</div>
-		<article class="index-project g6" js-index-project="{{ project.title | slugify }}" js-controller="indexProject">
-			<div class="index-project__inner">
-				<span class="index-project-debug">
-					{{ project.title }}
-					<a href="{{ project.url }}">
-						Open Project
-					</a>
-				</span>
-
-				{% for module in project.modules %}
-					{% include render_module.html %}
-				{% endfor %}
-			</div>
-		</article>
-	</div>
-{% endfor %}

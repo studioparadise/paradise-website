@@ -5,32 +5,97 @@
 </ul>
 -->
 {% capture cls %}module-{{ module.type }}{% endcapture %}
+
+<div class="debug-element">{{ cls }} variation: {{ module.variation }}</div>
+
 <div class="module {{ cls }} {{ cls }}--{{ module.variation }}">
 	{% case module.type %}
+	{% when 'hero' %}
+		<div class="hero__column">
+			<img class="hero__img" src="{{ module.image }}" />
+		</div>
 	{% when 'image' %}
-		{% if module.images %}
-			{% if module.images.size > 1 %}
-				{% for image in module.images %}
-					<div class="{{ cls }}__{{ module.images.size }}up">
-						<img src="{{ image }}" />
-					</div>
-				{% endfor %}
-			{% else %}
-				<img src="{{ module.image }}" />
-			{% endif %}
-		{% endif %}
-	{% when 'text' %}
-		<div class="module-text__excerpt">
+		<img class="module-image__img" src="{{ module.image }}" />
 
-			{{ module.excerpt | default: "" }}
-			<div class="module-text__view-full" js-index-view-full-project>
-				View Full Project
+		{% if module.caption %}
+			<div class="module__image-caption">
+				{{ module.caption }}
+			</div>
+		{% endif %}
+	{% when 'images-2up' %}
+		{% for image in module.images %}
+			<div class="module-images-2up__image">
+				<img class="module-images-2up__img" src="{{ image.image }}" />
+				<div class="module__image-caption">
+					{{ image.caption }}
+				</div>
+			</div>
+		{% endfor %}
+	{% when 'text' %}
+		<div class="row">
+			<div class="module-text__spacer">
+				<span class="show-on-full-project">
+					{{ module['full-project-title'] }}
+				</span>
+				&nbsp;
+			</div>
+			<div class="module-text__excerpt">
+				{{ module.excerpt | default: "" }}
+				<div class="module-text__view-full" js-index-view-full-project>
+					<span class="hide-on-full-project">
+						View Full Project
+					</span>
+					<span class="show-on-full-project">
+						AH! Take me Back!
+					</span>
+				</div>
+			</div>
+			<div class="module-text__full-project-spacer show-on-full-project">&nbsp;</div>
+			{% if module.body %}
+				<div class="module-text__body">
+					{{ module.body | default: "" | markdownify }}
+				</div>
+			{% endif %}
+		</div>
+	{% when 'website-link' %}
+		<div class="module-website-link__spacer">&nbsp;</div>
+		<div class="module-website-link__column">
+			<a class="module-website-link__button" href="{{ module.url }}" target="_blank">
+				Visit the Website
+				<span class="module-website-link__icon">
+					{% include svg.html type='arrow--up-right' %}
+				</span>
+			</a>
+		</div>
+	{% when 'credits' %}
+		<div class="module-credits__line-container">
+			<div class="module-credits__line"></div>
+		</div>
+		<div class="module-credits__credits" js-controller="moduleCredits">
+			<div style="display: none;" js-module-credits-data>
+				{% for credit in module.credits %}
+					<a class="module-credits__credit" js-module-credits-item target="_blank" {% if credit.url %}href="{{ credit.url }}"{% endif %}>
+						<span class="module-credits__emphasis">
+							{{ credit.emphasis }}
+						</span>
+						{{ credit.name }}
+					</a>
+				{% endfor %}
+			</div>
+			<div class="module-credits__column">
+				<div class="module-credits__title">
+					Project Credits
+				</div>
+			</div>
+			<div class="module-credits__column" js-module-credit-column>			
+			</div>
+			<div class="module-credits__column" js-module-credit-column>
+			</div>
+			<div class="module-credits__column show-on-full-project" js-module-credit-column>
 			</div>
 		</div>
-		{% if module.body %}
-			<div class="module-text__body">
-				{{ module.body | default: "" | markdownify }}
-			</div>
-		{% endif %}
+		<div class="module-credits__line-container">
+			<div class="module-credits__line"></div>
+		</div>
 	{% endcase %}
 </div>

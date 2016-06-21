@@ -5,8 +5,10 @@
 			var $container = $(".grid-debug-container");
 			if ($container.is(':visible')) {
 				$container.fadeOut();
+				$(".debug-element").fadeOut();
 			} else {
 				$container.fadeIn();
+				$(".debug-element").fadeIn();
 			}
 		});
 	})

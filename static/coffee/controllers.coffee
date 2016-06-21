@@ -105,16 +105,49 @@ root.controllers.navbar = ($element, args) ->
 			ev.preventDefault()
 			scrollToProject($(this).attr 'js-navbar-project')
 
-		$(window).on 'scroll', ->
+		onScroll = ->
 			project = getCurrentProject()
 			if project
 				activateSecondaryNav project
+		$(window).on 'scroll', _.throttle onScroll, 100
 
-root.controllers.indexProject = ($element, args) ->
+	loadSecondaryNav = (type) ->
+		### Load the secondary navbar of <type>
+		if navbar already open, hide first.
+		###
+
+
+
+root.controllers.project = ($element, args) ->
 	do handleViewFullProject = ->
 		$trigger = $element.find '[js-index-view-full-project]'
-		$trigger.on 'click', ->
-			if $('html').hasClass 'viewing-full-project'
-				$('html').removeClass 'viewing-full-project'
+		toggleFullProjectView = ->
+			if $('html').hasClass 'js-viewing-full-project'
+				$('html').removeClass 'js-viewing-full-project'
 			else
-				$('html').addClass 'viewing-full-project'
+				$('html').addClass 'js-viewing-full-project'
+			$(window).trigger 'resize'
+		$trigger.on 'click', toggleFullProjectView
+
+
+
+root.controllers.moduleCredits = ($element, args) ->
+	### Distribute credits into each column.
+	###
+	$a = $element.find "[js-module-credits-item]"
+
+	do populateColumns = ->
+		$visibleCols = $element.find '[js-module-credit-column]:visible'
+		$visibleCols.html ''
+
+		length = $visibleCols.length
+		counter = 0
+		$a.each ->
+			$(this).appendTo $visibleCols.eq(counter)
+
+			if counter != (length-1)
+				counter += 1
+			else
+				counter = 0
+
+	$(window).on 'resize', _.throttle populateColumns, 100
