@@ -1,5 +1,6 @@
 ---
 layout: default
 ---
-<!-- project.html -->
-project
+{% for module in page.modules %}
+	{% include render_module.html %}
+{% endfor %}

@@ -8,7 +8,6 @@ collections:
   projects:
     title: Projects
     output: true
-    layout: project
   uploads:
     title: Uploads
     output: true
@@ -28,6 +27,13 @@ defaults:
     - type: images
       image1: ''
       image2: ''
+- scope:
+    path: ""
+    type: "projects"
+  values:
+    layout: 'project'
+
+
 tagline: Changing the world, one uninspired quote at a time
 url: http://yourwebsite.com
 socialimg: "/img/social.jpg"
