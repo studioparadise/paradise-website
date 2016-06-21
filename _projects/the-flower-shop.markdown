@@ -31,5 +31,15 @@ modules:
   - image: "/uploads/ph-project-2up-2.jpg"
     caption: This is a caption style, in the case we'd like to call something out
       that is very very important.
+- type: image
+  image: "/uploads/ph-project-fullwidth-3.jpg"
+- type: website-link
+  url: http://google.com
+- type: image
+  image: "/uploads/ph-project-fullwidth-3-081c98.jpg"
+- type: credits
+  column1_text: Project Credits
+  column2_text: "[*Photography* Some Someone](http://google.com)"
+  column3_text: "[*Collaborating Artist* Dan Danman](http://google.com)"
 ---
 
