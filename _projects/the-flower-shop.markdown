@@ -18,7 +18,7 @@ modules:
     campaigns shot by Bjorn Iooss and Joss Mckinley, and introduced an intuitive e-commerce
     experience. The results was a brand that was confident, aspirational, understated,
     and truly reflected the men purchasing and wearing JE shoes. \n\n\n* *Art Direction*\n*
-    *Brand Strategy*\n* *Brand Identity*\n* *Web Design*\n* *Web Development*"
+    *Web Design*\n* *Brand Strategy*\n* *Web Development*\n* *Brand Identity*"
   full-project-title: Jack Erwin
 - type: image
   caption: |
