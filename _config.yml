@@ -3,7 +3,7 @@ title: Paradise
 timezone: UTC
 collections:
   posts:
-    title: Posts
+    title: Journals
     output: true
   projects:
     title: Projects
