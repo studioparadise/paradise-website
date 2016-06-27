@@ -1,3 +1,4 @@
+{% comment %}
 <div class="navbar" js-controller="navbar">
 	<div class="navbar__column navbar__column--2" js-navbar-primary>
 		<div class="navbar__logo">
@@ -43,4 +44,64 @@
 			</a>
 		</div>
 	</div>-->
+</div>
+{% endcomment %}
+<div class="navbar" js-controller="navbar2">
+	<div class="" js-wrapper>
+		<div class="navbar__item" js-item-with-dropdown>
+			<div class="navbar__label" js-item-label js-args="{preventAlign: true, overlay: 'projects'}">Work</div>
+			<div class="navbar__dropdown" js-item-dropdown>
+				{% assign projects = site.projects | sort: "position" %}
+				{% for project in projects %}
+					<div class="navbar__item">
+						<div class="navbar__label" js-item-label js-navbar-project="{{ project.title | slugify }}" js-args="{overlay: 'projects'}">
+							{{ project.title }}
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="navbar__item" js-item-with-dropdown>
+			<div class="navbar__label" js-item-label js-args="{preventAlign: true, overlay: 'studio'}" js-navbar-studio>Studio</div>
+			<div class="navbar__dropdown" js-item-dropdown>
+				<div class="navbar__item" js-item-with-dropdown>
+					<div class="navbar__label" js-item-label js-args="{overlay: 'studio'}">Manifesto</div>
+				</div>
+				<div class="navbar__item" js-item-with-dropdown>
+					<div class="navbar__label" js-item-label js-args="{overlay: 'studio'}">Services</div>
+				</div>
+				<div class="navbar__item" js-item-with-dropdown>
+					<div class="navbar__label" js-item-label js-args="{overlay: 'studio'}">Team</div>
+				</div>
+				<div class="navbar__item" js-item-with-dropdown>
+					<div class="navbar__label" js-item-label js-args="{overlay: 'studio'}">Clients</div>
+				</div>
+				<!-- <div class="navbar__dropdown"  js-item-dropdown>
+					<div class="navbar__item">
+						<div class="navbar__label" js-item-label>Jack Erwin</div>
+					</div>
+					<div class="navbar__item">
+						<div class="navbar__label" js-item-label>Some Project</div>
+					</div>
+					<div class="navbar__item">
+						<div class="navbar__label" js-item-label>Leader Bag</div>
+					</div>
+				</div>
+				-->
+			</div>
+		</div>
+		<div class="navbar__item" js-item-with-dropdown>
+			<div class="navbar__label" js-item-label js-item-label js-args="{preventAlign: true, overlay: 'journal'}">Journal</div>
+			<div class="navbar__dropdown" js-item-dropdown>
+				{% assign posts_by_month = site.journals | group_by:"month" %}
+				{% for month in posts_by_month %}
+					<div class="navbar__item">
+						<div class="navbar__label" js-item-label js-args="{overlay: 'journal'}">
+							{{month.items.first.date | date:"%B"}}
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
 </div>

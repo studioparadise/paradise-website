@@ -116,8 +116,6 @@ root.controllers.navbar = ($element, args) ->
 		if navbar already open, hide first.
 		###
 
-
-
 root.controllers.project = ($element, args) ->
 	do handleViewFullProject = ->
 		$trigger = $element.find '[js-index-view-full-project]'
@@ -126,10 +124,13 @@ root.controllers.project = ($element, args) ->
 				$('html').removeClass 'js-viewing-full-project'
 			else
 				$('html').addClass 'js-viewing-full-project'
+
 			$(window).trigger 'resize'
+
+			$('html, body').animate
+				scrollTop: $trigger.closest('.index-project').offset().top
+			, 2000, 'easeInOutExpo'
 		$trigger.on 'click', toggleFullProjectView
-
-
 
 root.controllers.moduleCredits = ($element, args) ->
 	### Distribute credits into each column.
@@ -151,3 +152,220 @@ root.controllers.moduleCredits = ($element, args) ->
 				counter = 0
 
 	$(window).on 'resize', _.throttle populateColumns, 100
+
+root.controllers.navbar2 = ($element, args) ->
+	api = {}
+	console.log 'init navbar2'
+	data = window.navbarData
+
+	# for each item, it spawns a secondary menu to its right.
+	do populateNavbarState = ->
+		### Populate initial navbar state.
+		T1 only.
+		T2 comes after T1 selection.
+		###
+
+	do handleColumnSizing = ->
+		### Handle column sizing. 
+		Can't do with pure CSS, therefore use JS to emulate.
+		### 
+		$navbarColumns = $ ".navbar__item"
+
+		getColumnWidth = ->
+			### There are 2 columns each being 1/8 wide.
+			Padding is 20px.
+			Total width is composed of:
+			[LEFT MARGIN][GUTTER][COLUMN][GUTTER][COLUMN][GUTTER]
+
+			Rows contain -1/2 gutter margin.
+			Given window width of 1000px
+				Usable space is 1000-30 margins = 970px
+				970*1/8
+			###
+			MARGIN = 30
+			windowWidth = $(window).width() 
+			usableSpace = windowWidth - MARGIN
+			columnWidth = usableSpace * (1/8)
+			console.log "Calculated usable column width of #{columnWidth}"
+			return columnWidth
+
+		width = getColumnWidth()
+		$navbarColumns.css
+			width: width
+
+	$(window).on 'resize', handleColumnSizing
+
+	do centerNavbar = ->
+		$wrapper = $element.find('[js-wrapper]')
+		height = $wrapper.height()
+		wHeight = $(window).height()
+		$wrapper.css
+			marginTop: (wHeight/2) - (height/2)
+
+	$(window).on 'resize', centerNavbar
+
+	lastActiveItem = null
+	initItem = ($item) ->
+		console.log 'initializing item', $item
+		$label = $item.find '[js-item-label]:first'
+		$siblingItems = $item.siblings()
+
+		alignItemWithParent = ($item) ->
+			# align the active element to parent
+			$dropdown = $item.closest('.navbar__dropdown')
+			height = $item.parent().height()
+			top = $item.position().top
+			console.log 'top: ', top, ' height:', height
+
+			console.log 'dropdown css is -', top, $dropdown
+			$item.parent().animate
+				marginTop: "-#{top}px"
+			, 500
+
+		showDropdown = ($dropdown, apply) ->
+			if apply
+				$dropdown.show()
+			else
+				$dropdown.hide()
+				$dropdown.find('.is-active').removeClass 'is-active'
+
+		activateItem = ($item) ->
+			$dropdown = $item.find '[js-item-dropdown]:first'
+			args = root.utils.getArgs($label)
+
+			$allContent = $("[js-index-content]")
+
+			hideAllContentAndFadeInOne = ($content) ->
+				console.log "Loading content: ", $content
+
+				if $content.is(':visible')
+					console.log "Content visible, skipping fade in"
+					return
+
+				$allContent.stop(true, true).fadeOut().promise().done ->
+					$content.fadeIn()
+
+			switch args.overlay
+				when 'index'
+					$el = $("[js-index-content=\"index\"]")
+					hideAllContentAndFadeInOne $el
+				when 'projects'
+					$el = $("[js-index-content=\"projects\"]")
+					hideAllContentAndFadeInOne $el
+				when 'studio'
+					$el = $("[js-index-content=\"studio\"]")
+					hideAllContentAndFadeInOne $el
+				when 'journal'
+					$el = $("[js-index-content=\"journal\"]")
+					hideAllContentAndFadeInOne $el
+				else
+					console.log "Not Found", args.overlay
+					# $(".studio").fadeOut()
+			if args.preventAlign
+				console.log 'root element. clearing'
+				# root element. Clear out children state
+				for dropdown in $element.find('[js-item-dropdown]')
+					showDropdown $(dropdown), false
+					console.log 'hiding dropdown due to preventAlign i.e. root'
+
+			showDropdown $dropdown, true
+
+			console.log 'activating item'
+
+			$siblingItems.removeClass 'is-active'
+			$item.addClass 'is-active'
+
+			clearOtherItems($item)
+			lastActiveItem = $item
+
+			if not args.preventAlign
+				alignItemWithParent($item)
+
+		clearOtherItems = ($item) ->
+			# find out if any other items need to be cleared of state
+			# specifically, if we click on anything outside the current chain, we need to clear the states.
+			# if the next item is NOT in a child or parent path, clear
+			if $item.closest('.navbar__item').length == 0
+				# this is the root item
+			else
+				# this is not the root item
+
+		console.log 'adding trigger on $label click', $label
+		$label.on 'click', ->
+			activateItem $item
+
+
+	$items = $element.find '.navbar__item'
+	for item in $items
+		initItem $(item)
+
+	do handleDirectLoadViaHash = ->
+		hash = window.location.hash
+		if not hash
+			return
+
+		hash = hash.substr 1
+
+
+
+	do handleSecondaryNav = ->
+		$navs = $element.find '[js-navbar-project]'
+		navLinkActiveClass = 'navbar__link--active'
+
+		getCurrentProject = ->
+			tolerance = $(window).height() * .3
+			$project = $("[js-index-project]:in-viewport(#{tolerance}):first")
+
+			projectSlug = $project.attr('js-index-project')
+			debug projectSlug
+			return projectSlug
+
+		activateSecondaryNav = (project) ->
+			$nav = $navs.filter("[js-navbar-project=\"#{project}\"]:first")
+			# $navs.removeClass navLinkActiveClass
+			# $nav.addClass navLinkActiveClass
+			window.location.hash = project
+
+
+		getProject = (project) ->
+			return $("[js-index-project=\"#{project}\"]")
+
+		scrollToProject = (project) ->
+			$project = getProject project
+			debug "scrolling to project #{project}"
+			console.log $project
+
+			$('html, body').animate
+				scrollTop: $project.offset().top
+			, 1000, 'easeInOutExpo'
+
+		do initialLoadHash = ->
+			if window.location.hash
+				project = window.location.hash.substr(1)
+				console.log 'Found project. scrolling to ', project
+				$project = getProject project
+				if $project
+					scrollToProject project
+
+		$navs.on 'click', (ev) ->
+			ev.preventDefault()
+			scrollToProject($(this).attr 'js-navbar-project')
+
+		onScroll = ->
+			project = getCurrentProject()
+			if project
+				activateSecondaryNav project
+		$(window).on 'scroll', _.throttle onScroll, 100
+
+
+
+root.controllers.studioContent = ($element, args) ->
+	$navItem = $("[js-navbar-studio]")
+
+	
+	do updatePadding = ->
+		$element.css
+			paddingTop: $navItem.offset().top - $(window).scrollTop() - 4
+
+
+	$(window).on 'resize', _.throttle(updatePadding, 500)
