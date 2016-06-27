@@ -31,12 +31,10 @@ defaults:
       image1: ''
       image2: ''
 - scope:
-    path: ""
-    type: "projects"
+    path: ''
+    type: projects
   values:
-    layout: 'project'
-
-
+    layout: project
 tagline: Changing the world, one uninspired quote at a time
 url: http://yourwebsite.com
 socialimg: "/img/social.jpg"
