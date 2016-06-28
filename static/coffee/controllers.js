@@ -262,7 +262,7 @@
         console.log('dropdown css is -', top, $dropdown);
         return $item.parent().stop(true).animate({
           marginTop: "-" + top + "px"
-        }, 500);
+        }, 1000);
       };
       showDropdown = function($dropdown, apply) {
         if (apply) {
@@ -274,11 +274,15 @@
       };
       scrollTo = function($item) {
         var scrollSpyTarget;
+        api.scrolling = true;
         scrollSpyTarget = $label.attr('js-scrollspy-nav');
         if (scrollSpyTarget) {
-          return $("html, body").animate({
-            scrollTop: $("[js-scrollspy=\"" + scrollSpyTarget + "\"]").offset().top
-          }, 1000, 'easeInOutExpo');
+          return $("html, body").stop(true, true).animate({
+            scrollTop: $("[js-scrollspy=\"" + scrollSpyTarget + "\"]").offset().top - 35
+          }, 1000, 'easeInOutExpo', function() {
+            api.scrolling = false;
+            return activateItem($item);
+          });
         }
       };
       activateItem = function($item, preventAlign) {
@@ -336,10 +340,13 @@
       };
       console.log('adding trigger on $label click', $label);
       $label.on('click', function() {
+        scrollTo($item);
         return activateItem($item);
       });
       return $label.on('scrollspy:activate', function() {
-        return activateItem($item);
+        if (api.scrolling == null) {
+          return activateItem($item, true);
+        }
       });
     };
     $items = $element.find('.navbar__item');
@@ -378,6 +385,36 @@
       });
     })();
     return $(window).on('resize', _.throttle(updatePadding, 500));
+  };
+
+  root.controllers.footer = function($element, args) {
+    var $open, close, handleOnClickOutside, open;
+    handleOnClickOutside = function(cb) {
+      return $(document).on('click', function(event) {
+        if ($(event.target).is('[js-footer-show]')) {
+          return;
+        }
+        if (!$(event.target).closest('.footer').length && !$(event.target).is('.footer')) {
+          return cb();
+        }
+      });
+    };
+    close = function() {
+      return $element.slideUp('slow', 'easeInOutExpo');
+    };
+    open = function() {
+      return $element.slideDown('slow', 'easeInOutExpo');
+    };
+    $open = $('[js-footer-show]');
+    $open.on('click', function() {
+      if ($element.is(':visible')) {
+        return close();
+      } else {
+        return open();
+      }
+    });
+    $("[js-footer-close]").on('click', close);
+    return handleOnClickOutside(close);
   };
 
 }).call(this);

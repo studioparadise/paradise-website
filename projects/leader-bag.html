@@ -74,8 +74,8 @@
 					</div>
 				
 					<div class="navbar__item">
-						<div class="navbar__label" js-item-label js-navbar-project="the-flower-shop" js-args="{overlay: 'projects'}" js-scrollspy-nav="the-flower-shop">
-							The Flower Shop
+						<div class="navbar__label" js-item-label js-navbar-project="convicts" js-args="{overlay: 'projects'}" js-scrollspy-nav="convicts">
+							Convicts
 						</div>
 					</div>
 				
@@ -86,8 +86,8 @@
 					</div>
 				
 					<div class="navbar__item">
-						<div class="navbar__label" js-item-label js-navbar-project="grovemade" js-args="{overlay: 'projects'}" js-scrollspy-nav="grovemade">
-							Grovemade
+						<div class="navbar__label" js-item-label js-navbar-project="mikoh" js-args="{overlay: 'projects'}" js-scrollspy-nav="mikoh">
+							Mikoh
 						</div>
 					</div>
 				
@@ -98,32 +98,14 @@
 					</div>
 				
 					<div class="navbar__item">
-						<div class="navbar__label" js-item-label js-navbar-project="st-archer" js-args="{overlay: 'projects'}" js-scrollspy-nav="st-archer">
-							St Archer
-						</div>
-					</div>
-				
-					<div class="navbar__item">
-						<div class="navbar__label" js-item-label js-navbar-project="abbott" js-args="{overlay: 'projects'}" js-scrollspy-nav="abbott">
-							Abbott
-						</div>
-					</div>
-				
-					<div class="navbar__item">
-						<div class="navbar__label" js-item-label js-navbar-project="nixon" js-args="{overlay: 'projects'}" js-scrollspy-nav="nixon">
-							Nixon
-						</div>
-					</div>
-				
-					<div class="navbar__item">
 						<div class="navbar__label" js-item-label js-navbar-project="saturdays" js-args="{overlay: 'projects'}" js-scrollspy-nav="saturdays">
 							Saturdays
 						</div>
 					</div>
 				
 					<div class="navbar__item">
-						<div class="navbar__label" js-item-label js-navbar-project="raen" js-args="{overlay: 'projects'}" js-scrollspy-nav="raen">
-							Raen
+						<div class="navbar__label" js-item-label js-navbar-project="prize" js-args="{overlay: 'projects'}" js-scrollspy-nav="prize">
+							Prize
 						</div>
 					</div>
 				
@@ -196,7 +178,7 @@
 	<!--
 <ul>
 	<li>Module type:hero</li>
-	<li>Module data {"type"=>"hero", "image"=>"", "alt"=>""}</li>
+	<li>Module data {"type"=>"hero", "image"=>"/uploads/leader_hero.jpg", "alt"=>nil}</li>
 </ul>
 -->
 
@@ -206,7 +188,9 @@
 <div class="module module-hero module-hero--">
 	
 		<div class="hero__column">
-			<img class="hero__img lazyload" data-src="" />
+			<div class="module-image__ratio" data-responsive-image-dimensions="2400x755">
+				<img class="hero__img lazyload" data-src="/uploads/leader_hero.jpg" alt="" />
+			</div>
 		</div>
 	
 </div>
@@ -215,7 +199,7 @@
 	<!--
 <ul>
 	<li>Module type:text</li>
-	<li>Module data {"type"=>"text", "excerpt"=>"", "body"=>""}</li>
+	<li>Module data {"type"=>"text", "excerpt"=>"Bringing good design to modern families.", "body"=>nil}</li>
 </ul>
 -->
 
@@ -232,7 +216,7 @@
 				&nbsp;
 			</div>
 			<div class="module-text__excerpt">
-				
+				Bringing good design to modern families.
 				<!-- 
 				<div class="module-text__view-full" js-index-view-full-project>
 					<span class="hide-on-full-project">
@@ -246,11 +230,6 @@
 			</div>
 			<div class="module-text__full-project-spacer show-on-full-project">&nbsp;</div>
 			
-				<div class="module-text__body">
-					
-
-				</div>
-			
 		</div>
 	
 </div>
@@ -259,7 +238,7 @@
 	<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"", "alt"=>"", "caption"=>""}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_Logo-479686.gif", "caption"=>"Created by Lotta Nieminen"}</li>
 </ul>
 -->
 
@@ -268,29 +247,13 @@
 
 <div class="module module-image module-image--">
 	
-		<img class="module-image__img lazyload" data-src="" />
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
+			<img class="module-image__img lazyload module-image__img--with-caption" data-src="/uploads/Leader_Logo-479686.gif" alt="" />
+		</div>
 
 		
-	
-</div>
-
-
-	<!--
-<ul>
-	<li>Module type:images-2up</li>
-	<li>Module data {"type"=>"images-2up", "images"=>[{"image"=>"", "alt"=>"", "caption"=>""}]}</li>
-</ul>
--->
-
-
-<div class="debug-element">module-images-2up variation: </div>
-
-<div class="module module-images-2up module-images-2up--">
-	
-		
-			<div class="module-images-2up__image">
-				<img class="module-images-2up__img lazyload" data-src="" />
-				
+			<div class="module__image-caption">
+				Created by Lotta Nieminen
 			</div>
 		
 	
@@ -299,27 +262,162 @@
 
 	<!--
 <ul>
-	<li>Module type:website-link</li>
-	<li>Module data {"type"=>"website-link", "url"=>""}</li>
+	<li>Module type:image</li>
+	<li>Module data {"type"=>"image", "url"=>nil, "image"=>"/uploads/Leader_2.jpg"}</li>
 </ul>
 -->
 
 
-<div class="debug-element">module-website-link variation: </div>
+<div class="debug-element">module-image variation: </div>
 
-<div class="module module-website-link module-website-link--">
+<div class="module module-image module-image--">
 	
-		<div class="module-website-link__spacer">&nbsp;</div>
-		<div class="module-website-link__column">
-			<a class="module-website-link__button" href="" target="_blank">
-				Visit the Website
-				<span class="module-website-link__icon">
-					
-	<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.05 9.05"><title>Paradise_FinalDesign_160428_MLP_A_DEVNOTES</title><polygon points="9.05 6 9.04 0 3.05 0 3.05 1 7.34 1 0 8.34 0.71 9.05 8.04 1.72 8.05 6 9.05 6"/></svg>
-
-				</span>
-			</a>
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
+			<img class="module-image__img lazyload " data-src="/uploads/Leader_2.jpg" alt="" />
 		</div>
+
+		
+	
+</div>
+
+
+	<!--
+<ul>
+	<li>Module type:image</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_1.jpg", "alt"=>nil, "caption"=>nil}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-image variation: </div>
+
+<div class="module module-image module-image--">
+	
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
+			<img class="module-image__img lazyload " data-src="/uploads/Leader_1.jpg" alt="" />
+		</div>
+
+		
+	
+</div>
+
+
+	<!--
+<ul>
+	<li>Module type:images_2up</li>
+	<li>Module data {"type"=>"images_2up", "images"=>[{"image"=>"/uploads/Leader_3.jpg"}, {"image"=>"/uploads/Leader_4.jpg"}]}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-images_2up variation: </div>
+
+<div class="module module-images_2up module-images_2up--">
+	
+</div>
+
+
+	<!--
+<ul>
+	<li>Module type:image</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_5.jpg"}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-image variation: </div>
+
+<div class="module module-image module-image--">
+	
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
+			<img class="module-image__img lazyload " data-src="/uploads/Leader_5.jpg" alt="" />
+		</div>
+
+		
+	
+</div>
+
+
+	<!--
+<ul>
+	<li>Module type:image</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_6.jpg"}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-image variation: </div>
+
+<div class="module module-image module-image--">
+	
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
+			<img class="module-image__img lazyload " data-src="/uploads/Leader_6.jpg" alt="" />
+		</div>
+
+		
+	
+</div>
+
+
+	<!--
+<ul>
+	<li>Module type:image</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_7.jpg"}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-image variation: </div>
+
+<div class="module module-image module-image--">
+	
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
+			<img class="module-image__img lazyload " data-src="/uploads/Leader_7.jpg" alt="" />
+		</div>
+
+		
+	
+</div>
+
+
+	<!--
+<ul>
+	<li>Module type:image</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_8.jpg"}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-image variation: </div>
+
+<div class="module module-image module-image--">
+	
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
+			<img class="module-image__img lazyload " data-src="/uploads/Leader_8.jpg" alt="" />
+		</div>
+
+		
+	
+</div>
+
+
+	<!--
+<ul>
+	<li>Module type:image</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_9.jpg"}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-image variation: </div>
+
+<div class="module module-image module-image--">
+	
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
+			<img class="module-image__img lazyload " data-src="/uploads/Leader_9.jpg" alt="" />
+		</div>
+
+		
 	
 </div>
 
@@ -327,7 +425,7 @@
 	<!--
 <ul>
 	<li>Module type:credits</li>
-	<li>Module data {"type"=>"credits", "credits"=>[{"url"=>"", "emphasis"=>"", "name"=>""}]}</li>
+	<li>Module data {"type"=>"credits", "credits"=>[{"url"=>nil, "emphasis"=>nil, "name"=>nil}]}</li>
 </ul>
 -->
 
@@ -342,7 +440,7 @@
 		<div class="module-credits__credits" js-controller="moduleCredits">
 			<div style="display: none;" js-module-credits-data>
 				
-					<a class="module-credits__credit" js-module-credits-item target="_blank" href="">
+					<a class="module-credits__credit" js-module-credits-item target="_blank" >
 						<span class="module-credits__emphasis">
 							
 						</span>
@@ -370,24 +468,66 @@
 
 
 
-		<footer class="footer">
-	<div class="footer__contact">
-		Footer
-	</div>
-	<div class="footer__spacer">
-		&nbsp;
-	</div>
-	<div class="footer__address1">
-		Footer Address1
-	</div>
-	<div class="footer__address2">
-		Footer Address1
-	</div>
-	<div class="footer__spacer">
-		&nbsp;
-	</div>
-	<div class="footer__email">
-		Email
+		<div class="footer-contact" js-footer-show>
+	Contact
+</div>
+
+<footer class="footer" js-controller="footer">
+	<div class="footer__container">
+		<div class="row">
+			<a class="footer__email-address" href="mailto:hello@studioparadise.com">
+				hello@studioparadise.com
+			</a>
+			<div class="footer__spacer">
+				&nbsp;
+			</div>
+			<div class="footer__spacer">
+				&nbsp;
+			</div>
+			<div class="footer__address1">
+				Sydney<br>
+				Suite 4, Level<br>
+				1137 Bridge Rd<br>
+				Glebe NSW 2037<br>
+				+61 2 9518 4443<br>
+			</div>
+			<div class="footer__address2">
+				New York<br>
+				153 Centre St <br>
+				Suite 206<br>
+				New York NY 10013  <br>
+				+1 917 363 8971<br>
+			</div>
+			<div class="footer__spacer">
+				&nbsp;
+			</div>
+			<div class="footer__email">
+				<div class="footer-signup">
+					<div class="footer-signup__input-wrapper">
+						<input type="text" class="footer-signup__input" placeholder="Newsletter Sign Up"/>
+						<div class="footer-signup__submit">
+							
+	<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.53 11.71"><title>Paradise_FinalDesign_160428_MLP_A_DEVNOTES</title><polygon points="17.68 0 16.97 0.71 21.62 5.35 0 5.35 0 6.35 21.62 6.35 16.97 11 17.68 11.71 23.53 5.85 17.68 0"/></svg>
+
+						</div>
+					</div>
+				</div>
+				<div class="footer-social">
+					<div class="footer-social__item">
+						F
+					</div><div class="footer-social__item">
+						IN
+					</div><div class="footer-social__item">
+						T
+					</div>
+				</div>
+			</div>
+			<div class="footer__close" js-footer-close>
+				
+	<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.71 20.71"><title>Paradise_FinalDesign_160428_MLP_A_DEVNOTES</title><polygon points="20.71 0.71 20 0 10.35 9.65 0.71 0 0 0.71 9.65 10.35 0 20 0.71 20.71 10.35 11.06 20 20.71 20.71 20 11.06 10.35 20.71 0.71"/></svg>
+
+			</div>
+		</div>
 	</div>
 </footer>
 
