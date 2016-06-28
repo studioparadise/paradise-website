@@ -312,7 +312,7 @@ excerpt: Studio Paradise
 						</div>
 						{% if post.content.size > 5 %}
 							<div class="row">
-								<div class="index-journal__content">
+								<div class="index-journal__content">	
 									{{ post.content }}
 								</div>
 							</div>
@@ -320,7 +320,7 @@ excerpt: Studio Paradise
 						{% assign images = post['images'] %}
 						{% if images.size > 0 %}
 							{% for image in images %}
-								<img class="index-journal__img lazyload" data-src="{{ image }}" />
+								<img class="index-journal__img lazyload" data-src="{{ image.image }}" />
 							{% endfor %}
 						{% endif %}
 					</div>
