@@ -1161,7 +1161,8 @@ $desktop-margin: 35px;
 	right: 0;
 	top: 0;
 	bottom: 0;
-	z-index: -1;
+	z-index: 1000;
+  pointer-events: none;
 	.grid-debug {
 		height: 100vh;
 		background: rgba(red, .1);
@@ -1476,6 +1477,26 @@ div[js-index-content="index"]{
     }
   }
 }
+.module-image__ratio {
+  position: relative;
+  > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .module-image__img,
+  .module-images-2up__img,
+   {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+}
 
 .module-image__img {
   width: 100%;
@@ -1688,6 +1709,7 @@ div[js-index-content="index"]{
   // bottom: 0;
   // z-index: 5;
   background: white;
+  @include container-row;
 }
 .studio__spacer {
   @include column(2);
@@ -1699,7 +1721,7 @@ div[js-index-content="index"]{
 .studio__locations {
   position: absolute;
   top: 35px;
-  left: 17.5px;
+  left: 0;
   right: 0;
   font-size: 14px;
 }

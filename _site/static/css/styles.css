@@ -7312,7 +7312,8 @@ input[type="search"]::-webkit-search-decoration {
   right: 0;
   top: 0;
   bottom: 0;
-  z-index: -1; }
+  z-index: 1000;
+  pointer-events: none; }
   .grid-debug-bg .grid-debug {
     height: 100vh;
     background: rgba(255, 0, 0, 0.1); }
@@ -7778,6 +7779,22 @@ div[js-index-content="index"] {
     .js-viewing-full-project .module-image .module__image-caption {
       margin-left: 35px; }
 
+.module-image__ratio {
+  position: relative; }
+  .module-image__ratio > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+  .module-image__ratio .module-image__img,
+  .module-image__ratio .module-images-2up__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+
 .module-image__img {
   width: 100%;
   display: block;
@@ -8108,7 +8125,28 @@ div[js-index-content="index"] {
   display: none; }
 
 .studio {
-  background: white; }
+  background: white;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+  padding-left: 35px;
+  padding-right: 35px; }
+  .studio:after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media screen and (max-width: 849px) {
+    .studio {
+      padding-left: 20px;
+      padding-right: 20px; } }
+  @media screen and (min-width: 850px) {
+    .studio {
+      padding-left: 17.5px;
+      padding-right: 17.5px; } }
+  @media screen and (max-width: 849px) {
+    .studio {
+      padding-left: 2.5px;
+      padding-right: 2.5px; } }
 
 .studio__spacer {
   width: 25%;
@@ -8138,7 +8176,7 @@ div[js-index-content="index"] {
 .studio__locations {
   position: absolute;
   top: 35px;
-  left: 17.5px;
+  left: 0;
   right: 0;
   font-size: 14px; }
 

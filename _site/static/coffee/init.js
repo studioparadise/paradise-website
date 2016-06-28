@@ -344,6 +344,23 @@
     return $("body").addClass('is-loading');
   };
 
+  root.responsiveImages = function() {
+    return $("[data-responsive-image-dimensions]").each(function() {
+      var dimPairs, dims, error, ex, height, width;
+      try {
+        dims = $(this).attr('data-responsive-image-dimensions');
+        dimPairs = dims.split('x');
+        height = Number(dimPairs[0]);
+        width = Number(dimPairs[1]);
+        return $(this).css({
+          paddingBottom: (width / height) * 100 + '%'
+        });
+      } catch (error) {
+        ex = error;
+      }
+    });
+  };
+
   root.init = function() {
 
     /* Modernizr to initialize this.
@@ -351,6 +368,8 @@
      */
     root.effects.handleFadeInOnLoad();
     root.utils.bindJSControllers();
+    root.responsiveImages();
+    $(window).on('resize', _.debounce(root.responsiveImages, 500));
     return $('body').addClass('is-loaded');
   };
 

@@ -380,12 +380,26 @@ root.effects.handleFadeInOnLoad = ->
 # #   root.effects.handleNavbarFadeIn()
 # #   root.effects.handleScrollBasedAnimations()
 
+
+root.responsiveImages = ->
+  $("[data-responsive-image-dimensions]").each ->
+    try
+      dims = $(this).attr 'data-responsive-image-dimensions'
+      dimPairs = dims.split 'x'
+      height = Number dimPairs[0]
+      width = Number dimPairs[1]
+      $(this).css
+        paddingBottom: (width/height)*100 + '%'
+    catch ex
+
 root.init = ->
   ### Modernizr to initialize this.
   $.load is too early before components load.
   ###
   root.effects.handleFadeInOnLoad()
   root.utils.bindJSControllers()
+  root.responsiveImages()
+  $(window).on 'resize', _.debounce(root.responsiveImages, 500)
   # _.delay =>
   #   root.utils.bindJSControllers()
   # , 1000

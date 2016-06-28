@@ -257,8 +257,8 @@ root.controllers.navbar2 = ($element, args) ->
 			api.scrolling = true
 			scrollSpyTarget = $label.attr 'js-scrollspy-nav'
 			if scrollSpyTarget
-				$("html, body").animate
-					scrollTop: $("[js-scrollspy=\"#{scrollSpyTarget}\"]").offset().top
+				$("html, body").stop(true, true).animate
+					scrollTop: $("[js-scrollspy=\"#{scrollSpyTarget}\"]").offset().top - 35
 				, 1000, 'easeInOutExpo', ->
 					api.scrolling = false
 					activateItem $item
@@ -274,6 +274,7 @@ root.controllers.navbar2 = ($element, args) ->
 				when 'projects'
 					$el = $("[js-index-content=\"projects\"]")
 					api.hideAllContentAndFadeInOne $el
+
 				when 'studio'
 					$el = $("[js-index-content=\"studio\"]")
 					api.hideAllContentAndFadeInOne $el
@@ -407,8 +408,6 @@ root.controllers.studioContent = ($element, args) ->
 
 
 root.controllers.footer = ($element, args) ->
-
-
 	handleOnClickOutside = (cb) ->
 		$(document).on 'click', (event) ->
 			if $(event.target).is('[js-footer-show]')
