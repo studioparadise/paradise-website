@@ -6,18 +6,27 @@ modules:
 - type: hero
   image: "/uploads/leader_hero.jpg"
   alt: 
-- type: 
-  excerpt: Bringing good design to modern families
+- type: text
+  excerpt: Bringing good design to modern families.
   body: 
 - type: image
   image: "/uploads/Leader_1.jpg"
   alt: 
   caption: 
 - type: image
+  images:
+  - image: 
+    alt: 
+    caption: 
   image: "/uploads/Leader_Logo.gif"
 - type: image
+  url: 
   image: "/uploads/Leader_2.jpg"
 - type: images_2up
+  credits:
+  - url: 
+    emphasis: 
+    name: 
   images:
   - image: "/uploads/Leader_3.jpg"
   - image: "/uploads/Leader_4.jpg"
