@@ -25,6 +25,10 @@ modules:
   alt: 
   caption: 
 - type: image
+  images:
+  - image: 
+    alt: 
+    caption: 
   image: "/uploads/3JE_Logo2.jpg"
   alt: 
   caption: 
@@ -32,11 +36,7 @@ modules:
   url: 
   image: "/uploads/4Stationery1.jpg"
 - type: image
-  credits:
-  - url: 
-    emphasis: 
-    name: 
-  images: "/uploads/5Stationery2.jpg"
+  image: "/uploads/5Stationery2.jpg"
 - type: image
   image: "/uploads/6Stationery3.jpg"
 - type: images-2up
