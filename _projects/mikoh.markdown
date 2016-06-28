@@ -4,7 +4,7 @@ date: 2016-05-28 04:19:00 Z
 position: 3
 modules:
 - type: hero
-  image: "/uploads/Hero.jpg"
+  image: "/uploads/Hero-410576.jpg"
   alt: 
 - type: text
   excerpt: |
