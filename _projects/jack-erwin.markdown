@@ -6,7 +6,8 @@ modules:
 - type: hero
   image: "/uploads/Je_HeroCrop.jpg"
 - type: text
-  excerpt: hi.
+  excerpt: We needed to create a vision that provoked the same trust between cobbler
+    and man. Guarantee quality, product - and lifestyle.
   image: "/uploads/JE_Logo.jpg"
 - type: image
 - type: images-2up
@@ -14,4 +15,3 @@ modules:
 - type: credits
 ---
 
-We needed to create a vision that provoked the same trust between cobbler and man. Guarantee quality, product - and lifestyle.
