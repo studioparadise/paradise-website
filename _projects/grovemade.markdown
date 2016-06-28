@@ -14,11 +14,6 @@ modules:
   image: Mikoh_20160616_MLP_A-03.jpg
   alt: 
   caption: 
-- type: credits
-  credits:
-  - url: 
-    emphasis: 
-    name: 
 - type: image
   image: Mikoh_20160616_MLP_A-04.jpg
 - type: image
@@ -35,5 +30,10 @@ modules:
   image: Mikoh_20160616_MLP_A-10.jpg
 - type: image
   image: Mikoh_20160616_MLP_A-11.jpg
+- type: credits
+  credits:
+  - url: 
+    emphasis: 
+    name: 
 ---
 
