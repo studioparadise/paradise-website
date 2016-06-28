@@ -14,3 +14,4 @@ modules:
 - type: credits
 ---
 
+We needed to create a vision that provoked the same trust between cobbler and man. Guarantee quality, product - and lifestyle.
