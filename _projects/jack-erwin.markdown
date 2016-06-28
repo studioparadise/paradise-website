@@ -6,12 +6,22 @@ modules:
 - type: hero
   image: "/uploads/Je_HeroCrop.jpg"
 - type: text
-  excerpt: We needed to create a vision that provoked the same trust between cobbler
-    and man. Guarantee quality, product - and lifestyle.
-  image: "/uploads/JE_Logo.jpg"
+  excerpt: Telling the story of the contemporary cobbler.
+  body: "Jack Erwin, founded in 2013, is a direct-to-consumer mens shoe brands that
+    provides seasonal luxury shoes at an affordable price. After two years of quick
+    growth and success, we were engaged to hone Jack Erwin’s brand story, which meant
+    rethinking their branded materials and digital experience as a holistic system.
+    \n\nIn order to create a brand that modern men could relate to, we needed to create
+    a vision that provoked the same trust between cobbler and man: Guarantee quality,
+    product - and lifestyle. We evolved the logo mark, introduced consistent color
+    and texture across printed material and store design. We art directed campaigns
+    shot by Bjorn Iooss and Joss Mckinley to use across a new intuitive e-commerce
+    experience. The result was a brand that was confident, aspirational, understated,
+    and truly reflected the men purchasing and wearing JE shoes. \n"
 - type: image
 - type: images-2up
 - type: website-link
+  url: http://www.jackerwin.com/
 - type: credits
 ---
 
