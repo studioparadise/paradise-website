@@ -25,11 +25,6 @@ modules:
   - image: "/uploads/Leader_4.jpg"
 - type: image
   image: "/uploads/Leader_5.jpg"
-- type: credits
-  credits:
-  - url: 
-    emphasis: 
-    name: 
 - type: image
   image: "/uploads/Leader_6.jpg"
 - type: image
@@ -38,5 +33,10 @@ modules:
   image: "/uploads/Leader_8.jpg"
 - type: image
   image: "/uploads/Leader_9.jpg"
+- type: credits
+  credits:
+  - url: 
+    emphasis: 
+    name: 
 ---
 
