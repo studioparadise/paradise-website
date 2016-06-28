@@ -318,7 +318,8 @@ root.controllers.navbar2 = ($element, args) ->
 			activateItem $item
 
 		$label.on 'scrollspy:activate', ->
-			activateItem $item, true
+			if not api.scrolling?
+				activateItem $item, true
 
 
 	$items = $element.find '.navbar__item'
@@ -406,3 +407,28 @@ root.controllers.studioContent = ($element, args) ->
 
 
 root.controllers.footer = ($element, args) ->
+
+
+	handleOnClickOutside = (cb) ->
+		$(document).on 'click', (event) ->
+			if $(event.target).is('[js-footer-show]')
+				return
+
+			if not $(event.target).closest('.footer').length and not $(event.target).is('.footer')
+				cb()
+	close = ->
+		$element.slideUp 'slow', 'easeInOutExpo'
+
+	open = ->
+		$element.slideDown 'slow', 'easeInOutExpo'
+
+	$open = $('[js-footer-show]')
+	$open.on 'click', ->
+		if $element.is(':visible')
+			close()
+		else
+			open()
+
+	$("[js-footer-close]").on 'click', close
+
+	handleOnClickOutside close

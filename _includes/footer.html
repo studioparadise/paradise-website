@@ -1,12 +1,13 @@
+<div class="footer-contact" js-footer-show>
+	Contact
+</div>
+
 <footer class="footer" js-controller="footer">
 	<div class="footer__container">
 		<div class="row">
 			<a class="footer__email-address" href="mailto:hello@studioparadise.com">
 				hello@studioparadise.com
 			</a>
-			<div class="footer__contact" js-footer-show>
-				Contact
-			</div>
 			<div class="footer__spacer">
 				&nbsp;
 			</div>
@@ -32,24 +33,25 @@
 			</div>
 			<div class="footer__email">
 				<div class="footer-signup">
-					<div class="footer-signup__title">
-						Newsletter Sign Up
-					</div>
 					<div class="footer-signup__input-wrapper">
-						<input type="text" class="footer-signup__input" />
+						<input type="text" class="footer-signup__input" placeholder="Newsletter Sign Up"/>
+						<div class="footer-signup__submit">
+							{% include svg.html type="arrow--right" %}
+						</div>
 					</div>
 				</div>
 				<div class="footer-social">
 					<div class="footer-social__item">
 						F
-					</div>
-					<div class="footer-social__item">
-						In
-					</div>
-					<div class="footer-social__item">
+					</div><div class="footer-social__item">
+						IN
+					</div><div class="footer-social__item">
 						T
 					</div>
 				</div>
+			</div>
+			<div class="footer__close" js-footer-close>
+				{% include svg.html type='x' %}
 			</div>
 		</div>
 	</div>

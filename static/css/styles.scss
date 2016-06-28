@@ -1250,7 +1250,7 @@ h1 {
 }
 @mixin style-h2 {
   font-size: 14px;
-  line-height: 1.42;
+  line-height: 1.1;
   letter-spacing: .01em;
   font-weight: 500;
 }
@@ -1364,7 +1364,7 @@ h1 {
 .navbar__label {
   padding: 2px 0;
   text-decoration: none;
-  font-size: 14px;
+  @include style-h2;
   color: #999;
   cursor: pointer;
 }
@@ -1885,50 +1885,115 @@ div[js-index-content="index"]{
 //footer
 //footer
 //footer
+.footer-contact {
+  position: fixed;
+  bottom: 35px;
+  left: 35px;
+  cursor: pointer;
+  z-index: 105;
+  @include style-h2;
+  &:hover {
+    color: rgba(black, .3);
+  }
+}
 .footer {
   display: none;
-	background: white;
-	position: relative;
-	z-index: 10;
+  background: white;
+  position: relative;
+  z-index: 101;
   overflow: hidden;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   top: auto;
-
-  height: auto;
 }
 .footer__container {
-	padding-top: 75px;
-	padding-bottom: 35px;
-	@include container;
+  padding-top: 75px;
+  padding-bottom: 35px;
+  @include container;
   position: relative;
 }
 .footer__email-address {
   position: absolute;
-  top: 35px;
+  top: 75px;
   left: 35px;
-}
-.footer__contact {
-  position: absolute;
-  bottom: 35px;
-  left: 35px;
+  text-decoration: none;
+  color: inherit;
+  @include style-h2;
+  &:hover {
+    color: rgba(black, .3);
+  }
 }
 .footer__address1 {
 	@include column(1);
+  @include style-h2;
 }
 .footer__address2 {
 	@include column(1);
+  @include style-h2;
 }
 .footer__spacer {
 	@include column(1);
 }
 .footer__email {
-	@include column(3);
+	@include column(2);
 }
 
+.footer-signup__input-wrapper {
+  position: relative;
+}
+.footer-signup__submit {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  svg {
+    width: 23.5px;
+    height: 11.5px;
+  }
+}
+.footer-signup__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  padding-bottom: 10px;
+  font-family: 'C';
+  @include style-h2;
+  @include placeholder {
+    color: black;
+    font-family: 'C';
+    font-weight: 500;
+    @include style-h2;
+  }
+  border-bottom: 1px solid black;
+  width: 100%;
+}
 
+.footer-social {
+  margin-top: 24px;
+  @include clearfix;
+}
+.footer-social__item {
+  width: 38px;
+  height: 38px;
+  display: inline-block;
+  line-height: 38px;
+  text-align: center;
+  border: 1px solid black;
+  margin-left: -1px;
+}
+.footer__close {
+  position: absolute;
+  right: 35px;
+  top: 75px;
+  cursor: pointer;
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
 .debug-bar {
   position: fixed;
   bottom: 0;

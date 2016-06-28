@@ -7649,6 +7649,9 @@ h1 {
   padding: 2px 0;
   text-decoration: none;
   font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: .01em;
+  font-weight: 500;
   color: #999;
   cursor: pointer; }
 
@@ -7804,7 +7807,7 @@ div[js-index-content="index"] {
   float: left;
   padding: 0 17.5px;
   font-size: 14px;
-  line-height: 1.42;
+  line-height: 1.1;
   letter-spacing: .01em;
   font-weight: 500; }
   @media screen and (max-width: 849px) {
@@ -7868,7 +7871,7 @@ div[js-index-content="index"] {
 .module-text__body {
   display: none;
   font-size: 14px;
-  line-height: 1.42;
+  line-height: 1.1;
   letter-spacing: .01em;
   font-weight: 500; }
   .js-viewing-full-project .module-text__body {
@@ -8015,7 +8018,7 @@ div[js-index-content="index"] {
 
 .module-credits__title {
   font-size: 14px;
-  line-height: 1.42;
+  line-height: 1.1;
   letter-spacing: .01em;
   font-weight: 500; }
 
@@ -8357,7 +8360,7 @@ div[js-index-content="index"] {
 
 .index-journal__date {
   font-size: 14px;
-  line-height: 1.42;
+  line-height: 1.1;
   letter-spacing: .01em;
   font-weight: 500;
   margin-top: 20px; }
@@ -8381,18 +8384,30 @@ div[js-index-content="index"] {
     .index-journal__content {
       padding: 0 17.5px; } }
 
+.footer-contact {
+  position: fixed;
+  bottom: 35px;
+  left: 35px;
+  cursor: pointer;
+  z-index: 105;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: .01em;
+  font-weight: 500; }
+  .footer-contact:hover {
+    color: rgba(0, 0, 0, 0.3); }
+
 .footer {
   display: none;
   background: white;
   position: relative;
-  z-index: 10;
+  z-index: 101;
   overflow: hidden;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  top: auto;
-  height: auto; }
+  top: auto; }
 
 .footer__container {
   padding-top: 75px;
@@ -8414,17 +8429,24 @@ div[js-index-content="index"] {
 
 .footer__email-address {
   position: absolute;
-  top: 35px;
-  left: 35px; }
-
-.footer__contact {
-  position: absolute;
-  bottom: 35px;
-  left: 35px; }
+  top: 75px;
+  left: 35px;
+  text-decoration: none;
+  color: inherit;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: .01em;
+  font-weight: 500; }
+  .footer__email-address:hover {
+    color: rgba(0, 0, 0, 0.3); }
 
 .footer__address1 {
   width: 12.5%;
-  float: left; }
+  float: left;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: .01em;
+  font-weight: 500; }
   @media screen and (min-width: 850px) {
     .footer__address1 {
       padding-left: 17.5px;
@@ -8436,7 +8458,11 @@ div[js-index-content="index"] {
 
 .footer__address2 {
   width: 12.5%;
-  float: left; }
+  float: left;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: .01em;
+  font-weight: 500; }
   @media screen and (min-width: 850px) {
     .footer__address2 {
       padding-left: 17.5px;
@@ -8459,7 +8485,7 @@ div[js-index-content="index"] {
       padding-right: 17.5px; } }
 
 .footer__email {
-  width: 37.5%;
+  width: 25%;
   float: left; }
   @media screen and (min-width: 850px) {
     .footer__email {
@@ -8469,6 +8495,91 @@ div[js-index-content="index"] {
     .footer__email {
       padding-left: 17.5px;
       padding-right: 17.5px; } }
+
+.footer-signup__input-wrapper {
+  position: relative; }
+
+.footer-signup__submit {
+  position: absolute;
+  right: 0;
+  top: 10px; }
+  .footer-signup__submit svg {
+    width: 23.5px;
+    height: 11.5px; }
+
+.footer-signup__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  padding-bottom: 10px;
+  font-family: 'C';
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: .01em;
+  font-weight: 500;
+  border-bottom: 1px solid black;
+  width: 100%; }
+  .footer-signup__input::-webkit-input-placeholder {
+    color: black;
+    font-family: 'C';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: .01em;
+    font-weight: 500; }
+  .footer-signup__input:-moz-placeholder {
+    /* Firefox 18- */
+    color: black;
+    font-family: 'C';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: .01em;
+    font-weight: 500; }
+  .footer-signup__input::-moz-placeholder {
+    /* Firefox 19+ */
+    color: black;
+    font-family: 'C';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: .01em;
+    font-weight: 500; }
+  .footer-signup__input:-ms-input-placeholder {
+    color: black;
+    font-family: 'C';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: .01em;
+    font-weight: 500; }
+
+.footer-social {
+  margin-top: 24px; }
+  .footer-social:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.footer-social__item {
+  width: 38px;
+  height: 38px;
+  display: inline-block;
+  line-height: 38px;
+  text-align: center;
+  border: 1px solid black;
+  margin-left: -1px; }
+
+.footer__close {
+  position: absolute;
+  right: 35px;
+  top: 75px;
+  cursor: pointer; }
+  .footer__close svg {
+    width: 20px;
+    height: 20px; }
 
 .debug-bar {
   position: fixed;
