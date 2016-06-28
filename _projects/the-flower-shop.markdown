@@ -26,7 +26,6 @@ modules:
 - type: image
   image: "/uploads/Con_Logo.png"
 - type: image
-  url: 
   image: "/uploads/COn_Branding.gif"
 - type: image
   image: "/uploads/Con_Branding.jpg"
