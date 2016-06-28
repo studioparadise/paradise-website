@@ -26,6 +26,7 @@ modules:
 - type: image
   images: "/uploads/3JE_Logo2.jpg"
   caption: 
+  alt: 
 - type: image
   images: "/uploads/4Stationery1.jpg"
 - type: image
