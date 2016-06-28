@@ -30,29 +30,7 @@ defaults:
     type: projects
   values:
     layout: project
-    modules:
-    - type: hero
-      image: ''
-      alt: ''
-    - type: text
-      excerpt: ''
-      body: ''
-    - type: image
-      image: ''
-      alt: ''
-      caption: ''
-    - type: images-2up
-      images:
-      - image: ''
-        alt: ''
-        caption: ''
-    - type: website-link
-      url: ''
-    - type: credits
-      credits:
-      - url: ''
-        emphasis: ''
-        name: ''
+
 tagline: Changing the world, one uninspired quote at a time
 url: http://yourwebsite.com
 socialimg: "/img/social.jpg"
