@@ -36,8 +36,6 @@ modules:
   - image: "/uploads/7JE_AD_02.jpg"
     alt: 
     caption: testing
-- type: images-2up
-  images: "/uploads/7JE_AD_02.jpg"
 - type: image
   images: "/uploads/8JE_AD_03.jpg"
 - type: image
