@@ -24,28 +24,20 @@ modules:
   variation: centered
   full-project-title: Convicts
 - type: image
-  image: "/uploads/Con_Branding.jpg"
-  alt: 
-- type: images-2up
-  images:
-  - image: "/uploads/ph-project-2up.jpg"
-    alt: 
-    caption: This is a caption style, in the case we'd like to call something out
-      that is very very important.
-  - image: "/uploads/ph-project-2up-2.jpg"
-    caption: This is a caption style, in the case we'd like to call something out
-      that is very very important.
+  image: "/uploads/Con_Logo.png"
 - type: image
   url: 
-  image: "/uploads/ph-project-fullwidth-3.jpg"
+  image: "/uploads/COn_Branding.gif"
+- type: image
+  image: "/uploads/Con_Branding.jpg"
+  alt: 
+  caption: 
 - type: website-link
   credits:
   - url: 
     emphasis: 
     name: 
-  url: http://google.com
-- type: image
-  image: "/uploads/ph-project-fullwidth-3-081c98.jpg"
+  url: http://convicts.nyc/
 - type: credits
   credits:
   - url: http://google.com
