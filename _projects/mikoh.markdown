@@ -37,8 +37,6 @@ modules:
   image: "/uploads/Mikoh_20160616_MLP_A-09.jpg"
 - type: image
   image: "/uploads/Mikoh_20160616_MLP_A-10.jpg"
-- type: image
-  image: "/uploads/Mikoh_20160616_MLP_A-11.jpg"
 - type: credits
   credits:
   - url: 
