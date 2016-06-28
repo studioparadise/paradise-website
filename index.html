@@ -320,7 +320,7 @@ excerpt: Studio Paradise
 						{% assign images = post['images'] %}
 						{% if images.size > 0 %}
 							{% for image in images %}
-								<img class="index-journal__img lazyload" data-src="{{ image.image }}" />
+								<img class="index-journal__img lazyload" data-src="{{ image.image }}" alt="{{ image.alt | default: '' }}" />
 							{% endfor %}
 						{% endif %}
 					</div>
