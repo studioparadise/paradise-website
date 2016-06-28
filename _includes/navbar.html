@@ -59,7 +59,7 @@
 				{% assign projects = site.projects | sort: "position" %}
 				{% for project in projects %}
 					<div class="navbar__item">
-						<div class="navbar__label" js-item-label js-navbar-project="{{ project.title | slugify }}" js-args="{overlay: 'projects'}">
+						<div class="navbar__label" js-item-label js-navbar-project="{{ project.title | slugify }}" js-args="{overlay: 'projects'}" js-scrollspy-nav="{{ project.title | slugify }}">
 							{{ project.title }}
 						</div>
 					</div>
@@ -70,16 +70,16 @@
 			<div class="navbar__label" js-item-label js-args="{preventAlign: true, overlay: 'studio'}" js-navbar-studio>Studio</div>
 			<div class="navbar__dropdown" js-item-dropdown>
 				<div class="navbar__item" js-item-with-dropdown>
-					<div class="navbar__label" js-item-label js-args="{overlay: 'studio'}">Manifesto</div>
+					<div class="navbar__label" js-item-label js-args="{overlay: 'studio'}" js-scrollspy-nav="manifesto">Manifesto</div>
 				</div>
 				<div class="navbar__item" js-item-with-dropdown>
-					<div class="navbar__label" js-item-label js-args="{overlay: 'studio'}">Services</div>
+					<div class="navbar__label" js-item-label js-args="{overlay: 'studio'}" js-scrollspy-nav="team">Team</div>
 				</div>
 				<div class="navbar__item" js-item-with-dropdown>
-					<div class="navbar__label" js-item-label js-args="{overlay: 'studio'}">Team</div>
+					<div class="navbar__label" js-item-label js-args="{overlay: 'studio'}" js-scrollspy-nav="services">Services</div>
 				</div>
 				<div class="navbar__item" js-item-with-dropdown>
-					<div class="navbar__label" js-item-label js-args="{overlay: 'studio'}">Clients</div>
+					<div class="navbar__label" js-item-label js-args="{overlay: 'studio'}" js-scrollspy-nav="clients">Clients</div>
 				</div>
 				<!-- <div class="navbar__dropdown"  js-item-dropdown>
 					<div class="navbar__item">
@@ -104,7 +104,7 @@
 				    {% capture nmonth %}{{ post.next.date | date: '%Y %b' }}{% endcapture %}
 				    {% if month != nmonth %}
 						<div class="navbar__item">
-							<div class="navbar__label" js-item-label js-args="{overlay: 'journal'}" js-scrollspy="{{ post.date | date: '%Y-%B' }}">
+							<div class="navbar__label" js-item-label js-args="{overlay: 'journal'}" js-scrollspy-nav="{{ post.date | date: '%Y-%B' }}">
 								{{post.date | date:"%B"}}
 							</div>
 						</div>

@@ -1781,7 +1781,6 @@ div[js-index-content="index"]{
 .studio__services-column {
   @include column(4);
 }
-
 .studio__service-header {
   margin-bottom: 70px;
 }
@@ -1791,18 +1790,15 @@ div[js-index-content="index"]{
 .studio__service-title {
   font-weight: 500;
 }
-
 .studio__service-group {
   margin-bottom: 70px;
 }
-
 .studio__header {
   font-weight: 500;
 }
 .studio__service-title {
   font-weight: 500;
 }
-
 .studio__service-group {
   margin-bottom: 70px;
 }
@@ -1843,12 +1839,15 @@ div[js-index-content="index"]{
   @include column(6);
 }
 .index-journal__journal {
-  &:not(:first-child) {
-    padding-top: 35px;
-    margin-top: 35px;
-    border-top: 1px solid rgba(black, .1);
-  }
+  padding-top: 35px;
+  margin-top: 35px;
+  border-top: 1px solid rgba(black, .1);
 }
+.index-journal .index-journal__month:first-child .index-journal__journal {
+  padding-top: 0;
+  margin-top: 0;
+  border-top: none;
+} 
 .index-journal__hero-img {
   display: block;
   width: 100%;
@@ -1938,4 +1937,3 @@ div[js-index-content="index"]{
     }
   }
 }
-

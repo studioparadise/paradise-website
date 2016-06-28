@@ -238,7 +238,7 @@ root.controllers.navbar2 = ($element, args) ->
 			console.log 'top: ', top, ' height:', height
 
 			console.log 'dropdown css is -', top, $dropdown
-			$item.parent().animate
+			$item.parent().stop(true).animate
 				marginTop: "-#{top}px"
 			, 500
 
@@ -249,9 +249,14 @@ root.controllers.navbar2 = ($element, args) ->
 				$dropdown.hide()
 				$dropdown.find('.is-active').removeClass 'is-active'
 
-	
+		scrollTo = ($item) ->
+			scrollSpyTarget = $label.attr 'js-scrollspy-nav'
+			if scrollSpyTarget
+				$("html, body").animate
+					scrollTop: $("[js-scrollspy=\"#{scrollSpyTarget}\"]").offset().top
+				, 1000, 'easeInOutExpo'	
 
-		activateItem = ($item) ->
+		activateItem = ($item, preventAlign = false) ->
 			$dropdown = $item.find '[js-item-dropdown]:first'
 			args = root.utils.getArgs($label)
 
@@ -289,7 +294,7 @@ root.controllers.navbar2 = ($element, args) ->
 			clearOtherItems($item)
 			lastActiveItem = $item
 
-			if not args.preventAlign
+			if not args.preventAlign and not preventAlign
 				alignItemWithParent($item)
 
 		clearOtherItems = ($item) ->
@@ -304,7 +309,10 @@ root.controllers.navbar2 = ($element, args) ->
 		console.log 'adding trigger on $label click', $label
 		$label.on 'click', ->
 			activateItem $item
+			# scrollTo $item
 
+		$label.on 'scrollspy:activate', ->
+			activateItem $item
 
 	$items = $element.find '.navbar__item'
 	for item in $items
@@ -319,56 +327,63 @@ root.controllers.navbar2 = ($element, args) ->
 
 
 
-	do handleSecondaryNav = ->
-		$navs = $element.find '[js-navbar-project]'
-		navLinkActiveClass = 'navbar__link--active'
+	# do handleSecondaryNav = ->
+	# 	$navs = $element.find '[js-navbar-project]'
+	# 	navLinkActiveClass = 'navbar__link--active'
 
-		getCurrentProject = ->
-			tolerance = $(window).height() * .3
-			$project = $("[js-index-project]:in-viewport(#{tolerance}):first")
+	# 	getCurrentProject = ->
+	# 		tolerance = $(window).height() * .3
+	# 		$project = $("[js-index-project]:in-viewport(#{tolerance}):first")
 
-			projectSlug = $project.attr('js-index-project')
-			debug projectSlug
-			return projectSlug
+	# 		projectSlug = $project.attr('js-index-project')
+	# 		debug projectSlug
+	# 		return projectSlug
 
-		activateSecondaryNav = (project) ->
-			$nav = $navs.filter("[js-navbar-project=\"#{project}\"]:first")
-			# $navs.removeClass navLinkActiveClass
-			# $nav.addClass navLinkActiveClass
-			window.location.hash = project
+	# 	activateSecondaryNav = (project) ->
+	# 		$nav = $navs.filter("[js-navbar-project=\"#{project}\"]:first")
+	# 		# $navs.removeClass navLinkActiveClass
+	# 		# $nav.addClass navLinkActiveClass
+	# 		window.location.hash = project
 
 
-		getProject = (project) ->
-			return $("[js-index-project=\"#{project}\"]")
+	# 	getProject = (project) ->
+	# 		return $("[js-index-project=\"#{project}\"]")
 
-		scrollToProject = (project) ->
-			$project = getProject project
-			debug "scrolling to project #{project}"
-			console.log $project
+	# 	scrollToProject = (project) ->
+	# 		$project = getProject project
+	# 		debug "scrolling to project #{project}"
+	# 		console.log $project
 
-			$('html, body').animate
-				scrollTop: $project.offset().top
-			, 1000, 'easeInOutExpo'
+	# 		$('html, body').animate
+	# 			scrollTop: $project.offset().top
+	# 		, 1000, 'easeInOutExpo'
 
-		do initialLoadHash = ->
-			if window.location.hash
-				project = window.location.hash.substr(1)
-				console.log 'Found project. scrolling to ', project
-				$project = getProject project
-				if $project
-					scrollToProject project
+	# 	do initialLoadHash = ->
+	# 		if window.location.hash
+	# 			project = window.location.hash.substr(1)
+	# 			console.log 'Found project. scrolling to ', project
+	# 			$project = getProject project
+	# 			if $project
+	# 				scrollToProject project
 
-		$navs.on 'click', (ev) ->
-			ev.preventDefault()
-			scrollToProject($(this).attr 'js-navbar-project')
+	# 	$navs.on 'click', (ev) ->
+	# 		ev.preventDefault()
+	# 		scrollToProject($(this).attr 'js-navbar-project')
 
+	# 	onScroll = ->
+	# 		project = getCurrentProject()
+	# 		if project
+	# 			activateSecondaryNav project
+	# 	$(window).on 'scroll', _.throttle onScroll, 100
+
+	do handleScrollSpy = ->
 		onScroll = ->
-			project = getCurrentProject()
-			if project
-				activateSecondaryNav project
-		$(window).on 'scroll', _.throttle onScroll, 100
-
-
+			$spiesInViewport = $("[js-scrollspy]:in-viewport(500):visible:first")
+			console.log 'spies in viweport: ', $spiesInViewport
+			target = $spiesInViewport.attr 'js-scrollspy'
+			$nav = $("[js-scrollspy-nav=\"#{target}\"]")
+			$nav.trigger 'scrollspy:activate'
+		$(window).on 'scroll', _.throttle onScroll, 150
 
 root.controllers.studioContent = ($element, args) ->
 	$navItem = $("[js-navbar-studio]")
