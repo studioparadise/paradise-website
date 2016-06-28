@@ -18,15 +18,16 @@ modules:
     and texture across printed material and store design. We art directed campaigns
     shot by Bjorn Iooss and Joss Mckinley to use across a new intuitive e-commerce
     experience. The result was a brand that was confident, aspirational, understated,
-    and truly reflected the men purchasing and wearing JE shoes. \n"
+    and truly reflected the men purchasing and wearing JE shoes. \n\n* *Art Direction*\n*
+    *Web Design*\n* *Brand Strategy*\n* *Web Development*\n* *Brand Identity*\n"
 - type: image
   image: "/uploads/2JE_Logo.jpg"
   alt: 
   caption: 
 - type: image
   images: "/uploads/3JE_Logo2.jpg"
-  caption: 
   alt: 
+  caption: 
 - type: image
   images: "/uploads/4Stationery1.jpg"
 - type: image
