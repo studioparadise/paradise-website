@@ -204,6 +204,26 @@ root.controllers.navbar2 = ($element, args) ->
 
 	$(window).on 'resize', centerNavbar
 
+	$allContent = $("[js-index-content]")
+	api.hideAllContentAndFadeInOne = ($content) ->
+		console.log "Loading content: ", $content
+
+		if $content.is(':visible')
+			console.log "Content visible, skipping fade in"
+			return
+
+		$allContent.stop(true, true).fadeOut().promise().done ->
+			$content.fadeIn()
+
+	do handleLogoClick = ->
+		$logo = $element.find('[js-navbar-logo]')
+		# show slider on logo click
+		$logo.on 'click', (ev) ->
+			ev.preventDefault()
+			$el = $("[js-index-content=\"index\"]")
+			api.hideAllContentAndFadeInOne $el
+			return false
+
 	lastActiveItem = null
 	initItem = ($item) ->
 		console.log 'initializing item', $item
@@ -229,35 +249,26 @@ root.controllers.navbar2 = ($element, args) ->
 				$dropdown.hide()
 				$dropdown.find('.is-active').removeClass 'is-active'
 
+	
+
 		activateItem = ($item) ->
 			$dropdown = $item.find '[js-item-dropdown]:first'
 			args = root.utils.getArgs($label)
 
-			$allContent = $("[js-index-content]")
-
-			hideAllContentAndFadeInOne = ($content) ->
-				console.log "Loading content: ", $content
-
-				if $content.is(':visible')
-					console.log "Content visible, skipping fade in"
-					return
-
-				$allContent.stop(true, true).fadeOut().promise().done ->
-					$content.fadeIn()
 
 			switch args.overlay
 				when 'index'
 					$el = $("[js-index-content=\"index\"]")
-					hideAllContentAndFadeInOne $el
+					api.hideAllContentAndFadeInOne $el
 				when 'projects'
 					$el = $("[js-index-content=\"projects\"]")
-					hideAllContentAndFadeInOne $el
+					api.hideAllContentAndFadeInOne $el
 				when 'studio'
 					$el = $("[js-index-content=\"studio\"]")
-					hideAllContentAndFadeInOne $el
+					api.hideAllContentAndFadeInOne $el
 				when 'journal'
 					$el = $("[js-index-content=\"journal\"]")
-					hideAllContentAndFadeInOne $el
+					api.hideAllContentAndFadeInOne $el
 				else
 					console.log "Not Found", args.overlay
 					# $(".studio").fadeOut()

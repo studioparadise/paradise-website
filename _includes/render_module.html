@@ -12,10 +12,10 @@
 	{% case module.type %}
 	{% when 'hero' %}
 		<div class="hero__column">
-			<img class="hero__img" src="{{ module.image }}" />
+			<img class="hero__img lazyload" data-src="{{ module.image }}" />
 		</div>
 	{% when 'image' %}
-		<img class="module-image__img" src="{{ module.image }}" />
+		<img class="module-image__img lazyload" data-src="{{ module.image }}" />
 
 		{% if module.caption %}
 			<div class="module__image-caption">
@@ -25,7 +25,7 @@
 	{% when 'images-2up' %}
 		{% for image in module.images %}
 			<div class="module-images-2up__image">
-				<img class="module-images-2up__img" src="{{ image.image }}" />
+				<img class="module-images-2up__img lazyload" data-src="{{ image.image }}" />
 				<div class="module__image-caption">
 					{{ image.caption }}
 				</div>

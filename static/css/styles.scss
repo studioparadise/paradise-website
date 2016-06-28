@@ -1252,6 +1252,7 @@ h1 {
   font-size: 14px;
   line-height: 1.42;
   letter-spacing: .01em;
+  font-weight: 500;
 }
 
 @mixin style-h3 {
@@ -1327,7 +1328,7 @@ h1 {
 .navbar__logo {
 	position: absolute;
 	top: 35px;
-	left: 17.5px;
+	left: 35px;
   svg {
     width: 82px;
     height: 20px;
@@ -1391,7 +1392,7 @@ h1 {
 .content {
 	z-index: 2;
 	position: relative;
-  height: calc(100vh - 230px)
+  // height: calc(100vh - 230px)
 }
 
 .primary-slide {
@@ -1410,7 +1411,7 @@ h1 {
 }
 .swiper-slide {
   margin-top: 60px;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 180px);
   @include background-size-cover;
 }
 
@@ -1693,8 +1694,8 @@ div[js-index-content="index"]{
 }
 .studio__locations {
   position: absolute;
-  top: 128px;
-  left: 0;
+  top: 35px;
+  left: 17.5px;
   right: 0;
   font-size: 14px;
 }
@@ -1769,7 +1770,7 @@ div[js-index-content="index"]{
   font-style: normal;
 }
 .studio__team-bio {
-
+  line-height: 20px;
 }
 // services
 .studio__services {
@@ -1833,6 +1834,49 @@ div[js-index-content="index"]{
   display: block;
   text-decoration: none;
   color: inherit;
+}
+
+// journal
+// journal
+// journal
+.index-journal {
+  @include column(6);
+}
+.index-journal__journal {
+  &:not(:first-child) {
+    padding-top: 35px;
+    margin-top: 35px;
+    border-top: 1px solid rgba(black, .1);
+  }
+}
+.index-journal__hero-img {
+  display: block;
+  width: 100%;
+}
+.index-journal__header {
+}
+.index-journal__img {
+  width: 100%;
+  display: block;
+  &:not(:last-child) {
+    margin-bottom: 35px;
+  }
+}
+.index-journal__date {
+  @include style-h2;
+  margin-top: 20px;
+}
+.index-journal__title {
+  @include style-h1;
+  font-weight: normal;
+  margin: 0;
+  margin-top: 5px;
+}
+.index-journal__content {
+  @include style-h1;
+  @include nested-column(4, 6);
+  margin-top: 35px;
+  margin-bottom: 35px;
 }
 
 //footer

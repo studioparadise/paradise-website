@@ -286,16 +286,47 @@ excerpt: Studio Paradise
 </div>
 
 <div js-index-content="journal">
-	<div class="content">
+	<div class="content container">
 		<div class="row">
 			<div class="content-navbar-grid-spacer">&nbsp;</div>
 			<div class="index-journal">
-				{% assign posts_by_month = site.journals | group_by:"month" %}
-				{% for month in posts_by_month %}
-					<h3>{{month.items.first.date | date:"%B"}}</h3>
-					{% for post in month.items %}
-						{{ post.title }}
-					{% endfor %}
+				{% assign posts = site.journals %}
+
+				{% for post in posts reversed %}
+				    {% capture month %}{{ post.date | date: '%Y %b' }}{% endcapture %}
+				    {% capture nmonth %}{{ post.next.date | date: '%Y %b' }}{% endcapture %}
+				    {% if month != nmonth %}
+						<div class="index-journal__month" js-index-journal-month="{{post.first.date | date: '%B-%Y' }}">
+					{% endif %}
+					<div class="index-journal__journal">
+						<img class="index-journal__hero-img" src="{{ post['image'] }}" />
+						<div class="index-journal__header">
+							<div class="index-journal__date">
+								{{ post.date | date: "%B %d %Y" }}
+							</div>
+							{% unless post['hide-title'].size > 1 %}
+								<h1 class="index-journal__title">
+									{{ post.title }}
+								</h1>
+							{% endunless %}
+						</div>
+						{% if post.content.size > 5 %}
+							<div class="row">
+								<div class="index-journal__content">
+									{{ post.content }}
+								</div>
+							</div>
+						{% endif %}
+						{% assign images = post['images'] %}
+						{% if images.size > 0 %}
+							{% for image in images %}
+								<img class="index-journal__img lazyload" data-src="{{ image }}" />
+							{% endfor %}
+						{% endif %}
+					</div>
+				    {% if month != nmonth %}
+						</div>
+					{% endif %}
 				{% endfor %}
 			</div>
 		</div>

@@ -47,6 +47,11 @@
 </div>
 {% endcomment %}
 <div class="navbar" js-controller="navbar2">
+	<div class="navbar__logo" js-navbar-logo>
+		<a href="/">
+			{% include svg.html type='logo--word' %}
+		</a>
+	</div>
 	<div class="" js-wrapper>
 		<div class="navbar__item" js-item-with-dropdown>
 			<div class="navbar__label" js-item-label js-args="{preventAlign: true, overlay: 'projects'}">Work</div>
@@ -93,13 +98,17 @@
 		<div class="navbar__item" js-item-with-dropdown>
 			<div class="navbar__label" js-item-label js-item-label js-args="{preventAlign: true, overlay: 'journal'}">Journal</div>
 			<div class="navbar__dropdown" js-item-dropdown>
-				{% assign posts_by_month = site.journals | group_by:"month" %}
-				{% for month in posts_by_month %}
-					<div class="navbar__item">
-						<div class="navbar__label" js-item-label js-args="{overlay: 'journal'}">
-							{{month.items.first.date | date:"%B"}}
+				{% assign posts = site.journals %}
+				{% for post in posts reversed %}
+				    {% capture month %}{{ post.date | date: '%Y %b' }}{% endcapture %}
+				    {% capture nmonth %}{{ post.next.date | date: '%Y %b' }}{% endcapture %}
+				    {% if month != nmonth %}
+						<div class="navbar__item">
+							<div class="navbar__label" js-item-label js-args="{overlay: 'journal'}" js-scrollspy="{{ post.date | date: '%Y-%B' }}">
+								{{post.date | date:"%B"}}
+							</div>
 						</div>
-					</div>
+					{% endif %}
 				{% endfor %}
 			</div>
 		</div>

@@ -17,24 +17,42 @@ collections:
 defaults:
 - scope:
     path: ''
-    type: projects
+    type: journals
   values:
-    layout: default
-    modules:
-    - type: hero
-      title: ''
+    layout: journal
+    image: ''
+    images:
       image: ''
-    - type: text
-      text: 
-      variation: centered
-    - type: images
-      image1: ''
-      image2: ''
+      alt: ''
+    hide-title: ''
+
 - scope:
     path: ''
     type: projects
   values:
     layout: project
+    modules:
+    - type: hero
+      title: ''
+      image: ''
+      alt: ''
+    - type: text
+      excerpt: '' 
+      body: ''
+    - type: image
+      image: ''
+      alt: ''
+    - type: images-2up
+      images:
+        - image: ''
+    - type: website-link
+      url: ''
+    - type: credits
+      credits: 
+        - url: ''
+          emphasis: ''
+          name: ''
+
 tagline: Changing the world, one uninspired quote at a time
 url: http://yourwebsite.com
 socialimg: "/img/social.jpg"

@@ -7630,7 +7630,7 @@ h1 {
 .navbar__logo {
   position: absolute;
   top: 35px;
-  left: 17.5px; }
+  left: 35px; }
   .navbar__logo svg {
     width: 82px;
     height: 20px; }
@@ -7693,8 +7693,7 @@ h1 {
 
 .content {
   z-index: 2;
-  position: relative;
-  height: calc(100vh - 230px); }
+  position: relative; }
 
 .primary-slide {
   height: 100vh;
@@ -7716,7 +7715,7 @@ h1 {
 
 .swiper-slide {
   margin-top: 60px;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 180px);
   -o-background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -7802,7 +7801,8 @@ div[js-index-content="index"] {
   padding: 0 17.5px;
   font-size: 14px;
   line-height: 1.42;
-  letter-spacing: .01em; }
+  letter-spacing: .01em;
+  font-weight: 500; }
   @media screen and (max-width: 849px) {
     .module-text__spacer {
       padding: 0 17.5px; } }
@@ -7865,7 +7865,8 @@ div[js-index-content="index"] {
   display: none;
   font-size: 14px;
   line-height: 1.42;
-  letter-spacing: .01em; }
+  letter-spacing: .01em;
+  font-weight: 500; }
   .js-viewing-full-project .module-text__body {
     width: 37.5%;
     float: left;
@@ -8011,7 +8012,8 @@ div[js-index-content="index"] {
 .module-credits__title {
   font-size: 14px;
   line-height: 1.42;
-  letter-spacing: .01em; }
+  letter-spacing: .01em;
+  font-weight: 500; }
 
 .module-credits__credits {
   margin-top: 70px;
@@ -8128,8 +8130,8 @@ div[js-index-content="index"] {
 
 .studio__locations {
   position: absolute;
-  top: 128px;
-  left: 0;
+  top: 35px;
+  left: 17.5px;
   right: 0;
   font-size: 14px; }
 
@@ -8222,6 +8224,9 @@ div[js-index-content="index"] {
   font-weight: 500;
   font-style: normal; }
 
+.studio__team-bio {
+  line-height: 20px; }
+
 .studio__services {
   font-size: 18px;
   margin-bottom: 140px; }
@@ -8313,6 +8318,59 @@ div[js-index-content="index"] {
   display: block;
   text-decoration: none;
   color: inherit; }
+
+.index-journal {
+  width: 75%;
+  float: left; }
+  @media screen and (min-width: 850px) {
+    .index-journal {
+      padding-left: 17.5px;
+      padding-right: 17.5px; } }
+  @media screen and (max-width: 849px) {
+    .index-journal {
+      padding-left: 17.5px;
+      padding-right: 17.5px; } }
+
+.index-journal__journal:not(:first-child) {
+  padding-top: 35px;
+  margin-top: 35px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1); }
+
+.index-journal__hero-img {
+  display: block;
+  width: 100%; }
+
+.index-journal__img {
+  width: 100%;
+  display: block; }
+  .index-journal__img:not(:last-child) {
+    margin-bottom: 35px; }
+
+.index-journal__date {
+  font-size: 14px;
+  line-height: 1.42;
+  letter-spacing: .01em;
+  font-weight: 500;
+  margin-top: 20px; }
+
+.index-journal__title {
+  font-size: 26px;
+  line-height: 1.07;
+  font-weight: normal;
+  margin: 0;
+  margin-top: 5px; }
+
+.index-journal__content {
+  font-size: 26px;
+  line-height: 1.07;
+  width: 66.66667%;
+  float: left;
+  padding: 0 17.5px;
+  margin-top: 35px;
+  margin-bottom: 35px; }
+  @media screen and (max-width: 849px) {
+    .index-journal__content {
+      padding: 0 17.5px; } }
 
 .footer {
   background: white;
