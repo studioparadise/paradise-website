@@ -33,9 +33,12 @@ modules:
   images: "/uploads/6Stationery3.jpg"
 - type: images-2up
   images:
+  - image: "/uploads/7JE_AD_01.jpg"
+    alt: 
+    caption: test21
   - image: "/uploads/7JE_AD_02.jpg"
     alt: 
-    caption: test1
+    caption: test
 - type: image
   images: "/uploads/8JE_AD_03.jpg"
 - type: image
