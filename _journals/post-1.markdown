@@ -8,4 +8,4 @@ Jack Erwin is a direct-to-consumer luxury mens shoe brand. After two years of qu
 
 We evolved the logo mark, introduced consistent color and textures, art directed campaigns shot by Bjorn Iooss and Joss Mckinley, and introduced an intuitive e-commerce experience. The results was a brand that was confident, aspirational, understated, and truly reflected the men purchasing and wearing JE shoes.
 
-![Screenshot 2016-06-27 21.03.24-3450be.png](/uploads/Screenshot%25202016-06-27%252021.03.24-3450be.png)
+![inline-image.png](/uploads/inline-image.png)
