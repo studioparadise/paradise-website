@@ -390,6 +390,14 @@ root.responsiveImages = ->
       width = Number dimPairs[1]
       $(this).css
         paddingBottom: (width/height)*100 + '%'
+        position: 'relative'
+      $(this).find('> img').css
+        position: 'absolute'
+        bottom: 0
+        right: 0
+        left: 0
+        top: 0
+
     catch ex
 
 root.init = ->

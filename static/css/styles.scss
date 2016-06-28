@@ -1479,6 +1479,7 @@ div[js-index-content="index"]{
 }
 .module-image__ratio {
   position: relative;
+  margin-bottom: 35px;
   > img {
     position: absolute;
     top: 0;
@@ -1501,7 +1502,6 @@ div[js-index-content="index"]{
 .module-image__img {
   width: 100%;
   display: block;
-  margin-bottom: 35px;
 }
 .module-image__img--with-caption {
   margin-bottom: 0;
@@ -1575,6 +1575,8 @@ div[js-index-content="index"]{
 }
 .module-images-2up__image {
   @include nested-column(3, 6);
+}
+.module-images-2up__image-ratio {
 }
 
 .module-images-2up__img {

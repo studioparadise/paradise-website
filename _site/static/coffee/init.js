@@ -352,8 +352,16 @@
         dimPairs = dims.split('x');
         height = Number(dimPairs[0]);
         width = Number(dimPairs[1]);
-        return $(this).css({
-          paddingBottom: (width / height) * 100 + '%'
+        $(this).css({
+          paddingBottom: (width / height) * 100 + '%',
+          position: 'relative'
+        });
+        return $(this).find('> img').css({
+          position: 'absolute',
+          bottom: 0,
+          right: 0,
+          left: 0,
+          top: 0
         });
       } catch (error) {
         ex = error;

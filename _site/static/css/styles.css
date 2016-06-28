@@ -7780,7 +7780,8 @@ div[js-index-content="index"] {
       margin-left: 35px; }
 
 .module-image__ratio {
-  position: relative; }
+  position: relative;
+  margin-bottom: 35px; }
   .module-image__ratio > img {
     position: absolute;
     top: 0;
@@ -7797,8 +7798,7 @@ div[js-index-content="index"] {
 
 .module-image__img {
   width: 100%;
-  display: block;
-  margin-bottom: 35px; }
+  display: block; }
 
 .module-image__img--with-caption {
   margin-bottom: 0; }
