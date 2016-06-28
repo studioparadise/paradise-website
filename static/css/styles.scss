@@ -1251,7 +1251,7 @@ h1 {
 }
 @mixin style-h2 {
   font-size: 14px;
-  line-height: 1.1;
+  line-height: 1.42;
   letter-spacing: .01em;
   font-weight: 500;
 }
@@ -1272,8 +1272,7 @@ h1 {
 }
 
 @mixin style-caption {
-  font-size: 14px;
-  letter-spacing: .015em;
+  @include style-h2;
   color: #a6a6a6;
 }
 
@@ -1366,6 +1365,7 @@ h1 {
   padding: 2px 0;
   text-decoration: none;
   @include style-h2;
+  line-height: 1.1; // 20px too much in this case
   color: #999;
   cursor: pointer;
 }
@@ -1411,7 +1411,7 @@ h1 {
   }
 }
 .swiper-slide {
-  margin-top: 60px;
+  margin-top: 90px;
   height: calc(100vh - 180px);
   @include background-size-cover;
 }
@@ -1613,9 +1613,16 @@ div[js-index-content="index"]{
   line-height: 45px;
   padding-left: 20px;
   position: relative;
-  @include transition(color .15s ease 0s);
+  @include transition(all .15s ease 0s);
   &:hover {
-    color: #888;
+    color: white;
+    background: black;
+
+    svg {
+      path, polygon {
+        fill: white;
+      }
+    }
   }
 }
 .module-website-link__icon {
@@ -1725,7 +1732,7 @@ div[js-index-content="index"]{
   top: 35px;
   left: 0;
   right: 0;
-  font-size: 14px;
+  @include style-h2;
 }
 .studio__location {
   @include nested-column(2, 6);
@@ -1759,7 +1766,6 @@ div[js-index-content="index"]{
 
 .style-studio-header {
   @include style-h1;
-  font-weight: 500;
 }
 .style-studio-header--who-we-are {
   margin-top: 140px;
@@ -1781,6 +1787,8 @@ div[js-index-content="index"]{
     clear: both;
   }
   margin-bottom: 70px;
+  font-size: 18px;
+  line-height: 20px;
 }
 .studio__team-img {
   display: block;
@@ -1791,15 +1799,14 @@ div[js-index-content="index"]{
 }
 .studio__team-info {
   font-style: italic;
-  font-size: 18px;
 }
 .studio__team-title {
   font-weight: 500;
   font-style: normal;
 }
 .studio__team-bio {
-  line-height: 20px;
 }
+
 // services
 .studio__services {
   font-size: 18px;
@@ -1916,6 +1923,8 @@ div[js-index-content="index"]{
   cursor: pointer;
   z-index: 105;
   @include style-h2;
+  @include transition(color .15s ease 0s);
+  font-weight: 500;
   &:hover {
     color: rgba(black, .3);
   }
@@ -1970,7 +1979,7 @@ div[js-index-content="index"]{
 .footer-signup__submit {
   position: absolute;
   right: 0;
-  top: 10px;
+  top: 3px;
   svg {
     width: 23.5px;
     height: 11.5px;

@@ -7650,9 +7650,10 @@ h1 {
   padding: 2px 0;
   text-decoration: none;
   font-size: 14px;
-  line-height: 1.1;
+  line-height: 1.42;
   letter-spacing: .01em;
   font-weight: 500;
+  line-height: 1.1;
   color: #999;
   cursor: pointer; }
 
@@ -7718,7 +7719,7 @@ h1 {
     margin-right: -35px; }
 
 .swiper-slide {
-  margin-top: 60px;
+  margin-top: 90px;
   height: calc(100vh - 180px);
   -o-background-size: cover;
   -webkit-background-size: cover;
@@ -7764,7 +7765,9 @@ div[js-index-content="index"] {
   margin-top: 35px;
   margin-bottom: 35px;
   font-size: 14px;
-  letter-spacing: .015em;
+  line-height: 1.42;
+  letter-spacing: .01em;
+  font-weight: 500;
   color: #a6a6a6; }
 
 .module-hero {
@@ -7824,7 +7827,7 @@ div[js-index-content="index"] {
   float: left;
   padding: 0 17.5px;
   font-size: 14px;
-  line-height: 1.1;
+  line-height: 1.42;
   letter-spacing: .01em;
   font-weight: 500; }
   @media screen and (max-width: 849px) {
@@ -7888,7 +7891,7 @@ div[js-index-content="index"] {
 .module-text__body {
   display: none;
   font-size: 14px;
-  line-height: 1.1;
+  line-height: 1.42;
   letter-spacing: .01em;
   font-weight: 500; }
   .js-viewing-full-project .module-text__body {
@@ -8002,11 +8005,14 @@ div[js-index-content="index"] {
   line-height: 45px;
   padding-left: 20px;
   position: relative;
-  -webkit-transition: color 0.15s ease 0s;
-  -moz-transition: color 0.15s ease 0s;
-  -o-transition: color 0.15s ease 0s; }
+  -webkit-transition: all 0.15s ease 0s;
+  -moz-transition: all 0.15s ease 0s;
+  -o-transition: all 0.15s ease 0s; }
   .module-website-link__button:hover {
-    color: #888; }
+    color: white;
+    background: black; }
+    .module-website-link__button:hover svg path, .module-website-link__button:hover svg polygon {
+      fill: white; }
 
 .module-website-link__icon {
   position: absolute;
@@ -8035,7 +8041,7 @@ div[js-index-content="index"] {
 
 .module-credits__title {
   font-size: 14px;
-  line-height: 1.1;
+  line-height: 1.42;
   letter-spacing: .01em;
   font-weight: 500; }
 
@@ -8178,7 +8184,10 @@ div[js-index-content="index"] {
   top: 35px;
   left: 0;
   right: 0;
-  font-size: 14px; }
+  font-size: 14px;
+  line-height: 1.42;
+  letter-spacing: .01em;
+  font-weight: 500; }
 
 .studio__location {
   width: 33.33333%;
@@ -8213,8 +8222,7 @@ div[js-index-content="index"] {
 
 .style-studio-header {
   font-size: 26px;
-  line-height: 1.07;
-  font-weight: 500; }
+  line-height: 1.07; }
 
 .style-studio-header--who-we-are {
   margin-top: 140px;
@@ -8242,7 +8250,9 @@ div[js-index-content="index"] {
 .studio__team-member {
   width: 50%;
   float: left;
-  margin-bottom: 70px; }
+  margin-bottom: 70px;
+  font-size: 18px;
+  line-height: 20px; }
   @media screen and (min-width: 850px) {
     .studio__team-member {
       padding-left: 17.5px;
@@ -8262,15 +8272,11 @@ div[js-index-content="index"] {
   background: black; }
 
 .studio__team-info {
-  font-style: italic;
-  font-size: 18px; }
+  font-style: italic; }
 
 .studio__team-title {
   font-weight: 500;
   font-style: normal; }
-
-.studio__team-bio {
-  line-height: 20px; }
 
 .studio__services {
   font-size: 18px;
@@ -8398,7 +8404,7 @@ div[js-index-content="index"] {
 
 .index-journal__date {
   font-size: 14px;
-  line-height: 1.1;
+  line-height: 1.42;
   letter-spacing: .01em;
   font-weight: 500;
   margin-top: 20px; }
@@ -8429,8 +8435,12 @@ div[js-index-content="index"] {
   cursor: pointer;
   z-index: 105;
   font-size: 14px;
-  line-height: 1.1;
+  line-height: 1.42;
   letter-spacing: .01em;
+  font-weight: 500;
+  -webkit-transition: color 0.15s ease 0s;
+  -moz-transition: color 0.15s ease 0s;
+  -o-transition: color 0.15s ease 0s;
   font-weight: 500; }
   .footer-contact:hover {
     color: rgba(0, 0, 0, 0.3); }
@@ -8472,7 +8482,7 @@ div[js-index-content="index"] {
   text-decoration: none;
   color: inherit;
   font-size: 14px;
-  line-height: 1.1;
+  line-height: 1.42;
   letter-spacing: .01em;
   font-weight: 500; }
   .footer__email-address:hover {
@@ -8482,7 +8492,7 @@ div[js-index-content="index"] {
   width: 12.5%;
   float: left;
   font-size: 14px;
-  line-height: 1.1;
+  line-height: 1.42;
   letter-spacing: .01em;
   font-weight: 500; }
   @media screen and (min-width: 850px) {
@@ -8498,7 +8508,7 @@ div[js-index-content="index"] {
   width: 12.5%;
   float: left;
   font-size: 14px;
-  line-height: 1.1;
+  line-height: 1.42;
   letter-spacing: .01em;
   font-weight: 500; }
   @media screen and (min-width: 850px) {
@@ -8540,7 +8550,7 @@ div[js-index-content="index"] {
 .footer-signup__submit {
   position: absolute;
   right: 0;
-  top: 10px; }
+  top: 3px; }
   .footer-signup__submit svg {
     width: 23.5px;
     height: 11.5px; }
@@ -8554,7 +8564,7 @@ div[js-index-content="index"] {
   padding-bottom: 10px;
   font-family: 'C';
   font-size: 14px;
-  line-height: 1.1;
+  line-height: 1.42;
   letter-spacing: .01em;
   font-weight: 500;
   border-bottom: 1px solid black;
@@ -8564,7 +8574,7 @@ div[js-index-content="index"] {
     font-family: 'C';
     font-weight: 500;
     font-size: 14px;
-    line-height: 1.1;
+    line-height: 1.42;
     letter-spacing: .01em;
     font-weight: 500; }
   .footer-signup__input:-moz-placeholder {
@@ -8573,7 +8583,7 @@ div[js-index-content="index"] {
     font-family: 'C';
     font-weight: 500;
     font-size: 14px;
-    line-height: 1.1;
+    line-height: 1.42;
     letter-spacing: .01em;
     font-weight: 500; }
   .footer-signup__input::-moz-placeholder {
@@ -8582,7 +8592,7 @@ div[js-index-content="index"] {
     font-family: 'C';
     font-weight: 500;
     font-size: 14px;
-    line-height: 1.1;
+    line-height: 1.42;
     letter-spacing: .01em;
     font-weight: 500; }
   .footer-signup__input:-ms-input-placeholder {
@@ -8590,7 +8600,7 @@ div[js-index-content="index"] {
     font-family: 'C';
     font-weight: 500;
     font-size: 14px;
-    line-height: 1.1;
+    line-height: 1.42;
     letter-spacing: .01em;
     font-weight: 500; }
 

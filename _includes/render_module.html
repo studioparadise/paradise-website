@@ -20,7 +20,6 @@
 		<div class="module-image__ratio" data-responsive-image-dimensions="{{ module.dimensions | default: '2400x1600' }}">
 			<img class="module-image__img lazyload {% if module.caption.size > 0 %}module-image__img--with-caption{% endif %}" data-src="{{ module.image }}" alt="{{ module.alt | default: '' }}" />
 		</div>
-
 		{% if module.caption.size > 0 %}
 			<div class="module__image-caption">
 				{{ module.caption }}
