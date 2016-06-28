@@ -10,15 +10,15 @@ modules:
   excerpt: Bringing good design to modern families.
   body: 
 - type: image
-  image: "/uploads/Leader_1.jpg"
-  alt: 
-  caption: 
-- type: image
   image: "/uploads/Leader_Logo.gif"
   caption: Created by Lotta Nieminen
 - type: image
   url: 
   image: "/uploads/Leader_2.jpg"
+- type: image
+  image: "/uploads/Leader_1.jpg"
+  alt: 
+  caption: 
 - type: images_2up
   images:
   - image: "/uploads/Leader_3.jpg"
