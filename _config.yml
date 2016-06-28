@@ -25,7 +25,6 @@ defaults:
       image: ''
       alt: ''
     hide-title: ''
-
 - scope:
     path: ''
     type: projects
@@ -36,7 +35,7 @@ defaults:
       image: ''
       alt: ''
     - type: text
-      excerpt: '' 
+      excerpt: ''
       body: ''
     - type: image
       image: ''
@@ -44,17 +43,20 @@ defaults:
       caption: ''
     - type: images-2up
       images:
+<<<<<<< HEAD
         - image: ''
           alt: ''
           caption: ''
+=======
+      - image: ''
+>>>>>>> 1b7d8044a41581e8dc9ea29671d9038be5716057
     - type: website-link
       url: ''
     - type: credits
-      credits: 
-        - url: ''
-          emphasis: ''
-          name: ''
-
+      credits:
+      - url: ''
+        emphasis: ''
+        name: ''
 tagline: Changing the world, one uninspired quote at a time
 url: http://yourwebsite.com
 socialimg: "/img/social.jpg"
