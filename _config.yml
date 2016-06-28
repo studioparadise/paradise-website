@@ -22,8 +22,8 @@ defaults:
     layout: journal
     image: ''
     images:
-      - image: ''
-        alt: ''
+    - image: ''
+      alt: ''
     hide-title: ''
 - scope:
     path: ''
