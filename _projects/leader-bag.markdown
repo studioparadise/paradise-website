@@ -14,19 +14,12 @@ modules:
   alt: 
   caption: 
 - type: image
-  images:
-  - image: 
-    alt: 
-    caption: 
   image: "/uploads/Leader_Logo.gif"
+  caption: Created by Lotta Nieminen
 - type: image
   url: 
   image: "/uploads/Leader_2.jpg"
 - type: images_2up
-  credits:
-  - url: 
-    emphasis: 
-    name: 
   images:
   - image: "/uploads/Leader_3.jpg"
   - image: "/uploads/Leader_4.jpg"
