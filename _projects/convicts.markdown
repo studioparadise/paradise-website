@@ -25,9 +25,16 @@ modules:
   full-project-title: Convicts
 - type: image
   image: "/uploads/Con_Logo.png"
+  alt: 
+  caption: 
 - type: image
+  images:
+  - image: 
+    alt: 
+    caption: 
   image: "/uploads/COn_Branding.gif"
 - type: image
+  url: 
   image: "/uploads/Con_Branding.jpg"
   alt: 
   caption: 
