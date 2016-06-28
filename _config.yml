@@ -30,7 +30,6 @@ defaults:
     type: projects
   values:
     layout: project
-
 tagline: Changing the world, one uninspired quote at a time
 url: http://yourwebsite.com
 socialimg: "/img/social.jpg"
@@ -41,11 +40,15 @@ googleplus: gusername
 instagram: igusername
 phone: 
 email: 
+index-slider-images:
+- image: 
+  alt: 
+  project: Jack Erwin
+gems:
+- jekyll-coffeescript
 exclude:
 - README.md
 - node_modules
 - gruntfile.js
 - package.json
 - vendor/
-gems:
-- jekyll-coffeescript
