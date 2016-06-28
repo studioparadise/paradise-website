@@ -25,15 +25,20 @@ modules:
   alt: 
   caption: 
 - type: image
-  images: "/uploads/3JE_Logo2.jpg"
+  image: "/uploads/3JE_Logo2.jpg"
   alt: 
   caption: 
 - type: image
-  images: "/uploads/4Stationery1.jpg"
+  url: 
+  image: "/uploads/4Stationery1.jpg"
 - type: image
+  credits:
+  - url: 
+    emphasis: 
+    name: 
   images: "/uploads/5Stationery2.jpg"
 - type: image
-  images: "/uploads/6Stationery3.jpg"
+  image: "/uploads/6Stationery3.jpg"
 - type: images-2up
   images:
   - image: "/uploads/7JE_AD_01.jpg"
@@ -43,11 +48,11 @@ modules:
     alt: 
     caption: test123
 - type: image
-  images: "/uploads/8JE_AD_03.jpg"
+  image: "/uploads/8JE_AD_03.jpg"
 - type: image
-  images: "/uploads/9JE_WEB_01.jpg"
+  image: "/uploads/9JE_WEB_01.jpg"
 - type: image
-  images: "/uploads/11_JEWEB_small.jpg"
+  image: "/uploads/11_JEWEB_small.jpg"
 - type: website-link
   url: http://jackerwin.com
 - type: credits
