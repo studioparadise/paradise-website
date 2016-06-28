@@ -1480,6 +1480,10 @@ div[js-index-content="index"]{
 .module-image__img {
   width: 100%;
   display: block;
+  margin-bottom: 35px;
+}
+.module-image__img--with-caption {
+  margin-bottom: 0;
 }
 
 // text module
@@ -1882,16 +1886,34 @@ div[js-index-content="index"]{
 //footer
 //footer
 .footer {
+  display: none;
 	background: white;
 	position: relative;
-	z-index: 3;
-	margin-top: 300px;
-	padding-top: 65px;
+	z-index: 10;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: auto;
+
+  height: auto;
+}
+.footer__container {
+	padding-top: 75px;
 	padding-bottom: 35px;
-	@include container-row;
+	@include container;
+  position: relative;
+}
+.footer__email-address {
+  position: absolute;
+  top: 35px;
+  left: 35px;
 }
 .footer__contact {
-	@include column(1);
+  position: absolute;
+  bottom: 35px;
+  left: 35px;
 }
 .footer__address1 {
 	@include column(1);

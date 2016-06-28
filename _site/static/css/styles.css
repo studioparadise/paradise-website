@@ -7777,7 +7777,11 @@ div[js-index-content="index"] {
 
 .module-image__img {
   width: 100%;
-  display: block; }
+  display: block;
+  margin-bottom: 35px; }
+
+.module-image__img--with-caption {
+  margin-bottom: 0; }
 
 .module-text {
   margin-top: 70px;
@@ -8378,45 +8382,45 @@ div[js-index-content="index"] {
       padding: 0 17.5px; } }
 
 .footer {
+  display: none;
   background: white;
   position: relative;
-  z-index: 3;
-  margin-top: 300px;
-  padding-top: 65px;
+  z-index: 10;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: auto;
+  height: auto; }
+
+.footer__container {
+  padding-top: 75px;
   padding-bottom: 35px;
   margin-left: auto;
   margin-right: auto;
   clear: both;
   padding-left: 35px;
-  padding-right: 35px; }
-  .footer:after {
+  padding-right: 35px;
+  position: relative; }
+  .footer__container:after {
     content: "";
     display: table;
     clear: both; }
   @media screen and (max-width: 849px) {
-    .footer {
+    .footer__container {
       padding-left: 20px;
       padding-right: 20px; } }
-  @media screen and (min-width: 850px) {
-    .footer {
-      padding-left: 17.5px;
-      padding-right: 17.5px; } }
-  @media screen and (max-width: 849px) {
-    .footer {
-      padding-left: 2.5px;
-      padding-right: 2.5px; } }
+
+.footer__email-address {
+  position: absolute;
+  top: 35px;
+  left: 35px; }
 
 .footer__contact {
-  width: 12.5%;
-  float: left; }
-  @media screen and (min-width: 850px) {
-    .footer__contact {
-      padding-left: 17.5px;
-      padding-right: 17.5px; } }
-  @media screen and (max-width: 849px) {
-    .footer__contact {
-      padding-left: 17.5px;
-      padding-right: 17.5px; } }
+  position: absolute;
+  bottom: 35px;
+  left: 35px; }
 
 .footer__address1 {
   width: 12.5%;

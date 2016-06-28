@@ -15,7 +15,7 @@
 			<img class="hero__img lazyload" data-src="{{ module.image }}" />
 		</div>
 	{% when 'image' %}
-		<img class="module-image__img lazyload" data-src="{{ module.image }}" />
+		<img class="module-image__img lazyload {% if module.caption.size > 0 %}module-image__img--with-caption{% endif %}" data-src="{{ module.image }}" />
 
 		{% if module.caption.size > 0 %}
 			<div class="module__image-caption">

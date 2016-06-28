@@ -240,26 +240,32 @@ root.controllers.navbar2 = ($element, args) ->
 			console.log 'dropdown css is -', top, $dropdown
 			$item.parent().stop(true).animate
 				marginTop: "-#{top}px"
-			, 500
+			, 1000
 
 		showDropdown = ($dropdown, apply) ->
 			if apply
 				$dropdown.show()
+				# _.delay ->
+				# 	$dropdown.find('[js-item-label]:first')?.click()
+				# , 500
+
 			else
 				$dropdown.hide()
 				$dropdown.find('.is-active').removeClass 'is-active'
 
 		scrollTo = ($item) ->
+			api.scrolling = true
 			scrollSpyTarget = $label.attr 'js-scrollspy-nav'
 			if scrollSpyTarget
 				$("html, body").animate
 					scrollTop: $("[js-scrollspy=\"#{scrollSpyTarget}\"]").offset().top
-				, 1000, 'easeInOutExpo'	
+				, 1000, 'easeInOutExpo', ->
+					api.scrolling = false
+					activateItem $item
 
 		activateItem = ($item, preventAlign = false) ->
 			$dropdown = $item.find '[js-item-dropdown]:first'
 			args = root.utils.getArgs($label)
-
 
 			switch args.overlay
 				when 'index'
@@ -283,7 +289,7 @@ root.controllers.navbar2 = ($element, args) ->
 				for dropdown in $element.find('[js-item-dropdown]')
 					showDropdown $(dropdown), false
 					console.log 'hiding dropdown due to preventAlign i.e. root'
-
+				
 			showDropdown $dropdown, true
 
 			console.log 'activating item'
@@ -308,11 +314,12 @@ root.controllers.navbar2 = ($element, args) ->
 
 		console.log 'adding trigger on $label click', $label
 		$label.on 'click', ->
+			scrollTo $item
 			activateItem $item
-			# scrollTo $item
 
 		$label.on 'scrollspy:activate', ->
-			activateItem $item
+			activateItem $item, true
+
 
 	$items = $element.find '.navbar__item'
 	for item in $items
@@ -383,6 +390,7 @@ root.controllers.navbar2 = ($element, args) ->
 			target = $spiesInViewport.attr 'js-scrollspy'
 			$nav = $("[js-scrollspy-nav=\"#{target}\"]")
 			$nav.trigger 'scrollspy:activate'
+
 		$(window).on 'scroll', _.throttle onScroll, 150
 
 root.controllers.studioContent = ($element, args) ->
@@ -395,3 +403,6 @@ root.controllers.studioContent = ($element, args) ->
 
 
 	$(window).on 'resize', _.throttle(updatePadding, 500)
+
+
+root.controllers.footer = ($element, args) ->

@@ -296,7 +296,7 @@ excerpt: Studio Paradise
 				    {% capture month %}{{ post.date | date: '%Y %b' }}{% endcapture %}
 				    {% capture nmonth %}{{ post.next.date | date: '%Y %b' }}{% endcapture %}
 				    {% if month != nmonth %}
-						<div class="index-journal__month" js-index-journal-month="{{post.first.date | date: '%B-%Y' }}" js-scrollspy="{{ post.first.date | date: '%Y-%B' }}">
+						<div class="index-journal__month" js-scrollspy="{{ post.date | date: '%Y-%B' }}">
 					{% endif %}
 					<div class="index-journal__journal">
 						<img class="index-journal__hero-img" src="{{ post['image'] }}" />
