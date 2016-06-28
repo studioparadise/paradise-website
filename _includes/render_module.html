@@ -17,7 +17,7 @@
 	{% when 'image' %}
 		<img class="module-image__img lazyload" data-src="{{ module.image }}" />
 
-		{% if module.caption %}
+		{% if module.caption.size > 0 %}
 			<div class="module__image-caption">
 				{{ module.caption }}
 			</div>
@@ -26,9 +26,11 @@
 		{% for image in module.images %}
 			<div class="module-images-2up__image">
 				<img class="module-images-2up__img lazyload" data-src="{{ image.image }}" />
-				<div class="module__image-caption">
-					{{ image.caption }}
-				</div>
+				{% if image.caption.size > 0 %}
+					<div class="module__image-caption">
+						{{ image.caption }}
+					</div>
+				{% endif %}
 			</div>
 		{% endfor %}
 	{% when 'text' %}

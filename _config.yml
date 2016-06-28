@@ -33,7 +33,6 @@ defaults:
     layout: project
     modules:
     - type: hero
-      title: ''
       image: ''
       alt: ''
     - type: text
@@ -42,9 +41,12 @@ defaults:
     - type: image
       image: ''
       alt: ''
+      caption: ''
     - type: images-2up
       images:
         - image: ''
+          alt: ''
+          caption: ''
     - type: website-link
       url: ''
     - type: credits
