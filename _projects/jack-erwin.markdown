@@ -6,6 +6,7 @@ modules:
 - type: hero
   image: "/uploads/Je_HeroCrop.jpg"
 - type: text
+  excerpt: hi.
   image: "/uploads/JE_Logo.jpg"
 - type: image
 - type: images-2up
