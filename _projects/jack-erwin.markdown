@@ -5,6 +5,7 @@ position: 0
 modules:
 - type: hero
   image: "/uploads/Je_HeroCrop.jpg"
+  alt: 
 - type: text
   excerpt: Telling the story of the contemporary cobbler.
   body: "Jack Erwin, founded in 2013, is a direct-to-consumer mens shoe brands that
@@ -19,9 +20,34 @@ modules:
     experience. The result was a brand that was confident, aspirational, understated,
     and truly reflected the men purchasing and wearing JE shoes. \n"
 - type: image
+  image: "/uploads/2JE_Logo.jpg"
+  alt: 
+  caption: 
+- type: image
+  images: "/uploads/3JE_Logo2.jpg"
 - type: images-2up
+  images:
+  - image: "/uploads/7JE_AD_01.jpg"
+    alt: 
+    caption: 
 - type: website-link
-  url: http://www.jackerwin.com/
+  url: http://jackerwin.com
 - type: credits
+  credits:
+  - url: 
+    emphasis: 
+    name: 
+- type: image
+  images: "/uploads/4Stationery1.jpg"
+- type: image
+  images: "/uploads/5Stationery2.jpg"
+- type: image
+  images: "/uploads/6Stationery3.jpg"
+- type: image
+  images: "/uploads/8JE_AD_03.jpg"
+- type: image
+  images: "/uploads/9JE_WEB_01.jpg"
+- type: image
+  images: "/uploads/11_JEWEB_small.jpg"
 ---
 
