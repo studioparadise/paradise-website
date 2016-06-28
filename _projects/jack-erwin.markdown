@@ -36,6 +36,10 @@ modules:
   url: 
   image: "/uploads/4Stationery1.jpg"
 - type: image
+  credits:
+  - url: 
+    emphasis: 
+    name: 
   image: "/uploads/5Stationery2.jpg"
 - type: image
   image: "/uploads/6Stationery3.jpg"
