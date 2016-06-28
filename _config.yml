@@ -43,13 +43,9 @@ defaults:
       caption: ''
     - type: images-2up
       images:
-<<<<<<< HEAD
-        - image: ''
-          alt: ''
-          caption: ''
-=======
       - image: ''
->>>>>>> 1b7d8044a41581e8dc9ea29671d9038be5716057
+        alt: ''
+        caption: ''
     - type: website-link
       url: ''
     - type: credits
