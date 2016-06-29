@@ -8,6 +8,6 @@ modules:
 - type: image
   image: "/uploads/Prize_hero2.jpg"
 - type: text
-  excerpt: 'Prizes pins. Eye candy for your shirts. '
+  excerpt: Insert Copy here.
 ---
 
