@@ -198,8 +198,8 @@ root.controllers.navbar2 = ($element, args) ->
 			activateItem $item
 
 		$label.on 'scrollspy:activate', ->
-			if not api.scrolling?
-				activateItem $item, true
+			if not api.scrolling
+				activateItem $item, false
 
 
 	$items = $element.find '.navbar__item'
