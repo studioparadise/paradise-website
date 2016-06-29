@@ -6,7 +6,7 @@ Modules:
 - type: hero
   image: "/uploads/Hero-f6811e.jpg"
 - type: text
-  excerpt: 
+  excerpt: 'Creating consistency across all branded materials. '
 - type: image
   image: "/uploads/Iamge1.jpg"
 ---
