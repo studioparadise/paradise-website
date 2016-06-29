@@ -12,6 +12,7 @@ modules:
 - type: image
   image: "/uploads/Leader_Logo-479686.gif"
   caption: Created by Lotta Nieminen
+  dimensions: 2400x1664
 - type: image
   url: 
   image: "/uploads/Leader_2.jpg"
