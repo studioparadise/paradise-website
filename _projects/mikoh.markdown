@@ -20,15 +20,10 @@ modules:
     alt: 
     caption: 
   image: "/uploads/Mikoh_20160616_MLP_A-04.jpg"
+  dimension: 2400x1755
 - type: image
   url: 
   image: "/uploads/Mikoh_20160616_MLP_A-05.jpg"
-- type: image
-  credits:
-  - url: 
-    emphasis: 
-    name: 
-  image: "/uploads/Mikoh_20160616_MLP_A-06.jpg"
 - type: image
   image: "/uploads/Mikoh_20160616_MLP_A-07.jpg"
 - type: image
