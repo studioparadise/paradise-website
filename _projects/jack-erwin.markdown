@@ -42,6 +42,7 @@ modules:
     emphasis: 
     name: 
   image: "/uploads/5Stationery2.jpg"
+  dimensions: 2400x1599
 - type: image
   image: "/uploads/6Stationery3.jpg"
 - type: images-2up
