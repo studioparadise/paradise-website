@@ -9,8 +9,10 @@ modules:
   excerpt: Capturing the details.
 - type: image
   image: "/uploads/Kaelen_2.jpg"
+  dimensions: 2400x2819
 - type: image
   image: "/uploads/Kaelen_4.jpg"
+  dimensions: 2400x1600
 - type: image
   image: "/uploads/Kaelen_3.jpg"
 ---
