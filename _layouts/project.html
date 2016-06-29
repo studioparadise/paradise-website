@@ -4,9 +4,9 @@ layout: mobile
 {% assign project = page %}
 <div class="mobile">
 	{% for module in project.modules %}
-		{% include render_module.html %}
+		{% include render_module.html mobile=true %}
 	{% endfor %}
-	
+
 	{% if page.next.url %}
 		<a class="mobile__next" href="{{ page.next.url }}">
 			Up Next

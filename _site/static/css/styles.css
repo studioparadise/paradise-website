@@ -1699,10 +1699,9 @@ input[type="search"]::-webkit-search-decoration {
     content: "";
     display: table;
     clear: both; }
-  @media screen and (max-width: 849px) {
-    .container {
-      padding-left: 20px;
-      padding-right: 20px; } }
+  .container .layout-mobile {
+    padding-left: 20px;
+    padding-right: 20px; }
 
 .container-row {
   margin-left: auto;
@@ -1714,18 +1713,16 @@ input[type="search"]::-webkit-search-decoration {
     content: "";
     display: table;
     clear: both; }
-  @media screen and (max-width: 849px) {
-    .container-row {
-      padding-left: 20px;
-      padding-right: 20px; } }
+  .container-row .layout-mobile {
+    padding-left: 20px;
+    padding-right: 20px; }
   @media screen and (min-width: 850px) {
     .container-row {
       padding-left: 25px;
       padding-right: 25px; } }
-  @media screen and (max-width: 849px) {
-    .container-row {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .container-row .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .container-row-g12 {
   margin-left: auto;
@@ -1737,19 +1734,17 @@ input[type="search"]::-webkit-search-decoration {
     content: "";
     display: table;
     clear: both; }
-  @media screen and (max-width: 849px) {
-    .container-row-g12 {
-      padding-left: 20px;
-      padding-right: 20px; } }
+  .container-row-g12 .layout-mobile {
+    padding-left: 20px;
+    padding-right: 20px; }
 
 .row:after, .grid:after, .grid--rev:after, .grid--full:after {
   content: "";
   display: table;
   clear: both; }
-@media screen and (max-width: 849px) {
-  .row, .grid, .grid--rev, .grid--full {
-    margin-left: -10px;
-    margin-right: -10px; } }
+.row .layout-mobile, .grid .layout-mobile, .grid--rev .layout-mobile, .grid--full .layout-mobile {
+  margin-left: -10px;
+  margin-right: -10px; }
 @media screen and (min-width: 850px) {
   .row, .grid, .grid--rev, .grid--full {
     margin-left: -10px;
@@ -1767,10 +1762,9 @@ input[type="search"]::-webkit-search-decoration {
     .g1 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .g1 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .g1 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .g1-no-pad {
   width: 12.5%;
@@ -1788,10 +1782,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g1-1 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g1-1 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g1-1 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g1-1-no-pad {
   width: 12.5%;
@@ -1803,9 +1796,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 100%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g1-in-g1 {
-      padding: 0 10px; } }
+  .g1-in-g1 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g1-2 {
   /*
@@ -1819,10 +1811,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g1-2 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g1-2 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g1-2 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g1-2-no-pad {
   width: 12.5%;
@@ -1834,9 +1825,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 50%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g1-in-g2 {
-      padding: 0 10px; } }
+  .g1-in-g2 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g1-3 {
   /*
@@ -1850,10 +1840,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g1-3 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g1-3 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g1-3 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g1-3-no-pad {
   width: 12.5%;
@@ -1865,9 +1854,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 33.33333%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g1-in-g3 {
-      padding: 0 10px; } }
+  .g1-in-g3 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g1-4 {
   /*
@@ -1881,10 +1869,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g1-4 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g1-4 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g1-4 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g1-4-no-pad {
   width: 12.5%;
@@ -1896,9 +1883,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 25%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g1-in-g4 {
-      padding: 0 10px; } }
+  .g1-in-g4 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g1-5 {
   /*
@@ -1912,10 +1898,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g1-5 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g1-5 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g1-5 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g1-5-no-pad {
   width: 12.5%;
@@ -1927,9 +1912,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 20%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g1-in-g5 {
-      padding: 0 10px; } }
+  .g1-in-g5 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g1-6 {
   /*
@@ -1943,10 +1927,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g1-6 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g1-6 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g1-6 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g1-6-no-pad {
   width: 12.5%;
@@ -1958,9 +1941,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 16.66667%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g1-in-g6 {
-      padding: 0 10px; } }
+  .g1-in-g6 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g1-7 {
   /*
@@ -1974,10 +1956,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g1-7 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g1-7 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g1-7 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g1-7-no-pad {
   width: 12.5%;
@@ -1989,9 +1970,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 14.28571%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g1-in-g7 {
-      padding: 0 10px; } }
+  .g1-in-g7 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g1-8 {
   /*
@@ -2005,10 +1985,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g1-8 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g1-8 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g1-8 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g1-8-no-pad {
   width: 12.5%;
@@ -2020,9 +1999,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 12.5%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g1-in-g8 {
-      padding: 0 10px; } }
+  .g1-in-g8 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g1-9 {
   /*
@@ -2036,10 +2014,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g1-9 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g1-9 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g1-9 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g1-9-no-pad {
   width: 12.5%;
@@ -2051,9 +2028,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 11.11111%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g1-in-g9 {
-      padding: 0 10px; } }
+  .g1-in-g9 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g1-10 {
   /*
@@ -2067,10 +2043,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g1-10 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g1-10 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g1-10 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g1-10-no-pad {
   width: 12.5%;
@@ -2082,9 +2057,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 10%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g1-in-g10 {
-      padding: 0 10px; } }
+  .g1-in-g10 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g1-11 {
   /*
@@ -2098,10 +2072,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g1-11 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g1-11 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g1-11 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g1-11-no-pad {
   width: 12.5%;
@@ -2113,9 +2086,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 9.09091%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g1-in-g11 {
-      padding: 0 10px; } }
+  .g1-in-g11 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g1-12 {
   /*
@@ -2129,10 +2101,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g1-12 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g1-12 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g1-12 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g1-12-no-pad {
   width: 12.5%;
@@ -2144,9 +2115,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 8.33333%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g1-in-g12 {
-      padding: 0 10px; } }
+  .g1-in-g12 .layout-mobile {
+    padding: 0 10px; }
 
 .g2 {
   width: 25%;
@@ -2155,10 +2125,9 @@ input[type="search"]::-webkit-search-decoration {
     .g2 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .g2 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .g2 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .g2-no-pad {
   width: 25%;
@@ -2176,10 +2145,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g2-1 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g2-1 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g2-1 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g2-1-no-pad {
   width: 25%;
@@ -2191,9 +2159,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 200%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g2-in-g1 {
-      padding: 0 10px; } }
+  .g2-in-g1 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g2-2 {
   /*
@@ -2207,10 +2174,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g2-2 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g2-2 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g2-2 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g2-2-no-pad {
   width: 25%;
@@ -2222,9 +2188,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 100%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g2-in-g2 {
-      padding: 0 10px; } }
+  .g2-in-g2 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g2-3 {
   /*
@@ -2238,10 +2203,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g2-3 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g2-3 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g2-3 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g2-3-no-pad {
   width: 25%;
@@ -2253,9 +2217,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 66.66667%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g2-in-g3 {
-      padding: 0 10px; } }
+  .g2-in-g3 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g2-4 {
   /*
@@ -2269,10 +2232,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g2-4 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g2-4 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g2-4 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g2-4-no-pad {
   width: 25%;
@@ -2284,9 +2246,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 50%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g2-in-g4 {
-      padding: 0 10px; } }
+  .g2-in-g4 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g2-5 {
   /*
@@ -2300,10 +2261,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g2-5 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g2-5 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g2-5 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g2-5-no-pad {
   width: 25%;
@@ -2315,9 +2275,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 40%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g2-in-g5 {
-      padding: 0 10px; } }
+  .g2-in-g5 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g2-6 {
   /*
@@ -2331,10 +2290,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g2-6 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g2-6 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g2-6 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g2-6-no-pad {
   width: 25%;
@@ -2346,9 +2304,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 33.33333%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g2-in-g6 {
-      padding: 0 10px; } }
+  .g2-in-g6 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g2-7 {
   /*
@@ -2362,10 +2319,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g2-7 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g2-7 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g2-7 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g2-7-no-pad {
   width: 25%;
@@ -2377,9 +2333,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 28.57143%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g2-in-g7 {
-      padding: 0 10px; } }
+  .g2-in-g7 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g2-8 {
   /*
@@ -2393,10 +2348,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g2-8 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g2-8 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g2-8 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g2-8-no-pad {
   width: 25%;
@@ -2408,9 +2362,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 25%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g2-in-g8 {
-      padding: 0 10px; } }
+  .g2-in-g8 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g2-9 {
   /*
@@ -2424,10 +2377,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g2-9 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g2-9 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g2-9 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g2-9-no-pad {
   width: 25%;
@@ -2439,9 +2391,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 22.22222%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g2-in-g9 {
-      padding: 0 10px; } }
+  .g2-in-g9 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g2-10 {
   /*
@@ -2455,10 +2406,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g2-10 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g2-10 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g2-10 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g2-10-no-pad {
   width: 25%;
@@ -2470,9 +2420,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 20%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g2-in-g10 {
-      padding: 0 10px; } }
+  .g2-in-g10 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g2-11 {
   /*
@@ -2486,10 +2435,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g2-11 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g2-11 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g2-11 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g2-11-no-pad {
   width: 25%;
@@ -2501,9 +2449,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 18.18182%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g2-in-g11 {
-      padding: 0 10px; } }
+  .g2-in-g11 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g2-12 {
   /*
@@ -2517,10 +2464,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g2-12 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g2-12 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g2-12 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g2-12-no-pad {
   width: 25%;
@@ -2532,9 +2478,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 16.66667%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g2-in-g12 {
-      padding: 0 10px; } }
+  .g2-in-g12 .layout-mobile {
+    padding: 0 10px; }
 
 .g3 {
   width: 37.5%;
@@ -2543,10 +2488,9 @@ input[type="search"]::-webkit-search-decoration {
     .g3 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .g3 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .g3 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .g3-no-pad {
   width: 37.5%;
@@ -2564,10 +2508,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g3-1 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g3-1 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g3-1 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g3-1-no-pad {
   width: 37.5%;
@@ -2579,9 +2522,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 300%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g3-in-g1 {
-      padding: 0 10px; } }
+  .g3-in-g1 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g3-2 {
   /*
@@ -2595,10 +2537,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g3-2 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g3-2 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g3-2 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g3-2-no-pad {
   width: 37.5%;
@@ -2610,9 +2551,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 150%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g3-in-g2 {
-      padding: 0 10px; } }
+  .g3-in-g2 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g3-3 {
   /*
@@ -2626,10 +2566,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g3-3 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g3-3 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g3-3 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g3-3-no-pad {
   width: 37.5%;
@@ -2641,9 +2580,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 100%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g3-in-g3 {
-      padding: 0 10px; } }
+  .g3-in-g3 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g3-4 {
   /*
@@ -2657,10 +2595,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g3-4 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g3-4 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g3-4 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g3-4-no-pad {
   width: 37.5%;
@@ -2672,9 +2609,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 75%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g3-in-g4 {
-      padding: 0 10px; } }
+  .g3-in-g4 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g3-5 {
   /*
@@ -2688,10 +2624,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g3-5 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g3-5 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g3-5 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g3-5-no-pad {
   width: 37.5%;
@@ -2703,9 +2638,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 60%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g3-in-g5 {
-      padding: 0 10px; } }
+  .g3-in-g5 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g3-6 {
   /*
@@ -2719,10 +2653,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g3-6 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g3-6 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g3-6 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g3-6-no-pad {
   width: 37.5%;
@@ -2734,9 +2667,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 50%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g3-in-g6 {
-      padding: 0 10px; } }
+  .g3-in-g6 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g3-7 {
   /*
@@ -2750,10 +2682,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g3-7 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g3-7 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g3-7 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g3-7-no-pad {
   width: 37.5%;
@@ -2765,9 +2696,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 42.85714%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g3-in-g7 {
-      padding: 0 10px; } }
+  .g3-in-g7 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g3-8 {
   /*
@@ -2781,10 +2711,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g3-8 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g3-8 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g3-8 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g3-8-no-pad {
   width: 37.5%;
@@ -2796,9 +2725,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 37.5%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g3-in-g8 {
-      padding: 0 10px; } }
+  .g3-in-g8 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g3-9 {
   /*
@@ -2812,10 +2740,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g3-9 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g3-9 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g3-9 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g3-9-no-pad {
   width: 37.5%;
@@ -2827,9 +2754,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 33.33333%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g3-in-g9 {
-      padding: 0 10px; } }
+  .g3-in-g9 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g3-10 {
   /*
@@ -2843,10 +2769,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g3-10 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g3-10 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g3-10 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g3-10-no-pad {
   width: 37.5%;
@@ -2858,9 +2783,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 30%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g3-in-g10 {
-      padding: 0 10px; } }
+  .g3-in-g10 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g3-11 {
   /*
@@ -2874,10 +2798,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g3-11 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g3-11 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g3-11 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g3-11-no-pad {
   width: 37.5%;
@@ -2889,9 +2812,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 27.27273%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g3-in-g11 {
-      padding: 0 10px; } }
+  .g3-in-g11 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g3-12 {
   /*
@@ -2905,10 +2827,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g3-12 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g3-12 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g3-12 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g3-12-no-pad {
   width: 37.5%;
@@ -2920,9 +2841,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 25%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g3-in-g12 {
-      padding: 0 10px; } }
+  .g3-in-g12 .layout-mobile {
+    padding: 0 10px; }
 
 .g4 {
   width: 50%;
@@ -2931,10 +2851,9 @@ input[type="search"]::-webkit-search-decoration {
     .g4 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .g4 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .g4 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .g4-no-pad {
   width: 50%;
@@ -2952,10 +2871,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g4-1 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g4-1 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g4-1 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g4-1-no-pad {
   width: 50%;
@@ -2967,9 +2885,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 400%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g4-in-g1 {
-      padding: 0 10px; } }
+  .g4-in-g1 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g4-2 {
   /*
@@ -2983,10 +2900,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g4-2 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g4-2 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g4-2 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g4-2-no-pad {
   width: 50%;
@@ -2998,9 +2914,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 200%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g4-in-g2 {
-      padding: 0 10px; } }
+  .g4-in-g2 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g4-3 {
   /*
@@ -3014,10 +2929,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g4-3 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g4-3 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g4-3 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g4-3-no-pad {
   width: 50%;
@@ -3029,9 +2943,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 133.33333%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g4-in-g3 {
-      padding: 0 10px; } }
+  .g4-in-g3 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g4-4 {
   /*
@@ -3045,10 +2958,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g4-4 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g4-4 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g4-4 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g4-4-no-pad {
   width: 50%;
@@ -3060,9 +2972,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 100%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g4-in-g4 {
-      padding: 0 10px; } }
+  .g4-in-g4 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g4-5 {
   /*
@@ -3076,10 +2987,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g4-5 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g4-5 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g4-5 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g4-5-no-pad {
   width: 50%;
@@ -3091,9 +3001,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 80%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g4-in-g5 {
-      padding: 0 10px; } }
+  .g4-in-g5 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g4-6 {
   /*
@@ -3107,10 +3016,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g4-6 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g4-6 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g4-6 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g4-6-no-pad {
   width: 50%;
@@ -3122,9 +3030,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 66.66667%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g4-in-g6 {
-      padding: 0 10px; } }
+  .g4-in-g6 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g4-7 {
   /*
@@ -3138,10 +3045,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g4-7 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g4-7 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g4-7 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g4-7-no-pad {
   width: 50%;
@@ -3153,9 +3059,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 57.14286%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g4-in-g7 {
-      padding: 0 10px; } }
+  .g4-in-g7 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g4-8 {
   /*
@@ -3169,10 +3074,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g4-8 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g4-8 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g4-8 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g4-8-no-pad {
   width: 50%;
@@ -3184,9 +3088,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 50%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g4-in-g8 {
-      padding: 0 10px; } }
+  .g4-in-g8 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g4-9 {
   /*
@@ -3200,10 +3103,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g4-9 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g4-9 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g4-9 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g4-9-no-pad {
   width: 50%;
@@ -3215,9 +3117,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 44.44444%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g4-in-g9 {
-      padding: 0 10px; } }
+  .g4-in-g9 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g4-10 {
   /*
@@ -3231,10 +3132,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g4-10 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g4-10 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g4-10 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g4-10-no-pad {
   width: 50%;
@@ -3246,9 +3146,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 40%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g4-in-g10 {
-      padding: 0 10px; } }
+  .g4-in-g10 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g4-11 {
   /*
@@ -3262,10 +3161,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g4-11 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g4-11 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g4-11 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g4-11-no-pad {
   width: 50%;
@@ -3277,9 +3175,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 36.36364%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g4-in-g11 {
-      padding: 0 10px; } }
+  .g4-in-g11 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g4-12 {
   /*
@@ -3293,10 +3190,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g4-12 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g4-12 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g4-12 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g4-12-no-pad {
   width: 50%;
@@ -3308,9 +3204,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 33.33333%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g4-in-g12 {
-      padding: 0 10px; } }
+  .g4-in-g12 .layout-mobile {
+    padding: 0 10px; }
 
 .g5 {
   width: 62.5%;
@@ -3319,10 +3214,9 @@ input[type="search"]::-webkit-search-decoration {
     .g5 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .g5 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .g5 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .g5-no-pad {
   width: 62.5%;
@@ -3340,10 +3234,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g5-1 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g5-1 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g5-1 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g5-1-no-pad {
   width: 62.5%;
@@ -3355,9 +3248,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 500%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g5-in-g1 {
-      padding: 0 10px; } }
+  .g5-in-g1 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g5-2 {
   /*
@@ -3371,10 +3263,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g5-2 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g5-2 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g5-2 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g5-2-no-pad {
   width: 62.5%;
@@ -3386,9 +3277,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 250%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g5-in-g2 {
-      padding: 0 10px; } }
+  .g5-in-g2 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g5-3 {
   /*
@@ -3402,10 +3292,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g5-3 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g5-3 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g5-3 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g5-3-no-pad {
   width: 62.5%;
@@ -3417,9 +3306,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 166.66667%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g5-in-g3 {
-      padding: 0 10px; } }
+  .g5-in-g3 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g5-4 {
   /*
@@ -3433,10 +3321,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g5-4 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g5-4 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g5-4 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g5-4-no-pad {
   width: 62.5%;
@@ -3448,9 +3335,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 125%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g5-in-g4 {
-      padding: 0 10px; } }
+  .g5-in-g4 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g5-5 {
   /*
@@ -3464,10 +3350,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g5-5 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g5-5 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g5-5 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g5-5-no-pad {
   width: 62.5%;
@@ -3479,9 +3364,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 100%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g5-in-g5 {
-      padding: 0 10px; } }
+  .g5-in-g5 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g5-6 {
   /*
@@ -3495,10 +3379,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g5-6 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g5-6 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g5-6 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g5-6-no-pad {
   width: 62.5%;
@@ -3510,9 +3393,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 83.33333%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g5-in-g6 {
-      padding: 0 10px; } }
+  .g5-in-g6 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g5-7 {
   /*
@@ -3526,10 +3408,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g5-7 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g5-7 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g5-7 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g5-7-no-pad {
   width: 62.5%;
@@ -3541,9 +3422,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 71.42857%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g5-in-g7 {
-      padding: 0 10px; } }
+  .g5-in-g7 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g5-8 {
   /*
@@ -3557,10 +3437,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g5-8 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g5-8 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g5-8 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g5-8-no-pad {
   width: 62.5%;
@@ -3572,9 +3451,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 62.5%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g5-in-g8 {
-      padding: 0 10px; } }
+  .g5-in-g8 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g5-9 {
   /*
@@ -3588,10 +3466,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g5-9 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g5-9 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g5-9 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g5-9-no-pad {
   width: 62.5%;
@@ -3603,9 +3480,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 55.55556%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g5-in-g9 {
-      padding: 0 10px; } }
+  .g5-in-g9 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g5-10 {
   /*
@@ -3619,10 +3495,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g5-10 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g5-10 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g5-10 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g5-10-no-pad {
   width: 62.5%;
@@ -3634,9 +3509,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 50%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g5-in-g10 {
-      padding: 0 10px; } }
+  .g5-in-g10 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g5-11 {
   /*
@@ -3650,10 +3524,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g5-11 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g5-11 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g5-11 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g5-11-no-pad {
   width: 62.5%;
@@ -3665,9 +3538,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 45.45455%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g5-in-g11 {
-      padding: 0 10px; } }
+  .g5-in-g11 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g5-12 {
   /*
@@ -3681,10 +3553,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g5-12 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g5-12 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g5-12 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g5-12-no-pad {
   width: 62.5%;
@@ -3696,9 +3567,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 41.66667%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g5-in-g12 {
-      padding: 0 10px; } }
+  .g5-in-g12 .layout-mobile {
+    padding: 0 10px; }
 
 .g6 {
   width: 75%;
@@ -3707,10 +3577,9 @@ input[type="search"]::-webkit-search-decoration {
     .g6 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .g6 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .g6 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .g6-no-pad {
   width: 75%;
@@ -3728,10 +3597,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g6-1 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g6-1 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g6-1 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g6-1-no-pad {
   width: 75%;
@@ -3743,9 +3611,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 600%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g6-in-g1 {
-      padding: 0 10px; } }
+  .g6-in-g1 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g6-2 {
   /*
@@ -3759,10 +3626,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g6-2 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g6-2 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g6-2 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g6-2-no-pad {
   width: 75%;
@@ -3774,9 +3640,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 300%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g6-in-g2 {
-      padding: 0 10px; } }
+  .g6-in-g2 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g6-3 {
   /*
@@ -3790,10 +3655,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g6-3 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g6-3 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g6-3 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g6-3-no-pad {
   width: 75%;
@@ -3805,9 +3669,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 200%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g6-in-g3 {
-      padding: 0 10px; } }
+  .g6-in-g3 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g6-4 {
   /*
@@ -3821,10 +3684,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g6-4 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g6-4 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g6-4 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g6-4-no-pad {
   width: 75%;
@@ -3836,9 +3698,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 150%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g6-in-g4 {
-      padding: 0 10px; } }
+  .g6-in-g4 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g6-5 {
   /*
@@ -3852,10 +3713,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g6-5 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g6-5 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g6-5 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g6-5-no-pad {
   width: 75%;
@@ -3867,9 +3727,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 120%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g6-in-g5 {
-      padding: 0 10px; } }
+  .g6-in-g5 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g6-6 {
   /*
@@ -3883,10 +3742,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g6-6 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g6-6 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g6-6 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g6-6-no-pad {
   width: 75%;
@@ -3898,9 +3756,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 100%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g6-in-g6 {
-      padding: 0 10px; } }
+  .g6-in-g6 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g6-7 {
   /*
@@ -3914,10 +3771,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g6-7 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g6-7 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g6-7 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g6-7-no-pad {
   width: 75%;
@@ -3929,9 +3785,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 85.71429%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g6-in-g7 {
-      padding: 0 10px; } }
+  .g6-in-g7 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g6-8 {
   /*
@@ -3945,10 +3800,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g6-8 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g6-8 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g6-8 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g6-8-no-pad {
   width: 75%;
@@ -3960,9 +3814,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 75%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g6-in-g8 {
-      padding: 0 10px; } }
+  .g6-in-g8 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g6-9 {
   /*
@@ -3976,10 +3829,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g6-9 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g6-9 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g6-9 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g6-9-no-pad {
   width: 75%;
@@ -3991,9 +3843,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 66.66667%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g6-in-g9 {
-      padding: 0 10px; } }
+  .g6-in-g9 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g6-10 {
   /*
@@ -4007,10 +3858,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g6-10 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g6-10 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g6-10 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g6-10-no-pad {
   width: 75%;
@@ -4022,9 +3872,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 60%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g6-in-g10 {
-      padding: 0 10px; } }
+  .g6-in-g10 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g6-11 {
   /*
@@ -4038,10 +3887,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g6-11 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g6-11 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g6-11 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g6-11-no-pad {
   width: 75%;
@@ -4053,9 +3901,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 54.54545%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g6-in-g11 {
-      padding: 0 10px; } }
+  .g6-in-g11 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g6-12 {
   /*
@@ -4069,10 +3916,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g6-12 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g6-12 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g6-12 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g6-12-no-pad {
   width: 75%;
@@ -4084,9 +3930,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 50%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g6-in-g12 {
-      padding: 0 10px; } }
+  .g6-in-g12 .layout-mobile {
+    padding: 0 10px; }
 
 .g7 {
   width: 87.5%;
@@ -4095,10 +3940,9 @@ input[type="search"]::-webkit-search-decoration {
     .g7 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .g7 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .g7 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .g7-no-pad {
   width: 87.5%;
@@ -4116,10 +3960,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g7-1 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g7-1 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g7-1 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g7-1-no-pad {
   width: 87.5%;
@@ -4131,9 +3974,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 700%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g7-in-g1 {
-      padding: 0 10px; } }
+  .g7-in-g1 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g7-2 {
   /*
@@ -4147,10 +3989,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g7-2 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g7-2 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g7-2 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g7-2-no-pad {
   width: 87.5%;
@@ -4162,9 +4003,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 350%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g7-in-g2 {
-      padding: 0 10px; } }
+  .g7-in-g2 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g7-3 {
   /*
@@ -4178,10 +4018,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g7-3 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g7-3 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g7-3 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g7-3-no-pad {
   width: 87.5%;
@@ -4193,9 +4032,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 233.33333%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g7-in-g3 {
-      padding: 0 10px; } }
+  .g7-in-g3 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g7-4 {
   /*
@@ -4209,10 +4047,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g7-4 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g7-4 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g7-4 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g7-4-no-pad {
   width: 87.5%;
@@ -4224,9 +4061,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 175%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g7-in-g4 {
-      padding: 0 10px; } }
+  .g7-in-g4 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g7-5 {
   /*
@@ -4240,10 +4076,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g7-5 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g7-5 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g7-5 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g7-5-no-pad {
   width: 87.5%;
@@ -4255,9 +4090,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 140%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g7-in-g5 {
-      padding: 0 10px; } }
+  .g7-in-g5 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g7-6 {
   /*
@@ -4271,10 +4105,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g7-6 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g7-6 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g7-6 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g7-6-no-pad {
   width: 87.5%;
@@ -4286,9 +4119,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 116.66667%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g7-in-g6 {
-      padding: 0 10px; } }
+  .g7-in-g6 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g7-7 {
   /*
@@ -4302,10 +4134,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g7-7 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g7-7 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g7-7 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g7-7-no-pad {
   width: 87.5%;
@@ -4317,9 +4148,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 100%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g7-in-g7 {
-      padding: 0 10px; } }
+  .g7-in-g7 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g7-8 {
   /*
@@ -4333,10 +4163,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g7-8 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g7-8 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g7-8 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g7-8-no-pad {
   width: 87.5%;
@@ -4348,9 +4177,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 87.5%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g7-in-g8 {
-      padding: 0 10px; } }
+  .g7-in-g8 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g7-9 {
   /*
@@ -4364,10 +4192,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g7-9 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g7-9 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g7-9 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g7-9-no-pad {
   width: 87.5%;
@@ -4379,9 +4206,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 77.77778%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g7-in-g9 {
-      padding: 0 10px; } }
+  .g7-in-g9 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g7-10 {
   /*
@@ -4395,10 +4221,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g7-10 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g7-10 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g7-10 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g7-10-no-pad {
   width: 87.5%;
@@ -4410,9 +4235,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 70%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g7-in-g10 {
-      padding: 0 10px; } }
+  .g7-in-g10 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g7-11 {
   /*
@@ -4426,10 +4250,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g7-11 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g7-11 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g7-11 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g7-11-no-pad {
   width: 87.5%;
@@ -4441,9 +4264,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 63.63636%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g7-in-g11 {
-      padding: 0 10px; } }
+  .g7-in-g11 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g7-12 {
   /*
@@ -4457,10 +4279,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g7-12 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g7-12 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g7-12 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g7-12-no-pad {
   width: 87.5%;
@@ -4472,9 +4293,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 58.33333%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g7-in-g12 {
-      padding: 0 10px; } }
+  .g7-in-g12 .layout-mobile {
+    padding: 0 10px; }
 
 .g8 {
   width: 100%;
@@ -4483,10 +4303,9 @@ input[type="search"]::-webkit-search-decoration {
     .g8 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .g8 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .g8 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .g8-no-pad {
   width: 100%;
@@ -4504,10 +4323,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g8-1 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g8-1 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g8-1 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g8-1-no-pad {
   width: 100%;
@@ -4519,9 +4337,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 800%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g8-in-g1 {
-      padding: 0 10px; } }
+  .g8-in-g1 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g8-2 {
   /*
@@ -4535,10 +4352,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g8-2 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g8-2 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g8-2 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g8-2-no-pad {
   width: 100%;
@@ -4550,9 +4366,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 400%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g8-in-g2 {
-      padding: 0 10px; } }
+  .g8-in-g2 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g8-3 {
   /*
@@ -4566,10 +4381,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g8-3 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g8-3 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g8-3 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g8-3-no-pad {
   width: 100%;
@@ -4581,9 +4395,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 266.66667%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g8-in-g3 {
-      padding: 0 10px; } }
+  .g8-in-g3 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g8-4 {
   /*
@@ -4597,10 +4410,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g8-4 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g8-4 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g8-4 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g8-4-no-pad {
   width: 100%;
@@ -4612,9 +4424,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 200%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g8-in-g4 {
-      padding: 0 10px; } }
+  .g8-in-g4 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g8-5 {
   /*
@@ -4628,10 +4439,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g8-5 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g8-5 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g8-5 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g8-5-no-pad {
   width: 100%;
@@ -4643,9 +4453,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 160%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g8-in-g5 {
-      padding: 0 10px; } }
+  .g8-in-g5 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g8-6 {
   /*
@@ -4659,10 +4468,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g8-6 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g8-6 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g8-6 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g8-6-no-pad {
   width: 100%;
@@ -4674,9 +4482,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 133.33333%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g8-in-g6 {
-      padding: 0 10px; } }
+  .g8-in-g6 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g8-7 {
   /*
@@ -4690,10 +4497,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g8-7 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g8-7 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g8-7 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g8-7-no-pad {
   width: 100%;
@@ -4705,9 +4511,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 114.28571%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g8-in-g7 {
-      padding: 0 10px; } }
+  .g8-in-g7 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g8-8 {
   /*
@@ -4721,10 +4526,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g8-8 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g8-8 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g8-8 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g8-8-no-pad {
   width: 100%;
@@ -4736,9 +4540,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 100%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g8-in-g8 {
-      padding: 0 10px; } }
+  .g8-in-g8 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g8-9 {
   /*
@@ -4752,10 +4555,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g8-9 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g8-9 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g8-9 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g8-9-no-pad {
   width: 100%;
@@ -4767,9 +4569,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 88.88889%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g8-in-g9 {
-      padding: 0 10px; } }
+  .g8-in-g9 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g8-10 {
   /*
@@ -4783,10 +4584,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g8-10 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g8-10 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g8-10 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g8-10-no-pad {
   width: 100%;
@@ -4798,9 +4598,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 80%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g8-in-g10 {
-      padding: 0 10px; } }
+  .g8-in-g10 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g8-11 {
   /*
@@ -4814,10 +4613,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g8-11 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g8-11 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g8-11 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g8-11-no-pad {
   width: 100%;
@@ -4829,9 +4627,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 72.72727%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g8-in-g11 {
-      padding: 0 10px; } }
+  .g8-in-g11 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g8-12 {
   /*
@@ -4845,10 +4642,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g8-12 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g8-12 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g8-12 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g8-12-no-pad {
   width: 100%;
@@ -4860,9 +4656,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 66.66667%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g8-in-g12 {
-      padding: 0 10px; } }
+  .g8-in-g12 .layout-mobile {
+    padding: 0 10px; }
 
 .g9 {
   width: 112.5%;
@@ -4871,10 +4666,9 @@ input[type="search"]::-webkit-search-decoration {
     .g9 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .g9 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .g9 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .g9-no-pad {
   width: 112.5%;
@@ -4892,10 +4686,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g9-1 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g9-1 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g9-1 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g9-1-no-pad {
   width: 112.5%;
@@ -4907,9 +4700,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 900%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g9-in-g1 {
-      padding: 0 10px; } }
+  .g9-in-g1 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g9-2 {
   /*
@@ -4923,10 +4715,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g9-2 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g9-2 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g9-2 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g9-2-no-pad {
   width: 112.5%;
@@ -4938,9 +4729,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 450%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g9-in-g2 {
-      padding: 0 10px; } }
+  .g9-in-g2 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g9-3 {
   /*
@@ -4954,10 +4744,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g9-3 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g9-3 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g9-3 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g9-3-no-pad {
   width: 112.5%;
@@ -4969,9 +4758,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 300%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g9-in-g3 {
-      padding: 0 10px; } }
+  .g9-in-g3 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g9-4 {
   /*
@@ -4985,10 +4773,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g9-4 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g9-4 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g9-4 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g9-4-no-pad {
   width: 112.5%;
@@ -5000,9 +4787,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 225%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g9-in-g4 {
-      padding: 0 10px; } }
+  .g9-in-g4 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g9-5 {
   /*
@@ -5016,10 +4802,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g9-5 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g9-5 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g9-5 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g9-5-no-pad {
   width: 112.5%;
@@ -5031,9 +4816,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 180%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g9-in-g5 {
-      padding: 0 10px; } }
+  .g9-in-g5 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g9-6 {
   /*
@@ -5047,10 +4831,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g9-6 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g9-6 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g9-6 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g9-6-no-pad {
   width: 112.5%;
@@ -5062,9 +4845,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 150%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g9-in-g6 {
-      padding: 0 10px; } }
+  .g9-in-g6 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g9-7 {
   /*
@@ -5078,10 +4860,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g9-7 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g9-7 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g9-7 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g9-7-no-pad {
   width: 112.5%;
@@ -5093,9 +4874,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 128.57143%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g9-in-g7 {
-      padding: 0 10px; } }
+  .g9-in-g7 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g9-8 {
   /*
@@ -5109,10 +4889,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g9-8 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g9-8 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g9-8 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g9-8-no-pad {
   width: 112.5%;
@@ -5124,9 +4903,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 112.5%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g9-in-g8 {
-      padding: 0 10px; } }
+  .g9-in-g8 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g9-9 {
   /*
@@ -5140,10 +4918,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g9-9 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g9-9 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g9-9 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g9-9-no-pad {
   width: 112.5%;
@@ -5155,9 +4932,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 100%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g9-in-g9 {
-      padding: 0 10px; } }
+  .g9-in-g9 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g9-10 {
   /*
@@ -5171,10 +4947,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g9-10 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g9-10 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g9-10 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g9-10-no-pad {
   width: 112.5%;
@@ -5186,9 +4961,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 90%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g9-in-g10 {
-      padding: 0 10px; } }
+  .g9-in-g10 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g9-11 {
   /*
@@ -5202,10 +4976,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g9-11 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g9-11 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g9-11 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g9-11-no-pad {
   width: 112.5%;
@@ -5217,9 +4990,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 81.81818%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g9-in-g11 {
-      padding: 0 10px; } }
+  .g9-in-g11 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g9-12 {
   /*
@@ -5233,10 +5005,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g9-12 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g9-12 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g9-12 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g9-12-no-pad {
   width: 112.5%;
@@ -5248,9 +5019,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 75%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g9-in-g12 {
-      padding: 0 10px; } }
+  .g9-in-g12 .layout-mobile {
+    padding: 0 10px; }
 
 .g10 {
   width: 125%;
@@ -5259,10 +5029,9 @@ input[type="search"]::-webkit-search-decoration {
     .g10 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .g10 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .g10 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .g10-no-pad {
   width: 125%;
@@ -5280,10 +5049,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g10-1 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g10-1 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g10-1 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g10-1-no-pad {
   width: 125%;
@@ -5295,9 +5063,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 1000%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g10-in-g1 {
-      padding: 0 10px; } }
+  .g10-in-g1 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g10-2 {
   /*
@@ -5311,10 +5078,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g10-2 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g10-2 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g10-2 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g10-2-no-pad {
   width: 125%;
@@ -5326,9 +5092,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 500%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g10-in-g2 {
-      padding: 0 10px; } }
+  .g10-in-g2 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g10-3 {
   /*
@@ -5342,10 +5107,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g10-3 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g10-3 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g10-3 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g10-3-no-pad {
   width: 125%;
@@ -5357,9 +5121,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 333.33333%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g10-in-g3 {
-      padding: 0 10px; } }
+  .g10-in-g3 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g10-4 {
   /*
@@ -5373,10 +5136,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g10-4 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g10-4 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g10-4 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g10-4-no-pad {
   width: 125%;
@@ -5388,9 +5150,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 250%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g10-in-g4 {
-      padding: 0 10px; } }
+  .g10-in-g4 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g10-5 {
   /*
@@ -5404,10 +5165,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g10-5 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g10-5 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g10-5 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g10-5-no-pad {
   width: 125%;
@@ -5419,9 +5179,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 200%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g10-in-g5 {
-      padding: 0 10px; } }
+  .g10-in-g5 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g10-6 {
   /*
@@ -5435,10 +5194,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g10-6 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g10-6 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g10-6 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g10-6-no-pad {
   width: 125%;
@@ -5450,9 +5208,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 166.66667%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g10-in-g6 {
-      padding: 0 10px; } }
+  .g10-in-g6 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g10-7 {
   /*
@@ -5466,10 +5223,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g10-7 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g10-7 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g10-7 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g10-7-no-pad {
   width: 125%;
@@ -5481,9 +5237,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 142.85714%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g10-in-g7 {
-      padding: 0 10px; } }
+  .g10-in-g7 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g10-8 {
   /*
@@ -5497,10 +5252,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g10-8 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g10-8 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g10-8 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g10-8-no-pad {
   width: 125%;
@@ -5512,9 +5266,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 125%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g10-in-g8 {
-      padding: 0 10px; } }
+  .g10-in-g8 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g10-9 {
   /*
@@ -5528,10 +5281,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g10-9 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g10-9 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g10-9 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g10-9-no-pad {
   width: 125%;
@@ -5543,9 +5295,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 111.11111%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g10-in-g9 {
-      padding: 0 10px; } }
+  .g10-in-g9 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g10-10 {
   /*
@@ -5559,10 +5310,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g10-10 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g10-10 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g10-10 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g10-10-no-pad {
   width: 125%;
@@ -5574,9 +5324,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 100%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g10-in-g10 {
-      padding: 0 10px; } }
+  .g10-in-g10 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g10-11 {
   /*
@@ -5590,10 +5339,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g10-11 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g10-11 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g10-11 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g10-11-no-pad {
   width: 125%;
@@ -5605,9 +5353,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 90.90909%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g10-in-g11 {
-      padding: 0 10px; } }
+  .g10-in-g11 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g10-12 {
   /*
@@ -5621,10 +5368,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g10-12 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g10-12 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g10-12 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g10-12-no-pad {
   width: 125%;
@@ -5636,9 +5382,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 83.33333%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g10-in-g12 {
-      padding: 0 10px; } }
+  .g10-in-g12 .layout-mobile {
+    padding: 0 10px; }
 
 .g11 {
   width: 137.5%;
@@ -5647,10 +5392,9 @@ input[type="search"]::-webkit-search-decoration {
     .g11 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .g11 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .g11 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .g11-no-pad {
   width: 137.5%;
@@ -5668,10 +5412,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g11-1 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g11-1 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g11-1 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g11-1-no-pad {
   width: 137.5%;
@@ -5683,9 +5426,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 1100%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g11-in-g1 {
-      padding: 0 10px; } }
+  .g11-in-g1 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g11-2 {
   /*
@@ -5699,10 +5441,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g11-2 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g11-2 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g11-2 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g11-2-no-pad {
   width: 137.5%;
@@ -5714,9 +5455,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 550%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g11-in-g2 {
-      padding: 0 10px; } }
+  .g11-in-g2 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g11-3 {
   /*
@@ -5730,10 +5470,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g11-3 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g11-3 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g11-3 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g11-3-no-pad {
   width: 137.5%;
@@ -5745,9 +5484,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 366.66667%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g11-in-g3 {
-      padding: 0 10px; } }
+  .g11-in-g3 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g11-4 {
   /*
@@ -5761,10 +5499,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g11-4 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g11-4 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g11-4 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g11-4-no-pad {
   width: 137.5%;
@@ -5776,9 +5513,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 275%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g11-in-g4 {
-      padding: 0 10px; } }
+  .g11-in-g4 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g11-5 {
   /*
@@ -5792,10 +5528,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g11-5 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g11-5 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g11-5 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g11-5-no-pad {
   width: 137.5%;
@@ -5807,9 +5542,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 220%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g11-in-g5 {
-      padding: 0 10px; } }
+  .g11-in-g5 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g11-6 {
   /*
@@ -5823,10 +5557,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g11-6 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g11-6 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g11-6 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g11-6-no-pad {
   width: 137.5%;
@@ -5838,9 +5571,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 183.33333%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g11-in-g6 {
-      padding: 0 10px; } }
+  .g11-in-g6 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g11-7 {
   /*
@@ -5854,10 +5586,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g11-7 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g11-7 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g11-7 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g11-7-no-pad {
   width: 137.5%;
@@ -5869,9 +5600,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 157.14286%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g11-in-g7 {
-      padding: 0 10px; } }
+  .g11-in-g7 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g11-8 {
   /*
@@ -5885,10 +5615,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g11-8 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g11-8 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g11-8 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g11-8-no-pad {
   width: 137.5%;
@@ -5900,9 +5629,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 137.5%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g11-in-g8 {
-      padding: 0 10px; } }
+  .g11-in-g8 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g11-9 {
   /*
@@ -5916,10 +5644,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g11-9 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g11-9 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g11-9 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g11-9-no-pad {
   width: 137.5%;
@@ -5931,9 +5658,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 122.22222%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g11-in-g9 {
-      padding: 0 10px; } }
+  .g11-in-g9 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g11-10 {
   /*
@@ -5947,10 +5673,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g11-10 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g11-10 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g11-10 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g11-10-no-pad {
   width: 137.5%;
@@ -5962,9 +5687,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 110%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g11-in-g10 {
-      padding: 0 10px; } }
+  .g11-in-g10 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g11-11 {
   /*
@@ -5978,10 +5702,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g11-11 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g11-11 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g11-11 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g11-11-no-pad {
   width: 137.5%;
@@ -5993,9 +5716,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 100%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g11-in-g11 {
-      padding: 0 10px; } }
+  .g11-in-g11 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g11-12 {
   /*
@@ -6009,10 +5731,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g11-12 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g11-12 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g11-12 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g11-12-no-pad {
   width: 137.5%;
@@ -6024,9 +5745,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 91.66667%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g11-in-g12 {
-      padding: 0 10px; } }
+  .g11-in-g12 .layout-mobile {
+    padding: 0 10px; }
 
 .g12 {
   width: 150%;
@@ -6035,10 +5755,9 @@ input[type="search"]::-webkit-search-decoration {
     .g12 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .g12 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .g12 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .g12-no-pad {
   width: 150%;
@@ -6056,10 +5775,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g12-1 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g12-1 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g12-1 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g12-1-no-pad {
   width: 150%;
@@ -6071,9 +5789,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 1200%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g12-in-g1 {
-      padding: 0 10px; } }
+  .g12-in-g1 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g12-2 {
   /*
@@ -6087,10 +5804,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g12-2 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g12-2 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g12-2 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g12-2-no-pad {
   width: 150%;
@@ -6102,9 +5818,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 600%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g12-in-g2 {
-      padding: 0 10px; } }
+  .g12-in-g2 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g12-3 {
   /*
@@ -6118,10 +5833,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g12-3 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g12-3 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g12-3 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g12-3-no-pad {
   width: 150%;
@@ -6133,9 +5847,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 400%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g12-in-g3 {
-      padding: 0 10px; } }
+  .g12-in-g3 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g12-4 {
   /*
@@ -6149,10 +5862,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g12-4 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g12-4 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g12-4 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g12-4-no-pad {
   width: 150%;
@@ -6164,9 +5876,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 300%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g12-in-g4 {
-      padding: 0 10px; } }
+  .g12-in-g4 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g12-5 {
   /*
@@ -6180,10 +5891,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g12-5 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g12-5 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g12-5 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g12-5-no-pad {
   width: 150%;
@@ -6195,9 +5905,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 240%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g12-in-g5 {
-      padding: 0 10px; } }
+  .g12-in-g5 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g12-6 {
   /*
@@ -6211,10 +5920,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g12-6 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g12-6 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g12-6 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g12-6-no-pad {
   width: 150%;
@@ -6226,9 +5934,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 200%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g12-in-g6 {
-      padding: 0 10px; } }
+  .g12-in-g6 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g12-7 {
   /*
@@ -6242,10 +5949,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g12-7 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g12-7 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g12-7 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g12-7-no-pad {
   width: 150%;
@@ -6257,9 +5963,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 171.42857%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g12-in-g7 {
-      padding: 0 10px; } }
+  .g12-in-g7 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g12-8 {
   /*
@@ -6273,10 +5978,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g12-8 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g12-8 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g12-8 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g12-8-no-pad {
   width: 150%;
@@ -6288,9 +5992,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 150%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g12-in-g8 {
-      padding: 0 10px; } }
+  .g12-in-g8 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g12-9 {
   /*
@@ -6304,10 +6007,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g12-9 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g12-9 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g12-9 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g12-9-no-pad {
   width: 150%;
@@ -6319,9 +6021,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 133.33333%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g12-in-g9 {
-      padding: 0 10px; } }
+  .g12-in-g9 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g12-10 {
   /*
@@ -6335,10 +6036,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g12-10 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g12-10 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g12-10 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g12-10-no-pad {
   width: 150%;
@@ -6350,9 +6050,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 120%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g12-in-g10 {
-      padding: 0 10px; } }
+  .g12-in-g10 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g12-11 {
   /*
@@ -6366,10 +6065,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g12-11 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g12-11 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g12-11 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g12-11-no-pad {
   width: 150%;
@@ -6381,9 +6079,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 109.09091%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g12-in-g11 {
-      padding: 0 10px; } }
+  .g12-in-g11 .layout-mobile {
+    padding: 0 10px; }
 
 .isolation-g12-12 {
   /*
@@ -6397,10 +6094,9 @@ input[type="search"]::-webkit-search-decoration {
     .isolation-g12-12 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .isolation-g12-12 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .isolation-g12-12 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .isolation-g12-12-no-pad {
   width: 150%;
@@ -6412,9 +6108,8 @@ input[type="search"]::-webkit-search-decoration {
   width: 100%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .g12-in-g12 {
-      padding: 0 10px; } }
+  .g12-in-g12 .layout-mobile {
+    padding: 0 10px; }
 
 .col-1-4 {
   width: 25%;
@@ -6423,10 +6118,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-1-4 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-1-4 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-1-4 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-2-4 {
   width: 50%;
@@ -6435,10 +6129,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-2-4 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-2-4 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-2-4 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-3-4 {
   width: 75%;
@@ -6447,10 +6140,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-3-4 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-3-4 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-3-4 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-4-4 {
   width: 100%;
@@ -6459,10 +6151,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-4-4 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-4-4 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-4-4 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-1-5 {
   width: 20%;
@@ -6471,10 +6162,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-1-5 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-1-5 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-1-5 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-2-5 {
   width: 40%;
@@ -6483,10 +6173,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-2-5 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-2-5 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-2-5 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-3-5 {
   width: 60%;
@@ -6495,10 +6184,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-3-5 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-3-5 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-3-5 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-4-5 {
   width: 80%;
@@ -6507,10 +6195,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-4-5 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-4-5 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-4-5 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-5-5 {
   width: 100%;
@@ -6519,10 +6206,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-5-5 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-5-5 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-5-5 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-1-6 {
   width: 16.66667%;
@@ -6531,10 +6217,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-1-6 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-1-6 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-1-6 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-2-6 {
   width: 33.33333%;
@@ -6543,10 +6228,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-2-6 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-2-6 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-2-6 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-3-6 {
   width: 50%;
@@ -6555,10 +6239,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-3-6 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-3-6 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-3-6 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-4-6 {
   width: 66.66667%;
@@ -6567,10 +6250,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-4-6 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-4-6 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-4-6 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-5-6 {
   width: 83.33333%;
@@ -6579,10 +6261,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-5-6 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-5-6 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-5-6 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-6-6 {
   width: 100%;
@@ -6591,10 +6272,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-6-6 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-6-6 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-6-6 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-1-7 {
   width: 14.28571%;
@@ -6603,10 +6283,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-1-7 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-1-7 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-1-7 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-2-7 {
   width: 28.57143%;
@@ -6615,10 +6294,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-2-7 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-2-7 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-2-7 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-3-7 {
   width: 42.85714%;
@@ -6627,10 +6305,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-3-7 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-3-7 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-3-7 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-4-7 {
   width: 57.14286%;
@@ -6639,10 +6316,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-4-7 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-4-7 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-4-7 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-5-7 {
   width: 71.42857%;
@@ -6651,10 +6327,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-5-7 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-5-7 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-5-7 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-6-7 {
   width: 85.71429%;
@@ -6663,10 +6338,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-6-7 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-6-7 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-6-7 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-7-7 {
   width: 100%;
@@ -6675,10 +6349,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-7-7 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-7-7 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-7-7 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-1-8 {
   width: 12.5%;
@@ -6687,10 +6360,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-1-8 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-1-8 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-1-8 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-2-8 {
   width: 25%;
@@ -6699,10 +6371,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-2-8 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-2-8 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-2-8 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-3-8 {
   width: 37.5%;
@@ -6711,10 +6382,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-3-8 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-3-8 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-3-8 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-4-8 {
   width: 50%;
@@ -6723,10 +6393,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-4-8 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-4-8 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-4-8 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-5-8 {
   width: 62.5%;
@@ -6735,10 +6404,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-5-8 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-5-8 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-5-8 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-6-8 {
   width: 75%;
@@ -6747,10 +6415,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-6-8 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-6-8 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-6-8 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-7-8 {
   width: 87.5%;
@@ -6759,10 +6426,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-7-8 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-7-8 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-7-8 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-8-8 {
   width: 100%;
@@ -6771,10 +6437,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-8-8 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-8-8 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-8-8 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-1-9 {
   width: 11.11111%;
@@ -6783,10 +6448,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-1-9 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-1-9 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-1-9 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-2-9 {
   width: 22.22222%;
@@ -6795,10 +6459,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-2-9 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-2-9 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-2-9 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-3-9 {
   width: 33.33333%;
@@ -6807,10 +6470,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-3-9 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-3-9 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-3-9 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-4-9 {
   width: 44.44444%;
@@ -6819,10 +6481,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-4-9 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-4-9 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-4-9 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-5-9 {
   width: 55.55556%;
@@ -6831,10 +6492,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-5-9 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-5-9 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-5-9 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-6-9 {
   width: 66.66667%;
@@ -6843,10 +6503,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-6-9 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-6-9 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-6-9 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-7-9 {
   width: 77.77778%;
@@ -6855,10 +6514,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-7-9 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-7-9 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-7-9 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-8-9 {
   width: 88.88889%;
@@ -6867,10 +6525,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-8-9 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-8-9 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-8-9 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-9-9 {
   width: 100%;
@@ -6879,10 +6536,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-9-9 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-9-9 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-9-9 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-1-10 {
   width: 10%;
@@ -6891,10 +6547,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-1-10 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-1-10 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-1-10 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-2-10 {
   width: 20%;
@@ -6903,10 +6558,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-2-10 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-2-10 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-2-10 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-3-10 {
   width: 30%;
@@ -6915,10 +6569,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-3-10 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-3-10 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-3-10 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-4-10 {
   width: 40%;
@@ -6927,10 +6580,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-4-10 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-4-10 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-4-10 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-5-10 {
   width: 50%;
@@ -6939,10 +6591,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-5-10 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-5-10 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-5-10 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-6-10 {
   width: 60%;
@@ -6951,10 +6602,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-6-10 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-6-10 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-6-10 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-7-10 {
   width: 70%;
@@ -6963,10 +6613,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-7-10 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-7-10 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-7-10 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-8-10 {
   width: 80%;
@@ -6975,10 +6624,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-8-10 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-8-10 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-8-10 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-9-10 {
   width: 90%;
@@ -6987,10 +6635,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-9-10 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-9-10 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-9-10 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-10-10 {
   width: 100%;
@@ -6999,10 +6646,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-10-10 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-10-10 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-10-10 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-1-11 {
   width: 9.09091%;
@@ -7011,10 +6657,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-1-11 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-1-11 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-1-11 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-2-11 {
   width: 18.18182%;
@@ -7023,10 +6668,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-2-11 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-2-11 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-2-11 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-3-11 {
   width: 27.27273%;
@@ -7035,10 +6679,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-3-11 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-3-11 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-3-11 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-4-11 {
   width: 36.36364%;
@@ -7047,10 +6690,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-4-11 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-4-11 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-4-11 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-5-11 {
   width: 45.45455%;
@@ -7059,10 +6701,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-5-11 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-5-11 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-5-11 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-6-11 {
   width: 54.54545%;
@@ -7071,10 +6712,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-6-11 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-6-11 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-6-11 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-7-11 {
   width: 63.63636%;
@@ -7083,10 +6723,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-7-11 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-7-11 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-7-11 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-8-11 {
   width: 72.72727%;
@@ -7095,10 +6734,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-8-11 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-8-11 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-8-11 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-9-11 {
   width: 81.81818%;
@@ -7107,10 +6745,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-9-11 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-9-11 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-9-11 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-10-11 {
   width: 90.90909%;
@@ -7119,10 +6756,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-10-11 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-10-11 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-10-11 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-11-11 {
   width: 100%;
@@ -7131,10 +6767,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-11-11 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-11-11 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-11-11 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-1-12 {
   width: 8.33333%;
@@ -7143,10 +6778,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-1-12 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-1-12 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-1-12 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-2-12 {
   width: 16.66667%;
@@ -7155,10 +6789,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-2-12 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-2-12 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-2-12 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-3-12 {
   width: 25%;
@@ -7167,10 +6800,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-3-12 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-3-12 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-3-12 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-4-12 {
   width: 33.33333%;
@@ -7179,10 +6811,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-4-12 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-4-12 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-4-12 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-5-12 {
   width: 41.66667%;
@@ -7191,10 +6822,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-5-12 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-5-12 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-5-12 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-6-12 {
   width: 50%;
@@ -7203,10 +6833,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-6-12 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-6-12 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-6-12 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-7-12 {
   width: 58.33333%;
@@ -7215,10 +6844,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-7-12 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-7-12 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-7-12 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-8-12 {
   width: 66.66667%;
@@ -7227,10 +6855,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-8-12 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-8-12 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-8-12 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-9-12 {
   width: 75%;
@@ -7239,10 +6866,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-9-12 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-9-12 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-9-12 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-10-12 {
   width: 83.33333%;
@@ -7251,10 +6877,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-10-12 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-10-12 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-10-12 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-11-12 {
   width: 91.66667%;
@@ -7263,10 +6888,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-11-12 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-11-12 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-11-12 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .col-12-12 {
   width: 100%;
@@ -7275,10 +6899,9 @@ input[type="search"]::-webkit-search-decoration {
     .col-12-12 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .col-12-12 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .col-12-12 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .gcenter {
   float: none;
@@ -7575,23 +7198,20 @@ h1 {
     content: "";
     display: table;
     clear: both; }
-  @media screen and (max-width: 849px) {
-    .navbar {
-      padding-left: 20px;
-      padding-right: 20px; } }
+  .navbar .layout-mobile {
+    padding-left: 20px;
+    padding-right: 20px; }
   @media screen and (min-width: 850px) {
     .navbar {
       padding-left: 25px;
       padding-right: 25px; } }
-  @media screen and (max-width: 849px) {
-    .navbar {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .navbar .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
-@media screen and (max-width: 849px) {
-  .navbar__items {
-    margin-left: -200%;
-    margin-top: 0 !important; } }
+.navbar__items .layout-mobile {
+  margin-left: -200%;
+  margin-top: 0 !important; }
 
 .navbar__column {
   height: 100vh;
@@ -7606,10 +7226,9 @@ h1 {
     vertical-align: middle;
     height: 100%;
     width: .1px; }
-  @media screen and (max-width: 849px) {
-    .navbar__column {
-      padding: 0 10px;
-      width: 100px !important; } }
+  .navbar__column .layout-mobile {
+    padding: 0 10px;
+    width: 100px !important; }
 
 .navbar__valign {
   white-space: normal;
@@ -7642,13 +7261,12 @@ h1 {
   .navbar__logo svg {
     width: 82px;
     height: 20px; }
-  @media screen and (max-width: 849px) {
-    .navbar__logo {
-      top: 20px;
-      left: 20px; }
-      .navbar__logo svg {
-        width: 62px;
-        height: 15.5px; } }
+  .navbar__logo .layout-mobile {
+    top: 20px;
+    left: 20px; }
+    .navbar__logo .layout-mobile svg {
+      width: 62px;
+      height: 15.5px; }
 
 .mobile-navbar-open {
   display: none;
@@ -7657,9 +7275,8 @@ h1 {
   right: 20px;
   width: 13px;
   z-index: 1000; }
-  @media screen and (max-width: 849px) {
-    .mobile-navbar-open {
-      display: block; } }
+  .mobile-navbar-open .layout-mobile {
+    display: block; }
 
 .mobile-navbar-open__line {
   height: 1px;
@@ -7775,9 +7392,8 @@ h1 {
 .mobile__next-project {
   color: black; }
 
-@media screen and (max-width: 849px) {
-  .navbar {
-    padding-top: 70px; } }
+.navbar .layout-mobile {
+  padding-top: 70px; }
 
 .navbar__item {
   width: 200px;
@@ -7787,9 +7403,8 @@ h1 {
   z-index: 1; }
   .navbar__item.is-active > .navbar__label {
     color: black; }
-  @media screen and (max-width: 849px) {
-    .navbar__item {
-      width: 80px !important; } }
+  .navbar__item .layout-mobile {
+    width: 80px !important; }
 
 .navbar__label {
   padding: 2px 0;
@@ -7812,9 +7427,8 @@ h1 {
   -o-transition: 0.2s left ease 0s;
   top: 0;
   z-index: 0; }
-  @media screen and (max-width: 849px) {
-    .navbar__dropdown {
-      margin-top: 0 !important; } }
+  .navbar__dropdown .layout-mobile {
+    margin-top: 0 !important; }
 
 .content-wrapper {
   margin-left: auto;
@@ -7827,10 +7441,9 @@ h1 {
     content: "";
     display: table;
     clear: both; }
-  @media screen and (max-width: 849px) {
-    .content-wrapper {
-      padding-left: 20px;
-      padding-right: 20px; } }
+  .content-wrapper .layout-mobile {
+    padding-left: 20px;
+    padding-right: 20px; }
 
 .content-navbar-grid-spacer {
   width: 25%;
@@ -7839,13 +7452,11 @@ h1 {
     .content-navbar-grid-spacer {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .content-navbar-grid-spacer {
-      padding-left: 10px;
-      padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .content-navbar-grid-spacer {
-      display: none; } }
+  .content-navbar-grid-spacer .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
+  .content-navbar-grid-spacer .layout-mobile {
+    display: none; }
 
 .content {
   z-index: 2;
@@ -7862,14 +7473,12 @@ h1 {
     .index-swiper {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .index-swiper {
-      padding-left: 10px;
-      padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .index-swiper {
-      width: 100%;
-      display: none; } }
+  .index-swiper .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
+  .index-swiper .layout-mobile {
+    width: 100%;
+    display: none; }
   .index-swiper .swiper-container {
     margin-right: -35px; }
 
@@ -7891,10 +7500,9 @@ h1 {
     .index-project {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .index-project {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .index-project .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .index-project-debug {
   position: absolute;
@@ -7940,9 +7548,8 @@ div[js-index-content="index"] {
 .module-image__ratio {
   position: relative;
   margin-bottom: 35px; }
-  @media screen and (max-width: 849px) {
-    .module-image__ratio {
-      margin-bottom: 20px; } }
+  .module-image__ratio .layout-mobile {
+    margin-bottom: 20px; }
   .module-image__ratio > img {
     position: absolute;
     top: 0;
@@ -7971,10 +7578,9 @@ div[js-index-content="index"] {
     content: "";
     display: table;
     clear: both; }
-  @media screen and (max-width: 849px) {
-    .module-text {
-      margin-left: -10px;
-      margin-right: -10px; } }
+  .module-text .layout-mobile {
+    margin-left: -10px;
+    margin-right: -10px; }
   @media screen and (min-width: 850px) {
     .module-text {
       margin-left: -10px;
@@ -7988,9 +7594,8 @@ div[js-index-content="index"] {
   line-height: 1.42;
   letter-spacing: .01em;
   font-weight: 500; }
-  @media screen and (max-width: 849px) {
-    .module-text__spacer {
-      padding: 0 10px; } }
+  .module-text__spacer .layout-mobile {
+    padding: 0 10px; }
   .js-viewing-full-project .module-text__spacer {
     width: 12.5%;
     float: left; }
@@ -7998,10 +7603,9 @@ div[js-index-content="index"] {
       .js-viewing-full-project .module-text__spacer {
         padding-left: 10px;
         padding-right: 10px; } }
-    @media screen and (max-width: 849px) {
-      .js-viewing-full-project .module-text__spacer {
-        padding-left: 10px;
-        padding-right: 10px; } }
+    .js-viewing-full-project .module-text__spacer .layout-mobile {
+      padding-left: 10px;
+      padding-right: 10px; }
 
 .module-text__full-project-spacer {
   display: none; }
@@ -8013,10 +7617,9 @@ div[js-index-content="index"] {
       .js-viewing-full-project .module-text__full-project-spacer {
         padding-left: 10px;
         padding-right: 10px; } }
-    @media screen and (max-width: 849px) {
-      .js-viewing-full-project .module-text__full-project-spacer {
-        padding-left: 10px;
-        padding-right: 10px; } }
+    .js-viewing-full-project .module-text__full-project-spacer .layout-mobile {
+      padding-left: 10px;
+      padding-right: 10px; }
 
 .module-text__excerpt {
   font-size: 26px;
@@ -8024,9 +7627,8 @@ div[js-index-content="index"] {
   width: 50%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .module-text__excerpt {
-      padding: 0 10px; } }
+  .module-text__excerpt .layout-mobile {
+    padding: 0 10px; }
   .js-viewing-full-project .module-text__excerpt {
     width: 37.5%;
     float: left; }
@@ -8034,10 +7636,9 @@ div[js-index-content="index"] {
       .js-viewing-full-project .module-text__excerpt {
         padding-left: 10px;
         padding-right: 10px; } }
-    @media screen and (max-width: 849px) {
-      .js-viewing-full-project .module-text__excerpt {
-        padding-left: 10px;
-        padding-right: 10px; } }
+    .js-viewing-full-project .module-text__excerpt .layout-mobile {
+      padding-left: 10px;
+      padding-right: 10px; }
 
 .module-text__view-full {
   margin-top: 28px;
@@ -8060,10 +7661,9 @@ div[js-index-content="index"] {
       .js-viewing-full-project .module-text__body {
         padding-left: 10px;
         padding-right: 10px; } }
-    @media screen and (max-width: 849px) {
-      .js-viewing-full-project .module-text__body {
-        padding-left: 10px;
-        padding-right: 10px; } }
+    .js-viewing-full-project .module-text__body .layout-mobile {
+      padding-left: 10px;
+      padding-right: 10px; }
   .module-text__body p {
     margin: 28px 0; }
     .module-text__body p:first-child {
@@ -8080,10 +7680,9 @@ div[js-index-content="index"] {
   content: "";
   display: table;
   clear: both; }
-@media screen and (max-width: 849px) {
-  .module-images-2up {
-    margin-left: -10px;
-    margin-right: -10px; } }
+.module-images-2up .layout-mobile {
+  margin-left: -10px;
+  margin-right: -10px; }
 @media screen and (min-width: 850px) {
   .module-images-2up {
     margin-left: -10px;
@@ -8093,9 +7692,8 @@ div[js-index-content="index"] {
   width: 50%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .module-images-2up__image {
-      padding: 0 10px; } }
+  .module-images-2up__image .layout-mobile {
+    padding: 0 10px; }
 
 .module-images-2up__img {
   display: block; }
@@ -8106,10 +7704,9 @@ div[js-index-content="index"] {
     content: "";
     display: table;
     clear: both; }
-  @media screen and (max-width: 849px) {
-    .module-website-link {
-      margin-left: -10px;
-      margin-right: -10px; } }
+  .module-website-link .layout-mobile {
+    margin-left: -10px;
+    margin-right: -10px; }
   @media screen and (min-width: 850px) {
     .module-website-link {
       margin-left: -10px;
@@ -8119,9 +7716,8 @@ div[js-index-content="index"] {
   width: 50%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .module-website-link__spacer {
-      padding: 0 10px; } }
+  .module-website-link__spacer .layout-mobile {
+    padding: 0 10px; }
   .js-viewing-full-project .module-website-link__spacer {
     width: 62.5%;
     float: left; }
@@ -8129,18 +7725,16 @@ div[js-index-content="index"] {
       .js-viewing-full-project .module-website-link__spacer {
         padding-left: 10px;
         padding-right: 10px; } }
-    @media screen and (max-width: 849px) {
-      .js-viewing-full-project .module-website-link__spacer {
-        padding-left: 10px;
-        padding-right: 10px; } }
+    .js-viewing-full-project .module-website-link__spacer .layout-mobile {
+      padding-left: 10px;
+      padding-right: 10px; }
 
 .module-website-link__column {
   width: 50%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .module-website-link__column {
-      padding: 0 10px; } }
+  .module-website-link__column .layout-mobile {
+    padding: 0 10px; }
   .js-viewing-full-project .module-website-link__column {
     width: 37.5%;
     float: left; }
@@ -8148,10 +7742,9 @@ div[js-index-content="index"] {
       .js-viewing-full-project .module-website-link__column {
         padding-left: 10px;
         padding-right: 10px; } }
-    @media screen and (max-width: 849px) {
-      .js-viewing-full-project .module-website-link__column {
-        padding-left: 10px;
-        padding-right: 10px; } }
+    .js-viewing-full-project .module-website-link__column .layout-mobile {
+      padding-left: 10px;
+      padding-right: 10px; }
 
 .module-website-link__button {
   text-decoration: none;
@@ -8188,10 +7781,9 @@ div[js-index-content="index"] {
     content: "";
     display: table;
     clear: both; }
-  @media screen and (max-width: 849px) {
-    .module-credits {
-      margin-left: -10px;
-      margin-right: -10px; } }
+  .module-credits .layout-mobile {
+    margin-left: -10px;
+    margin-right: -10px; }
   @media screen and (min-width: 850px) {
     .module-credits {
       margin-left: -10px;
@@ -8236,10 +7828,9 @@ div[js-index-content="index"] {
     .module-credits__line-container {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .module-credits__line-container {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .module-credits__line-container .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .module-credits__line {
   height: 0;
@@ -8249,9 +7840,8 @@ div[js-index-content="index"] {
   width: 33.33333%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .module-credits__column {
-      padding: 0 10px; } }
+  .module-credits__column .layout-mobile {
+    padding: 0 10px; }
   .js-viewing-full-project .module-credits__column {
     width: 25%;
     float: left; }
@@ -8259,10 +7849,9 @@ div[js-index-content="index"] {
       .js-viewing-full-project .module-credits__column {
         padding-left: 10px;
         padding-right: 10px; } }
-    @media screen and (max-width: 849px) {
-      .js-viewing-full-project .module-credits__column {
-        padding-left: 10px;
-        padding-right: 10px; } }
+    .js-viewing-full-project .module-credits__column .layout-mobile {
+      padding-left: 10px;
+      padding-right: 10px; }
 
 .show-on-full-project {
   display: none; }
@@ -8281,10 +7870,9 @@ div[js-index-content="index"] {
     .js-viewing-full-project .index-project {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .js-viewing-full-project .index-project {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .js-viewing-full-project .index-project .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 .js-viewing-full-project .navbar {
   display: none; }
 
@@ -8299,18 +7887,16 @@ div[js-index-content="index"] {
     content: "";
     display: table;
     clear: both; }
-  @media screen and (max-width: 849px) {
-    .studio {
-      padding-left: 20px;
-      padding-right: 20px; } }
+  .studio .layout-mobile {
+    padding-left: 20px;
+    padding-right: 20px; }
   @media screen and (min-width: 850px) {
     .studio {
       padding-left: 25px;
       padding-right: 25px; } }
-  @media screen and (max-width: 849px) {
-    .studio {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .studio .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .studio__spacer {
   width: 25%;
@@ -8319,10 +7905,9 @@ div[js-index-content="index"] {
     .studio__spacer {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .studio__spacer {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .studio__spacer .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .studio__content {
   width: 75%;
@@ -8332,10 +7917,9 @@ div[js-index-content="index"] {
     .studio__content {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .studio__content {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .studio__content .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .studio__locations {
   position: absolute;
@@ -8351,9 +7935,8 @@ div[js-index-content="index"] {
   width: 33.33333%;
   float: left;
   padding: 0 10px; }
-  @media screen and (max-width: 849px) {
-    .studio__location {
-      padding: 0 10px; } }
+  .studio__location .layout-mobile {
+    padding: 0 10px; }
 
 @media screen and (min-width: 950px) {
   .studio__city {
@@ -8396,10 +7979,9 @@ div[js-index-content="index"] {
     content: "";
     display: table;
     clear: both; }
-  @media screen and (max-width: 849px) {
-    .studio__team {
-      margin-left: -10px;
-      margin-right: -10px; } }
+  .studio__team .layout-mobile {
+    margin-left: -10px;
+    margin-right: -10px; }
   @media screen and (min-width: 850px) {
     .studio__team {
       margin-left: -10px;
@@ -8415,10 +7997,9 @@ div[js-index-content="index"] {
     .studio__team-member {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .studio__team-member {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .studio__team-member .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
   .studio__team-member:nth-child(odd) {
     clear: both; }
 
@@ -8443,10 +8024,9 @@ div[js-index-content="index"] {
     content: "";
     display: table;
     clear: both; }
-  @media screen and (max-width: 849px) {
-    .studio__services {
-      margin-left: -10px;
-      margin-right: -10px; } }
+  .studio__services .layout-mobile {
+    margin-left: -10px;
+    margin-right: -10px; }
   @media screen and (min-width: 850px) {
     .studio__services {
       margin-left: -10px;
@@ -8459,10 +8039,9 @@ div[js-index-content="index"] {
     .studio__services-column {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .studio__services-column {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .studio__services-column .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .studio__service-header {
   margin-bottom: 70px; }
@@ -8491,10 +8070,9 @@ div[js-index-content="index"] {
     content: "";
     display: table;
     clear: both; }
-  @media screen and (max-width: 849px) {
-    .studio__clients {
-      margin-left: -10px;
-      margin-right: -10px; } }
+  .studio__clients .layout-mobile {
+    margin-left: -10px;
+    margin-right: -10px; }
   @media screen and (min-width: 850px) {
     .studio__clients {
       margin-left: -10px;
@@ -8507,10 +8085,9 @@ div[js-index-content="index"] {
     .studio__clients-column {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .studio__clients-column {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .studio__clients-column .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .studio__clients-header {
   margin-bottom: 70px; }
@@ -8535,10 +8112,9 @@ div[js-index-content="index"] {
     .index-journal {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .index-journal {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .index-journal .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .index-journal__journal {
   padding-top: 35px;
@@ -8582,9 +8158,8 @@ div[js-index-content="index"] {
   padding: 0 10px;
   margin-top: 35px;
   margin-bottom: 35px; }
-  @media screen and (max-width: 849px) {
-    .index-journal__content {
-      padding: 0 10px; } }
+  .index-journal__content .layout-mobile {
+    padding: 0 10px; }
 
 .footer-contact {
   position: fixed;
@@ -8628,10 +8203,9 @@ div[js-index-content="index"] {
     content: "";
     display: table;
     clear: both; }
-  @media screen and (max-width: 849px) {
-    .footer__container {
-      padding-left: 20px;
-      padding-right: 20px; } }
+  .footer__container .layout-mobile {
+    padding-left: 20px;
+    padding-right: 20px; }
 
 .footer__email-address {
   position: absolute;
@@ -8657,10 +8231,9 @@ div[js-index-content="index"] {
     .footer__address1 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .footer__address1 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .footer__address1 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .footer__address2 {
   width: 12.5%;
@@ -8673,10 +8246,9 @@ div[js-index-content="index"] {
     .footer__address2 {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .footer__address2 {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .footer__address2 .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .footer__spacer {
   width: 12.5%;
@@ -8685,10 +8257,9 @@ div[js-index-content="index"] {
     .footer__spacer {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .footer__spacer {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .footer__spacer .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .footer__email {
   width: 25%;
@@ -8697,10 +8268,9 @@ div[js-index-content="index"] {
     .footer__email {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (max-width: 849px) {
-    .footer__email {
-      padding-left: 10px;
-      padding-right: 10px; } }
+  .footer__email .layout-mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .footer-signup__input-wrapper {
   position: relative; }

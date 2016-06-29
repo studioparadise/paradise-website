@@ -322,8 +322,11 @@ $max: max-width;
 }
 
 @mixin rm {
+  .layout-mobile {
+    @content;    
+  }
   @include at-query($max, $desktop-1) {
-    @content;
+
   }
 }
 
@@ -1238,6 +1241,9 @@ $desktop-margin: 35px;
 // global styles
 body {
   font-family: 'C';
+}
+.layout-default {
+  // min-width: 750px;
 }
 
 // typography
