@@ -24,6 +24,7 @@ modules:
 - type: image
   url: 
   image: "/uploads/Mikoh_20160616_MLP_A-05.jpg"
+  dimension: 2400x1552
 - type: image
   image: "/uploads/Mikoh_20160616_MLP_A-07.jpg"
 - type: image
