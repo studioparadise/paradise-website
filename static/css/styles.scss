@@ -2049,6 +2049,7 @@ div[js-index-content="index"]{
 // journal
 .index-journal {
   @include column(6);
+  padding-bottom: 35px;
 }
 .index-journal__journal {
   padding-top: 35px;

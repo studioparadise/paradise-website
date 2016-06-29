@@ -151,7 +151,7 @@ root.controllers.navbar2 = ($element, args) ->
 			scrollSpyTarget = $label.attr 'js-scrollspy-nav'
 			if scrollSpyTarget
 				$("html, body").stop(true, true).animate
-					scrollTop: $("[js-scrollspy=\"#{scrollSpyTarget}\"]").offset().top - 35
+					scrollTop: $("[js-scrollspy=\"#{scrollSpyTarget}\"]").offset().top
 				, 1000, 'easeInOutExpo', ->
 					api.scrolling = false
 					activateItem $item
@@ -181,6 +181,7 @@ root.controllers.navbar2 = ($element, args) ->
 			if args.preventAlign
 				console.log 'root element. clearing'
 				api.clearNavbarState()
+				$('html,body').scrollTop(0)
 
 			showDropdown $dropdown, true
 

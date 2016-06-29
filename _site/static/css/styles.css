@@ -8107,7 +8107,8 @@ div[js-index-content="index"] {
 
 .index-journal {
   width: 75%;
-  float: left; }
+  float: left;
+  padding-bottom: 35px; }
   @media screen and (min-width: 850px) {
     .index-journal {
       padding-left: 10px;
