@@ -35,6 +35,7 @@ modules:
 - type: image
   url: 
   image: "/uploads/4Stationery1.jpg"
+  dimensions: 2400x1799
 - type: image
   credits:
   - url: 
