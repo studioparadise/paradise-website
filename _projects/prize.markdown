@@ -7,6 +7,7 @@ modules:
   image: "/uploads/Prize_Hero.jpg"
 - type: text
   excerpt: This sentence has to do with prize pins.
+  body: 
 - type: image
   image: "/uploads/Prize_hero2.jpg"
 ---
