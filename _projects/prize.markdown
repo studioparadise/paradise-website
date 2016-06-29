@@ -6,7 +6,7 @@ modules:
 - type: hero
   image: "/uploads/Prize_Hero.jpg"
 - type: text
-  excerpt: Insert Copy here.
+  excerpt: This sentence has to do with prize pins.
 - type: image
   image: "/uploads/Prize_hero2.jpg"
 ---
