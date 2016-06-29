@@ -325,9 +325,6 @@ $max: max-width;
   .layout-mobile {
     @content;    
   }
-  @include at-query($max, $desktop-1) {
-
-  }
 }
 
 @mixin rd {
