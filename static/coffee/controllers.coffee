@@ -41,15 +41,6 @@ root.controllers.moduleCredits = ($element, args) ->
 
 root.controllers.navbar2 = ($element, args) ->
 	api = {}
-	console.log 'init navbar2'
-	data = window.navbarData
-
-	# for each item, it spawns a secondary menu to its right.
-	do populateNavbarState = ->
-		### Populate initial navbar state.
-		T1 only.
-		T2 comes after T1 selection.
-		###
 
 	do handleColumnSizing = ->
 		### Handle column sizing. 
@@ -78,7 +69,6 @@ root.controllers.navbar2 = ($element, args) ->
 		width = getColumnWidth()
 		$navbarColumns.css
 			width: width
-
 	$(window).on 'resize', handleColumnSizing
 
 	do centerNavbar = ->
@@ -87,8 +77,18 @@ root.controllers.navbar2 = ($element, args) ->
 		wHeight = $(window).height()
 		$wrapper.css
 			marginTop: (wHeight/2) - (height/2)
-
 	$(window).on 'resize', centerNavbar
+
+
+	do handleMobileNav = ->
+		$navOpen = $("[js-mobile-navbar-open]")
+		toggleMobileNavbar = ->
+			if $("body").hasClass 'mobile-navbar-is-open'
+				$("body").removeClass 'mobile-navbar-is-open'
+			else
+				$("body").addClass 'mobile-navbar-is-open'
+
+		$navOpen.on 'click', toggleMobileNavbar
 
 	$allContent = $("[js-index-content]")
 	api.hideAllContentAndFadeInOne = ($content) ->
@@ -105,11 +105,12 @@ root.controllers.navbar2 = ($element, args) ->
 		$logo = $element.find('[js-navbar-logo]')
 		# show slider on logo click
 		$logo.on 'click', (ev) ->
-			ev.preventDefault()
-			$el = $("[js-index-content=\"index\"]")
-			api.hideAllContentAndFadeInOne $el
-			api.clearNavbarState()
-			return false
+			if not args.mobile
+				ev.preventDefault()
+				$el = $("[js-index-content=\"index\"]")
+				api.hideAllContentAndFadeInOne $el
+				api.clearNavbarState()
+				return false
 
 	showDropdown = ($dropdown, apply) ->
 		if apply

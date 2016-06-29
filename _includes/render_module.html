@@ -15,6 +15,9 @@
 			<div class="module-image__ratio" data-responsive-image-dimensions="{{ module.dimensions | default: '2400x755' }}">
 				<img class="hero__img lazyload" data-src="{{ module.image }}" alt="{{ module.alt | default: '' }}" />
 			</div>
+			<div class="hide-on-mobile mobile-project__title">
+				{{ project.title }}
+			</div>
 		</div>
 	{% when 'image' %}
 		<div class="module-image__ratio" data-responsive-image-dimensions="{{ module.dimensions | default: '2400x1600' }}">

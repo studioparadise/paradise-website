@@ -1,0 +1,347 @@
+---
+title: Home Page
+layout: mobile
+fulltitle: Studio Paradise
+excerpt: Studio Paradise
+---
+<div class="mobile">
+	{% assign projects = site.projects | sort: "position" %}
+	{% for project in projects limit: 1 %}
+		<div class="mobile-project">
+			{% for module in project.modules limit: 1 %}
+				{% include render_module.html %}
+			{% endfor %}
+		</div>
+	{% endfor %}
+	<div class="mobile__contact">
+		<div class="mobile__contact-header">
+			Contact
+		</div>
+		<a class="mobile__email-address" href="mailto:hello@studioparadise.com">
+			hello@studioparadise.com
+		</a>
+		<div class="mobile__addresses">
+			<div class="mobile__address">
+				Sydney<br>
+				Suite 4, Level<br>
+				1137 Bridge Rd<br>
+				Glebe NSW 2037<br>
+				+61 2 9518 4443<br>
+			</div>
+			<div class="mobile__address">
+				New York<br>
+				153 Centre St <br>
+				Suite 206<br>
+				New York NY 10013  <br>
+				+1 917 363 8971<br>
+			</div>
+		</div>
+		<div class="mobile-social">
+			<div class="mobile-social__item">
+				F
+			</div><div class="mobile-social__item">
+				IN
+			</div><div class="mobile-social__item">
+				T
+			</div>
+		</div>
+	</div>
+	{% for project in projects offset: 1 %}
+		<a href="{{ project.url }}" class="mobile-project">
+			{% for module in project.modules limit: 1 %}
+				{% include render_module.html %}
+			{% endfor %}
+		</a>
+	{% endfor %}
+	<div class="content-wrapper" js-index-content="projects">
+		<div class="content">
+			<div class="index-projects">
+				{% assign projects = site.projects | sort: "position" %}
+				{% for project in projects %}
+					<div class="row" js-scrollspy="{{ project.title | slugify }}">
+						<div class="content-navbar-grid-spacer">&nbsp;</div>
+						<article class="index-project" js-index-project="{{ project.title | slugify }}" js-controller="project">
+							<div class="index-project__close show-on-full-project">
+								X
+							</div>
+							<div class="index-project__inner">
+								{% for module in project.modules %}
+									{% include render_module.html %}
+								{% endfor %}
+							</div>
+						</article>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+
+
+	<div class="studio" js-index-content="studio">
+		<div class="studio__spacer">
+			&nbsp;
+		</div>
+		<div class="studio__content" js-controller="studioContent">
+			<div class="relative">
+				<div class="studio__locations">
+					<div class="studio__location" js-controller="studioLocation" js-args="{location: 'nyc'}">
+						<div class="studio__city">
+							New York, USA
+						</div>
+						<div class="studio__day-and-time">
+							<div class="studio__day" js-date>
+								Thursday April 28
+							</div>
+							<div class="studio__time" js-time>
+								12:00pm
+							</div>
+						</div>
+					</div>
+					<div class="studio__location" js-controller="studioLocation" js-args="{location: 'sydney'}">
+						<div class="studio__city">
+							Sydney, Australia
+						</div>
+						<div class="studio__day-and-time">
+							<div class="studio__day" js-date>
+								Fri April 29
+							</div>
+							<div class="studio__time" js-time>
+								1:59am
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="studio__info" js-scrollspy="manifesto">
+					<p>
+						Welcome to Paradise.
+					</p>
+					<p>
+						One of the most widely accepted interpretations of Paradise is the Garden of Eden, home of Adam and Eve before they made a mess of it by eating some fruit. But there are as many notions of Paradise as there are people dreaming of it. 
+					</p>
+					<p>
+						For some, Paradise is a hammock swaying between two palms on a deserted beach; for others, Paradise is an ice-cold beer at 5:15 on a Friday, or dinner and a movie–minus the kids. Some people even find Paradise to be a town directly adjacent to the city of Las Vegas. Which it is, actually.
+					</p>
+					<p>
+						For us, though, Paradise is our design and product studio. That’s what we called it–Paradise. And it happens to be the source of literal Paradise for us, because here we get to take our vast knowledge and experience working in-house for some of today’s best brands, and use it to create new and supernaturally original ideas for others. It’s our background experience that sets us apart. We’ve been in the trenches and that gives us our edge. 
+					</p>
+					<p>
+						In short, we know our shit, and that’s Paradise. 
+					</p>
+
+				</div>
+
+				<section js-scrollspy="team">
+					<div class="style-studio-header style-studio-header--who-we-are">
+						— Who We Are
+					</div>
+					<div class="studio__team">
+						<div class="studio__team-member">
+							<img class="studio__team-img" />
+							<div class="studio__team-info">
+								<span class="studio__team-title">
+									Jay O'Neill
+								</span>
+								Partner &amp; Product Director Australia
+							</div>
+							<p class="studio__team-bio">
+								Jay hails from the Gold Coast and serves as the head of product design. He’s lead product design teams at Billabong, Nixon Watches, RVCA, Tsovet and RAEN — and really knows how to conceive, create and produce a product.  He recently launched Leader Bag Co. a premium baby bag company that has grown a fast following.
+							</p>
+						</div>
+						<div class="studio__team-member">
+							<img class="studio__team-img" />
+							<div class="studio__team-info">
+								<span class="studio__team-title">
+									Luke Flynn
+								</span>
+								Partner &amp; Creative Director NYC
+							</div>
+							<p class="studio__team-bio">
+								Born in Sydney, Luke leads is the creative director at Paradise with a a killer eye for branding & art direction. He’s has worked with brands and agencies including Saturdays NYC, Imprint Projects and Common Space — and launched accessories company Prize Pins. 
+							</p>
+						</div>
+
+						<div class="studio__team-member">
+							<img class="studio__team-img" />
+							<div class="studio__team-info">
+								<span class="studio__team-title">
+									Margaux Le Pierrès
+								</span>
+								Partner &amp; Creative Director
+							</div>
+							<p class="studio__team-bio">
+								Coming from the great white north of Montreal, Margaux designs with a focus on brand and digital design.  Margaux has been recognized by D&AD, The Type Directors Club and Awwwards for her excellent digital design and worked with leading fashion brand Judith & Charles to conceive their most recent website.
+							</p>
+						</div>
+
+						<div class="studio__team-member">
+							<img class="studio__team-img" />
+							<div class="studio__team-info">
+								<span class="studio__team-title">
+									Yuji Tomita
+								</span>
+								Development Partner
+							</div>
+							<p class="studio__team-bio">
+								Yuji Tomita heads up our technology department and is responsible for all things digital. From the Pacific Northwest, Yuji started a winery in Argentina and helped launch Grovemade, a wood products company based in Portland.
+							</p>
+						</div>
+
+					</div>
+				</section>
+
+				<section class="studio__services" js-scrollspy="services">
+					<div class="studio__services-column">
+						<div class="style-studio-header  studio__service-header">
+							— What We Do
+						</div>
+						<div class="studio__services-summary">
+							Visual Identity<br>
+							Art Direction<br>
+							Product Design<br>
+							Digital<br>
+						</div>
+					</div>
+					<div class="studio__services-column">
+						<div class="style-studio-header studio__service-header">
+							— How We Do It
+						</div>
+						<div class="studio__service-group">
+							<p>
+								<span class="studio__service-title">
+									We Discover.
+								</span>
+								We look at the big picture and how your brand fits into it. Where are you now and where do you want to be? You know your brand best–tell us about it. We listen. We nod. We hold our chins. We remove our glasses and suck on the stem. Then we blow your ever-lovin’ socks off.
+							</p>
+						</div>
+						<div class="studio__service-group">
+							<p>
+								<span class="studio__service-title">
+									We Strategize.
+								</span>
+								We take the big questions into consideration: how will you stand out? Who are you? Why does your company exist? Why do you exist? Do you exist? Is anything real? Where am I? Then we blow your ever-lovin’ socks off a second time.
+							</p>
+						</div> 
+						<div class="studio__service-group">
+							<p>
+								<span class="studio__service-title">
+									We Play.
+								</span>
+								We take the big questions into consideration: how will you stand out? Who are you? Why does your company exist? Why do you exist? Do you exist? Is anything real? Where am I? Then we blow your ever-lovin’ socks off a second time.
+							</p>
+						</div> 
+						<div class="studio__services-group">
+							<p>
+								<span class="studio__service-title">
+									We Execute.
+								</span>
+								We take the big questions into consideration: how will you stand out? Who are you? Why does your company exist? Why do you exist? Do you exist? Is anything real? Where am I? Then we blow your ever-lovin’ socks off a second time.
+							</p>
+						</div>
+					</div>
+				</section>
+
+				<div class="studio__services" js-scrollspy="clients">
+					<div class="studio__services-column">
+						<div class="style-studio-header  studio__service-header">
+							— Who We Work With
+						</div>
+					</div>
+					<div class="studio__services-column">
+						<div class="studio__service-clients">
+							<a class="studio__service-client" href="http://jackerwin.com">
+								Jack Erwin
+							</a>
+							<a class="studio__service-client" href="http://jackerwin.com">
+								Saturdays
+							</a>
+							<a class="studio__service-client" href="http://jackerwin.com">
+								Mikoh
+							</a>
+							<a class="studio__service-client" href="http://jackerwin.com">
+								Dudleys
+							</a>
+							<a class="studio__service-client" href="http://jackerwin.com">
+								Express
+							</a>
+							<a class="studio__service-client" href="http://jackerwin.com">
+								Convicts 
+							</a>
+							<a class="studio__service-client" href="http://jackerwin.com">
+								Kaelen
+							</a>
+							<a class="studio__service-client" href="http://jackerwin.com">
+								Flower shop 
+							</a>	
+							<a class="studio__service-client" href="http://jackerwin.com">
+								Abbott
+							</a>
+							<a class="studio__service-client" href="http://jackerwin.com">
+								Well well 
+							</a>
+							<a class="studio__service-client" href="http://jackerwin.com">
+								Tsovet 
+							</a>
+							<a class="studio__service-client" href="http://jackerwin.com">
+								FLWR
+							</a>
+							<a class="studio__service-client" href="http://jackerwin.com">
+								Raen
+							</a>
+							<a class="studio__service-client" href="http://jackerwin.com">
+								Leader Bag Co. 
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div js-index-content="journal">
+		<div class="content container">
+			<div class="row">
+				<div class="content-navbar-grid-spacer">&nbsp;</div>
+				<div class="index-journal">
+					{% assign posts = site.journals %}
+
+					{% for post in posts reversed %}
+					    {% capture month %}{{ post.date | date: '%Y %b' }}{% endcapture %}
+					    {% capture nmonth %}{{ post.next.date | date: '%Y %b' }}{% endcapture %}
+					    {% if month != nmonth %}
+							<div class="index-journal__month" js-scrollspy="{{ post.date | date: '%Y-%B' }}">
+						{% endif %}
+						<div class="index-journal__journal">
+							<img class="index-journal__hero-img" src="{{ post['image'] }}" />
+							<div class="index-journal__header">
+								<div class="index-journal__date">
+									{{ post.date | date: "%B %d %Y" }}
+								</div>
+								{% unless post['hide-title'].size > 1 %}
+									<h1 class="index-journal__title">
+										{{ post.title }}
+									</h1>
+								{% endunless %}
+							</div>
+							{% if post.content.size > 5 %}
+								<div class="row">
+									<div class="index-journal__content">	
+										{{ post.content }}
+									</div>
+								</div>
+							{% endif %}
+							{% assign images = post['images'] %}
+							{% if images.size > 0 %}
+								{% for image in images %}
+									<img class="index-journal__img lazyload" data-src="{{ image.image }}" alt="{{ image.alt | default: '' }}" />
+								{% endfor %}
+							{% endif %}
+						</div>
+					    {% if month != nmonth %}
+							</div>
+						{% endif %}
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

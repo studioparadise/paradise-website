@@ -30,6 +30,7 @@ defaults:
     type: projects
   values:
     layout: project
+
 tagline: Changing the world, one uninspired quote at a time
 url: http://yourwebsite.com
 socialimg: "/img/social.jpg"

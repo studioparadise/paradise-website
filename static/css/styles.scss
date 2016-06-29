@@ -332,12 +332,13 @@ $max: max-width;
     @content;
   }
 }
-.hide-on-mobile {
-  @include rm {
-    display: none;
+.hide-on-desktop {
+  display: none;
+  .mobile & {
+    display: block;
   }
 }
-.hide-on-desktop {
+.hide-on-mobile {
   @include rd {
     display: none;
   }
@@ -936,8 +937,8 @@ $class-type: unquote(".");
 // simple grid
 $grid_columns: 8;
 
-$mobile-gutter: 35px;
-$desktop-gutter: 35px;
+$mobile-gutter: 20px;
+$desktop-gutter: 20px;
 
 $mobile-margin: 20px;
 $desktop-margin: 35px;
@@ -1285,6 +1286,16 @@ h1 {
 	top: 0;
 	bottom: 0;
   z-index: 100;
+  @include rm {
+
+  }
+}
+
+.navbar__items {
+  @include rm {
+    margin-left: -200%;
+    margin-top: 0 !important; // override JS
+  }
 }
 
 .navbar__column {
@@ -1299,6 +1310,7 @@ h1 {
   padding: 0 ($desktop-gutter/2);
   @include rm {
     padding: 0 ($mobile-gutter/2);
+    width: 100px !important;
   }
 }
 
@@ -1333,32 +1345,184 @@ h1 {
     width: 82px;
     height: 20px;
   }
+  @include rm {
+    top: 20px;
+    left: 20px;
+    svg {
+      width: 62px;
+      height: 15.5px;
+    }
+  }
+}
+
+// mobile nav
+
+.mobile-navbar-open {
+  display: none;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  width: 13px;
+  z-index: 1000;
+  @include rm {
+    display: block;
+  }
+}
+.mobile-navbar-open__line {
+  height: 1px;
+  background: black;
+  &:not(:last-child) {
+    margin-bottom: 4px;
+  }
+}
+
+.fixed-content-wrapper {
+  @include transition(transform .3s ease 0s);
+}
+
+.mobile-navbar-is-open {
+  .fixed-content-wrapper {
+    @include transform(translateX(170px));
+  }  
+  .navbar__items {
+    margin-left: 0;
+  }
+}
+.mobile {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .01em;
+  overflow-x: hidden;
+  padding: 50px 20px;
+  // text
+  .module-text__spacer {
+    display: none;
+  }
+  .module-text {
+    margin: 20px 0 40px 0;
+  }
+  .module-text__excerpt {
+    float: none;
+    width: 100%;
+    font-size: 16px;
+  }
+  // spacer
+  .module-website-link {
+    width: 100%;
+    margin: 40px 0 40px 0;
+  }
+  .module-website-link__spacer {
+    display: none;
+  }
+  .module-website-link__column {
+    width: 100%;
+    padding: 0;
+  }
+  // caption
+  .module__image-caption {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+.mobile-project {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  .module-image__ratio {
+    margin-bottom: 8px;
+  }
+  margin-bottom: 15px;
+}
+.mobile-project__title {
+  font-size: 18px;
+  line-height: 100%;
+}
+.mobile__contact {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 0 0 20px 0;
+
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+.mobile__contact-header {
+  margin-top: 15px;
+  margin-bottom: 15px;  
+}
+.mobile__email-address {
+  text-align: center;
+  border: 1px solid black;
+  padding: 12px 0;
+  text-decoration: none;
+  color: black;
+  display: block;
+  font-size: 12px;
+}
+.mobile__addresses {
+  padding: 20px 0;
+  @include clearfix;
+}
+.mobile__address {
+  width: 50%;
+  &:first-child {
+    float: left;
+    padding-right: 10px;
+  }
+  &:last-child {
+    padding-left: 10px;
+    float: right;
+  }
+}
+// social 
+.mobile-social {
+
+}
+.mobile-social__item {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid black;
+  margin-left: -1px;
+}
+.mobile__next {
+  font-size: 16px;
+  text-decoration: none;
+  color: #cccccc;
+  padding: 10px 0;
+  font-weight: 500;
+  display: block;
+  border-top: 2px solid rgba(black, .2);
+  margin-top: -1px;
+}
+.mobile__next-project {
+  color: black;
 }
 
 
 // v2 navbar
 
 .navbar {
-
+  @include rm {
+    padding-top: 70px;
+  }
 }
 
 .navbar__item {
   width: 200px;
-  // border: 1px solid red;
+
   position: relative;
   padding-left: $desktop-gutter/2;
   padding-right: $desktop-gutter/2;
-  // &:hover {
-  //   & > .navbar__dropdown {
-  //     left: 200px;
-  //   }
-  // }
   z-index: 1;
-  background: white;
   &.is-active {
     > .navbar__label {
       color: black;
     }
+  }
+  @include rm {
+    width: 80px !important; // override js
   }
 }
 .navbar__label {
@@ -1378,6 +1542,9 @@ h1 {
   top: 0;
   // border: 1px solid blue;
   z-index: 0;
+  @include rm {
+    margin-top: 0 !important; // override js
+  }
 }
 
 //content
@@ -1389,13 +1556,15 @@ h1 {
 }
 .content-navbar-grid-spacer {
 	@include column(2);
+  @include rm {
+    display: none;
+  }
 }
 .content {
 	z-index: 2;
 	position: relative;
   // height: calc(100vh - 230px)
 }
-
 .primary-slide {
 	height: 100vh;
 	padding: 60px 0;
@@ -1405,6 +1574,10 @@ h1 {
 //index
 .index-swiper {
 	@include column(6);
+  @include rm {
+    width: 100%;
+    display: none;
+  }
 
   .swiper-container {
     margin-right: -1 * $desktop-margin;
@@ -1480,6 +1653,7 @@ div[js-index-content="index"]{
 .module-image__ratio {
   position: relative;
   margin-bottom: 35px;
+  @include rm { margin-bottom: 20px; };
   > img {
     position: absolute;
     top: 0;

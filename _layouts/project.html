@@ -1,7 +1,18 @@
 ---
-layout: default
+layout: mobile
 ---
-
-{% for module in page.modules %}
-	{% include render_module.html %}
-{% endfor %}
+{% assign project = page %}
+<div class="mobile">
+	{% for module in project.modules %}
+		{% include render_module.html %}
+	{% endfor %}
+	
+	{% if page.next.url %}
+		<a class="mobile__next" href="{{ page.next.url }}">
+			Up Next
+			<span class="mobile__next-project">
+				{{ page.next.title }}
+			</span>
+		</a>
+	{% endif %}
+</div>

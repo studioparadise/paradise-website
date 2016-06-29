@@ -419,7 +419,6 @@ $ ->
   root.init()
 
 
-
 window.debug = (msg) ->
 	$("[js-debug-txt]").html msg
 	console.log msg
