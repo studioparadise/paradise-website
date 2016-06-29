@@ -54,6 +54,7 @@ modules:
     caption: test123
 - type: image
   image: "/uploads/8JE_AD_03.jpg"
+  dimensions: 2400x1740
 - type: image
   image: "/uploads/9JE_WEB_01.jpg"
   dimensions: 2400x3392
