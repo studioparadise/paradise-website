@@ -21,15 +21,15 @@ modules:
     and truly reflected the men purchasing and wearing JE shoes. \n\n* *Art Direction*\n*
     *Web Design*\n* *Brand Strategy*\n* *Web Development*\n* *Brand Identity*\n"
 - type: image
-  image: "/uploads/2JE_Logo.jpg"
-  alt: 
-  caption: 
-- type: image
   images:
   - image: 
     alt: 
     caption: 
   image: "/uploads/3JE_Logo2.jpg"
+  alt: 
+  caption: 
+- type: image
+  image: "/uploads/2JE_Logo.jpg"
   alt: 
   caption: 
 - type: image
