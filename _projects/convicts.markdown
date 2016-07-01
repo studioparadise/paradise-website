@@ -34,6 +34,14 @@ modules:
   image: "/uploads/Con_Branding.jpg"
   alt: 
   caption: 
+- type: image
+  image:
+  - "/uploads/Convicts_Web_Map.jpg"
+  dimensions: 2400x1606
+- type: image
+  image:
+  - "/uploads/Convicts_news.jpg"
+  dimensions: 2382x1606
 - type: website-link
   credits:
   - url: 
@@ -54,9 +62,5 @@ modules:
   - url: 
     emphasis: Development
     name: Eric Wang
-- type: image
-  image:
-  - "/uploads/Convicts_Web_Map.jpg"
-  dimensions: 2400x1606
 ---
 
