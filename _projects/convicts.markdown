@@ -42,6 +42,10 @@ modules:
   image:
   - "/uploads/Convicts_news.jpg"
   dimensions: 2382x1606
+- type: image
+  dimensions: 2382x1606
+  image:
+  - "/uploads/Convicts_news2.jpg"
 - type: website-link
   credits:
   - url: 
