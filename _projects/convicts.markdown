@@ -28,16 +28,24 @@ modules:
   alt: 
   caption: 
 - type: image
-  images:
-  - image: 
-    alt: 
-    caption: 
   image: "/uploads/COn_Branding.gif"
 - type: image
   url: 
   image: "/uploads/Con_Branding.jpg"
   alt: 
   caption: 
+- type: image
+  image:
+  - "/uploads/Convicts_Web_Map.jpg"
+  dimensions: 2400x1606
+- type: image
+  image:
+  - "/uploads/Convicts_news.jpg"
+  dimensions: 2382x1606
+- type: image
+  dimensions: 2382x1606
+  image:
+  - "/uploads/Convicts_news2.jpg"
 - type: website-link
   credits:
   - url: 
