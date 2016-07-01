@@ -39,6 +39,9 @@ modules:
   - "/uploads/Convicts_Web_Map.jpg"
   dimensions: 2400x1606
 - type: image
+  dimensions: 2400x3795
+  image: "/uploads/CONVICTS_LARGEWEB.jpg"
+- type: image
   image:
   - "/uploads/Convicts_news.jpg"
   dimensions: 2382x1606
