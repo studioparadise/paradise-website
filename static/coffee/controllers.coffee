@@ -16,7 +16,7 @@ root.controllers.project = ($element, args) ->
 
 			$('html, body').animate
 				scrollTop: $trigger.closest('.index-project').offset().top
-			, 2000, 'easeInOutExpo'
+			, 0, 'easeInOutExpo'
 		$trigger.on 'click', toggleFullProjectView
 
 root.controllers.moduleCredits = ($element, args) ->
