@@ -30,9 +30,10 @@
 ==============================================================================*/
 /*============================================================================ Dependency-free breakpoint mixin - Based on http://blog.grayghostvisuals.com/sass/sass-media-query-mixin/ - Usage docs: http://shopify.github.io/Timber/#sass-mixins
 ==============================================================================*/
-@media screen and (max-width: 849px) { .hide-on-mobile { display: none; } }
+.hide-on-desktop { display: none; }
+.mobile .hide-on-desktop { display: block; }
 
-@media screen and (min-width: 850px) { .hide-on-desktop { display: none; } }
+@media screen and (min-width: 850px) { .hide-on-mobile { display: none; } }
 
 /*============================================================================ #Normalize
 ==============================================================================*/
@@ -698,1967 +699,1967 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
 
 .container { margin-left: auto; margin-right: auto; clear: both; padding-left: 35px; padding-right: 35px; }
 .container:after { content: ""; display: table; clear: both; }
-@media screen and (max-width: 849px) { .container { padding-left: 20px; padding-right: 20px; } }
+.container .layout-mobile { padding-left: 20px; padding-right: 20px; }
 
 .container-row { margin-left: auto; margin-right: auto; clear: both; padding-left: 35px; padding-right: 35px; }
 .container-row:after { content: ""; display: table; clear: both; }
-@media screen and (max-width: 849px) { .container-row { padding-left: 20px; padding-right: 20px; } }
-@media screen and (min-width: 850px) { .container-row { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .container-row { padding-left: 2.5px; padding-right: 2.5px; } }
+.container-row .layout-mobile { padding-left: 20px; padding-right: 20px; }
+@media screen and (min-width: 850px) { .container-row { padding-left: 25px; padding-right: 25px; } }
+.container-row .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .container-row-g12 { margin-left: auto; margin-right: auto; clear: both; padding-left: 35px; padding-right: 35px; }
 .container-row-g12:after { content: ""; display: table; clear: both; }
-@media screen and (max-width: 849px) { .container-row-g12 { padding-left: 20px; padding-right: 20px; } }
+.container-row-g12 .layout-mobile { padding-left: 20px; padding-right: 20px; }
 
 .row:after, .grid:after, .grid--rev:after, .grid--full:after { content: ""; display: table; clear: both; }
-@media screen and (max-width: 849px) { .row, .grid, .grid--rev, .grid--full { margin-left: -17.5px; margin-right: -17.5px; } }
-@media screen and (min-width: 850px) { .row, .grid, .grid--rev, .grid--full { margin-left: -17.5px; margin-right: -17.5px; } }
+.row .layout-mobile, .grid .layout-mobile, .grid--rev .layout-mobile, .grid--full .layout-mobile { margin-left: -10px; margin-right: -10px; }
+@media screen and (min-width: 850px) { .row, .grid, .grid--rev, .grid--full { margin-left: -10px; margin-right: -10px; } }
 
 .row-no-pad:after { content: ""; display: table; clear: both; }
 
 .g1 { width: 12.5%; float: left; }
-@media screen and (min-width: 850px) { .g1 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .g1 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .g1 { padding-left: 10px; padding-right: 10px; } }
+.g1 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .g1-no-pad { width: 12.5%; float: left; }
 
 .isolation-g1-1 { /*
 Isolation span: give column span width and start position.
 */ width: 12.5%; float: left; margin-left: 0%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g1-1 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g1-1 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g1-1 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g1-1 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g1-1-no-pad { width: 12.5%; float: left; margin-left: 0%; margin-right: -100%; }
 
-.g1-in-g1 { width: 100%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g1-in-g1 { padding: 0 17.5px; } }
+.g1-in-g1 { width: 100%; float: left; padding: 0 10px; }
+.g1-in-g1 .layout-mobile { padding: 0 10px; }
 
 .isolation-g1-2 { /*
 Isolation span: give column span width and start position.
 */ width: 12.5%; float: left; margin-left: 12.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g1-2 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g1-2 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g1-2 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g1-2 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g1-2-no-pad { width: 12.5%; float: left; margin-left: 12.5%; margin-right: -100%; }
 
-.g1-in-g2 { width: 50%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g1-in-g2 { padding: 0 17.5px; } }
+.g1-in-g2 { width: 50%; float: left; padding: 0 10px; }
+.g1-in-g2 .layout-mobile { padding: 0 10px; }
 
 .isolation-g1-3 { /*
 Isolation span: give column span width and start position.
 */ width: 12.5%; float: left; margin-left: 25%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g1-3 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g1-3 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g1-3 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g1-3 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g1-3-no-pad { width: 12.5%; float: left; margin-left: 25%; margin-right: -100%; }
 
-.g1-in-g3 { width: 33.33333%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g1-in-g3 { padding: 0 17.5px; } }
+.g1-in-g3 { width: 33.33333%; float: left; padding: 0 10px; }
+.g1-in-g3 .layout-mobile { padding: 0 10px; }
 
 .isolation-g1-4 { /*
 Isolation span: give column span width and start position.
 */ width: 12.5%; float: left; margin-left: 37.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g1-4 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g1-4 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g1-4 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g1-4 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g1-4-no-pad { width: 12.5%; float: left; margin-left: 37.5%; margin-right: -100%; }
 
-.g1-in-g4 { width: 25%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g1-in-g4 { padding: 0 17.5px; } }
+.g1-in-g4 { width: 25%; float: left; padding: 0 10px; }
+.g1-in-g4 .layout-mobile { padding: 0 10px; }
 
 .isolation-g1-5 { /*
 Isolation span: give column span width and start position.
 */ width: 12.5%; float: left; margin-left: 50%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g1-5 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g1-5 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g1-5 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g1-5 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g1-5-no-pad { width: 12.5%; float: left; margin-left: 50%; margin-right: -100%; }
 
-.g1-in-g5 { width: 20%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g1-in-g5 { padding: 0 17.5px; } }
+.g1-in-g5 { width: 20%; float: left; padding: 0 10px; }
+.g1-in-g5 .layout-mobile { padding: 0 10px; }
 
 .isolation-g1-6 { /*
 Isolation span: give column span width and start position.
 */ width: 12.5%; float: left; margin-left: 62.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g1-6 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g1-6 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g1-6 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g1-6 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g1-6-no-pad { width: 12.5%; float: left; margin-left: 62.5%; margin-right: -100%; }
 
-.g1-in-g6 { width: 16.66667%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g1-in-g6 { padding: 0 17.5px; } }
+.g1-in-g6 { width: 16.66667%; float: left; padding: 0 10px; }
+.g1-in-g6 .layout-mobile { padding: 0 10px; }
 
 .isolation-g1-7 { /*
 Isolation span: give column span width and start position.
 */ width: 12.5%; float: left; margin-left: 75%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g1-7 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g1-7 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g1-7 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g1-7 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g1-7-no-pad { width: 12.5%; float: left; margin-left: 75%; margin-right: -100%; }
 
-.g1-in-g7 { width: 14.28571%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g1-in-g7 { padding: 0 17.5px; } }
+.g1-in-g7 { width: 14.28571%; float: left; padding: 0 10px; }
+.g1-in-g7 .layout-mobile { padding: 0 10px; }
 
 .isolation-g1-8 { /*
 Isolation span: give column span width and start position.
 */ width: 12.5%; float: left; margin-left: 87.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g1-8 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g1-8 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g1-8 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g1-8 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g1-8-no-pad { width: 12.5%; float: left; margin-left: 87.5%; margin-right: -100%; }
 
-.g1-in-g8 { width: 12.5%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g1-in-g8 { padding: 0 17.5px; } }
+.g1-in-g8 { width: 12.5%; float: left; padding: 0 10px; }
+.g1-in-g8 .layout-mobile { padding: 0 10px; }
 
 .isolation-g1-9 { /*
 Isolation span: give column span width and start position.
 */ width: 12.5%; float: left; margin-left: 100%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g1-9 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g1-9 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g1-9 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g1-9 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g1-9-no-pad { width: 12.5%; float: left; margin-left: 100%; margin-right: -100%; }
 
-.g1-in-g9 { width: 11.11111%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g1-in-g9 { padding: 0 17.5px; } }
+.g1-in-g9 { width: 11.11111%; float: left; padding: 0 10px; }
+.g1-in-g9 .layout-mobile { padding: 0 10px; }
 
 .isolation-g1-10 { /*
 Isolation span: give column span width and start position.
 */ width: 12.5%; float: left; margin-left: 112.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g1-10 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g1-10 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g1-10 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g1-10 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g1-10-no-pad { width: 12.5%; float: left; margin-left: 112.5%; margin-right: -100%; }
 
-.g1-in-g10 { width: 10%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g1-in-g10 { padding: 0 17.5px; } }
+.g1-in-g10 { width: 10%; float: left; padding: 0 10px; }
+.g1-in-g10 .layout-mobile { padding: 0 10px; }
 
 .isolation-g1-11 { /*
 Isolation span: give column span width and start position.
 */ width: 12.5%; float: left; margin-left: 125%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g1-11 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g1-11 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g1-11 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g1-11 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g1-11-no-pad { width: 12.5%; float: left; margin-left: 125%; margin-right: -100%; }
 
-.g1-in-g11 { width: 9.09091%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g1-in-g11 { padding: 0 17.5px; } }
+.g1-in-g11 { width: 9.09091%; float: left; padding: 0 10px; }
+.g1-in-g11 .layout-mobile { padding: 0 10px; }
 
 .isolation-g1-12 { /*
 Isolation span: give column span width and start position.
 */ width: 12.5%; float: left; margin-left: 137.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g1-12 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g1-12 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g1-12 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g1-12 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g1-12-no-pad { width: 12.5%; float: left; margin-left: 137.5%; margin-right: -100%; }
 
-.g1-in-g12 { width: 8.33333%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g1-in-g12 { padding: 0 17.5px; } }
+.g1-in-g12 { width: 8.33333%; float: left; padding: 0 10px; }
+.g1-in-g12 .layout-mobile { padding: 0 10px; }
 
 .g2 { width: 25%; float: left; }
-@media screen and (min-width: 850px) { .g2 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .g2 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .g2 { padding-left: 10px; padding-right: 10px; } }
+.g2 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .g2-no-pad { width: 25%; float: left; }
 
 .isolation-g2-1 { /*
 Isolation span: give column span width and start position.
 */ width: 25%; float: left; margin-left: 0%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g2-1 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g2-1 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g2-1 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g2-1 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g2-1-no-pad { width: 25%; float: left; margin-left: 0%; margin-right: -100%; }
 
-.g2-in-g1 { width: 200%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g2-in-g1 { padding: 0 17.5px; } }
+.g2-in-g1 { width: 200%; float: left; padding: 0 10px; }
+.g2-in-g1 .layout-mobile { padding: 0 10px; }
 
 .isolation-g2-2 { /*
 Isolation span: give column span width and start position.
 */ width: 25%; float: left; margin-left: 12.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g2-2 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g2-2 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g2-2 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g2-2 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g2-2-no-pad { width: 25%; float: left; margin-left: 12.5%; margin-right: -100%; }
 
-.g2-in-g2 { width: 100%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g2-in-g2 { padding: 0 17.5px; } }
+.g2-in-g2 { width: 100%; float: left; padding: 0 10px; }
+.g2-in-g2 .layout-mobile { padding: 0 10px; }
 
 .isolation-g2-3 { /*
 Isolation span: give column span width and start position.
 */ width: 25%; float: left; margin-left: 25%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g2-3 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g2-3 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g2-3 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g2-3 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g2-3-no-pad { width: 25%; float: left; margin-left: 25%; margin-right: -100%; }
 
-.g2-in-g3 { width: 66.66667%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g2-in-g3 { padding: 0 17.5px; } }
+.g2-in-g3 { width: 66.66667%; float: left; padding: 0 10px; }
+.g2-in-g3 .layout-mobile { padding: 0 10px; }
 
 .isolation-g2-4 { /*
 Isolation span: give column span width and start position.
 */ width: 25%; float: left; margin-left: 37.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g2-4 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g2-4 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g2-4 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g2-4 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g2-4-no-pad { width: 25%; float: left; margin-left: 37.5%; margin-right: -100%; }
 
-.g2-in-g4 { width: 50%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g2-in-g4 { padding: 0 17.5px; } }
+.g2-in-g4 { width: 50%; float: left; padding: 0 10px; }
+.g2-in-g4 .layout-mobile { padding: 0 10px; }
 
 .isolation-g2-5 { /*
 Isolation span: give column span width and start position.
 */ width: 25%; float: left; margin-left: 50%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g2-5 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g2-5 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g2-5 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g2-5 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g2-5-no-pad { width: 25%; float: left; margin-left: 50%; margin-right: -100%; }
 
-.g2-in-g5 { width: 40%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g2-in-g5 { padding: 0 17.5px; } }
+.g2-in-g5 { width: 40%; float: left; padding: 0 10px; }
+.g2-in-g5 .layout-mobile { padding: 0 10px; }
 
 .isolation-g2-6 { /*
 Isolation span: give column span width and start position.
 */ width: 25%; float: left; margin-left: 62.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g2-6 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g2-6 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g2-6 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g2-6 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g2-6-no-pad { width: 25%; float: left; margin-left: 62.5%; margin-right: -100%; }
 
-.g2-in-g6 { width: 33.33333%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g2-in-g6 { padding: 0 17.5px; } }
+.g2-in-g6 { width: 33.33333%; float: left; padding: 0 10px; }
+.g2-in-g6 .layout-mobile { padding: 0 10px; }
 
 .isolation-g2-7 { /*
 Isolation span: give column span width and start position.
 */ width: 25%; float: left; margin-left: 75%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g2-7 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g2-7 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g2-7 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g2-7 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g2-7-no-pad { width: 25%; float: left; margin-left: 75%; margin-right: -100%; }
 
-.g2-in-g7 { width: 28.57143%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g2-in-g7 { padding: 0 17.5px; } }
+.g2-in-g7 { width: 28.57143%; float: left; padding: 0 10px; }
+.g2-in-g7 .layout-mobile { padding: 0 10px; }
 
 .isolation-g2-8 { /*
 Isolation span: give column span width and start position.
 */ width: 25%; float: left; margin-left: 87.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g2-8 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g2-8 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g2-8 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g2-8 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g2-8-no-pad { width: 25%; float: left; margin-left: 87.5%; margin-right: -100%; }
 
-.g2-in-g8 { width: 25%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g2-in-g8 { padding: 0 17.5px; } }
+.g2-in-g8 { width: 25%; float: left; padding: 0 10px; }
+.g2-in-g8 .layout-mobile { padding: 0 10px; }
 
 .isolation-g2-9 { /*
 Isolation span: give column span width and start position.
 */ width: 25%; float: left; margin-left: 100%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g2-9 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g2-9 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g2-9 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g2-9 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g2-9-no-pad { width: 25%; float: left; margin-left: 100%; margin-right: -100%; }
 
-.g2-in-g9 { width: 22.22222%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g2-in-g9 { padding: 0 17.5px; } }
+.g2-in-g9 { width: 22.22222%; float: left; padding: 0 10px; }
+.g2-in-g9 .layout-mobile { padding: 0 10px; }
 
 .isolation-g2-10 { /*
 Isolation span: give column span width and start position.
 */ width: 25%; float: left; margin-left: 112.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g2-10 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g2-10 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g2-10 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g2-10 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g2-10-no-pad { width: 25%; float: left; margin-left: 112.5%; margin-right: -100%; }
 
-.g2-in-g10 { width: 20%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g2-in-g10 { padding: 0 17.5px; } }
+.g2-in-g10 { width: 20%; float: left; padding: 0 10px; }
+.g2-in-g10 .layout-mobile { padding: 0 10px; }
 
 .isolation-g2-11 { /*
 Isolation span: give column span width and start position.
 */ width: 25%; float: left; margin-left: 125%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g2-11 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g2-11 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g2-11 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g2-11 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g2-11-no-pad { width: 25%; float: left; margin-left: 125%; margin-right: -100%; }
 
-.g2-in-g11 { width: 18.18182%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g2-in-g11 { padding: 0 17.5px; } }
+.g2-in-g11 { width: 18.18182%; float: left; padding: 0 10px; }
+.g2-in-g11 .layout-mobile { padding: 0 10px; }
 
 .isolation-g2-12 { /*
 Isolation span: give column span width and start position.
 */ width: 25%; float: left; margin-left: 137.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g2-12 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g2-12 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g2-12 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g2-12 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g2-12-no-pad { width: 25%; float: left; margin-left: 137.5%; margin-right: -100%; }
 
-.g2-in-g12 { width: 16.66667%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g2-in-g12 { padding: 0 17.5px; } }
+.g2-in-g12 { width: 16.66667%; float: left; padding: 0 10px; }
+.g2-in-g12 .layout-mobile { padding: 0 10px; }
 
 .g3 { width: 37.5%; float: left; }
-@media screen and (min-width: 850px) { .g3 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .g3 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .g3 { padding-left: 10px; padding-right: 10px; } }
+.g3 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .g3-no-pad { width: 37.5%; float: left; }
 
 .isolation-g3-1 { /*
 Isolation span: give column span width and start position.
 */ width: 37.5%; float: left; margin-left: 0%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g3-1 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g3-1 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g3-1 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g3-1 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g3-1-no-pad { width: 37.5%; float: left; margin-left: 0%; margin-right: -100%; }
 
-.g3-in-g1 { width: 300%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g3-in-g1 { padding: 0 17.5px; } }
+.g3-in-g1 { width: 300%; float: left; padding: 0 10px; }
+.g3-in-g1 .layout-mobile { padding: 0 10px; }
 
 .isolation-g3-2 { /*
 Isolation span: give column span width and start position.
 */ width: 37.5%; float: left; margin-left: 12.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g3-2 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g3-2 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g3-2 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g3-2 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g3-2-no-pad { width: 37.5%; float: left; margin-left: 12.5%; margin-right: -100%; }
 
-.g3-in-g2 { width: 150%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g3-in-g2 { padding: 0 17.5px; } }
+.g3-in-g2 { width: 150%; float: left; padding: 0 10px; }
+.g3-in-g2 .layout-mobile { padding: 0 10px; }
 
 .isolation-g3-3 { /*
 Isolation span: give column span width and start position.
 */ width: 37.5%; float: left; margin-left: 25%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g3-3 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g3-3 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g3-3 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g3-3 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g3-3-no-pad { width: 37.5%; float: left; margin-left: 25%; margin-right: -100%; }
 
-.g3-in-g3 { width: 100%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g3-in-g3 { padding: 0 17.5px; } }
+.g3-in-g3 { width: 100%; float: left; padding: 0 10px; }
+.g3-in-g3 .layout-mobile { padding: 0 10px; }
 
 .isolation-g3-4 { /*
 Isolation span: give column span width and start position.
 */ width: 37.5%; float: left; margin-left: 37.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g3-4 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g3-4 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g3-4 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g3-4 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g3-4-no-pad { width: 37.5%; float: left; margin-left: 37.5%; margin-right: -100%; }
 
-.g3-in-g4 { width: 75%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g3-in-g4 { padding: 0 17.5px; } }
+.g3-in-g4 { width: 75%; float: left; padding: 0 10px; }
+.g3-in-g4 .layout-mobile { padding: 0 10px; }
 
 .isolation-g3-5 { /*
 Isolation span: give column span width and start position.
 */ width: 37.5%; float: left; margin-left: 50%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g3-5 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g3-5 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g3-5 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g3-5 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g3-5-no-pad { width: 37.5%; float: left; margin-left: 50%; margin-right: -100%; }
 
-.g3-in-g5 { width: 60%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g3-in-g5 { padding: 0 17.5px; } }
+.g3-in-g5 { width: 60%; float: left; padding: 0 10px; }
+.g3-in-g5 .layout-mobile { padding: 0 10px; }
 
 .isolation-g3-6 { /*
 Isolation span: give column span width and start position.
 */ width: 37.5%; float: left; margin-left: 62.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g3-6 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g3-6 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g3-6 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g3-6 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g3-6-no-pad { width: 37.5%; float: left; margin-left: 62.5%; margin-right: -100%; }
 
-.g3-in-g6 { width: 50%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g3-in-g6 { padding: 0 17.5px; } }
+.g3-in-g6 { width: 50%; float: left; padding: 0 10px; }
+.g3-in-g6 .layout-mobile { padding: 0 10px; }
 
 .isolation-g3-7 { /*
 Isolation span: give column span width and start position.
 */ width: 37.5%; float: left; margin-left: 75%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g3-7 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g3-7 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g3-7 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g3-7 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g3-7-no-pad { width: 37.5%; float: left; margin-left: 75%; margin-right: -100%; }
 
-.g3-in-g7 { width: 42.85714%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g3-in-g7 { padding: 0 17.5px; } }
+.g3-in-g7 { width: 42.85714%; float: left; padding: 0 10px; }
+.g3-in-g7 .layout-mobile { padding: 0 10px; }
 
 .isolation-g3-8 { /*
 Isolation span: give column span width and start position.
 */ width: 37.5%; float: left; margin-left: 87.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g3-8 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g3-8 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g3-8 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g3-8 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g3-8-no-pad { width: 37.5%; float: left; margin-left: 87.5%; margin-right: -100%; }
 
-.g3-in-g8 { width: 37.5%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g3-in-g8 { padding: 0 17.5px; } }
+.g3-in-g8 { width: 37.5%; float: left; padding: 0 10px; }
+.g3-in-g8 .layout-mobile { padding: 0 10px; }
 
 .isolation-g3-9 { /*
 Isolation span: give column span width and start position.
 */ width: 37.5%; float: left; margin-left: 100%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g3-9 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g3-9 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g3-9 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g3-9 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g3-9-no-pad { width: 37.5%; float: left; margin-left: 100%; margin-right: -100%; }
 
-.g3-in-g9 { width: 33.33333%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g3-in-g9 { padding: 0 17.5px; } }
+.g3-in-g9 { width: 33.33333%; float: left; padding: 0 10px; }
+.g3-in-g9 .layout-mobile { padding: 0 10px; }
 
 .isolation-g3-10 { /*
 Isolation span: give column span width and start position.
 */ width: 37.5%; float: left; margin-left: 112.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g3-10 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g3-10 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g3-10 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g3-10 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g3-10-no-pad { width: 37.5%; float: left; margin-left: 112.5%; margin-right: -100%; }
 
-.g3-in-g10 { width: 30%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g3-in-g10 { padding: 0 17.5px; } }
+.g3-in-g10 { width: 30%; float: left; padding: 0 10px; }
+.g3-in-g10 .layout-mobile { padding: 0 10px; }
 
 .isolation-g3-11 { /*
 Isolation span: give column span width and start position.
 */ width: 37.5%; float: left; margin-left: 125%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g3-11 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g3-11 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g3-11 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g3-11 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g3-11-no-pad { width: 37.5%; float: left; margin-left: 125%; margin-right: -100%; }
 
-.g3-in-g11 { width: 27.27273%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g3-in-g11 { padding: 0 17.5px; } }
+.g3-in-g11 { width: 27.27273%; float: left; padding: 0 10px; }
+.g3-in-g11 .layout-mobile { padding: 0 10px; }
 
 .isolation-g3-12 { /*
 Isolation span: give column span width and start position.
 */ width: 37.5%; float: left; margin-left: 137.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g3-12 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g3-12 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g3-12 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g3-12 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g3-12-no-pad { width: 37.5%; float: left; margin-left: 137.5%; margin-right: -100%; }
 
-.g3-in-g12 { width: 25%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g3-in-g12 { padding: 0 17.5px; } }
+.g3-in-g12 { width: 25%; float: left; padding: 0 10px; }
+.g3-in-g12 .layout-mobile { padding: 0 10px; }
 
 .g4 { width: 50%; float: left; }
-@media screen and (min-width: 850px) { .g4 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .g4 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .g4 { padding-left: 10px; padding-right: 10px; } }
+.g4 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .g4-no-pad { width: 50%; float: left; }
 
 .isolation-g4-1 { /*
 Isolation span: give column span width and start position.
 */ width: 50%; float: left; margin-left: 0%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g4-1 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g4-1 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g4-1 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g4-1 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g4-1-no-pad { width: 50%; float: left; margin-left: 0%; margin-right: -100%; }
 
-.g4-in-g1 { width: 400%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g4-in-g1 { padding: 0 17.5px; } }
+.g4-in-g1 { width: 400%; float: left; padding: 0 10px; }
+.g4-in-g1 .layout-mobile { padding: 0 10px; }
 
 .isolation-g4-2 { /*
 Isolation span: give column span width and start position.
 */ width: 50%; float: left; margin-left: 12.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g4-2 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g4-2 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g4-2 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g4-2 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g4-2-no-pad { width: 50%; float: left; margin-left: 12.5%; margin-right: -100%; }
 
-.g4-in-g2 { width: 200%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g4-in-g2 { padding: 0 17.5px; } }
+.g4-in-g2 { width: 200%; float: left; padding: 0 10px; }
+.g4-in-g2 .layout-mobile { padding: 0 10px; }
 
 .isolation-g4-3 { /*
 Isolation span: give column span width and start position.
 */ width: 50%; float: left; margin-left: 25%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g4-3 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g4-3 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g4-3 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g4-3 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g4-3-no-pad { width: 50%; float: left; margin-left: 25%; margin-right: -100%; }
 
-.g4-in-g3 { width: 133.33333%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g4-in-g3 { padding: 0 17.5px; } }
+.g4-in-g3 { width: 133.33333%; float: left; padding: 0 10px; }
+.g4-in-g3 .layout-mobile { padding: 0 10px; }
 
 .isolation-g4-4 { /*
 Isolation span: give column span width and start position.
 */ width: 50%; float: left; margin-left: 37.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g4-4 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g4-4 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g4-4 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g4-4 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g4-4-no-pad { width: 50%; float: left; margin-left: 37.5%; margin-right: -100%; }
 
-.g4-in-g4 { width: 100%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g4-in-g4 { padding: 0 17.5px; } }
+.g4-in-g4 { width: 100%; float: left; padding: 0 10px; }
+.g4-in-g4 .layout-mobile { padding: 0 10px; }
 
 .isolation-g4-5 { /*
 Isolation span: give column span width and start position.
 */ width: 50%; float: left; margin-left: 50%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g4-5 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g4-5 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g4-5 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g4-5 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g4-5-no-pad { width: 50%; float: left; margin-left: 50%; margin-right: -100%; }
 
-.g4-in-g5 { width: 80%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g4-in-g5 { padding: 0 17.5px; } }
+.g4-in-g5 { width: 80%; float: left; padding: 0 10px; }
+.g4-in-g5 .layout-mobile { padding: 0 10px; }
 
 .isolation-g4-6 { /*
 Isolation span: give column span width and start position.
 */ width: 50%; float: left; margin-left: 62.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g4-6 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g4-6 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g4-6 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g4-6 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g4-6-no-pad { width: 50%; float: left; margin-left: 62.5%; margin-right: -100%; }
 
-.g4-in-g6 { width: 66.66667%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g4-in-g6 { padding: 0 17.5px; } }
+.g4-in-g6 { width: 66.66667%; float: left; padding: 0 10px; }
+.g4-in-g6 .layout-mobile { padding: 0 10px; }
 
 .isolation-g4-7 { /*
 Isolation span: give column span width and start position.
 */ width: 50%; float: left; margin-left: 75%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g4-7 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g4-7 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g4-7 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g4-7 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g4-7-no-pad { width: 50%; float: left; margin-left: 75%; margin-right: -100%; }
 
-.g4-in-g7 { width: 57.14286%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g4-in-g7 { padding: 0 17.5px; } }
+.g4-in-g7 { width: 57.14286%; float: left; padding: 0 10px; }
+.g4-in-g7 .layout-mobile { padding: 0 10px; }
 
 .isolation-g4-8 { /*
 Isolation span: give column span width and start position.
 */ width: 50%; float: left; margin-left: 87.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g4-8 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g4-8 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g4-8 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g4-8 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g4-8-no-pad { width: 50%; float: left; margin-left: 87.5%; margin-right: -100%; }
 
-.g4-in-g8 { width: 50%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g4-in-g8 { padding: 0 17.5px; } }
+.g4-in-g8 { width: 50%; float: left; padding: 0 10px; }
+.g4-in-g8 .layout-mobile { padding: 0 10px; }
 
 .isolation-g4-9 { /*
 Isolation span: give column span width and start position.
 */ width: 50%; float: left; margin-left: 100%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g4-9 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g4-9 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g4-9 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g4-9 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g4-9-no-pad { width: 50%; float: left; margin-left: 100%; margin-right: -100%; }
 
-.g4-in-g9 { width: 44.44444%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g4-in-g9 { padding: 0 17.5px; } }
+.g4-in-g9 { width: 44.44444%; float: left; padding: 0 10px; }
+.g4-in-g9 .layout-mobile { padding: 0 10px; }
 
 .isolation-g4-10 { /*
 Isolation span: give column span width and start position.
 */ width: 50%; float: left; margin-left: 112.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g4-10 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g4-10 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g4-10 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g4-10 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g4-10-no-pad { width: 50%; float: left; margin-left: 112.5%; margin-right: -100%; }
 
-.g4-in-g10 { width: 40%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g4-in-g10 { padding: 0 17.5px; } }
+.g4-in-g10 { width: 40%; float: left; padding: 0 10px; }
+.g4-in-g10 .layout-mobile { padding: 0 10px; }
 
 .isolation-g4-11 { /*
 Isolation span: give column span width and start position.
 */ width: 50%; float: left; margin-left: 125%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g4-11 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g4-11 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g4-11 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g4-11 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g4-11-no-pad { width: 50%; float: left; margin-left: 125%; margin-right: -100%; }
 
-.g4-in-g11 { width: 36.36364%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g4-in-g11 { padding: 0 17.5px; } }
+.g4-in-g11 { width: 36.36364%; float: left; padding: 0 10px; }
+.g4-in-g11 .layout-mobile { padding: 0 10px; }
 
 .isolation-g4-12 { /*
 Isolation span: give column span width and start position.
 */ width: 50%; float: left; margin-left: 137.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g4-12 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g4-12 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g4-12 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g4-12 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g4-12-no-pad { width: 50%; float: left; margin-left: 137.5%; margin-right: -100%; }
 
-.g4-in-g12 { width: 33.33333%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g4-in-g12 { padding: 0 17.5px; } }
+.g4-in-g12 { width: 33.33333%; float: left; padding: 0 10px; }
+.g4-in-g12 .layout-mobile { padding: 0 10px; }
 
 .g5 { width: 62.5%; float: left; }
-@media screen and (min-width: 850px) { .g5 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .g5 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .g5 { padding-left: 10px; padding-right: 10px; } }
+.g5 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .g5-no-pad { width: 62.5%; float: left; }
 
 .isolation-g5-1 { /*
 Isolation span: give column span width and start position.
 */ width: 62.5%; float: left; margin-left: 0%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g5-1 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g5-1 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g5-1 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g5-1 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g5-1-no-pad { width: 62.5%; float: left; margin-left: 0%; margin-right: -100%; }
 
-.g5-in-g1 { width: 500%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g5-in-g1 { padding: 0 17.5px; } }
+.g5-in-g1 { width: 500%; float: left; padding: 0 10px; }
+.g5-in-g1 .layout-mobile { padding: 0 10px; }
 
 .isolation-g5-2 { /*
 Isolation span: give column span width and start position.
 */ width: 62.5%; float: left; margin-left: 12.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g5-2 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g5-2 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g5-2 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g5-2 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g5-2-no-pad { width: 62.5%; float: left; margin-left: 12.5%; margin-right: -100%; }
 
-.g5-in-g2 { width: 250%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g5-in-g2 { padding: 0 17.5px; } }
+.g5-in-g2 { width: 250%; float: left; padding: 0 10px; }
+.g5-in-g2 .layout-mobile { padding: 0 10px; }
 
 .isolation-g5-3 { /*
 Isolation span: give column span width and start position.
 */ width: 62.5%; float: left; margin-left: 25%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g5-3 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g5-3 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g5-3 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g5-3 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g5-3-no-pad { width: 62.5%; float: left; margin-left: 25%; margin-right: -100%; }
 
-.g5-in-g3 { width: 166.66667%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g5-in-g3 { padding: 0 17.5px; } }
+.g5-in-g3 { width: 166.66667%; float: left; padding: 0 10px; }
+.g5-in-g3 .layout-mobile { padding: 0 10px; }
 
 .isolation-g5-4 { /*
 Isolation span: give column span width and start position.
 */ width: 62.5%; float: left; margin-left: 37.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g5-4 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g5-4 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g5-4 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g5-4 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g5-4-no-pad { width: 62.5%; float: left; margin-left: 37.5%; margin-right: -100%; }
 
-.g5-in-g4 { width: 125%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g5-in-g4 { padding: 0 17.5px; } }
+.g5-in-g4 { width: 125%; float: left; padding: 0 10px; }
+.g5-in-g4 .layout-mobile { padding: 0 10px; }
 
 .isolation-g5-5 { /*
 Isolation span: give column span width and start position.
 */ width: 62.5%; float: left; margin-left: 50%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g5-5 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g5-5 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g5-5 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g5-5 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g5-5-no-pad { width: 62.5%; float: left; margin-left: 50%; margin-right: -100%; }
 
-.g5-in-g5 { width: 100%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g5-in-g5 { padding: 0 17.5px; } }
+.g5-in-g5 { width: 100%; float: left; padding: 0 10px; }
+.g5-in-g5 .layout-mobile { padding: 0 10px; }
 
 .isolation-g5-6 { /*
 Isolation span: give column span width and start position.
 */ width: 62.5%; float: left; margin-left: 62.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g5-6 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g5-6 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g5-6 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g5-6 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g5-6-no-pad { width: 62.5%; float: left; margin-left: 62.5%; margin-right: -100%; }
 
-.g5-in-g6 { width: 83.33333%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g5-in-g6 { padding: 0 17.5px; } }
+.g5-in-g6 { width: 83.33333%; float: left; padding: 0 10px; }
+.g5-in-g6 .layout-mobile { padding: 0 10px; }
 
 .isolation-g5-7 { /*
 Isolation span: give column span width and start position.
 */ width: 62.5%; float: left; margin-left: 75%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g5-7 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g5-7 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g5-7 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g5-7 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g5-7-no-pad { width: 62.5%; float: left; margin-left: 75%; margin-right: -100%; }
 
-.g5-in-g7 { width: 71.42857%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g5-in-g7 { padding: 0 17.5px; } }
+.g5-in-g7 { width: 71.42857%; float: left; padding: 0 10px; }
+.g5-in-g7 .layout-mobile { padding: 0 10px; }
 
 .isolation-g5-8 { /*
 Isolation span: give column span width and start position.
 */ width: 62.5%; float: left; margin-left: 87.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g5-8 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g5-8 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g5-8 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g5-8 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g5-8-no-pad { width: 62.5%; float: left; margin-left: 87.5%; margin-right: -100%; }
 
-.g5-in-g8 { width: 62.5%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g5-in-g8 { padding: 0 17.5px; } }
+.g5-in-g8 { width: 62.5%; float: left; padding: 0 10px; }
+.g5-in-g8 .layout-mobile { padding: 0 10px; }
 
 .isolation-g5-9 { /*
 Isolation span: give column span width and start position.
 */ width: 62.5%; float: left; margin-left: 100%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g5-9 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g5-9 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g5-9 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g5-9 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g5-9-no-pad { width: 62.5%; float: left; margin-left: 100%; margin-right: -100%; }
 
-.g5-in-g9 { width: 55.55556%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g5-in-g9 { padding: 0 17.5px; } }
+.g5-in-g9 { width: 55.55556%; float: left; padding: 0 10px; }
+.g5-in-g9 .layout-mobile { padding: 0 10px; }
 
 .isolation-g5-10 { /*
 Isolation span: give column span width and start position.
 */ width: 62.5%; float: left; margin-left: 112.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g5-10 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g5-10 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g5-10 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g5-10 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g5-10-no-pad { width: 62.5%; float: left; margin-left: 112.5%; margin-right: -100%; }
 
-.g5-in-g10 { width: 50%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g5-in-g10 { padding: 0 17.5px; } }
+.g5-in-g10 { width: 50%; float: left; padding: 0 10px; }
+.g5-in-g10 .layout-mobile { padding: 0 10px; }
 
 .isolation-g5-11 { /*
 Isolation span: give column span width and start position.
 */ width: 62.5%; float: left; margin-left: 125%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g5-11 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g5-11 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g5-11 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g5-11 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g5-11-no-pad { width: 62.5%; float: left; margin-left: 125%; margin-right: -100%; }
 
-.g5-in-g11 { width: 45.45455%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g5-in-g11 { padding: 0 17.5px; } }
+.g5-in-g11 { width: 45.45455%; float: left; padding: 0 10px; }
+.g5-in-g11 .layout-mobile { padding: 0 10px; }
 
 .isolation-g5-12 { /*
 Isolation span: give column span width and start position.
 */ width: 62.5%; float: left; margin-left: 137.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g5-12 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g5-12 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g5-12 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g5-12 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g5-12-no-pad { width: 62.5%; float: left; margin-left: 137.5%; margin-right: -100%; }
 
-.g5-in-g12 { width: 41.66667%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g5-in-g12 { padding: 0 17.5px; } }
+.g5-in-g12 { width: 41.66667%; float: left; padding: 0 10px; }
+.g5-in-g12 .layout-mobile { padding: 0 10px; }
 
 .g6 { width: 75%; float: left; }
-@media screen and (min-width: 850px) { .g6 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .g6 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .g6 { padding-left: 10px; padding-right: 10px; } }
+.g6 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .g6-no-pad { width: 75%; float: left; }
 
 .isolation-g6-1 { /*
 Isolation span: give column span width and start position.
 */ width: 75%; float: left; margin-left: 0%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g6-1 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g6-1 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g6-1 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g6-1 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g6-1-no-pad { width: 75%; float: left; margin-left: 0%; margin-right: -100%; }
 
-.g6-in-g1 { width: 600%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g6-in-g1 { padding: 0 17.5px; } }
+.g6-in-g1 { width: 600%; float: left; padding: 0 10px; }
+.g6-in-g1 .layout-mobile { padding: 0 10px; }
 
 .isolation-g6-2 { /*
 Isolation span: give column span width and start position.
 */ width: 75%; float: left; margin-left: 12.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g6-2 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g6-2 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g6-2 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g6-2 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g6-2-no-pad { width: 75%; float: left; margin-left: 12.5%; margin-right: -100%; }
 
-.g6-in-g2 { width: 300%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g6-in-g2 { padding: 0 17.5px; } }
+.g6-in-g2 { width: 300%; float: left; padding: 0 10px; }
+.g6-in-g2 .layout-mobile { padding: 0 10px; }
 
 .isolation-g6-3 { /*
 Isolation span: give column span width and start position.
 */ width: 75%; float: left; margin-left: 25%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g6-3 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g6-3 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g6-3 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g6-3 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g6-3-no-pad { width: 75%; float: left; margin-left: 25%; margin-right: -100%; }
 
-.g6-in-g3 { width: 200%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g6-in-g3 { padding: 0 17.5px; } }
+.g6-in-g3 { width: 200%; float: left; padding: 0 10px; }
+.g6-in-g3 .layout-mobile { padding: 0 10px; }
 
 .isolation-g6-4 { /*
 Isolation span: give column span width and start position.
 */ width: 75%; float: left; margin-left: 37.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g6-4 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g6-4 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g6-4 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g6-4 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g6-4-no-pad { width: 75%; float: left; margin-left: 37.5%; margin-right: -100%; }
 
-.g6-in-g4 { width: 150%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g6-in-g4 { padding: 0 17.5px; } }
+.g6-in-g4 { width: 150%; float: left; padding: 0 10px; }
+.g6-in-g4 .layout-mobile { padding: 0 10px; }
 
 .isolation-g6-5 { /*
 Isolation span: give column span width and start position.
 */ width: 75%; float: left; margin-left: 50%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g6-5 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g6-5 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g6-5 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g6-5 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g6-5-no-pad { width: 75%; float: left; margin-left: 50%; margin-right: -100%; }
 
-.g6-in-g5 { width: 120%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g6-in-g5 { padding: 0 17.5px; } }
+.g6-in-g5 { width: 120%; float: left; padding: 0 10px; }
+.g6-in-g5 .layout-mobile { padding: 0 10px; }
 
 .isolation-g6-6 { /*
 Isolation span: give column span width and start position.
 */ width: 75%; float: left; margin-left: 62.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g6-6 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g6-6 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g6-6 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g6-6 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g6-6-no-pad { width: 75%; float: left; margin-left: 62.5%; margin-right: -100%; }
 
-.g6-in-g6 { width: 100%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g6-in-g6 { padding: 0 17.5px; } }
+.g6-in-g6 { width: 100%; float: left; padding: 0 10px; }
+.g6-in-g6 .layout-mobile { padding: 0 10px; }
 
 .isolation-g6-7 { /*
 Isolation span: give column span width and start position.
 */ width: 75%; float: left; margin-left: 75%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g6-7 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g6-7 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g6-7 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g6-7 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g6-7-no-pad { width: 75%; float: left; margin-left: 75%; margin-right: -100%; }
 
-.g6-in-g7 { width: 85.71429%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g6-in-g7 { padding: 0 17.5px; } }
+.g6-in-g7 { width: 85.71429%; float: left; padding: 0 10px; }
+.g6-in-g7 .layout-mobile { padding: 0 10px; }
 
 .isolation-g6-8 { /*
 Isolation span: give column span width and start position.
 */ width: 75%; float: left; margin-left: 87.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g6-8 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g6-8 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g6-8 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g6-8 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g6-8-no-pad { width: 75%; float: left; margin-left: 87.5%; margin-right: -100%; }
 
-.g6-in-g8 { width: 75%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g6-in-g8 { padding: 0 17.5px; } }
+.g6-in-g8 { width: 75%; float: left; padding: 0 10px; }
+.g6-in-g8 .layout-mobile { padding: 0 10px; }
 
 .isolation-g6-9 { /*
 Isolation span: give column span width and start position.
 */ width: 75%; float: left; margin-left: 100%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g6-9 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g6-9 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g6-9 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g6-9 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g6-9-no-pad { width: 75%; float: left; margin-left: 100%; margin-right: -100%; }
 
-.g6-in-g9 { width: 66.66667%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g6-in-g9 { padding: 0 17.5px; } }
+.g6-in-g9 { width: 66.66667%; float: left; padding: 0 10px; }
+.g6-in-g9 .layout-mobile { padding: 0 10px; }
 
 .isolation-g6-10 { /*
 Isolation span: give column span width and start position.
 */ width: 75%; float: left; margin-left: 112.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g6-10 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g6-10 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g6-10 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g6-10 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g6-10-no-pad { width: 75%; float: left; margin-left: 112.5%; margin-right: -100%; }
 
-.g6-in-g10 { width: 60%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g6-in-g10 { padding: 0 17.5px; } }
+.g6-in-g10 { width: 60%; float: left; padding: 0 10px; }
+.g6-in-g10 .layout-mobile { padding: 0 10px; }
 
 .isolation-g6-11 { /*
 Isolation span: give column span width and start position.
 */ width: 75%; float: left; margin-left: 125%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g6-11 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g6-11 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g6-11 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g6-11 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g6-11-no-pad { width: 75%; float: left; margin-left: 125%; margin-right: -100%; }
 
-.g6-in-g11 { width: 54.54545%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g6-in-g11 { padding: 0 17.5px; } }
+.g6-in-g11 { width: 54.54545%; float: left; padding: 0 10px; }
+.g6-in-g11 .layout-mobile { padding: 0 10px; }
 
 .isolation-g6-12 { /*
 Isolation span: give column span width and start position.
 */ width: 75%; float: left; margin-left: 137.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g6-12 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g6-12 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g6-12 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g6-12 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g6-12-no-pad { width: 75%; float: left; margin-left: 137.5%; margin-right: -100%; }
 
-.g6-in-g12 { width: 50%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g6-in-g12 { padding: 0 17.5px; } }
+.g6-in-g12 { width: 50%; float: left; padding: 0 10px; }
+.g6-in-g12 .layout-mobile { padding: 0 10px; }
 
 .g7 { width: 87.5%; float: left; }
-@media screen and (min-width: 850px) { .g7 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .g7 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .g7 { padding-left: 10px; padding-right: 10px; } }
+.g7 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .g7-no-pad { width: 87.5%; float: left; }
 
 .isolation-g7-1 { /*
 Isolation span: give column span width and start position.
 */ width: 87.5%; float: left; margin-left: 0%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g7-1 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g7-1 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g7-1 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g7-1 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g7-1-no-pad { width: 87.5%; float: left; margin-left: 0%; margin-right: -100%; }
 
-.g7-in-g1 { width: 700%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g7-in-g1 { padding: 0 17.5px; } }
+.g7-in-g1 { width: 700%; float: left; padding: 0 10px; }
+.g7-in-g1 .layout-mobile { padding: 0 10px; }
 
 .isolation-g7-2 { /*
 Isolation span: give column span width and start position.
 */ width: 87.5%; float: left; margin-left: 12.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g7-2 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g7-2 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g7-2 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g7-2 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g7-2-no-pad { width: 87.5%; float: left; margin-left: 12.5%; margin-right: -100%; }
 
-.g7-in-g2 { width: 350%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g7-in-g2 { padding: 0 17.5px; } }
+.g7-in-g2 { width: 350%; float: left; padding: 0 10px; }
+.g7-in-g2 .layout-mobile { padding: 0 10px; }
 
 .isolation-g7-3 { /*
 Isolation span: give column span width and start position.
 */ width: 87.5%; float: left; margin-left: 25%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g7-3 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g7-3 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g7-3 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g7-3 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g7-3-no-pad { width: 87.5%; float: left; margin-left: 25%; margin-right: -100%; }
 
-.g7-in-g3 { width: 233.33333%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g7-in-g3 { padding: 0 17.5px; } }
+.g7-in-g3 { width: 233.33333%; float: left; padding: 0 10px; }
+.g7-in-g3 .layout-mobile { padding: 0 10px; }
 
 .isolation-g7-4 { /*
 Isolation span: give column span width and start position.
 */ width: 87.5%; float: left; margin-left: 37.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g7-4 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g7-4 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g7-4 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g7-4 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g7-4-no-pad { width: 87.5%; float: left; margin-left: 37.5%; margin-right: -100%; }
 
-.g7-in-g4 { width: 175%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g7-in-g4 { padding: 0 17.5px; } }
+.g7-in-g4 { width: 175%; float: left; padding: 0 10px; }
+.g7-in-g4 .layout-mobile { padding: 0 10px; }
 
 .isolation-g7-5 { /*
 Isolation span: give column span width and start position.
 */ width: 87.5%; float: left; margin-left: 50%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g7-5 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g7-5 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g7-5 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g7-5 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g7-5-no-pad { width: 87.5%; float: left; margin-left: 50%; margin-right: -100%; }
 
-.g7-in-g5 { width: 140%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g7-in-g5 { padding: 0 17.5px; } }
+.g7-in-g5 { width: 140%; float: left; padding: 0 10px; }
+.g7-in-g5 .layout-mobile { padding: 0 10px; }
 
 .isolation-g7-6 { /*
 Isolation span: give column span width and start position.
 */ width: 87.5%; float: left; margin-left: 62.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g7-6 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g7-6 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g7-6 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g7-6 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g7-6-no-pad { width: 87.5%; float: left; margin-left: 62.5%; margin-right: -100%; }
 
-.g7-in-g6 { width: 116.66667%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g7-in-g6 { padding: 0 17.5px; } }
+.g7-in-g6 { width: 116.66667%; float: left; padding: 0 10px; }
+.g7-in-g6 .layout-mobile { padding: 0 10px; }
 
 .isolation-g7-7 { /*
 Isolation span: give column span width and start position.
 */ width: 87.5%; float: left; margin-left: 75%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g7-7 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g7-7 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g7-7 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g7-7 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g7-7-no-pad { width: 87.5%; float: left; margin-left: 75%; margin-right: -100%; }
 
-.g7-in-g7 { width: 100%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g7-in-g7 { padding: 0 17.5px; } }
+.g7-in-g7 { width: 100%; float: left; padding: 0 10px; }
+.g7-in-g7 .layout-mobile { padding: 0 10px; }
 
 .isolation-g7-8 { /*
 Isolation span: give column span width and start position.
 */ width: 87.5%; float: left; margin-left: 87.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g7-8 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g7-8 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g7-8 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g7-8 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g7-8-no-pad { width: 87.5%; float: left; margin-left: 87.5%; margin-right: -100%; }
 
-.g7-in-g8 { width: 87.5%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g7-in-g8 { padding: 0 17.5px; } }
+.g7-in-g8 { width: 87.5%; float: left; padding: 0 10px; }
+.g7-in-g8 .layout-mobile { padding: 0 10px; }
 
 .isolation-g7-9 { /*
 Isolation span: give column span width and start position.
 */ width: 87.5%; float: left; margin-left: 100%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g7-9 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g7-9 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g7-9 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g7-9 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g7-9-no-pad { width: 87.5%; float: left; margin-left: 100%; margin-right: -100%; }
 
-.g7-in-g9 { width: 77.77778%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g7-in-g9 { padding: 0 17.5px; } }
+.g7-in-g9 { width: 77.77778%; float: left; padding: 0 10px; }
+.g7-in-g9 .layout-mobile { padding: 0 10px; }
 
 .isolation-g7-10 { /*
 Isolation span: give column span width and start position.
 */ width: 87.5%; float: left; margin-left: 112.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g7-10 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g7-10 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g7-10 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g7-10 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g7-10-no-pad { width: 87.5%; float: left; margin-left: 112.5%; margin-right: -100%; }
 
-.g7-in-g10 { width: 70%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g7-in-g10 { padding: 0 17.5px; } }
+.g7-in-g10 { width: 70%; float: left; padding: 0 10px; }
+.g7-in-g10 .layout-mobile { padding: 0 10px; }
 
 .isolation-g7-11 { /*
 Isolation span: give column span width and start position.
 */ width: 87.5%; float: left; margin-left: 125%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g7-11 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g7-11 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g7-11 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g7-11 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g7-11-no-pad { width: 87.5%; float: left; margin-left: 125%; margin-right: -100%; }
 
-.g7-in-g11 { width: 63.63636%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g7-in-g11 { padding: 0 17.5px; } }
+.g7-in-g11 { width: 63.63636%; float: left; padding: 0 10px; }
+.g7-in-g11 .layout-mobile { padding: 0 10px; }
 
 .isolation-g7-12 { /*
 Isolation span: give column span width and start position.
 */ width: 87.5%; float: left; margin-left: 137.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g7-12 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g7-12 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g7-12 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g7-12 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g7-12-no-pad { width: 87.5%; float: left; margin-left: 137.5%; margin-right: -100%; }
 
-.g7-in-g12 { width: 58.33333%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g7-in-g12 { padding: 0 17.5px; } }
+.g7-in-g12 { width: 58.33333%; float: left; padding: 0 10px; }
+.g7-in-g12 .layout-mobile { padding: 0 10px; }
 
 .g8 { width: 100%; float: left; }
-@media screen and (min-width: 850px) { .g8 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .g8 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .g8 { padding-left: 10px; padding-right: 10px; } }
+.g8 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .g8-no-pad { width: 100%; float: left; }
 
 .isolation-g8-1 { /*
 Isolation span: give column span width and start position.
 */ width: 100%; float: left; margin-left: 0%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g8-1 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g8-1 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g8-1 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g8-1 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g8-1-no-pad { width: 100%; float: left; margin-left: 0%; margin-right: -100%; }
 
-.g8-in-g1 { width: 800%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g8-in-g1 { padding: 0 17.5px; } }
+.g8-in-g1 { width: 800%; float: left; padding: 0 10px; }
+.g8-in-g1 .layout-mobile { padding: 0 10px; }
 
 .isolation-g8-2 { /*
 Isolation span: give column span width and start position.
 */ width: 100%; float: left; margin-left: 12.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g8-2 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g8-2 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g8-2 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g8-2 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g8-2-no-pad { width: 100%; float: left; margin-left: 12.5%; margin-right: -100%; }
 
-.g8-in-g2 { width: 400%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g8-in-g2 { padding: 0 17.5px; } }
+.g8-in-g2 { width: 400%; float: left; padding: 0 10px; }
+.g8-in-g2 .layout-mobile { padding: 0 10px; }
 
 .isolation-g8-3 { /*
 Isolation span: give column span width and start position.
 */ width: 100%; float: left; margin-left: 25%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g8-3 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g8-3 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g8-3 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g8-3 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g8-3-no-pad { width: 100%; float: left; margin-left: 25%; margin-right: -100%; }
 
-.g8-in-g3 { width: 266.66667%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g8-in-g3 { padding: 0 17.5px; } }
+.g8-in-g3 { width: 266.66667%; float: left; padding: 0 10px; }
+.g8-in-g3 .layout-mobile { padding: 0 10px; }
 
 .isolation-g8-4 { /*
 Isolation span: give column span width and start position.
 */ width: 100%; float: left; margin-left: 37.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g8-4 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g8-4 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g8-4 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g8-4 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g8-4-no-pad { width: 100%; float: left; margin-left: 37.5%; margin-right: -100%; }
 
-.g8-in-g4 { width: 200%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g8-in-g4 { padding: 0 17.5px; } }
+.g8-in-g4 { width: 200%; float: left; padding: 0 10px; }
+.g8-in-g4 .layout-mobile { padding: 0 10px; }
 
 .isolation-g8-5 { /*
 Isolation span: give column span width and start position.
 */ width: 100%; float: left; margin-left: 50%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g8-5 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g8-5 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g8-5 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g8-5 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g8-5-no-pad { width: 100%; float: left; margin-left: 50%; margin-right: -100%; }
 
-.g8-in-g5 { width: 160%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g8-in-g5 { padding: 0 17.5px; } }
+.g8-in-g5 { width: 160%; float: left; padding: 0 10px; }
+.g8-in-g5 .layout-mobile { padding: 0 10px; }
 
 .isolation-g8-6 { /*
 Isolation span: give column span width and start position.
 */ width: 100%; float: left; margin-left: 62.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g8-6 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g8-6 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g8-6 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g8-6 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g8-6-no-pad { width: 100%; float: left; margin-left: 62.5%; margin-right: -100%; }
 
-.g8-in-g6 { width: 133.33333%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g8-in-g6 { padding: 0 17.5px; } }
+.g8-in-g6 { width: 133.33333%; float: left; padding: 0 10px; }
+.g8-in-g6 .layout-mobile { padding: 0 10px; }
 
 .isolation-g8-7 { /*
 Isolation span: give column span width and start position.
 */ width: 100%; float: left; margin-left: 75%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g8-7 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g8-7 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g8-7 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g8-7 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g8-7-no-pad { width: 100%; float: left; margin-left: 75%; margin-right: -100%; }
 
-.g8-in-g7 { width: 114.28571%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g8-in-g7 { padding: 0 17.5px; } }
+.g8-in-g7 { width: 114.28571%; float: left; padding: 0 10px; }
+.g8-in-g7 .layout-mobile { padding: 0 10px; }
 
 .isolation-g8-8 { /*
 Isolation span: give column span width and start position.
 */ width: 100%; float: left; margin-left: 87.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g8-8 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g8-8 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g8-8 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g8-8 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g8-8-no-pad { width: 100%; float: left; margin-left: 87.5%; margin-right: -100%; }
 
-.g8-in-g8 { width: 100%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g8-in-g8 { padding: 0 17.5px; } }
+.g8-in-g8 { width: 100%; float: left; padding: 0 10px; }
+.g8-in-g8 .layout-mobile { padding: 0 10px; }
 
 .isolation-g8-9 { /*
 Isolation span: give column span width and start position.
 */ width: 100%; float: left; margin-left: 100%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g8-9 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g8-9 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g8-9 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g8-9 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g8-9-no-pad { width: 100%; float: left; margin-left: 100%; margin-right: -100%; }
 
-.g8-in-g9 { width: 88.88889%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g8-in-g9 { padding: 0 17.5px; } }
+.g8-in-g9 { width: 88.88889%; float: left; padding: 0 10px; }
+.g8-in-g9 .layout-mobile { padding: 0 10px; }
 
 .isolation-g8-10 { /*
 Isolation span: give column span width and start position.
 */ width: 100%; float: left; margin-left: 112.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g8-10 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g8-10 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g8-10 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g8-10 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g8-10-no-pad { width: 100%; float: left; margin-left: 112.5%; margin-right: -100%; }
 
-.g8-in-g10 { width: 80%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g8-in-g10 { padding: 0 17.5px; } }
+.g8-in-g10 { width: 80%; float: left; padding: 0 10px; }
+.g8-in-g10 .layout-mobile { padding: 0 10px; }
 
 .isolation-g8-11 { /*
 Isolation span: give column span width and start position.
 */ width: 100%; float: left; margin-left: 125%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g8-11 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g8-11 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g8-11 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g8-11 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g8-11-no-pad { width: 100%; float: left; margin-left: 125%; margin-right: -100%; }
 
-.g8-in-g11 { width: 72.72727%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g8-in-g11 { padding: 0 17.5px; } }
+.g8-in-g11 { width: 72.72727%; float: left; padding: 0 10px; }
+.g8-in-g11 .layout-mobile { padding: 0 10px; }
 
 .isolation-g8-12 { /*
 Isolation span: give column span width and start position.
 */ width: 100%; float: left; margin-left: 137.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g8-12 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g8-12 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g8-12 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g8-12 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g8-12-no-pad { width: 100%; float: left; margin-left: 137.5%; margin-right: -100%; }
 
-.g8-in-g12 { width: 66.66667%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g8-in-g12 { padding: 0 17.5px; } }
+.g8-in-g12 { width: 66.66667%; float: left; padding: 0 10px; }
+.g8-in-g12 .layout-mobile { padding: 0 10px; }
 
 .g9 { width: 112.5%; float: left; }
-@media screen and (min-width: 850px) { .g9 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .g9 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .g9 { padding-left: 10px; padding-right: 10px; } }
+.g9 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .g9-no-pad { width: 112.5%; float: left; }
 
 .isolation-g9-1 { /*
 Isolation span: give column span width and start position.
 */ width: 112.5%; float: left; margin-left: 0%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g9-1 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g9-1 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g9-1 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g9-1 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g9-1-no-pad { width: 112.5%; float: left; margin-left: 0%; margin-right: -100%; }
 
-.g9-in-g1 { width: 900%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g9-in-g1 { padding: 0 17.5px; } }
+.g9-in-g1 { width: 900%; float: left; padding: 0 10px; }
+.g9-in-g1 .layout-mobile { padding: 0 10px; }
 
 .isolation-g9-2 { /*
 Isolation span: give column span width and start position.
 */ width: 112.5%; float: left; margin-left: 12.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g9-2 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g9-2 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g9-2 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g9-2 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g9-2-no-pad { width: 112.5%; float: left; margin-left: 12.5%; margin-right: -100%; }
 
-.g9-in-g2 { width: 450%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g9-in-g2 { padding: 0 17.5px; } }
+.g9-in-g2 { width: 450%; float: left; padding: 0 10px; }
+.g9-in-g2 .layout-mobile { padding: 0 10px; }
 
 .isolation-g9-3 { /*
 Isolation span: give column span width and start position.
 */ width: 112.5%; float: left; margin-left: 25%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g9-3 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g9-3 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g9-3 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g9-3 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g9-3-no-pad { width: 112.5%; float: left; margin-left: 25%; margin-right: -100%; }
 
-.g9-in-g3 { width: 300%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g9-in-g3 { padding: 0 17.5px; } }
+.g9-in-g3 { width: 300%; float: left; padding: 0 10px; }
+.g9-in-g3 .layout-mobile { padding: 0 10px; }
 
 .isolation-g9-4 { /*
 Isolation span: give column span width and start position.
 */ width: 112.5%; float: left; margin-left: 37.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g9-4 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g9-4 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g9-4 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g9-4 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g9-4-no-pad { width: 112.5%; float: left; margin-left: 37.5%; margin-right: -100%; }
 
-.g9-in-g4 { width: 225%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g9-in-g4 { padding: 0 17.5px; } }
+.g9-in-g4 { width: 225%; float: left; padding: 0 10px; }
+.g9-in-g4 .layout-mobile { padding: 0 10px; }
 
 .isolation-g9-5 { /*
 Isolation span: give column span width and start position.
 */ width: 112.5%; float: left; margin-left: 50%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g9-5 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g9-5 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g9-5 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g9-5 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g9-5-no-pad { width: 112.5%; float: left; margin-left: 50%; margin-right: -100%; }
 
-.g9-in-g5 { width: 180%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g9-in-g5 { padding: 0 17.5px; } }
+.g9-in-g5 { width: 180%; float: left; padding: 0 10px; }
+.g9-in-g5 .layout-mobile { padding: 0 10px; }
 
 .isolation-g9-6 { /*
 Isolation span: give column span width and start position.
 */ width: 112.5%; float: left; margin-left: 62.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g9-6 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g9-6 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g9-6 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g9-6 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g9-6-no-pad { width: 112.5%; float: left; margin-left: 62.5%; margin-right: -100%; }
 
-.g9-in-g6 { width: 150%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g9-in-g6 { padding: 0 17.5px; } }
+.g9-in-g6 { width: 150%; float: left; padding: 0 10px; }
+.g9-in-g6 .layout-mobile { padding: 0 10px; }
 
 .isolation-g9-7 { /*
 Isolation span: give column span width and start position.
 */ width: 112.5%; float: left; margin-left: 75%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g9-7 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g9-7 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g9-7 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g9-7 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g9-7-no-pad { width: 112.5%; float: left; margin-left: 75%; margin-right: -100%; }
 
-.g9-in-g7 { width: 128.57143%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g9-in-g7 { padding: 0 17.5px; } }
+.g9-in-g7 { width: 128.57143%; float: left; padding: 0 10px; }
+.g9-in-g7 .layout-mobile { padding: 0 10px; }
 
 .isolation-g9-8 { /*
 Isolation span: give column span width and start position.
 */ width: 112.5%; float: left; margin-left: 87.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g9-8 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g9-8 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g9-8 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g9-8 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g9-8-no-pad { width: 112.5%; float: left; margin-left: 87.5%; margin-right: -100%; }
 
-.g9-in-g8 { width: 112.5%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g9-in-g8 { padding: 0 17.5px; } }
+.g9-in-g8 { width: 112.5%; float: left; padding: 0 10px; }
+.g9-in-g8 .layout-mobile { padding: 0 10px; }
 
 .isolation-g9-9 { /*
 Isolation span: give column span width and start position.
 */ width: 112.5%; float: left; margin-left: 100%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g9-9 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g9-9 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g9-9 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g9-9 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g9-9-no-pad { width: 112.5%; float: left; margin-left: 100%; margin-right: -100%; }
 
-.g9-in-g9 { width: 100%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g9-in-g9 { padding: 0 17.5px; } }
+.g9-in-g9 { width: 100%; float: left; padding: 0 10px; }
+.g9-in-g9 .layout-mobile { padding: 0 10px; }
 
 .isolation-g9-10 { /*
 Isolation span: give column span width and start position.
 */ width: 112.5%; float: left; margin-left: 112.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g9-10 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g9-10 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g9-10 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g9-10 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g9-10-no-pad { width: 112.5%; float: left; margin-left: 112.5%; margin-right: -100%; }
 
-.g9-in-g10 { width: 90%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g9-in-g10 { padding: 0 17.5px; } }
+.g9-in-g10 { width: 90%; float: left; padding: 0 10px; }
+.g9-in-g10 .layout-mobile { padding: 0 10px; }
 
 .isolation-g9-11 { /*
 Isolation span: give column span width and start position.
 */ width: 112.5%; float: left; margin-left: 125%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g9-11 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g9-11 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g9-11 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g9-11 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g9-11-no-pad { width: 112.5%; float: left; margin-left: 125%; margin-right: -100%; }
 
-.g9-in-g11 { width: 81.81818%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g9-in-g11 { padding: 0 17.5px; } }
+.g9-in-g11 { width: 81.81818%; float: left; padding: 0 10px; }
+.g9-in-g11 .layout-mobile { padding: 0 10px; }
 
 .isolation-g9-12 { /*
 Isolation span: give column span width and start position.
 */ width: 112.5%; float: left; margin-left: 137.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g9-12 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g9-12 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g9-12 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g9-12 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g9-12-no-pad { width: 112.5%; float: left; margin-left: 137.5%; margin-right: -100%; }
 
-.g9-in-g12 { width: 75%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g9-in-g12 { padding: 0 17.5px; } }
+.g9-in-g12 { width: 75%; float: left; padding: 0 10px; }
+.g9-in-g12 .layout-mobile { padding: 0 10px; }
 
 .g10 { width: 125%; float: left; }
-@media screen and (min-width: 850px) { .g10 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .g10 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .g10 { padding-left: 10px; padding-right: 10px; } }
+.g10 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .g10-no-pad { width: 125%; float: left; }
 
 .isolation-g10-1 { /*
 Isolation span: give column span width and start position.
 */ width: 125%; float: left; margin-left: 0%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g10-1 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g10-1 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g10-1 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g10-1 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g10-1-no-pad { width: 125%; float: left; margin-left: 0%; margin-right: -100%; }
 
-.g10-in-g1 { width: 1000%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g10-in-g1 { padding: 0 17.5px; } }
+.g10-in-g1 { width: 1000%; float: left; padding: 0 10px; }
+.g10-in-g1 .layout-mobile { padding: 0 10px; }
 
 .isolation-g10-2 { /*
 Isolation span: give column span width and start position.
 */ width: 125%; float: left; margin-left: 12.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g10-2 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g10-2 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g10-2 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g10-2 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g10-2-no-pad { width: 125%; float: left; margin-left: 12.5%; margin-right: -100%; }
 
-.g10-in-g2 { width: 500%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g10-in-g2 { padding: 0 17.5px; } }
+.g10-in-g2 { width: 500%; float: left; padding: 0 10px; }
+.g10-in-g2 .layout-mobile { padding: 0 10px; }
 
 .isolation-g10-3 { /*
 Isolation span: give column span width and start position.
 */ width: 125%; float: left; margin-left: 25%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g10-3 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g10-3 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g10-3 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g10-3 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g10-3-no-pad { width: 125%; float: left; margin-left: 25%; margin-right: -100%; }
 
-.g10-in-g3 { width: 333.33333%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g10-in-g3 { padding: 0 17.5px; } }
+.g10-in-g3 { width: 333.33333%; float: left; padding: 0 10px; }
+.g10-in-g3 .layout-mobile { padding: 0 10px; }
 
 .isolation-g10-4 { /*
 Isolation span: give column span width and start position.
 */ width: 125%; float: left; margin-left: 37.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g10-4 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g10-4 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g10-4 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g10-4 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g10-4-no-pad { width: 125%; float: left; margin-left: 37.5%; margin-right: -100%; }
 
-.g10-in-g4 { width: 250%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g10-in-g4 { padding: 0 17.5px; } }
+.g10-in-g4 { width: 250%; float: left; padding: 0 10px; }
+.g10-in-g4 .layout-mobile { padding: 0 10px; }
 
 .isolation-g10-5 { /*
 Isolation span: give column span width and start position.
 */ width: 125%; float: left; margin-left: 50%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g10-5 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g10-5 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g10-5 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g10-5 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g10-5-no-pad { width: 125%; float: left; margin-left: 50%; margin-right: -100%; }
 
-.g10-in-g5 { width: 200%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g10-in-g5 { padding: 0 17.5px; } }
+.g10-in-g5 { width: 200%; float: left; padding: 0 10px; }
+.g10-in-g5 .layout-mobile { padding: 0 10px; }
 
 .isolation-g10-6 { /*
 Isolation span: give column span width and start position.
 */ width: 125%; float: left; margin-left: 62.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g10-6 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g10-6 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g10-6 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g10-6 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g10-6-no-pad { width: 125%; float: left; margin-left: 62.5%; margin-right: -100%; }
 
-.g10-in-g6 { width: 166.66667%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g10-in-g6 { padding: 0 17.5px; } }
+.g10-in-g6 { width: 166.66667%; float: left; padding: 0 10px; }
+.g10-in-g6 .layout-mobile { padding: 0 10px; }
 
 .isolation-g10-7 { /*
 Isolation span: give column span width and start position.
 */ width: 125%; float: left; margin-left: 75%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g10-7 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g10-7 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g10-7 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g10-7 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g10-7-no-pad { width: 125%; float: left; margin-left: 75%; margin-right: -100%; }
 
-.g10-in-g7 { width: 142.85714%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g10-in-g7 { padding: 0 17.5px; } }
+.g10-in-g7 { width: 142.85714%; float: left; padding: 0 10px; }
+.g10-in-g7 .layout-mobile { padding: 0 10px; }
 
 .isolation-g10-8 { /*
 Isolation span: give column span width and start position.
 */ width: 125%; float: left; margin-left: 87.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g10-8 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g10-8 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g10-8 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g10-8 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g10-8-no-pad { width: 125%; float: left; margin-left: 87.5%; margin-right: -100%; }
 
-.g10-in-g8 { width: 125%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g10-in-g8 { padding: 0 17.5px; } }
+.g10-in-g8 { width: 125%; float: left; padding: 0 10px; }
+.g10-in-g8 .layout-mobile { padding: 0 10px; }
 
 .isolation-g10-9 { /*
 Isolation span: give column span width and start position.
 */ width: 125%; float: left; margin-left: 100%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g10-9 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g10-9 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g10-9 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g10-9 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g10-9-no-pad { width: 125%; float: left; margin-left: 100%; margin-right: -100%; }
 
-.g10-in-g9 { width: 111.11111%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g10-in-g9 { padding: 0 17.5px; } }
+.g10-in-g9 { width: 111.11111%; float: left; padding: 0 10px; }
+.g10-in-g9 .layout-mobile { padding: 0 10px; }
 
 .isolation-g10-10 { /*
 Isolation span: give column span width and start position.
 */ width: 125%; float: left; margin-left: 112.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g10-10 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g10-10 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g10-10 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g10-10 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g10-10-no-pad { width: 125%; float: left; margin-left: 112.5%; margin-right: -100%; }
 
-.g10-in-g10 { width: 100%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g10-in-g10 { padding: 0 17.5px; } }
+.g10-in-g10 { width: 100%; float: left; padding: 0 10px; }
+.g10-in-g10 .layout-mobile { padding: 0 10px; }
 
 .isolation-g10-11 { /*
 Isolation span: give column span width and start position.
 */ width: 125%; float: left; margin-left: 125%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g10-11 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g10-11 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g10-11 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g10-11 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g10-11-no-pad { width: 125%; float: left; margin-left: 125%; margin-right: -100%; }
 
-.g10-in-g11 { width: 90.90909%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g10-in-g11 { padding: 0 17.5px; } }
+.g10-in-g11 { width: 90.90909%; float: left; padding: 0 10px; }
+.g10-in-g11 .layout-mobile { padding: 0 10px; }
 
 .isolation-g10-12 { /*
 Isolation span: give column span width and start position.
 */ width: 125%; float: left; margin-left: 137.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g10-12 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g10-12 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g10-12 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g10-12 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g10-12-no-pad { width: 125%; float: left; margin-left: 137.5%; margin-right: -100%; }
 
-.g10-in-g12 { width: 83.33333%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g10-in-g12 { padding: 0 17.5px; } }
+.g10-in-g12 { width: 83.33333%; float: left; padding: 0 10px; }
+.g10-in-g12 .layout-mobile { padding: 0 10px; }
 
 .g11 { width: 137.5%; float: left; }
-@media screen and (min-width: 850px) { .g11 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .g11 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .g11 { padding-left: 10px; padding-right: 10px; } }
+.g11 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .g11-no-pad { width: 137.5%; float: left; }
 
 .isolation-g11-1 { /*
 Isolation span: give column span width and start position.
 */ width: 137.5%; float: left; margin-left: 0%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g11-1 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g11-1 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g11-1 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g11-1 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g11-1-no-pad { width: 137.5%; float: left; margin-left: 0%; margin-right: -100%; }
 
-.g11-in-g1 { width: 1100%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g11-in-g1 { padding: 0 17.5px; } }
+.g11-in-g1 { width: 1100%; float: left; padding: 0 10px; }
+.g11-in-g1 .layout-mobile { padding: 0 10px; }
 
 .isolation-g11-2 { /*
 Isolation span: give column span width and start position.
 */ width: 137.5%; float: left; margin-left: 12.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g11-2 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g11-2 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g11-2 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g11-2 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g11-2-no-pad { width: 137.5%; float: left; margin-left: 12.5%; margin-right: -100%; }
 
-.g11-in-g2 { width: 550%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g11-in-g2 { padding: 0 17.5px; } }
+.g11-in-g2 { width: 550%; float: left; padding: 0 10px; }
+.g11-in-g2 .layout-mobile { padding: 0 10px; }
 
 .isolation-g11-3 { /*
 Isolation span: give column span width and start position.
 */ width: 137.5%; float: left; margin-left: 25%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g11-3 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g11-3 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g11-3 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g11-3 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g11-3-no-pad { width: 137.5%; float: left; margin-left: 25%; margin-right: -100%; }
 
-.g11-in-g3 { width: 366.66667%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g11-in-g3 { padding: 0 17.5px; } }
+.g11-in-g3 { width: 366.66667%; float: left; padding: 0 10px; }
+.g11-in-g3 .layout-mobile { padding: 0 10px; }
 
 .isolation-g11-4 { /*
 Isolation span: give column span width and start position.
 */ width: 137.5%; float: left; margin-left: 37.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g11-4 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g11-4 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g11-4 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g11-4 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g11-4-no-pad { width: 137.5%; float: left; margin-left: 37.5%; margin-right: -100%; }
 
-.g11-in-g4 { width: 275%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g11-in-g4 { padding: 0 17.5px; } }
+.g11-in-g4 { width: 275%; float: left; padding: 0 10px; }
+.g11-in-g4 .layout-mobile { padding: 0 10px; }
 
 .isolation-g11-5 { /*
 Isolation span: give column span width and start position.
 */ width: 137.5%; float: left; margin-left: 50%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g11-5 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g11-5 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g11-5 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g11-5 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g11-5-no-pad { width: 137.5%; float: left; margin-left: 50%; margin-right: -100%; }
 
-.g11-in-g5 { width: 220%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g11-in-g5 { padding: 0 17.5px; } }
+.g11-in-g5 { width: 220%; float: left; padding: 0 10px; }
+.g11-in-g5 .layout-mobile { padding: 0 10px; }
 
 .isolation-g11-6 { /*
 Isolation span: give column span width and start position.
 */ width: 137.5%; float: left; margin-left: 62.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g11-6 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g11-6 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g11-6 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g11-6 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g11-6-no-pad { width: 137.5%; float: left; margin-left: 62.5%; margin-right: -100%; }
 
-.g11-in-g6 { width: 183.33333%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g11-in-g6 { padding: 0 17.5px; } }
+.g11-in-g6 { width: 183.33333%; float: left; padding: 0 10px; }
+.g11-in-g6 .layout-mobile { padding: 0 10px; }
 
 .isolation-g11-7 { /*
 Isolation span: give column span width and start position.
 */ width: 137.5%; float: left; margin-left: 75%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g11-7 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g11-7 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g11-7 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g11-7 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g11-7-no-pad { width: 137.5%; float: left; margin-left: 75%; margin-right: -100%; }
 
-.g11-in-g7 { width: 157.14286%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g11-in-g7 { padding: 0 17.5px; } }
+.g11-in-g7 { width: 157.14286%; float: left; padding: 0 10px; }
+.g11-in-g7 .layout-mobile { padding: 0 10px; }
 
 .isolation-g11-8 { /*
 Isolation span: give column span width and start position.
 */ width: 137.5%; float: left; margin-left: 87.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g11-8 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g11-8 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g11-8 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g11-8 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g11-8-no-pad { width: 137.5%; float: left; margin-left: 87.5%; margin-right: -100%; }
 
-.g11-in-g8 { width: 137.5%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g11-in-g8 { padding: 0 17.5px; } }
+.g11-in-g8 { width: 137.5%; float: left; padding: 0 10px; }
+.g11-in-g8 .layout-mobile { padding: 0 10px; }
 
 .isolation-g11-9 { /*
 Isolation span: give column span width and start position.
 */ width: 137.5%; float: left; margin-left: 100%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g11-9 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g11-9 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g11-9 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g11-9 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g11-9-no-pad { width: 137.5%; float: left; margin-left: 100%; margin-right: -100%; }
 
-.g11-in-g9 { width: 122.22222%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g11-in-g9 { padding: 0 17.5px; } }
+.g11-in-g9 { width: 122.22222%; float: left; padding: 0 10px; }
+.g11-in-g9 .layout-mobile { padding: 0 10px; }
 
 .isolation-g11-10 { /*
 Isolation span: give column span width and start position.
 */ width: 137.5%; float: left; margin-left: 112.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g11-10 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g11-10 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g11-10 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g11-10 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g11-10-no-pad { width: 137.5%; float: left; margin-left: 112.5%; margin-right: -100%; }
 
-.g11-in-g10 { width: 110%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g11-in-g10 { padding: 0 17.5px; } }
+.g11-in-g10 { width: 110%; float: left; padding: 0 10px; }
+.g11-in-g10 .layout-mobile { padding: 0 10px; }
 
 .isolation-g11-11 { /*
 Isolation span: give column span width and start position.
 */ width: 137.5%; float: left; margin-left: 125%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g11-11 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g11-11 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g11-11 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g11-11 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g11-11-no-pad { width: 137.5%; float: left; margin-left: 125%; margin-right: -100%; }
 
-.g11-in-g11 { width: 100%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g11-in-g11 { padding: 0 17.5px; } }
+.g11-in-g11 { width: 100%; float: left; padding: 0 10px; }
+.g11-in-g11 .layout-mobile { padding: 0 10px; }
 
 .isolation-g11-12 { /*
 Isolation span: give column span width and start position.
 */ width: 137.5%; float: left; margin-left: 137.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g11-12 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g11-12 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g11-12 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g11-12 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g11-12-no-pad { width: 137.5%; float: left; margin-left: 137.5%; margin-right: -100%; }
 
-.g11-in-g12 { width: 91.66667%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g11-in-g12 { padding: 0 17.5px; } }
+.g11-in-g12 { width: 91.66667%; float: left; padding: 0 10px; }
+.g11-in-g12 .layout-mobile { padding: 0 10px; }
 
 .g12 { width: 150%; float: left; }
-@media screen and (min-width: 850px) { .g12 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .g12 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .g12 { padding-left: 10px; padding-right: 10px; } }
+.g12 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .g12-no-pad { width: 150%; float: left; }
 
 .isolation-g12-1 { /*
 Isolation span: give column span width and start position.
 */ width: 150%; float: left; margin-left: 0%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g12-1 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g12-1 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g12-1 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g12-1 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g12-1-no-pad { width: 150%; float: left; margin-left: 0%; margin-right: -100%; }
 
-.g12-in-g1 { width: 1200%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g12-in-g1 { padding: 0 17.5px; } }
+.g12-in-g1 { width: 1200%; float: left; padding: 0 10px; }
+.g12-in-g1 .layout-mobile { padding: 0 10px; }
 
 .isolation-g12-2 { /*
 Isolation span: give column span width and start position.
 */ width: 150%; float: left; margin-left: 12.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g12-2 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g12-2 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g12-2 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g12-2 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g12-2-no-pad { width: 150%; float: left; margin-left: 12.5%; margin-right: -100%; }
 
-.g12-in-g2 { width: 600%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g12-in-g2 { padding: 0 17.5px; } }
+.g12-in-g2 { width: 600%; float: left; padding: 0 10px; }
+.g12-in-g2 .layout-mobile { padding: 0 10px; }
 
 .isolation-g12-3 { /*
 Isolation span: give column span width and start position.
 */ width: 150%; float: left; margin-left: 25%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g12-3 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g12-3 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g12-3 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g12-3 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g12-3-no-pad { width: 150%; float: left; margin-left: 25%; margin-right: -100%; }
 
-.g12-in-g3 { width: 400%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g12-in-g3 { padding: 0 17.5px; } }
+.g12-in-g3 { width: 400%; float: left; padding: 0 10px; }
+.g12-in-g3 .layout-mobile { padding: 0 10px; }
 
 .isolation-g12-4 { /*
 Isolation span: give column span width and start position.
 */ width: 150%; float: left; margin-left: 37.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g12-4 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g12-4 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g12-4 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g12-4 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g12-4-no-pad { width: 150%; float: left; margin-left: 37.5%; margin-right: -100%; }
 
-.g12-in-g4 { width: 300%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g12-in-g4 { padding: 0 17.5px; } }
+.g12-in-g4 { width: 300%; float: left; padding: 0 10px; }
+.g12-in-g4 .layout-mobile { padding: 0 10px; }
 
 .isolation-g12-5 { /*
 Isolation span: give column span width and start position.
 */ width: 150%; float: left; margin-left: 50%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g12-5 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g12-5 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g12-5 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g12-5 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g12-5-no-pad { width: 150%; float: left; margin-left: 50%; margin-right: -100%; }
 
-.g12-in-g5 { width: 240%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g12-in-g5 { padding: 0 17.5px; } }
+.g12-in-g5 { width: 240%; float: left; padding: 0 10px; }
+.g12-in-g5 .layout-mobile { padding: 0 10px; }
 
 .isolation-g12-6 { /*
 Isolation span: give column span width and start position.
 */ width: 150%; float: left; margin-left: 62.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g12-6 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g12-6 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g12-6 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g12-6 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g12-6-no-pad { width: 150%; float: left; margin-left: 62.5%; margin-right: -100%; }
 
-.g12-in-g6 { width: 200%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g12-in-g6 { padding: 0 17.5px; } }
+.g12-in-g6 { width: 200%; float: left; padding: 0 10px; }
+.g12-in-g6 .layout-mobile { padding: 0 10px; }
 
 .isolation-g12-7 { /*
 Isolation span: give column span width and start position.
 */ width: 150%; float: left; margin-left: 75%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g12-7 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g12-7 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g12-7 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g12-7 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g12-7-no-pad { width: 150%; float: left; margin-left: 75%; margin-right: -100%; }
 
-.g12-in-g7 { width: 171.42857%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g12-in-g7 { padding: 0 17.5px; } }
+.g12-in-g7 { width: 171.42857%; float: left; padding: 0 10px; }
+.g12-in-g7 .layout-mobile { padding: 0 10px; }
 
 .isolation-g12-8 { /*
 Isolation span: give column span width and start position.
 */ width: 150%; float: left; margin-left: 87.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g12-8 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g12-8 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g12-8 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g12-8 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g12-8-no-pad { width: 150%; float: left; margin-left: 87.5%; margin-right: -100%; }
 
-.g12-in-g8 { width: 150%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g12-in-g8 { padding: 0 17.5px; } }
+.g12-in-g8 { width: 150%; float: left; padding: 0 10px; }
+.g12-in-g8 .layout-mobile { padding: 0 10px; }
 
 .isolation-g12-9 { /*
 Isolation span: give column span width and start position.
 */ width: 150%; float: left; margin-left: 100%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g12-9 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g12-9 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g12-9 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g12-9 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g12-9-no-pad { width: 150%; float: left; margin-left: 100%; margin-right: -100%; }
 
-.g12-in-g9 { width: 133.33333%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g12-in-g9 { padding: 0 17.5px; } }
+.g12-in-g9 { width: 133.33333%; float: left; padding: 0 10px; }
+.g12-in-g9 .layout-mobile { padding: 0 10px; }
 
 .isolation-g12-10 { /*
 Isolation span: give column span width and start position.
 */ width: 150%; float: left; margin-left: 112.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g12-10 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g12-10 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g12-10 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g12-10 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g12-10-no-pad { width: 150%; float: left; margin-left: 112.5%; margin-right: -100%; }
 
-.g12-in-g10 { width: 120%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g12-in-g10 { padding: 0 17.5px; } }
+.g12-in-g10 { width: 120%; float: left; padding: 0 10px; }
+.g12-in-g10 .layout-mobile { padding: 0 10px; }
 
 .isolation-g12-11 { /*
 Isolation span: give column span width and start position.
 */ width: 150%; float: left; margin-left: 125%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g12-11 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g12-11 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g12-11 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g12-11 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g12-11-no-pad { width: 150%; float: left; margin-left: 125%; margin-right: -100%; }
 
-.g12-in-g11 { width: 109.09091%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g12-in-g11 { padding: 0 17.5px; } }
+.g12-in-g11 { width: 109.09091%; float: left; padding: 0 10px; }
+.g12-in-g11 .layout-mobile { padding: 0 10px; }
 
 .isolation-g12-12 { /*
 Isolation span: give column span width and start position.
 */ width: 150%; float: left; margin-left: 137.5%; margin-right: -100%; }
-@media screen and (min-width: 850px) { .isolation-g12-12 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .isolation-g12-12 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .isolation-g12-12 { padding-left: 10px; padding-right: 10px; } }
+.isolation-g12-12 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .isolation-g12-12-no-pad { width: 150%; float: left; margin-left: 137.5%; margin-right: -100%; }
 
-.g12-in-g12 { width: 100%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .g12-in-g12 { padding: 0 17.5px; } }
+.g12-in-g12 { width: 100%; float: left; padding: 0 10px; }
+.g12-in-g12 .layout-mobile { padding: 0 10px; }
 
 .col-1-4 { width: 25%; float: left; }
-@media screen and (min-width: 850px) { .col-1-4 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-1-4 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-1-4 { padding-left: 10px; padding-right: 10px; } }
+.col-1-4 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-2-4 { width: 50%; float: left; }
-@media screen and (min-width: 850px) { .col-2-4 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-2-4 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-2-4 { padding-left: 10px; padding-right: 10px; } }
+.col-2-4 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-3-4 { width: 75%; float: left; }
-@media screen and (min-width: 850px) { .col-3-4 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-3-4 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-3-4 { padding-left: 10px; padding-right: 10px; } }
+.col-3-4 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-4-4 { width: 100%; float: left; }
-@media screen and (min-width: 850px) { .col-4-4 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-4-4 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-4-4 { padding-left: 10px; padding-right: 10px; } }
+.col-4-4 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-1-5 { width: 20%; float: left; }
-@media screen and (min-width: 850px) { .col-1-5 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-1-5 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-1-5 { padding-left: 10px; padding-right: 10px; } }
+.col-1-5 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-2-5 { width: 40%; float: left; }
-@media screen and (min-width: 850px) { .col-2-5 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-2-5 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-2-5 { padding-left: 10px; padding-right: 10px; } }
+.col-2-5 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-3-5 { width: 60%; float: left; }
-@media screen and (min-width: 850px) { .col-3-5 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-3-5 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-3-5 { padding-left: 10px; padding-right: 10px; } }
+.col-3-5 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-4-5 { width: 80%; float: left; }
-@media screen and (min-width: 850px) { .col-4-5 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-4-5 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-4-5 { padding-left: 10px; padding-right: 10px; } }
+.col-4-5 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-5-5 { width: 100%; float: left; }
-@media screen and (min-width: 850px) { .col-5-5 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-5-5 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-5-5 { padding-left: 10px; padding-right: 10px; } }
+.col-5-5 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-1-6 { width: 16.66667%; float: left; }
-@media screen and (min-width: 850px) { .col-1-6 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-1-6 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-1-6 { padding-left: 10px; padding-right: 10px; } }
+.col-1-6 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-2-6 { width: 33.33333%; float: left; }
-@media screen and (min-width: 850px) { .col-2-6 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-2-6 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-2-6 { padding-left: 10px; padding-right: 10px; } }
+.col-2-6 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-3-6 { width: 50%; float: left; }
-@media screen and (min-width: 850px) { .col-3-6 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-3-6 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-3-6 { padding-left: 10px; padding-right: 10px; } }
+.col-3-6 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-4-6 { width: 66.66667%; float: left; }
-@media screen and (min-width: 850px) { .col-4-6 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-4-6 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-4-6 { padding-left: 10px; padding-right: 10px; } }
+.col-4-6 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-5-6 { width: 83.33333%; float: left; }
-@media screen and (min-width: 850px) { .col-5-6 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-5-6 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-5-6 { padding-left: 10px; padding-right: 10px; } }
+.col-5-6 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-6-6 { width: 100%; float: left; }
-@media screen and (min-width: 850px) { .col-6-6 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-6-6 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-6-6 { padding-left: 10px; padding-right: 10px; } }
+.col-6-6 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-1-7 { width: 14.28571%; float: left; }
-@media screen and (min-width: 850px) { .col-1-7 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-1-7 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-1-7 { padding-left: 10px; padding-right: 10px; } }
+.col-1-7 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-2-7 { width: 28.57143%; float: left; }
-@media screen and (min-width: 850px) { .col-2-7 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-2-7 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-2-7 { padding-left: 10px; padding-right: 10px; } }
+.col-2-7 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-3-7 { width: 42.85714%; float: left; }
-@media screen and (min-width: 850px) { .col-3-7 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-3-7 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-3-7 { padding-left: 10px; padding-right: 10px; } }
+.col-3-7 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-4-7 { width: 57.14286%; float: left; }
-@media screen and (min-width: 850px) { .col-4-7 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-4-7 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-4-7 { padding-left: 10px; padding-right: 10px; } }
+.col-4-7 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-5-7 { width: 71.42857%; float: left; }
-@media screen and (min-width: 850px) { .col-5-7 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-5-7 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-5-7 { padding-left: 10px; padding-right: 10px; } }
+.col-5-7 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-6-7 { width: 85.71429%; float: left; }
-@media screen and (min-width: 850px) { .col-6-7 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-6-7 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-6-7 { padding-left: 10px; padding-right: 10px; } }
+.col-6-7 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-7-7 { width: 100%; float: left; }
-@media screen and (min-width: 850px) { .col-7-7 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-7-7 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-7-7 { padding-left: 10px; padding-right: 10px; } }
+.col-7-7 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-1-8 { width: 12.5%; float: left; }
-@media screen and (min-width: 850px) { .col-1-8 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-1-8 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-1-8 { padding-left: 10px; padding-right: 10px; } }
+.col-1-8 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-2-8 { width: 25%; float: left; }
-@media screen and (min-width: 850px) { .col-2-8 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-2-8 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-2-8 { padding-left: 10px; padding-right: 10px; } }
+.col-2-8 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-3-8 { width: 37.5%; float: left; }
-@media screen and (min-width: 850px) { .col-3-8 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-3-8 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-3-8 { padding-left: 10px; padding-right: 10px; } }
+.col-3-8 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-4-8 { width: 50%; float: left; }
-@media screen and (min-width: 850px) { .col-4-8 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-4-8 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-4-8 { padding-left: 10px; padding-right: 10px; } }
+.col-4-8 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-5-8 { width: 62.5%; float: left; }
-@media screen and (min-width: 850px) { .col-5-8 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-5-8 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-5-8 { padding-left: 10px; padding-right: 10px; } }
+.col-5-8 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-6-8 { width: 75%; float: left; }
-@media screen and (min-width: 850px) { .col-6-8 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-6-8 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-6-8 { padding-left: 10px; padding-right: 10px; } }
+.col-6-8 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-7-8 { width: 87.5%; float: left; }
-@media screen and (min-width: 850px) { .col-7-8 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-7-8 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-7-8 { padding-left: 10px; padding-right: 10px; } }
+.col-7-8 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-8-8 { width: 100%; float: left; }
-@media screen and (min-width: 850px) { .col-8-8 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-8-8 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-8-8 { padding-left: 10px; padding-right: 10px; } }
+.col-8-8 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-1-9 { width: 11.11111%; float: left; }
-@media screen and (min-width: 850px) { .col-1-9 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-1-9 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-1-9 { padding-left: 10px; padding-right: 10px; } }
+.col-1-9 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-2-9 { width: 22.22222%; float: left; }
-@media screen and (min-width: 850px) { .col-2-9 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-2-9 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-2-9 { padding-left: 10px; padding-right: 10px; } }
+.col-2-9 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-3-9 { width: 33.33333%; float: left; }
-@media screen and (min-width: 850px) { .col-3-9 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-3-9 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-3-9 { padding-left: 10px; padding-right: 10px; } }
+.col-3-9 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-4-9 { width: 44.44444%; float: left; }
-@media screen and (min-width: 850px) { .col-4-9 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-4-9 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-4-9 { padding-left: 10px; padding-right: 10px; } }
+.col-4-9 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-5-9 { width: 55.55556%; float: left; }
-@media screen and (min-width: 850px) { .col-5-9 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-5-9 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-5-9 { padding-left: 10px; padding-right: 10px; } }
+.col-5-9 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-6-9 { width: 66.66667%; float: left; }
-@media screen and (min-width: 850px) { .col-6-9 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-6-9 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-6-9 { padding-left: 10px; padding-right: 10px; } }
+.col-6-9 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-7-9 { width: 77.77778%; float: left; }
-@media screen and (min-width: 850px) { .col-7-9 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-7-9 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-7-9 { padding-left: 10px; padding-right: 10px; } }
+.col-7-9 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-8-9 { width: 88.88889%; float: left; }
-@media screen and (min-width: 850px) { .col-8-9 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-8-9 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-8-9 { padding-left: 10px; padding-right: 10px; } }
+.col-8-9 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-9-9 { width: 100%; float: left; }
-@media screen and (min-width: 850px) { .col-9-9 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-9-9 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-9-9 { padding-left: 10px; padding-right: 10px; } }
+.col-9-9 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-1-10 { width: 10%; float: left; }
-@media screen and (min-width: 850px) { .col-1-10 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-1-10 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-1-10 { padding-left: 10px; padding-right: 10px; } }
+.col-1-10 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-2-10 { width: 20%; float: left; }
-@media screen and (min-width: 850px) { .col-2-10 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-2-10 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-2-10 { padding-left: 10px; padding-right: 10px; } }
+.col-2-10 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-3-10 { width: 30%; float: left; }
-@media screen and (min-width: 850px) { .col-3-10 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-3-10 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-3-10 { padding-left: 10px; padding-right: 10px; } }
+.col-3-10 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-4-10 { width: 40%; float: left; }
-@media screen and (min-width: 850px) { .col-4-10 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-4-10 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-4-10 { padding-left: 10px; padding-right: 10px; } }
+.col-4-10 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-5-10 { width: 50%; float: left; }
-@media screen and (min-width: 850px) { .col-5-10 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-5-10 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-5-10 { padding-left: 10px; padding-right: 10px; } }
+.col-5-10 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-6-10 { width: 60%; float: left; }
-@media screen and (min-width: 850px) { .col-6-10 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-6-10 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-6-10 { padding-left: 10px; padding-right: 10px; } }
+.col-6-10 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-7-10 { width: 70%; float: left; }
-@media screen and (min-width: 850px) { .col-7-10 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-7-10 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-7-10 { padding-left: 10px; padding-right: 10px; } }
+.col-7-10 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-8-10 { width: 80%; float: left; }
-@media screen and (min-width: 850px) { .col-8-10 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-8-10 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-8-10 { padding-left: 10px; padding-right: 10px; } }
+.col-8-10 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-9-10 { width: 90%; float: left; }
-@media screen and (min-width: 850px) { .col-9-10 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-9-10 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-9-10 { padding-left: 10px; padding-right: 10px; } }
+.col-9-10 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-10-10 { width: 100%; float: left; }
-@media screen and (min-width: 850px) { .col-10-10 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-10-10 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-10-10 { padding-left: 10px; padding-right: 10px; } }
+.col-10-10 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-1-11 { width: 9.09091%; float: left; }
-@media screen and (min-width: 850px) { .col-1-11 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-1-11 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-1-11 { padding-left: 10px; padding-right: 10px; } }
+.col-1-11 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-2-11 { width: 18.18182%; float: left; }
-@media screen and (min-width: 850px) { .col-2-11 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-2-11 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-2-11 { padding-left: 10px; padding-right: 10px; } }
+.col-2-11 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-3-11 { width: 27.27273%; float: left; }
-@media screen and (min-width: 850px) { .col-3-11 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-3-11 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-3-11 { padding-left: 10px; padding-right: 10px; } }
+.col-3-11 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-4-11 { width: 36.36364%; float: left; }
-@media screen and (min-width: 850px) { .col-4-11 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-4-11 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-4-11 { padding-left: 10px; padding-right: 10px; } }
+.col-4-11 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-5-11 { width: 45.45455%; float: left; }
-@media screen and (min-width: 850px) { .col-5-11 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-5-11 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-5-11 { padding-left: 10px; padding-right: 10px; } }
+.col-5-11 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-6-11 { width: 54.54545%; float: left; }
-@media screen and (min-width: 850px) { .col-6-11 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-6-11 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-6-11 { padding-left: 10px; padding-right: 10px; } }
+.col-6-11 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-7-11 { width: 63.63636%; float: left; }
-@media screen and (min-width: 850px) { .col-7-11 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-7-11 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-7-11 { padding-left: 10px; padding-right: 10px; } }
+.col-7-11 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-8-11 { width: 72.72727%; float: left; }
-@media screen and (min-width: 850px) { .col-8-11 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-8-11 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-8-11 { padding-left: 10px; padding-right: 10px; } }
+.col-8-11 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-9-11 { width: 81.81818%; float: left; }
-@media screen and (min-width: 850px) { .col-9-11 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-9-11 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-9-11 { padding-left: 10px; padding-right: 10px; } }
+.col-9-11 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-10-11 { width: 90.90909%; float: left; }
-@media screen and (min-width: 850px) { .col-10-11 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-10-11 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-10-11 { padding-left: 10px; padding-right: 10px; } }
+.col-10-11 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-11-11 { width: 100%; float: left; }
-@media screen and (min-width: 850px) { .col-11-11 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-11-11 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-11-11 { padding-left: 10px; padding-right: 10px; } }
+.col-11-11 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-1-12 { width: 8.33333%; float: left; }
-@media screen and (min-width: 850px) { .col-1-12 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-1-12 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-1-12 { padding-left: 10px; padding-right: 10px; } }
+.col-1-12 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-2-12 { width: 16.66667%; float: left; }
-@media screen and (min-width: 850px) { .col-2-12 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-2-12 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-2-12 { padding-left: 10px; padding-right: 10px; } }
+.col-2-12 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-3-12 { width: 25%; float: left; }
-@media screen and (min-width: 850px) { .col-3-12 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-3-12 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-3-12 { padding-left: 10px; padding-right: 10px; } }
+.col-3-12 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-4-12 { width: 33.33333%; float: left; }
-@media screen and (min-width: 850px) { .col-4-12 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-4-12 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-4-12 { padding-left: 10px; padding-right: 10px; } }
+.col-4-12 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-5-12 { width: 41.66667%; float: left; }
-@media screen and (min-width: 850px) { .col-5-12 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-5-12 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-5-12 { padding-left: 10px; padding-right: 10px; } }
+.col-5-12 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-6-12 { width: 50%; float: left; }
-@media screen and (min-width: 850px) { .col-6-12 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-6-12 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-6-12 { padding-left: 10px; padding-right: 10px; } }
+.col-6-12 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-7-12 { width: 58.33333%; float: left; }
-@media screen and (min-width: 850px) { .col-7-12 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-7-12 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-7-12 { padding-left: 10px; padding-right: 10px; } }
+.col-7-12 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-8-12 { width: 66.66667%; float: left; }
-@media screen and (min-width: 850px) { .col-8-12 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-8-12 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-8-12 { padding-left: 10px; padding-right: 10px; } }
+.col-8-12 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-9-12 { width: 75%; float: left; }
-@media screen and (min-width: 850px) { .col-9-12 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-9-12 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-9-12 { padding-left: 10px; padding-right: 10px; } }
+.col-9-12 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-10-12 { width: 83.33333%; float: left; }
-@media screen and (min-width: 850px) { .col-10-12 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-10-12 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-10-12 { padding-left: 10px; padding-right: 10px; } }
+.col-10-12 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-11-12 { width: 91.66667%; float: left; }
-@media screen and (min-width: 850px) { .col-11-12 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-11-12 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-11-12 { padding-left: 10px; padding-right: 10px; } }
+.col-11-12 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .col-12-12 { width: 100%; float: left; }
-@media screen and (min-width: 850px) { .col-12-12 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .col-12-12 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .col-12-12 { padding-left: 10px; padding-right: 10px; } }
+.col-12-12 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .gcenter { float: none; margin: 0 auto; text-align: center; }
 
@@ -2726,13 +2727,15 @@ h1 { font-size: 26px; line-height: 1.07; }
 
 .navbar { margin-left: auto; margin-right: auto; clear: both; padding-left: 35px; padding-right: 35px; position: fixed; left: 0; top: 0; bottom: 0; z-index: 100; }
 .navbar:after { content: ""; display: table; clear: both; }
-@media screen and (max-width: 849px) { .navbar { padding-left: 20px; padding-right: 20px; } }
-@media screen and (min-width: 850px) { .navbar { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .navbar { padding-left: 2.5px; padding-right: 2.5px; } }
+.navbar .layout-mobile { padding-left: 20px; padding-right: 20px; }
+@media screen and (min-width: 850px) { .navbar { padding-left: 25px; padding-right: 25px; } }
+.navbar .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
-.navbar__column { height: 100vh; position: relative; z-index: 3; white-space: nowrap; float: left; padding: 0 17.5px; }
+.navbar__items .layout-mobile { margin-left: -200%; margin-top: 0 !important; }
+
+.navbar__column { height: 100vh; position: relative; z-index: 3; white-space: nowrap; float: left; padding: 0 10px; }
 .navbar__column:after { content: ''; display: inline-block; vertical-align: middle; height: 100%; width: .1px; }
-@media screen and (max-width: 849px) { .navbar__column { padding: 0 17.5px; } }
+.navbar__column .layout-mobile { padding: 0 10px; width: 100px !important; }
 
 .navbar__valign { white-space: normal; width: 100%; display: inline-block; vertical-align: middle; position: relative; }
 
@@ -2744,36 +2747,88 @@ h1 { font-size: 26px; line-height: 1.07; }
 
 .navbar__logo { position: absolute; top: 35px; left: 35px; }
 .navbar__logo svg { width: 82px; height: 20px; }
+.navbar__logo .layout-mobile { top: 20px; left: 20px; }
+.navbar__logo .layout-mobile svg { width: 62px; height: 15.5px; }
 
-.navbar__item { width: 200px; position: relative; padding-left: 17.5px; padding-right: 17.5px; z-index: 1; background: white; }
+.mobile-navbar-open { display: none; position: absolute; top: 25px; right: 20px; width: 13px; z-index: 1000; }
+.mobile-navbar-open .layout-mobile { display: block; }
+
+.mobile-navbar-open__line { height: 1px; background: black; }
+.mobile-navbar-open__line:not(:last-child) { margin-bottom: 4px; }
+
+.fixed-content-wrapper { -webkit-transition: transform 0.3s ease 0s; -moz-transition: transform 0.3s ease 0s; -o-transition: transform 0.3s ease 0s; }
+
+.mobile-navbar-is-open .fixed-content-wrapper { -ms-transform: translateX(170px); -webkit-transform: translateX(170px); transform: translateX(170px); }
+.mobile-navbar-is-open .navbar__items { margin-left: 0; }
+
+.mobile { font-size: 12px; font-weight: 500; letter-spacing: .01em; overflow-x: hidden; padding: 50px 20px; }
+.mobile .module-text__spacer { display: none; }
+.mobile .module-text { margin: 20px 0 40px 0; }
+.mobile .module-text__excerpt { float: none; width: 100%; font-size: 16px; }
+.mobile .module-website-link { width: 100%; margin: 40px 0 40px 0; }
+.mobile .module-website-link__spacer { display: none; }
+.mobile .module-website-link__column { width: 100%; padding: 0; }
+.mobile .module__image-caption { margin-top: 10px; margin-bottom: 10px; }
+
+.mobile-project { text-decoration: none; color: inherit; display: block; margin-bottom: 15px; }
+.mobile-project .module-image__ratio { margin-bottom: 8px; }
+
+.mobile-project__title { font-size: 18px; line-height: 100%; }
+
+.mobile__contact { border-top: 1px solid #eee; border-bottom: 1px solid #eee; padding: 0 0 20px 0; margin-top: 35px; margin-bottom: 35px; }
+
+.mobile__contact-header { margin-top: 15px; margin-bottom: 15px; }
+
+.mobile__email-address { text-align: center; border: 1px solid black; padding: 12px 0; text-decoration: none; color: black; display: block; font-size: 12px; }
+
+.mobile__addresses { padding: 20px 0; }
+.mobile__addresses:after { content: ""; display: table; clear: both; }
+
+.mobile__address { width: 50%; }
+.mobile__address:first-child { float: left; padding-right: 10px; }
+.mobile__address:last-child { padding-left: 10px; float: right; }
+
+.mobile-social__item { width: 30px; height: 30px; display: inline-block; line-height: 30px; text-align: center; border: 1px solid black; margin-left: -1px; }
+
+.mobile__next { font-size: 16px; text-decoration: none; color: #cccccc; padding: 10px 0; font-weight: 500; display: block; border-top: 2px solid rgba(0, 0, 0, 0.2); margin-top: -1px; }
+
+.mobile__next-project { color: black; }
+
+.navbar .layout-mobile { padding-top: 70px; }
+
+.navbar__item { width: 200px; position: relative; padding-left: 10px; padding-right: 10px; z-index: 1; }
 .navbar__item.is-active > .navbar__label { color: black; }
+.navbar__item .layout-mobile { width: 80px !important; }
 
 .navbar__label { padding: 2px 0; text-decoration: none; font-size: 14px; line-height: 1.42; letter-spacing: .01em; font-weight: 500; line-height: 1.1; color: #999; cursor: pointer; }
 
 .navbar__dropdown { display: none; position: absolute; right: -200px; width: 200px; -webkit-transition: 0.2s left ease 0s; -moz-transition: 0.2s left ease 0s; -o-transition: 0.2s left ease 0s; top: 0; z-index: 0; }
+.navbar__dropdown .layout-mobile { margin-top: 0 !important; }
 
 .content-wrapper { margin-left: auto; margin-right: auto; clear: both; padding-left: 35px; padding-right: 35px; z-index: 2; }
 .content-wrapper:after { content: ""; display: table; clear: both; }
-@media screen and (max-width: 849px) { .content-wrapper { padding-left: 20px; padding-right: 20px; } }
+.content-wrapper .layout-mobile { padding-left: 20px; padding-right: 20px; }
 
 .content-navbar-grid-spacer { width: 25%; float: left; }
-@media screen and (min-width: 850px) { .content-navbar-grid-spacer { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .content-navbar-grid-spacer { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .content-navbar-grid-spacer { padding-left: 10px; padding-right: 10px; } }
+.content-navbar-grid-spacer .layout-mobile { padding-left: 10px; padding-right: 10px; }
+.content-navbar-grid-spacer .layout-mobile { display: none; }
 
 .content { z-index: 2; position: relative; }
 
 .primary-slide { height: 100vh; padding: 60px 0; }
 
 .index-swiper { width: 75%; float: left; }
-@media screen and (min-width: 850px) { .index-swiper { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .index-swiper { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .index-swiper { padding-left: 10px; padding-right: 10px; } }
+.index-swiper .layout-mobile { padding-left: 10px; padding-right: 10px; }
+.index-swiper .layout-mobile { width: 100%; display: none; }
 .index-swiper .swiper-container { margin-right: -35px; }
 
 .swiper-slide { margin-top: 90px; height: calc(100vh - 180px); -o-background-size: cover; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover; background-position: center center; }
 
 .index-project { margin-bottom: 60px; position: relative; width: 75%; float: left; }
-@media screen and (min-width: 850px) { .index-project { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .index-project { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .index-project { padding-left: 10px; padding-right: 10px; } }
+.index-project .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .index-project-debug { position: absolute; top: 0; right: 0; font-size: 12px; background: rgba(255, 0, 0, 0.5); color: white; padding: 5px 10px; }
 .index-project-debug a { color: white; }
@@ -2794,6 +2849,7 @@ div[js-index-content="index"] { display: block; }
 .js-viewing-full-project .module-image .module__image-caption { margin-left: 35px; }
 
 .module-image__ratio { position: relative; margin-bottom: 35px; }
+.module-image__ratio .layout-mobile { margin-bottom: 20px; }
 .module-image__ratio > img { position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
 .module-image__ratio .module-image__img, .module-image__ratio .module-images-2up__img { position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
 
@@ -2803,62 +2859,62 @@ div[js-index-content="index"] { display: block; }
 
 .module-text { margin-top: 70px; margin-bottom: 140px; }
 .module-text:after { content: ""; display: table; clear: both; }
-@media screen and (max-width: 849px) { .module-text { margin-left: -17.5px; margin-right: -17.5px; } }
-@media screen and (min-width: 850px) { .module-text { margin-left: -17.5px; margin-right: -17.5px; } }
+.module-text .layout-mobile { margin-left: -10px; margin-right: -10px; }
+@media screen and (min-width: 850px) { .module-text { margin-left: -10px; margin-right: -10px; } }
 
-.module-text__spacer { width: 33.33333%; float: left; padding: 0 17.5px; font-size: 14px; line-height: 1.42; letter-spacing: .01em; font-weight: 500; }
-@media screen and (max-width: 849px) { .module-text__spacer { padding: 0 17.5px; } }
+.module-text__spacer { width: 33.33333%; float: left; padding: 0 10px; font-size: 14px; line-height: 1.42; letter-spacing: .01em; font-weight: 500; }
+.module-text__spacer .layout-mobile { padding: 0 10px; }
 .js-viewing-full-project .module-text__spacer { width: 12.5%; float: left; }
-@media screen and (min-width: 850px) { .js-viewing-full-project .module-text__spacer { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .js-viewing-full-project .module-text__spacer { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .js-viewing-full-project .module-text__spacer { padding-left: 10px; padding-right: 10px; } }
+.js-viewing-full-project .module-text__spacer .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .module-text__full-project-spacer { display: none; }
 .js-viewing-full-project .module-text__full-project-spacer { display: block; width: 12.5%; float: left; }
-@media screen and (min-width: 850px) { .js-viewing-full-project .module-text__full-project-spacer { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .js-viewing-full-project .module-text__full-project-spacer { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .js-viewing-full-project .module-text__full-project-spacer { padding-left: 10px; padding-right: 10px; } }
+.js-viewing-full-project .module-text__full-project-spacer .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
-.module-text__excerpt { font-size: 26px; line-height: 1.07; width: 50%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .module-text__excerpt { padding: 0 17.5px; } }
+.module-text__excerpt { font-size: 26px; line-height: 1.07; width: 50%; float: left; padding: 0 10px; }
+.module-text__excerpt .layout-mobile { padding: 0 10px; }
 .js-viewing-full-project .module-text__excerpt { width: 37.5%; float: left; }
-@media screen and (min-width: 850px) { .js-viewing-full-project .module-text__excerpt { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .js-viewing-full-project .module-text__excerpt { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .js-viewing-full-project .module-text__excerpt { padding-left: 10px; padding-right: 10px; } }
+.js-viewing-full-project .module-text__excerpt .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .module-text__view-full { margin-top: 28px; font-size: 14px; letter-spacing: .02em; color: #818181; cursor: pointer; }
 
 .module-text__body { display: none; font-size: 14px; line-height: 1.42; letter-spacing: .01em; font-weight: 500; }
 .js-viewing-full-project .module-text__body { width: 37.5%; float: left; display: block; }
-@media screen and (min-width: 850px) { .js-viewing-full-project .module-text__body { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .js-viewing-full-project .module-text__body { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .js-viewing-full-project .module-text__body { padding-left: 10px; padding-right: 10px; } }
+.js-viewing-full-project .module-text__body .layout-mobile { padding-left: 10px; padding-right: 10px; }
 .module-text__body p { margin: 28px 0; }
 .module-text__body p:first-child { margin-top: 0; }
 .module-text__body ul { padding-left: 0; margin-top: 35px; }
-.module-text__body li { display: inline-block; width: 48%; padding-right: 35px; }
+.module-text__body li { display: inline-block; width: 48%; padding-right: 20px; }
 
 .module-images-2up:after { content: ""; display: table; clear: both; }
-@media screen and (max-width: 849px) { .module-images-2up { margin-left: -17.5px; margin-right: -17.5px; } }
-@media screen and (min-width: 850px) { .module-images-2up { margin-left: -17.5px; margin-right: -17.5px; } }
+.module-images-2up .layout-mobile { margin-left: -10px; margin-right: -10px; }
+@media screen and (min-width: 850px) { .module-images-2up { margin-left: -10px; margin-right: -10px; } }
 
-.module-images-2up__image { width: 50%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .module-images-2up__image { padding: 0 17.5px; } }
+.module-images-2up__image { width: 50%; float: left; padding: 0 10px; }
+.module-images-2up__image .layout-mobile { padding: 0 10px; }
 
 .module-images-2up__img { display: block; }
 
 .module-website-link { margin: 70px 0; }
 .module-website-link:after { content: ""; display: table; clear: both; }
-@media screen and (max-width: 849px) { .module-website-link { margin-left: -17.5px; margin-right: -17.5px; } }
-@media screen and (min-width: 850px) { .module-website-link { margin-left: -17.5px; margin-right: -17.5px; } }
+.module-website-link .layout-mobile { margin-left: -10px; margin-right: -10px; }
+@media screen and (min-width: 850px) { .module-website-link { margin-left: -10px; margin-right: -10px; } }
 
-.module-website-link__spacer { width: 50%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .module-website-link__spacer { padding: 0 17.5px; } }
+.module-website-link__spacer { width: 50%; float: left; padding: 0 10px; }
+.module-website-link__spacer .layout-mobile { padding: 0 10px; }
 .js-viewing-full-project .module-website-link__spacer { width: 62.5%; float: left; }
-@media screen and (min-width: 850px) { .js-viewing-full-project .module-website-link__spacer { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .js-viewing-full-project .module-website-link__spacer { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .js-viewing-full-project .module-website-link__spacer { padding-left: 10px; padding-right: 10px; } }
+.js-viewing-full-project .module-website-link__spacer .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
-.module-website-link__column { width: 50%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .module-website-link__column { padding: 0 17.5px; } }
+.module-website-link__column { width: 50%; float: left; padding: 0 10px; }
+.module-website-link__column .layout-mobile { padding: 0 10px; }
 .js-viewing-full-project .module-website-link__column { width: 37.5%; float: left; }
-@media screen and (min-width: 850px) { .js-viewing-full-project .module-website-link__column { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .js-viewing-full-project .module-website-link__column { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .js-viewing-full-project .module-website-link__column { padding-left: 10px; padding-right: 10px; } }
+.js-viewing-full-project .module-website-link__column .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .module-website-link__button { text-decoration: none; display: block; border: 1px solid black; font-size: 14px; color: black; height: 45px; line-height: 45px; padding-left: 20px; position: relative; -webkit-transition: all 0.15s ease 0s; -moz-transition: all 0.15s ease 0s; -o-transition: all 0.15s ease 0s; }
 .module-website-link__button:hover { color: white; background: black; }
@@ -2869,8 +2925,8 @@ div[js-index-content="index"] { display: block; }
 
 .module-credits { margin-top: -1px; }
 .module-credits:after { content: ""; display: table; clear: both; }
-@media screen and (max-width: 849px) { .module-credits { margin-left: -17.5px; margin-right: -17.5px; } }
-@media screen and (min-width: 850px) { .module-credits { margin-left: -17.5px; margin-right: -17.5px; } }
+.module-credits .layout-mobile { margin-left: -10px; margin-right: -10px; }
+@media screen and (min-width: 850px) { .module-credits { margin-left: -10px; margin-right: -10px; } }
 
 .module-credits__title { font-size: 14px; line-height: 1.42; letter-spacing: .01em; font-weight: 500; }
 
@@ -2883,16 +2939,16 @@ div[js-index-content="index"] { display: block; }
 .module-credits__emphasis { font-size: 13px; line-height: 1.5; font-style: italic; letter-spacing: .01em; }
 
 .module-credits__line-container { width: 100%; float: left; float: none; }
-@media screen and (min-width: 850px) { .module-credits__line-container { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .module-credits__line-container { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .module-credits__line-container { padding-left: 10px; padding-right: 10px; } }
+.module-credits__line-container .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .module-credits__line { height: 0; border-bottom: 1px solid #e6e6e6; }
 
-.module-credits__column { width: 33.33333%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .module-credits__column { padding: 0 17.5px; } }
+.module-credits__column { width: 33.33333%; float: left; padding: 0 10px; }
+.module-credits__column .layout-mobile { padding: 0 10px; }
 .js-viewing-full-project .module-credits__column { width: 25%; float: left; }
-@media screen and (min-width: 850px) { .js-viewing-full-project .module-credits__column { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .js-viewing-full-project .module-credits__column { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .js-viewing-full-project .module-credits__column { padding-left: 10px; padding-right: 10px; } }
+.js-viewing-full-project .module-credits__column .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .show-on-full-project { display: none; }
 
@@ -2900,28 +2956,28 @@ div[js-index-content="index"] { display: block; }
 .js-viewing-full-project .show-on-full-project { display: block; }
 .js-viewing-full-project .content-navbar-grid-spacer { width: 0; overflow: hidden; }
 .js-viewing-full-project .index-project { width: 100%; float: left; }
-@media screen and (min-width: 850px) { .js-viewing-full-project .index-project { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .js-viewing-full-project .index-project { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .js-viewing-full-project .index-project { padding-left: 10px; padding-right: 10px; } }
+.js-viewing-full-project .index-project .layout-mobile { padding-left: 10px; padding-right: 10px; }
 .js-viewing-full-project .navbar { display: none; }
 
 .studio { background: white; margin-left: auto; margin-right: auto; clear: both; padding-left: 35px; padding-right: 35px; }
 .studio:after { content: ""; display: table; clear: both; }
-@media screen and (max-width: 849px) { .studio { padding-left: 20px; padding-right: 20px; } }
-@media screen and (min-width: 850px) { .studio { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .studio { padding-left: 2.5px; padding-right: 2.5px; } }
+.studio .layout-mobile { padding-left: 20px; padding-right: 20px; }
+@media screen and (min-width: 850px) { .studio { padding-left: 25px; padding-right: 25px; } }
+.studio .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .studio__spacer { width: 25%; float: left; }
-@media screen and (min-width: 850px) { .studio__spacer { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .studio__spacer { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .studio__spacer { padding-left: 10px; padding-right: 10px; } }
+.studio__spacer .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .studio__content { width: 75%; float: left; position: relative; }
-@media screen and (min-width: 850px) { .studio__content { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .studio__content { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .studio__content { padding-left: 10px; padding-right: 10px; } }
+.studio__content .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .studio__locations { position: absolute; top: 35px; left: 0; right: 0; font-size: 14px; line-height: 1.42; letter-spacing: .01em; font-weight: 500; }
 
-.studio__location { width: 33.33333%; float: left; padding: 0 17.5px; }
-@media screen and (max-width: 849px) { .studio__location { padding: 0 17.5px; } }
+.studio__location { width: 33.33333%; float: left; padding: 0 10px; }
+.studio__location .layout-mobile { padding: 0 10px; }
 
 @media screen and (min-width: 950px) { .studio__city { float: left; display: inline-block; } }
 
@@ -2942,12 +2998,12 @@ div[js-index-content="index"] { display: block; }
 
 .studio__team { margin-top: 0; margin-bottom: 70px; }
 .studio__team:after { content: ""; display: table; clear: both; }
-@media screen and (max-width: 849px) { .studio__team { margin-left: -17.5px; margin-right: -17.5px; } }
-@media screen and (min-width: 850px) { .studio__team { margin-left: -17.5px; margin-right: -17.5px; } }
+.studio__team .layout-mobile { margin-left: -10px; margin-right: -10px; }
+@media screen and (min-width: 850px) { .studio__team { margin-left: -10px; margin-right: -10px; } }
 
 .studio__team-member { width: 50%; float: left; margin-bottom: 70px; font-size: 18px; line-height: 20px; }
-@media screen and (min-width: 850px) { .studio__team-member { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .studio__team-member { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .studio__team-member { padding-left: 10px; padding-right: 10px; } }
+.studio__team-member .layout-mobile { padding-left: 10px; padding-right: 10px; }
 .studio__team-member:nth-child(odd) { clear: both; }
 
 .studio__team-img { display: block; margin-bottom: 35px; height: 300px; width: 100%; background: black; }
@@ -2958,12 +3014,12 @@ div[js-index-content="index"] { display: block; }
 
 .studio__services { font-size: 18px; margin-bottom: 140px; }
 .studio__services:after { content: ""; display: table; clear: both; }
-@media screen and (max-width: 849px) { .studio__services { margin-left: -17.5px; margin-right: -17.5px; } }
-@media screen and (min-width: 850px) { .studio__services { margin-left: -17.5px; margin-right: -17.5px; } }
+.studio__services .layout-mobile { margin-left: -10px; margin-right: -10px; }
+@media screen and (min-width: 850px) { .studio__services { margin-left: -10px; margin-right: -10px; } }
 
 .studio__services-column { width: 50%; float: left; }
-@media screen and (min-width: 850px) { .studio__services-column { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .studio__services-column { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .studio__services-column { padding-left: 10px; padding-right: 10px; } }
+.studio__services-column .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .studio__service-header { margin-bottom: 70px; }
 
@@ -2981,12 +3037,12 @@ div[js-index-content="index"] { display: block; }
 
 .studio__clients { font-size: 18px; }
 .studio__clients:after { content: ""; display: table; clear: both; }
-@media screen and (max-width: 849px) { .studio__clients { margin-left: -17.5px; margin-right: -17.5px; } }
-@media screen and (min-width: 850px) { .studio__clients { margin-left: -17.5px; margin-right: -17.5px; } }
+.studio__clients .layout-mobile { margin-left: -10px; margin-right: -10px; }
+@media screen and (min-width: 850px) { .studio__clients { margin-left: -10px; margin-right: -10px; } }
 
 .studio__clients-column { width: 50%; float: left; }
-@media screen and (min-width: 850px) { .studio__clients-column { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .studio__clients-column { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .studio__clients-column { padding-left: 10px; padding-right: 10px; } }
+.studio__clients-column .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .studio__clients-header { margin-bottom: 70px; }
 
@@ -2994,9 +3050,9 @@ div[js-index-content="index"] { display: block; }
 
 .studio__service-client { font-size: 26px; line-height: 1.07; line-height: 36px; display: block; text-decoration: none; color: inherit; }
 
-.index-journal { width: 75%; float: left; }
-@media screen and (min-width: 850px) { .index-journal { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .index-journal { padding-left: 17.5px; padding-right: 17.5px; } }
+.index-journal { width: 75%; float: left; padding-bottom: 35px; }
+@media screen and (min-width: 850px) { .index-journal { padding-left: 10px; padding-right: 10px; } }
+.index-journal .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .index-journal__journal { padding-top: 35px; margin-top: 35px; border-top: 1px solid rgba(0, 0, 0, 0.1); }
 
@@ -3011,8 +3067,8 @@ div[js-index-content="index"] { display: block; }
 
 .index-journal__title { font-size: 26px; line-height: 1.07; font-weight: normal; margin: 0; margin-top: 5px; }
 
-.index-journal__content { font-size: 26px; line-height: 1.07; width: 66.66667%; float: left; padding: 0 17.5px; margin-top: 35px; margin-bottom: 35px; }
-@media screen and (max-width: 849px) { .index-journal__content { padding: 0 17.5px; } }
+.index-journal__content { font-size: 26px; line-height: 1.07; width: 66.66667%; float: left; padding: 0 10px; margin-top: 35px; margin-bottom: 35px; }
+.index-journal__content .layout-mobile { padding: 0 10px; }
 
 .footer-contact { position: fixed; bottom: 35px; left: 35px; cursor: pointer; z-index: 105; font-size: 14px; line-height: 1.42; letter-spacing: .01em; font-weight: 500; -webkit-transition: color 0.15s ease 0s; -moz-transition: color 0.15s ease 0s; -o-transition: color 0.15s ease 0s; font-weight: 500; }
 .footer-contact:hover { color: rgba(0, 0, 0, 0.3); }
@@ -3021,26 +3077,26 @@ div[js-index-content="index"] { display: block; }
 
 .footer__container { padding-top: 75px; padding-bottom: 35px; margin-left: auto; margin-right: auto; clear: both; padding-left: 35px; padding-right: 35px; position: relative; }
 .footer__container:after { content: ""; display: table; clear: both; }
-@media screen and (max-width: 849px) { .footer__container { padding-left: 20px; padding-right: 20px; } }
+.footer__container .layout-mobile { padding-left: 20px; padding-right: 20px; }
 
 .footer__email-address { position: absolute; top: 75px; left: 35px; text-decoration: none; color: inherit; font-size: 14px; line-height: 1.42; letter-spacing: .01em; font-weight: 500; }
 .footer__email-address:hover { color: rgba(0, 0, 0, 0.3); }
 
 .footer__address1 { width: 12.5%; float: left; font-size: 14px; line-height: 1.42; letter-spacing: .01em; font-weight: 500; }
-@media screen and (min-width: 850px) { .footer__address1 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .footer__address1 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .footer__address1 { padding-left: 10px; padding-right: 10px; } }
+.footer__address1 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .footer__address2 { width: 12.5%; float: left; font-size: 14px; line-height: 1.42; letter-spacing: .01em; font-weight: 500; }
-@media screen and (min-width: 850px) { .footer__address2 { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .footer__address2 { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .footer__address2 { padding-left: 10px; padding-right: 10px; } }
+.footer__address2 .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .footer__spacer { width: 12.5%; float: left; }
-@media screen and (min-width: 850px) { .footer__spacer { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .footer__spacer { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .footer__spacer { padding-left: 10px; padding-right: 10px; } }
+.footer__spacer .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .footer__email { width: 25%; float: left; }
-@media screen and (min-width: 850px) { .footer__email { padding-left: 17.5px; padding-right: 17.5px; } }
-@media screen and (max-width: 849px) { .footer__email { padding-left: 17.5px; padding-right: 17.5px; } }
+@media screen and (min-width: 850px) { .footer__email { padding-left: 10px; padding-right: 10px; } }
+.footer__email .layout-mobile { padding-left: 10px; padding-right: 10px; }
 
 .footer-signup__input-wrapper { position: relative; }
 

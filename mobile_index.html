@@ -6,7 +6,7 @@
 <html class="no-js">
 <!--<![endif]-->
 <head>
-
+	
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,7 +27,7 @@
 	<meta property="og:title" content="Studio Paradise"/>
 	<meta property="og:description" content="Studio Paradise"/>
 	<meta property="og:image" content="http://yourwebsite.com/img/social.jpg"/>
-	<meta property="og:url" content="http://yourwebsite.com/"/>
+	<meta property="og:url" content="http://yourwebsite.com/mobile_index.html"/>
 	<meta property="og:site_name" content="Paradise "/>
 	
 	<!-- Twitter -->
@@ -35,7 +35,7 @@
 	<meta name="twitter:title" content="Studio Paradise">
 	<meta name="twitter:description" content="Studio Paradise">
 	<meta name="twitter:image" content="http://yourwebsite.com/img/social.jpg">
-	<meta name="twitter:url" content="http://yourwebsite.com/">
+	<meta name="twitter:url" content="http://yourwebsite.com/mobile_index.html">
 	
 	<link rel="stylesheet" href="/static/css/libraries_aggregated.min.css">
 	<!-- CSS & fonts -->
@@ -50,16 +50,19 @@
 		  return check;
 		}
 	</script>	
-<script type="text/javascript">
-	// # Design calls for an adaptive site, on a platform that doesn't support it. We'll use a JS redirect.
-	if (window.mobilecheck()) {
-		window.location.href = '/mobile_index.html';
-	} else {
-
-	}
-</script>
+	<script type="text/javascript">
+		// fake adaptive
+		if (!window.mobilecheck()) {
+			if (window.location.pathname.indexOf('project') > 0) {
+				var projectName = window.location.pathname.split('/')[2].split('.')[0];
+				window.location.href = '/#' + projectName;
+			} else {
+				window.location.href = '/';
+			}
+		}
+	</script>
 </head>
-	<body class="layout-default">
+<body class="layout-mobile">
 		<!--[if lt IE 8]>
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
@@ -69,7 +72,7 @@
 	<div class="mobile-navbar-open__line"></div>
 </div>
 
-<div class="navbar" js-controller="navbar2" js-args="{ mobile: false}">
+<div class="navbar" js-controller="navbar2" js-args="{ mobile: true}">
 	<div class="navbar__logo" js-navbar-logo>
 		<a href="/">
 			
@@ -189,56 +192,12 @@
 		</div>
 	</div>
 </div>
-		<!-- fulltitle: This overrides the default page title, which is " | Paradise" -->
-<!-- excerpt: If this isn't set, it'll pull your Changing the world, one uninspired quote at a time for meta description-->
-<div class="content-wrapper" js-index-content="index">
-	<div class="content">
-		<div class="row index-slider">
-			<div class="content-navbar-grid-spacer">&nbsp;</div>
-			<div class="index-swiper">
-				<div class="swiper-container" js-component="swiper" js-args="{
-					autoplay: 3000,
-					effect: 'fade',
-					fade: {
-						crossFade: true
-					},
-					speed: 500
-				}">
-					<div class="swiper-wrapper">
-						<!-- <div class="swiper-slide" style="background-image: url(/static/img/swiper-1.jpg);"></div> -->
-						<div class="swiper-slide" style="background-image: url(/static/img/1.jpg);"></div>
-						<div class="swiper-slide" style="background-image: url(/static/img/2.jpg);"></div>
-						<div class="swiper-slide" style="background-image: url(/static/img/3.jpg);"></div>
-						<div class="swiper-slide" style="background-image: url(/static/img/4.jpg);"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-
-
-<div class="content-wrapper" js-index-content="projects">
-	<div class="content">
-		<div class="index-projects">
+		<div class="mobile">
+	
+	
+		<div class="mobile-project">
 			
-			
-				<div class="row" js-scrollspy="jack-erwin">
-					<div class="content-navbar-grid-spacer">&nbsp;</div>
-					<article class="index-project" js-index-project="jack-erwin" js-controller="project">
-						<div class="index-project__close show-on-full-project">
-							X
-						</div>
-						<div class="index-project__inner">
-							<!-- <span class="index-project-debug">
-								Jack Erwin
-								<a href="/projects/jack-erwin.html">
-									Open Project
-								</a>
-							</span> -->
-							
-								<!--
+				<!--
 <ul>
 	<li>Module type:hero</li>
 	<li>Module data {"type"=>"hero", "image"=>"/uploads/Je_HeroCrop.jpg", "alt"=>nil}</li>
@@ -260,8 +219,242 @@
 	
 </div>
 
-							
-								<!--
+			
+		</div>
+	
+	<div class="mobile__contact">
+		<div class="mobile__contact-header">
+			Contact
+		</div>
+		<a class="mobile__email-address" href="mailto:hello@studioparadise.com">
+			hello@studioparadise.com
+		</a>
+		<div class="mobile__addresses">
+			<div class="mobile__address">
+				Sydney<br>
+				Suite 4, Level<br>
+				1137 Bridge Rd<br>
+				Glebe NSW 2037<br>
+				+61 2 9518 4443<br>
+			</div>
+			<div class="mobile__address">
+				New York<br>
+				153 Centre St <br>
+				Suite 206<br>
+				New York NY 10013  <br>
+				+1 917 363 8971<br>
+			</div>
+		</div>
+		<div class="mobile-social">
+			<div class="mobile-social__item">
+				F
+			</div><div class="mobile-social__item">
+				IN
+			</div><div class="mobile-social__item">
+				T
+			</div>
+		</div>
+	</div>
+	
+		<a href="/projects/convicts.html" class="mobile-project">
+			
+				<!--
+<ul>
+	<li>Module type:hero</li>
+	<li>Module data {"type"=>"hero", "image"=>"/uploads/Con_HeroCrop.jpg", "alt"=>nil, "title"=>nil}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-hero variation: </div>
+
+<div class="module module-hero module-hero--">
+	
+		<div class="hero__column">
+			
+				<div class="module-image__ratio" data-responsive-image-dimensions="2400x755">
+					<img class="hero__img lazyload" data-src="/uploads/Con_HeroCrop.jpg" alt="" />
+				</div>
+			
+		</div>
+	
+</div>
+
+			
+		</a>
+	
+		<a href="/projects/leader-bag.html" class="mobile-project">
+			
+				<!--
+<ul>
+	<li>Module type:hero</li>
+	<li>Module data {"type"=>"hero", "image"=>"/uploads/leader_hero.jpg", "alt"=>nil}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-hero variation: </div>
+
+<div class="module module-hero module-hero--">
+	
+		<div class="hero__column">
+			
+				<div class="module-image__ratio" data-responsive-image-dimensions="2400x755">
+					<img class="hero__img lazyload" data-src="/uploads/leader_hero.jpg" alt="" />
+				</div>
+			
+		</div>
+	
+</div>
+
+			
+		</a>
+	
+		<a href="/projects/mikoh.html" class="mobile-project">
+			
+				<!--
+<ul>
+	<li>Module type:hero</li>
+	<li>Module data {"type"=>"hero", "image"=>"/uploads/Hero-410576.jpg", "alt"=>nil}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-hero variation: </div>
+
+<div class="module module-hero module-hero--">
+	
+		<div class="hero__column">
+			
+				<div class="module-image__ratio" data-responsive-image-dimensions="2400x755">
+					<img class="hero__img lazyload" data-src="/uploads/Hero-410576.jpg" alt="" />
+				</div>
+			
+		</div>
+	
+</div>
+
+			
+		</a>
+	
+		<a href="/projects/kaelen.html" class="mobile-project">
+			
+				<!--
+<ul>
+	<li>Module type:hero</li>
+	<li>Module data {"type"=>"hero", "image"=>"/uploads/Kaelen_HeroCrop.jpg"}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-hero variation: </div>
+
+<div class="module module-hero module-hero--">
+	
+		<div class="hero__column">
+			
+				<div class="module-image__ratio" data-responsive-image-dimensions="2400x755">
+					<img class="hero__img lazyload" data-src="/uploads/Kaelen_HeroCrop.jpg" alt="" />
+				</div>
+			
+		</div>
+	
+</div>
+
+			
+		</a>
+	
+		<a href="/projects/saturdays.html" class="mobile-project">
+			
+				<!--
+<ul>
+	<li>Module type:hero</li>
+	<li>Module data {"type"=>"hero", "image"=>"/uploads/Hero-f6811e.jpg"}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-hero variation: </div>
+
+<div class="module module-hero module-hero--">
+	
+		<div class="hero__column">
+			
+				<div class="module-image__ratio" data-responsive-image-dimensions="2400x755">
+					<img class="hero__img lazyload" data-src="/uploads/Hero-f6811e.jpg" alt="" />
+				</div>
+			
+		</div>
+	
+</div>
+
+			
+		</a>
+	
+		<a href="/projects/prize.html" class="mobile-project">
+			
+				<!--
+<ul>
+	<li>Module type:hero</li>
+	<li>Module data {"type"=>"hero", "image"=>"/uploads/prizehero.jpg"}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-hero variation: </div>
+
+<div class="module module-hero module-hero--">
+	
+		<div class="hero__column">
+			
+				<div class="module-image__ratio" data-responsive-image-dimensions="2400x755">
+					<img class="hero__img lazyload" data-src="/uploads/prizehero.jpg" alt="" />
+				</div>
+			
+		</div>
+	
+</div>
+
+			
+		</a>
+	
+	<div class="content-wrapper" js-index-content="projects">
+		<div class="content">
+			<div class="index-projects">
+				
+				
+					<div class="row" js-scrollspy="jack-erwin">
+						<div class="content-navbar-grid-spacer">&nbsp;</div>
+						<article class="index-project" js-index-project="jack-erwin" js-controller="project">
+							<div class="index-project__close show-on-full-project">
+								X
+							</div>
+							<div class="index-project__inner">
+								
+									<!--
+<ul>
+	<li>Module type:hero</li>
+	<li>Module data {"type"=>"hero", "image"=>"/uploads/Je_HeroCrop.jpg", "alt"=>nil}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-hero variation: </div>
+
+<div class="module module-hero module-hero--">
+	
+		<div class="hero__column">
+			
+				<div class="module-image__ratio" data-responsive-image-dimensions="2400x755">
+					<img class="hero__img lazyload" data-src="/uploads/Je_HeroCrop.jpg" alt="" />
+				</div>
+			
+		</div>
+	
+</div>
+
+								
+									<!--
 <ul>
 	<li>Module type:text</li>
 	<li>Module data {"type"=>"text", "excerpt"=>"Telling the story of the contemporary cobbler.", "body"=>"Jack Erwin, founded in 2013, is a direct-to-consumer mens shoe brands that provides seasonal luxury shoes at an affordable price. After two years of quick growth and success, we were engaged to hone Jack Erwin’s brand story, which meant rethinking their branded materials and digital experience as a holistic system. \n\nIn order to create a brand that modern men could relate to, we needed to create a vision that provoked the same trust between cobbler and man: Guarantee quality, product - and lifestyle. We evolved the logo mark, introduced consistent color and texture across printed material and store design. We art directed campaigns shot by Bjorn Iooss and Joss Mckinley to use across a new intuitive e-commerce experience. The result was a brand that was confident, aspirational, understated, and truly reflected the men purchasing and wearing JE shoes. \n\n* *Art Direction*\n* *Web Design*\n* *Brand Strategy*\n* *Web Development*\n* *Brand Identity*\n"}</li>
@@ -314,8 +507,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "images"=>[{"image"=>nil, "alt"=>nil, "caption"=>nil}], "image"=>"/uploads/3JE_Logo2.jpg", "alt"=>nil, "caption"=>nil}</li>
@@ -334,8 +527,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "image"=>"/uploads/2JE_Logo.jpg", "alt"=>nil, "caption"=>nil}</li>
@@ -354,8 +547,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "url"=>nil, "image"=>"/uploads/4Stationery1.jpg", "dimensions"=>"2400x1799"}</li>
@@ -374,8 +567,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "credits"=>[{"url"=>nil, "emphasis"=>nil, "name"=>nil}], "image"=>"/uploads/5Stationery2.jpg", "dimensions"=>"2400x1599"}</li>
@@ -394,8 +587,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "image"=>"/uploads/6Stationery3.jpg"}</li>
@@ -414,8 +607,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:images-2up</li>
 	<li>Module data {"type"=>"images-2up", "images"=>[{"image"=>"/uploads/7JE_AD_01.jpg", "alt"=>nil, "caption"=>"test123"}, {"image"=>"/uploads/7JE_AD_02.jpg", "alt"=>nil, "caption"=>"test123"}]}</li>
@@ -453,8 +646,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "image"=>"/uploads/8JE_AD_03.jpg", "dimensions"=>"2400x1740"}</li>
@@ -473,8 +666,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "image"=>"/uploads/9JE_WEB_01-b44f25.jpg", "dimensions"=>"2400x3795"}</li>
@@ -493,8 +686,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "image"=>"/uploads/JEWEB_small.jpg", "dimensions"=>"2400x1618"}</li>
@@ -513,8 +706,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:website-link</li>
 	<li>Module data {"type"=>"website-link", "url"=>"http://jackerwin.com"}</li>
@@ -540,8 +733,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:credits</li>
 	<li>Module data {"type"=>"credits", "credits"=>[{"url"=>nil, "emphasis"=>nil, "name"=>nil}]}</li>
@@ -585,26 +778,20 @@
 	
 </div>
 
-							
-						</div>
-					</article>
-				</div>
-			
-				<div class="row" js-scrollspy="convicts">
-					<div class="content-navbar-grid-spacer">&nbsp;</div>
-					<article class="index-project" js-index-project="convicts" js-controller="project">
-						<div class="index-project__close show-on-full-project">
-							X
-						</div>
-						<div class="index-project__inner">
-							<!-- <span class="index-project-debug">
-								Convicts
-								<a href="/projects/convicts.html">
-									Open Project
-								</a>
-							</span> -->
-							
-								<!--
+								
+							</div>
+						</article>
+					</div>
+				
+					<div class="row" js-scrollspy="convicts">
+						<div class="content-navbar-grid-spacer">&nbsp;</div>
+						<article class="index-project" js-index-project="convicts" js-controller="project">
+							<div class="index-project__close show-on-full-project">
+								X
+							</div>
+							<div class="index-project__inner">
+								
+									<!--
 <ul>
 	<li>Module type:hero</li>
 	<li>Module data {"type"=>"hero", "image"=>"/uploads/Con_HeroCrop.jpg", "alt"=>nil, "title"=>nil}</li>
@@ -626,8 +813,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:text</li>
 	<li>Module data {"type"=>"text", "excerpt"=>"Capturing the spirit of rebellion with a bold new platform.", "body"=>"In early 2015, Pete Maiden set out to merge his two business ventures — media company featuring Aussie’s in the states, Billabout, - and his nolita retail location, B_Space, featuring up and coming Australian brands. Paradise was asked to define the new brand - Convicts - and create a cohesive editorial platform for it to exist on.\n\nKeeping in mind the camaraderie, pioneering nature and burning rebellion of the Convict, we created a clean logo mark inspired by the \"Pheon\" or \"Broad Arrow\" that marked British Government issued convict clothing in the early days of colonial Australia and paired it with flexible, modular and bold visual vernacular. We created a logo and visual system that embodied and could represent the rebellion, camaraderie of those pioneering new creative territory and spicing the world with mischief. ", "text"=>nil, "variation"=>"centered", "full-project-title"=>"Convicts"}</li>
@@ -672,8 +859,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "image"=>"/uploads/Con_Logo.png", "alt"=>nil, "caption"=>nil}</li>
@@ -692,8 +879,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "image"=>"/uploads/COn_Branding.gif"}</li>
@@ -712,8 +899,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "url"=>nil, "image"=>"/uploads/Con_Branding.jpg", "alt"=>nil, "caption"=>nil}</li>
@@ -732,8 +919,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "image"=>["/uploads/Convicts_Web_Map.jpg"], "dimensions"=>"2400x1606"}</li>
@@ -752,8 +939,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "image"=>["/uploads/Convicts_news.jpg"], "dimensions"=>"2382x1606"}</li>
@@ -772,8 +959,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "dimensions"=>"2382x1606", "image"=>["/uploads/Convicts_news2.jpg"]}</li>
@@ -792,8 +979,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:website-link</li>
 	<li>Module data {"type"=>"website-link", "credits"=>[{"url"=>nil, "emphasis"=>nil, "name"=>nil}], "url"=>"http://convicts.nyc/"}</li>
@@ -819,8 +1006,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:credits</li>
 	<li>Module data {"type"=>"credits", "credits"=>[{"url"=>"http://google.com", "emphasis"=>"Photography", "name"=>"Yuji Tomita"}, {"url"=>nil, "emphasis"=>"Logo Design", "name"=>"Some Someone"}, {"url"=>nil, "emphasis"=>"Model", "name"=>"Gina Powell"}, {"url"=>nil, "emphasis"=>"Development", "name"=>"Eric Wang"}]}</li>
@@ -885,26 +1072,20 @@
 	
 </div>
 
-							
-						</div>
-					</article>
-				</div>
-			
-				<div class="row" js-scrollspy="leader-bag">
-					<div class="content-navbar-grid-spacer">&nbsp;</div>
-					<article class="index-project" js-index-project="leader-bag" js-controller="project">
-						<div class="index-project__close show-on-full-project">
-							X
-						</div>
-						<div class="index-project__inner">
-							<!-- <span class="index-project-debug">
-								Leader Bag
-								<a href="/projects/leader-bag.html">
-									Open Project
-								</a>
-							</span> -->
-							
-								<!--
+								
+							</div>
+						</article>
+					</div>
+				
+					<div class="row" js-scrollspy="leader-bag">
+						<div class="content-navbar-grid-spacer">&nbsp;</div>
+						<article class="index-project" js-index-project="leader-bag" js-controller="project">
+							<div class="index-project__close show-on-full-project">
+								X
+							</div>
+							<div class="index-project__inner">
+								
+									<!--
 <ul>
 	<li>Module type:hero</li>
 	<li>Module data {"type"=>"hero", "image"=>"/uploads/leader_hero.jpg", "alt"=>nil}</li>
@@ -926,8 +1107,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:text</li>
 	<li>Module data {"type"=>"text", "excerpt"=>"Bringing good design to modern families.", "body"=>nil}</li>
@@ -965,8 +1146,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_Logo-479686.gif", "caption"=>"Created by Lotta Nieminen", "dimensions"=>"2400x1664"}</li>
@@ -989,8 +1170,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "url"=>nil, "image"=>"/uploads/Leader_2.jpg"}</li>
@@ -1009,8 +1190,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_1.jpg", "alt"=>nil, "caption"=>nil}</li>
@@ -1029,8 +1210,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:images_2up</li>
 	<li>Module data {"type"=>"images_2up", "images"=>[{"image"=>"/uploads/Leader_3.jpg"}, {"image"=>"/uploads/Leader_4.jpg"}]}</li>
@@ -1044,8 +1225,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_5.jpg"}</li>
@@ -1064,8 +1245,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_6.jpg"}</li>
@@ -1084,8 +1265,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_7.jpg"}</li>
@@ -1104,8 +1285,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_8.jpg"}</li>
@@ -1124,8 +1305,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_9.jpg"}</li>
@@ -1144,8 +1325,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:credits</li>
 	<li>Module data {"type"=>"credits", "credits"=>[{"url"=>nil, "emphasis"=>nil, "name"=>nil}]}</li>
@@ -1189,26 +1370,20 @@
 	
 </div>
 
-							
-						</div>
-					</article>
-				</div>
-			
-				<div class="row" js-scrollspy="mikoh">
-					<div class="content-navbar-grid-spacer">&nbsp;</div>
-					<article class="index-project" js-index-project="mikoh" js-controller="project">
-						<div class="index-project__close show-on-full-project">
-							X
-						</div>
-						<div class="index-project__inner">
-							<!-- <span class="index-project-debug">
-								Mikoh
-								<a href="/projects/mikoh.html">
-									Open Project
-								</a>
-							</span> -->
-							
-								<!--
+								
+							</div>
+						</article>
+					</div>
+				
+					<div class="row" js-scrollspy="mikoh">
+						<div class="content-navbar-grid-spacer">&nbsp;</div>
+						<article class="index-project" js-index-project="mikoh" js-controller="project">
+							<div class="index-project__close show-on-full-project">
+								X
+							</div>
+							<div class="index-project__inner">
+								
+									<!--
 <ul>
 	<li>Module type:hero</li>
 	<li>Module data {"type"=>"hero", "image"=>"/uploads/Hero-410576.jpg", "alt"=>nil}</li>
@@ -1230,8 +1405,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:text</li>
 	<li>Module data {"type"=>"text", "excerpt"=>"An adventurous new category for the endless summer wonders\n", "body"=>nil}</li>
@@ -1270,8 +1445,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "image"=>"/uploads/Mikoh_20160616_MLP_A-03.jpg", "alt"=>nil, "caption"=>nil}</li>
@@ -1290,8 +1465,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "images"=>[{"image"=>nil, "alt"=>nil, "caption"=>nil}], "image"=>"/uploads/Mikoh_20160616_MLP_A-04.jpg", "dimensions"=>"2400x1755"}</li>
@@ -1310,8 +1485,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "url"=>nil, "image"=>"/uploads/Mikoh_20160616_MLP_A-05.jpg", "dimensions"=>"2400x1552"}</li>
@@ -1330,8 +1505,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "image"=>"/uploads/Mikoh_20160616_MLP_A-07.jpg"}</li>
@@ -1350,8 +1525,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "image"=>"/uploads/Mikoh_20160616_MLP_A-08.jpg"}</li>
@@ -1370,8 +1545,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "image"=>"/uploads/Mikoh_20160616_MLP_A-09.jpg"}</li>
@@ -1390,8 +1565,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "image"=>"/uploads/Mikoh_20160616_MLP_A-10.jpg"}</li>
@@ -1410,8 +1585,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:credits</li>
 	<li>Module data {"type"=>"credits", "credits"=>[{"url"=>nil, "emphasis"=>nil, "name"=>nil}]}</li>
@@ -1455,26 +1630,20 @@
 	
 </div>
 
-							
-						</div>
-					</article>
-				</div>
-			
-				<div class="row" js-scrollspy="kaelen">
-					<div class="content-navbar-grid-spacer">&nbsp;</div>
-					<article class="index-project" js-index-project="kaelen" js-controller="project">
-						<div class="index-project__close show-on-full-project">
-							X
-						</div>
-						<div class="index-project__inner">
-							<!-- <span class="index-project-debug">
-								Kaelen
-								<a href="/projects/kaelen.html">
-									Open Project
-								</a>
-							</span> -->
-							
-								<!--
+								
+							</div>
+						</article>
+					</div>
+				
+					<div class="row" js-scrollspy="kaelen">
+						<div class="content-navbar-grid-spacer">&nbsp;</div>
+						<article class="index-project" js-index-project="kaelen" js-controller="project">
+							<div class="index-project__close show-on-full-project">
+								X
+							</div>
+							<div class="index-project__inner">
+								
+									<!--
 <ul>
 	<li>Module type:hero</li>
 	<li>Module data {"type"=>"hero", "image"=>"/uploads/Kaelen_HeroCrop.jpg"}</li>
@@ -1496,8 +1665,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:text</li>
 	<li>Module data {"type"=>"text", "excerpt"=>"Capturing the details."}</li>
@@ -1535,8 +1704,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "image"=>"/uploads/Kaelen_2.jpg", "dimensions"=>"2400x2819"}</li>
@@ -1555,8 +1724,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "image"=>"/uploads/Kaelen_4.jpg", "dimensions"=>"2400x1600"}</li>
@@ -1575,8 +1744,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "image"=>"/uploads/Kaelen_3.jpg"}</li>
@@ -1595,26 +1764,20 @@
 	
 </div>
 
-							
-						</div>
-					</article>
-				</div>
-			
-				<div class="row" js-scrollspy="saturdays">
-					<div class="content-navbar-grid-spacer">&nbsp;</div>
-					<article class="index-project" js-index-project="saturdays" js-controller="project">
-						<div class="index-project__close show-on-full-project">
-							X
-						</div>
-						<div class="index-project__inner">
-							<!-- <span class="index-project-debug">
-								Saturdays
-								<a href="/projects/saturdays.html">
-									Open Project
-								</a>
-							</span> -->
-							
-								<!--
+								
+							</div>
+						</article>
+					</div>
+				
+					<div class="row" js-scrollspy="saturdays">
+						<div class="content-navbar-grid-spacer">&nbsp;</div>
+						<article class="index-project" js-index-project="saturdays" js-controller="project">
+							<div class="index-project__close show-on-full-project">
+								X
+							</div>
+							<div class="index-project__inner">
+								
+									<!--
 <ul>
 	<li>Module type:hero</li>
 	<li>Module data {"type"=>"hero", "image"=>"/uploads/Hero-f6811e.jpg"}</li>
@@ -1636,8 +1799,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:text</li>
 	<li>Module data {"type"=>"text", "excerpt"=>"Creating consistency across all branded materials. ", "body"=>nil}</li>
@@ -1675,8 +1838,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "image"=>"/uploads/Iamge1.jpg"}</li>
@@ -1695,26 +1858,20 @@
 	
 </div>
 
-							
-						</div>
-					</article>
-				</div>
-			
-				<div class="row" js-scrollspy="prize">
-					<div class="content-navbar-grid-spacer">&nbsp;</div>
-					<article class="index-project" js-index-project="prize" js-controller="project">
-						<div class="index-project__close show-on-full-project">
-							X
-						</div>
-						<div class="index-project__inner">
-							<!-- <span class="index-project-debug">
-								Prize
-								<a href="/projects/prize.html">
-									Open Project
-								</a>
-							</span> -->
-							
-								<!--
+								
+							</div>
+						</article>
+					</div>
+				
+					<div class="row" js-scrollspy="prize">
+						<div class="content-navbar-grid-spacer">&nbsp;</div>
+						<article class="index-project" js-index-project="prize" js-controller="project">
+							<div class="index-project__close show-on-full-project">
+								X
+							</div>
+							<div class="index-project__inner">
+								
+									<!--
 <ul>
 	<li>Module type:hero</li>
 	<li>Module data {"type"=>"hero", "image"=>"/uploads/prizehero.jpg"}</li>
@@ -1736,8 +1893,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:text</li>
 	<li>Module data {"type"=>"text", "excerpt"=>"This sentence has to do with prize pins.", "body"=>nil}</li>
@@ -1775,8 +1932,8 @@
 	
 </div>
 
-							
-								<!--
+								
+									<!--
 <ul>
 	<li>Module type:image</li>
 	<li>Module data {"type"=>"image", "image"=>"/uploads/Prize_hero2.jpg"}</li>
@@ -1795,402 +1952,339 @@
 	
 </div>
 
-							
-						</div>
-					</article>
-				</div>
-			
-		</div>
-	</div>
-</div>
-
-
-
-<div class="studio" js-index-content="studio">
-	<div class="studio__spacer">
-		&nbsp;
-	</div>
-	<div class="studio__content" js-controller="studioContent">
-		<div class="relative">
-			<div class="studio__locations">
-				<div class="studio__location" js-controller="studioLocation" js-args="{location: 'nyc'}">
-					<div class="studio__city">
-						New York, USA
+								
+							</div>
+						</article>
 					</div>
-					<div class="studio__day-and-time">
-						<div class="studio__day" js-date>
-							Thursday April 28
-						</div>
-						<div class="studio__time" js-time>
-							12:00pm
-						</div>
-					</div>
-				</div>
-				<div class="studio__location" js-controller="studioLocation" js-args="{location: 'sydney'}">
-					<div class="studio__city">
-						Sydney, Australia
-					</div>
-					<div class="studio__day-and-time">
-						<div class="studio__day" js-date>
-							Fri April 29
-						</div>
-						<div class="studio__time" js-time>
-							1:59am
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="studio__info" js-scrollspy="manifesto">
-				<p>
-					Welcome to Paradise.
-				</p>
-				<p>
-					One of the most widely accepted interpretations of Paradise is the Garden of Eden, home of Adam and Eve before they made a mess of it by eating some fruit. But there are as many notions of Paradise as there are people dreaming of it. 
-				</p>
-				<p>
-					For some, Paradise is a hammock swaying between two palms on a deserted beach; for others, Paradise is an ice-cold beer at 5:15 on a Friday, or dinner and a movie–minus the kids. Some people even find Paradise to be a town directly adjacent to the city of Las Vegas. Which it is, actually.
-				</p>
-				<p>
-					For us, though, Paradise is our design and product studio. That’s what we called it–Paradise. And it happens to be the source of literal Paradise for us, because here we get to take our vast knowledge and experience working in-house for some of today’s best brands, and use it to create new and supernaturally original ideas for others. It’s our background experience that sets us apart. We’ve been in the trenches and that gives us our edge. 
-				</p>
-				<p>
-					In short, we know our shit, and that’s Paradise. 
-				</p>
-
-			</div>
-
-			<section js-scrollspy="team">
-				<div class="style-studio-header style-studio-header--who-we-are">
-					— Who We Are
-				</div>
-				<div class="studio__team">
-					<div class="studio__team-member">
-						<img class="studio__team-img" />
-						<div class="studio__team-info">
-							<span class="studio__team-title">
-								Jay O'Neill
-							</span>
-							Partner &amp; Product Director Australia
-						</div>
-						<p class="studio__team-bio">
-							Jay hails from the Gold Coast and serves as the head of product design. He’s lead product design teams at Billabong, Nixon Watches, RVCA, Tsovet and RAEN — and really knows how to conceive, create and produce a product.  He recently launched Leader Bag Co. a premium baby bag company that has grown a fast following.
-						</p>
-					</div>
-					<div class="studio__team-member">
-						<img class="studio__team-img" />
-						<div class="studio__team-info">
-							<span class="studio__team-title">
-								Luke Flynn
-							</span>
-							Partner &amp; Creative Director NYC
-						</div>
-						<p class="studio__team-bio">
-							Born in Sydney, Luke leads is the creative director at Paradise with a a killer eye for branding & art direction. He’s has worked with brands and agencies including Saturdays NYC, Imprint Projects and Common Space — and launched accessories company Prize Pins. 
-						</p>
-					</div>
-
-					<div class="studio__team-member">
-						<img class="studio__team-img" />
-						<div class="studio__team-info">
-							<span class="studio__team-title">
-								Margaux Le Pierrès
-							</span>
-							Partner &amp; Creative Director
-						</div>
-						<p class="studio__team-bio">
-							Coming from the great white north of Montreal, Margaux designs with a focus on brand and digital design.  Margaux has been recognized by D&AD, The Type Directors Club and Awwwards for her excellent digital design and worked with leading fashion brand Judith & Charles to conceive their most recent website.
-						</p>
-					</div>
-
-					<div class="studio__team-member">
-						<img class="studio__team-img" />
-						<div class="studio__team-info">
-							<span class="studio__team-title">
-								Yuji Tomita
-							</span>
-							Development Partner
-						</div>
-						<p class="studio__team-bio">
-							Yuji Tomita heads up our technology department and is responsible for all things digital. From the Pacific Northwest, Yuji started a winery in Argentina and helped launch Grovemade, a wood products company based in Portland.
-						</p>
-					</div>
-
-				</div>
-			</section>
-
-			<section class="studio__services" js-scrollspy="services">
-				<div class="studio__services-column">
-					<div class="style-studio-header  studio__service-header">
-						— What We Do
-					</div>
-					<div class="studio__services-summary">
-						Visual Identity<br>
-						Art Direction<br>
-						Product Design<br>
-						Digital<br>
-					</div>
-				</div>
-				<div class="studio__services-column">
-					<div class="style-studio-header studio__service-header">
-						— How We Do It
-					</div>
-					<div class="studio__service-group">
-						<p>
-							<span class="studio__service-title">
-								We Discover.
-							</span>
-							We look at the big picture and how your brand fits into it. Where are you now and where do you want to be? You know your brand best–tell us about it. We listen. We nod. We hold our chins. We remove our glasses and suck on the stem. Then we blow your ever-lovin’ socks off.
-						</p>
-					</div>
-					<div class="studio__service-group">
-						<p>
-							<span class="studio__service-title">
-								We Strategize.
-							</span>
-							We take the big questions into consideration: how will you stand out? Who are you? Why does your company exist? Why do you exist? Do you exist? Is anything real? Where am I? Then we blow your ever-lovin’ socks off a second time.
-						</p>
-					</div> 
-					<div class="studio__service-group">
-						<p>
-							<span class="studio__service-title">
-								We Play.
-							</span>
-							We take the big questions into consideration: how will you stand out? Who are you? Why does your company exist? Why do you exist? Do you exist? Is anything real? Where am I? Then we blow your ever-lovin’ socks off a second time.
-						</p>
-					</div> 
-					<div class="studio__services-group">
-						<p>
-							<span class="studio__service-title">
-								We Execute.
-							</span>
-							We take the big questions into consideration: how will you stand out? Who are you? Why does your company exist? Why do you exist? Do you exist? Is anything real? Where am I? Then we blow your ever-lovin’ socks off a second time.
-						</p>
-					</div>
-				</div>
-			</section>
-
-			<div class="studio__services" js-scrollspy="clients">
-				<div class="studio__services-column">
-					<div class="style-studio-header  studio__service-header">
-						— Who We Work With
-					</div>
-				</div>
-				<div class="studio__services-column">
-					<div class="studio__service-clients">
-						<a class="studio__service-client" href="http://jackerwin.com">
-							Jack Erwin
-						</a>
-						<a class="studio__service-client" href="http://jackerwin.com">
-							Saturdays
-						</a>
-						<a class="studio__service-client" href="http://jackerwin.com">
-							Mikoh
-						</a>
-						<a class="studio__service-client" href="http://jackerwin.com">
-							Dudleys
-						</a>
-						<a class="studio__service-client" href="http://jackerwin.com">
-							Express
-						</a>
-						<a class="studio__service-client" href="http://jackerwin.com">
-							Convicts 
-						</a>
-						<a class="studio__service-client" href="http://jackerwin.com">
-							Kaelen
-						</a>
-						<a class="studio__service-client" href="http://jackerwin.com">
-							Flower shop 
-						</a>	
-						<a class="studio__service-client" href="http://jackerwin.com">
-							Abbott
-						</a>
-						<a class="studio__service-client" href="http://jackerwin.com">
-							Well well 
-						</a>
-						<a class="studio__service-client" href="http://jackerwin.com">
-							Tsovet 
-						</a>
-						<a class="studio__service-client" href="http://jackerwin.com">
-							FLWR
-						</a>
-						<a class="studio__service-client" href="http://jackerwin.com">
-							Raen
-						</a>
-						<a class="studio__service-client" href="http://jackerwin.com">
-							Leader Bag Co. 
-						</a>
-					</div>
-				</div>
+				
 			</div>
 		</div>
 	</div>
-</div>
 
-<div js-index-content="journal">
-	<div class="content container">
-		<div class="row">
-			<div class="content-navbar-grid-spacer">&nbsp;</div>
-			<div class="index-journal">
-				
 
-				
-				    
-				    
-				    
-						<div class="index-journal__month" js-scrollspy="2016-June">
-					
-					<div class="index-journal__journal">
-						<img class="index-journal__hero-img" src="/uploads/Paradise_FinalDesign_160504_MLP_A_DEVNOTES.jpg" />
-						<div class="index-journal__header">
-							<div class="index-journal__date">
-								June 27 2016
-							</div>
-							
-								<h1 class="index-journal__title">
-									Paradise in Sydney
-								</h1>
-							
+	<div class="studio" js-index-content="studio">
+		<div class="studio__spacer">
+			&nbsp;
+		</div>
+		<div class="studio__content" js-controller="studioContent">
+			<div class="relative">
+				<div class="studio__locations">
+					<div class="studio__location" js-controller="studioLocation" js-args="{location: 'nyc'}">
+						<div class="studio__city">
+							New York, USA
 						</div>
-						
-						
-						
-							
-								<img class="index-journal__img lazyload" data-src="" alt="" />
-							
-						
+						<div class="studio__day-and-time">
+							<div class="studio__day" js-date>
+								Thursday April 28
+							</div>
+							<div class="studio__time" js-time>
+								12:00pm
+							</div>
+						</div>
 					</div>
-				    
+					<div class="studio__location" js-controller="studioLocation" js-args="{location: 'sydney'}">
+						<div class="studio__city">
+							Sydney, Australia
 						</div>
+						<div class="studio__day-and-time">
+							<div class="studio__day" js-date>
+								Fri April 29
+							</div>
+							<div class="studio__time" js-time>
+								1:59am
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="studio__info" js-scrollspy="manifesto">
+					<p>
+						Welcome to Paradise.
+					</p>
+					<p>
+						One of the most widely accepted interpretations of Paradise is the Garden of Eden, home of Adam and Eve before they made a mess of it by eating some fruit. But there are as many notions of Paradise as there are people dreaming of it. 
+					</p>
+					<p>
+						For some, Paradise is a hammock swaying between two palms on a deserted beach; for others, Paradise is an ice-cold beer at 5:15 on a Friday, or dinner and a movie–minus the kids. Some people even find Paradise to be a town directly adjacent to the city of Las Vegas. Which it is, actually.
+					</p>
+					<p>
+						For us, though, Paradise is our design and product studio. That’s what we called it–Paradise. And it happens to be the source of literal Paradise for us, because here we get to take our vast knowledge and experience working in-house for some of today’s best brands, and use it to create new and supernaturally original ideas for others. It’s our background experience that sets us apart. We’ve been in the trenches and that gives us our edge. 
+					</p>
+					<p>
+						In short, we know our shit, and that’s Paradise. 
+					</p>
+
+				</div>
+
+				<section js-scrollspy="team">
+					<div class="style-studio-header style-studio-header--who-we-are">
+						— Who We Are
+					</div>
+					<div class="studio__team">
+						<div class="studio__team-member">
+							<img class="studio__team-img" />
+							<div class="studio__team-info">
+								<span class="studio__team-title">
+									Jay O'Neill
+								</span>
+								Partner &amp; Product Director Australia
+							</div>
+							<p class="studio__team-bio">
+								Jay hails from the Gold Coast and serves as the head of product design. He’s lead product design teams at Billabong, Nixon Watches, RVCA, Tsovet and RAEN — and really knows how to conceive, create and produce a product.  He recently launched Leader Bag Co. a premium baby bag company that has grown a fast following.
+							</p>
+						</div>
+						<div class="studio__team-member">
+							<img class="studio__team-img" />
+							<div class="studio__team-info">
+								<span class="studio__team-title">
+									Luke Flynn
+								</span>
+								Partner &amp; Creative Director NYC
+							</div>
+							<p class="studio__team-bio">
+								Born in Sydney, Luke leads is the creative director at Paradise with a a killer eye for branding & art direction. He’s has worked with brands and agencies including Saturdays NYC, Imprint Projects and Common Space — and launched accessories company Prize Pins. 
+							</p>
+						</div>
+
+						<div class="studio__team-member">
+							<img class="studio__team-img" />
+							<div class="studio__team-info">
+								<span class="studio__team-title">
+									Margaux Le Pierrès
+								</span>
+								Partner &amp; Creative Director
+							</div>
+							<p class="studio__team-bio">
+								Coming from the great white north of Montreal, Margaux designs with a focus on brand and digital design.  Margaux has been recognized by D&AD, The Type Directors Club and Awwwards for her excellent digital design and worked with leading fashion brand Judith & Charles to conceive their most recent website.
+							</p>
+						</div>
+
+						<div class="studio__team-member">
+							<img class="studio__team-img" />
+							<div class="studio__team-info">
+								<span class="studio__team-title">
+									Yuji Tomita
+								</span>
+								Development Partner
+							</div>
+							<p class="studio__team-bio">
+								Yuji Tomita heads up our technology department and is responsible for all things digital. From the Pacific Northwest, Yuji started a winery in Argentina and helped launch Grovemade, a wood products company based in Portland.
+							</p>
+						</div>
+
+					</div>
+				</section>
+
+				<section class="studio__services" js-scrollspy="services">
+					<div class="studio__services-column">
+						<div class="style-studio-header  studio__service-header">
+							— What We Do
+						</div>
+						<div class="studio__services-summary">
+							Visual Identity<br>
+							Art Direction<br>
+							Product Design<br>
+							Digital<br>
+						</div>
+					</div>
+					<div class="studio__services-column">
+						<div class="style-studio-header studio__service-header">
+							— How We Do It
+						</div>
+						<div class="studio__service-group">
+							<p>
+								<span class="studio__service-title">
+									We Discover.
+								</span>
+								We look at the big picture and how your brand fits into it. Where are you now and where do you want to be? You know your brand best–tell us about it. We listen. We nod. We hold our chins. We remove our glasses and suck on the stem. Then we blow your ever-lovin’ socks off.
+							</p>
+						</div>
+						<div class="studio__service-group">
+							<p>
+								<span class="studio__service-title">
+									We Strategize.
+								</span>
+								We take the big questions into consideration: how will you stand out? Who are you? Why does your company exist? Why do you exist? Do you exist? Is anything real? Where am I? Then we blow your ever-lovin’ socks off a second time.
+							</p>
+						</div> 
+						<div class="studio__service-group">
+							<p>
+								<span class="studio__service-title">
+									We Play.
+								</span>
+								We take the big questions into consideration: how will you stand out? Who are you? Why does your company exist? Why do you exist? Do you exist? Is anything real? Where am I? Then we blow your ever-lovin’ socks off a second time.
+							</p>
+						</div> 
+						<div class="studio__services-group">
+							<p>
+								<span class="studio__service-title">
+									We Execute.
+								</span>
+								We take the big questions into consideration: how will you stand out? Who are you? Why does your company exist? Why do you exist? Do you exist? Is anything real? Where am I? Then we blow your ever-lovin’ socks off a second time.
+							</p>
+						</div>
+					</div>
+				</section>
+
+				<div class="studio__services" js-scrollspy="clients">
+					<div class="studio__services-column">
+						<div class="style-studio-header  studio__service-header">
+							— Who We Work With
+						</div>
+					</div>
+					<div class="studio__services-column">
+						<div class="studio__service-clients">
+							<a class="studio__service-client" href="http://jackerwin.com">
+								Jack Erwin
+							</a>
+							<a class="studio__service-client" href="http://jackerwin.com">
+								Saturdays
+							</a>
+							<a class="studio__service-client" href="http://jackerwin.com">
+								Mikoh
+							</a>
+							<a class="studio__service-client" href="http://jackerwin.com">
+								Dudleys
+							</a>
+							<a class="studio__service-client" href="http://jackerwin.com">
+								Express
+							</a>
+							<a class="studio__service-client" href="http://jackerwin.com">
+								Convicts 
+							</a>
+							<a class="studio__service-client" href="http://jackerwin.com">
+								Kaelen
+							</a>
+							<a class="studio__service-client" href="http://jackerwin.com">
+								Flower shop 
+							</a>	
+							<a class="studio__service-client" href="http://jackerwin.com">
+								Abbott
+							</a>
+							<a class="studio__service-client" href="http://jackerwin.com">
+								Well well 
+							</a>
+							<a class="studio__service-client" href="http://jackerwin.com">
+								Tsovet 
+							</a>
+							<a class="studio__service-client" href="http://jackerwin.com">
+								FLWR
+							</a>
+							<a class="studio__service-client" href="http://jackerwin.com">
+								Raen
+							</a>
+							<a class="studio__service-client" href="http://jackerwin.com">
+								Leader Bag Co. 
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div js-index-content="journal">
+		<div class="content container">
+			<div class="row">
+				<div class="content-navbar-grid-spacer">&nbsp;</div>
+				<div class="index-journal">
 					
-				
-				    
-				    
-				    
-					<div class="index-journal__journal">
-						<img class="index-journal__hero-img" src="/uploads/Screenshot%202016-06-27%2021.02.34.png" />
-						<div class="index-journal__header">
-							<div class="index-journal__date">
-								June 25 2016
+
+					
+					    
+					    
+					    
+							<div class="index-journal__month" js-scrollspy="2016-June">
+						
+						<div class="index-journal__journal">
+							<img class="index-journal__hero-img" src="/uploads/Paradise_FinalDesign_160504_MLP_A_DEVNOTES.jpg" />
+							<div class="index-journal__header">
+								<div class="index-journal__date">
+									June 27 2016
+								</div>
+								
+									<h1 class="index-journal__title">
+										Paradise in Sydney
+									</h1>
+								
 							</div>
 							
-								<h1 class="index-journal__title">
-									Text Post With Images
-								</h1>
+							
+							
+								
+									<img class="index-journal__img lazyload" data-src="" alt="" />
+								
 							
 						</div>
+					    
+							</div>
 						
-							<div class="row">
-								<div class="index-journal__content">	
-									<p>Jack Erwin is a direct-to-consumer luxury mens shoe brand. After two years of quick growth and success, we were engaged to hone Jack Erwin’s brand story. This meant rethinking their branded materials as a holistic system.</p>
+					
+					    
+					    
+					    
+						<div class="index-journal__journal">
+							<img class="index-journal__hero-img" src="/uploads/Screenshot%202016-06-27%2021.02.34.png" />
+							<div class="index-journal__header">
+								<div class="index-journal__date">
+									June 25 2016
+								</div>
+								
+									<h1 class="index-journal__title">
+										Text Post With Images
+									</h1>
+								
+							</div>
+							
+								<div class="row">
+									<div class="index-journal__content">	
+										<p>Jack Erwin is a direct-to-consumer luxury mens shoe brand. After two years of quick growth and success, we were engaged to hone Jack Erwin’s brand story. This meant rethinking their branded materials as a holistic system.</p>
 
 <p>We evolved the logo mark, introduced consistent color and textures, art directed campaigns shot by Bjorn Iooss and Joss Mckinley, and introduced an intuitive e-commerce experience. The results was a brand that was confident, aspirational, understated, and truly reflected the men purchasing and wearing JE shoes.</p>
 
+									</div>
 								</div>
-							</div>
-						
-						
-						
 							
-								<img class="index-journal__img lazyload" data-src="" alt="" />
 							
-								<img class="index-journal__img lazyload" data-src="" alt="" />
 							
-						
-					</div>
-				    
-				
-				    
-				    
-				    
-						<div class="index-journal__month" js-scrollspy="2016-April">
-					
-					<div class="index-journal__journal">
-						<img class="index-journal__hero-img" src="/uploads/inline-image-b340ad.png" />
-						<div class="index-journal__header">
-							<div class="index-journal__date">
-								April 01 2016
-							</div>
+								
+									<img class="index-journal__img lazyload" data-src="" alt="" />
+								
+									<img class="index-journal__img lazyload" data-src="" alt="" />
+								
 							
 						</div>
-						
-						
-						
-							
-								<img class="index-journal__img lazyload" data-src="" alt="" />
-							
-						
-					</div>
-				    
-						</div>
+					    
 					
-				
+					    
+					    
+					    
+							<div class="index-journal__month" js-scrollspy="2016-April">
+						
+						<div class="index-journal__journal">
+							<img class="index-journal__hero-img" src="/uploads/inline-image-b340ad.png" />
+							<div class="index-journal__header">
+								<div class="index-journal__date">
+									April 01 2016
+								</div>
+								
+							</div>
+							
+							
+							
+								
+									<img class="index-journal__img lazyload" data-src="" alt="" />
+								
+							
+						</div>
+					    
+							</div>
+						
+					
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
-		<div class="footer-contact" js-footer-show>
-	Contact
-</div>
-
-<footer class="footer" js-controller="footer">
-	<div class="footer__container">
-		<div class="row">
-			<a class="footer__email-address" href="mailto:hello@studioparadise.com">
-				hello@studioparadise.com
-			</a>
-			<div class="footer__spacer">
-				&nbsp;
-			</div>
-			<div class="footer__spacer">
-				&nbsp;
-			</div>
-			<div class="footer__address1">
-				Sydney<br>
-				Suite 4, Level<br>
-				1137 Bridge Rd<br>
-				Glebe NSW 2037<br>
-				+61 2 9518 4443<br>
-			</div>
-			<div class="footer__address2">
-				New York<br>
-				153 Centre St <br>
-				Suite 206<br>
-				New York NY 10013  <br>
-				+1 917 363 8971<br>
-			</div>
-			<div class="footer__spacer">
-				&nbsp;
-			</div>
-			<div class="footer__email">
-				<div class="footer-signup">
-					<div class="footer-signup__input-wrapper">
-						<input type="text" class="footer-signup__input" placeholder="Newsletter Sign Up"/>
-						<div class="footer-signup__submit">
-							
-	<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.53 11.71"><title>Paradise_FinalDesign_160428_MLP_A_DEVNOTES</title><polygon points="17.68 0 16.97 0.71 21.62 5.35 0 5.35 0 6.35 21.62 6.35 16.97 11 17.68 11.71 23.53 5.85 17.68 0"/></svg>
-
-						</div>
-					</div>
-				</div>
-				<div class="footer-social">
-					<div class="footer-social__item">
-						F
-					</div><div class="footer-social__item">
-						IN
-					</div><div class="footer-social__item">
-						T
-					</div>
-				</div>
-			</div>
-			<div class="footer__close" js-footer-close>
-				
-	<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.71 20.71"><title>Paradise_FinalDesign_160428_MLP_A_DEVNOTES</title><polygon points="20.71 0.71 20 0 10.35 9.65 0.71 0 0 0.71 9.65 10.35 0 20 0.71 20.71 10.35 11.06 20 20.71 20.71 20 11.06 10.35 20.71 0.71"/></svg>
-
-			</div>
-		</div>
-	</div>
-</footer>
-
 		
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
@@ -2199,357 +2293,6 @@
 <script type="text/javascript" src="/static/coffee/controllers.js"></script>
 <script type="text/javascript" src="/static/coffee/components.js"></script>
 		
-		<script>
-	$(function() {
-		$("[js-debug-bar-toggle]").on('click', function() {
-
-			var $container = $(".grid-debug-container");
-			if ($container.is(':visible')) {
-				$container.fadeOut();
-				$(".debug-element").fadeOut();
-			} else {
-				$container.fadeIn();
-				$(".debug-element").fadeIn();
-			}
-		});
-	})
-</script>
-<div class="debug-bar">
-	<div js-debug-bar-toggle>
-		Toggle Grid Debug.
-
-		Debugger: 
-		<span js-debug-txt></span>
-	</div>
-</div>
-<div class="grid-debug-container">
-	
-<center class="grid-debug-heading">
-	Grid
-</center>
-
-<div class="container-row">
-	
-		<div class="g1">
-			<div class="grid-debug">
-				g1
-			</div>
-		</div>
-	
-		<div class="g1">
-			<div class="grid-debug">
-				g1
-			</div>
-		</div>
-	
-		<div class="g1">
-			<div class="grid-debug">
-				g1
-			</div>
-		</div>
-	
-		<div class="g1">
-			<div class="grid-debug">
-				g1
-			</div>
-		</div>
-	
-		<div class="g1">
-			<div class="grid-debug">
-				g1
-			</div>
-		</div>
-	
-		<div class="g1">
-			<div class="grid-debug">
-				g1
-			</div>
-		</div>
-	
-		<div class="g1">
-			<div class="grid-debug">
-				g1
-			</div>
-		</div>
-	
-		<div class="g1">
-			<div class="grid-debug">
-				g1
-			</div>
-		</div>
-	
-</div>
-
-
-	<div class="g1">
-		<div class="grid-debug">
-			g1
-		</div>
-	</div>
-
-	<div class="g1">
-		<div class="grid-debug">
-			g1
-		</div>
-	</div>
-
-	<div class="g1">
-		<div class="grid-debug">
-			g1
-		</div>
-	</div>
-
-	<div class="g1">
-		<div class="grid-debug">
-			g1
-		</div>
-	</div>
-
-	<div class="g1">
-		<div class="grid-debug">
-			g1
-		</div>
-	</div>
-
-	<div class="g1">
-		<div class="grid-debug">
-			g1
-		</div>
-	</div>
-
-	<div class="g1">
-		<div class="grid-debug">
-			g1
-		</div>
-	</div>
-
-	<div class="g1">
-		<div class="grid-debug">
-			g1
-		</div>
-	</div>
-
-
-<center class="grid-debug-heading">
-	Container
-</center>
-<div class="container">
-	<div class="row">
-		<div class="g2">
-			<div class="grid-debug">
-				g2
-			</div>
-		</div>
-		<div class="g2">
-			<div class="grid-debug">
-				g2
-			</div>
-		</div>
-		<div class="g2">
-			<div class="grid-debug">
-				g2
-			</div>
-		</div>
-		<div class="g2">
-			<div class="grid-debug">
-				g2
-			</div>
-		</div>
-
-	</div>
-	<div class="row">
-		<div class="g4">
-			<div class="grid-debug">
-				g4
-			</div>
-		</div>
-		<div class="g4">
-			<div class="grid-debug">
-				g4
-			</div>
-		</div>
-	</div>
-</div>
-<center class="grid-debug-heading">
-	Container row shortcut
-</center>
-<div class="container-row">
-	<div class="g4">
-		<div class="grid-debug">
-			g4
-		</div>
-	</div>
-	<div class="g4">
-		<div class="grid-debug">
-			g4
-		</div>
-	</div>
-</div>
-
-<center class="grid-debug-heading">
-	Container Row G12
-</center>
-<div class="container-row-g12">
-	<div class="grid-debug">
-		Container Row G12
-	</div>
-</div>
-
-
-<center class="grid-debug-heading">
-	No Container
-</center>
-<div class="">
-	<div class="g2">
-		<div class="grid-debug">
-			g2
-		</div>
-	</div>
-	<div class="g2">
-		<div class="grid-debug">
-			g2
-		</div>
-	</div>
-	<div class="g2">
-		<div class="grid-debug">
-			g2
-		</div>
-	</div>
-	<div class="g2">
-		<div class="grid-debug">
-			g2
-		</div>
-	</div>
-</div>
-
-<div>
-	<div class="g4">
-		<div class="grid-debug">
-			g4
-		</div>
-	</div>
-	<div class="g4">
-		<div class="grid-debug">
-			g4
-		</div>
-	</div>
-</div>
-
-<center class="grid-debug-heading">
-	Global Grid Nested Grid Test
-</center>
-
-<div class="container">
-	<div class="row">
-
-		<div class="g2">
-			<div class="grid-debug">
-				G2
-			</div>
-		</div>
-
-		<div class="g6">
-			<div class="grid-debug">
-				G6
-				<div class="row">
-					<div class="g2-in-g6">
-						<div class="grid-debug">
-							G2 in G6
-						</div>
-					</div>
-					<div class="g2-in-g6">
-						<div class="grid-debug">
-							G2 in G6
-						</div>
-					</div>
-					<div class="g2-in-g6">
-						<div class="grid-debug">
-							G2 in G6
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="g3-in-g6">
-						<div class="grid-debug">
-							G3 in G6
-						</div>
-					</div>
-					<div class="g3-in-g6">
-						<div class="grid-debug">
-							G3 in G6
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="g4">
-			<div class="grid-debug">
-				G4
-			</div>
-		</div>
-		<div class="g4">
-			<div class="grid-debug">
-				G4
-			</div>
-		</div>
-	</div>
-</div>
-	<div class="container-row grid-debug-bg">
-	
-		<div class="g1">
-			<div class="grid-debug">
-			&nbsp;
-			</div>
-		</div>
-	
-		<div class="g1">
-			<div class="grid-debug">
-			&nbsp;
-			</div>
-		</div>
-	
-		<div class="g1">
-			<div class="grid-debug">
-			&nbsp;
-			</div>
-		</div>
-	
-		<div class="g1">
-			<div class="grid-debug">
-			&nbsp;
-			</div>
-		</div>
-	
-		<div class="g1">
-			<div class="grid-debug">
-			&nbsp;
-			</div>
-		</div>
-	
-		<div class="g1">
-			<div class="grid-debug">
-			&nbsp;
-			</div>
-		</div>
-	
-		<div class="g1">
-			<div class="grid-debug">
-			&nbsp;
-			</div>
-		</div>
-	
-		<div class="g1">
-			<div class="grid-debug">
-			&nbsp;
-			</div>
-		</div>
-	
-</div>
-
-
-</div>
 	</body>
 </html>
 

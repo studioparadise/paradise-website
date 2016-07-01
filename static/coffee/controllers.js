@@ -48,17 +48,8 @@
   };
 
   root.controllers.navbar2 = function($element, args) {
-    var $allContent, $items, api, centerNavbar, data, handleColumnSizing, handleDirectLoadViaHash, handleLogoClick, handleScrollSpy, i, initItem, item, lastActiveItem, len, populateNavbarState, showDropdown;
+    var $allContent, $items, api, centerNavbar, handleColumnSizing, handleDirectLoadViaHash, handleLogoClick, handleMobileNav, handleScrollSpy, i, initItem, item, lastActiveItem, len, showDropdown;
     api = {};
-    console.log('init navbar2');
-    data = window.navbarData;
-    (populateNavbarState = function() {
-
-      /* Populate initial navbar state.
-      		T1 only.
-      		T2 comes after T1 selection.
-       */
-    })();
     (handleColumnSizing = function() {
 
       /* Handle column sizing. 
@@ -102,6 +93,18 @@
       });
     })();
     $(window).on('resize', centerNavbar);
+    (handleMobileNav = function() {
+      var $navOpen, toggleMobileNavbar;
+      $navOpen = $("[js-mobile-navbar-open]");
+      toggleMobileNavbar = function() {
+        if ($("body").hasClass('mobile-navbar-is-open')) {
+          return $("body").removeClass('mobile-navbar-is-open');
+        } else {
+          return $("body").addClass('mobile-navbar-is-open');
+        }
+      };
+      return $navOpen.on('click', toggleMobileNavbar);
+    })();
     $allContent = $("[js-index-content]");
     api.hideAllContentAndFadeInOne = function($content) {
       console.log("Loading content: ", $content);
@@ -118,11 +121,13 @@
       $logo = $element.find('[js-navbar-logo]');
       return $logo.on('click', function(ev) {
         var $el;
-        ev.preventDefault();
-        $el = $("[js-index-content=\"index\"]");
-        api.hideAllContentAndFadeInOne($el);
-        api.clearNavbarState();
-        return false;
+        if (!args.mobile) {
+          ev.preventDefault();
+          $el = $("[js-index-content=\"index\"]");
+          api.hideAllContentAndFadeInOne($el);
+          api.clearNavbarState();
+          return false;
+        }
       });
     })();
     showDropdown = function($dropdown, apply) {
@@ -168,7 +173,7 @@
         scrollSpyTarget = $label.attr('js-scrollspy-nav');
         if (scrollSpyTarget) {
           return $("html, body").stop(true, true).animate({
-            scrollTop: $("[js-scrollspy=\"" + scrollSpyTarget + "\"]").offset().top - 35
+            scrollTop: $("[js-scrollspy=\"" + scrollSpyTarget + "\"]").offset().top
           }, 1000, 'easeInOutExpo', function() {
             api.scrolling = false;
             return activateItem($item);
@@ -205,6 +210,7 @@
         if (args.preventAlign) {
           console.log('root element. clearing');
           api.clearNavbarState();
+          $('html,body').scrollTop(0);
         }
         showDropdown($dropdown, true);
         $siblingItems.removeClass('is-active');
@@ -220,8 +226,8 @@
         return activateItem($item);
       });
       return $label.on('scrollspy:activate', function() {
-        if (api.scrolling == null) {
-          return activateItem($item, true);
+        if (!api.scrolling) {
+          return activateItem($item, false);
         }
       });
     };
