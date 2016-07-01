@@ -28,10 +28,6 @@ modules:
   alt: 
   caption: 
 - type: image
-  images:
-  - image: 
-    alt: 
-    caption: 
   image: "/uploads/COn_Branding.gif"
 - type: image
   url: 
@@ -58,5 +54,9 @@ modules:
   - url: 
     emphasis: Development
     name: Eric Wang
+- type: image
+  image:
+  - "/uploads/Convicts_Web_Map.jpg"
+  dimensions: 2400x1606
 ---
 
