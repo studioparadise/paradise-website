@@ -15,13 +15,16 @@ modules:
   dimension: 2400x1951
 - type: image
   image: "/uploads/Prize_Exports.jpg"
+  dimension: 2400x1600
 - type: image
   image: "/uploads/Prize_lookbook2.jpg"
   dimension: 2400x1951
 - type: image
   image: "/uploads/Prize_hero2.jpg"
+  dimension: 2400x1600
 - type: image
   image: "/uploads/Tati_Pins.jpg"
+  dimension: 2400x1600
 - type: image
   image: "/uploads/Tati2.jpg"
 - type: image
@@ -31,6 +34,7 @@ modules:
   dimension: 1200x1650
 - type: image
   image: "/uploads/Steph_pins.jpg"
+  dimension: 2400x1600
 - type: image
   image: "/uploads/MonsterLookbook4.jpg"
   dimension: 2400x1708
@@ -39,6 +43,7 @@ modules:
   dimension: 2400x1745
 - type: image
   image: "/uploads/Jean_Pins.jpg"
+  Key: 2400x1600
 - type: image
   image: "/uploads/Prize11602_grande.jpg"
 - type: image
