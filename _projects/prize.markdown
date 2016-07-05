@@ -12,42 +12,44 @@ modules:
   image: "/uploads/Stationery.jpg"
 - type: image
   image: "/uploads/Prize_lookbook1.jpg"
-  dimension: 2400x1951
+  dimensions: 2400x1951
 - type: image
   image: "/uploads/Prize_Exports.jpg"
-  dimension: 2400x1600
+  dimensions: 2400x1600
 - type: image
   image: "/uploads/Prize_lookbook2.jpg"
-  dimension: 2400x1951
+  dimensions: 2400x1951
 - type: image
   image: "/uploads/Prize_hero2.jpg"
-  dimension: 2400x1600
+  dimensions: 2400x1600
 - type: image
   image: "/uploads/Tati_Pins.jpg"
-  dimension: 2400x1600
+  dimensions: 2400x1600
 - type: image
   image: "/uploads/Tati2.jpg"
 - type: image
   image: "/uploads/Tati1.jpg"
 - type: images-2up
   image: "/uploads/MonsterLookbook3.jpg"
-  dimension: 1200x1650
+  dimensions: 1200x1650
 - type: image
   image: "/uploads/Steph_pins.jpg"
-  dimension: 2400x1600
+  dimensions: 2400x1600
 - type: image
   image: "/uploads/MonsterLookbook4.jpg"
-  dimension: 2400x1708
+  dimensions: 2400x1708
 - type: image
   image: "/uploads/MonsterLookbook1.jpg"
-  dimension: 2400x1745
+  dimensions: 2400x1745
 - type: image
   image: "/uploads/Jean_Pins.jpg"
-  Key: 2400x1600
+  dimensions: 2400x1600
 - type: image
   image: "/uploads/Prize11602_grande.jpg"
+  dimensions: 600x488
 - type: image
   image: "/uploads/Prize11302_grande.jpg"
+  dimensions: 600x488
 - type: image
   image: "/uploads/TimLahan_Pins.jpg"
 - type: image
