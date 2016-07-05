@@ -24,7 +24,7 @@ modules:
   image: "/uploads/Tati2.jpg"
 - type: image
   image: "/uploads/Tati1.jpg"
-- type: image
+- type: images-2up
   image: "/uploads/MonsterLookbook3.jpg"
 - type: image
   image: "/uploads/Steph_pins.jpg"
