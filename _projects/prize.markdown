@@ -12,10 +12,12 @@ modules:
   image: "/uploads/Stationery.jpg"
 - type: image
   image: "/uploads/Prize_lookbook1.jpg"
+  dimension: 2400x1951
 - type: image
   image: "/uploads/Prize_Exports.jpg"
 - type: image
   image: "/uploads/Prize_lookbook2.jpg"
+  dimension: 2400x1951
 - type: image
   image: "/uploads/Prize_hero2.jpg"
 - type: image
@@ -26,12 +28,15 @@ modules:
   image: "/uploads/Tati1.jpg"
 - type: images-2up
   image: "/uploads/MonsterLookbook3.jpg"
+  dimension: 1200x1650
 - type: image
   image: "/uploads/Steph_pins.jpg"
 - type: image
   image: "/uploads/MonsterLookbook4.jpg"
+  dimension: 2400x1708
 - type: image
   image: "/uploads/MonsterLookbook1.jpg"
+  dimension: 2400x1745
 - type: image
   image: "/uploads/Jean_Pins.jpg"
 - type: image
