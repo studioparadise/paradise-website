@@ -9,6 +9,50 @@ modules:
   excerpt: This sentence has to do with prize pins.
   body: 
 - type: image
+  image: "/uploads/Stationery.jpg"
+- type: image
+  image: "/uploads/Prize_lookbook1.jpg"
+  dimensions: 2400x1951
+- type: image
+  image: "/uploads/Prize_Exports.jpg"
+  dimensions: 2400x1600
+- type: image
+  image: "/uploads/Prize_lookbook2.jpg"
+  dimensions: 2400x1951
+- type: image
   image: "/uploads/Prize_hero2.jpg"
+  dimensions: 2400x1600
+- type: image
+  image: "/uploads/Tati_Pins.jpg"
+  dimensions: 2400x1600
+- type: image
+  image: "/uploads/Tati2.jpg"
+- type: image
+  image: "/uploads/Tati1.jpg"
+- type: images-2up
+  image: "/uploads/MonsterLookbook3.jpg"
+  dimensions: 1200x1650
+- type: image
+  image: "/uploads/Steph_pins.jpg"
+  dimensions: 2400x1600
+- type: image
+  image: "/uploads/MonsterLookbook4.jpg"
+  dimensions: 2400x1708
+- type: image
+  image: "/uploads/MonsterLookbook1.jpg"
+  dimensions: 2400x1745
+- type: image
+  image: "/uploads/Jean_Pins.jpg"
+  dimensions: 2400x1600
+- type: image
+  image: "/uploads/Prize11602_grande.jpg"
+  dimensions: 600x488
+- type: image
+  image: "/uploads/Prize11302_grande.jpg"
+  dimensions: 600x488
+- type: image
+  image: "/uploads/TimLahan_Pins.jpg"
+- type: image
+  image: "/uploads/TimLookbook.jpg"
 ---
 

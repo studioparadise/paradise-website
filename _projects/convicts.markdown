@@ -35,6 +35,12 @@ modules:
   alt: 
   caption: 
 - type: image
+  dimensions: 2343x3705
+  image: "/uploads/CONVICTS_LARGEWEB_grid.jpg"
+- type: image
+  dimensions: 2400x3795
+  image: "/uploads/CONVICTS_LARGEWEB.jpg"
+- type: image
   image:
   - "/uploads/Convicts_Web_Map.jpg"
   dimensions: 2400x1606

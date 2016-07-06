@@ -14,6 +14,10 @@ modules:
   image: "/uploads/Kaelen_4.jpg"
   dimensions: 2400x1600
 - type: image
+  image: "/uploads/Kaelen_Pattern1.jpg"
+- type: image
   image: "/uploads/Kaelen_3.jpg"
+- type: image
+  image: "/uploads/Kaelen_Pattern2.jpg"
 ---
 
