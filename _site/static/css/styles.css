@@ -8616,12 +8616,20 @@ div[js-index-content="index"] {
 .grid-debug-container {
   display: none; }
 
-.supports-js body {
-  opacity: 0;
-  -webkit-transition: opacity 0.3s ease 0s;
-  -moz-transition: opacity 0.3s ease 0s;
-  -o-transition: opacity 0.3s ease 0s; }
-  .supports-js body.is-loading {
-    opacity: 1; }
-  .supports-js body.is-unloading {
+.supports-js {
+  /* fade image in after load */ }
+  .supports-js .lazyload,
+  .supports-js .lazyloading {
     opacity: 0; }
+  .supports-js .lazyloaded {
+    opacity: 1;
+    transition: opacity 300ms; }
+  .supports-js body {
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease 0s;
+    -moz-transition: opacity 0.3s ease 0s;
+    -o-transition: opacity 0.3s ease 0s; }
+    .supports-js body.is-loading {
+      opacity: 1; }
+    .supports-js body.is-unloading {
+      opacity: 0; }
