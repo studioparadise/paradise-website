@@ -14,9 +14,13 @@ root.controllers.project = ($element, args) ->
 
 			$(window).trigger 'resize'
 
-			$('html, body').animate
-				scrollTop: $trigger.closest('.index-project').offset().top
-			, 0, 'easeInOutExpo'
+			FULL_PROJECT_ANIMATION_DURATION = 1000
+			intervalID = setInterval ->
+				$('html, body').scrollTop($trigger.closest('.index-project').offset().top)
+			, 1
+			_.delay ->
+				clearTimeout intervalID
+			, FULL_PROJECT_ANIMATION_DURATION
 		$trigger.on 'click', toggleFullProjectView
 
 root.controllers.moduleCredits = ($element, args) ->
@@ -93,10 +97,10 @@ root.controllers.navbar2 = ($element, args) ->
 
 	$allContent = $("[js-index-content]")
 	api.hideAllContentAndFadeInOne = ($content) ->
-		console.log "Loading content: ", $content
+		# console.log "Loading content: ", $content
 
 		if $content.is(':visible')
-			console.log "Content visible, skipping fade in"
+			# console.log "Content visible, skipping fade in"
 			return
 
 		$allContent.stop(true, true).fadeOut().promise().done ->
@@ -129,7 +133,7 @@ root.controllers.navbar2 = ($element, args) ->
 
 	lastActiveItem = null
 	initItem = ($item) ->
-		console.log 'initializing item', $item
+		# console.log 'initializing item', $item
 		$label = $item.find '[js-item-label]:first'
 		$siblingItems = $item.siblings()
 
@@ -138,9 +142,8 @@ root.controllers.navbar2 = ($element, args) ->
 			$dropdown = $item.closest('.navbar__dropdown')
 			height = $item.parent().height()
 			top = $item.position().top
-			console.log 'top: ', top, ' height:', height
-
-			console.log 'dropdown css is -', top, $dropdown
+			# console.log 'top: ', top, ' height:', height
+			# console.log 'dropdown css is -', top, $dropdown
 			$item.parent().stop(true).animate
 				marginTop: "-#{top}px"
 			, 1000
@@ -164,6 +167,7 @@ root.controllers.navbar2 = ($element, args) ->
 				when 'index'
 					$el = $("[js-index-content=\"index\"]")
 					api.hideAllContentAndFadeInOne $el
+
 				when 'projects'
 					$el = $("[js-index-content=\"projects\"]")
 					api.hideAllContentAndFadeInOne $el
@@ -171,15 +175,14 @@ root.controllers.navbar2 = ($element, args) ->
 				when 'studio'
 					$el = $("[js-index-content=\"studio\"]")
 					api.hideAllContentAndFadeInOne $el
+
 				when 'journal'
 					$el = $("[js-index-content=\"journal\"]")
 					api.hideAllContentAndFadeInOne $el
 				else
 					console.log "Not Found", args.overlay
-					# $(".studio").fadeOut()
 
 			if args.preventAlign
-				console.log 'root element. clearing'
 				api.clearNavbarState()
 				$('html,body').scrollTop(0)
 
@@ -192,7 +195,12 @@ root.controllers.navbar2 = ($element, args) ->
 			if not args.preventAlign and not preventAlign
 				alignItemWithParent($item)
 
-		console.log 'adding trigger on $label click', $label
+			scrollSpy = $label.attr('js-scrollspy-nav')
+			if scrollSpy
+				window.location.hash = scrollSpy
+
+	    # set hash to scrollspy value
+		# console.log 'adding trigger on $label click', $label
 		$label.on 'click', ->
 			scrollTo $item
 			activateItem $item
@@ -212,7 +220,16 @@ root.controllers.navbar2 = ($element, args) ->
 			return
 
 		hash = hash.substr 1
-
+		$scrollSpyNav = $("[js-scrollspy-nav=\"#{hash}\"]")
+		if $scrollSpyNav
+			#  click parent
+			$parentNav = $scrollSpyNav.parent().parent().parent()
+			$parentNav.find('[js-item-label]:first').click()
+			console.log 'clicking parent nav', $parentNav
+			_.delay ->
+				$scrollSpyNav.click()
+				console.log 'clicking scrollspy nav', $scrollSpyNav
+			, 200
 
 
 	# do handleSecondaryNav = ->
@@ -272,7 +289,7 @@ root.controllers.navbar2 = ($element, args) ->
 			$nav = $("[js-scrollspy-nav=\"#{target}\"]")
 			$nav.trigger 'scrollspy:activate'
 
-		$(window).on 'scroll', _.throttle onScroll, 150
+		$(window).on 'scroll', _.throttle onScroll, 50
 
 root.controllers.studioContent = ($element, args) ->
 	$navItem = $("[js-navbar-studio]")

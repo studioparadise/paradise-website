@@ -1246,9 +1246,27 @@ body {
 // typography
 // typography
 // typography
+
+
+@mixin font-size-responsive($base-font-size) {
+  font-size: $base-font-size;
+  @for $i from 1 through 10 {
+    $min: $i * 100px;
+    $min: $min + 1250px;
+    $max: $min + 99px;
+    $modifier: .1 * $i;
+    $increase: $base-font-size * $modifier;
+    @include at-query(null, $min, $max) {
+      font-size: $base-font-size + $increase;
+    }
+  }
+}
+
+
 @mixin style-h1 {
   font-size: 26px;
   line-height: 1.07;
+  @include font-size-responsive(26px);
 }
 h1 {
   @include style-h1;
@@ -1345,8 +1363,8 @@ h1 {
 	top: 35px;
 	left: 35px;
   svg {
-    width: 82px;
-    height: 20px;
+    width: 100px;
+    height: 25px;
   }
   @include rm {
     top: 20px;
@@ -1391,6 +1409,7 @@ h1 {
     margin-left: 0;
   }
 }
+
 .mobile {
   font-size: 12px;
   font-weight: 500;
@@ -1610,6 +1629,18 @@ h1 {
     color: white;
   }
 }
+.index-project__close {
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  svg {
+    width: 20px;
+    height: 20px;
+    path, rect {
+      fill: black;
+    }
+  }
+}
 
 div[js-index-content] {
   display: none;
@@ -1723,9 +1754,14 @@ div[js-index-content="index"]{
 
 .module-text__body {
   display: none;
+  opacity: 0;
+  @include transform(translateX(100px));
+  @include transition(all .3s ease 0s);
   .js-viewing-full-project & {
     @include column(3);
     display: block;
+    @include transform(translateX(0px));
+    opacity: 1;
   }
 
   @include style-body;
@@ -1863,6 +1899,11 @@ div[js-index-content="index"]{
   display: none;
 }
 
+.content-navbar-grid-spacer,
+.index-project {
+  @include transition(all .4s ease 0s);
+}
+
 .js-viewing-full-project {
   .hide-on-full-project {
     display: none;    
@@ -1871,14 +1912,13 @@ div[js-index-content="index"]{
     display: block;
   }
   .content-navbar-grid-spacer {
-    width: 0;
+    width: 0%;
+    height: .1px;
     overflow: hidden;
   }
   .index-project {
-    // @include transition(all .8s linear 0s);
     @include column(8);
   }
-
   .navbar {
     display: none;
   }

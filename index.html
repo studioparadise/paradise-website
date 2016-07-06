@@ -44,7 +44,7 @@ excerpt: Studio Paradise
 					<div class="content-navbar-grid-spacer">&nbsp;</div>
 					<article class="index-project" js-index-project="{{ project.title | slugify }}" js-controller="project">
 						<div class="index-project__close show-on-full-project">
-							X
+							{% include svg.html type="x" %}
 						</div>
 						<div class="index-project__inner">
 							<!-- <span class="index-project-debug">
@@ -281,6 +281,7 @@ excerpt: Studio Paradise
 						</a>
 					</div>
 				</div>
+				<div style="height: 50vh;"></div>
 			</div>
 		</div>
 	</div>
