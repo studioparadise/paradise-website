@@ -14,13 +14,13 @@ root.controllers.project = ($element, args) ->
 
 			$(window).trigger 'resize'
 
-			FULL_PROJECT_ANIMATION_DURATION = 1000
-			intervalID = setInterval ->
-				$('html, body').scrollTop($trigger.closest('.index-project').offset().top)
-			, 1
-			_.delay ->
-				clearTimeout intervalID
-			, FULL_PROJECT_ANIMATION_DURATION
+			# FULL_PROJECT_ANIMATION_DURATION = 1000
+			# intervalID = setInterval ->
+			# 	$('html, body').scrollTop($trigger.closest('.index-project').offset().top)
+			# , 1
+			# _.delay ->
+			# 	clearTimeout intervalID
+			# , FULL_PROJECT_ANIMATION_DURATION
 		$trigger.on 'click', toggleFullProjectView
 
 root.controllers.moduleCredits = ($element, args) ->
