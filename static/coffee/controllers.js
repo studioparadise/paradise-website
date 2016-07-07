@@ -14,10 +14,7 @@
         } else {
           $('html').addClass('js-viewing-full-project');
         }
-        $(window).trigger('resize');
-        return $('html, body').animate({
-          scrollTop: $trigger.closest('.index-project').offset().top
-        }, 2000, 'easeInOutExpo');
+        return $(window).trigger('resize');
       };
       return $trigger.on('click', toggleFullProjectView);
     })();
@@ -107,9 +104,7 @@
     })();
     $allContent = $("[js-index-content]");
     api.hideAllContentAndFadeInOne = function($content) {
-      console.log("Loading content: ", $content);
       if ($content.is(':visible')) {
-        console.log("Content visible, skipping fade in");
         return;
       }
       return $allContent.stop(true, true).fadeOut().promise().done(function() {
@@ -153,7 +148,6 @@
     lastActiveItem = null;
     initItem = function($item) {
       var $label, $siblingItems, activateItem, alignItemWithParent, scrollTo;
-      console.log('initializing item', $item);
       $label = $item.find('[js-item-label]:first');
       $siblingItems = $item.siblings();
       alignItemWithParent = function($item) {
@@ -161,8 +155,6 @@
         $dropdown = $item.closest('.navbar__dropdown');
         height = $item.parent().height();
         top = $item.position().top;
-        console.log('top: ', top, ' height:', height);
-        console.log('dropdown css is -', top, $dropdown);
         return $item.parent().stop(true).animate({
           marginTop: "-" + top + "px"
         }, 1000);
@@ -181,7 +173,7 @@
         }
       };
       activateItem = function($item, preventAlign) {
-        var $dropdown, $el;
+        var $dropdown, $el, scrollSpy;
         if (preventAlign == null) {
           preventAlign = false;
         }
@@ -208,7 +200,6 @@
             console.log("Not Found", args.overlay);
         }
         if (args.preventAlign) {
-          console.log('root element. clearing');
           api.clearNavbarState();
           $('html,body').scrollTop(0);
         }
@@ -217,10 +208,13 @@
         $item.addClass('is-active');
         lastActiveItem = $item;
         if (!args.preventAlign && !preventAlign) {
-          return alignItemWithParent($item);
+          alignItemWithParent($item);
+        }
+        scrollSpy = $label.attr('js-scrollspy-nav');
+        if (scrollSpy) {
+          return window.location.hash = scrollSpy;
         }
       };
-      console.log('adding trigger on $label click', $label);
       $label.on('click', function() {
         scrollTo($item);
         return activateItem($item);
@@ -237,12 +231,22 @@
       initItem($(item));
     }
     (handleDirectLoadViaHash = function() {
-      var hash;
+      var $parentNav, $scrollSpyNav, hash;
       hash = window.location.hash;
       if (!hash) {
         return;
       }
-      return hash = hash.substr(1);
+      hash = hash.substr(1);
+      $scrollSpyNav = $("[js-scrollspy-nav=\"" + hash + "\"]");
+      if ($scrollSpyNav) {
+        $parentNav = $scrollSpyNav.parent().parent().parent();
+        $parentNav.find('[js-item-label]:first').click();
+        console.log('clicking parent nav', $parentNav);
+        return _.delay(function() {
+          $scrollSpyNav.click();
+          return console.log('clicking scrollspy nav', $scrollSpyNav);
+        }, 200);
+      }
     })();
     return (handleScrollSpy = function() {
       var onScroll;
@@ -254,7 +258,7 @@
         $nav = $("[js-scrollspy-nav=\"" + target + "\"]");
         return $nav.trigger('scrollspy:activate');
       };
-      return $(window).on('scroll', _.throttle(onScroll, 150));
+      return $(window).on('scroll', _.throttle(onScroll, 50));
     })();
   };
 
