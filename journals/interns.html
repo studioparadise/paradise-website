@@ -6,40 +6,44 @@
 <html class="no-js">
 <!--<![endif]-->
 <head>
-	
+
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Plain Description -->
 	<title>Paradise</title>
-	<meta name="description" content="
+	<meta name="description" content="<p>Looking for a turbo-learning design freak to join our crew for the rest of the summer. If you are interested in interesting stuff, know how to use some adobe programs and are down to nerd out with us please tell us a little about yourself and why you are keen at hiring@studioparadise.com.</p>
+
 ">
 	<link rel="icon" type="image/png" href="/favicon.png">
 	
 	<!-- Google+ -->
 	<link rel="publisher" href="https://plus.google.com/gusername"/>
-	<meta itemprop="name" content="Leader Bag | Paradise ">
-	<meta itemprop="description" content="
+	<meta itemprop="name" content="Interns | Paradise ">
+	<meta itemprop="description" content="<p>Looking for a turbo-learning design freak to join our crew for the rest of the summer. If you are interested in interesting stuff, know how to use some adobe programs and are down to nerd out with us please tell us a little about yourself and why you are keen at hiring@studioparadise.com.</p>
+
 ">
-	<meta itemprop="image" content="http://yourwebsite.com/img/social.jpg">
+	<meta itemprop="image" content="http://yourwebsite.com/uploads/SP_Site_Journal_0001_Interns_160710.jpg">
 	
 	<!-- Facebook -->
 	<meta property="og:type" content="website"/>
-	<meta property="og:title" content="Leader Bag | Paradise "/>
-	<meta property="og:description" content="
+	<meta property="og:title" content="Interns | Paradise "/>
+	<meta property="og:description" content="<p>Looking for a turbo-learning design freak to join our crew for the rest of the summer. If you are interested in interesting stuff, know how to use some adobe programs and are down to nerd out with us please tell us a little about yourself and why you are keen at hiring@studioparadise.com.</p>
+
 "/>
-	<meta property="og:image" content="http://yourwebsite.com/img/social.jpg"/>
-	<meta property="og:url" content="http://yourwebsite.com/projects/leader-bag.html"/>
+	<meta property="og:image" content="http://yourwebsite.com/uploads/SP_Site_Journal_0001_Interns_160710.jpg"/>
+	<meta property="og:url" content="http://yourwebsite.com/journals/interns.html"/>
 	<meta property="og:site_name" content="Paradise "/>
 	
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary">
-	<meta name="twitter:title" content="Leader Bag | Paradise ">
-	<meta name="twitter:description" content="
+	<meta name="twitter:title" content="Interns | Paradise ">
+	<meta name="twitter:description" content="<p>Looking for a turbo-learning design freak to join our crew for the rest of the summer. If you are interested in interesting stuff, know how to use some adobe programs and are down to nerd out with us please tell us a little about yourself and why you are keen at hiring@studioparadise.com.</p>
+
 ">
 	<meta name="twitter:image" content="http://yourwebsite.com/img/social.jpg">
-	<meta name="twitter:url" content="http://yourwebsite.com/projects/leader-bag.html">
+	<meta name="twitter:url" content="http://yourwebsite.com/journals/interns.html">
 	
 	<link rel="stylesheet" href="/static/css/libraries_aggregated.min.css">
 	<!-- CSS & fonts -->
@@ -54,19 +58,16 @@
 		  return check;
 		}
 	</script>	
-	<script type="text/javascript">
-		// fake adaptive
-		if (!window.mobilecheck()) {
-			if (window.location.pathname.indexOf('project') > 0) {
-				var projectName = window.location.pathname.split('/')[2].split('.')[0];
-				window.location.href = '/#' + projectName;
-			} else {
-				window.location.href = '/';
-			}
-		}
-	</script>
+<script type="text/javascript">
+	// # Design calls for an adaptive site, on a platform that doesn't support it. We'll use a JS redirect.
+	if (window.mobilecheck()) {
+		window.location.href = '/mobile_index.html';
+	} else {
+
+	}
+</script>
 </head>
-<body class="layout-mobile">
+	<body class="layout-default">
 		<!--[if lt IE 8]>
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
@@ -76,7 +77,7 @@
 	<div class="mobile-navbar-open__line"></div>
 </div>
 
-<div class="navbar" js-controller="navbar2" js-args="{ mobile: true}">
+<div class="navbar" js-controller="navbar2" js-args="{ mobile: false}">
 	<div class="navbar__logo" js-navbar-logo>
 		<a href="/">
 			
@@ -207,303 +208,69 @@
 	</div>
 </div>
 		
-<div class="mobile">
-	
-		<!--
-<ul>
-	<li>Module type:hero</li>
-	<li>Module data {"type"=>"hero", "image"=>"/uploads/leader_hero.jpg", "alt"=>nil}</li>
-</ul>
--->
-
-
-<div class="debug-element">module-hero variation: </div>
-
-<div class="module module-hero module-hero--">
-	
-		<div class="hero__column">
-			
-				<div class="module-image__ratio" data-responsive-image-dimensions="2400x755">
-					<img class="hero__img lazyload" data-src="/uploads/leader_hero.jpg" alt="" />
-				</div>
-			
-		</div>
-	
+		<div class="footer-contact" js-footer-show>
+	Contact
 </div>
 
-	
-		<!--
-<ul>
-	<li>Module type:text</li>
-	<li>Module data {"type"=>"text", "excerpt"=>"Bringing good design to modern families.", "body"=>nil}</li>
-</ul>
--->
-
-
-<div class="debug-element">module-text variation: </div>
-
-<div class="module module-text module-text--">
-	
+<footer class="footer" js-controller="footer">
+	<div class="footer__container">
 		<div class="row">
-			<div class="module-text__spacer">
-				<span class="show-on-full-project">
-					
-				</span>
+			<a class="footer__email-address" href="mailto:hello@studioparadise.com">
+				hello@studioparadise.com
+			</a>
+			<div class="footer__spacer">
 				&nbsp;
 			</div>
-			<div class="module-text__excerpt">
-				Bringing good design to modern families.
-			
-				<div class="module-text__view-full" js-index-view-full-project>
-					<span class="hide-on-full-project">
-						View Full Project
-					</span>
-					<span class="show-on-full-project">
-						AH! Take me Back!
-					</span>
-				</div>
+			<div class="footer__spacer">
+				&nbsp;
 			</div>
-			<div class="module-text__full-project-spacer show-on-full-project">&nbsp;</div>
-			
-		</div>
-	
-</div>
-
-	
-		<!--
-<ul>
-	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_Logo-479686.gif", "caption"=>"Created by Lotta Nieminen", "dimensions"=>"2400x1664"}</li>
-</ul>
--->
-
-
-<div class="debug-element">module-image variation: </div>
-
-<div class="module module-image module-image--">
-	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1664">
-			<img class="module-image__img lazyload module-image__img--with-caption" data-src="/uploads/Leader_Logo-479686.gif" alt="" />
-		</div>
-		
-			<div class="module__image-caption">
-				Created by Lotta Nieminen
+			<div class="footer__address1">
+				Sydney<br>
+				Suite 4, Level<br>
+				1137 Bridge Rd<br>
+				Glebe NSW 2037<br>
+				+61 2 9518 4443<br>
 			</div>
-		
-	
-</div>
-
-	
-		<!--
-<ul>
-	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "url"=>nil, "image"=>"/uploads/Leader_2.jpg"}</li>
-</ul>
--->
-
-
-<div class="debug-element">module-image variation: </div>
-
-<div class="module module-image module-image--">
-	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Leader_2.jpg" alt="" />
-		</div>
-		
-	
-</div>
-
-	
-		<!--
-<ul>
-	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_1.jpg", "alt"=>nil, "caption"=>nil}</li>
-</ul>
--->
-
-
-<div class="debug-element">module-image variation: </div>
-
-<div class="module module-image module-image--">
-	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Leader_1.jpg" alt="" />
-		</div>
-		
-	
-</div>
-
-	
-		<!--
-<ul>
-	<li>Module type:images_2up</li>
-	<li>Module data {"type"=>"images_2up", "images"=>[{"image"=>"/uploads/Leader_3.jpg"}, {"image"=>"/uploads/Leader_4.jpg"}]}</li>
-</ul>
--->
-
-
-<div class="debug-element">module-images_2up variation: </div>
-
-<div class="module module-images_2up module-images_2up--">
-	
-</div>
-
-	
-		<!--
-<ul>
-	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_5.jpg"}</li>
-</ul>
--->
-
-
-<div class="debug-element">module-image variation: </div>
-
-<div class="module module-image module-image--">
-	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Leader_5.jpg" alt="" />
-		</div>
-		
-	
-</div>
-
-	
-		<!--
-<ul>
-	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_6.jpg"}</li>
-</ul>
--->
-
-
-<div class="debug-element">module-image variation: </div>
-
-<div class="module module-image module-image--">
-	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Leader_6.jpg" alt="" />
-		</div>
-		
-	
-</div>
-
-	
-		<!--
-<ul>
-	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_7.jpg"}</li>
-</ul>
--->
-
-
-<div class="debug-element">module-image variation: </div>
-
-<div class="module module-image module-image--">
-	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Leader_7.jpg" alt="" />
-		</div>
-		
-	
-</div>
-
-	
-		<!--
-<ul>
-	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_8.jpg"}</li>
-</ul>
--->
-
-
-<div class="debug-element">module-image variation: </div>
-
-<div class="module module-image module-image--">
-	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Leader_8.jpg" alt="" />
-		</div>
-		
-	
-</div>
-
-	
-		<!--
-<ul>
-	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_9.jpg"}</li>
-</ul>
--->
-
-
-<div class="debug-element">module-image variation: </div>
-
-<div class="module module-image module-image--">
-	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Leader_9.jpg" alt="" />
-		</div>
-		
-	
-</div>
-
-	
-		<!--
-<ul>
-	<li>Module type:credits</li>
-	<li>Module data {"type"=>"credits", "credits"=>[{"url"=>nil, "emphasis"=>nil, "name"=>nil}]}</li>
-</ul>
--->
-
-
-<div class="debug-element">module-credits variation: </div>
-
-<div class="module module-credits module-credits--">
-	
-		<div class="module-credits__line-container">
-			<div class="module-credits__line"></div>
-		</div>
-		<div class="module-credits__credits" js-controller="moduleCredits">
-			<div style="display: none;" js-module-credits-data>
-				
-					<a class="module-credits__credit" js-module-credits-item target="_blank" >
-						<span class="module-credits__emphasis">
+			<div class="footer__address2">
+				New York<br>
+				153 Centre St <br>
+				Suite 206<br>
+				New York NY 10013  <br>
+				+1 917 363 8971<br>
+			</div>
+			<div class="footer__spacer">
+				&nbsp;
+			</div>
+			<div class="footer__email">
+				<div class="footer-signup">
+					<div class="footer-signup__input-wrapper">
+						<input type="text" class="footer-signup__input" placeholder="Newsletter Sign Up"/>
+						<div class="footer-signup__submit">
 							
-						</span>
-						
-					</a>
-				
-			</div>
-			<div class="module-credits__column">
-				<div class="module-credits__title">
-					Project Credits
+	<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.53 11.71"><title>Paradise_FinalDesign_160428_MLP_A_DEVNOTES</title><polygon points="17.68 0 16.97 0.71 21.62 5.35 0 5.35 0 6.35 21.62 6.35 16.97 11 17.68 11.71 23.53 5.85 17.68 0"/></svg>
+
+						</div>
+					</div>
+				</div>
+				<div class="footer-social">
+					<div class="footer-social__item">
+						F
+					</div><div class="footer-social__item">
+						IN
+					</div><div class="footer-social__item">
+						T
+					</div>
 				</div>
 			</div>
-			<div class="module-credits__column" js-module-credit-column>			
-			</div>
-			<div class="module-credits__column" js-module-credit-column>
-			</div>
-			<div class="module-credits__column show-on-full-project" js-module-credit-column>
+			<div class="footer__close" js-footer-close>
+				
+	<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.71 20.71"><title>Paradise_FinalDesign_160428_MLP_A_DEVNOTES</title><polygon points="20.71 0.71 20 0 10.35 9.65 0.71 0 0 0.71 9.65 10.35 0 20 0.71 20.71 10.35 11.06 20 20.71 20.71 20 11.06 10.35 20.71 0.71"/></svg>
+
 			</div>
 		</div>
-		<div class="module-credits__line-container">
-			<div class="module-credits__line"></div>
-		</div>
-	
-</div>
+	</div>
+</footer>
 
-	
-
-	
-		<a class="mobile__next" href="/projects/mikoh.html">
-			Up Next
-			<span class="mobile__next-project">
-				Mikoh
-			</span>
-		</a>
-	
-</div>
 		
 <!-- 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
@@ -515,6 +282,357 @@
 <script type="text/javascript" src="/static/coffee/controllers.js"></script>
 <script type="text/javascript" src="/static/coffee/components.js"></script>
 		
+		<script>
+	$(function() {
+		$("[js-debug-bar-toggle]").on('click', function() {
+
+			var $container = $(".grid-debug-container");
+			if ($container.is(':visible')) {
+				$container.fadeOut();
+				$(".debug-element").fadeOut();
+			} else {
+				$container.fadeIn();
+				$(".debug-element").fadeIn();
+			}
+		});
+	})
+</script>
+<div class="debug-bar">
+	<div js-debug-bar-toggle>
+		Toggle Grid Debug.
+
+		Debugger: 
+		<span js-debug-txt></span>
+	</div>
+</div>
+<div class="grid-debug-container">
+	
+<center class="grid-debug-heading">
+	Grid
+</center>
+
+<div class="container-row">
+	
+		<div class="g1">
+			<div class="grid-debug">
+				g1
+			</div>
+		</div>
+	
+		<div class="g1">
+			<div class="grid-debug">
+				g1
+			</div>
+		</div>
+	
+		<div class="g1">
+			<div class="grid-debug">
+				g1
+			</div>
+		</div>
+	
+		<div class="g1">
+			<div class="grid-debug">
+				g1
+			</div>
+		</div>
+	
+		<div class="g1">
+			<div class="grid-debug">
+				g1
+			</div>
+		</div>
+	
+		<div class="g1">
+			<div class="grid-debug">
+				g1
+			</div>
+		</div>
+	
+		<div class="g1">
+			<div class="grid-debug">
+				g1
+			</div>
+		</div>
+	
+		<div class="g1">
+			<div class="grid-debug">
+				g1
+			</div>
+		</div>
+	
+</div>
+
+
+	<div class="g1">
+		<div class="grid-debug">
+			g1
+		</div>
+	</div>
+
+	<div class="g1">
+		<div class="grid-debug">
+			g1
+		</div>
+	</div>
+
+	<div class="g1">
+		<div class="grid-debug">
+			g1
+		</div>
+	</div>
+
+	<div class="g1">
+		<div class="grid-debug">
+			g1
+		</div>
+	</div>
+
+	<div class="g1">
+		<div class="grid-debug">
+			g1
+		</div>
+	</div>
+
+	<div class="g1">
+		<div class="grid-debug">
+			g1
+		</div>
+	</div>
+
+	<div class="g1">
+		<div class="grid-debug">
+			g1
+		</div>
+	</div>
+
+	<div class="g1">
+		<div class="grid-debug">
+			g1
+		</div>
+	</div>
+
+
+<center class="grid-debug-heading">
+	Container
+</center>
+<div class="container">
+	<div class="row">
+		<div class="g2">
+			<div class="grid-debug">
+				g2
+			</div>
+		</div>
+		<div class="g2">
+			<div class="grid-debug">
+				g2
+			</div>
+		</div>
+		<div class="g2">
+			<div class="grid-debug">
+				g2
+			</div>
+		</div>
+		<div class="g2">
+			<div class="grid-debug">
+				g2
+			</div>
+		</div>
+
+	</div>
+	<div class="row">
+		<div class="g4">
+			<div class="grid-debug">
+				g4
+			</div>
+		</div>
+		<div class="g4">
+			<div class="grid-debug">
+				g4
+			</div>
+		</div>
+	</div>
+</div>
+<center class="grid-debug-heading">
+	Container row shortcut
+</center>
+<div class="container-row">
+	<div class="g4">
+		<div class="grid-debug">
+			g4
+		</div>
+	</div>
+	<div class="g4">
+		<div class="grid-debug">
+			g4
+		</div>
+	</div>
+</div>
+
+<center class="grid-debug-heading">
+	Container Row G12
+</center>
+<div class="container-row-g12">
+	<div class="grid-debug">
+		Container Row G12
+	</div>
+</div>
+
+
+<center class="grid-debug-heading">
+	No Container
+</center>
+<div class="">
+	<div class="g2">
+		<div class="grid-debug">
+			g2
+		</div>
+	</div>
+	<div class="g2">
+		<div class="grid-debug">
+			g2
+		</div>
+	</div>
+	<div class="g2">
+		<div class="grid-debug">
+			g2
+		</div>
+	</div>
+	<div class="g2">
+		<div class="grid-debug">
+			g2
+		</div>
+	</div>
+</div>
+
+<div>
+	<div class="g4">
+		<div class="grid-debug">
+			g4
+		</div>
+	</div>
+	<div class="g4">
+		<div class="grid-debug">
+			g4
+		</div>
+	</div>
+</div>
+
+<center class="grid-debug-heading">
+	Global Grid Nested Grid Test
+</center>
+
+<div class="container">
+	<div class="row">
+
+		<div class="g2">
+			<div class="grid-debug">
+				G2
+			</div>
+		</div>
+
+		<div class="g6">
+			<div class="grid-debug">
+				G6
+				<div class="row">
+					<div class="g2-in-g6">
+						<div class="grid-debug">
+							G2 in G6
+						</div>
+					</div>
+					<div class="g2-in-g6">
+						<div class="grid-debug">
+							G2 in G6
+						</div>
+					</div>
+					<div class="g2-in-g6">
+						<div class="grid-debug">
+							G2 in G6
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="g3-in-g6">
+						<div class="grid-debug">
+							G3 in G6
+						</div>
+					</div>
+					<div class="g3-in-g6">
+						<div class="grid-debug">
+							G3 in G6
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="g4">
+			<div class="grid-debug">
+				G4
+			</div>
+		</div>
+		<div class="g4">
+			<div class="grid-debug">
+				G4
+			</div>
+		</div>
+	</div>
+</div>
+	<div class="container-row grid-debug-bg">
+	
+		<div class="g1">
+			<div class="grid-debug">
+			&nbsp;
+			</div>
+		</div>
+	
+		<div class="g1">
+			<div class="grid-debug">
+			&nbsp;
+			</div>
+		</div>
+	
+		<div class="g1">
+			<div class="grid-debug">
+			&nbsp;
+			</div>
+		</div>
+	
+		<div class="g1">
+			<div class="grid-debug">
+			&nbsp;
+			</div>
+		</div>
+	
+		<div class="g1">
+			<div class="grid-debug">
+			&nbsp;
+			</div>
+		</div>
+	
+		<div class="g1">
+			<div class="grid-debug">
+			&nbsp;
+			</div>
+		</div>
+	
+		<div class="g1">
+			<div class="grid-debug">
+			&nbsp;
+			</div>
+		</div>
+	
+		<div class="g1">
+			<div class="grid-debug">
+			&nbsp;
+			</div>
+		</div>
+	
+</div>
+
+
+</div>
 	</body>
 </html>
 
