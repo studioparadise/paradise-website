@@ -21,7 +21,7 @@ modules:
   image: "/uploads/Kaelen_Pattern2.jpg"
 - type: image
   image: "/uploads/KAELEN_20161107_MLP_A.gif"
-- type: 
+- type: image
   image: "/uploads/homepageGifTransparent.gif"
 ---
 
