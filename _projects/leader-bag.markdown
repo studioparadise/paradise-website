@@ -39,5 +39,8 @@ modules:
   - url: 
     emphasis: 
     name: 
+- type: image
+  image: "/uploads/LEADER_WEB_20160711_MLP_A.jpg"
+  dimensions: 2400x3378
 ---
 
