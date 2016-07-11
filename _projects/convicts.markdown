@@ -36,22 +36,18 @@ modules:
   caption: 
 - type: image
   dimensions: 2343x3705
-  image: "/uploads/CONVICTS_LARGEWEB_grid.jpg"
+  image: "/uploads/Convicts_Web_20160711_MLP_A.jpg"
 - type: image
   dimensions: 2400x3795
-  image: "/uploads/CONVICTS_LARGEWEB.jpg"
+  image: "/uploads/CONVICTS_WEB_Article_20161107_MLP_A.jpg"
 - type: image
   image:
-  - "/uploads/Convicts_Web_Map.jpg"
+  - "/uploads/CONVICTS_WEB_Map_20161107_MLP_A.jpg"
   dimensions: 2400x1606
 - type: image
   image:
-  - "/uploads/Convicts_news.jpg"
+  - "/uploads/CONVICTS_WEB_News_20161107_MLP_A.jpg"
   dimensions: 2382x1606
-- type: image
-  dimensions: 2382x1606
-  image:
-  - "/uploads/Convicts_news2.jpg"
 - type: website-link
   credits:
   - url: 
