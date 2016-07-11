@@ -38,16 +38,16 @@ modules:
   dimensions: 2343x3705
   image: "/uploads/Convicts_Web_20160711_MLP_A.jpg"
 - type: image
-  dimensions: 2400x3795
+  dimensions: 2343x3705
   image: "/uploads/CONVICTS_WEB_Article_20161107_MLP_A.jpg"
 - type: image
   image:
   - "/uploads/CONVICTS_WEB_Map_20161107_MLP_A.jpg"
-  dimensions: 2400x1606
+  dimensions: 2382x1606
 - type: image
   image:
   - "/uploads/CONVICTS_WEB_News_20161107_MLP_A.jpg"
-  dimensions: 2382x1606
+  dimensions: 2400x1618
 - type: website-link
   credits:
   - url: 
