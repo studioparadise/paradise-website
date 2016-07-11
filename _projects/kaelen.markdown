@@ -19,5 +19,7 @@ modules:
   image: "/uploads/Kaelen_3.jpg"
 - type: image
   image: "/uploads/Kaelen_Pattern2.jpg"
+- type: 
+  image: "/uploads/KAELEN_20161107_MLP_A.gif"
 ---
 
