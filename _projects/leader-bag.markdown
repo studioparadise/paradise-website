@@ -15,9 +15,9 @@ modules:
   dimensions: 2400x1664
 - type: image
   url: 
-  image: "/uploads/Leader_2.jpg"
+  image: "/uploads/Leader_2_20160715-e52a80.jpg"
 - type: image
-  image: "/uploads/Leader_1.jpg"
+  image: "/uploads/Leader_3_20160715-453694.jpg"
   alt: 
   caption: 
 - type: images_2up
@@ -25,20 +25,20 @@ modules:
   - image: "/uploads/Leader_3.jpg"
   - image: "/uploads/Leader_4.jpg"
 - type: image
-  image: "/uploads/Leader_5.jpg"
+  image: "/uploads/Leader_1_20160715.jpg"
 - type: image
-  image: "/uploads/Leader_6.jpg"
+  image: "/uploads/Leader_7_20160715.jpg"
 - type: image
-  image: "/uploads/Leader_7.jpg"
+  image: "/uploads/Leader_6_20160715.jpg"
 - type: image
-  image: "/uploads/Leader_8.jpg"
+  image: "/uploads/Leader_5_20160715.jpg"
 - type: image
-  image: "/uploads/Leader_9.jpg"
+  image: "/uploads/Leader_4_20160715.jpg"
 - type: credits
   credits:
   - url: 
-    emphasis: 
-    name: 
+    emphasis: Branding
+    name: Lotta Neiman
 - type: image
   image: "/uploads/LEADER_WEB_20160711_MLP_A.jpg"
   dimensions: 2400x3378
