@@ -8,20 +8,32 @@ modules:
 - type: text
   excerpt: Capturing the details.
 - type: image
-  image: "/uploads/Kaelen_2.jpg"
+  image: "/uploads/Kaelen_4_20160715.jpg"
   dimensions: 2400x2819
 - type: image
   image: "/uploads/Kaelen_4.jpg"
   dimensions: 2400x1600
 - type: image
+  image: "/uploads/Kaelen_Pattern2.jpg"
+- type: image
+  image: "/uploads/Kaelen_6_20160715.jpg"
+- type: image
   image: "/uploads/Kaelen_Pattern1.jpg"
 - type: image
-  image: "/uploads/Kaelen_3.jpg"
+  image: "/uploads/Kaelen_8_20160715.jpg"
 - type: image
-  image: "/uploads/Kaelen_Pattern2.jpg"
+  image: "/uploads/Kaelen_9_20160715.jpg"
+- type: image
+  image: "/uploads/Kaelen_2_20160715.jpg"
+- type: image
+  image: "/uploads/Kaelen_3_20160715.jpg"
+- type: image
+  image: "/uploads/Kaelen_7_20160715.jpg"
+- type: image
+  image: "/uploads/homepageGifTransparent.gif"
 - type: image
   image: "/uploads/KAELEN_20161107_MLP_A.gif"
 - type: image
-  image: "/uploads/homepageGifTransparent.gif"
+  image: "/uploads/Kaelen_5_20160715.jpg"
 ---
 
