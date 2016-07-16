@@ -18,6 +18,8 @@ modules:
 - type: images-2up
   credits:
   - image: "/uploads/Mikoh_2_20160715.jpg"
+    caption: test123
   - image: "/uploads/Mikoh_1_20160715.jpg"
+    caption: 123
 ---
 
