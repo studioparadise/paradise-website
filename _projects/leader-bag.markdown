@@ -35,13 +35,13 @@ modules:
   image: "/uploads/Leader_5_20160715.jpg"
 - type: image
   image: "/uploads/Leader_4_20160715.jpg"
-- type: credits
-  credits:
-  - url: 
-    emphasis: Branding
-    name: Lotta Neiman
 - type: image
   image: "/uploads/LEADER_WEB_20160711_MLP_A.jpg"
   dimensions: 2400x3378
+- type: credits
+  credits:
+  - url: http://www.lottanieminen.com/
+    emphasis: Branding
+    name: Lotta nieminen
 ---
 
