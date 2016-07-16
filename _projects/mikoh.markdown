@@ -10,33 +10,14 @@ modules:
   excerpt: |
     An adventurous new category for the endless summer wonders
   body: 
-- type: image
-  image: "/uploads/Mikoh_20160616_MLP_A-03.jpg"
-  alt: 
-  caption: 
-- type: image
-  images:
-  - image: 
-    alt: 
-    caption: 
-  image: "/uploads/Mikoh_20160616_MLP_A-04.jpg"
-  dimensions: 2400x1755
-- type: image
-  url: 
-  image: "/uploads/Mikoh_20160616_MLP_A-05.jpg"
-  dimensions: 2400x1552
-- type: image
-  image: "/uploads/Mikoh_20160616_MLP_A-07.jpg"
-- type: image
-  image: "/uploads/Mikoh_20160616_MLP_A-08.jpg"
-- type: image
-  image: "/uploads/Mikoh_20160616_MLP_A-09.jpg"
-- type: image
-  image: "/uploads/Mikoh_20160616_MLP_A-10.jpg"
 - type: credits
   credits:
   - url: 
     emphasis: 
     name: 
+- type: images-2up
+  credits:
+  - image: "/uploads/Mikoh_2_20160715.jpg"
+  - image: "/uploads/Mikoh_1_20160715.jpg"
 ---
 
