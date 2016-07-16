@@ -10,29 +10,27 @@ modules:
   excerpt: Bringing good design to modern families.
   body: 
 - type: image
+  url: 
+  image: "/uploads/Leader_2_20160715-e52a80.jpg"
+- type: image
   image: "/uploads/Leader_Logo-479686.gif"
   caption: Created by Lotta Nieminen
   dimensions: 2400x1664
 - type: image
-  url: 
-  image: "/uploads/Leader_2_20160715-e52a80.jpg"
-- type: image
-  image: "/uploads/Leader_3_20160715-453694.jpg"
-  alt: 
-  caption: 
+  image: "/uploads/Leader_7_20160715.jpg"
 - type: images_2up
   images:
   - image: "/uploads/Leader_8_20160715.jpg"
     caption: 123
   - image: "/uploads/Leader_4.jpg"
 - type: image
-  image: "/uploads/Leader_1_20160715.jpg"
-- type: image
-  image: "/uploads/Leader_7_20160715.jpg"
-- type: image
   image: "/uploads/Leader_6_20160715.jpg"
 - type: image
-  image: "/uploads/Leader_5_20160715.jpg"
+  image: "/uploads/Leader_1_20160715.jpg"
+- type: image
+  image: "/uploads/Leader_3_20160715-453694.jpg"
+  alt: 
+  caption: 
 - type: image
   image: "/uploads/Leader_4_20160715.jpg"
 - type: image
