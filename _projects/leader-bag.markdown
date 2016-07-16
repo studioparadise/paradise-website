@@ -22,7 +22,8 @@ modules:
   caption: 
 - type: images_2up
   images:
-  - image: "/uploads/Leader_3.jpg"
+  - image: "/uploads/Leader_8_20160715.jpg"
+    caption: 123
   - image: "/uploads/Leader_4.jpg"
 - type: image
   image: "/uploads/Leader_1_20160715.jpg"
