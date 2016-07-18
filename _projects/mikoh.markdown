@@ -10,16 +10,21 @@ modules:
   excerpt: |
     An adventurous new category for the endless summer wonders
   body: 
-- type: credits
-  credits:
-  - url: 
-    emphasis: 
-    name: 
+- type: image
+  image: "/uploads/Mikoh_9_20160715.jpg"
+- type: image
+  image: "/uploads/Mikoh_4_20160716.jpg"
+- type: image
+  image: "/uploads/Mikoh_3_20160716.jpg"
+- type: image
+  image: "/uploads/Mikoh_6_20160715.jpg"
 - type: images-2up
-  credits:
+  images:
   - image: "/uploads/Mikoh_2_20160715.jpg"
     caption: test123
   - image: "/uploads/Mikoh_1_20160715.jpg"
     caption: 123
+- type: image
+  image: "/uploads/Mikoh_5_20160715.jpg"
 ---
 
