@@ -49,7 +49,7 @@ modules:
   dimensions: 2400x1600
 - type: images-2up
   images:
-  - image: "/uploads/Prize_2up2B_20160718.jpg"
+  - image: "/uploads/Prize_2up1b_20160718.jpg"
     dimensions: 1200x1471
   - image: "/uploads/Prize_2up2B_20160718.jpg"
     dimensions: 1200x1471
