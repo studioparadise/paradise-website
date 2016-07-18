@@ -38,7 +38,9 @@ modules:
 - type: images-2up
   images:
   - image: "/uploads/Prize_2up1_20160718.jpg"
+    dimensions: 1200x2000
   - image: "/uploads/Prize_2up2_20160718.jpg"
+    dimensions: 1200x2000
 - type: image
   image: "/uploads/MonsterLookbook1.jpg"
   dimensions: 2400x1745
