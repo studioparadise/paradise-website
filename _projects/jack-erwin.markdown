@@ -36,7 +36,7 @@ modules:
   image: "/uploads/JE_1_20160716.jpg"
   dimensions: 
 - type: image
-  image: "/uploads/JE_3_20160718.jpg"
+  image: "/uploads/JE_3_20160718-cbf066.jpg"
 - type: images-2up
   images:
   - image: "/uploads/7JE_AD_01.jpg"
