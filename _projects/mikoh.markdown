@@ -19,13 +19,14 @@ modules:
   - image: "/uploads/Mikoh_1_20160715.jpg"
     dimensions: 1200x1049
 - type: image
-  image: "/uploads/Mikoh_4_20160716.jpg"
+  image: "/uploads/Mikoh_5_20160715.jpg"
 - type: image
-  image: "/uploads/Mikoh_6_20160715.jpg"
+  image: "/uploads/Mikoh_4_20160716.jpg"
+  dimensions: 2400x1702
 - type: image
   image: "/uploads/Mikoh_3_20160716.jpg"
   dimensions: 2400x1415
 - type: image
-  image: "/uploads/Mikoh_5_20160715.jpg"
+  image: "/uploads/Mikoh_6_20160715.jpg"
 ---
 
