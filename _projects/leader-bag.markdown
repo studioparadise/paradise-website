@@ -18,7 +18,7 @@ modules:
   dimensions: 2400x1664
 - type: image
   image: "/uploads/Leader_7_20160715.jpg"
-- type: images_2up
+- type: images-2up
   images:
   - image: "/uploads/Leader_8_20160715.jpg"
     caption: 123
