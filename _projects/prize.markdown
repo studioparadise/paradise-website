@@ -47,12 +47,12 @@ modules:
 - type: image
   image: "/uploads/Jean_Pins.jpg"
   dimensions: 2400x1600
-- type: image
-  image: "/uploads/Prize11602_grande.jpg"
-  dimensions: 600x488
-- type: image
-  image: "/uploads/Prize11302_grande.jpg"
-  dimensions: 600x488
+- type: images-2up
+  image:
+  - image: "/uploads/Prize_2up2B_20160718.jpg"
+    dimensions: 1200x1471
+  - image: "/uploads/Prize_2up2B_20160718.jpg"
+    dimensions: 1200x1471
 - type: image
   image: "/uploads/TimLahan_Pins.jpg"
 - type: image
