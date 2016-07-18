@@ -26,19 +26,15 @@ modules:
     alt: 
     caption: 
   image: "/uploads/3JE_Logo2.jpg"
-  alt: 
-  caption: 
 - type: image
   image: "/uploads/2JE_Logo.jpg"
-  alt: 
-  caption: 
 - type: image
   url: 
   image: "/uploads/JE_2_20160716.jpg"
-  dimensions: 2400x1799
+  dimensions: 
 - type: image
   image: "/uploads/JE_1_20160716.jpg"
-  dimensions: 2400x1600
+  dimensions: 
 - type: image
   image: "/uploads/JE_3_20160718.jpg"
 - type: images-2up
@@ -51,6 +47,7 @@ modules:
     caption: 
 - type: image
   image: "/uploads/JE_2_20160716-502b71.jpg"
+  dimensions: 2400x1556
 - type: image
   image: "/uploads/8JE_AD_03.jpg"
   dimensions: 2400x1740
