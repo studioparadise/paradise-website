@@ -7,8 +7,7 @@ modules:
   image: "/uploads/Je_HeroCrop.jpg"
   alt: 
 - type: text
-  excerpt: |
-    Bringing the soul back to the sole- telling the story of the contemporary cobbler.
+  excerpt: Telling the story of the contemporary cobbler.
   body: "Jack Erwin, founded in 2013, is a direct-to-consumer mens shoe brands that
     provides seasonal luxury shoes at an affordable price. After two years of quick
     growth and success, we were engaged to hone Jack Erwin’s brand story, which meant
