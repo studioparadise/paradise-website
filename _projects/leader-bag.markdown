@@ -24,7 +24,7 @@ modules:
   images:
   - image: "/uploads/Leader_8_20160715.jpg"
     caption: 
-  - image: "/uploads/Leader_9_20160715.jpg"
+  - image: "/uploads/Leader_9_20160715-12e197.jpg"
 - type: image
   image: "/uploads/Leader_6_20160715.jpg"
 - type: image
