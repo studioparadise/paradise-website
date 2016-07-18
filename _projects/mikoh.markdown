@@ -15,9 +15,9 @@ modules:
 - type: images-2up
   images:
   - image: "/uploads/Mikoh_2_20160715.jpg"
-    caption: test123
+    dimensions: 1200x1049
   - image: "/uploads/Mikoh_1_20160715.jpg"
-    caption: 123
+    dimensions: 1200x1049
 - type: image
   image: "/uploads/Mikoh_4_20160716.jpg"
 - type: image
