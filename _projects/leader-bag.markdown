@@ -17,14 +17,14 @@ modules:
   caption: Created by Lotta Nieminen
   dimensions: 2400x1664
 - type: image
-  image: "/uploads/Leader_7_20160715.jpg"
+  image: "/uploads/Leader_10_20160718.jpg"
 - type: image
   image: "/uploads/Leader_4_20160715_C.jpg"
 - type: images-2up
   images:
   - image: "/uploads/Leader_8_20160715.jpg"
     caption: 
-  - image: "/uploads/Leader_4.jpg"
+  - image: "/uploads/Leader_9_20160715.jpg"
 - type: image
   image: "/uploads/Leader_6_20160715.jpg"
 - type: image
