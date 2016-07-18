@@ -6,7 +6,8 @@ modules:
 - type: hero
   image: "/uploads/Kaelen_HeroCrop.jpg"
 - type: text
-  excerpt: Capturing the details.
+  excerpt: Capturing in a print the essence of a fashion designer's minimalist perspective
+    with a focus on subtle details.
 - type: image
   image: "/uploads/Kaelen_4_20160715.jpg"
   dimensions: 2400x2819
