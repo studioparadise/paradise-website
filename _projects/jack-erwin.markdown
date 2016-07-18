@@ -63,7 +63,11 @@ modules:
 - type: credits
   credits:
   - url: 
-    emphasis: 
-    name: 
+    emphasis: 'Photographer '
+    name: Bjorn Looss
+  - url: 
+    emphasis: Photographer
+    name: Joss Mckinley
+  Key: 
 ---
 
