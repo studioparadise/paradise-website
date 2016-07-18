@@ -34,13 +34,13 @@ modules:
   caption: 
 - type: image
   url: 
-  image: "/uploads/4Stationery1.jpg"
+  image: "/uploads/JE_2_20160716.jpg"
   dimensions: 2400x1799
 - type: image
   image: "/uploads/JE_1_20160716.jpg"
   dimensions: 2400x1600
 - type: image
-  image: "/uploads/6Stationery3.jpg"
+  image: "/uploads/JE_3_20160718.jpg"
 - type: images-2up
   images:
   - image: "/uploads/7JE_AD_01.jpg"
@@ -49,6 +49,8 @@ modules:
   - image: "/uploads/7JE_AD_02.jpg"
     alt: 
     caption: 
+- type: image
+  image: "/uploads/JE_2_20160716-502b71.jpg"
 - type: image
   image: "/uploads/8JE_AD_03.jpg"
   dimensions: 2400x1740
