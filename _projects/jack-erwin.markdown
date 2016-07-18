@@ -30,7 +30,7 @@ modules:
   image: "/uploads/2JE_Logo.jpg"
 - type: image
   url: 
-  image: "/uploads/JE_2_20160716.jpg"
+  image: "/uploads/JE_2_20160718.jpg"
   dimensions: 
 - type: image
   image: "/uploads/JE_1_20160716.jpg"
