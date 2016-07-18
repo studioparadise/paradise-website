@@ -19,7 +19,8 @@ modules:
     of colonial Australia and paired it with flexible, modular and bold visual vernacular.
     We created a logo and visual system that embodied and could represent the rebellion,
     camaraderie of those pioneering new creative territory and spicing the world with
-    mischief. "
+    mischief. \n\n* *Brand Identity*\n* *Visual language*\n* *Website Design*\n* *Content
+    Strategy*\n* *Website Development*\n"
   text: 
   variation: centered
   full-project-title: Convicts
