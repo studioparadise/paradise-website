@@ -60,7 +60,7 @@
 			</div>
 			<div class="module-text__excerpt">
 				{{ module.excerpt | default: "" }}
-			
+				<!--
 				<div class="module-text__view-full" js-index-view-full-project>
 					<span class="hide-on-full-project">
 						View Full Project
@@ -69,6 +69,7 @@
 						AH! Take me Back!
 					</span>
 				</div>
+				-->
 			</div>
 			<div class="module-text__full-project-spacer show-on-full-project">&nbsp;</div>
 			{% if module.body %}
@@ -91,8 +92,13 @@
 		<div class="module-credits__line-container">
 			<div class="module-credits__line"></div>
 		</div>
-		<div class="module-credits__credits" js-controller="moduleCredits">
-			<div style="display: none;" js-module-credits-data>
+		<div class="module-credits__credits">
+			<div class="module-credits__column">
+				<div class="module-credits__title">
+					Project Credits
+				</div>
+			</div>
+			<div class="module-credits__content">
 				{% for credit in module.credits %}
 					<a class="module-credits__credit" js-module-credits-item target="_blank" {% if credit.url %}href="{{ credit.url }}"{% endif %}>
 						<span class="module-credits__emphasis">
@@ -102,17 +108,14 @@
 					</a>
 				{% endfor %}
 			</div>
-			<div class="module-credits__column">
-				<div class="module-credits__title">
-					Project Credits
-				</div>
-			</div>
+			<!--
 			<div class="module-credits__column" js-module-credit-column>			
 			</div>
 			<div class="module-credits__column" js-module-credit-column>
 			</div>
 			<div class="module-credits__column show-on-full-project" js-module-credit-column>
 			</div>
+			-->
 		</div>
 		<div class="module-credits__line-container">
 			<div class="module-credits__line"></div>

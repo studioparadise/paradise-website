@@ -32,21 +32,28 @@
 				&nbsp;
 			</div>
 			<div class="footer__email">
-				<div class="footer-signup">
+				<form class="footer-signup" js-component="mailchimp" action="//studioparadise.us9.list-manage.com/subscribe/post?u=3086fe329023e91f1b8ea55b1&amp;id=994fa81707">
 					<div class="footer-signup__input-wrapper">
 						<input type="text" class="footer-signup__input" placeholder="Newsletter Sign Up"/>
 						<div class="footer-signup__submit">
 							{% include svg.html type="arrow--right" %}
 						</div>
 					</div>
-				</div>
+					<div js-newsletter-error></div>
+				</form>
 				<div class="footer-social">
 					<div class="footer-social__item">
-						F
+						<a href="http://instagram.com/{{ site.instagram }}" target="_blank">
+							{% include svg.html type='instagram' %}
+						</a>
 					</div><div class="footer-social__item">
-						IN
+						<a href="http://linkedin.com/company/{{ site.linkedin }}" target="_blank">
+							{% include svg.html type='linkedin' %}
+						</a>
 					</div><div class="footer-social__item">
-						T
+						<a href="http://twitter.com/{{ site.twitter }}" target="_blank">
+							{% include svg.html type='twitter' %}
+						</a>
 					</div>
 				</div>
 			</div>

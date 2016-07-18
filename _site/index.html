@@ -63,12 +63,7 @@
 		<!--[if lt IE 8]>
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
-		<div class="mobile-navbar-open" js-mobile-navbar-open>
-	<div class="mobile-navbar-open__line"></div>
-	<div class="mobile-navbar-open__line"></div>
-	<div class="mobile-navbar-open__line"></div>
-</div>
-
+		
 <div class="navbar" js-controller="navbar2" js-args="{ mobile: false}">
 	<div class="navbar__logo" js-navbar-logo>
 		<a href="/">
@@ -77,52 +72,76 @@
 
 		</a>
 	</div>
+	<div class="mobile-navbar-open" js-mobile-navbar-open>
+		<div class="mobile-navbar-open__line"></div>
+		<div class="mobile-navbar-open__line"></div>
+		<div class="mobile-navbar-open__line"></div>
+	</div>
 	<div class="navbar__items" js-wrapper>
 		<div class="navbar__item" js-item-with-dropdown>
-			<div class="navbar__label" js-item-label js-args="{preventAlign: true, overlay: 'projects'}">Work</div>
+			<div class="navbar__label" js-item-label js-args="{
+				preventAlign: true,
+				overlay: 'projects'
+			}">
+				Work
+			</div>
 			<div class="navbar__dropdown" js-item-dropdown>
 				
 				
-					<div class="navbar__item">
-						<div class="navbar__label" js-item-label js-navbar-project="jack-erwin" js-args="{overlay: 'projects'}" js-scrollspy-nav="jack-erwin">
-							Jack Erwin
-						</div>
+					<div class="navbar__item ">
+						
+							<div class="navbar__label" js-item-label js-navbar-project="jack-erwin" js-args="{overlay: 'projects'}" js-scrollspy-nav="jack-erwin">
+								Jack Erwin
+							</div>
+						
 					</div>
 				
-					<div class="navbar__item">
-						<div class="navbar__label" js-item-label js-navbar-project="convicts" js-args="{overlay: 'projects'}" js-scrollspy-nav="convicts">
-							Convicts
-						</div>
+					<div class="navbar__item ">
+						
+							<div class="navbar__label" js-item-label js-navbar-project="convicts" js-args="{overlay: 'projects'}" js-scrollspy-nav="convicts">
+								Convicts
+							</div>
+						
 					</div>
 				
-					<div class="navbar__item">
-						<div class="navbar__label" js-item-label js-navbar-project="leader-bag" js-args="{overlay: 'projects'}" js-scrollspy-nav="leader-bag">
-							Leader Bag
-						</div>
+					<div class="navbar__item ">
+						
+							<div class="navbar__label" js-item-label js-navbar-project="leader-bag" js-args="{overlay: 'projects'}" js-scrollspy-nav="leader-bag">
+								Leader Bag
+							</div>
+						
 					</div>
 				
-					<div class="navbar__item">
-						<div class="navbar__label" js-item-label js-navbar-project="mikoh" js-args="{overlay: 'projects'}" js-scrollspy-nav="mikoh">
-							Mikoh
-						</div>
+					<div class="navbar__item ">
+						
+							<div class="navbar__label" js-item-label js-navbar-project="mikoh" js-args="{overlay: 'projects'}" js-scrollspy-nav="mikoh">
+								Mikoh
+							</div>
+						
 					</div>
 				
-					<div class="navbar__item">
-						<div class="navbar__label" js-item-label js-navbar-project="kaelen" js-args="{overlay: 'projects'}" js-scrollspy-nav="kaelen">
-							Kaelen
-						</div>
+					<div class="navbar__item ">
+						
+							<div class="navbar__label" js-item-label js-navbar-project="kaelen" js-args="{overlay: 'projects'}" js-scrollspy-nav="kaelen">
+								Kaelen
+							</div>
+						
 					</div>
 				
-					<div class="navbar__item">
-						<div class="navbar__label" js-item-label js-navbar-project="saturdays" js-args="{overlay: 'projects'}" js-scrollspy-nav="saturdays">
-							Saturdays
-						</div>
+					<div class="navbar__item ">
+						
+							<div class="navbar__label" js-item-label js-navbar-project="prize" js-args="{overlay: 'projects'}" js-scrollspy-nav="prize">
+								Prize
+							</div>
+						
 					</div>
 				
-					<div class="navbar__item">
-						<div class="navbar__label" js-item-label js-navbar-project="prize" js-args="{overlay: 'projects'}" js-scrollspy-nav="prize">
-							Prize
-						</div>
+					<div class="navbar__item ">
+						
+							<div class="navbar__label" js-item-label js-navbar-project="saturdays" js-args="{overlay: 'projects'}" js-scrollspy-nav="saturdays">
+								Saturdays
+							</div>
+						
 					</div>
 				
 			</div>
@@ -131,33 +150,54 @@
 			<div class="navbar__label" js-item-label js-args="{preventAlign: true, overlay: 'studio'}" js-navbar-studio>Studio</div>
 			<div class="navbar__dropdown" js-item-dropdown>
 				<div class="navbar__item" js-item-with-dropdown>
-					<div class="navbar__label" js-item-label js-args="{overlay: 'studio'}" js-scrollspy-nav="manifesto">Manifesto</div>
-				</div>
-				<div class="navbar__item" js-item-with-dropdown>
-					<div class="navbar__label" js-item-label js-args="{overlay: 'studio'}" js-scrollspy-nav="team">Team</div>
-				</div>
-				<div class="navbar__item" js-item-with-dropdown>
-					<div class="navbar__label" js-item-label js-args="{overlay: 'studio'}" js-scrollspy-nav="services">Services</div>
-				</div>
-				<div class="navbar__item" js-item-with-dropdown>
-					<div class="navbar__label" js-item-label js-args="{overlay: 'studio'}" js-scrollspy-nav="clients">Clients</div>
-				</div>
-				<!-- <div class="navbar__dropdown"  js-item-dropdown>
-					<div class="navbar__item">
-						<div class="navbar__label" js-item-label>Jack Erwin</div>
-					</div>
-					<div class="navbar__item">
-						<div class="navbar__label" js-item-label>Some Project</div>
-					</div>
-					<div class="navbar__item">
-						<div class="navbar__label" js-item-label>Leader Bag</div>
+					<div class="navbar__label" js-item-label js-args="{
+						overlay: 'studio',
+						scrollAlignToNav: true,
+						mobileURL: '/mobile_studio.html#manifesto'
+					}" js-scrollspy-nav="manifesto">
+						Manifesto
 					</div>
 				</div>
-				-->
+				<div class="navbar__item" js-item-with-dropdown>
+					<div class="navbar__label" js-item-label js-args="{
+						overlay: 'studio',
+						scrollAlignToNav: true,
+						mobileURL: '/mobile_studio.html#different'
+					}" js-scrollspy-nav="different">
+						Different
+					</div>
+				</div>
+				<div class="navbar__item" js-item-with-dropdown>
+					<div class="navbar__label" js-item-label js-args="{
+						overlay: 'studio',
+						scrollAlignToNav: true,
+						mobileURL: '/mobile_studio.html#team'
+					}" js-scrollspy-nav="team">
+						Team
+					</div>
+				</div>
+				<div class="navbar__item" js-item-with-dropdown>
+					<div class="navbar__label" js-item-label js-args="{
+						overlay: 'studio',
+						scrollAlignToNav: true,
+						mobileURL: '/mobile_studio.html#services'
+					}" js-scrollspy-nav="services">
+						Services
+					</div>
+				</div>
+				<div class="navbar__item" js-item-with-dropdown>
+					<div class="navbar__label" js-item-label js-args="{
+						overlay: 'studio',
+						scrollAlignToNav: true,
+						mobileURL: '/mobile_studio.html#clients'
+					}" js-scrollspy-nav="clients">
+						Clients
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="navbar__item" js-item-with-dropdown>
-			<div class="navbar__label" js-item-label js-item-label js-args="{preventAlign: true, overlay: 'journal'}">Journal</div>
+			<div class="navbar__label" js-item-label js-item-label js-args="{preventAlign: true, overlay: 'journal', mobileURL: '/mobile_journal.html'}" style="margin-left: -.27em;">Journal</div>
 			<div class="navbar__dropdown" js-item-dropdown>
 				
 				
@@ -165,7 +205,25 @@
 				    
 				    
 						<div class="navbar__item">
-							<div class="navbar__label" js-item-label js-args="{overlay: 'journal'}" js-scrollspy-nav="2016-June">
+							<div class="navbar__label" js-item-label js-args="{overlay: 'journal', mobileURL: '/mobile_journal.html#2016-07-13 16:41:00 +0000" js-scrollspy-nav="2016-July">
+								July
+							</div>
+						</div>
+					
+				
+				    
+				    
+				    
+				
+				    
+				    
+				    
+				
+				    
+				    
+				    
+						<div class="navbar__item">
+							<div class="navbar__label" js-item-label js-args="{overlay: 'journal', mobileURL: '/mobile_journal.html#2016-06-27 21:36:00 +0000" js-scrollspy-nav="2016-June">
 								June
 							</div>
 						</div>
@@ -179,7 +237,7 @@
 				    
 				    
 						<div class="navbar__item">
-							<div class="navbar__label" js-item-label js-args="{overlay: 'journal'}" js-scrollspy-nav="2016-April">
+							<div class="navbar__label" js-item-label js-args="{overlay: 'journal', mobileURL: '/mobile_journal.html#2016-04-01 01:39:00 +0000" js-scrollspy-nav="2016-April">
 								April
 							</div>
 						</div>
@@ -187,6 +245,12 @@
 				
 			</div>
 		</div>
+
+	</div>
+	<div class="mobile-navbar__footer">
+		<a class="mobile-navbar__email-address" href="mailto:hello@studioparadise.com">
+			hello@studioparadise.com
+		</a>
 	</div>
 </div>
 		<!-- fulltitle: This overrides the default page title, which is " | Paradise" -->
@@ -196,6 +260,34 @@
 		<div class="row index-slider">
 			<div class="content-navbar-grid-spacer">&nbsp;</div>
 			<div class="index-swiper">
+				<div class="studio__locations studio__locations--index">
+					<div class="studio__location" js-controller="studioLocation" js-args="{location: 'nyc'}">
+						<div class="studio__city">
+							New York, USA
+						</div>
+						<div class="studio__day-and-time">
+							<div class="studio__day" js-date>
+								Thursday April 28
+							</div>
+							<div class="studio__time" js-time>
+								12:00pm
+							</div>
+						</div>
+					</div>
+					<div class="studio__location" js-controller="studioLocation" js-args="{location: 'sydney'}">
+						<div class="studio__city">
+							Sydney, Australia
+						</div>
+						<div class="studio__day-and-time">
+							<div class="studio__day" js-date>
+								Fri April 29
+							</div>
+							<div class="studio__time" js-time>
+								1:59am
+							</div>
+						</div>
+					</div>
+				</div>
 				<div class="swiper-container" js-component="swiper" js-args="{
 					autoplay: 3000,
 					effect: 'fade',
@@ -205,6 +297,10 @@
 					speed: 500
 				}">
 					<div class="swiper-wrapper">
+						
+							<div class="swiper-slide" style="background-image: url();" js-index-slider-project-link="jack-erwin"></div>
+						
+
 						<!-- <div class="swiper-slide" style="background-image: url(/static/img/swiper-1.jpg);"></div> -->
 						<div class="swiper-slide" style="background-image: url(/static/img/1.jpg);"></div>
 						<div class="swiper-slide" style="background-image: url(/static/img/2.jpg);"></div>
@@ -284,7 +380,7 @@
 			</div>
 			<div class="module-text__excerpt">
 				Telling the story of the contemporary cobbler.
-			
+				<!--
 				<div class="module-text__view-full" js-index-view-full-project>
 					<span class="hide-on-full-project">
 						View Full Project
@@ -293,6 +389,7 @@
 						AH! Take me Back!
 					</span>
 				</div>
+				-->
 			</div>
 			<div class="module-text__full-project-spacer show-on-full-project">&nbsp;</div>
 			
@@ -319,7 +416,7 @@
 								<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "images"=>[{"image"=>nil, "alt"=>nil, "caption"=>nil}], "image"=>"/uploads/3JE_Logo2.jpg", "alt"=>nil, "caption"=>nil}</li>
+	<li>Module data {"type"=>"image", "images"=>[{"image"=>nil, "alt"=>nil, "caption"=>nil}], "image"=>"/uploads/3JE_Logo2.jpg"}</li>
 </ul>
 -->
 
@@ -339,7 +436,7 @@
 								<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/2JE_Logo.jpg", "alt"=>nil, "caption"=>nil}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/2JE_Logo.jpg"}</li>
 </ul>
 -->
 
@@ -359,47 +456,7 @@
 								<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "url"=>nil, "image"=>"/uploads/4Stationery1.jpg", "dimensions"=>"2400x1799"}</li>
-</ul>
--->
-
-
-<div class="debug-element">module-image variation: </div>
-
-<div class="module module-image module-image--">
-	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1799">
-			<img class="module-image__img lazyload " data-src="/uploads/4Stationery1.jpg" alt="" />
-		</div>
-		
-	
-</div>
-
-							
-								<!--
-<ul>
-	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "credits"=>[{"url"=>nil, "emphasis"=>nil, "name"=>nil}], "image"=>"/uploads/5Stationery2.jpg", "dimensions"=>"2400x1599"}</li>
-</ul>
--->
-
-
-<div class="debug-element">module-image variation: </div>
-
-<div class="module module-image module-image--">
-	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1599">
-			<img class="module-image__img lazyload " data-src="/uploads/5Stationery2.jpg" alt="" />
-		</div>
-		
-	
-</div>
-
-							
-								<!--
-<ul>
-	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/6Stationery3.jpg"}</li>
+	<li>Module data {"type"=>"image", "url"=>nil, "image"=>"/uploads/JE_2_20160718.jpg", "dimensions"=>nil}</li>
 </ul>
 -->
 
@@ -409,7 +466,47 @@
 <div class="module module-image module-image--">
 	
 		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/6Stationery3.jpg" alt="" />
+			<img class="module-image__img lazyload " data-src="/uploads/JE_2_20160718.jpg" alt="" />
+		</div>
+		
+	
+</div>
+
+							
+								<!--
+<ul>
+	<li>Module type:image</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/JE_1_20160716.jpg", "dimensions"=>nil}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-image variation: </div>
+
+<div class="module module-image module-image--">
+	
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
+			<img class="module-image__img lazyload " data-src="/uploads/JE_1_20160716.jpg" alt="" />
+		</div>
+		
+	
+</div>
+
+							
+								<!--
+<ul>
+	<li>Module type:image</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/JE_3_20160718-cbf066.jpg"}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-image variation: </div>
+
+<div class="module module-image module-image--">
+	
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
+			<img class="module-image__img lazyload " data-src="/uploads/JE_3_20160718-cbf066.jpg" alt="" />
 		</div>
 		
 	
@@ -419,7 +516,7 @@
 								<!--
 <ul>
 	<li>Module type:images-2up</li>
-	<li>Module data {"type"=>"images-2up", "images"=>[{"image"=>"/uploads/7JE_AD_01.jpg", "alt"=>nil, "caption"=>"test123"}, {"image"=>"/uploads/7JE_AD_02.jpg", "alt"=>nil, "caption"=>"test123"}]}</li>
+	<li>Module data {"type"=>"images-2up", "images"=>[{"image"=>"/uploads/7JE_AD_01.jpg", "alt"=>nil, "caption"=>nil}, {"image"=>"/uploads/7JE_AD_02.jpg", "alt"=>nil, "caption"=>nil}]}</li>
 </ul>
 -->
 
@@ -434,10 +531,6 @@
 					<img class="module-images-2up__img lazyload" data-src="/uploads/7JE_AD_01.jpg" alt=""/>
 				</div>
 				
-					<div class="module__image-caption">
-						test123
-					</div>
-				
 			</div>
 		
 			<div class="module-images-2up__image">
@@ -445,11 +538,27 @@
 					<img class="module-images-2up__img lazyload" data-src="/uploads/7JE_AD_02.jpg" alt=""/>
 				</div>
 				
-					<div class="module__image-caption">
-						test123
-					</div>
-				
 			</div>
+		
+	
+</div>
+
+							
+								<!--
+<ul>
+	<li>Module type:image</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/JE_2_20160716-502b71.jpg", "dimensions"=>"2400x1556"}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-image variation: </div>
+
+<div class="module module-image module-image--">
+	
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1556">
+			<img class="module-image__img lazyload " data-src="/uploads/JE_2_20160716-502b71.jpg" alt="" />
+		</div>
 		
 	
 </div>
@@ -478,7 +587,7 @@
 								<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/9JE_WEB_01-b44f25.jpg", "dimensions"=>"2400x3795"}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/JEWEB_20160711_MLP_A.jpg", "dimensions"=>"2400x3795"}</li>
 </ul>
 -->
 
@@ -488,7 +597,7 @@
 <div class="module module-image module-image--">
 	
 		<div class="module-image__ratio" data-responsive-image-dimensions="2400x3795">
-			<img class="module-image__img lazyload " data-src="/uploads/9JE_WEB_01-b44f25.jpg" alt="" />
+			<img class="module-image__img lazyload " data-src="/uploads/JEWEB_20160711_MLP_A.jpg" alt="" />
 		</div>
 		
 	
@@ -498,7 +607,7 @@
 								<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/JEWEB_small.jpg", "dimensions"=>"2400x1618"}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/JEWEB_small_20160711.jpg", "dimensions"=>"2400x1618"}</li>
 </ul>
 -->
 
@@ -508,7 +617,7 @@
 <div class="module module-image module-image--">
 	
 		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1618">
-			<img class="module-image__img lazyload " data-src="/uploads/JEWEB_small.jpg" alt="" />
+			<img class="module-image__img lazyload " data-src="/uploads/JEWEB_small_20160711.jpg" alt="" />
 		</div>
 		
 	
@@ -545,7 +654,7 @@
 								<!--
 <ul>
 	<li>Module type:credits</li>
-	<li>Module data {"type"=>"credits", "credits"=>[{"url"=>nil, "emphasis"=>nil, "name"=>nil}]}</li>
+	<li>Module data {"type"=>"credits", "credits"=>[{"url"=>nil, "emphasis"=>"Photographer ", "name"=>"Bjorn Looss"}, {"url"=>nil, "emphasis"=>"Photographer", "name"=>"Joss Mckinley"}], "Key"=>nil}</li>
 </ul>
 -->
 
@@ -557,28 +666,37 @@
 		<div class="module-credits__line-container">
 			<div class="module-credits__line"></div>
 		</div>
-		<div class="module-credits__credits" js-controller="moduleCredits">
-			<div style="display: none;" js-module-credits-data>
-				
-					<a class="module-credits__credit" js-module-credits-item target="_blank" >
-						<span class="module-credits__emphasis">
-							
-						</span>
-						
-					</a>
-				
-			</div>
+		<div class="module-credits__credits">
 			<div class="module-credits__column">
 				<div class="module-credits__title">
 					Project Credits
 				</div>
 			</div>
+			<div class="module-credits__content">
+				
+					<a class="module-credits__credit" js-module-credits-item target="_blank" >
+						<span class="module-credits__emphasis">
+							Photographer 
+						</span>
+						Bjorn Looss
+					</a>
+				
+					<a class="module-credits__credit" js-module-credits-item target="_blank" >
+						<span class="module-credits__emphasis">
+							Photographer
+						</span>
+						Joss Mckinley
+					</a>
+				
+			</div>
+			<!--
 			<div class="module-credits__column" js-module-credit-column>			
 			</div>
 			<div class="module-credits__column" js-module-credit-column>
 			</div>
 			<div class="module-credits__column show-on-full-project" js-module-credit-column>
 			</div>
+			-->
 		</div>
 		<div class="module-credits__line-container">
 			<div class="module-credits__line"></div>
@@ -633,7 +751,7 @@
 								<!--
 <ul>
 	<li>Module type:text</li>
-	<li>Module data {"type"=>"text", "excerpt"=>"Capturing the spirit of rebellion with a bold new platform.", "body"=>"In early 2015, Pete Maiden set out to merge his two business ventures — media company featuring Aussie’s in the states, Billabout, - and his nolita retail location, B_Space, featuring up and coming Australian brands. Paradise was asked to define the new brand - Convicts - and create a cohesive editorial platform for it to exist on.\n\nKeeping in mind the camaraderie, pioneering nature and burning rebellion of the Convict, we created a clean logo mark inspired by the \"Pheon\" or \"Broad Arrow\" that marked British Government issued convict clothing in the early days of colonial Australia and paired it with flexible, modular and bold visual vernacular. We created a logo and visual system that embodied and could represent the rebellion, camaraderie of those pioneering new creative territory and spicing the world with mischief. ", "text"=>nil, "variation"=>"centered", "full-project-title"=>"Convicts"}</li>
+	<li>Module data {"type"=>"text", "excerpt"=>"Capturing the spirit of rebellion with a bold new platform.", "body"=>"In early 2015, Pete Maiden set out to merge his two business ventures — media company featuring Aussie’s in the states, Billabout, - and his nolita retail location, B_Space, featuring up and coming Australian brands. Paradise was asked to define the new brand - Convicts - and create a cohesive editorial platform for it to exist on.\n\nKeeping in mind the camaraderie, pioneering nature and burning rebellion of the Convict, we created a clean logo mark inspired by the \"Pheon\" or \"Broad Arrow\" that marked British Government issued convict clothing in the early days of colonial Australia and paired it with flexible, modular and bold visual vernacular. We created a logo and visual system that embodied and could represent the rebellion, camaraderie of those pioneering new creative territory and spicing the world with mischief. \n\n* *Brand Identity*\n* *Visual language*\n* *Website Design*\n* *Content Strategy*\n* *Website Development*\n", "text"=>nil, "variation"=>"centered", "full-project-title"=>"Convicts"}</li>
 </ul>
 -->
 
@@ -651,7 +769,7 @@
 			</div>
 			<div class="module-text__excerpt">
 				Capturing the spirit of rebellion with a bold new platform.
-			
+				<!--
 				<div class="module-text__view-full" js-index-view-full-project>
 					<span class="hide-on-full-project">
 						View Full Project
@@ -660,6 +778,7 @@
 						AH! Take me Back!
 					</span>
 				</div>
+				-->
 			</div>
 			<div class="module-text__full-project-spacer show-on-full-project">&nbsp;</div>
 			
@@ -667,6 +786,14 @@
 					<p>In early 2015, Pete Maiden set out to merge his two business ventures — media company featuring Aussie’s in the states, Billabout, - and his nolita retail location, B_Space, featuring up and coming Australian brands. Paradise was asked to define the new brand - Convicts - and create a cohesive editorial platform for it to exist on.</p>
 
 <p>Keeping in mind the camaraderie, pioneering nature and burning rebellion of the Convict, we created a clean logo mark inspired by the “Pheon” or “Broad Arrow” that marked British Government issued convict clothing in the early days of colonial Australia and paired it with flexible, modular and bold visual vernacular. We created a logo and visual system that embodied and could represent the rebellion, camaraderie of those pioneering new creative territory and spicing the world with mischief.</p>
+
+<ul>
+  <li><em>Brand Identity</em></li>
+  <li><em>Visual language</em></li>
+  <li><em>Website Design</em></li>
+  <li><em>Content Strategy</em></li>
+  <li><em>Website Development</em></li>
+</ul>
 
 				</div>
 			
@@ -738,7 +865,7 @@
 								<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "dimensions"=>"2343x3705", "image"=>"/uploads/CONVICTS_LARGEWEB_grid.jpg"}</li>
+	<li>Module data {"type"=>"image", "dimensions"=>"2343x3705", "image"=>"/uploads/Convicts_Web_20160711_MLP_A.jpg"}</li>
 </ul>
 -->
 
@@ -748,7 +875,7 @@
 <div class="module module-image module-image--">
 	
 		<div class="module-image__ratio" data-responsive-image-dimensions="2343x3705">
-			<img class="module-image__img lazyload " data-src="/uploads/CONVICTS_LARGEWEB_grid.jpg" alt="" />
+			<img class="module-image__img lazyload " data-src="/uploads/Convicts_Web_20160711_MLP_A.jpg" alt="" />
 		</div>
 		
 	
@@ -758,7 +885,7 @@
 								<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "dimensions"=>"2400x3795", "image"=>"/uploads/CONVICTS_LARGEWEB.jpg"}</li>
+	<li>Module data {"type"=>"image", "dimensions"=>"2343x3705", "image"=>"/uploads/CONVICTS_WEB_Article_20161107_MLP_A.jpg"}</li>
 </ul>
 -->
 
@@ -767,8 +894,8 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x3795">
-			<img class="module-image__img lazyload " data-src="/uploads/CONVICTS_LARGEWEB.jpg" alt="" />
+		<div class="module-image__ratio" data-responsive-image-dimensions="2343x3705">
+			<img class="module-image__img lazyload " data-src="/uploads/CONVICTS_WEB_Article_20161107_MLP_A.jpg" alt="" />
 		</div>
 		
 	
@@ -778,27 +905,7 @@
 								<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>["/uploads/Convicts_Web_Map.jpg"], "dimensions"=>"2400x1606"}</li>
-</ul>
--->
-
-
-<div class="debug-element">module-image variation: </div>
-
-<div class="module module-image module-image--">
-	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1606">
-			<img class="module-image__img lazyload " data-src="/uploads/Convicts_Web_Map.jpg" alt="" />
-		</div>
-		
-	
-</div>
-
-							
-								<!--
-<ul>
-	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>["/uploads/Convicts_news.jpg"], "dimensions"=>"2382x1606"}</li>
+	<li>Module data {"type"=>"image", "image"=>["/uploads/CONVICTS_WEB_Map_20161107_MLP_A.jpg"], "dimensions"=>"2382x1606"}</li>
 </ul>
 -->
 
@@ -808,7 +915,7 @@
 <div class="module module-image module-image--">
 	
 		<div class="module-image__ratio" data-responsive-image-dimensions="2382x1606">
-			<img class="module-image__img lazyload " data-src="/uploads/Convicts_news.jpg" alt="" />
+			<img class="module-image__img lazyload " data-src="/uploads/CONVICTS_WEB_Map_20161107_MLP_A.jpg" alt="" />
 		</div>
 		
 	
@@ -818,7 +925,7 @@
 								<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "dimensions"=>"2382x1606", "image"=>["/uploads/Convicts_news2.jpg"]}</li>
+	<li>Module data {"type"=>"image", "image"=>["/uploads/CONVICTS_WEB_News_20161107_MLP_A.jpg"], "dimensions"=>"2400x1618"}</li>
 </ul>
 -->
 
@@ -827,8 +934,8 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2382x1606">
-			<img class="module-image__img lazyload " data-src="/uploads/Convicts_news2.jpg" alt="" />
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1618">
+			<img class="module-image__img lazyload " data-src="/uploads/CONVICTS_WEB_News_20161107_MLP_A.jpg" alt="" />
 		</div>
 		
 	
@@ -877,8 +984,13 @@
 		<div class="module-credits__line-container">
 			<div class="module-credits__line"></div>
 		</div>
-		<div class="module-credits__credits" js-controller="moduleCredits">
-			<div style="display: none;" js-module-credits-data>
+		<div class="module-credits__credits">
+			<div class="module-credits__column">
+				<div class="module-credits__title">
+					Project Credits
+				</div>
+			</div>
+			<div class="module-credits__content">
 				
 					<a class="module-credits__credit" js-module-credits-item target="_blank" href="http://google.com">
 						<span class="module-credits__emphasis">
@@ -909,17 +1021,14 @@
 					</a>
 				
 			</div>
-			<div class="module-credits__column">
-				<div class="module-credits__title">
-					Project Credits
-				</div>
-			</div>
+			<!--
 			<div class="module-credits__column" js-module-credit-column>			
 			</div>
 			<div class="module-credits__column" js-module-credit-column>
 			</div>
 			<div class="module-credits__column show-on-full-project" js-module-credit-column>
 			</div>
+			-->
 		</div>
 		<div class="module-credits__line-container">
 			<div class="module-credits__line"></div>
@@ -951,7 +1060,7 @@
 								<!--
 <ul>
 	<li>Module type:hero</li>
-	<li>Module data {"type"=>"hero", "image"=>"/uploads/leader_hero.jpg", "alt"=>nil}</li>
+	<li>Module data {"type"=>"hero", "image"=>"/uploads/Leader_Hero_20160718_B_755.jpg", "alt"=>nil}</li>
 </ul>
 -->
 
@@ -963,7 +1072,7 @@
 		<div class="hero__column">
 			
 				<div class="module-image__ratio" data-responsive-image-dimensions="2400x755">
-					<img class="hero__img lazyload" data-src="/uploads/leader_hero.jpg" alt="" />
+					<img class="hero__img lazyload" data-src="/uploads/Leader_Hero_20160718_B_755.jpg" alt="" />
 				</div>
 			
 		</div>
@@ -992,7 +1101,7 @@
 			</div>
 			<div class="module-text__excerpt">
 				Bringing good design to modern families.
-			
+				<!--
 				<div class="module-text__view-full" js-index-view-full-project>
 					<span class="hide-on-full-project">
 						View Full Project
@@ -1001,10 +1110,31 @@
 						AH! Take me Back!
 					</span>
 				</div>
+				-->
 			</div>
 			<div class="module-text__full-project-spacer show-on-full-project">&nbsp;</div>
 			
 		</div>
+	
+</div>
+
+							
+								<!--
+<ul>
+	<li>Module type:image</li>
+	<li>Module data {"type"=>"image", "url"=>nil, "image"=>"/uploads/Leader_2_20160715-e52a80.jpg"}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-image variation: </div>
+
+<div class="module module-image module-image--">
+	
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
+			<img class="module-image__img lazyload " data-src="/uploads/Leader_2_20160715-e52a80.jpg" alt="" />
+		</div>
+		
 	
 </div>
 
@@ -1036,7 +1166,7 @@
 								<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "url"=>nil, "image"=>"/uploads/Leader_2.jpg"}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_10_20160718.jpg"}</li>
 </ul>
 -->
 
@@ -1046,7 +1176,7 @@
 <div class="module module-image module-image--">
 	
 		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Leader_2.jpg" alt="" />
+			<img class="module-image__img lazyload " data-src="/uploads/Leader_10_20160718.jpg" alt="" />
 		</div>
 		
 	
@@ -1056,7 +1186,7 @@
 								<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_1.jpg", "alt"=>nil, "caption"=>nil}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_4_20160715_C.jpg"}</li>
 </ul>
 -->
 
@@ -1066,7 +1196,7 @@
 <div class="module module-image module-image--">
 	
 		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Leader_1.jpg" alt="" />
+			<img class="module-image__img lazyload " data-src="/uploads/Leader_4_20160715_C.jpg" alt="" />
 		</div>
 		
 	
@@ -1075,34 +1205,30 @@
 							
 								<!--
 <ul>
-	<li>Module type:images_2up</li>
-	<li>Module data {"type"=>"images_2up", "images"=>[{"image"=>"/uploads/Leader_3.jpg"}, {"image"=>"/uploads/Leader_4.jpg"}]}</li>
+	<li>Module type:images-2up</li>
+	<li>Module data {"type"=>"images-2up", "images"=>[{"image"=>"/uploads/Leader_8_20160715.jpg", "caption"=>nil}, {"image"=>"/uploads/Leader_9_20160715-12e197.jpg"}]}</li>
 </ul>
 -->
 
 
-<div class="debug-element">module-images_2up variation: </div>
+<div class="debug-element">module-images-2up variation: </div>
 
-<div class="module module-images_2up module-images_2up--">
+<div class="module module-images-2up module-images-2up--">
 	
-</div>
-
-							
-								<!--
-<ul>
-	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_5.jpg"}</li>
-</ul>
--->
-
-
-<div class="debug-element">module-image variation: </div>
-
-<div class="module module-image module-image--">
-	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Leader_5.jpg" alt="" />
-		</div>
+		
+			<div class="module-images-2up__image">
+				<div class="module-image__ratio" data-responsive-image-dimensions="1200x1600">
+					<img class="module-images-2up__img lazyload" data-src="/uploads/Leader_8_20160715.jpg" alt=""/>
+				</div>
+				
+			</div>
+		
+			<div class="module-images-2up__image">
+				<div class="module-image__ratio" data-responsive-image-dimensions="1200x1600">
+					<img class="module-images-2up__img lazyload" data-src="/uploads/Leader_9_20160715-12e197.jpg" alt=""/>
+				</div>
+				
+			</div>
 		
 	
 </div>
@@ -1111,7 +1237,7 @@
 								<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_6.jpg"}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_6_20160715.jpg"}</li>
 </ul>
 -->
 
@@ -1121,27 +1247,7 @@
 <div class="module module-image module-image--">
 	
 		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Leader_6.jpg" alt="" />
-		</div>
-		
-	
-</div>
-
-							
-								<!--
-<ul>
-	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_7.jpg"}</li>
-</ul>
--->
-
-
-<div class="debug-element">module-image variation: </div>
-
-<div class="module module-image module-image--">
-	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Leader_7.jpg" alt="" />
+			<img class="module-image__img lazyload " data-src="/uploads/Leader_6_20160715.jpg" alt="" />
 		</div>
 		
 	
@@ -1151,7 +1257,7 @@
 								<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_8.jpg"}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_4_20160715_B.jpg", "alt"=>nil, "caption"=>nil}</li>
 </ul>
 -->
 
@@ -1161,7 +1267,7 @@
 <div class="module module-image module-image--">
 	
 		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Leader_8.jpg" alt="" />
+			<img class="module-image__img lazyload " data-src="/uploads/Leader_4_20160715_B.jpg" alt="" />
 		</div>
 		
 	
@@ -1171,7 +1277,7 @@
 								<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_9.jpg"}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_1_20160715.jpg"}</li>
 </ul>
 -->
 
@@ -1181,7 +1287,27 @@
 <div class="module module-image module-image--">
 	
 		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Leader_9.jpg" alt="" />
+			<img class="module-image__img lazyload " data-src="/uploads/Leader_1_20160715.jpg" alt="" />
+		</div>
+		
+	
+</div>
+
+							
+								<!--
+<ul>
+	<li>Module type:image</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/LEADER_WEB_20160711_MLP_A.jpg", "dimensions"=>"2400x3378"}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-image variation: </div>
+
+<div class="module module-image module-image--">
+	
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x3378">
+			<img class="module-image__img lazyload " data-src="/uploads/LEADER_WEB_20160711_MLP_A.jpg" alt="" />
 		</div>
 		
 	
@@ -1191,7 +1317,7 @@
 								<!--
 <ul>
 	<li>Module type:credits</li>
-	<li>Module data {"type"=>"credits", "credits"=>[{"url"=>nil, "emphasis"=>nil, "name"=>nil}]}</li>
+	<li>Module data {"type"=>"credits", "credits"=>[{"url"=>"http://www.lottanieminen.com/", "emphasis"=>"Branding", "name"=>"Lotta nieminen"}]}</li>
 </ul>
 -->
 
@@ -1203,28 +1329,30 @@
 		<div class="module-credits__line-container">
 			<div class="module-credits__line"></div>
 		</div>
-		<div class="module-credits__credits" js-controller="moduleCredits">
-			<div style="display: none;" js-module-credits-data>
-				
-					<a class="module-credits__credit" js-module-credits-item target="_blank" >
-						<span class="module-credits__emphasis">
-							
-						</span>
-						
-					</a>
-				
-			</div>
+		<div class="module-credits__credits">
 			<div class="module-credits__column">
 				<div class="module-credits__title">
 					Project Credits
 				</div>
 			</div>
+			<div class="module-credits__content">
+				
+					<a class="module-credits__credit" js-module-credits-item target="_blank" href="http://www.lottanieminen.com/">
+						<span class="module-credits__emphasis">
+							Branding
+						</span>
+						Lotta nieminen
+					</a>
+				
+			</div>
+			<!--
 			<div class="module-credits__column" js-module-credit-column>			
 			</div>
 			<div class="module-credits__column" js-module-credit-column>
 			</div>
 			<div class="module-credits__column show-on-full-project" js-module-credit-column>
 			</div>
+			-->
 		</div>
 		<div class="module-credits__line-container">
 			<div class="module-credits__line"></div>
@@ -1256,7 +1384,7 @@
 								<!--
 <ul>
 	<li>Module type:hero</li>
-	<li>Module data {"type"=>"hero", "image"=>"/uploads/Hero-410576.jpg", "alt"=>nil}</li>
+	<li>Module data {"type"=>"hero", "image"=>"/uploads/Mikoh_Hero_20160718.jpg", "alt"=>nil}</li>
 </ul>
 -->
 
@@ -1268,7 +1396,7 @@
 		<div class="hero__column">
 			
 				<div class="module-image__ratio" data-responsive-image-dimensions="2400x755">
-					<img class="hero__img lazyload" data-src="/uploads/Hero-410576.jpg" alt="" />
+					<img class="hero__img lazyload" data-src="/uploads/Mikoh_Hero_20160718.jpg" alt="" />
 				</div>
 			
 		</div>
@@ -1298,7 +1426,7 @@
 			<div class="module-text__excerpt">
 				An adventurous new category for the endless summer wonders
 
-			
+				<!--
 				<div class="module-text__view-full" js-index-view-full-project>
 					<span class="hide-on-full-project">
 						View Full Project
@@ -1307,6 +1435,7 @@
 						AH! Take me Back!
 					</span>
 				</div>
+				-->
 			</div>
 			<div class="module-text__full-project-spacer show-on-full-project">&nbsp;</div>
 			
@@ -1318,7 +1447,7 @@
 								<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Mikoh_20160616_MLP_A-03.jpg", "alt"=>nil, "caption"=>nil}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Mikoh_9_20160715.jpg"}</li>
 </ul>
 -->
 
@@ -1328,7 +1457,7 @@
 <div class="module module-image module-image--">
 	
 		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Mikoh_20160616_MLP_A-03.jpg" alt="" />
+			<img class="module-image__img lazyload " data-src="/uploads/Mikoh_9_20160715.jpg" alt="" />
 		</div>
 		
 	
@@ -1337,165 +1466,111 @@
 							
 								<!--
 <ul>
-	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "images"=>[{"image"=>nil, "alt"=>nil, "caption"=>nil}], "image"=>"/uploads/Mikoh_20160616_MLP_A-04.jpg", "dimensions"=>"2400x1755"}</li>
+	<li>Module type:images-2up</li>
+	<li>Module data {"type"=>"images-2up", "images"=>[{"image"=>"/uploads/Mikoh_2_20160715.jpg", "dimensions"=>"1200x1049"}, {"image"=>"/uploads/Mikoh_1_20160715.jpg", "dimensions"=>"1200x1049"}]}</li>
 </ul>
 -->
 
 
-<div class="debug-element">module-image variation: </div>
+<div class="debug-element">module-images-2up variation: </div>
 
-<div class="module module-image module-image--">
+<div class="module module-images-2up module-images-2up--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1755">
-			<img class="module-image__img lazyload " data-src="/uploads/Mikoh_20160616_MLP_A-04.jpg" alt="" />
-		</div>
 		
-	
-</div>
-
-							
-								<!--
-<ul>
-	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "url"=>nil, "image"=>"/uploads/Mikoh_20160616_MLP_A-05.jpg", "dimensions"=>"2400x1552"}</li>
-</ul>
--->
-
-
-<div class="debug-element">module-image variation: </div>
-
-<div class="module module-image module-image--">
-	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1552">
-			<img class="module-image__img lazyload " data-src="/uploads/Mikoh_20160616_MLP_A-05.jpg" alt="" />
-		</div>
-		
-	
-</div>
-
-							
-								<!--
-<ul>
-	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Mikoh_20160616_MLP_A-07.jpg"}</li>
-</ul>
--->
-
-
-<div class="debug-element">module-image variation: </div>
-
-<div class="module module-image module-image--">
-	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Mikoh_20160616_MLP_A-07.jpg" alt="" />
-		</div>
-		
-	
-</div>
-
-							
-								<!--
-<ul>
-	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Mikoh_20160616_MLP_A-08.jpg"}</li>
-</ul>
--->
-
-
-<div class="debug-element">module-image variation: </div>
-
-<div class="module module-image module-image--">
-	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Mikoh_20160616_MLP_A-08.jpg" alt="" />
-		</div>
-		
-	
-</div>
-
-							
-								<!--
-<ul>
-	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Mikoh_20160616_MLP_A-09.jpg"}</li>
-</ul>
--->
-
-
-<div class="debug-element">module-image variation: </div>
-
-<div class="module module-image module-image--">
-	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Mikoh_20160616_MLP_A-09.jpg" alt="" />
-		</div>
-		
-	
-</div>
-
-							
-								<!--
-<ul>
-	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Mikoh_20160616_MLP_A-10.jpg"}</li>
-</ul>
--->
-
-
-<div class="debug-element">module-image variation: </div>
-
-<div class="module module-image module-image--">
-	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Mikoh_20160616_MLP_A-10.jpg" alt="" />
-		</div>
-		
-	
-</div>
-
-							
-								<!--
-<ul>
-	<li>Module type:credits</li>
-	<li>Module data {"type"=>"credits", "credits"=>[{"url"=>nil, "emphasis"=>nil, "name"=>nil}]}</li>
-</ul>
--->
-
-
-<div class="debug-element">module-credits variation: </div>
-
-<div class="module module-credits module-credits--">
-	
-		<div class="module-credits__line-container">
-			<div class="module-credits__line"></div>
-		</div>
-		<div class="module-credits__credits" js-controller="moduleCredits">
-			<div style="display: none;" js-module-credits-data>
-				
-					<a class="module-credits__credit" js-module-credits-item target="_blank" >
-						<span class="module-credits__emphasis">
-							
-						</span>
-						
-					</a>
-				
-			</div>
-			<div class="module-credits__column">
-				<div class="module-credits__title">
-					Project Credits
+			<div class="module-images-2up__image">
+				<div class="module-image__ratio" data-responsive-image-dimensions="1200x1049">
+					<img class="module-images-2up__img lazyload" data-src="/uploads/Mikoh_2_20160715.jpg" alt=""/>
 				</div>
+				
 			</div>
-			<div class="module-credits__column" js-module-credit-column>			
+		
+			<div class="module-images-2up__image">
+				<div class="module-image__ratio" data-responsive-image-dimensions="1200x1049">
+					<img class="module-images-2up__img lazyload" data-src="/uploads/Mikoh_1_20160715.jpg" alt=""/>
+				</div>
+				
 			</div>
-			<div class="module-credits__column" js-module-credit-column>
-			</div>
-			<div class="module-credits__column show-on-full-project" js-module-credit-column>
-			</div>
+		
+	
+</div>
+
+							
+								<!--
+<ul>
+	<li>Module type:image</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Mikoh_5_20160715.jpg"}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-image variation: </div>
+
+<div class="module module-image module-image--">
+	
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
+			<img class="module-image__img lazyload " data-src="/uploads/Mikoh_5_20160715.jpg" alt="" />
 		</div>
-		<div class="module-credits__line-container">
-			<div class="module-credits__line"></div>
+		
+	
+</div>
+
+							
+								<!--
+<ul>
+	<li>Module type:image</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Mikoh_4_20160716.jpg", "dimensions"=>"2400x1702"}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-image variation: </div>
+
+<div class="module module-image module-image--">
+	
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1702">
+			<img class="module-image__img lazyload " data-src="/uploads/Mikoh_4_20160716.jpg" alt="" />
 		</div>
+		
+	
+</div>
+
+							
+								<!--
+<ul>
+	<li>Module type:image</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Mikoh_3_20160716.jpg", "dimensions"=>"2400x1415"}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-image variation: </div>
+
+<div class="module module-image module-image--">
+	
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1415">
+			<img class="module-image__img lazyload " data-src="/uploads/Mikoh_3_20160716.jpg" alt="" />
+		</div>
+		
+	
+</div>
+
+							
+								<!--
+<ul>
+	<li>Module type:image</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Mikoh_6_20160715.jpg"}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-image variation: </div>
+
+<div class="module module-image module-image--">
+	
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
+			<img class="module-image__img lazyload " data-src="/uploads/Mikoh_6_20160715.jpg" alt="" />
+		</div>
+		
 	
 </div>
 
@@ -1546,7 +1621,7 @@
 								<!--
 <ul>
 	<li>Module type:text</li>
-	<li>Module data {"type"=>"text", "excerpt"=>"Capturing the details."}</li>
+	<li>Module data {"type"=>"text", "excerpt"=>"Capturing in a print the essence of a fashion designer's minimalist perspective with a focus on subtle details."}</li>
 </ul>
 -->
 
@@ -1563,8 +1638,8 @@
 				&nbsp;
 			</div>
 			<div class="module-text__excerpt">
-				Capturing the details.
-			
+				Capturing in a print the essence of a fashion designer's minimalist perspective with a focus on subtle details.
+				<!--
 				<div class="module-text__view-full" js-index-view-full-project>
 					<span class="hide-on-full-project">
 						View Full Project
@@ -1573,6 +1648,7 @@
 						AH! Take me Back!
 					</span>
 				</div>
+				-->
 			</div>
 			<div class="module-text__full-project-spacer show-on-full-project">&nbsp;</div>
 			
@@ -1584,7 +1660,7 @@
 								<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Kaelen_2.jpg", "dimensions"=>"2400x2819"}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Kaelen_2_20160715.jpg"}</li>
 </ul>
 -->
 
@@ -1593,8 +1669,28 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x2819">
-			<img class="module-image__img lazyload " data-src="/uploads/Kaelen_2.jpg" alt="" />
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
+			<img class="module-image__img lazyload " data-src="/uploads/Kaelen_2_20160715.jpg" alt="" />
+		</div>
+		
+	
+</div>
+
+							
+								<!--
+<ul>
+	<li>Module type:image</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Kaelen_8_20160715.jpg"}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-image variation: </div>
+
+<div class="module module-image module-image--">
+	
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
+			<img class="module-image__img lazyload " data-src="/uploads/Kaelen_8_20160715.jpg" alt="" />
 		</div>
 		
 	
@@ -1624,7 +1720,7 @@
 								<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Kaelen_Pattern1.jpg"}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Kaelen_4_20160715.jpg", "dimensions"=>"2400x3000"}</li>
 </ul>
 -->
 
@@ -1633,28 +1729,8 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Kaelen_Pattern1.jpg" alt="" />
-		</div>
-		
-	
-</div>
-
-							
-								<!--
-<ul>
-	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Kaelen_3.jpg"}</li>
-</ul>
--->
-
-
-<div class="debug-element">module-image variation: </div>
-
-<div class="module module-image module-image--">
-	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Kaelen_3.jpg" alt="" />
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x3000">
+			<img class="module-image__img lazyload " data-src="/uploads/Kaelen_4_20160715.jpg" alt="" />
 		</div>
 		
 	
@@ -1681,91 +1757,10 @@
 </div>
 
 							
-						</div>
-					</article>
-				</div>
-			
-				<div class="row" js-scrollspy="saturdays">
-					<div class="content-navbar-grid-spacer">&nbsp;</div>
-					<article class="index-project" js-index-project="saturdays" js-controller="project">
-						<div class="index-project__close show-on-full-project">
-							
-	<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.71 20.71"><title>Paradise_FinalDesign_160428_MLP_A_DEVNOTES</title><polygon points="20.71 0.71 20 0 10.35 9.65 0.71 0 0 0.71 9.65 10.35 0 20 0.71 20.71 10.35 11.06 20 20.71 20.71 20 11.06 10.35 20.71 0.71"/></svg>
-
-						</div>
-						<div class="index-project__inner">
-							<!-- <span class="index-project-debug">
-								Saturdays
-								<a href="/projects/saturdays.html">
-									Open Project
-								</a>
-							</span> -->
-							
-								<!--
-<ul>
-	<li>Module type:hero</li>
-	<li>Module data {"type"=>"hero", "image"=>"/uploads/Hero-f6811e.jpg"}</li>
-</ul>
--->
-
-
-<div class="debug-element">module-hero variation: </div>
-
-<div class="module module-hero module-hero--">
-	
-		<div class="hero__column">
-			
-				<div class="module-image__ratio" data-responsive-image-dimensions="2400x755">
-					<img class="hero__img lazyload" data-src="/uploads/Hero-f6811e.jpg" alt="" />
-				</div>
-			
-		</div>
-	
-</div>
-
-							
-								<!--
-<ul>
-	<li>Module type:text</li>
-	<li>Module data {"type"=>"text", "excerpt"=>"Creating consistency across all branded materials. ", "body"=>nil}</li>
-</ul>
--->
-
-
-<div class="debug-element">module-text variation: </div>
-
-<div class="module module-text module-text--">
-	
-		<div class="row">
-			<div class="module-text__spacer">
-				<span class="show-on-full-project">
-					
-				</span>
-				&nbsp;
-			</div>
-			<div class="module-text__excerpt">
-				Creating consistency across all branded materials. 
-			
-				<div class="module-text__view-full" js-index-view-full-project>
-					<span class="hide-on-full-project">
-						View Full Project
-					</span>
-					<span class="show-on-full-project">
-						AH! Take me Back!
-					</span>
-				</div>
-			</div>
-			<div class="module-text__full-project-spacer show-on-full-project">&nbsp;</div>
-			
-		</div>
-	
-</div>
-
-							
 								<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Iamge1.jpg"}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Kaelen_9_20160715.jpg"}</li>
 </ul>
 -->
 
@@ -1775,9 +1770,156 @@
 <div class="module module-image module-image--">
 	
 		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Iamge1.jpg" alt="" />
+			<img class="module-image__img lazyload " data-src="/uploads/Kaelen_9_20160715.jpg" alt="" />
 		</div>
 		
+	
+</div>
+
+							
+								<!--
+<ul>
+	<li>Module type:image</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Kaelen_7_20160715.jpg"}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-image variation: </div>
+
+<div class="module module-image module-image--">
+	
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
+			<img class="module-image__img lazyload " data-src="/uploads/Kaelen_7_20160715.jpg" alt="" />
+		</div>
+		
+	
+</div>
+
+							
+								<!--
+<ul>
+	<li>Module type:image</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Kaelen_6_20160715.jpg"}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-image variation: </div>
+
+<div class="module module-image module-image--">
+	
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
+			<img class="module-image__img lazyload " data-src="/uploads/Kaelen_6_20160715.jpg" alt="" />
+		</div>
+		
+	
+</div>
+
+							
+								<!--
+<ul>
+	<li>Module type:image</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Kaelen_Pattern1.jpg"}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-image variation: </div>
+
+<div class="module module-image module-image--">
+	
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
+			<img class="module-image__img lazyload " data-src="/uploads/Kaelen_Pattern1.jpg" alt="" />
+		</div>
+		
+	
+</div>
+
+							
+								<!--
+<ul>
+	<li>Module type:image</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Kaelen_3_20160715.jpg"}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-image variation: </div>
+
+<div class="module module-image module-image--">
+	
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
+			<img class="module-image__img lazyload " data-src="/uploads/Kaelen_3_20160715.jpg" alt="" />
+		</div>
+		
+	
+</div>
+
+							
+								<!--
+<ul>
+	<li>Module type:image</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/KAELEN_20161107_MLP_A.gif"}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-image variation: </div>
+
+<div class="module module-image module-image--">
+	
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
+			<img class="module-image__img lazyload " data-src="/uploads/KAELEN_20161107_MLP_A.gif" alt="" />
+		</div>
+		
+	
+</div>
+
+							
+								<!--
+<ul>
+	<li>Module type:image</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Kaelen_5_20160715.jpg"}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-image variation: </div>
+
+<div class="module module-image module-image--">
+	
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
+			<img class="module-image__img lazyload " data-src="/uploads/Kaelen_5_20160715.jpg" alt="" />
+		</div>
+		
+	
+</div>
+
+							
+								<!--
+<ul>
+	<li>Module type:website-link</li>
+	<li>Module data {"type"=>"website-link", "image"=>"http://hi.kaelennyc.com/"}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-website-link variation: </div>
+
+<div class="module module-website-link module-website-link--">
+	
+		<div class="module-website-link__spacer">&nbsp;</div>
+		<div class="module-website-link__column">
+			<a class="module-website-link__button" href="" target="_blank">
+				Visit the Website
+				<span class="module-website-link__icon">
+					
+	<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.05 9.05"><title>Paradise_FinalDesign_160428_MLP_A_DEVNOTES</title><polygon points="9.05 6 9.04 0 3.05 0 3.05 1 7.34 1 0 8.34 0.71 9.05 8.04 1.72 8.05 6 9.05 6"/></svg>
+
+				</span>
+			</a>
+		</div>
 	
 </div>
 
@@ -1846,7 +1988,7 @@
 			</div>
 			<div class="module-text__excerpt">
 				This sentence has to do with prize pins.
-			
+				<!--
 				<div class="module-text__view-full" js-index-view-full-project>
 					<span class="hide-on-full-project">
 						View Full Project
@@ -1855,6 +1997,7 @@
 						AH! Take me Back!
 					</span>
 				</div>
+				-->
 			</div>
 			<div class="module-text__full-project-spacer show-on-full-project">&nbsp;</div>
 			
@@ -2062,19 +2205,30 @@
 							
 								<!--
 <ul>
-	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/MonsterLookbook4.jpg", "dimensions"=>"2400x1708"}</li>
+	<li>Module type:images-2up</li>
+	<li>Module data {"type"=>"images-2up", "images"=>[{"image"=>"/uploads/Prize_2up1_20160718.jpg", "dimensions"=>"1200x2000"}, {"image"=>"/uploads/Prize_2up2_20160718.jpg", "dimensions"=>"1200x2000"}]}</li>
 </ul>
 -->
 
 
-<div class="debug-element">module-image variation: </div>
+<div class="debug-element">module-images-2up variation: </div>
 
-<div class="module module-image module-image--">
+<div class="module module-images-2up module-images-2up--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1708">
-			<img class="module-image__img lazyload " data-src="/uploads/MonsterLookbook4.jpg" alt="" />
-		</div>
+		
+			<div class="module-images-2up__image">
+				<div class="module-image__ratio" data-responsive-image-dimensions="1200x2000">
+					<img class="module-images-2up__img lazyload" data-src="/uploads/Prize_2up1_20160718.jpg" alt=""/>
+				</div>
+				
+			</div>
+		
+			<div class="module-images-2up__image">
+				<div class="module-image__ratio" data-responsive-image-dimensions="1200x2000">
+					<img class="module-images-2up__img lazyload" data-src="/uploads/Prize_2up2_20160718.jpg" alt=""/>
+				</div>
+				
+			</div>
 		
 	
 </div>
@@ -2122,39 +2276,30 @@
 							
 								<!--
 <ul>
-	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Prize11602_grande.jpg", "dimensions"=>"600x488"}</li>
+	<li>Module type:images-2up</li>
+	<li>Module data {"type"=>"images-2up", "images"=>[{"image"=>"/uploads/Prize_2up1b_20160718.jpg", "dimensions"=>"1200x1471"}, {"image"=>"/uploads/Prize_2up2B_20160718.jpg", "dimensions"=>"1200x1471"}]}</li>
 </ul>
 -->
 
 
-<div class="debug-element">module-image variation: </div>
+<div class="debug-element">module-images-2up variation: </div>
 
-<div class="module module-image module-image--">
+<div class="module module-images-2up module-images-2up--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="600x488">
-			<img class="module-image__img lazyload " data-src="/uploads/Prize11602_grande.jpg" alt="" />
-		</div>
 		
-	
-</div>
-
-							
-								<!--
-<ul>
-	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Prize11302_grande.jpg", "dimensions"=>"600x488"}</li>
-</ul>
--->
-
-
-<div class="debug-element">module-image variation: </div>
-
-<div class="module module-image module-image--">
-	
-		<div class="module-image__ratio" data-responsive-image-dimensions="600x488">
-			<img class="module-image__img lazyload " data-src="/uploads/Prize11302_grande.jpg" alt="" />
-		</div>
+			<div class="module-images-2up__image">
+				<div class="module-image__ratio" data-responsive-image-dimensions="1200x1471">
+					<img class="module-images-2up__img lazyload" data-src="/uploads/Prize_2up1b_20160718.jpg" alt=""/>
+				</div>
+				
+			</div>
+		
+			<div class="module-images-2up__image">
+				<div class="module-image__ratio" data-responsive-image-dimensions="1200x1471">
+					<img class="module-images-2up__img lazyload" data-src="/uploads/Prize_2up2B_20160718.jpg" alt=""/>
+				</div>
+				
+			</div>
 		
 	
 </div>
@@ -2194,6 +2339,108 @@
 	
 		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
 			<img class="module-image__img lazyload " data-src="/uploads/TimLookbook.jpg" alt="" />
+		</div>
+		
+	
+</div>
+
+							
+						</div>
+					</article>
+				</div>
+			
+				<div class="row" js-scrollspy="saturdays">
+					<div class="content-navbar-grid-spacer">&nbsp;</div>
+					<article class="index-project" js-index-project="saturdays" js-controller="project">
+						<div class="index-project__close show-on-full-project">
+							
+	<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.71 20.71"><title>Paradise_FinalDesign_160428_MLP_A_DEVNOTES</title><polygon points="20.71 0.71 20 0 10.35 9.65 0.71 0 0 0.71 9.65 10.35 0 20 0.71 20.71 10.35 11.06 20 20.71 20.71 20 11.06 10.35 20.71 0.71"/></svg>
+
+						</div>
+						<div class="index-project__inner">
+							<!-- <span class="index-project-debug">
+								Saturdays
+								<a href="/projects/saturdays.html">
+									Open Project
+								</a>
+							</span> -->
+							
+								<!--
+<ul>
+	<li>Module type:hero</li>
+	<li>Module data {"type"=>"hero", "image"=>"/uploads/Hero-f6811e.jpg"}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-hero variation: </div>
+
+<div class="module module-hero module-hero--">
+	
+		<div class="hero__column">
+			
+				<div class="module-image__ratio" data-responsive-image-dimensions="2400x755">
+					<img class="hero__img lazyload" data-src="/uploads/Hero-f6811e.jpg" alt="" />
+				</div>
+			
+		</div>
+	
+</div>
+
+							
+								<!--
+<ul>
+	<li>Module type:text</li>
+	<li>Module data {"type"=>"text", "excerpt"=>"Creating consistency across all branded materials. ", "body"=>nil}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-text variation: </div>
+
+<div class="module module-text module-text--">
+	
+		<div class="row">
+			<div class="module-text__spacer">
+				<span class="show-on-full-project">
+					
+				</span>
+				&nbsp;
+			</div>
+			<div class="module-text__excerpt">
+				Creating consistency across all branded materials. 
+				<!--
+				<div class="module-text__view-full" js-index-view-full-project>
+					<span class="hide-on-full-project">
+						View Full Project
+					</span>
+					<span class="show-on-full-project">
+						AH! Take me Back!
+					</span>
+				</div>
+				-->
+			</div>
+			<div class="module-text__full-project-spacer show-on-full-project">&nbsp;</div>
+			
+		</div>
+	
+</div>
+
+							
+								<!--
+<ul>
+	<li>Module type:image</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Iamge1.jpg"}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-image variation: </div>
+
+<div class="module module-image module-image--">
+	
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
+			<img class="module-image__img lazyload " data-src="/uploads/Iamge1.jpg" alt="" />
 		</div>
 		
 	
@@ -2262,6 +2509,44 @@
 				</p>
 
 			</div>
+
+
+			<section class="studio__services" js-scrollspy="different">
+				<div class="studio__services-column">
+					<div class="style-studio-header  studio__service-header style-studio-header--different">
+						— What Makes Us Different
+					</div>
+
+					<div class="studio__service-group">
+						<p>
+							<span class="studio__service-title">
+								In the Trenches. 
+							</span>
+							Our time spent in-house has given us insights into the customer feedback loop that many agencies never get access to. Launching award winning product lines with some of the most innovative marketing, sales, design and operations teams has taught us the complex balancing act of brand and business. 
+						</p>
+					</div>
+
+					<div class="studio__service-group">
+						<p>
+							<span class="studio__service-title">
+								New York City + Sydney.
+							</span>
+							Travel is a key part of how we operate and the brands and products we create reflect that. And offices on directly opposite sides of the world means our team literally works around the clock.
+						</p>
+					</div> 
+					<div class="studio__service-group">
+						<p>
+							<span class="studio__service-title">
+								Skin In The Game.
+							</span>
+							We've built our own brands from the ground up. And we’re still doing it. We've had successes, but more importantly failures. We’ve bounced back bigger and badder than ever. We feel your pain and understand the ever-changing landscape because we live and learn in it everyday. 
+						</p>
+					</div> 
+				</div>
+				<div class="studio__services-column">
+					<img class="studio__services-column-image" src="">
+				</div>
+			</section>
 
 			<section js-scrollspy="team">
 				<div class="style-studio-header style-studio-header--who-we-are">
@@ -2442,6 +2727,121 @@
 				    
 				    
 				    
+						<div class="index-journal__month" js-scrollspy="2016-July">
+					
+					<div class="index-journal__journal">
+						<img class="index-journal__hero-img" src="/uploads/flwr_invite_popup_final2-05.jpg" />
+						<div class="index-journal__header">
+							<div class="index-journal__date">
+								July 13 2016
+							</div>
+							
+								<h1 class="index-journal__title">
+									FLWR Launch Party
+								</h1>
+							
+						</div>
+						
+							<div class="row">
+								<div class="index-journal__content">	
+									<p>Our friends at FLWR are getting out in the big wide world. Come join the party at Convicts over on Mulberry St.</p>
+
+<p>Invitation design, branding and photography by Paradise.</p>
+
+								</div>
+							</div>
+						
+						
+						
+							
+								<img class="index-journal__img lazyload" data-src="" alt="" />
+							
+						
+					</div>
+				    
+						</div>
+					
+				
+				    
+				    
+				    
+					<div class="index-journal__journal">
+						<img class="index-journal__hero-img" src="/uploads/casual_lookbook_gallery_6-9ea25f.jpg" />
+						<div class="index-journal__header">
+							<div class="index-journal__date">
+								July 10 2016
+							</div>
+							
+								<h1 class="index-journal__title">
+									Upton Belts
+								</h1>
+							
+						</div>
+						
+							<div class="row">
+								<div class="index-journal__content">	
+									<p>Some beautiful shots by our mates at <a href="http://www.wedgeandlever.com/">Wedge &amp; Lever</a> of a sleek contemporary line of belts we designed for the recently launched online belt startup <a href="http://uptonbelts.com/">Upton</a>.</p>
+
+<p>The concept was to put a modern spin on the classic men’s belt across three different styles. We achieved a minimal machined symmetry in a space where traditionally more emphasis is placed on a handcrafted feel. The design and production of the buckles required some innovative design thinking around molding without parting lines in order to reduce the amount of polishing required and therefore the amount of damage that would be done to the edges.</p>
+
+<p>We worked on a strictly product level on this one with the Wedge &amp; Lever crew executing the branding, packaging, all of the amazing photography and art direction and some intense Orwellian brand videos that you can see more of <a href="http://www.wedgeandlever.com/portfolio/upton-belts/">here</a>. Bravo gents.</p>
+
+
+								</div>
+							</div>
+						
+						
+						
+							
+								<img class="index-journal__img lazyload" data-src="/uploads/sport_gallery_image_black_2_1024x1024.jpg" alt="" />
+							
+								<img class="index-journal__img lazyload" data-src="/uploads/casual_lookbook_gallery_4.jpg" alt="" />
+							
+								<img class="index-journal__img lazyload" data-src="/uploads/dress_home_wide.jpg" alt="" />
+							
+								<img class="index-journal__img lazyload" data-src="/uploads/casual_gallery_image_black_1_1024x1024.jpg" alt="" />
+							
+						
+					</div>
+				    
+				
+				    
+				    
+				    
+					<div class="index-journal__journal">
+						<img class="index-journal__hero-img" src="/uploads/SP_Site_Journal_0001_Interns_160710.jpg" />
+						<div class="index-journal__header">
+							<div class="index-journal__date">
+								July 10 2016
+							</div>
+							
+								<h1 class="index-journal__title">
+									Interns
+								</h1>
+							
+						</div>
+						
+							<div class="row">
+								<div class="index-journal__content">	
+									<p>Looking for a turbo-learning design freak to intern with us for the rest of the summer. If you are interested in interesting stuff, know how to use some adobe programs and are down to nerd out with us please tell us a little about yourself and why you are keen at hiring@studioparadise.com.</p>
+
+<p>C’mon in the water’s fine!</p>
+
+								</div>
+							</div>
+						
+						
+						
+							
+								<img class="index-journal__img lazyload" data-src="" alt="" />
+							
+						
+					</div>
+				    
+				
+				    
+				    
+				    
 						<div class="index-journal__month" js-scrollspy="2016-June">
 					
 					<div class="index-journal__journal">
@@ -2567,7 +2967,7 @@
 				&nbsp;
 			</div>
 			<div class="footer__email">
-				<div class="footer-signup">
+				<form class="footer-signup" js-component="mailchimp" action="//studioparadise.us9.list-manage.com/subscribe/post?u=3086fe329023e91f1b8ea55b1&amp;id=994fa81707">
 					<div class="footer-signup__input-wrapper">
 						<input type="text" class="footer-signup__input" placeholder="Newsletter Sign Up"/>
 						<div class="footer-signup__submit">
@@ -2576,14 +2976,27 @@
 
 						</div>
 					</div>
-				</div>
+					<div js-newsletter-error></div>
+				</form>
 				<div class="footer-social">
 					<div class="footer-social__item">
-						F
+						<a href="http://instagram.com/igusername" target="_blank">
+							
+	<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><defs><style>.cls-1{fill:#fff;}</style></defs><title>Paradise_FinalDesign_160428_MLP_A_DEVNOTES</title><path class="cls-1" d="M2097.41,4725.24v7.08a1.46,1.46,0,0,1-1.46,1.46h-7.08a1.46,1.46,0,0,1-1.46-1.46v-7.08a1.46,1.46,0,0,1,1.46-1.46h7.08A1.46,1.46,0,0,1,2097.41,4725.24Zm-1,2.92h-1.11a2.92,2.92,0,1,1-5.7,0h-1.11v4.38a0.21,0.21,0,0,0,.21.21h7.5a0.21,0.21,0,0,0,.21-0.21v-4.37Zm-5.83.63a1.88,1.88,0,1,0,1.88-1.87A1.88,1.88,0,0,0,2090.53,4728.78Zm5.83-3.75a0.21,0.21,0,0,0-.21-0.21h-1.25a0.21,0.21,0,0,0-.21.21v1.25a0.21,0.21,0,0,0,.21.21h1.25a0.21,0.21,0,0,0,.21-0.21V4725Z" transform="translate(-2087.41 -4723.78)"/></svg>
+
+						</a>
 					</div><div class="footer-social__item">
-						IN
+						<a href="http://linkedin.com/company/" target="_blank">
+							
+	<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 9.79"><title>Paradise_FinalDesign_160428_MLP_A_DEVNOTES</title><path d="M2127.53,4726.28h0a1.15,1.15,0,1,1,1.27-1.15,1.15,1.15,0,0,1-1.27,1.15Zm1,1v6.46h-2.08v-6.46h2.08Zm3.33,6.46h-2.08v-5s0-1.24,0-1.46h2.05l0.07,0.89a2.24,2.24,0,0,1,1.88-1.1c1.46,0,2.5,1,2.5,2.92v3.75h-2.08v-3.54c0-1-.51-1.46-1.13-1.46a1.13,1.13,0,0,0-1.16,1.25v3.75Z" transform="translate(-2126.29 -4723.99)"/></svg>
+
+						</a>
 					</div><div class="footer-social__item">
-						T
+						<a href="http://twitter.com/twusername" target="_blank">
+							
+	<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6.46 10"><title>Paradise_FinalDesign_160428_MLP_A_DEVNOTES</title><path d="M2171,4733.78c-1.87,0-2.71-.83-2.71-2.5v-3.12h-1.46v-1.46a3,3,0,0,0,2.29-2.92h1.46v2.5h2.29v1.88h-2.29v2.5c0,1,.21,1.46,1.25,1.46a4.1,4.1,0,0,0,1.46-.42v1.54A4.48,4.48,0,0,1,2171,4733.78Z" transform="translate(-2166.83 -4723.78)"/></svg>
+
+						</a>
 					</div>
 				</div>
 			</div>

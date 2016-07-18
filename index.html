@@ -12,6 +12,34 @@ excerpt: Studio Paradise
 		<div class="row index-slider">
 			<div class="content-navbar-grid-spacer">&nbsp;</div>
 			<div class="index-swiper">
+				<div class="studio__locations studio__locations--index">
+					<div class="studio__location" js-controller="studioLocation" js-args="{location: 'nyc'}">
+						<div class="studio__city">
+							New York, USA
+						</div>
+						<div class="studio__day-and-time">
+							<div class="studio__day" js-date>
+								Thursday April 28
+							</div>
+							<div class="studio__time" js-time>
+								12:00pm
+							</div>
+						</div>
+					</div>
+					<div class="studio__location" js-controller="studioLocation" js-args="{location: 'sydney'}">
+						<div class="studio__city">
+							Sydney, Australia
+						</div>
+						<div class="studio__day-and-time">
+							<div class="studio__day" js-date>
+								Fri April 29
+							</div>
+							<div class="studio__time" js-time>
+								1:59am
+							</div>
+						</div>
+					</div>
+				</div>
 				<div class="swiper-container" js-component="swiper" js-args="{
 					autoplay: 3000,
 					effect: 'fade',
@@ -21,6 +49,10 @@ excerpt: Studio Paradise
 					speed: 500
 				}">
 					<div class="swiper-wrapper">
+						{% for image in site.index-slider-images %}
+							<div class="swiper-slide" style="background-image: url({{ image.image }});" {% if image.project %}js-index-slider-project-link="{{ image.project | slugify }}"{% endif %}></div>
+						{% endfor %}
+
 						<!-- <div class="swiper-slide" style="background-image: url(/static/img/swiper-1.jpg);"></div> -->
 						<div class="swiper-slide" style="background-image: url(/static/img/1.jpg);"></div>
 						<div class="swiper-slide" style="background-image: url(/static/img/2.jpg);"></div>
@@ -118,6 +150,44 @@ excerpt: Studio Paradise
 				</p>
 
 			</div>
+
+
+			<section class="studio__services" js-scrollspy="different">
+				<div class="studio__services-column">
+					<div class="style-studio-header  studio__service-header style-studio-header--different">
+						— What Makes Us Different
+					</div>
+
+					<div class="studio__service-group">
+						<p>
+							<span class="studio__service-title">
+								In the Trenches. 
+							</span>
+							Our time spent in-house has given us insights into the customer feedback loop that many agencies never get access to. Launching award winning product lines with some of the most innovative marketing, sales, design and operations teams has taught us the complex balancing act of brand and business. 
+						</p>
+					</div>
+
+					<div class="studio__service-group">
+						<p>
+							<span class="studio__service-title">
+								New York City + Sydney.
+							</span>
+							Travel is a key part of how we operate and the brands and products we create reflect that. And offices on directly opposite sides of the world means our team literally works around the clock.
+						</p>
+					</div> 
+					<div class="studio__service-group">
+						<p>
+							<span class="studio__service-title">
+								Skin In The Game.
+							</span>
+							We've built our own brands from the ground up. And we’re still doing it. We've had successes, but more importantly failures. We’ve bounced back bigger and badder than ever. We feel your pain and understand the ever-changing landscape because we live and learn in it everyday. 
+						</p>
+					</div> 
+				</div>
+				<div class="studio__services-column">
+					<img class="studio__services-column-image" src="">
+				</div>
+			</section>
 
 			<section js-scrollspy="team">
 				<div class="style-studio-header style-studio-header--who-we-are">

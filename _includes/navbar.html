@@ -1,8 +1,3 @@
-<div class="mobile-navbar-open" js-mobile-navbar-open>
-	<div class="mobile-navbar-open__line"></div>
-	<div class="mobile-navbar-open__line"></div>
-	<div class="mobile-navbar-open__line"></div>
-</div>
 
 <div class="navbar" js-controller="navbar2" js-args="{ mobile: {% if include.mobile 0 %}true{% else %}false{% endif %}}">
 	<div class="navbar__logo" js-navbar-logo>
@@ -10,16 +5,32 @@
 			{% include svg.html type='logo--word' %}
 		</a>
 	</div>
+	<div class="mobile-navbar-open" js-mobile-navbar-open>
+		<div class="mobile-navbar-open__line"></div>
+		<div class="mobile-navbar-open__line"></div>
+		<div class="mobile-navbar-open__line"></div>
+	</div>
 	<div class="navbar__items" js-wrapper>
 		<div class="navbar__item" js-item-with-dropdown>
-			<div class="navbar__label" js-item-label js-args="{preventAlign: true, overlay: 'projects'}">Work</div>
+			<div class="navbar__label" js-item-label js-args="{
+				preventAlign: true,
+				overlay: 'projects'
+			}">
+				Work
+			</div>
 			<div class="navbar__dropdown" js-item-dropdown>
 				{% assign projects = site.projects | sort: "position" %}
 				{% for project in projects %}
-					<div class="navbar__item">
-						<div class="navbar__label" js-item-label js-navbar-project="{{ project.title | slugify }}" js-args="{overlay: 'projects'}" js-scrollspy-nav="{{ project.title | slugify }}">
-							{{ project.title }}
-						</div>
+					<div class="navbar__item {% if page.url == project.url %}is-active{% endif %}">
+						{% if include.mobile %}
+							<a class="navbar__label " href="{{ project.url }}">
+								{{ project.title }}
+							</a>
+						{% else %}
+							<div class="navbar__label" js-item-label js-navbar-project="{{ project.title | slugify }}" js-args="{overlay: 'projects'}" js-scrollspy-nav="{{ project.title | slugify }}">
+								{{ project.title }}
+							</div>
+						{% endif %}
 					</div>
 				{% endfor %}
 			</div>
@@ -28,33 +39,54 @@
 			<div class="navbar__label" js-item-label js-args="{preventAlign: true, overlay: 'studio'}" js-navbar-studio>Studio</div>
 			<div class="navbar__dropdown" js-item-dropdown>
 				<div class="navbar__item" js-item-with-dropdown>
-					<div class="navbar__label" js-item-label js-args="{overlay: 'studio'}" js-scrollspy-nav="manifesto">Manifesto</div>
-				</div>
-				<div class="navbar__item" js-item-with-dropdown>
-					<div class="navbar__label" js-item-label js-args="{overlay: 'studio'}" js-scrollspy-nav="team">Team</div>
-				</div>
-				<div class="navbar__item" js-item-with-dropdown>
-					<div class="navbar__label" js-item-label js-args="{overlay: 'studio'}" js-scrollspy-nav="services">Services</div>
-				</div>
-				<div class="navbar__item" js-item-with-dropdown>
-					<div class="navbar__label" js-item-label js-args="{overlay: 'studio'}" js-scrollspy-nav="clients">Clients</div>
-				</div>
-				<!-- <div class="navbar__dropdown"  js-item-dropdown>
-					<div class="navbar__item">
-						<div class="navbar__label" js-item-label>Jack Erwin</div>
-					</div>
-					<div class="navbar__item">
-						<div class="navbar__label" js-item-label>Some Project</div>
-					</div>
-					<div class="navbar__item">
-						<div class="navbar__label" js-item-label>Leader Bag</div>
+					<div class="navbar__label" js-item-label js-args="{
+						overlay: 'studio',
+						scrollAlignToNav: true,
+						mobileURL: '/mobile_studio.html#manifesto'
+					}" js-scrollspy-nav="manifesto">
+						Manifesto
 					</div>
 				</div>
-				-->
+				<div class="navbar__item" js-item-with-dropdown>
+					<div class="navbar__label" js-item-label js-args="{
+						overlay: 'studio',
+						scrollAlignToNav: true,
+						mobileURL: '/mobile_studio.html#different'
+					}" js-scrollspy-nav="different">
+						Different
+					</div>
+				</div>
+				<div class="navbar__item" js-item-with-dropdown>
+					<div class="navbar__label" js-item-label js-args="{
+						overlay: 'studio',
+						scrollAlignToNav: true,
+						mobileURL: '/mobile_studio.html#team'
+					}" js-scrollspy-nav="team">
+						Team
+					</div>
+				</div>
+				<div class="navbar__item" js-item-with-dropdown>
+					<div class="navbar__label" js-item-label js-args="{
+						overlay: 'studio',
+						scrollAlignToNav: true,
+						mobileURL: '/mobile_studio.html#services'
+					}" js-scrollspy-nav="services">
+						Services
+					</div>
+				</div>
+				<div class="navbar__item" js-item-with-dropdown>
+					<div class="navbar__label" js-item-label js-args="{
+						overlay: 'studio',
+						scrollAlignToNav: true,
+						mobileURL: '/mobile_studio.html#clients'
+					}" js-scrollspy-nav="clients">
+						Clients
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="navbar__item" js-item-with-dropdown>
-			<div class="navbar__label" js-item-label js-item-label js-args="{preventAlign: true, overlay: 'journal'}">Journal</div>
+			<div class="navbar__label" js-item-label js-item-label js-args="{preventAlign: true, overlay: 'journal', mobileURL: '/mobile_journal.html'}" style="margin-left: -.27em;">Journal</div>
 			<div class="navbar__dropdown" js-item-dropdown>
 				{% assign posts = site.journals %}
 				{% for post in posts reversed %}
@@ -62,7 +94,7 @@
 				    {% capture nmonth %}{{ post.next.date | date: '%Y %b' }}{% endcapture %}
 				    {% if month != nmonth %}
 						<div class="navbar__item">
-							<div class="navbar__label" js-item-label js-args="{overlay: 'journal'}" js-scrollspy-nav="{{ post.date | date: '%Y-%B' }}">
+							<div class="navbar__label" js-item-label js-args="{overlay: 'journal', mobileURL: '/mobile_journal.html#{{ post.date | '%Y-%B' }}" js-scrollspy-nav="{{ post.date | date: '%Y-%B' }}">
 								{{post.date | date:"%B"}}
 							</div>
 						</div>
@@ -70,5 +102,11 @@
 				{% endfor %}
 			</div>
 		</div>
+
+	</div>
+	<div class="mobile-navbar__footer">
+		<a class="mobile-navbar__email-address" href="mailto:hello@studioparadise.com">
+			hello@studioparadise.com
+		</a>
 	</div>
 </div>

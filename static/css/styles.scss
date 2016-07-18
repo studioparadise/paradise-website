@@ -322,8 +322,8 @@ $max: max-width;
 }
 
 @mixin rm {
-  .layout-mobile {
-    @content;    
+  .layout-mobile & {
+    @content; 
   }
 }
 
@@ -1263,16 +1263,31 @@ body {
 }
 
 
+@mixin responsive-fonts($t1, $t2) {
+  @include at-query(null, 1400px, 1799px) {
+    font-size: $t1;
+  }
+  @include at-query($min, 1800px) {
+    font-size: $t2;
+  }
+}
+// 18px —> @1400 22px —>@1800 32px
+// 36—> @1400 42px —> @1800 50px
 @mixin style-h1 {
   font-size: 26px;
   line-height: 1.07;
-  @include font-size-responsive(26px);
+  @include responsive-fonts(30px, 50px);
+}
+@mixin style-studio-heading {
+  font-size: 36px;
+  @include responsive-fonts(42px, 50px);
 }
 h1 {
   @include style-h1;
 }
 @mixin style-h2 {
   font-size: 14px;
+  @include responsive-fonts(16px, 20px);
   line-height: 1.42;
   letter-spacing: .01em;
   font-weight: 500;
@@ -1298,6 +1313,15 @@ h1 {
   color: #a6a6a6;
 }
 
+.navbar__items {
+  @include rm {
+    @include transition(transform .3s ease 0s);
+    @include transform(translateX(-300px));
+  }
+  .mobile-navbar-is-open & {
+    @include transform(translateX(0));
+  }
+}
 .navbar {
 	// @include column-no-pad(2);
 	// padding-left: $desktop-margin;
@@ -1308,14 +1332,26 @@ h1 {
 	bottom: 0;
   z-index: 100;
   @include rm {
-
+    padding-left: $mobile-margin;
+    padding-right: $mobile-margin;
+    width: 100%;
+    bottom: auto;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 70px;
+      background: white;
+    }
   }
 }
 
 .navbar__items {
   @include rm {
-    margin-left: -200%;
-    margin-top: 0 !important; // override JS
+    margin-top: 0 !important;
   }
 }
 
@@ -1329,10 +1365,6 @@ h1 {
 
   float: left;
   padding: 0 ($desktop-gutter/2);
-  @include rm {
-    padding: 0 ($mobile-gutter/2);
-    width: 100px !important;
-  }
 }
 
 .navbar__column--projects {
@@ -1366,18 +1398,37 @@ h1 {
     width: 100px;
     height: 25px;
   }
-  @include rm {
-    top: 20px;
+  .layout-mobile & {
+    position: absolute;
+    top: 24px; // 30px above and below visually aligned
     left: 20px;
     svg {
       width: 62px;
       height: 15.5px;
     }
+
   }
 }
 
 // mobile nav
+.mobile-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background: white;
+  z-index: 100;
+}
 
+.mobile-navbar__content {
+  margin-top: 70px;
+  padding-left: $mobile-margin;
+  padding-right: $mobile-margin;
+}
+.mobile-navbar-height-retainer {
+  height: 70px;
+}
 .mobile-navbar-open {
   display: none;
   position: absolute;
@@ -1401,10 +1452,38 @@ h1 {
   @include transition(transform .3s ease 0s);
 }
 
+.mobile-navbar__footer {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  @include rm {
+    display: block;
+  }
+}
+.mobile-navbar__email-address {
+  text-align: center;
+  border: 1px solid black;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: black;
+  display: block;
+  font-size: 12px;
+  @include transition(transform .3s ease 0s);
+  @include transform(translateX(-130%));
+  .mobile-navbar-is-open & {
+    @include transform(translateX(0%));
+  }
+}
 .mobile-navbar-is-open {
+  overflow-x: hidden;
+  .mobile-overflow-hide {
+    overflow: hidden;
+  }
   .fixed-content-wrapper {
-    @include transform(translateX(170px));
-  }  
+    @include transform(translateX(240px));
+  }
+
   .navbar__items {
     margin-left: 0;
   }
@@ -1415,7 +1494,7 @@ h1 {
   font-weight: 500;
   letter-spacing: .01em;
   overflow-x: hidden;
-  padding: 50px 20px;
+  padding: 0 20px 50px 20px;
   // text
   .module-text__spacer {
     display: none;
@@ -1446,6 +1525,12 @@ h1 {
     margin-bottom: 10px;
   }
 }
+.mobile-more-projects {
+
+}
+.mobile-more-projects__title {
+  margin: 40px 0;
+}
 .mobile-project {
   text-decoration: none;
   color: inherit;
@@ -1454,6 +1539,11 @@ h1 {
     margin-bottom: 8px;
   }
   margin-bottom: 15px;
+}
+.mobile-project--index {
+  .module-image__ratio {
+    margin-bottom: 8px;
+  }
 }
 .mobile-project__title {
   font-size: 18px;
@@ -1544,7 +1634,10 @@ h1 {
     }
   }
   @include rm {
-    width: 80px !important; // override js
+    width: 80px !important;  // override js
+    padding: 0;
+    margin-left: 0;
+    margin-right: 10px;
   }
 }
 .navbar__label {
@@ -1554,6 +1647,9 @@ h1 {
   line-height: 1.1; // 20px too much in this case
   color: #999;
   cursor: pointer;
+  &:hover {
+    color: black;
+  }
 }
 .navbar__dropdown {
   display: none;
@@ -1596,6 +1692,7 @@ h1 {
 //index
 .index-swiper {
 	@include column(6);
+  position: relative;
   @include rm {
     width: 100%;
     display: none;
@@ -1608,6 +1705,7 @@ h1 {
 .swiper-slide {
   margin-top: 90px;
   height: calc(100vh - 180px);
+  cursor: pointer;
   @include background-size-cover;
 }
 
@@ -1649,6 +1747,12 @@ div[js-index-content="index"]{
   display: block;
 }
 
+.layout-mobile {
+  div[js-index-content] {
+    display: block;
+  }
+}
+
 //modules
 //modules
 //modules
@@ -1684,10 +1788,13 @@ div[js-index-content="index"]{
     }
   }
 }
+
 .module-image__ratio {
   position: relative;
   margin-bottom: 35px;
-  @include rm { margin-bottom: 20px; };
+  @include rm { 
+    margin-bottom: 8px; 
+  };
   > img {
     position: absolute;
     top: 0;
@@ -1720,6 +1827,10 @@ div[js-index-content="index"]{
   @include row;
   margin-top: 70px;
   margin-bottom: 140px;
+  @include rm {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 .module-text__spacer {
   @include nested-column(2, 6);
@@ -1748,8 +1859,16 @@ div[js-index-content="index"]{
   margin-top: 28px;
   font-size: 14px;
   letter-spacing: .02em;
-  color: $color-gray;
   cursor: pointer;
+  span {
+    @include transition(color .15s ease 0s);
+    color: $color-gray;    
+  }
+  &:hover {
+    span {
+      color: black;
+    }
+  }
 }
 
 .module-text__body {
@@ -1862,6 +1981,18 @@ div[js-index-content="index"]{
   margin-bottom: 70px;
   @include clearfix;
 }
+.module-credits__content {
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+  column-count: 2;
+  padding-left: $desktop-gutter/2;
+  padding-right: $desktop-gutter/2;
+  .js-viewing-full-proejct & {
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+  }
+}
 .module-credits__credit {
   text-decoration: none;
   color: inherit;
@@ -1935,13 +2066,22 @@ div[js-index-content="index"]{
   // z-index: 5;
   background: white;
   @include container-row;
+  @include rm {
+    padding-bottom: 600px;
+  }
 }
 .studio__spacer {
   @include column(2);
+  @include rm {
+    display: none;
+  }
 }
 .studio__content {
   @include column(6);
   position: relative;
+  @include rm {
+    @include column(8);
+  }
 }
 .studio__locations {
   position: absolute;
@@ -1949,6 +2089,9 @@ div[js-index-content="index"]{
   left: 0;
   right: 0;
   @include style-h2;
+}
+.studio__locations--index {
+  margin-top: -3px;
 }
 .studio__location {
   @include nested-column(2, 6);
@@ -1975,6 +2118,9 @@ div[js-index-content="index"]{
 .studio__info {
   @include style-h1;
   font-size: 36px;
+  @include rm {
+    font-size: 16px;
+  }
   p:first-child {
     margin-top: 0;
   }
@@ -1982,29 +2128,55 @@ div[js-index-content="index"]{
 
 .style-studio-header {
   @include style-h1;
+  @include rm {
+    font-size: 22px;
+    line-height: 1.1;
+  }
 }
 .style-studio-header--who-we-are {
   margin-top: 140px;
   margin-bottom: 70px;
+  @include rm {
+    margin: 40px 0;
+  }
+}
+.style-studio-header--different {
+  margin-top: 140px;
+  margin-bottom: 70px;
+  @include rm {
+    margin: 40px 0;
+  }
 }
 
 // team
 .studio__header-team {
   margin-top: 140px;  
+  @include rm {
+    margin-top: 40px;
+  }
 }
 .studio__team {
   margin-top: 0;
   margin-bottom: 70px;
   @include row;
+  @include rm {
+    margin-bottom: 0;
+  }
 }
 .studio__team-member {
   @include column(4);
-  &:nth-child(odd) {
-    clear: both;
-  }
   margin-bottom: 70px;
   font-size: 18px;
   line-height: 20px;
+  &:nth-child(odd) {
+    clear: both;
+  }
+  @include rm {
+    @include column(8);
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.1;
+  }
 }
 .studio__team-img {
   display: block;
@@ -2012,6 +2184,9 @@ div[js-index-content="index"]{
   height: 300px;
   width: 100%;
   background: black;
+  @include rm {
+    margin-bottom: 20px;
+  }
 }
 .studio__team-info {
   font-style: italic;
@@ -2028,12 +2203,31 @@ div[js-index-content="index"]{
   font-size: 18px;
   @include row;
   margin-bottom: 140px;
+
+  @include rm {
+    margin-bottom: 0;
+    font-size: 16px;
+  }
+}
+.studio__services-summary {
+  @include rm {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
 }
 .studio__services-column {
   @include column(4);
+  @include rm {
+    @include column(8);
+  }
 }
 .studio__service-header {
   margin-bottom: 70px;
+  @include rm {
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
 }
 .studio__header {
   font-weight: 500;
@@ -2043,6 +2237,12 @@ div[js-index-content="index"]{
 }
 .studio__service-group {
   margin-bottom: 70px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @include rm {
+    margin-bottom: 40px;
+  }
 }
 .studio__header {
   font-weight: 500;
@@ -2059,6 +2259,9 @@ div[js-index-content="index"]{
 .studio__clients {
   font-size: 18px;
   @include row;
+  @include rm {
+    font-size: 16px;
+  }
 }
 .studio__clients-column {
   @include column(4);
@@ -2081,6 +2284,10 @@ div[js-index-content="index"]{
   display: block;
   text-decoration: none;
   color: inherit;
+  @include rm {
+    font-size: 16px;
+    line-height: 1.1;
+  }
 }
 
 // journal
@@ -2088,12 +2295,24 @@ div[js-index-content="index"]{
 // journal
 .index-journal {
   @include column(6);
-  padding-bottom: 35px;
+  padding-bottom: 500px;
+  @include rm {
+    @include column(8);
+  }
 }
 .index-journal__journal {
   padding-top: 35px;
   margin-top: 35px;
   border-top: 1px solid rgba(black, .1);
+  a {
+    color: black;
+    &:active, &:visited {
+      color: black;
+    }
+    &:hover {
+      color: $color-gray;
+    }
+  }
 }
 .index-journal .index-journal__month:first-child .index-journal__journal {
   padding-top: 0;
@@ -2128,6 +2347,12 @@ div[js-index-content="index"]{
   @include nested-column(4, 6);
   margin-top: 35px;
   margin-bottom: 35px;
+  @include rm {
+    @include column(8);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
 }
 
 //footer
@@ -2233,6 +2458,21 @@ div[js-index-content="index"]{
   text-align: center;
   border: 1px solid black;
   margin-left: -1px;
+  svg {
+    height: 10px;
+    path, rect, polygon {
+      fill: black;
+    }
+  }
+  @include transition(background .15s ease 0s);
+  &:hover {
+    background: black;
+    svg {
+      path, rect, polygon {
+        fill: white;
+      }
+    } 
+  }
 }
 .footer__close {
   position: absolute;

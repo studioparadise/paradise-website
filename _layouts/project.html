@@ -8,12 +8,21 @@ layout: mobile
 		{% include render_module.html mobile=true %}
 	{% endfor %}
 
-	{% if page.next.url %}
-		<a class="mobile__next" href="{{ page.next.url }}">
-			Up Next
-			<span class="mobile__next-project">
-				{{ page.next.title }}
-			</span>
-		</a>
-	{% endif %}
+	<div class="mobile-more-projects">
+		<div class="mobile-more-projects__title">
+			More Projects
+		</div>
+		<div class="mobile-more-projects__projects">
+			{% assign projects = site.projects | sort: "position" %}
+			{% for project in projects %}
+				{% if project.url != page.url %}
+					<a class="mobile-project" href="{{ project.url }}">
+						{% for module in project.modules limit: 1 %}
+							{% include render_module.html mobile=true %}
+						{% endfor %}
+					</a>
+				{% endif %}
+			{% endfor %}
+		</div>
+	</div>
 </div>

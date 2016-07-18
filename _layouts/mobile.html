@@ -20,12 +20,17 @@
 	</script>
 </head>
 <body class="layout-mobile">
-		<!--[if lt IE 8]>
-		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-		<![endif]-->
-		{% include navbar.html mobile='true' %}
-		{{ content }}
-		{% include footer_scripts.html %}		
-	</body>
+	<!--[if lt IE 8]>
+	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+	<div class="mobile-navbar-height-retainer"></div>
+	{% include navbar.html mobile=true %}
+	<div class="mobile-overflow-hide">
+		<div class="fixed-content-wrapper">
+			{{ content }}
+		</div>
+	</div>
+	{% include footer_scripts.html %}
+</body>
 </html>
 
