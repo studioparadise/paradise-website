@@ -45,10 +45,10 @@ modules:
   images:
   - image: "/uploads/7JE_AD_01.jpg"
     alt: 
-    caption: test123
+    caption: 
   - image: "/uploads/7JE_AD_02.jpg"
     alt: 
-    caption: test123
+    caption: 
 - type: image
   image: "/uploads/8JE_AD_03.jpg"
   dimensions: 2400x1740
