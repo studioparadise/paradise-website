@@ -37,12 +37,8 @@ modules:
   image: "/uploads/4Stationery1.jpg"
   dimensions: 2400x1799
 - type: image
-  credits:
-  - url: 
-    emphasis: 
-    name: 
-  image: "/uploads/5Stationery2.jpg"
-  dimensions: 2400x1599
+  image: "/uploads/JE_1_20160716.jpg"
+  dimensions: 2400x1600
 - type: image
   image: "/uploads/6Stationery3.jpg"
 - type: images-2up
