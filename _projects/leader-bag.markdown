@@ -21,7 +21,7 @@ modules:
 - type: images-2up
   images:
   - image: "/uploads/Leader_8_20160715.jpg"
-    caption: 123
+    caption: 
   - image: "/uploads/Leader_4.jpg"
 - type: image
   image: "/uploads/Leader_6_20160715.jpg"
