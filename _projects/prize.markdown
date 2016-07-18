@@ -48,7 +48,7 @@ modules:
   image: "/uploads/Jean_Pins.jpg"
   dimensions: 2400x1600
 - type: images-2up
-  image:
+  images:
   - image: "/uploads/Prize_2up2B_20160718.jpg"
     dimensions: 1200x1471
   - image: "/uploads/Prize_2up2B_20160718.jpg"
