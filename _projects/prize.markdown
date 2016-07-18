@@ -35,9 +35,10 @@ modules:
 - type: image
   image: "/uploads/Steph_pins.jpg"
   dimensions: 2400x1600
-- type: image
-  image: "/uploads/MonsterLookbook4.jpg"
-  dimensions: 2400x1708
+- type: images-2up
+  images:
+  - image: "/uploads/Prize_2up1_20160718.jpg"
+  - image: "/uploads/Prize_2up2_20160718.jpg"
 - type: image
   image: "/uploads/MonsterLookbook1.jpg"
   dimensions: 2400x1745
