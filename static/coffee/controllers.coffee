@@ -23,7 +23,7 @@ root.controllers.project = ($element, args) ->
     $trigger = $element.find '[js-index-view-full-project]'
     toggleFullProjectView = ->
 
-      $el = $element.animate opacity: 0, 500
+      $el = $element.animate opacity: 0, 600, 'easeInOutExpo'
       $el.promise().then ->
         if $('html').hasClass 'js-viewing-full-project'
           $('html').removeClass 'js-viewing-full-project'
@@ -31,7 +31,7 @@ root.controllers.project = ($element, args) ->
           $('html').addClass 'js-viewing-full-project'
         top = $element.offset().top
         $(window).scrollTop top
-        $element.animate opacity: 1, 500
+        $element.animate opacity: 1, 600, 'easeInOutExpo'
 
       $(window).trigger 'resize'
 
