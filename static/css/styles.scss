@@ -1647,6 +1647,7 @@ h1 {
   line-height: 1.1; // 20px too much in this case
   color: #999;
   cursor: pointer;
+  @include transition(color .2s ease 0s);
   &:hover {
     color: black;
   }

@@ -7501,7 +7501,10 @@ h1 {
   font-weight: 500;
   line-height: 1.1;
   color: #999;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-transition: color 0.2s ease 0s;
+  -moz-transition: color 0.2s ease 0s;
+  -o-transition: color 0.2s ease 0s; }
   @media screen and (min-width: 1400px) and (max-width: 1799px) {
     .navbar__label {
       font-size: 16px; } }
