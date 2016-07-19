@@ -206,7 +206,7 @@ root.controllers.navbar2 = ($element, args) ->
 
         $("html, body").stop(true, true).animate
           scrollTop: offset
-        , 600, 'easeInOutExpo', ->
+        , 750, 'easeInOutExpo', ->
           api.scrolling = false
           activateItem $item
 
