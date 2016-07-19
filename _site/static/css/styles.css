@@ -8039,12 +8039,6 @@ div[js-index-content="index"] {
 .show-on-full-project {
   display: none; }
 
-.content-navbar-grid-spacer,
-.index-project {
-  -webkit-transition: all 0.4s ease 0s;
-  -moz-transition: all 0.4s ease 0s;
-  -o-transition: all 0.4s ease 0s; }
-
 .js-viewing-full-project .hide-on-full-project {
   display: none; }
 .js-viewing-full-project .show-on-full-project {

@@ -22,18 +22,24 @@ root.controllers.project = ($element, args) ->
   do handleViewFullProject = ->
     $trigger = $element.find '[js-index-view-full-project]'
     toggleFullProjectView = ->
-      if $('html').hasClass 'js-viewing-full-project'
-        $('html').removeClass 'js-viewing-full-project'
-      else
-        $('html').addClass 'js-viewing-full-project'
+
+      $el = $element.animate opacity: 0, 500
+      $el.promise().then ->
+        if $('html').hasClass 'js-viewing-full-project'
+          $('html').removeClass 'js-viewing-full-project'
+        else
+          $('html').addClass 'js-viewing-full-project'
+        top = $element.offset().top
+        $(window).scrollTop top
+        $element.animate opacity: 1, 500
 
       $(window).trigger 'resize'
 
-      toggleFullProjectView = ->
+
+      # toggleFullProjectView = ->
         # v2
         # try scrolling to, then removing other elements.
-        $("html, body").animate
-
+        # $("html, body").animate
 
       # FULL_PROJECT_ANIMATION_DURATION = 1000
       # intervalID = setInterval ->
