@@ -22,18 +22,32 @@ root.controllers.project = ($element, args) ->
   do handleViewFullProject = ->
     $trigger = $element.find '[js-index-view-full-project]'
     toggleFullProjectView = ->
-
       $el = $element.animate opacity: 0, 600, 'easeInOutExpo'
-      $el.promise().then ->
-        if $('html').hasClass 'js-viewing-full-project'
-          $('html').removeClass 'js-viewing-full-project'
-        else
-          $('html').addClass 'js-viewing-full-project'
+      scrollToTop = ->
         top = $element.offset().top
         $(window).scrollTop top
         $element.animate opacity: 1, 600, 'easeInOutExpo'
+        $(window).trigger 'resize'
 
-      $(window).trigger 'resize'
+      $el.promise().then ->
+        if $('html').hasClass 'js-viewing-full-project'
+          # closing full project view
+          $('html').removeClass 'js-viewing-full-project'
+          $(".navbar").css(opacity: 0)
+          _.delay ->
+            $(".navbar").animate opacity: 1, 300, 'easeInOutExpo'
+            scrollToTop()
+          , 400
+          scrollToTop()
+
+        else
+          # opening full project view
+          $(".navbar").animate opacity: 0, 300, 'easeInOutExpo', ->
+            $('html').addClass 'js-viewing-full-project'
+            scrollToTop()
+
+
+
 
 
       # toggleFullProjectView = ->
