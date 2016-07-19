@@ -120,6 +120,9 @@ root.controllers.navbar2 = ($element, args) ->
       marginTop: (wHeight/2) - (height/2)
   $(window).on 'resize', centerNavbar
 
+  api.isMobile = ->
+    return $("body").hasClass 'layout-mobile'
+
   $allContent = $("[js-index-content]")
   api.hideAllContentAndFadeInOne = ($content) ->
     # console.log "Loading content: ", $content
@@ -143,16 +146,23 @@ root.controllers.navbar2 = ($element, args) ->
         return false
 
   showDropdown = ($dropdown, apply) ->
-    if apply and not $dropdown.hasClass 'is-open'
-      $dropdown.show()
-      _.delay ->  $dropdown.addClass 'is-open', 100
+    if api.isMobile()
+      if apply and not $dropdown.hasClass 'is-open'
+        $dropdown.show()
+      else
+        $dropdown.hide()
+        $dropdown.find('.is-active').removeClass 'is-active'
     else
-      $dropdown.removeClass 'is-open'
-      _.delay ->
-        if not $dropdown.hasClass 'is-open'
-          $dropdown.hide()
-      , 600
-      $dropdown.find('.is-active').removeClass 'is-active'
+      if apply and not $dropdown.hasClass 'is-open'
+        $dropdown.show()
+        _.delay ->  $dropdown.addClass 'is-open', 100
+      else
+        $dropdown.removeClass 'is-open'
+        _.delay ->
+          if not $dropdown.hasClass 'is-open'
+            $dropdown.hide()
+        , 600
+        $dropdown.find('.is-active').removeClass 'is-active'
 
   api.clearNavbarState = ->
     for dropdown in $element.find('[js-item-dropdown]')
