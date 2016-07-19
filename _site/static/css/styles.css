@@ -7516,13 +7516,23 @@ h1 {
   position: absolute;
   right: -200px;
   width: 200px;
-  -webkit-transition: 0.2s left ease 0s;
-  -moz-transition: 0.2s left ease 0s;
-  -o-transition: 0.2s left ease 0s;
+  -webkit-transition: opacity 0.5s ease 0s, transform 0.5s ease 0s;
+  -moz-transition: opacity 0.5s ease 0s, transform 0.5s ease 0s;
+  -o-transition: opacity 0.5s ease 0s, transform 0.5s ease 0s;
   top: 0;
   z-index: 0; }
   .layout-mobile .navbar__dropdown {
     margin-top: 0 !important; }
+  .layout-default .navbar__dropdown {
+    opacity: 0;
+    -ms-transform: translateX(-20px);
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px); }
+    .layout-default .navbar__dropdown.is-open {
+      opacity: 1;
+      -ms-transform: translateX(0px);
+      -webkit-transform: translateX(0px);
+      transform: translateX(0px); }
 
 .content-wrapper {
   margin-left: auto;

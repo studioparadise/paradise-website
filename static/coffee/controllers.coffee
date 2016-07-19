@@ -3,6 +3,21 @@
 
 root = exports ? this
 
+root.controllers.indexSwiper = ($element, args) ->
+  swiper = root.components.swiper $element,
+    loop: true
+    autoplay: 3000,
+    effect: 'fade',
+    fade: {
+      crossFade: true
+    },
+    speed: 500
+    onInit: (swiper) ->
+      $triggers = $element.find '[js-index-slider-project-link]'
+      $triggers.on 'click', ->
+        window.location.hash = $(this).attr 'js-index-slider-project-link'
+
+
 root.controllers.project = ($element, args) ->
   do handleViewFullProject = ->
     $trigger = $element.find '[js-index-view-full-project]'
@@ -128,11 +143,15 @@ root.controllers.navbar2 = ($element, args) ->
         return false
 
   showDropdown = ($dropdown, apply) ->
-    if apply and not $dropdown.is(':visible')
+    if apply and not $dropdown.hasClass 'is-open'
       $dropdown.show()
-
+      _.delay ->  $dropdown.addClass 'is-open', 100
     else
-      $dropdown.hide()
+      $dropdown.removeClass 'is-open'
+      _.delay ->
+        if not $dropdown.hasClass 'is-open'
+          $dropdown.hide()
+      , 600
       $dropdown.find('.is-active').removeClass 'is-active'
 
   api.clearNavbarState = ->
@@ -177,7 +196,7 @@ root.controllers.navbar2 = ($element, args) ->
 
         $("html, body").stop(true, true).animate
           scrollTop: offset
-        , 1000, 'easeInOutExpo', ->
+        , 600, 'easeInOutExpo', ->
           api.scrolling = false
           activateItem $item
 
@@ -270,7 +289,6 @@ root.controllers.navbar2 = ($element, args) ->
         $scrollSpyNav.click()
         console.log 'clicking scrollspy nav', $scrollSpyNav
       , 500
-
 
   # do handleSecondaryNav = ->
   #   $navs = $element.find '[js-navbar-project]'

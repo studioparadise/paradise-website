@@ -1656,12 +1656,25 @@ h1 {
   position: absolute;
   right: -200px;
   width: 200px;
-  @include transition(.2s left ease 0s);
+  @include transition(
+    opacity .5s ease 0s,
+    transform .5s ease 0s
+  );
   top: 0;
   // border: 1px solid blue;
   z-index: 0;
   @include rm {
     margin-top: 0 !important; // override js
+  }
+
+  .layout-default & {
+    opacity: 0;
+    @include transform(translateX(-20px));
+
+    &.is-open {
+      opacity: 1;
+      @include transform(translateX(0px));
+    }    
   }
 }
 
