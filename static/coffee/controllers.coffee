@@ -1,6 +1,5 @@
 ---
 ---
-
 root = exports ? this
 
 root.controllers.indexSwiper = ($element, args) ->
@@ -27,46 +26,105 @@ root.controllers.project = ($element, args) ->
         top = $element.offset().top
         $(window).scrollTop top
         $element.animate opacity: 1, 600, 'easeInOutExpo'
-        $(window).trigger 'resize'
 
       $el.promise().then ->
         if $('html').hasClass 'js-viewing-full-project'
           # closing full project view
           $('html').removeClass 'js-viewing-full-project'
           $(".navbar").css(opacity: 0)
+
+          $(".navbar__dropdown").addClass 'no-transition'
+          $(window).trigger 'resize'
+
+          # centerNavbar
+          # NEED TO CENTER NAVBAR WITHOUT ANIMATING TOP, BEFORE FADE IN.
+
           _.delay ->
             $(".navbar").animate opacity: 1, 300, 'easeInOutExpo'
             scrollToTop()
+            $(".navbar__dropdown").removeClass 'no-transition'
           , 400
           scrollToTop()
-
         else
           # opening full project view
           $(".navbar").animate opacity: 0, 300, 'easeInOutExpo', ->
             $('html').addClass 'js-viewing-full-project'
+            $(window).trigger 'resize'
             scrollToTop()
 
 
 
+    toggleFullProjectView = ->
+      # v2 toggle full project
+      # try removing content above current project
+      $currentRow = $element.closest ".index-project-row"
+      $projectRows = $ ".index-project-row"
+      currentProjectIndex = $projectRows.index $currentRow
+
+      # hide projects above this one
+      @hideProjectsBeforeIndex = (index) ->
+        $projectRowsBefore = $projectRows.filter ":lt(#{index})"
+        $projectRowsBefore.hide()
 
 
-      # toggleFullProjectView = ->
-        # v2
-        # try scrolling to, then removing other elements.
-        # $("html, body").animate
+      @fadeOutNav = (cb) ->
+        $result = $(".navbar").animate opacity: 0, 500, 'easeInOutExpo'
+        if cb
+          $result.promise().then cb
 
-      # FULL_PROJECT_ANIMATION_DURATION = 1000
-      # intervalID = setInterval ->
-      #   $('html, body').scrollTop($trigger.closest('.index-project').offset().top)
-      # , 1
-      # _.delay ->
-      #   clearTimeout intervalID
-      # , FULL_PROJECT_ANIMATION_DURATION
+      @fadeInNav = (cb) ->
+        $result = $(".navbar").animate opacity: 1, 500, 'easeInOutExpo'
+        if cb
+          $result.promise().then cb
+
+      # NOTE: window trigger resize repositions nav. It needs to fire earlier.
+      # to prevent FOUC. It seems it's not in the right position
+      @enterFPV = ->
+        @fadeOutNav ->
+          $('html').addClass 'js-viewing-full-project'
+          $(window).trigger 'resize'
+          $element.find('.animate-in').removeClass('animating-out').addClass 'animating-in'
+
+      @exitFPV = ->
+        $('html').addClass 'js-viewing-full-project--animating-out'
+        $('html').removeClass 'js-viewing-full-project'
+
+        _.delay =>
+          $('html').removeClass 'js-viewing-full-project--animating-out'
+          @fadeInNav()
+        , 1000
+        $projectRows.show()
+        $(window).trigger 'resize'
+        $('html, body').scrollTop $element.offset().top
+        $element.find('.animate-in').addClass('animating-out').removeClass 'animating-in'
+
+
+      @toggleFPV = ->
+        if $('html').hasClass 'js-viewing-full-project'
+          @exitFPV()
+        else
+          @enterFPV()
+
+      # scroll to top of project first. then hide content above.
+      if not $element.offset().top == $(window).scrollTop()
+        duration = 500
+      else
+        duration = 0
+
+      $result = $('html, body').animate
+        scrollTop: $element.offset().top
+      , duration, 'easeInOutExpo'
+      $result.promise().then =>
+        @hideProjectsBeforeIndex currentProjectIndex
+        $('html, body').scrollTop 0
+
+        @toggleFPV()
+
     $trigger.on 'click', toggleFullProjectView
 
-    $(document).keyup (e) =>
-      if (e.keyCode == 27)
-        toggleFullProjectView()
+    # $(document).keyup (e) =>
+    #   if (e.keyCode == 27)
+    #     toggleFullProjectView()
 
 
 root.controllers.moduleCredits = ($element, args) ->
@@ -138,6 +196,7 @@ root.controllers.navbar2 = ($element, args) ->
     wHeight = $(window).height()
     $wrapper.css
       marginTop: (wHeight/2) - (height/2)
+
   $(window).on 'resize', centerNavbar
 
   api.isMobile = ->

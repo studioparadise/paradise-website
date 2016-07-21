@@ -1198,6 +1198,22 @@ $desktop-margin: 35px;
     opacity: 1;
   }
 }
+@include keyframe(fadeInLeftBig) {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+    @include transform(translateX(-50px));
+  }
+  100% {
+    opacity: 1;
+    @include transform(translateX(0px));
+  }
+}
+
 @include keyframe(fadeIn) {
   0% { opacity: 0; }
   100% { opacity: 1; }
@@ -1687,6 +1703,7 @@ h1 {
   z-index: 2;
 }
 .content-navbar-grid-spacer {
+  overflow: hidden;
 	@include column(2);
   @include rm {
     display: none;
@@ -1787,6 +1804,7 @@ div[js-index-content="index"]{
 // hero module
 .module-hero {
   margin-right: -1 * $desktop-margin;
+  @include transition(margin .1s linear 0s);
   .js-viewing-full-project & {
     margin-left: -1 * $desktop-margin;
   }
@@ -1849,6 +1867,7 @@ div[js-index-content="index"]{
 .module-text__spacer {
   @include nested-column(2, 6);
   @include style-body;
+  @include transition(width 1s ease 0s);
   .js-viewing-full-project & {
     @include column(1);
   }
@@ -1864,6 +1883,7 @@ div[js-index-content="index"]{
 .module-text__excerpt {
   @include style-h1;
   @include nested-column(3, 6);
+
   .js-viewing-full-project & {
     @include column(3);
   }
@@ -1888,13 +1908,23 @@ div[js-index-content="index"]{
 .module-text__body {
   display: none;
   opacity: 0;
+
+  @include transition(all .5s ease 1s);
   @include transform(translateX(100px));
-  @include transition(all .3s ease 0s);
-  .js-viewing-full-project & {
+
+  .js-viewing-full-project &,
+  .js-viewing-full-project--animating-out {
     @include column(3);
     display: block;
-    @include transform(translateX(0px));
+  }
+
+  &.animating-in {
     opacity: 1;
+    @include transform(translateX(0px));
+  }
+  .js-viewing-full-project--animating-out & {
+    opacity: 0;
+    @include transform(translateX(100px));
   }
 
   @include style-body;
@@ -2046,12 +2076,12 @@ div[js-index-content="index"]{
 
 .content-navbar-grid-spacer,
 .index-project {
-  // @include transition(all .4s ease 0s);
+  @include transition(all 1s ease 0s);
 }
 
 .js-viewing-full-project {
   .hide-on-full-project {
-    display: none;    
+    display: none; 
   }
   .show-on-full-project {
     display: block;
@@ -2059,7 +2089,7 @@ div[js-index-content="index"]{
   .content-navbar-grid-spacer {
     width: 0%;
     height: .1px;
-    overflow: hidden;
+    padding: 0;
   }
   .index-project {
     @include column(8);
