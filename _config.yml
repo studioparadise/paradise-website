@@ -41,9 +41,18 @@ instagram: igusername
 phone: 
 email: 
 index-slider-images:
-- image: 
+- image: "/uploads/Kaelen_HeroMain_20160718.jpg"
   alt: 
-  project: Jack Erwin
+  project: Kaelen
+- image: "/uploads/Leader_HeroMain_20160716.jpg"
+  alt: 
+  project: Leader Bag
+- image: "/uploads/Prize_HeroMain_20160718.jpg"
+  alt: 
+  project: Prize
+- image: "/uploads/Saturdays_HeroMain_20160718.jpg"
+  alt: 
+  project: Saturdays
 gems:
 - jekyll-coffeescript
 exclude:
