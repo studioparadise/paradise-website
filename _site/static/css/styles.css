@@ -8129,19 +8129,11 @@ div[js-index-content="index"] {
 .js-viewing-full-project .show-on-full-project {
   display: block; }
 .js-viewing-full-project .content-navbar-grid-spacer {
-  width: 0%;
-  height: .1px;
+  width: 1px;
+  height: 100vh;
   padding: 0; }
 .js-viewing-full-project .index-project {
-  width: 100%;
-  float: left; }
-  @media screen and (min-width: 850px) {
-    .js-viewing-full-project .index-project {
-      padding-left: 10px;
-      padding-right: 10px; } }
-  .layout-mobile .js-viewing-full-project .index-project {
-    padding-left: 10px;
-    padding-right: 10px; }
+  width: 99%; }
 .js-viewing-full-project .navbar {
   display: none; }
 

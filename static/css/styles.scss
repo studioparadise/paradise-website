@@ -2090,12 +2090,15 @@ div[js-index-content="index"]{
     display: block;
   }
   .content-navbar-grid-spacer {
-    width: 0%;
-    height: .1px;
+    width: 1px;
+    height: 100vh;
     padding: 0;
+    // background: blue;
   }
   .index-project {
-    @include column(8);
+    // @include column(8);
+    width: 99%;
+    // background: red;
   }
   .navbar {
     display: none;
