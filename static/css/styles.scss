@@ -1905,6 +1905,21 @@ div[js-index-content="index"]{
     span {
       color: black;
     }
+    svg {
+      rect, path, polygon {
+        fill: black;
+      }
+    }
+  }
+  svg {
+    width: 23px;
+    height: 11px;
+    vertical-align: middle;
+    margin-left: 5px;
+    rect, path, polygon {
+      @include transition(fill .15s ease 0s);
+      fill: rgba(black, .3);
+    }
   }
 }
 
