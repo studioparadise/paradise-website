@@ -356,6 +356,7 @@ html, body {
   padding: 0;
   margin: 0;
   font-family: Arial;
+  overflow-x: hidden;
 }
 
 html.navbar-mobile-open {
@@ -1759,9 +1760,11 @@ h1 {
   }
 }
 .index-project__close {
-  position: absolute;
+  position: fixed;
   top: 35px;
   right: 35px;
+  z-index: 2;
+  cursor: pointer;
   svg {
     width: 20px;
     height: 20px;

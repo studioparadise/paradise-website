@@ -18,6 +18,7 @@ root.controllers.indexSwiper = ($element, args) ->
 
 
 root.controllers.project = ($element, args) ->
+  api = {}
   do handleViewFullProject = ->
     $trigger = $element.find '[js-index-view-full-project]'
     toggleFullProjectView = ->
@@ -54,7 +55,7 @@ root.controllers.project = ($element, args) ->
 
 
 
-    toggleFullProjectView = ->
+    api.toggleFullProjectView = ->
       # v2 toggle full project
       # try removing content above current project
       $currentRow = $element.closest ".index-project-row"
@@ -84,6 +85,10 @@ root.controllers.project = ($element, args) ->
           $('html').addClass 'js-viewing-full-project'
           $(window).trigger 'resize'
           $element.find('.animate-in').removeClass('animating-out').addClass 'animating-in'
+          _.delay ->
+            $projectRows.show()
+            $('html, body').scrollTop $element.offset().top
+          , 600
 
       @exitFPV = ->
         $('html').addClass 'js-viewing-full-project--animating-out'
@@ -106,10 +111,14 @@ root.controllers.project = ($element, args) ->
           @enterFPV()
 
       # scroll to top of project first. then hide content above.
-      if not $element.offset().top == $(window).scrollTop()
-        duration = 500
+      scrollTopDifference = $(window).scrollTop() - $element.offset().top
+      if scrollTopDifference > 100
+        if scrollTopDifference > 1000
+          duration = 1000
+        else
+          duration = 500
       else
-        duration = 0
+        duration = 200
 
       $result = $('html, body').animate
         scrollTop: $element.offset().top
@@ -120,12 +129,23 @@ root.controllers.project = ($element, args) ->
 
         @toggleFPV()
 
-    $trigger.on 'click', toggleFullProjectView
+    $trigger.on 'click', api.toggleFullProjectView
+
+    # bind close handler once.
+    $close = $('[js-index-project-close]')
+    if not $close.data 'js-loaded'
+      $close.on 'click', ->
+        $project = $("[js-index-project]:in-viewport(500):first")
+        projectAPI = $project.data 'js-controller'
+        projectAPI.toggleFullProjectView()
+
+      $close.data 'js-loaded', true
 
     # $(document).keyup (e) =>
     #   if (e.keyCode == 27)
     #     toggleFullProjectView()
 
+  return api
 
 root.controllers.moduleCredits = ($element, args) ->
   ### Distribute credits into each column.

@@ -64,14 +64,14 @@ excerpt: Studio Paradise
 <div class="content-wrapper" js-index-content="projects">
 	<div class="content">
 		<div class="index-projects">
+			<div class="index-project__close show-on-full-project" js-index-project-close>
+				{% include svg.html type="x" %}
+			</div>
 			{% assign projects = site.projects | sort: "position" %}
 			{% for project in projects %}
 				<div class="row index-project-row" js-scrollspy="{{ project.title | slugify }}">
 					<div class="content-navbar-grid-spacer">&nbsp;</div>
 					<article class="index-project" js-index-project="{{ project.title | slugify }}" js-controller="project">
-						<div class="index-project__close show-on-full-project">
-							{% include svg.html type="x" %}
-						</div>
 						<div class="index-project__inner">
 							<!-- <span class="index-project-debug">
 								{{ project.title }}
