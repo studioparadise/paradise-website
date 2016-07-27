@@ -1519,6 +1519,7 @@ h1 {
   .module-text {
     margin: 20px 0 40px 0;
   }
+
   .module-text__excerpt {
     float: none;
     width: 100%;
@@ -1835,6 +1836,9 @@ div[js-index-content="index"]{
     margin-left: -1 * $desktop-margin;
   }
 }
+.module-hero__background {
+  @include background-size(cover);
+}
 
 // image module
 .module-image {
@@ -1986,6 +1990,12 @@ div[js-index-content="index"]{
   }
 }
 
+.module-text__body--mobile {
+  display: block;
+  opacity: 1;
+  @include transform(translateX(0));
+  @include column(8);
+}
 // images 2up module
 .module-images-2up {
   @include row;
@@ -2516,6 +2526,7 @@ div[js-index-content="index"]{
   position: absolute;
   right: 0;
   top: 3px;
+  cursor: pointer;
   svg {
     width: 23.5px;
     height: 11.5px;
@@ -2539,6 +2550,12 @@ div[js-index-content="index"]{
   border-bottom: 1px solid black;
   width: 100%;
 }
+
+.footer-signup__error {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
 
 .footer-social {
   margin-top: 24px;

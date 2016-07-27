@@ -12,20 +12,24 @@
 	{% case module.type %}
 	{% when 'hero' %}
 		<div class="hero__column">
-			{% if mobile %}
+			{% if include.mobile %}
 				<!-- <div class="module-image__ratio" data-responsive-image-dimensions="{{ module.dimensions | default: '2400x755' }}">
 					<img class="hero__img lazyload" data-src="{{ module.mobile_image }}" alt="{{ module.alt | default: '' }}" />
 				</div>-->
 				<div class="module-image__ratio" data-responsive-image-dimensions="{{ module.dimensions | default: '2400x755' }}">
 					<img class="hero__img lazyload" data-src="{{ module.image }}" alt="{{ module.alt | default: '' }}" />
 				</div>
-				<div class="hide-on-mobile mobile-project__title">
+				<div class="mobile-project__title">
 					{{ project.title }}
 				</div>
 			{% else %}
+				<div class="module-hero__background" style="background-image: url({{ module.image }});">
+				</div>
+				<!--
 				<div class="module-image__ratio" data-responsive-image-dimensions="{{ module.dimensions | default: '2400x755' }}">
 					<img class="hero__img lazyload" data-src="{{ module.image }}" alt="{{ module.alt | default: '' }}" />
 				</div>
+				-->
 			{% endif %}
 		</div>
 	{% when 'image' %}
@@ -58,24 +62,32 @@
 				</span>
 				&nbsp;
 			</div>
-			<div class="module-text__excerpt">
-				{{ module.excerpt | default: "" }}
-				<div class="module-text__view-full" js-index-view-full-project>
-					<span class="hide-on-full-project">
-						View Full Project
-						{% include svg.html type="arrow--right" %}
-					</span>
-					<span class="show-on-full-project">
-						AH! Take me Back!
-						{% include svg.html type="arrow--right" %}
-					</span>
+			{% if include.mobile %}
+				{% if module.body %}
+					<div class="module-text__body module-text__body--mobile">
+						{{ module.body | markdownify }}
+					</div>
+				{% endif %}
+			{% else %}
+				<div class="module-text__excerpt">
+					{{ module.excerpt | default: "" }}
+					<div class="module-text__view-full" js-index-view-full-project>
+						<span class="hide-on-full-project">
+							View Full Project
+							{% include svg.html type="arrow--right" %}
+						</span>
+						<span class="show-on-full-project">
+							AH! Take me Back!
+							{% include svg.html type="arrow--right" %}
+						</span>
+					</div>
 				</div>
-			</div>
-			<div class="module-text__full-project-spacer show-on-full-project">&nbsp;</div>
-			{% if module.body %}
-				<div class="module-text__body animate-in">
-					{{ module.body | markdownify }}
-				</div>
+				<div class="module-text__full-project-spacer show-on-full-project">&nbsp;</div>
+				{% if module.body %}
+					<div class="module-text__body animate-in">
+						{{ module.body | markdownify }}
+					</div>
+				{% endif %}
 			{% endif %}
 		</div>
 	{% when 'website-link' %}

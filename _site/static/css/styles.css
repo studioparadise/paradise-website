@@ -7741,6 +7741,12 @@ div[js-index-content="index"] {
   .js-viewing-full-project .module-hero {
     margin-left: -35px; }
 
+.module-hero__background {
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover; }
+
 .module-image {
   margin-right: -35px; }
   .js-viewing-full-project .module-image {
@@ -7929,6 +7935,22 @@ div[js-index-content="index"] {
     display: inline-block;
     width: 48%;
     padding-right: 20px; }
+
+.module-text__body--mobile {
+  display: block;
+  opacity: 1;
+  -ms-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  width: 100%;
+  float: left; }
+  @media screen and (min-width: 850px) {
+    .module-text__body--mobile {
+      padding-left: 10px;
+      padding-right: 10px; } }
+  .layout-mobile .module-text__body--mobile {
+    padding-left: 10px;
+    padding-right: 10px; }
 
 .module-images-2up:after {
   content: "";
@@ -8736,7 +8758,8 @@ div[js-index-content="index"] {
 .footer-signup__submit {
   position: absolute;
   right: 0;
-  top: 3px; }
+  top: 3px;
+  cursor: pointer; }
   .footer-signup__submit svg {
     width: 23.5px;
     height: 11.5px; }
@@ -8819,6 +8842,10 @@ div[js-index-content="index"] {
     @media screen and (min-width: 1800px) {
       .footer-signup__input:-ms-input-placeholder {
         font-size: 20px; } }
+
+.footer-signup__error {
+  font-size: 12px;
+  margin-top: 10px; }
 
 .footer-social {
   margin-top: 24px; }

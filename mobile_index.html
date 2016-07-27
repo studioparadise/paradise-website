@@ -12,9 +12,6 @@ excerpt: Studio Paradise
 			{% for module in project.modules limit: 1 %}
 				{% include render_module.html mobile=true %}
 			{% endfor %}
-			<div class="mobile-project__title">
-				{{ project.title }}
-			</div>
 		</a>
 	{% endfor %}
 	<div class="mobile__contact">

@@ -4,6 +4,9 @@
 root = exports ? this
 
 root.globalAPI = {}
+root.globalAPI.isMobile = ->
+    return $("body").hasClass 'layout-mobile'
+
 
 root.controllers.indexSwiper = ($element, args) ->
   swiper = root.components.swiper $element,
@@ -23,6 +26,17 @@ root.controllers.indexSwiper = ($element, args) ->
 
 root.controllers.project = ($element, args) ->
   api = {}
+  do handleHeroAlign = ->
+    if not root.globalAPI.isMobile()
+        targetHeight = $(".navbar__items").offset().top - 75
+        console.log 'handling hero align', targetHeight
+        $element.find('.module-hero__background').height targetHeight
+
+  # $(window).on 'resize', (ev) ->
+  #   if ev.isTrusted
+  #       handleHeroAlign()
+
+
   do handleViewFullProject = ->
     $scrollingContainer = $("[js-index-content=\"projects\"]")
 
@@ -156,6 +170,8 @@ root.controllers.moduleCredits = ($element, args) ->
 
   $(window).on 'resize', _.throttle populateColumns, 100
 
+
+
 root.controllers.navbar2 = ($element, args) ->
   api = {}
 
@@ -207,9 +223,7 @@ root.controllers.navbar2 = ($element, args) ->
 
   $(window).on 'resize', centerNavbar
 
-  api.isMobile = ->
-    return $("body").hasClass 'layout-mobile'
-
+ 
   $allContent = $("[js-index-content]")
   api.hideAllContentAndFadeInOne = ($content) ->
     # console.log "Loading content: ", $content
@@ -233,7 +247,7 @@ root.controllers.navbar2 = ($element, args) ->
         return false
 
   showDropdown = ($dropdown, apply) ->
-    if api.isMobile()
+    if root.globalAPI.isMobile()
       if apply and not $dropdown.hasClass 'is-open'
         $dropdown.show()
       else
@@ -320,7 +334,7 @@ root.controllers.navbar2 = ($element, args) ->
       $dropdown = $item.find '[js-item-dropdown]:first'
       args = root.utils.getArgs($label)
 
-      if $("body").hasClass 'layout-mobile'
+      if root.globalAPI.isMobile()
         if args.mobileURL
           window.location.href = args.mobileURL
           return false
@@ -365,7 +379,7 @@ root.controllers.navbar2 = ($element, args) ->
 
       if args.preventAlign
         # is root node - misnamed arg
-        if not $("body").hasClass 'layout-mobile'
+        if not root.globalAPI.isMobile()
           $nextItem = $item.find '.navbar__item:first'
           $nextItem.addClass 'is-active'
           scrollTo $nextItem
@@ -379,7 +393,7 @@ root.controllers.navbar2 = ($element, args) ->
 
       scrollTo $item
 
-    if not $("body").hasClass 'layout-mobile'
+    if not root.globalAPI.isMobile()
       $label.on 'scrollspy:activate', ->
         if not api.scrolling
           activateItem $item, false

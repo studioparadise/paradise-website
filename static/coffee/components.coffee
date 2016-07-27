@@ -20,6 +20,8 @@ root.components.mailchimp = ($element, args) ->
 
   controller.init = ->
     $element.ajaxChimp callback: controller.onAjaxChimpPOST
+    $element.find('[js-newsletter-submit]').on 'click', ->
+      $(this).closest("form").submit()
     return
 
   controller.onAjaxChimpPOST = (data) ->
@@ -50,5 +52,5 @@ root.components.mailchimp = ($element, args) ->
       console.log 'Unhandled AJAXChimp Response: ', data
     data
 
-  # controller.init()
+  controller.init()
 
