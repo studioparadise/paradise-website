@@ -244,6 +244,7 @@ root.controllers.navbar2 = ($element, args) ->
         $el = $("[js-index-content=\"index\"]")
         api.hideAllContentAndFadeInOne $el
         api.clearNavbarState()
+        window.location.hash = '#'
         return false
 
   showDropdown = ($dropdown, apply) ->
@@ -561,8 +562,63 @@ root.controllers.mobileStudio = ($element, args) ->
 root.controllers.layoutDefault = ($element, args) ->
   ### Desktop template general controller
   ###
+
   do handleLinkHoverEffects = ->
-    $element.find 'a', (ev) -> 
-      x = ev.pageX
-      y = ev.pageY
-      console.log x, y
+    console.log 'handling link hover effects'
+
+    getOrCreateHoverEl = (index) ->
+      $el = $(".js-hover-element")
+      if not $el.length
+        $el = $ "<img class='js-hover-element' />"
+        $('body').append $el
+      if index
+        $el.attr 'src', "/static/img/hover-#{index}.jpg"
+      return $el
+
+    $triggers = $element.find('.hover-effect')
+
+    mouseLeave = (ev) ->
+      $img = getOrCreateHoverEl()
+      $img.hide()
+
+    mouseEnter = (ev) -> 
+      # get number
+      index = $(".hover-effect").index($(ev.currentTarget)) + 1
+
+      # add random hover 
+      wh = $(window).height()
+      ww = $(window).width()
+
+      $img = getOrCreateHoverEl(index)
+      $img.css 
+        width: (Math.random() * 500) + 350
+        opacity: 0
+      $img.show()
+
+      top = Math.random() * wh
+      left = Math.random() * ww
+      imgW = $img.width()
+      imgH = $img.height()
+      imgRight = imgW + left
+
+      if imgRight > ww
+        left = ww - imgW - 30
+
+      imgBot = imgH + top
+      if imgBot > wh
+        top = wh - imgH - 30
+
+      $img.css
+        position: 'fixed'
+        top: top
+        left: left
+      _.delay ->
+        $img.css opacity: 1
+      , 100
+
+    $triggers.on 'mouseleave', (ev) ->
+      try mouseLeave(ev) catch ex
+    $triggers.on 'mouseenter', (ev) ->
+      try mouseEnter(ev) catch ex
+
+
