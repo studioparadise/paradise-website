@@ -1257,6 +1257,8 @@ body {
   font-family: 'C';
 }
 .layout-default {
+  overflow: hidden;
+  // two fixed containers with one scrolling.
   // min-width: 750px;
 }
 

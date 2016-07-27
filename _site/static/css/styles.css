@@ -7240,6 +7240,9 @@ input[type="search"]::-webkit-search-decoration {
 body {
   font-family: 'C'; }
 
+.layout-default {
+  overflow: hidden; }
+
 h1 {
   font-size: 26px;
   line-height: 1.07; }
