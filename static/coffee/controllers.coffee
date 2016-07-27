@@ -3,6 +3,8 @@
 
 root = exports ? this
 
+root.globalAPI = {}
+
 root.controllers.indexSwiper = ($element, args) ->
   swiper = root.components.swiper $element,
     loop: true
@@ -15,46 +17,16 @@ root.controllers.indexSwiper = ($element, args) ->
     onInit: (swiper) ->
       $triggers = $element.find '[js-index-slider-project-link]'
       $triggers.on 'click', ->
-        window.location.hash = $(this).attr 'js-index-slider-project-link'
-
+        projectHash = $(this).attr 'js-index-slider-project-link'
+        window.location.hash = projectHash
+        root.globalAPI.desktopDirectLoadOnHash('#' + projectHash)
 
 root.controllers.project = ($element, args) ->
   api = {}
   do handleViewFullProject = ->
+    $scrollingContainer = $("[js-index-content=\"projects\"]")
+
     $trigger = $element.find '[js-index-view-full-project]'
-    toggleFullProjectView = ->
-      $el = $element.animate opacity: 0, 600, 'easeInOutExpo'
-      scrollToTop = ->
-        top = $element.offset().top
-        $(window).scrollTop top
-        $element.animate opacity: 1, 600, 'easeInOutExpo'
-
-      $el.promise().then ->
-        if $('html').hasClass 'js-viewing-full-project'
-          # closing full project view
-          $('html').removeClass 'js-viewing-full-project'
-          $(".navbar").css(opacity: 0)
-
-          $(".navbar__dropdown").addClass 'no-transition'
-          $(window).trigger 'resize'
-
-          # centerNavbar
-          # NEED TO CENTER NAVBAR WITHOUT ANIMATING TOP, BEFORE FADE IN.
-
-          _.delay ->
-            $(".navbar").animate opacity: 1, 300, 'easeInOutExpo'
-            scrollToTop()
-            $(".navbar__dropdown").removeClass 'no-transition'
-          , 400
-          scrollToTop()
-        else
-          # opening full project view
-          $(".navbar").animate opacity: 0, 300, 'easeInOutExpo', ->
-            $('html').addClass 'js-viewing-full-project'
-            $(window).trigger 'resize'
-            scrollToTop()
-
-
 
     api.toggleFullProjectView = ->
       # v2 toggle full project
@@ -79,19 +51,28 @@ root.controllers.project = ($element, args) ->
         if cb
           $result.promise().then cb
 
+
+      @scrollToElement = ->
+        # scroll to this element inside scrolling container.
+        absoluteScrollOffset = $element.offset().top + $scrollingContainer.scrollTop()
+        $scrollingContainer.scrollTop absoluteScrollOffset
+
+      @scrollToElementAnimated = (duration) ->
+        absoluteScrollOffset = $element.offset().top + $scrollingContainer.scrollTop()
+        return $scrollingContainer.animate scrollTop: absoluteScrollOffset, duration or 500, 'easeInOutExpo'
       # NOTE: window trigger resize repositions nav. It needs to fire earlier.
       # to prevent FOUC. It seems it's not in the right position
-      @enterFPV = ->
-        @fadeOutNav ->
+      @enterFPV = =>
+        @fadeOutNav =>
           $('html').addClass 'js-viewing-full-project'
           $(window).trigger 'resize'
-          $element.find('.animate-in').removeClass('animating-out').addClass 'animating-in'
-          _.delay ->
+          $(".index-project .animate-in").removeClass('animating-out').addClass 'animating-in'
+          _.delay =>
             $projectRows.show()
-            $('html, body').scrollTop $element.offset().top
+            @scrollToElement()
           , 600
 
-      @exitFPV = ->
+      @exitFPV = =>
         $('html').addClass 'js-viewing-full-project--animating-out'
         $('html').removeClass 'js-viewing-full-project'
 
@@ -99,11 +80,14 @@ root.controllers.project = ($element, args) ->
           $('html').removeClass 'js-viewing-full-project--animating-out'
           @fadeInNav()
         , 1000
-        $projectRows.show()
-        $(window).trigger 'resize'
-        $('html, body').scrollTop $element.offset().top
-        $element.find('.animate-in').addClass('animating-out').removeClass 'animating-in'
 
+        # only show rows above / scroll to element instantly after CSS animation completes
+        _.delay =>
+            $projectRows.show()
+            $(window).trigger 'resize'
+            @scrollToElement()
+            $(".index-project .animate-in").addClass('animating-out').removeClass 'animating-in'
+        , 600  # CSS animation duration
 
       @toggleFPV = ->
         if $('html').hasClass 'js-viewing-full-project'
@@ -111,8 +95,9 @@ root.controllers.project = ($element, args) ->
         else
           @enterFPV()
 
-      # scroll to top of project first. then hide content above.
-      scrollTopDifference = $(window).scrollTop() - $element.offset().top
+      # 1: scroll to top of project first. then hide content above.
+      # change scrolling timing if far from current location
+      scrollTopDifference = Math.abs($element.offset().top)
       if scrollTopDifference > 100
         if scrollTopDifference > 1000
           duration = 1000
@@ -121,13 +106,15 @@ root.controllers.project = ($element, args) ->
       else
         duration = 200
 
-      $result = $('html, body').animate
-        scrollTop: $element.offset().top
-      , duration, 'easeInOutExpo'
+      $result = @scrollToElementAnimated duration
+      # $result = $('html, body').animate
+      #   scrollTop: $element.offset().top
+      # , duration, 'easeInOutExpo'
+
+      # 2: when scrolling done, hide all projects above 
       $result.promise().then =>
         @hideProjectsBeforeIndex currentProjectIndex
-        $('html, body').scrollTop 0
-
+        $scrollingContainer.scrollTop 0
         @toggleFPV()
 
     $trigger.on 'click', api.toggleFullProjectView
@@ -296,19 +283,38 @@ root.controllers.navbar2 = ($element, args) ->
 
       if scrollSpyTarget
         $target = $("[js-scrollspy=\"#{scrollSpyTarget}\"]")
-        if args.scrollAlignToNav
-          position = $('.navbar__item.is-active:first').position().top
-          console.log 'offset nav item position is ', position
-          offset = $target.offset().top - position + 5  # compensate for font heights
-          console.log 'target offset', offset
-        else
-          offset = $target.offset().top
 
-        $("html, body").stop(true, true).animate
-          scrollTop: offset
-        , 750, 'easeInOutExpo', ->
-          api.scrolling = false
-          activateItem $item
+        if args.overlay == 'projects'
+            $projectsContainer = $("[js-index-content=\"projects\"]")
+
+            if args.scrollAlignToNav
+              position = $('.navbar__item.is-active:first').position().top
+              offset = $target.offset().top - position + 5  # compensate for font heights
+            else
+              offset = $target.offset().top
+
+            # offset is relative to current container scrollTop. Adjust final by current scrollTop
+            projectsScrollTop =  $projectsContainer.scrollTop()
+            offset = projectsScrollTop + offset
+
+            $projectsContainer.stop(true, true).animate
+              scrollTop: offset
+            , 750, 'easeInOutExpo', ->
+              api.scrolling = false
+              activateItem $item            
+
+        else
+            if args.scrollAlignToNav
+              position = $('.navbar__item.is-active:first').position().top
+              offset = $target.offset().top - position + 5  # compensate for font heights
+            else
+              offset = $target.offset().top
+
+            $("html, body").stop(true, true).animate
+              scrollTop: offset
+            , 750, 'easeInOutExpo', ->
+              api.scrolling = false
+              activateItem $item
 
     activateItem = ($item, preventAlign = false) ->
       $dropdown = $item.find '[js-item-dropdown]:first'
@@ -383,10 +389,13 @@ root.controllers.navbar2 = ($element, args) ->
   for item in $items
     initItem $(item)
 
-  do handleDirectLoadViaHash = ->
-    hash = window.location.hash
+  do handleDirectLoadViaHash = (hash = '') ->
+    if not hash
+        hash = window.location.hash
+
     if not hash
       return
+    console.log 'loading via hash', hash
 
     hash = hash.substr 1
     $scrollSpyNav = $("[js-scrollspy-nav=\"#{hash}\"]")
@@ -399,6 +408,9 @@ root.controllers.navbar2 = ($element, args) ->
         $scrollSpyNav.click()
         console.log 'clicking scrollspy nav', $scrollSpyNav
       , 500
+
+    root.globalAPI.desktopDirectLoadOnHash = handleDirectLoadViaHash
+
 
   # do handleSecondaryNav = ->
   #   $navs = $element.find '[js-navbar-project]'

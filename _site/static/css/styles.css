@@ -7355,8 +7355,8 @@ h1 {
     top: 24px;
     left: 20px; }
     .layout-mobile .navbar__logo svg {
-      width: 62px;
-      height: 15.5px; }
+      width: 77.5px;
+      height: 19.3px; }
 
 .mobile-navbar {
   position: fixed;
@@ -7662,18 +7662,26 @@ h1 {
   background-size: cover;
   background-position: center center; }
 
+.index-projects {
+  overflow: hidden; }
+
+.index-projects-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transition: width 0.6s ease 0s;
+  -moz-transition: width 0.6s ease 0s;
+  -o-transition: width 0.6s ease 0s;
+  width: calc(75% - 23px); }
+
 .index-project {
   margin-bottom: 60px;
   position: relative;
-  width: 75%;
-  float: left; }
-  @media screen and (min-width: 850px) {
-    .index-project {
-      padding-left: 10px;
-      padding-right: 10px; } }
-  .layout-mobile .index-project {
-    padding-left: 10px;
-    padding-right: 10px; }
+  width: 100%;
+  padding-right: 35px; }
 
 .index-project-debug {
   position: absolute;
@@ -7769,17 +7777,6 @@ div[js-index-content="index"] {
 .module-text {
   margin-top: 70px;
   margin-bottom: 140px; }
-  .module-text:after {
-    content: "";
-    display: table;
-    clear: both; }
-  .layout-mobile .module-text {
-    margin-left: -10px;
-    margin-right: -10px; }
-  @media screen and (min-width: 850px) {
-    .module-text {
-      margin-left: -10px;
-      margin-right: -10px; } }
   .layout-mobile .module-text {
     margin-left: 0;
     margin-right: 0; }
@@ -8072,7 +8069,7 @@ div[js-index-content="index"] {
   column-count: 2;
   padding-left: 10px;
   padding-right: 10px; }
-  .js-viewing-full-proejct .module-credits__content {
+  .js-viewing-full-project .module-credits__content {
     -moz-column-count: 3;
     -webkit-column-count: 3;
     column-count: 3; }
@@ -8136,6 +8133,19 @@ div[js-index-content="index"] {
   -moz-transition: all 1s ease 0s;
   -o-transition: all 1s ease 0s; }
 
+.js-viewing-full-project .index-project {
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+  padding-left: 35px;
+  padding-right: 35px; }
+  .js-viewing-full-project .index-project:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .layout-mobile .js-viewing-full-project .index-project {
+    padding-left: 20px;
+    padding-right: 20px; }
 .js-viewing-full-project .hide-on-full-project {
   display: none; }
 .js-viewing-full-project .show-on-full-project {
@@ -8144,8 +8154,8 @@ div[js-index-content="index"] {
   width: 1px;
   height: 100vh;
   padding: 0; }
-.js-viewing-full-project .index-project {
-  width: 99%; }
+.js-viewing-full-project .index-projects-wrapper {
+  width: 100%; }
 .js-viewing-full-project .navbar {
   display: none; }
 

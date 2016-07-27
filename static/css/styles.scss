@@ -1420,8 +1420,8 @@ h1 {
     top: 24px; // 30px above and below visually aligned
     left: 20px;
     svg {
-      width: 62px;
-      height: 15.5px;
+      width: 77.5px;
+      height: 19.3px;
     }
 
   }
@@ -1703,6 +1703,7 @@ h1 {
 	@include container;
   z-index: 2;
 }
+
 .content-navbar-grid-spacer {
   overflow: hidden;
 	@include column(2);
@@ -1713,8 +1714,8 @@ h1 {
 .content {
 	z-index: 2;
 	position: relative;
-  // height: calc(100vh - 230px)
 }
+
 .primary-slide {
 	height: 100vh;
 	padding: 60px 0;
@@ -1740,11 +1741,30 @@ h1 {
   cursor: pointer;
   @include background-size-cover;
 }
+//projects
+//projects
+//projects
+.index-projects {
+  overflow: hidden;
+}
+.index-projects-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  @include transition(width .6s ease 0s);
+  width: calc(75% - 23px);  // 6 cols/8 and visually match grid.
+}
 
 .index-project {
   margin-bottom: 60px;
   position: relative;
-  @include column(6);
+  width: 100%;
+  padding-right: 35px;
+  // .js-viewing-full-project &{
+  // }
 }
 .index-project-debug {
   position: absolute;
@@ -1794,6 +1814,9 @@ div[js-index-content="index"]{
 .module {
   img {
     width: 100%;
+  }
+  @include rd {
+    // padding-right: $desktop-margin;
   }
 }
 
@@ -1859,7 +1882,7 @@ div[js-index-content="index"]{
 
 // text module
 .module-text {
-  @include row;
+  // @include row; // row is hard coded
   margin-top: 70px;
   margin-bottom: 140px;
   @include rm {
@@ -2049,7 +2072,7 @@ div[js-index-content="index"]{
   column-count: 2;
   padding-left: $desktop-gutter/2;
   padding-right: $desktop-gutter/2;
-  .js-viewing-full-proejct & {
+  .js-viewing-full-project & {
     -moz-column-count: 3;
     -webkit-column-count: 3;
     column-count: 3;
@@ -2098,6 +2121,9 @@ div[js-index-content="index"]{
 }
 
 .js-viewing-full-project {
+  .index-project {
+    @include container;
+  }
   .hide-on-full-project {
     display: none; 
   }
@@ -2110,11 +2136,14 @@ div[js-index-content="index"]{
     padding: 0;
     // background: blue;
   }
-  .index-project {
-    // @include column(8);
-    width: 99%;
-    // background: red;
+  .index-projects-wrapper {
+    width: 100%;
   }
+  // .index-project {
+  //   // @include column(8);
+  //   width: 99%;
+  //   // background: red;
+  // }
   .navbar {
     display: none;
   }
