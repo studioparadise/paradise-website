@@ -1,0 +1,63 @@
+---
+title: Paradise Clone
+timezone: UTC
+collections:
+  journals:
+    title: Journals
+    output: true
+  posts:
+    title: Posts
+    output: true
+  projects:
+    title: Projects
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: journals
+  values:
+    layout: journal
+    image: ''
+    images:
+    - image: ''
+      alt: ''
+    hide-title: ''
+- scope:
+    path: ''
+    type: projects
+  values:
+    layout: project
+tagline: Changing the world, one uninspired quote at a time
+url: http://yourwebsite.com
+socialimg: "/img/social.jpg"
+facebook: fbusername
+twitter: twusername
+github: ghusername
+googleplus: gusername
+instagram: igusername
+phone: 
+email: 
+index-slider-images:
+- image: "/uploads/Kaelen_HeroMain_20160718.jpg"
+  alt: 
+  project: Kaelen
+- image: "/uploads/Leader_HeroMain_20160716.jpg"
+  alt: 
+  project: Leader Bag
+- image: "/uploads/Prize_HeroMain_20160718.jpg"
+  alt: 
+  project: Prize
+- image: "/uploads/Saturdays_HeroMain_20160718.jpg"
+  alt: 
+  project: Saturdays
+gems:
+- jekyll-coffeescript
+exclude:
+- README.md
+- node_modules
+- gruntfile.js
+- package.json
+- vendor/

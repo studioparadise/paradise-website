@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+{% include head.html %}	
+<script type="text/javascript">
+	// # Design calls for an adaptive site, on a platform that doesn't support it. We'll use a JS redirect.
+	if (window.mobilecheck()) {
+		window.location.href = '/mobile_index.html';
+	} else {
+
+	}
+</script>
+</head>
+	<body class="layout-default">
+		<!--[if lt IE 8]>
+		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+		{% include navbar.html %}
+		{{ content }}
+		{% include footer.html %}
+		{% include footer_scripts.html %}		
+		{% comment %}{% include debug_bar.html %}{% endcomment %}
+	</body>
+</html>
+

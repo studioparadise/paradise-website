@@ -1,0 +1,189 @@
+
+<center class="grid-debug-heading">
+	Grid
+</center>
+
+<div class="container-row">
+	{% for i in (1..8) %}
+		<div class="g1">
+			<div class="grid-debug">
+				g1
+			</div>
+		</div>
+	{% endfor %}
+</div>
+
+{% for i in (1..8) %}
+	<div class="g1">
+		<div class="grid-debug">
+			g1
+		</div>
+	</div>
+{% endfor %}
+
+<center class="grid-debug-heading">
+	Container
+</center>
+<div class="container">
+	<div class="row">
+		<div class="g2">
+			<div class="grid-debug">
+				g2
+			</div>
+		</div>
+		<div class="g2">
+			<div class="grid-debug">
+				g2
+			</div>
+		</div>
+		<div class="g2">
+			<div class="grid-debug">
+				g2
+			</div>
+		</div>
+		<div class="g2">
+			<div class="grid-debug">
+				g2
+			</div>
+		</div>
+
+	</div>
+	<div class="row">
+		<div class="g4">
+			<div class="grid-debug">
+				g4
+			</div>
+		</div>
+		<div class="g4">
+			<div class="grid-debug">
+				g4
+			</div>
+		</div>
+	</div>
+</div>
+<center class="grid-debug-heading">
+	Container row shortcut
+</center>
+<div class="container-row">
+	<div class="g4">
+		<div class="grid-debug">
+			g4
+		</div>
+	</div>
+	<div class="g4">
+		<div class="grid-debug">
+			g4
+		</div>
+	</div>
+</div>
+
+<center class="grid-debug-heading">
+	Container Row G12
+</center>
+<div class="container-row-g12">
+	<div class="grid-debug">
+		Container Row G12
+	</div>
+</div>
+
+
+<center class="grid-debug-heading">
+	No Container
+</center>
+<div class="">
+	<div class="g2">
+		<div class="grid-debug">
+			g2
+		</div>
+	</div>
+	<div class="g2">
+		<div class="grid-debug">
+			g2
+		</div>
+	</div>
+	<div class="g2">
+		<div class="grid-debug">
+			g2
+		</div>
+	</div>
+	<div class="g2">
+		<div class="grid-debug">
+			g2
+		</div>
+	</div>
+</div>
+
+<div>
+	<div class="g4">
+		<div class="grid-debug">
+			g4
+		</div>
+	</div>
+	<div class="g4">
+		<div class="grid-debug">
+			g4
+		</div>
+	</div>
+</div>
+
+<center class="grid-debug-heading">
+	Global Grid Nested Grid Test
+</center>
+
+<div class="container">
+	<div class="row">
+
+		<div class="g2">
+			<div class="grid-debug">
+				G2
+			</div>
+		</div>
+
+		<div class="g6">
+			<div class="grid-debug">
+				G6
+				<div class="row">
+					<div class="g2-in-g6">
+						<div class="grid-debug">
+							G2 in G6
+						</div>
+					</div>
+					<div class="g2-in-g6">
+						<div class="grid-debug">
+							G2 in G6
+						</div>
+					</div>
+					<div class="g2-in-g6">
+						<div class="grid-debug">
+							G2 in G6
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="g3-in-g6">
+						<div class="grid-debug">
+							G3 in G6
+						</div>
+					</div>
+					<div class="g3-in-g6">
+						<div class="grid-debug">
+							G3 in G6
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="g4">
+			<div class="grid-debug">
+				G4
+			</div>
+		</div>
+		<div class="g4">
+			<div class="grid-debug">
+				G4
+			</div>
+		</div>
+	</div>
+</div>

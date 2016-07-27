@@ -1,0 +1,27 @@
+<script>
+	$(function() {
+		$("[js-debug-bar-toggle]").on('click', function() {
+
+			var $container = $(".grid-debug-container");
+			if ($container.is(':visible')) {
+				$container.fadeOut();
+				$(".debug-element").fadeOut();
+			} else {
+				$container.fadeIn();
+				$(".debug-element").fadeIn();
+			}
+		});
+	})
+</script>
+<div class="debug-bar">
+	<div js-debug-bar-toggle>
+		Toggle Grid Debug.
+
+		Debugger: 
+		<span js-debug-txt></span>
+	</div>
+</div>
+<div class="grid-debug-container">
+	{% include grid-debug.html %}
+	{% include grid-debug-bg.html %}
+</div>
