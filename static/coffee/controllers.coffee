@@ -423,7 +423,7 @@ root.controllers.navbar2 = ($element, args) ->
         console.log 'clicking scrollspy nav', $scrollSpyNav
       , 500
 
-    root.globalAPI.desktopDirectLoadOnHash = handleDirectLoadViaHash
+  root.globalAPI.desktopDirectLoadOnHash = handleDirectLoadViaHash
 
 
   # do handleSecondaryNav = ->
@@ -532,6 +532,7 @@ root.controllers.footer = ($element, args) ->
 
   handleOnClickOutside close
 
+
 root.controllers.mobileStudio = ($element, args) ->
   do handleDirectLoadViaHash = ->
     hash = window.location.hash
@@ -555,3 +556,13 @@ root.controllers.mobileStudio = ($element, args) ->
     , 500
 
   window.onhashchange = handleDirectLoadViaHash
+
+
+root.controllers.layoutDefault = ($element, args) ->
+  ### Desktop template general controller
+  ###
+  do handleLinkHoverEffects = ->
+    $element.find 'a', (ev) -> 
+      x = ev.pageX
+      y = ev.pageY
+      console.log x, y
