@@ -356,7 +356,6 @@ html, body {
   padding: 0;
   margin: 0;
   font-family: Arial;
-  overflow-x: hidden;
 }
 
 html.navbar-mobile-open {
@@ -1257,7 +1256,6 @@ body {
   font-family: 'C';
 }
 .layout-default {
-  overflow: hidden;
   // two fixed containers with one scrolling.
   // min-width: 750px;
 }
