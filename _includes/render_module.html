@@ -57,8 +57,9 @@
 	{% when 'text' %}
 		<div class="row">
 			<div class="module-text__spacer">
-				<span class="show-on-full-project">
-					{{ module['full-project-title'] | default: ""}}
+				<span class="show-on-full-project fade-in-on-full-project">
+					<!-- {{ module['full-project-title'] | default: ""}} -->
+					{{ project.title }}
 				</span>
 				&nbsp;
 			</div>
