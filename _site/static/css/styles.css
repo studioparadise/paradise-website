@@ -7817,9 +7817,11 @@ div[js-index-content="index"] {
       padding-right: 10px; }
 
 .module-text__full-project-spacer {
-  display: none; }
+  width: 0;
+  overflow: hidden; }
   .js-viewing-full-project .module-text__full-project-spacer {
     display: block;
+    overflow: auto;
     width: 12.5%;
     float: left; }
     @media screen and (min-width: 850px) {
@@ -7835,7 +7837,8 @@ div[js-index-content="index"] {
   line-height: 1.07;
   width: 50%;
   float: left;
-  padding: 0 10px; }
+  padding: 0 10px;
+  min-height: 95px; }
   @media screen and (min-width: 1400px) and (max-width: 1799px) {
     .module-text__excerpt {
       font-size: 30px; } }
@@ -7883,9 +7886,11 @@ div[js-index-content="index"] {
 .module-text__body {
   display: none;
   opacity: 0;
-  -webkit-transition: all 0.5s ease 1s;
-  -moz-transition: all 0.5s ease 1s;
-  -o-transition: all 0.5s ease 1s;
+  width: 37.5%;
+  float: left;
+  -webkit-transition: transform 0.5s ease 0s, opacity 0.5s ease 0s;
+  -moz-transition: transform 0.5s ease 0s, opacity 0.5s ease 0s;
+  -o-transition: transform 0.5s ease 0s, opacity 0.5s ease 0s;
   -ms-transform: translateX(100px);
   -webkit-transform: translateX(100px);
   transform: translateX(100px);
@@ -7893,30 +7898,18 @@ div[js-index-content="index"] {
   line-height: 1.42;
   letter-spacing: .01em;
   font-weight: 500; }
-  .js-viewing-full-project .module-text__body,
-  .module-text__body .js-viewing-full-project--animating-out {
-    width: 37.5%;
-    float: left;
-    display: block; }
-    @media screen and (min-width: 850px) {
-      .js-viewing-full-project .module-text__body,
-      .module-text__body .js-viewing-full-project--animating-out {
-        padding-left: 10px;
-        padding-right: 10px; } }
-    .layout-mobile .js-viewing-full-project .module-text__body, .layout-mobile
-    .module-text__body .js-viewing-full-project--animating-out {
+  @media screen and (min-width: 850px) {
+    .module-text__body {
       padding-left: 10px;
-      padding-right: 10px; }
+      padding-right: 10px; } }
+  .layout-mobile .module-text__body {
+    padding-left: 10px;
+    padding-right: 10px; }
   .module-text__body.animating-in {
     opacity: 1;
     -ms-transform: translateX(0px);
     -webkit-transform: translateX(0px);
     transform: translateX(0px); }
-  .js-viewing-full-project--animating-out .module-text__body {
-    opacity: 0;
-    -ms-transform: translateX(100px);
-    -webkit-transform: translateX(100px);
-    transform: translateX(100px); }
   @media screen and (min-width: 1400px) and (max-width: 1799px) {
     .module-text__body {
       font-size: 16px; } }

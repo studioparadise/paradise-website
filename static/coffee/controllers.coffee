@@ -42,6 +42,16 @@ root.controllers.project = ($element, args) ->
 
     $trigger = $element.find '[js-index-view-full-project]'
 
+
+    api.animateProjectBodyIn = (apply=true) ->
+      # animate the project body in. slide down first, then transform in left
+      $body = $element.find '.module-text__body'
+      if apply
+        $body.slideDown 600, 'easeInOutExpo', ->
+          $body.show().addClass 'animating-in'
+      else
+        $body.removeClass('animating-in').slideUp(200)
+
     api.toggleFullProjectView = ->
       # v2 toggle full project
       # try removing content above current project
@@ -77,21 +87,24 @@ root.controllers.project = ($element, args) ->
       # NOTE: window trigger resize repositions nav. It needs to fire earlier.
       # to prevent FOUC. It seems it's not in the right position
       @enterFPV = =>
+        root.globalAPI.fullProjectView = true
         @fadeOutNav =>
           $('html').addClass 'js-viewing-full-project'
           $(window).trigger 'resize'
-          $(".index-project .animate-in").removeClass('animating-out').addClass 'animating-in'
+          # $(".index-project .animate-in").removeClass('animating-out').addClass 'animating-in'
           _.delay =>
             $projectRows.show()
             @scrollToElement()
+            api.animateProjectBodyIn()
           , 600
 
       @exitFPV = =>
-        $('html').addClass 'js-viewing-full-project--animating-out'
+        root.globalAPI.fullProjectView = false
+        # $('html').addClass 'js-viewing-full-project--animating-out'
         $('html').removeClass 'js-viewing-full-project'
 
         _.delay =>
-          $('html').removeClass 'js-viewing-full-project--animating-out'
+          # $('html').removeClass 'js-viewing-full-project--animating-out'
           @fadeInNav()
         , 1000
 
@@ -100,12 +113,15 @@ root.controllers.project = ($element, args) ->
             $projectRows.show()
             $(window).trigger 'resize'
             @scrollToElement()
-            $(".index-project .animate-in").addClass('animating-out').removeClass 'animating-in'
+            # $(".index-project .animate-in").addClass('animating-out').removeClass 'animating-in'
         , 600  # CSS animation duration
 
       @toggleFPV = ->
         if $('html').hasClass 'js-viewing-full-project'
-          @exitFPV()
+          api.animateProjectBodyIn false
+          _.delay =>
+            @exitFPV()
+          , 400
         else
           @enterFPV()
 
@@ -196,7 +212,6 @@ root.controllers.navbar2 = ($element, args) ->
       windowWidth = $(window).width() 
       usableSpace = windowWidth - MARGIN
       columnWidth = usableSpace * (1/8)
-      console.log "Calculated usable column width of #{columnWidth}"
       return columnWidth
 
     width = getColumnWidth()
@@ -340,6 +355,8 @@ root.controllers.navbar2 = ($element, args) ->
           window.location.href = args.mobileURL
           return false
 
+      root.globalAPI.currentOverlay = args.overlay
+
       switch args.overlay
         when 'index'
           $el = $("[js-index-content=\"index\"]")
@@ -410,7 +427,6 @@ root.controllers.navbar2 = ($element, args) ->
 
     if not hash
       return
-    console.log 'loading via hash', hash
 
     hash = hash.substr 1
     $scrollSpyNav = $("[js-scrollspy-nav=\"#{hash}\"]")
@@ -418,7 +434,7 @@ root.controllers.navbar2 = ($element, args) ->
       #  click parent
       $parentNav = $scrollSpyNav.parent().parent().parent()
       $parentNav.find('[js-item-label]:first').click()
-      console.log 'clicking parent nav', $parentNav
+
       _.delay ->
         $scrollSpyNav.click()
         console.log 'clicking scrollspy nav', $scrollSpyNav
@@ -478,13 +494,24 @@ root.controllers.navbar2 = ($element, args) ->
 
   do handleScrollSpy = ->
     onScroll = ->
+      # if root.globalAPI.currentOverlay == 'projects'
+      #   $spiesInViewport = $("[js-scrollspy]:in-viewport(500, .index-projects-wrapper):visible:first")
+      # else
       $spiesInViewport = $("[js-scrollspy]:in-viewport(500):visible:first")
       # console.log 'spies in viweport: ', $spiesInViewport
       target = $spiesInViewport.attr 'js-scrollspy'
       $nav = $("[js-scrollspy-nav=\"#{target}\"]")
       $nav.trigger 'scrollspy:activate'
 
+      if root.globalAPI.fullProjectView
+        if $spiesInViewport.hasClass 'index-project-row'
+          # is a project
+          $project = $spiesInViewport.find('[js-index-project]')
+          projectAPI = $project.data 'js-controller'
+          projectAPI.animateProjectBodyIn()
+
     $(window).on 'scroll', _.throttle onScroll, 50
+    $(".index-projects-wrapper").on 'scroll', _.throttle onScroll, 50
 
 root.controllers.studioContent = ($element, args) ->
   $navItem = $("[js-navbar-studio]")
