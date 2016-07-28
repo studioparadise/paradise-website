@@ -1903,9 +1903,11 @@ div[js-index-content="index"]{
   }
 }
 .module-text__full-project-spacer {
-  display: none;
+  width: 0;
+  overflow: hidden;
   .js-viewing-full-project & {
     display: block;
+    overflow: auto;
     @include column(1);
   }
 }
@@ -1913,7 +1915,7 @@ div[js-index-content="index"]{
 .module-text__excerpt {
   @include style-h1;
   @include nested-column(3, 6);
-
+  min-height: 95px;
   .js-viewing-full-project & {
     @include column(3);
   }
@@ -1953,24 +1955,27 @@ div[js-index-content="index"]{
 .module-text__body {
   display: none;
   opacity: 0;
-
-  @include transition(all .5s ease 1s);
+  @include column(3);
+  @include transition(
+    transform .5s ease 0s,
+    opacity .5s ease 0s);
   @include transform(translateX(100px));
 
-  .js-viewing-full-project &,
-  .js-viewing-full-project--animating-out {
-    @include column(3);
-    display: block;
-  }
+  // .js-viewing-full-project &,
+  // .js-viewing-full-project--animating-out {
+  //   @include column(3);
+  //   display: block;
+  // }
 
   &.animating-in {
     opacity: 1;
     @include transform(translateX(0px));
   }
-  .js-viewing-full-project--animating-out & {
-    opacity: 0;
-    @include transform(translateX(100px));
-  }
+
+  // .js-viewing-full-project--animating-out & {
+  //   opacity: 0;
+  //   @include transform(translateX(100px));
+  // }
 
   @include style-body;
   p {
@@ -2132,7 +2137,7 @@ div[js-index-content="index"]{
 
 .js-viewing-full-project {
   .index-project {
-    @include container;
+    @include container; 
   }
   .hide-on-full-project {
     display: none; 
