@@ -1257,6 +1257,8 @@ body {
   font-family: 'C';
 }
 .layout-default {
+  overflow: hidden;
+  // two fixed containers with one scrolling.
   // min-width: 750px;
 }
 
@@ -2173,6 +2175,13 @@ div[js-index-content="index"]{
   @include rm {
     padding-bottom: 600px;
   }
+  .hover-effect {
+    text-decoration: underline;
+    cursor: pointer;
+    &:hover {
+      color: $color-gray;
+    }
+  }
 }
 .studio__spacer {
   @include column(2);
@@ -2193,6 +2202,7 @@ div[js-index-content="index"]{
   left: 0;
   right: 0;
   @include style-h2;
+  z-index: 2;
 }
 .studio__locations--index {
   margin-top: -3px;
