@@ -16,4 +16,3 @@ images:
   alt: 
 ---
 
-Ever taken a trip in a helicopter? you should.
