@@ -4,13 +4,9 @@ date: 2016-07-24 03:34:00 Z
 images:
 - image: "/uploads/14950018.JPG"
   alt: 
-- image: "/uploads/14950007.JPG"
-  alt: 
 - image: "/uploads/14950010.JPG"
   alt: 
 - image: "/uploads/14950016.JPG"
-  alt: 
-- image: "/uploads/14950020.JPG"
   alt: 
 - image: "/uploads/14950021.JPG"
   alt: 
@@ -22,4 +18,4 @@ images:
   alt: 
 ---
 
-Half strength beer at altitude
+Half strength beer at altitude. Some images of Utah and a little salt.
