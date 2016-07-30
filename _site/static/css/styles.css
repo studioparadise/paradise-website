@@ -7872,7 +7872,17 @@ div[js-index-content="index"] {
     color: black; }
   .module-text__view-full:hover svg rect, .module-text__view-full:hover svg path, .module-text__view-full:hover svg polygon {
     fill: black; }
+  .js-viewing-full-project .module-text__view-full svg {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
   .module-text__view-full svg {
+    -webkit-transition: transform 0.3s ease 0s;
+    -moz-transition: transform 0.3s ease 0s;
+    -o-transition: transform 0.3s ease 0s;
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
     width: 23px;
     height: 11px;
     vertical-align: middle;
@@ -8552,10 +8562,14 @@ div[js-index-content="index"] {
 .index-journal__hero-img {
   display: block;
   width: 100%; }
+  .layout-default .index-journal__hero-img {
+    margin-right: -35px; }
 
 .index-journal__img {
   width: 100%;
   display: block; }
+  .layout-default .index-journal__img {
+    margin-right: -35px; }
   .index-journal__img:not(:last-child) {
     margin-bottom: 35px; }
 
