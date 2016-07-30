@@ -1940,7 +1940,14 @@ div[js-index-content="index"]{
       }
     }
   }
+  .js-viewing-full-project & {
+    svg {
+      @include transform(rotate(0deg));
+    }
+  }
   svg {
+    @include transition(transform .3s ease 0s);
+    @include transform(rotate(180deg));
     width: 23px;
     height: 11px;
     vertical-align: middle;
@@ -2439,12 +2446,19 @@ div[js-index-content="index"]{
 .index-journal__hero-img {
   display: block;
   width: 100%;
+  .layout-default & {
+    margin-right: -35px;
+  }
+
 }
 .index-journal__header {
 }
 .index-journal__img {
   width: 100%;
   display: block;
+  .layout-default & {
+    margin-right: -35px;
+  }
   &:not(:last-child) {
     margin-bottom: 35px;
   }

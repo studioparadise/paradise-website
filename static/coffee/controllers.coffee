@@ -27,21 +27,19 @@ root.controllers.indexSwiper = ($element, args) ->
 root.controllers.project = ($element, args) ->
   api = {}
   do handleHeroAlign = ->
-    if not root.globalAPI.isMobile()
+    if not root.globalAPI.isMobile() and not root.globalAPI.fullProjectView
         targetHeight = $(".navbar__items").offset().top - 75
         console.log 'handling hero align', targetHeight
         $element.find('.module-hero__background').height targetHeight
 
-  # $(window).on 'resize', (ev) ->
-  #   if ev.isTrusted
-  #       handleHeroAlign()
+  $(window).on 'resize', (ev) ->
+    handleHeroAlign()
 
 
   do handleViewFullProject = ->
     $scrollingContainer = $("[js-index-content=\"projects\"]")
 
     $trigger = $element.find '[js-index-view-full-project]'
-
 
     api.animateProjectBodyIn = (apply=true) ->
       # animate the project body in. slide down first, then transform in left
@@ -84,10 +82,14 @@ root.controllers.project = ($element, args) ->
       @scrollToElementAnimated = (duration) ->
         absoluteScrollOffset = $element.offset().top + $scrollingContainer.scrollTop()
         return $scrollingContainer.animate scrollTop: absoluteScrollOffset, duration or 500, 'easeInOutExpo'
+
       # NOTE: window trigger resize repositions nav. It needs to fire earlier.
       # to prevent FOUC. It seems it's not in the right position
       @enterFPV = =>
         root.globalAPI.fullProjectView = true
+        _.delay ->
+          root.globalAPI.allowScrollSpyAnimateInBody = true
+        , 1000
         @fadeOutNav =>
           $('html').addClass 'js-viewing-full-project'
           $(window).trigger 'resize'
@@ -99,7 +101,6 @@ root.controllers.project = ($element, args) ->
           , 600
 
       @exitFPV = =>
-        root.globalAPI.fullProjectView = false
         # $('html').addClass 'js-viewing-full-project--animating-out'
         $('html').removeClass 'js-viewing-full-project'
 
@@ -110,6 +111,7 @@ root.controllers.project = ($element, args) ->
 
         # only show rows above / scroll to element instantly after CSS animation completes
         _.delay =>
+            $(".module-text__body").hide().removeClass 'animating-in'
             $projectRows.show()
             $(window).trigger 'resize'
             @scrollToElement()
@@ -118,6 +120,11 @@ root.controllers.project = ($element, args) ->
 
       @toggleFPV = ->
         if $('html').hasClass 'js-viewing-full-project'
+          # prevent scrollspy from triggering body in animation 
+          root.globalAPI.allowScrollSpyAnimateInBody = false
+
+          root.globalAPI.fullProjectView = false
+
           api.animateProjectBodyIn false
           _.delay =>
             @exitFPV()
@@ -503,8 +510,9 @@ root.controllers.navbar2 = ($element, args) ->
       $nav = $("[js-scrollspy-nav=\"#{target}\"]")
       $nav.trigger 'scrollspy:activate'
 
-      if root.globalAPI.fullProjectView
+      if root.globalAPI.fullProjectView and root.globalAPI.allowScrollSpyAnimateInBody
         if $spiesInViewport.hasClass 'index-project-row'
+          console.log 'spies in VP - loading project body in'
           # is a project
           $project = $spiesInViewport.find('[js-index-project]')
           projectAPI = $project.data 'js-controller'
@@ -618,22 +626,23 @@ root.controllers.layoutDefault = ($element, args) ->
 
       $img = getOrCreateHoverEl(index)
       $img.css 
-        width: (Math.random() * 500) + 350
+        width: (Math.random() * 500) + 200
         opacity: 0
       $img.show()
-
-      top = Math.random() * wh
-      left = Math.random() * ww
       imgW = $img.width()
       imgH = $img.height()
-      imgRight = imgW + left
 
-      if imgRight > ww
-        left = ww - imgW - 30
+      top = Math.random() * (wh - imgH)
+      left = Math.random() * (ww - imgW)
 
-      imgBot = imgH + top
-      if imgBot > wh
-        top = wh - imgH - 30
+      # imgRight = imgW + left
+
+      # if imgRight > ww
+      #   left = ww - imgW - 30
+
+      # imgBot = imgH + top
+      # if imgBot > wh
+      #   top = wh - imgH - 30
 
       $img.css
         position: 'fixed'
