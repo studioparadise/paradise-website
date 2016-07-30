@@ -1,6 +1,6 @@
 ---
 title: Bonjourno From Italy
-date: 2016-07-30 03:54:00 Z
+date: 2016-07-20 03:54:00 Z
 images:
 - image: "/uploads/14940015.JPG"
   alt: 
@@ -18,4 +18,4 @@ images:
   alt: 
 ---
 
-Recent trip to Italty
+Recent trip to Italy to test out some calmer waters
