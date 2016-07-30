@@ -18,4 +18,4 @@ images:
   alt: 
 ---
 
-Recent trip to Itaty to test out some calmer waters
+Recent trip to Italy to test out some calmer waters
