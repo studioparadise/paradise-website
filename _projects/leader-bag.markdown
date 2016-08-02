@@ -34,7 +34,7 @@ modules:
 - type: image
   image: "/uploads/Leader_1_20160802.jpg"
 - type: image
-  image: "/uploads/LEADER_WEB_20160711_MLP_A.jpg"
+  image: "/uploads/Leader_Web_20160802.jpg"
   dimensions: 2400x3378
 - type: credits
   credits:
