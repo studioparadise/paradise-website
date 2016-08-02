@@ -52,14 +52,11 @@ modules:
   image: "/uploads/8JE_AD_03.jpg"
   dimensions: 2400x1740
 - type: image
-  image: "/uploads/JEWEB_20160711_MLP_A.jpg"
-  dimensions: 2400x3795
-- type: image
   image: "/uploads/JE_Web_20160802_A.jpg"
   dimensions: 1800x2846
 - type: image
-  image: "/uploads/JEWEB_small_20160711.jpg"
-  dimensions: 2400x1618
+  image: "/uploads/JE_Web2_20160802.jpg"
+  dimensions: 2343x1596
 - type: website-link
   url: http://jackerwin.com
 - type: credits
