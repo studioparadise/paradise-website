@@ -4,7 +4,7 @@ date: 2016-05-28 05:00:00 Z
 position: 0
 modules:
 - type: hero
-  image: "/uploads/Je_HeroCrop.jpg"
+  image: "/uploads/JE_Hero_20160802.jpg"
   alt: 
 - type: text
   excerpt: Telling the story of the contemporary cobbler.
