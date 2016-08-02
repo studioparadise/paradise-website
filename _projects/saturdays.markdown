@@ -10,7 +10,7 @@ modules:
   body: 
 - type: image
   image: "/uploads/Saturdays_HomepageHero_20160718.jpg"
-  dimensions: 2400x1800
+  dimensions: 2400x1400
 - type: image
   image: "/uploads/Saturdays_Mag_20160718.jpg"
   dimensions: 2400x1400
