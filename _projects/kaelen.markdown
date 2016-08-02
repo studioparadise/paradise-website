@@ -4,16 +4,16 @@ date: 2016-05-28 05:01:00 Z
 position: 4
 modules:
 - type: hero
-  image: "/uploads/Kaelen_HeroCrop.jpg"
+  image: "/uploads/Kalen_hero_20160718_B.jpg"
 - type: text
-  excerpt: Capturing in a print the essence of a fashion designer's minimalist perspective
-    with a focus on subtle details.
+  excerpt: Capturing the essence of a fashion designer's minimalist perspective with
+    a focus on subtle details.
 - type: image
   image: "/uploads/Kaelen_2_20160715.jpg"
 - type: image
   image: "/uploads/Kaelen_8_20160715.jpg"
 - type: image
-  image: "/uploads/Kaelen_4.jpg"
+  image: "/uploads/Kaelen_10_20160802.jpg"
   dimensions: 2400x1600
 - type: image
   image: "/uploads/Kaelen_4_20160715.jpg"

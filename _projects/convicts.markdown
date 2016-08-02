@@ -4,7 +4,7 @@ date: 2016-05-28 04:03:00 Z
 position: 1
 modules:
 - type: hero
-  image: "/uploads/Con_HeroCrop.jpg"
+  image: "/uploads/Convicts_Hero_20160802.jpg"
   alt: 
   title: 
 - type: text
@@ -36,8 +36,8 @@ modules:
   alt: 
   caption: 
 - type: image
-  dimensions: 2343x3705
   image: "/uploads/Convicts_Web_20160711_MLP_A.jpg"
+  dimensions: 2343x3705
 - type: image
   dimensions: 2343x3705
   image: "/uploads/CONVICTS_WEB_Article_20161107_MLP_A.jpg"
