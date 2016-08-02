@@ -13,7 +13,7 @@ modules:
 - type: image
   image: "/uploads/Kaelen_8_20160715.jpg"
 - type: image
-  image: "/uploads/Kaelen_4.jpg"
+  image: "/uploads/Kaelen_10_20160802.jpg"
   dimensions: 2400x1600
 - type: image
   image: "/uploads/Kaelen_4_20160715.jpg"
