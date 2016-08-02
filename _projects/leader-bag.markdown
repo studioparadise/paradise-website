@@ -4,7 +4,7 @@ date: 2016-05-28 04:03:00 Z
 position: 2
 modules:
 - type: hero
-  image: "/uploads/Leader_Hero_20160718_B_755.jpg"
+  image: "/uploads/Leader_Hero_20160802.jpg"
   alt: 
 - type: text
   excerpt: Bringing good design to modern families.
