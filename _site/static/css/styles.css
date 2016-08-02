@@ -7744,7 +7744,8 @@ div[js-index-content="index"] {
   -o-background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  background-size: cover; }
+  background-size: cover;
+  background-position: center center; }
 
 .module-image {
   margin-right: -35px; }

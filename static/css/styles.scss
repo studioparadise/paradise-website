@@ -1838,6 +1838,7 @@ div[js-index-content="index"]{
 }
 .module-hero__background {
   @include background-size(cover);
+  background-position: center center;
 }
 
 // image module
