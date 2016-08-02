@@ -6,8 +6,8 @@ modules:
 - type: hero
   image: "/uploads/Kalen_hero_20160718_B.jpg"
 - type: text
-  excerpt: Capturing in a print the essence of a fashion designer's minimalist perspective
-    with a focus on subtle details.
+  excerpt: Capturing the essence of a fashion designer's minimalist perspective with
+    a focus on subtle details.
 - type: image
   image: "/uploads/Kaelen_2_20160715.jpg"
 - type: image
