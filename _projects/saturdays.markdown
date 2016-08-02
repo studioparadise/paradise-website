@@ -19,7 +19,7 @@ modules:
   dimensions: 2400x1400
 - type: image
   image: "/uploads/Saturdays_Mag5_20160718.jpg"
-  Key: 
+  dimensions: 2400x1400
 - type: images-2up
   image:
   - image: "/uploads/emailer_april_outfits3.jpg"
