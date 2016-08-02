@@ -36,8 +36,8 @@ modules:
   alt: 
   caption: 
 - type: image
-  dimensions: 2343x3705
   image: "/uploads/Convicts_Web_20160711_MLP_A.jpg"
+  dimensions: 2343x3705
 - type: image
   dimensions: 2343x3705
   image: "/uploads/CONVICTS_WEB_Article_20161107_MLP_A.jpg"
