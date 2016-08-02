@@ -11,20 +11,20 @@ modules:
   body: 
 - type: image
   url: 
-  image: "/uploads/Leader_2_20160715-e52a80.jpg"
+  image: "/uploads/Leader_2_20160802.jpg"
 - type: image
   image: "/uploads/Leader_Logo-479686.gif"
   caption: Created by Lotta Nieminen
   dimensions: 2400x1664
 - type: image
-  image: "/uploads/Leader_10_20160718.jpg"
+  image: "/uploads/Leader_10_20160802.jpg"
 - type: image
-  image: "/uploads/Leader_4_20160715_C.jpg"
+  image: "/uploads/Leader_4_20160802.jpg"
 - type: images-2up
   images:
-  - image: "/uploads/Leader_8_20160715.jpg"
+  - image: "/uploads/Leader_8_20160802.jpg"
     caption: 
-  - image: "/uploads/Leader_9_20160715-12e197.jpg"
+  - image: "/uploads/Leader_9_20160715-bee9f3.jpg"
 - type: image
   image: "/uploads/Leader_6_20160715.jpg"
 - type: image
@@ -32,7 +32,7 @@ modules:
   alt: 
   caption: 
 - type: image
-  image: "/uploads/Leader_1_20160715.jpg"
+  image: "/uploads/Leader_1_20160802.jpg"
 - type: image
   image: "/uploads/LEADER_WEB_20160711_MLP_A.jpg"
   dimensions: 2400x3378
