@@ -2,25 +2,27 @@
 title: Offsite in Barbados
 date: 2016-03-16 02:40:00 Z
 images:
-- image: "/uploads/60250006.JPG"
+- image: "/uploads/Barbados_8_20160803.jpg"
   alt: 
-- image: "/uploads/60250009.JPG"
+- image: "/uploads/Barbados_11_20160803.jpg"
   alt: 
-- image: "/uploads/60240016.JPG"
+- image: "/uploads/Barbados_10_20160803.jpg"
   alt: 
-- image: "/uploads/60240009.JPG"
+- image: "/uploads/Barbados_9_20160803.jpg"
   alt: 
-- image: "/uploads/60250018.JPG"
+- image: "/uploads/Barbados_7_20160803.jpg"
   alt: 
-- image: "/uploads/60250030.JPG"
+- image: "/uploads/Barbados_6_20160803.jpg"
   alt: 
-- image: "/uploads/60230001.JPG"
+- image: "/uploads/Barbados_5_20160803.jpg"
   alt: 
-- image: "/uploads/60250028.JPG"
+- image: "/uploads/Barbados_4_20160803.jpg"
   alt: 
-- image: "/uploads/60250029.JPG"
+- image: "/uploads/Barbados_3_20160803.jpg"
   alt: 
-- image: "/uploads/60240004.JPG"
+- image: "/uploads/Barbados_2_20160803.jpg"
+  alt: 
+- image: "/uploads/barbados_1_20160803.jpg"
   alt: 
 ---
 
