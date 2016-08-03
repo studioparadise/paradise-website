@@ -19,9 +19,6 @@ modules:
   image: "/uploads/Kaelen_4_20160715.jpg"
   dimensions: 2400x3000
 - type: image
-  image: "/uploads/Kaelen_Linen_20160803.jpg"
-  Key: 2400x1600
-- type: image
   image: "/uploads/Kaelen_Pattern2.jpg"
 - type: image
   image: "/uploads/Kaelen_9_20160803.jpg"
@@ -30,12 +27,15 @@ modules:
 - type: image
   image: "/uploads/Kaelen_6_20160803.jpg"
 - type: image
-  image: "/uploads/Kaelen_Pattern1.jpg"
+  image: "/uploads/Kaelen_Linen_20160803.jpg"
+  Key: 2400x1600
 - type: image
   image: "/uploads/Kaelen_3_20160803.jpg"
 - type: image
   image: "/uploads/KAELEN_20160803.gif"
   dimensions: 1200x801
+- type: image
+  image: "/uploads/Kaelen_Pattern1.jpg"
 - type: image
   image: "/uploads/Kaelen_5_20160803.jpg"
 - type: website-link
