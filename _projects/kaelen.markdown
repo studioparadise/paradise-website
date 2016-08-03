@@ -34,7 +34,8 @@ modules:
 - type: image
   image: "/uploads/Kaelen_3_20160803.jpg"
 - type: image
-  image: "/uploads/KAELEN_20161107_MLP_A.gif"
+  image: "/uploads/KAELEN_20160803.gif"
+  dimensions: 1200x801
 - type: image
   image: "/uploads/Kaelen_5_20160803.jpg"
 - type: website-link
