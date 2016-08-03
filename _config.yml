@@ -41,6 +41,12 @@ instagram: igusername
 phone: 
 email: 
 index-slider-images:
+- image: "/uploads/1JE_Home.jpg"
+  alt: 
+  project: Jack Erwin
+- image: "/uploads/Convicts_HomepageHero_20160803.jpg"
+  alt: 
+  project: Convicts
 - image: "/uploads/Kaelen_HomepageHero_20160803.jpg"
   alt: 
   project: Kaelen
