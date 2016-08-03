@@ -15,8 +15,8 @@ modules:
   image: "/uploads/Saturdays_Mag_20160718.jpg"
   dimensions: 2400x1400
 - type: image
-  image: "/uploads/Saturdays_Mag2_20160718.jpg"
-  dimensions: 2400x1400
+  image: "/uploads/Saturdays_Mag2_20160803.jpg"
+  dimensions: 2400x1123
 - type: image
   image: "/uploads/Saturdays_Mag3_20160718.jpg"
   dimensions: 2400x1400
