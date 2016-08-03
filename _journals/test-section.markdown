@@ -1,6 +1,7 @@
 ---
 title: Test Section
 date: 2016-07-28 04:43:00 Z
+published: false
 position: 0
 image: "/uploads/Paradise_FinalDesign_160504_MLP_A_DEVNOTES.jpg"
 ---
