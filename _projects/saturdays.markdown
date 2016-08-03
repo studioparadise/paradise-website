@@ -15,10 +15,10 @@ modules:
   image: "/uploads/Saturdays_Mag_20160718.jpg"
   dimensions: 2400x1400
 - type: image
-  image: "/uploads/Saturdays_Mag2_20160718-864013.jpg"
+  image: "/uploads/Saturdays_Mag2_20160718.jpg"
   dimensions: 2400x1400
 - type: image
-  image: "/uploads/Saturdays_Mag4_20160718.jpg"
+  image: "/uploads/Saturdays_Mag3_20160718.jpg"
   dimensions: 2400x1400
 - type: images-2up
   images:
@@ -28,9 +28,9 @@ modules:
     dimensions: 1200x3539
 - type: image
   image: "/uploads/Saturdays_Web1_20160802.jpg"
-  dimensions: 2400x1618
+  dimensions: 1800x2909
 - type: image
   image: "/uploads/Saturdays_Web2_20160802.jpg"
-  dimensions: 2343x3705
+  dimensions: 2343x1544
 ---
 
