@@ -22,9 +22,9 @@ modules:
   dimensions: 2400x1400
 - type: images-2up
   images:
-  - image: "/uploads/emailer_april_outfits3.jpg"
-    dimensions: 1200x4272
-  - image: "/uploads/emailer_ideas_shoes_fall-144.jpg"
+  - image: "/uploads/Saturdays_Mailer_1_20160803.jpg"
+    dimensions: 1200x4265
+  - image: "/uploads/Saturdays_Mailer_2_20160803.jpg"
     dimensions: 1200x3539
 - type: image
   image: "/uploads/Saturdays_Web1_20160802.jpg"
