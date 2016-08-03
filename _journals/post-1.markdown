@@ -2,7 +2,7 @@
 title: Text Post With Images
 date: 2016-06-25 21:22:00 Z
 published: false
-position: 6
+position: 2
 image: "/uploads/Screenshot%202016-06-27%2021.02.34.png"
 images:
 - "/uploads/inline-image-6883cd.png"
