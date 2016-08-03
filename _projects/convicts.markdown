@@ -4,7 +4,7 @@ date: 2016-05-28 04:03:00 Z
 position: 1
 modules:
 - type: hero
-  image: "/uploads/Con_HeroCrop.jpg"
+  image: "/uploads/Convicts_Hero_20160802.jpg"
   alt: 
   title: 
 - type: text
@@ -36,18 +36,18 @@ modules:
   alt: 
   caption: 
 - type: image
+  image: "/uploads/Convicts_Web_20160802.jpg"
   dimensions: 2343x3705
-  image: "/uploads/Convicts_Web_20160711_MLP_A.jpg"
 - type: image
   dimensions: 2343x3705
-  image: "/uploads/CONVICTS_WEB_Article_20161107_MLP_A.jpg"
+  image: "/uploads/Convicts_WebArticle_20160802.jpg"
 - type: image
   image:
-  - "/uploads/CONVICTS_WEB_Map_20161107_MLP_A.jpg"
+  - "/uploads/Convicts_WebMap_20160802.jpg"
   dimensions: 2382x1606
 - type: image
   image:
-  - "/uploads/CONVICTS_WEB_News_20161107_MLP_A.jpg"
+  - "/uploads/Convicts_WebNews_20160802.jpg"
   dimensions: 2400x1618
 - type: website-link
   credits:

@@ -15,22 +15,22 @@ modules:
   image: "/uploads/Saturdays_Mag_20160718.jpg"
   dimensions: 2400x1400
 - type: image
-  image: "/uploads/Saturdays_Mag2_20160718-864013.jpg"
-  dimensions: 2400x1400
+  image: "/uploads/Saturdays_Mag2_20160803.jpg"
+  dimensions: 2400x1123
 - type: image
-  image: "/uploads/Saturdays_Mag4_20160718.jpg"
+  image: "/uploads/Saturdays_Mag3_20160718.jpg"
   dimensions: 2400x1400
 - type: images-2up
   images:
-  - image: "/uploads/emailer_april_outfits3.jpg"
-    dimensions: 1200x4272
-  - image: "/uploads/emailer_ideas_shoes_fall-144.jpg"
+  - image: "/uploads/Saturdays_Mailer_1_20160803.jpg"
+    dimensions: 1200x4265
+  - image: "/uploads/Saturdays_Mailer_2_20160803.jpg"
     dimensions: 1200x3539
 - type: image
-  image: "/uploads/Satursdays_Web_20170718.jpg"
-  dimensions: 2400x1618
+  image: "/uploads/Saturdays_Web1_20160802-1b87d3.jpg"
+  dimensions: 1800x2909
 - type: image
-  image: "/uploads/Satursdays_WebMag3_20170718.jpg"
-  dimensions: 2343x3705
+  image: "/uploads/Saturdays_Web2_20160802.jpg"
+  dimensions: 2343x1544
 ---
 

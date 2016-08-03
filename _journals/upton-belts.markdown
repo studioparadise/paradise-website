@@ -1,6 +1,7 @@
 ---
 title: Upton Belts
 date: 2016-07-10 22:15:00 Z
+position: 1
 images:
 - image: "/uploads/sport_gallery_image_black_2_1024x1024.jpg"
   alt: 
