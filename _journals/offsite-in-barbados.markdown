@@ -1,7 +1,7 @@
 ---
 title: Offsite in Barbados
 date: 2016-03-16 02:40:00 Z
-position: 8
+position: 7
 image: "/uploads/Barbados_7_20160803.jpg"
 images:
 - image: "/uploads/Barbados_8_20160803.jpg"
