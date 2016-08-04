@@ -1283,9 +1283,11 @@ body {
 @mixin responsive-fonts($t1, $t2) {
   @include at-query(null, 1400px, 1799px) {
     font-size: $t1;
+    line-height: 1.2;
   }
   @include at-query($min, 1800px) {
     font-size: $t2;
+    line-height: 1.2;
   }
 }
 // 18px —> @1400 22px —>@1800 32px
@@ -1304,10 +1306,15 @@ h1 {
 }
 @mixin style-h2 {
   font-size: 14px;
-  @include responsive-fonts(16px, 20px);
+  @include responsive-fonts(16px, 18px);
   line-height: 1.42;
   letter-spacing: .01em;
   font-weight: 500;
+}
+
+@mixin responsive-14 {
+  font-size: 14px;
+  @include responsive-fonts(16px, 18px);
 }
 
 @mixin style-h3 {
@@ -1940,8 +1947,7 @@ div[js-index-content="index"]{
 
 .module-text__view-full {
   margin-top: 28px;
-  font-size: 14px;
-  @include responsive-fonts(16px, 18px);
+  @include responsive-14;
   letter-spacing: .02em;
   cursor: pointer;
   span {
@@ -2062,6 +2068,7 @@ div[js-index-content="index"]{
 .module-website-link {
   @include row;
   margin: 70px 0;
+  @include responsive-14;
 }
 .module-website-link__spacer {
   @include nested-column(3, 6);
@@ -2079,7 +2086,7 @@ div[js-index-content="index"]{
   text-decoration: none;
   display: block;
   border: 1px solid black;
-  font-size: 14px;
+  @include responsive-14;
   color: black;
   height: 45px;
   line-height: 45px;
@@ -2128,6 +2135,7 @@ div[js-index-content="index"]{
 .module-credits__content {
   padding-left: $desktop-gutter/2;
   padding-right: $desktop-gutter/2;
+  @include responsive-14;
   .layout-desktop & {
     -moz-column-count: 2;
     -webkit-column-count: 2;
@@ -2300,6 +2308,8 @@ div[js-index-content="index"]{
 .studio__info {
   @include style-h1;
   font-size: 36px;
+  @include responsive-fonts(42px, 50px);
+
   @include rm {
     font-size: 16px;
   }
@@ -2348,8 +2358,9 @@ div[js-index-content="index"]{
 .studio__team-member {
   @include column(4);
   margin-bottom: 70px;
-  font-size: 18px;
   line-height: 20px;
+  font-size: 18px;
+  @include responsive-fonts(22px, 32px);
   &:nth-child(odd) {
     clear: both;
   }
@@ -2383,6 +2394,7 @@ div[js-index-content="index"]{
 // services
 .studio__services {
   font-size: 18px;
+  @include responsive-fonts(22px, 32px);
   @include row;
   margin-bottom: 140px;
 
