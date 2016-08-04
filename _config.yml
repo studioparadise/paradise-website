@@ -41,16 +41,22 @@ instagram: igusername
 phone: 
 email: 
 index-slider-images:
-- image: "/uploads/Kaelen_HeroMain_20160718.jpg"
+- image: "/uploads/1JE_Home.jpg"
+  alt: 
+  project: Jack Erwin
+- image: "/uploads/Mikoh_HomepageHero_20160803.jpg"
+  alt: 
+  project: miko
+- image: "/uploads/Kaelen_HomepageHero_20160803.jpg"
   alt: 
   project: Kaelen
-- image: "/uploads/Leader_HeroMain_20160716.jpg"
+- image: "/uploads/Leader_HomepageHero_20160803.jpg"
   alt: 
   project: Leader Bag
-- image: "/uploads/Prize_HeroMain_20160718.jpg"
+- image: "/uploads/Prize_HomepageHero_20160803.jpg"
   alt: 
   project: Prize
-- image: "/uploads/Saturdays_HeroMain_20160718.jpg"
+- image: "/uploads/Saturdays_HomepageHero_20160803.jpg"
   alt: 
   project: Saturdays
 gems:
