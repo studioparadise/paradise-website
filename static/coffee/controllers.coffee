@@ -7,7 +7,6 @@ root.globalAPI = {}
 root.globalAPI.isMobile = ->
     return $("body").hasClass 'layout-mobile'
 
-
 root.controllers.indexSwiper = ($element, args) ->
   swiper = root.components.swiper $element,
     loop: true
@@ -34,7 +33,6 @@ root.controllers.project = ($element, args) ->
 
   $(window).on 'resize', (ev) ->
     handleHeroAlign()
-
 
   do handleViewFullProject = ->
     $scrollingContainer = $("[js-index-content=\"projects\"]")
@@ -120,7 +118,7 @@ root.controllers.project = ($element, args) ->
 
       @toggleFPV = ->
         if $('html').hasClass 'js-viewing-full-project'
-          # prevent scrollspy from triggering body in animation 
+          # prevent scrollspy from triggering body in animation
           root.globalAPI.allowScrollSpyAnimateInBody = false
 
           root.globalAPI.fullProjectView = false
@@ -144,11 +142,8 @@ root.controllers.project = ($element, args) ->
         duration = 200
 
       $result = @scrollToElementAnimated duration
-      # $result = $('html, body').animate
-      #   scrollTop: $element.offset().top
-      # , duration, 'easeInOutExpo'
 
-      # 2: when scrolling done, hide all projects above 
+      # 2: when scrolling done, hide all projects above
       $result.promise().then =>
         @hideProjectsBeforeIndex currentProjectIndex
         $scrollingContainer.scrollTop 0
@@ -165,10 +160,6 @@ root.controllers.project = ($element, args) ->
         projectAPI.toggleFullProjectView()
 
       $close.data 'js-loaded', true
-
-    # $(document).keyup (e) =>
-    #   if (e.keyCode == 27)
-    #     toggleFullProjectView()
 
   return api
 
@@ -194,14 +185,13 @@ root.controllers.moduleCredits = ($element, args) ->
   $(window).on 'resize', _.throttle populateColumns, 100
 
 
-
 root.controllers.navbar2 = ($element, args) ->
   api = {}
 
   do handleColumnSizing = ->
-    ### Handle column sizing. 
+    ### Handle column sizing.
     Can't do with pure CSS, therefore use JS to emulate.
-    ### 
+    ###
     $navbarColumns = $ ".navbar__item"
 
     getColumnWidth = ->
@@ -216,7 +206,7 @@ root.controllers.navbar2 = ($element, args) ->
         970*1/8
       ###
       MARGIN = 30
-      windowWidth = $(window).width() 
+      windowWidth = $(window).width()
       usableSpace = windowWidth - MARGIN
       columnWidth = usableSpace * (1/8)
       return columnWidth
@@ -240,16 +230,16 @@ root.controllers.navbar2 = ($element, args) ->
     $wrapper = $element.find('[js-wrapper]')
     height = $wrapper.height()
     wHeight = $(window).height()
+    marginTop = (wHeight/2) - (height/2)
+    console.log 'nav height: ', height, 'w height', wHeight, 'marginTop: ', marginTop
     $wrapper.css
-      marginTop: (wHeight/2) - (height/2)
+      marginTop: marginTop
 
   $(window).on 'resize', centerNavbar
 
- 
+
   $allContent = $("[js-index-content]")
   api.hideAllContentAndFadeInOne = ($content) ->
-    # console.log "Loading content: ", $content
-
     if $content.is(':visible')
       # console.log "Content visible, skipping fade in"
       return
@@ -306,12 +296,16 @@ root.controllers.navbar2 = ($element, args) ->
       $dropdown = $item.closest('.navbar__dropdown')
       height = $item.parent().height()
       top = $item.position().top
-      # console.log 'top: ', top, ' height:', height
-      # console.log 'dropdown css is -', top, $dropdown
+      console.log 'top: ', top, ' height:', height
+      console.log 'dropdown css is -', top, $dropdown
+
+      if top > 200
+        console.log 'top > 200.. can\'t be right'
+        return
+
       $item.parent().stop(true).animate
         marginTop: "-#{top}px"
       , 600
-
 
     scrollTo = ($item) ->
       api.scrolling = true
@@ -338,7 +332,7 @@ root.controllers.navbar2 = ($element, args) ->
               scrollTop: offset
             , 750, 'easeInOutExpo', ->
               api.scrolling = false
-              activateItem $item            
+              activateItem $item
 
         else
             if args.scrollAlignToNav
@@ -383,11 +377,11 @@ root.controllers.navbar2 = ($element, args) ->
         else
           console.log "Not Found", args.overlay
 
-      if args.preventAlign
+      if args.rootNode
         # is root node - misnamed arg
         api.clearNavbarState()
         $('html, body').scrollTop(0)
-        console.log 'root element clicked'
+        $("[js-index-content=\"projects\"]").scrollTop(0)
 
       showDropdown $dropdown, true
 
@@ -395,21 +389,22 @@ root.controllers.navbar2 = ($element, args) ->
       $item.addClass 'is-active'
 
       lastActiveItem = $item
-      if not args.preventAlign and not preventAlign
+      if not args.rootNode and not preventAlign
+        console.log 'args.rootNode is false AND preventAlign is not true'
         alignItemWithParent($item)
 
       scrollSpy = $label.attr('js-scrollspy-nav')
       if scrollSpy
         window.location.hash = scrollSpy
 
-      if args.preventAlign
+      if args.rootNode and not root.globalAPI.isMobile()
         # is root node - misnamed arg
-        if not root.globalAPI.isMobile()
-          $nextItem = $item.find '.navbar__item:first'
-          $nextItem.addClass 'is-active'
-          scrollTo $nextItem
+        $nextItem = $item.find '.navbar__item:first'
+        $nextItem.addClass 'is-active'
+        scrollTo $nextItem
 
-
+        # reset shown state
+        $("[js-show-contact-info-if-visible]").data('shown', false)
 
     $label.on 'click', ->
       scroll = activateItem $item
@@ -518,8 +513,17 @@ root.controllers.navbar2 = ($element, args) ->
           projectAPI = $project.data 'js-controller'
           projectAPI.animateProjectBodyIn()
 
+      # show contact element if a show contact div is in viewport.
+      $showContact = $("[js-show-contact-info-if-visible]:in-viewport:visible:first")
+      console.log "show contact element: ", $showContact, $showContact.is(':visible')
+
+      if ($showContact.length > 0) and not $showContact.data('shown')
+        root.globalAPI.showContactBar()
+        $showContact.data 'shown', true
+
     $(window).on 'scroll', _.throttle onScroll, 50
     $(".index-projects-wrapper").on 'scroll', _.throttle onScroll, 50
+    window.recalculateCurrentProjectScrollSpy = onScroll
 
 root.controllers.studioContent = ($element, args) ->
   $navItem = $("[js-navbar-studio]")
@@ -556,6 +560,8 @@ root.controllers.footer = ($element, args) ->
 
   open = ->
     $element.slideDown 'slow', 'easeInOutExpo'
+
+  root.globalAPI.showContactBar = open
 
   $open = $('[js-footer-show]')
   $open.on 'click', ->
@@ -616,17 +622,17 @@ root.controllers.layoutDefault = ($element, args) ->
       $img = getOrCreateHoverEl()
       $img.hide()
 
-    mouseEnter = (ev) -> 
+    mouseEnter = (ev) ->
       # get number
       index = $(".hover-effect").index($(ev.currentTarget)) + 1
 
-      # add random hover 
+      # add random hover
       wh = $(window).height()
       ww = $(window).width()
 
       $img = getOrCreateHoverEl(index)
-      $img.css 
-        width: (Math.random() * 500) + 200
+      $img.css
+        width: (Math.random() * 200) + 500
         opacity: 0
       $img.show()
       imgW = $img.width()

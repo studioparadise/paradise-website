@@ -13,7 +13,7 @@
 	<div class="navbar__items" js-wrapper>
 		<div class="navbar__item" js-item-with-dropdown>
 			<div class="navbar__label" js-item-label js-args="{
-				preventAlign: true,
+				rootNode: true,
 				overlay: 'projects'
 			}">
 				Work
@@ -36,7 +36,7 @@
 			</div>
 		</div>
 		<div class="navbar__item" js-item-with-dropdown>
-			<div class="navbar__label" js-item-label js-args="{preventAlign: true, overlay: 'studio'}" js-navbar-studio>Studio</div>
+			<div class="navbar__label" js-item-label js-args="{rootNode: true, overlay: 'studio'}" js-navbar-studio>Studio</div>
 			<div class="navbar__dropdown" js-item-dropdown>
 				<div class="navbar__item" js-item-with-dropdown>
 					<div class="navbar__label" js-item-label js-args="{
@@ -86,7 +86,7 @@
 			</div>
 		</div>
 		<div class="navbar__item" js-item-with-dropdown>
-			<div class="navbar__label" js-item-label js-item-label js-args="{preventAlign: true, overlay: 'journal', mobileURL: '/mobile_journal.html'}" style="margin-left: -2px;">Journal</div>
+			<div class="navbar__label" js-item-label js-item-label js-args="{rootNode: true, overlay: 'journal', mobileURL: '/mobile_journal.html'}" style="margin-left: -2px;">Journal</div>
 			<div class="navbar__dropdown" js-item-dropdown>
 				{% assign posts = site.journals %}
 				{% for post in posts reversed %}
@@ -102,7 +102,21 @@
 				{% endfor %}
 			</div>
 		</div>
-
+		<div class="navbar__item hide-on-desktop" js-item-with-dropdown>
+			<div class="navbar__label" js-item-label js-item-label js-args="{rootNode: true}" style="margin-left: -2px;">Contact</div>
+			<div class="navbar__dropdown navbar__dropdown--mobile-contact" js-item-dropdown>
+				New York<br>
+				153 Centre St<br>
+				Suite 206<br>
+				New York NY 10013 <br>
+				+1 917 363 8971<br>
+				<br><br>
+				Sydney Suite 4, Level<br>
+				1137 Bridge Rd<br>
+				Glebe NSW 2037<br>
+				+61 2 9518 4443<br>
+			</div>
+		</div>
 	</div>
 	<div class="mobile-navbar__footer">
 		<a class="mobile-navbar__email-address" href="mailto:hello@studioparadise.com">

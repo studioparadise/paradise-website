@@ -80,7 +80,7 @@
 	<div class="navbar__items" js-wrapper>
 		<div class="navbar__item" js-item-with-dropdown>
 			<div class="navbar__label" js-item-label js-args="{
-				preventAlign: true,
+				rootNode: true,
 				overlay: 'projects'
 			}">
 				Work
@@ -147,7 +147,7 @@
 			</div>
 		</div>
 		<div class="navbar__item" js-item-with-dropdown>
-			<div class="navbar__label" js-item-label js-args="{preventAlign: true, overlay: 'studio'}" js-navbar-studio>Studio</div>
+			<div class="navbar__label" js-item-label js-args="{rootNode: true, overlay: 'studio'}" js-navbar-studio>Studio</div>
 			<div class="navbar__dropdown" js-item-dropdown>
 				<div class="navbar__item" js-item-with-dropdown>
 					<div class="navbar__label" js-item-label js-args="{
@@ -197,7 +197,7 @@
 			</div>
 		</div>
 		<div class="navbar__item" js-item-with-dropdown>
-			<div class="navbar__label" js-item-label js-item-label js-args="{preventAlign: true, overlay: 'journal', mobileURL: '/mobile_journal.html'}" style="margin-left: -2px;">Journal</div>
+			<div class="navbar__label" js-item-label js-item-label js-args="{rootNode: true, overlay: 'journal', mobileURL: '/mobile_journal.html'}" style="margin-left: -2px;">Journal</div>
 			<div class="navbar__dropdown" js-item-dropdown>
 				
 				
@@ -205,11 +205,15 @@
 				    
 				    
 						<div class="navbar__item">
-							<div class="navbar__label" js-item-label js-args="{overlay: 'journal', mobileURL: '/mobile_journal.html#2016-07-13 16:41:00 +0000" js-scrollspy-nav="2016-July">
+							<div class="navbar__label" js-item-label js-args="{overlay: 'journal', mobileURL: '/mobile_journal.html#2016-07-28 04:43:00 +0000" js-scrollspy-nav="2016-July">
 								July
 							</div>
 						</div>
 					
+				
+				    
+				    
+				    
 				
 				    
 				    
@@ -232,20 +236,30 @@
 				    
 				    
 				    
-				
-				    
-				    
-				    
 						<div class="navbar__item">
-							<div class="navbar__label" js-item-label js-args="{overlay: 'journal', mobileURL: '/mobile_journal.html#2016-04-01 01:39:00 +0000" js-scrollspy-nav="2016-April">
-								April
+							<div class="navbar__label" js-item-label js-args="{overlay: 'journal', mobileURL: '/mobile_journal.html#2016-03-16 02:40:00 +0000" js-scrollspy-nav="2016-March">
+								March
 							</div>
 						</div>
 					
 				
 			</div>
 		</div>
-
+		<div class="navbar__item hide-on-desktop" js-item-with-dropdown>
+			<div class="navbar__label" js-item-label js-item-label js-args="{rootNode: true}" style="margin-left: -2px;">Contact</div>
+			<div class="navbar__dropdown navbar__dropdown--mobile-contact" js-item-dropdown>
+				New York<br>
+				153 Centre St<br>
+				Suite 206<br>
+				New York NY 10013 <br>
+				+1 917 363 8971<br>
+				<br><br>
+				Sydney Suite 4, Level<br>
+				1137 Bridge Rd<br>
+				Glebe NSW 2037<br>
+				+61 2 9518 4443<br>
+			</div>
+		</div>
 	</div>
 	<div class="mobile-navbar__footer">
 		<a class="mobile-navbar__email-address" href="mailto:hello@studioparadise.com">
@@ -333,7 +347,7 @@
 							<!--
 <ul>
 	<li>Module type:hero</li>
-	<li>Module data {"type"=>"hero", "image"=>"/uploads/Je_HeroCrop.jpg", "alt"=>nil}</li>
+	<li>Module data {"type"=>"hero", "image"=>"/uploads/JE_Hero_20160802_B.jpg", "alt"=>nil}</li>
 </ul>
 -->
 
@@ -344,11 +358,11 @@
 	
 		<div class="hero__column">
 			
-				<div class="module-hero__background" style="background-image: url(/uploads/Je_HeroCrop.jpg);">
+				<div class="module-hero__background" style="background-image: url(/uploads/JE_Hero_20160802_B.jpg);">
 				</div>
 				<!--
 				<div class="module-image__ratio" data-responsive-image-dimensions="2400x755">
-					<img class="hero__img lazyload" data-src="/uploads/Je_HeroCrop.jpg" alt="" />
+					<img class="hero__img lazyload" data-src="/uploads/JE_Hero_20160802_B.jpg" alt="" />
 				</div>
 				-->
 			
@@ -719,7 +733,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 							<!--
 <ul>
 	<li>Module type:hero</li>
-	<li>Module data {"type"=>"hero", "image"=>"/uploads/Con_HeroCrop.jpg", "alt"=>nil, "title"=>nil}</li>
+	<li>Module data {"type"=>"hero", "image"=>"/uploads/Convicts_Hero_20160802.jpg", "alt"=>nil, "title"=>nil}</li>
 </ul>
 -->
 
@@ -730,11 +744,11 @@ In order to create a brand that modern men could relate to, we needed to create 
 	
 		<div class="hero__column">
 			
-				<div class="module-hero__background" style="background-image: url(/uploads/Con_HeroCrop.jpg);">
+				<div class="module-hero__background" style="background-image: url(/uploads/Convicts_Hero_20160802.jpg);">
 				</div>
 				<!--
 				<div class="module-image__ratio" data-responsive-image-dimensions="2400x755">
-					<img class="hero__img lazyload" data-src="/uploads/Con_HeroCrop.jpg" alt="" />
+					<img class="hero__img lazyload" data-src="/uploads/Convicts_Hero_20160802.jpg" alt="" />
 				</div>
 				-->
 			
@@ -858,7 +872,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 							<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "dimensions"=>"2343x3705", "image"=>"/uploads/Convicts_Web_20160711_MLP_A.jpg"}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Convicts_Web_20160711_MLP_A.jpg", "dimensions"=>"2343x3705"}</li>
 </ul>
 -->
 
@@ -1048,7 +1062,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 							<!--
 <ul>
 	<li>Module type:hero</li>
-	<li>Module data {"type"=>"hero", "image"=>"/uploads/Leader_Hero_20160718_B_755.jpg", "alt"=>nil}</li>
+	<li>Module data {"type"=>"hero", "image"=>"/uploads/Leader_Hero_20160802.jpg", "alt"=>nil}</li>
 </ul>
 -->
 
@@ -1059,11 +1073,11 @@ In order to create a brand that modern men could relate to, we needed to create 
 	
 		<div class="hero__column">
 			
-				<div class="module-hero__background" style="background-image: url(/uploads/Leader_Hero_20160718_B_755.jpg);">
+				<div class="module-hero__background" style="background-image: url(/uploads/Leader_Hero_20160802.jpg);">
 				</div>
 				<!--
 				<div class="module-image__ratio" data-responsive-image-dimensions="2400x755">
-					<img class="hero__img lazyload" data-src="/uploads/Leader_Hero_20160718_B_755.jpg" alt="" />
+					<img class="hero__img lazyload" data-src="/uploads/Leader_Hero_20160802.jpg" alt="" />
 				</div>
 				-->
 			
@@ -1127,7 +1141,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 							<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "url"=>nil, "image"=>"/uploads/Leader_2_20160715-e52a80.jpg"}</li>
+	<li>Module data {"type"=>"image", "url"=>nil, "image"=>"/uploads/Leader_2_20160802.jpg"}</li>
 </ul>
 -->
 
@@ -1137,7 +1151,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 <div class="module module-image module-image--">
 	
 		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Leader_2_20160715-e52a80.jpg" alt="" />
+			<img class="module-image__img lazyload " data-src="/uploads/Leader_2_20160802.jpg" alt="" />
 		</div>
 		
 	
@@ -1171,7 +1185,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 							<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_10_20160718.jpg"}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_10_20160802.jpg"}</li>
 </ul>
 -->
 
@@ -1181,7 +1195,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 <div class="module module-image module-image--">
 	
 		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Leader_10_20160718.jpg" alt="" />
+			<img class="module-image__img lazyload " data-src="/uploads/Leader_10_20160802.jpg" alt="" />
 		</div>
 		
 	
@@ -1191,7 +1205,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 							<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_4_20160715_C.jpg"}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_4_20160802.jpg"}</li>
 </ul>
 -->
 
@@ -1201,7 +1215,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 <div class="module module-image module-image--">
 	
 		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Leader_4_20160715_C.jpg" alt="" />
+			<img class="module-image__img lazyload " data-src="/uploads/Leader_4_20160802.jpg" alt="" />
 		</div>
 		
 	
@@ -1211,7 +1225,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 							<!--
 <ul>
 	<li>Module type:images-2up</li>
-	<li>Module data {"type"=>"images-2up", "images"=>[{"image"=>"/uploads/Leader_8_20160715.jpg", "caption"=>nil}, {"image"=>"/uploads/Leader_9_20160715-12e197.jpg"}]}</li>
+	<li>Module data {"type"=>"images-2up", "images"=>[{"image"=>"/uploads/Leader_8_20160802.jpg", "caption"=>nil}, {"image"=>"/uploads/Leader_9_20160715-bee9f3.jpg"}]}</li>
 </ul>
 -->
 
@@ -1223,14 +1237,14 @@ In order to create a brand that modern men could relate to, we needed to create 
 		
 			<div class="module-images-2up__image">
 				<div class="module-image__ratio" data-responsive-image-dimensions="1200x1600">
-					<img class="module-images-2up__img lazyload" data-src="/uploads/Leader_8_20160715.jpg" alt=""/>
+					<img class="module-images-2up__img lazyload" data-src="/uploads/Leader_8_20160802.jpg" alt=""/>
 				</div>
 				
 			</div>
 		
 			<div class="module-images-2up__image">
 				<div class="module-image__ratio" data-responsive-image-dimensions="1200x1600">
-					<img class="module-images-2up__img lazyload" data-src="/uploads/Leader_9_20160715-12e197.jpg" alt=""/>
+					<img class="module-images-2up__img lazyload" data-src="/uploads/Leader_9_20160715-bee9f3.jpg" alt=""/>
 				</div>
 				
 			</div>
@@ -1262,7 +1276,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 							<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_4_20160715_B.jpg", "alt"=>nil, "caption"=>nil}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_4_20160802-deedb9.jpg", "alt"=>nil, "caption"=>nil}</li>
 </ul>
 -->
 
@@ -1272,7 +1286,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 <div class="module module-image module-image--">
 	
 		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Leader_4_20160715_B.jpg" alt="" />
+			<img class="module-image__img lazyload " data-src="/uploads/Leader_4_20160802-deedb9.jpg" alt="" />
 		</div>
 		
 	
@@ -1282,7 +1296,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 							<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_1_20160715.jpg"}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Leader_1_20160802.jpg"}</li>
 </ul>
 -->
 
@@ -1292,7 +1306,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 <div class="module module-image module-image--">
 	
 		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Leader_1_20160715.jpg" alt="" />
+			<img class="module-image__img lazyload " data-src="/uploads/Leader_1_20160802.jpg" alt="" />
 		</div>
 		
 	
@@ -1610,7 +1624,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 							<!--
 <ul>
 	<li>Module type:hero</li>
-	<li>Module data {"type"=>"hero", "image"=>"/uploads/Kaelen_HeroCrop.jpg"}</li>
+	<li>Module data {"type"=>"hero", "image"=>"/uploads/Kalen_hero_20160718_B.jpg"}</li>
 </ul>
 -->
 
@@ -1621,11 +1635,11 @@ In order to create a brand that modern men could relate to, we needed to create 
 	
 		<div class="hero__column">
 			
-				<div class="module-hero__background" style="background-image: url(/uploads/Kaelen_HeroCrop.jpg);">
+				<div class="module-hero__background" style="background-image: url(/uploads/Kalen_hero_20160718_B.jpg);">
 				</div>
 				<!--
 				<div class="module-image__ratio" data-responsive-image-dimensions="2400x755">
-					<img class="hero__img lazyload" data-src="/uploads/Kaelen_HeroCrop.jpg" alt="" />
+					<img class="hero__img lazyload" data-src="/uploads/Kalen_hero_20160718_B.jpg" alt="" />
 				</div>
 				-->
 			
@@ -1637,7 +1651,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 							<!--
 <ul>
 	<li>Module type:text</li>
-	<li>Module data {"type"=>"text", "excerpt"=>"Capturing in a print the essence of a fashion designer's minimalist perspective with a focus on subtle details."}</li>
+	<li>Module data {"type"=>"text", "excerpt"=>"Capturing the essence of a fashion designer's minimalist perspective with a focus on subtle details."}</li>
 </ul>
 -->
 
@@ -1656,7 +1670,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 			</div>
 			
 				<div class="module-text__excerpt">
-					Capturing in a print the essence of a fashion designer's minimalist perspective with a focus on subtle details.
+					Capturing the essence of a fashion designer's minimalist perspective with a focus on subtle details.
 					<div class="module-text__view-full" js-index-view-full-project>
 						<span class="hide-on-full-project">
 							View Full Project
@@ -1729,7 +1743,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 							<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Kaelen_4.jpg", "dimensions"=>"2400x1600"}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Kaelen_10_20160802.jpg", "dimensions"=>"2400x1600"}</li>
 </ul>
 -->
 
@@ -1739,7 +1753,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 <div class="module module-image module-image--">
 	
 		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Kaelen_4.jpg" alt="" />
+			<img class="module-image__img lazyload " data-src="/uploads/Kaelen_10_20160802.jpg" alt="" />
 		</div>
 		
 	
@@ -1971,7 +1985,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 							<!--
 <ul>
 	<li>Module type:hero</li>
-	<li>Module data {"type"=>"hero", "image"=>"/uploads/prizehero.jpg"}</li>
+	<li>Module data {"type"=>"hero", "image"=>"/uploads/Prize_prizehero_20160802.jpg"}</li>
 </ul>
 -->
 
@@ -1982,11 +1996,11 @@ In order to create a brand that modern men could relate to, we needed to create 
 	
 		<div class="hero__column">
 			
-				<div class="module-hero__background" style="background-image: url(/uploads/prizehero.jpg);">
+				<div class="module-hero__background" style="background-image: url(/uploads/Prize_prizehero_20160802.jpg);">
 				</div>
 				<!--
 				<div class="module-image__ratio" data-responsive-image-dimensions="2400x755">
-					<img class="hero__img lazyload" data-src="/uploads/prizehero.jpg" alt="" />
+					<img class="hero__img lazyload" data-src="/uploads/Prize_prizehero_20160802.jpg" alt="" />
 				</div>
 				-->
 			
@@ -2050,7 +2064,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 							<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Stationery.jpg"}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Prize_main_20160718.jpg"}</li>
 </ul>
 -->
 
@@ -2060,7 +2074,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 <div class="module module-image module-image--">
 	
 		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Stationery.jpg" alt="" />
+			<img class="module-image__img lazyload " data-src="/uploads/Prize_main_20160718.jpg" alt="" />
 		</div>
 		
 	
@@ -2070,7 +2084,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 							<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Prize_lookbook1.jpg", "dimensions"=>"2400x1951"}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Prize_lookbook1_20160802.jpg", "dimensions"=>"2400x1951"}</li>
 </ul>
 -->
 
@@ -2080,7 +2094,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 <div class="module module-image module-image--">
 	
 		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1951">
-			<img class="module-image__img lazyload " data-src="/uploads/Prize_lookbook1.jpg" alt="" />
+			<img class="module-image__img lazyload " data-src="/uploads/Prize_lookbook1_20160802.jpg" alt="" />
 		</div>
 		
 	
@@ -2090,7 +2104,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 							<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Prize_Exports.jpg", "dimensions"=>"2400x1600"}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Prize_PrizeCollection_20160802.jpg", "dimensions"=>"2400x1600"}</li>
 </ul>
 -->
 
@@ -2100,7 +2114,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 <div class="module module-image module-image--">
 	
 		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Prize_Exports.jpg" alt="" />
+			<img class="module-image__img lazyload " data-src="/uploads/Prize_PrizeCollection_20160802.jpg" alt="" />
 		</div>
 		
 	
@@ -2110,7 +2124,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 							<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Prize_lookbook2.jpg", "dimensions"=>"2400x1951"}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Prize_lookbook2_20160802.jpg", "dimensions"=>"2400x1951"}</li>
 </ul>
 -->
 
@@ -2120,7 +2134,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 <div class="module module-image module-image--">
 	
 		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1951">
-			<img class="module-image__img lazyload " data-src="/uploads/Prize_lookbook2.jpg" alt="" />
+			<img class="module-image__img lazyload " data-src="/uploads/Prize_lookbook2_20160802.jpg" alt="" />
 		</div>
 		
 	
@@ -2130,7 +2144,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 							<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Prize_hero2.jpg", "dimensions"=>"2400x1600"}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Prize_Cards_20160802.jpg", "dimensions"=>"2400x1600"}</li>
 </ul>
 -->
 
@@ -2140,7 +2154,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 <div class="module module-image module-image--">
 	
 		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Prize_hero2.jpg" alt="" />
+			<img class="module-image__img lazyload " data-src="/uploads/Prize_Cards_20160802.jpg" alt="" />
 		</div>
 		
 	
@@ -2150,7 +2164,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 							<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Tati_Pins.jpg", "dimensions"=>"2400x1600"}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Prize_Tati_Pins_20160802.jpg", "dimensions"=>"2400x1600"}</li>
 </ul>
 -->
 
@@ -2160,7 +2174,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 <div class="module module-image module-image--">
 	
 		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Tati_Pins.jpg" alt="" />
+			<img class="module-image__img lazyload " data-src="/uploads/Prize_Tati_Pins_20160802.jpg" alt="" />
 		</div>
 		
 	
@@ -2170,7 +2184,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 							<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Tati2.jpg"}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Prize_Tati2__20160802.jpg"}</li>
 </ul>
 -->
 
@@ -2180,7 +2194,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 <div class="module module-image module-image--">
 	
 		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Tati2.jpg" alt="" />
+			<img class="module-image__img lazyload " data-src="/uploads/Prize_Tati2__20160802.jpg" alt="" />
 		</div>
 		
 	
@@ -2190,7 +2204,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 							<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Tati1.jpg"}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Prize_Tati1_20160802.jpp.jpg"}</li>
 </ul>
 -->
 
@@ -2200,7 +2214,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 <div class="module module-image module-image--">
 	
 		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Tati1.jpg" alt="" />
+			<img class="module-image__img lazyload " data-src="/uploads/Prize_Tati1_20160802.jpp.jpg" alt="" />
 		</div>
 		
 	
@@ -2210,7 +2224,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 							<!--
 <ul>
 	<li>Module type:images-2up</li>
-	<li>Module data {"type"=>"images-2up", "image"=>"/uploads/MonsterLookbook3.jpg", "dimensions"=>"1200x1650"}</li>
+	<li>Module data {"type"=>"images-2up", "image"=>"/uploads/Prize_MonsterLookbook3__20160802.jpg", "dimensions"=>"1200x1650"}</li>
 </ul>
 -->
 
@@ -2227,7 +2241,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 							<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Steph_pins.jpg", "dimensions"=>"2400x1600"}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Prize_Stephpins__20160802.jpg", "dimensions"=>"2400x1600"}</li>
 </ul>
 -->
 
@@ -2237,7 +2251,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 <div class="module module-image module-image--">
 	
 		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Steph_pins.jpg" alt="" />
+			<img class="module-image__img lazyload " data-src="/uploads/Prize_Stephpins__20160802.jpg" alt="" />
 		</div>
 		
 	
@@ -2278,7 +2292,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 							<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/MonsterLookbook1.jpg", "dimensions"=>"2400x1745"}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Prize_MonsterLookbook1__20160802.jpg", "dimensions"=>"2400x1745"}</li>
 </ul>
 -->
 
@@ -2288,7 +2302,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 <div class="module module-image module-image--">
 	
 		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1745">
-			<img class="module-image__img lazyload " data-src="/uploads/MonsterLookbook1.jpg" alt="" />
+			<img class="module-image__img lazyload " data-src="/uploads/Prize_MonsterLookbook1__20160802.jpg" alt="" />
 		</div>
 		
 	
@@ -2298,7 +2312,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 							<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Jean_Pins.jpg", "dimensions"=>"2400x1600"}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Prize_JeanPins__20160802.jpg", "dimensions"=>"2400x1600"}</li>
 </ul>
 -->
 
@@ -2308,7 +2322,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 <div class="module module-image module-image--">
 	
 		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Jean_Pins.jpg" alt="" />
+			<img class="module-image__img lazyload " data-src="/uploads/Prize_JeanPins__20160802.jpg" alt="" />
 		</div>
 		
 	
@@ -2349,7 +2363,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 							<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/TimLahan_Pins.jpg"}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Prize_TimLahan_20160802.jpg"}</li>
 </ul>
 -->
 
@@ -2359,7 +2373,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 <div class="module module-image module-image--">
 	
 		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/TimLahan_Pins.jpg" alt="" />
+			<img class="module-image__img lazyload " data-src="/uploads/Prize_TimLahan_20160802.jpg" alt="" />
 		</div>
 		
 	
@@ -2369,7 +2383,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 							<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/TimLookbook.jpg"}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Prize_TimLookbook_20160802.jpg"}</li>
 </ul>
 -->
 
@@ -2379,7 +2393,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 <div class="module module-image module-image--">
 	
 		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/TimLookbook.jpg" alt="" />
+			<img class="module-image__img lazyload " data-src="/uploads/Prize_TimLookbook_20160802.jpg" alt="" />
 		</div>
 		
 	
@@ -2404,7 +2418,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 							<!--
 <ul>
 	<li>Module type:hero</li>
-	<li>Module data {"type"=>"hero", "image"=>"/uploads/Hero-f6811e.jpg"}</li>
+	<li>Module data {"type"=>"hero", "image"=>"/uploads/Saturdays_Hero_20160718.jpg"}</li>
 </ul>
 -->
 
@@ -2415,11 +2429,11 @@ In order to create a brand that modern men could relate to, we needed to create 
 	
 		<div class="hero__column">
 			
-				<div class="module-hero__background" style="background-image: url(/uploads/Hero-f6811e.jpg);">
+				<div class="module-hero__background" style="background-image: url(/uploads/Saturdays_Hero_20160718.jpg);">
 				</div>
 				<!--
 				<div class="module-image__ratio" data-responsive-image-dimensions="2400x755">
-					<img class="hero__img lazyload" data-src="/uploads/Hero-f6811e.jpg" alt="" />
+					<img class="hero__img lazyload" data-src="/uploads/Saturdays_Hero_20160718.jpg" alt="" />
 				</div>
 				-->
 			
@@ -2483,7 +2497,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 							<!--
 <ul>
 	<li>Module type:image</li>
-	<li>Module data {"type"=>"image", "image"=>"/uploads/Iamge1.jpg"}</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Saturdays_HomepageHero_20160718.jpg", "dimensions"=>"2400x1400"}</li>
 </ul>
 -->
 
@@ -2492,8 +2506,139 @@ In order to create a brand that modern men could relate to, we needed to create 
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600">
-			<img class="module-image__img lazyload " data-src="/uploads/Iamge1.jpg" alt="" />
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1400">
+			<img class="module-image__img lazyload " data-src="/uploads/Saturdays_HomepageHero_20160718.jpg" alt="" />
+		</div>
+		
+	
+</div>
+
+						
+							<!--
+<ul>
+	<li>Module type:image</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Saturdays_Mag_20160718.jpg", "dimensions"=>"2400x1400"}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-image variation: </div>
+
+<div class="module module-image module-image--">
+	
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1400">
+			<img class="module-image__img lazyload " data-src="/uploads/Saturdays_Mag_20160718.jpg" alt="" />
+		</div>
+		
+	
+</div>
+
+						
+							<!--
+<ul>
+	<li>Module type:image</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Saturdays_Mag2_20160718-864013.jpg", "dimensions"=>"2400x1400"}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-image variation: </div>
+
+<div class="module module-image module-image--">
+	
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1400">
+			<img class="module-image__img lazyload " data-src="/uploads/Saturdays_Mag2_20160718-864013.jpg" alt="" />
+		</div>
+		
+	
+</div>
+
+						
+							<!--
+<ul>
+	<li>Module type:image</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Saturdays_Mag4_20160718.jpg", "dimensions"=>"2400x1400"}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-image variation: </div>
+
+<div class="module module-image module-image--">
+	
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1400">
+			<img class="module-image__img lazyload " data-src="/uploads/Saturdays_Mag4_20160718.jpg" alt="" />
+		</div>
+		
+	
+</div>
+
+						
+							<!--
+<ul>
+	<li>Module type:images-2up</li>
+	<li>Module data {"type"=>"images-2up", "images"=>[{"image"=>"/uploads/emailer_april_outfits3.jpg", "dimensions"=>"1200x4272"}, {"image"=>"/uploads/emailer_ideas_shoes_fall-144.jpg", "dimensions"=>"1200x3539"}]}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-images-2up variation: </div>
+
+<div class="module module-images-2up module-images-2up--">
+	
+		
+			<div class="module-images-2up__image">
+				<div class="module-image__ratio" data-responsive-image-dimensions="1200x4272">
+					<img class="module-images-2up__img lazyload" data-src="/uploads/emailer_april_outfits3.jpg" alt=""/>
+				</div>
+				
+			</div>
+		
+			<div class="module-images-2up__image">
+				<div class="module-image__ratio" data-responsive-image-dimensions="1200x3539">
+					<img class="module-images-2up__img lazyload" data-src="/uploads/emailer_ideas_shoes_fall-144.jpg" alt=""/>
+				</div>
+				
+			</div>
+		
+	
+</div>
+
+						
+							<!--
+<ul>
+	<li>Module type:image</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Satursdays_Web_20170718.jpg", "dimensions"=>"2400x1618"}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-image variation: </div>
+
+<div class="module module-image module-image--">
+	
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1618">
+			<img class="module-image__img lazyload " data-src="/uploads/Satursdays_Web_20170718.jpg" alt="" />
+		</div>
+		
+	
+</div>
+
+						
+							<!--
+<ul>
+	<li>Module type:image</li>
+	<li>Module data {"type"=>"image", "image"=>"/uploads/Satursdays_WebMag3_20170718.jpg", "dimensions"=>"2343x3705"}</li>
+</ul>
+-->
+
+
+<div class="debug-element">module-image variation: </div>
+
+<div class="module module-image module-image--">
+	
+		<div class="module-image__ratio" data-responsive-image-dimensions="2343x3705">
+			<img class="module-image__img lazyload " data-src="/uploads/Satursdays_WebMag3_20170718.jpg" alt="" />
 		</div>
 		
 	
@@ -2505,6 +2650,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 			</div>
 		
 	</div>
+	<div js-show-contact-info-if-visible>&nbsp;</div>
 </div>
 
 
@@ -2551,10 +2697,10 @@ In order to create a brand that modern men could relate to, we needed to create 
 					One of the most widely accepted interpretations of Paradise is the Garden of Eden, home to Adam and Eve before they got kicked out for eating <span class="hover-effect">fruit</span>.
 				</p>
 				<p>
-					But there are as many notions of Paradise as there are people dreaming of it. For some, Paradise is a <span class="hover-effect">hammock</span> swaying between palms on a deserted beach; for others, Paradise is an <span class="hover-effect">ice-cold</span> beer at 5:15 on a Friday, or dinner and a movie–minus the kids. Some people even find Paradise while being struck with a <span class="hover-effect">pizza shovel</span> in the basement of a nightclub.
+					But there are as many notions of Paradise as there are people dreaming of it. For some, Paradise is a <span class="hover-effect">hammock</span> swaying between palms on a deserted beach; for others, Paradise is an <span class="hover-effect">ice-cold</span> beer at 5:15 on a Friday, or dinner and a movie–<span class="hover-effect">minus the kids.</span> Some people even find Paradise while being struck with a <span class="hover-effect">pizza shovel</span> in the basement of a nightclub.
 				</p>
 				<p>
-					For us, Paradise is our design and product studio. That’s what we called it– Paradise. And it happens to be our source of literal Paradise because it’s here that we’re able to take our knowledge and past experience working in-house for brands, and use it to create <span class="hover-effect">hard hitting</span> and <span class="hover-effect">award winning</span> new work for others. Our background sets us apart: we’ve been <span class="hover-effect">in the trenches</span> and we know our shit. That’s Paradise.
+					For us, Paradise is our design and product studio. That’s what we called it– Paradise. And it happens to be our source of literal Paradise because it’s here that we’re able to take our knowledge and past experience working in-house for brands, and use it to create hard hitting and <span class="hover-effect">award winning</span> new work for others. Our background sets us apart: we’ve been <span class="hover-effect">in the trenches</span> and we know our shit. That’s Paradise.
 				</p>
 			</div>
 
@@ -2568,9 +2714,9 @@ In order to create a brand that modern men could relate to, we needed to create 
 					<div class="studio__service-group">
 						<p>
 							<span class="studio__service-title">
-								In the Trenches. 
+								In the Trenches.
 							</span>
-							Our time spent in-house has given us insights into the customer feedback loop that many agencies never get access to. Launching award winning product lines with some of the most innovative marketing, sales, design and operations teams has taught us the complex balancing act of brand and business. 	
+							Our time spent in-house has given us insights into the customer feedback loop that many agencies never get access to. Launching award winning product lines with some of the most innovative marketing, sales, design and operations teams has taught us the complex balancing act of brand and business.
 						</p>
 					</div>
 
@@ -2581,15 +2727,15 @@ In order to create a brand that modern men could relate to, we needed to create 
 							</span>
 							Travel is a key part of how we operate and the brands and products we create reflect that. And offices on directly opposite sides of the world means our team literally works around the clock.
 						</p>
-					</div> 
+					</div>
 					<div class="studio__service-group">
 						<p>
 							<span class="studio__service-title">
 								Skin In The Game.
 							</span>
-							We've built our own brands from the ground up. And we’re still doing it. We've had successes, but more importantly failures. We’ve bounced back bigger and badder than ever. We feel your pain and understand the ever-changing landscape because we live and learn in it everyday. 
+							We've built our own brands from the ground up. And we’re still doing it. We've had successes, but more importantly failures. We’ve bounced back bigger and badder than ever. We feel your pain and understand the ever-changing landscape because we live and learn in it everyday.
 						</p>
-					</div> 
+					</div>
 				</div>
 				<div class="studio__services-column">
 					<img class="studio__services-column-image" src="">
@@ -2635,7 +2781,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 							Designer
 						</div>
 						<p class="studio__team-bio">
-							Margaux balances out the in-house work with a strong agency background and a focus on branding and digital design. Margaux has been recognized by D&AD, The Type Directors Club and Awwwards for her excellence in digital design. 
+							Margaux balances out the in-house work with a strong agency background and a focus on branding and digital design. Margaux has been recognized by D&AD, The Type Directors Club and Awwwards for her excellence in digital design.
 						</p>
 					</div>
 
@@ -2686,7 +2832,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 							</span>
 							We take the big questions into consideration: how will you stand out? Who are you? Why does your company exist? Why do you exist? Do you exist? Is anything real? Where am I? Then we blow your ever-lovin’ socks off a second time.
 						</p>
-					</div> 
+					</div>
 					<div class="studio__service-group">
 						<p>
 							<span class="studio__service-title">
@@ -2694,7 +2840,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 							</span>
 							We take the big questions into consideration: how will you stand out? Who are you? Why does your company exist? Why do you exist? Do you exist? Is anything real? Where am I? Then we blow your ever-lovin’ socks off a second time.
 						</p>
-					</div> 
+					</div>
 					<div class="studio__services-group">
 						<p>
 							<span class="studio__service-title">
@@ -2730,22 +2876,22 @@ In order to create a brand that modern men could relate to, we needed to create 
 							Express
 						</a>
 						<a class="studio__service-client" target="_blank" >
-							Convicts 
+							Convicts
 						</a>
 						<a class="studio__service-client" target="_blank" >
 							Kaelen
 						</a>
 						<a class="studio__service-client" target="_blank" >
-							Flower shop 
-						</a>	
+							Flower shop
+						</a>
 						<a class="studio__service-client" target="_blank" >
 							Abbott
 						</a>
 						<a class="studio__service-client" target="_blank" >
-							Well well 
+							Well well
 						</a>
 						<a class="studio__service-client" target="_blank" >
-							Tsovet 
+							Tsovet
 						</a>
 						<a class="studio__service-client" target="_blank" >
 							FLWR
@@ -2754,10 +2900,11 @@ In order to create a brand that modern men could relate to, we needed to create 
 							Raen
 						</a>
 						<a class="studio__service-client" target="_blank" >
-							Leader Bag Co. 
+							Leader Bag Co.
 						</a>
 					</div>
 				</div>
+				<div js-show-contact-info-if-visible>&nbsp;</div>
 				<div style="height: 50vh;"></div>
 			</div>
 		</div>
@@ -2778,23 +2925,21 @@ In order to create a brand that modern men could relate to, we needed to create 
 						<div class="index-journal__month" js-scrollspy="2016-July">
 					
 					<div class="index-journal__journal">
-						<img class="index-journal__hero-img" src="/uploads/flwr_invite_popup_final2-05.jpg" />
+						<img class="index-journal__hero-img" src="/uploads/Paradise_FinalDesign_160504_MLP_A_DEVNOTES.jpg" />
 						<div class="index-journal__header">
 							<div class="index-journal__date">
-								July 13 2016
+								July 28 2016
 							</div>
 							
 								<h1 class="index-journal__title">
-									FLWR Launch Party
+									Test Section
 								</h1>
 							
 						</div>
 						
 							<div class="row">
-								<div class="index-journal__content">	
-									<p>Our friends at FLWR are getting out in the big wide world. Come join the party at Convicts over on Mulberry St.</p>
-
-<p>Invitation design, branding and photography by Paradise.</p>
+								<div class="index-journal__content">
+									<p>Want to test having another divider with some news… If we add these between things it will help.</p>
 
 								</div>
 							</div>
@@ -2814,7 +2959,79 @@ In order to create a brand that modern men could relate to, we needed to create 
 				    
 				    
 					<div class="index-journal__journal">
-						<img class="index-journal__hero-img" src="/uploads/casual_lookbook_gallery_6-9ea25f.jpg" />
+						<img class="index-journal__hero-img" src="/uploads/SP_Site_Journal_0001_Interns_160710.jpg" />
+						<div class="index-journal__header">
+							<div class="index-journal__date">
+								July 23 2016
+							</div>
+							
+								<h1 class="index-journal__title">
+									Interns
+								</h1>
+							
+						</div>
+						
+							<div class="row">
+								<div class="index-journal__content">
+									<p>Looking for a turbo-learning design freak to intern with us for the rest of the summer. If you are interested in interesting stuff, know how to use some adobe programs and are down to nerd out with us please tell us a little about yourself and why you are keen at hiring@studioparadise.com.</p>
+
+<p>See you in Paradise</p>
+
+								</div>
+							</div>
+						
+						
+						
+							
+								<img class="index-journal__img lazyload" data-src="" alt="" />
+							
+						
+					</div>
+				    
+				
+				    
+				    
+				    
+					<div class="index-journal__journal">
+						<img class="index-journal__hero-img" src="" />
+						<div class="index-journal__header">
+							<div class="index-journal__date">
+								July 19 2016
+							</div>
+							
+								<h1 class="index-journal__title">
+									China Town
+								</h1>
+							
+						</div>
+						
+							<div class="row">
+								<div class="index-journal__content">
+									<p>Fuckin round in china town</p>
+
+								</div>
+							</div>
+						
+						
+						
+							
+								<img class="index-journal__img lazyload" data-src="/uploads/86820030.JPG" alt="hi there this is an image" />
+							
+								<img class="index-journal__img lazyload" data-src="/uploads/86820022.JPG" alt="" />
+							
+								<img class="index-journal__img lazyload" data-src="/uploads/86820026.JPG" alt="" />
+							
+								<img class="index-journal__img lazyload" data-src="/uploads/14960016.JPG" alt="" />
+							
+						
+					</div>
+				    
+				
+				    
+				    
+				    
+					<div class="index-journal__journal">
+						<img class="index-journal__hero-img" src="" />
 						<div class="index-journal__header">
 							<div class="index-journal__date">
 								July 10 2016
@@ -2827,7 +3044,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 						</div>
 						
 							<div class="row">
-								<div class="index-journal__content">	
+								<div class="index-journal__content">
 									<p>Some beautiful shots by our mates at <a href="http://www.wedgeandlever.com/">Wedge &amp; Lever</a> of a sleek contemporary line of belts we designed for the recently launched online belt startup <a href="http://uptonbelts.com/">Upton</a>.</p>
 
 <p>The concept was to put a modern spin on the classic men’s belt across three different styles. We achieved a minimal machined symmetry in a space where traditionally more emphasis is placed on a handcrafted feel. The design and production of the buckles required some innovative design thinking around molding without parting lines in order to reduce the amount of polishing required and therefore the amount of damage that would be done to the edges.</p>
@@ -2845,43 +3062,9 @@ In order to create a brand that modern men could relate to, we needed to create 
 							
 								<img class="index-journal__img lazyload" data-src="/uploads/casual_lookbook_gallery_4.jpg" alt="" />
 							
-								<img class="index-journal__img lazyload" data-src="/uploads/dress_home_wide.jpg" alt="" />
+								<img class="index-journal__img lazyload" data-src="/uploads/casual_lookbook_gallery_6-9ea25f.jpg" alt="" />
 							
 								<img class="index-journal__img lazyload" data-src="/uploads/casual_gallery_image_black_1_1024x1024.jpg" alt="" />
-							
-						
-					</div>
-				    
-				
-				    
-				    
-				    
-					<div class="index-journal__journal">
-						<img class="index-journal__hero-img" src="/uploads/SP_Site_Journal_0001_Interns_160710.jpg" />
-						<div class="index-journal__header">
-							<div class="index-journal__date">
-								July 10 2016
-							</div>
-							
-								<h1 class="index-journal__title">
-									Interns
-								</h1>
-							
-						</div>
-						
-							<div class="row">
-								<div class="index-journal__content">	
-									<p>Looking for a turbo-learning design freak to intern with us for the rest of the summer. If you are interested in interesting stuff, know how to use some adobe programs and are down to nerd out with us please tell us a little about yourself and why you are keen at hiring@studioparadise.com.</p>
-
-<p>C’mon in the water’s fine!</p>
-
-								</div>
-							</div>
-						
-						
-						
-							
-								<img class="index-journal__img lazyload" data-src="" alt="" />
 							
 						
 					</div>
@@ -2919,24 +3102,24 @@ In order to create a brand that modern men could relate to, we needed to create 
 				    
 				    
 				    
+						<div class="index-journal__month" js-scrollspy="2016-March">
+					
 					<div class="index-journal__journal">
-						<img class="index-journal__hero-img" src="/uploads/Screenshot%202016-06-27%2021.02.34.png" />
+						<img class="index-journal__hero-img" src="" />
 						<div class="index-journal__header">
 							<div class="index-journal__date">
-								June 25 2016
+								March 16 2016
 							</div>
 							
 								<h1 class="index-journal__title">
-									Text Post With Images
+									Offsite in Barbados
 								</h1>
 							
 						</div>
 						
 							<div class="row">
-								<div class="index-journal__content">	
-									<p>Jack Erwin is a direct-to-consumer luxury mens shoe brand. After two years of quick growth and success, we were engaged to hone Jack Erwin’s brand story. This meant rethinking their branded materials as a holistic system.</p>
-
-<p>We evolved the logo mark, introduced consistent color and textures, art directed campaigns shot by Bjorn Iooss and Joss Mckinley, and introduced an intuitive e-commerce experience. The results was a brand that was confident, aspirational, understated, and truly reflected the men purchasing and wearing JE shoes.</p>
+								<div class="index-journal__content">
+									<p>At Paradise we have a few ideas of how to focus. Sometimes it means packing up shop and going to Barbados.</p>
 
 								</div>
 							</div>
@@ -2944,32 +3127,25 @@ In order to create a brand that modern men could relate to, we needed to create 
 						
 						
 							
-								<img class="index-journal__img lazyload" data-src="" alt="" />
+								<img class="index-journal__img lazyload" data-src="/uploads/60250006.JPG" alt="" />
 							
-								<img class="index-journal__img lazyload" data-src="" alt="" />
+								<img class="index-journal__img lazyload" data-src="/uploads/60250009.JPG" alt="" />
 							
-						
-					</div>
-				    
-				
-				    
-				    
-				    
-						<div class="index-journal__month" js-scrollspy="2016-April">
-					
-					<div class="index-journal__journal">
-						<img class="index-journal__hero-img" src="/uploads/inline-image-b340ad.png" />
-						<div class="index-journal__header">
-							<div class="index-journal__date">
-								April 01 2016
-							</div>
+								<img class="index-journal__img lazyload" data-src="/uploads/60240016.JPG" alt="" />
 							
-						</div>
-						
-						
-						
+								<img class="index-journal__img lazyload" data-src="/uploads/60240009.JPG" alt="" />
 							
-								<img class="index-journal__img lazyload" data-src="" alt="" />
+								<img class="index-journal__img lazyload" data-src="/uploads/60250018.JPG" alt="" />
+							
+								<img class="index-journal__img lazyload" data-src="/uploads/60250030.JPG" alt="" />
+							
+								<img class="index-journal__img lazyload" data-src="/uploads/60230001.JPG" alt="" />
+							
+								<img class="index-journal__img lazyload" data-src="/uploads/60250028.JPG" alt="" />
+							
+								<img class="index-journal__img lazyload" data-src="/uploads/60250029.JPG" alt="" />
+							
+								<img class="index-journal__img lazyload" data-src="/uploads/60240004.JPG" alt="" />
 							
 						
 					</div>
@@ -2980,6 +3156,7 @@ In order to create a brand that modern men could relate to, we needed to create 
 			</div>
 		</div>
 	</div>
+	<div js-show-contact-info-if-visible>&nbsp;</div>
 </div>
 		<div class="footer-contact" js-footer-show>
 	Contact
