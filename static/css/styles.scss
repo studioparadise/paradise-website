@@ -1445,6 +1445,20 @@ h1 {
   z-index: 100;
 }
 
+.layout-mobile {
+  .navbar__label {
+    line-height: 1.6;
+  }
+}
+.mobile-navbar-is-open {
+  .mobile-navbar-open__close {
+    display: block;
+  }
+  .mobile-navbar-open__line {
+    display: none;
+  }
+}
+
 .mobile-navbar__content {
   margin-top: 70px;
   padding-left: $mobile-margin;
@@ -1464,6 +1478,10 @@ h1 {
     display: block;
   }
 }
+.mobile-navbar-open__close {
+  display: none;
+}
+
 .mobile-navbar-open__line {
   height: 1px;
   background: black;
@@ -1666,7 +1684,9 @@ h1 {
   }
 }
 .navbar__label {
-  padding: 2px 0;
+  .layout-default & {
+    padding: 2px 0;
+  }
   text-decoration: none;
   @include style-h2;
   line-height: 1.1; // 20px too much in this case

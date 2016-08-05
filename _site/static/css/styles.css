@@ -7368,6 +7368,14 @@ h1 {
   background: white;
   z-index: 100; }
 
+.layout-mobile .navbar__label {
+  line-height: 1.6; }
+
+.mobile-navbar-is-open .mobile-navbar-open__close {
+  display: block; }
+.mobile-navbar-is-open .mobile-navbar-open__line {
+  display: none; }
+
 .mobile-navbar__content {
   margin-top: 70px;
   padding-left: 20px;
@@ -7385,6 +7393,9 @@ h1 {
   z-index: 1000; }
   .layout-mobile .mobile-navbar-open {
     display: block; }
+
+.mobile-navbar-open__close {
+  display: none; }
 
 .mobile-navbar-open__line {
   height: 1px;
@@ -7555,7 +7566,6 @@ h1 {
     margin-right: 10px; }
 
 .navbar__label {
-  padding: 2px 0;
   text-decoration: none;
   font-size: 14px;
   line-height: 1.42;
@@ -7567,6 +7577,8 @@ h1 {
   -webkit-transition: color 0.2s ease 0s;
   -moz-transition: color 0.2s ease 0s;
   -o-transition: color 0.2s ease 0s; }
+  .layout-default .navbar__label {
+    padding: 2px 0; }
   @media screen and (min-width: 1400px) and (max-width: 1799px) {
     .navbar__label {
       font-size: 16px;
