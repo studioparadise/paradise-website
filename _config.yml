@@ -35,11 +35,8 @@ url: http://yourwebsite.com
 socialimg: "/img/social.jpg"
 facebook: fbusername
 twitter: twusername
-github: ghusername
-googleplus: gusername
 instagram: igusername
-phone: 
-email: 
+linkedin: 
 index-slider-images:
 - image: "/uploads/1JE_Home.jpg"
   alt: 
@@ -70,4 +67,3 @@ exclude:
 - gruntfile.js
 - package.json
 - vendor/
-linkedin: 
