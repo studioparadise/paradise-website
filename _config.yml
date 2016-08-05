@@ -59,6 +59,9 @@ index-slider-images:
 - image: "/uploads/Saturdays_HomepageHero_20160803.jpg"
   alt: 
   project: Saturdays
+- image: 
+  alt: 
+  project: 
 gems:
 - jekyll-coffeescript
 exclude:
@@ -67,3 +70,4 @@ exclude:
 - gruntfile.js
 - package.json
 - vendor/
+linkedin: 
