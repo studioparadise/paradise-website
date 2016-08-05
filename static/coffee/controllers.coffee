@@ -251,7 +251,7 @@ root.controllers.navbar2 = ($element, args) ->
     $logo = $element.find('[js-navbar-logo]')
     # show slider on logo click
     $logo.on 'click', (ev) ->
-      if not args.mobile
+      if root.globalAPI.isMobile()
         ev.preventDefault()
         $el = $("[js-index-content=\"index\"]")
         api.hideAllContentAndFadeInOne $el

@@ -1360,6 +1360,7 @@ h1 {
     padding-right: $mobile-margin;
     width: 100%;
     bottom: auto;
+    height: 70px;
     &:before {
       content: "";
       position: absolute;
@@ -1640,6 +1641,12 @@ h1 {
   text-align: center;
   border: 1px solid black;
   margin-left: -1px;
+  svg {
+    height: 8px;
+    path, polygon, rect {
+      fill: black;
+    }
+  }
 }
 .mobile__next {
   font-size: 16px;
@@ -2393,6 +2400,7 @@ div[js-index-content="index"]{
 }
 .studio__team-img {
   display: block;
+  display: none;
   margin-bottom: 35px;
   height: 300px;
   width: 100%;
