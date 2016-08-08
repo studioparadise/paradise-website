@@ -323,7 +323,7 @@ $max: max-width;
 
 @mixin rm {
   .layout-mobile & {
-    @content; 
+    @content;
   }
 }
 
@@ -334,7 +334,7 @@ $max: max-width;
 }
 .hide-on-desktop {
   display: none;
-  .mobile & {
+  .layout-mobile & {
     display: block;
   }
 }
@@ -954,7 +954,7 @@ $desktop-margin: 35px;
 
 
   padding-left: $desktop-margin;
-  padding-right: $desktop-margin;    
+  padding-right: $desktop-margin;
   @include rm {
     padding-left: $mobile-margin;
     padding-right: $mobile-margin;
@@ -1010,7 +1010,7 @@ $desktop-margin: 35px;
 @mixin row() {
   @include clearfix;
   @include rm {
-    $gutter: -1 * $mobile-gutter/2;    
+    $gutter: -1 * $mobile-gutter/2;
     margin-left: $gutter;
     margin-right: $gutter;
   }
@@ -1036,7 +1036,7 @@ $desktop-margin: 35px;
 @mixin column($col, $grid_columns: $grid_columns) {
   width: calculate-width($col, $grid_columns);
   float: left;
-  @include rd {  
+  @include rd {
     padding-left: $desktop-gutter/2;
     padding-right: $desktop-gutter/2;
   }
@@ -1084,7 +1084,7 @@ $desktop-margin: 35px;
   padding: 0 $desktop-gutter/2;
   @include rm {
     padding: 0 $mobile-gutter/2;
-  }      
+  }
 }
 
 
@@ -1283,9 +1283,11 @@ body {
 @mixin responsive-fonts($t1, $t2) {
   @include at-query(null, 1400px, 1799px) {
     font-size: $t1;
+    line-height: 1.2;
   }
   @include at-query($min, 1800px) {
     font-size: $t2;
+    line-height: 1.2;
   }
 }
 // 18px —> @1400 22px —>@1800 32px
@@ -1304,10 +1306,15 @@ h1 {
 }
 @mixin style-h2 {
   font-size: 14px;
-  @include responsive-fonts(16px, 20px);
+  @include responsive-fonts(16px, 18px);
   line-height: 1.42;
   letter-spacing: .01em;
   font-weight: 500;
+}
+
+@mixin responsive-14 {
+  font-size: 14px;
+  @include responsive-fonts(16px, 18px);
 }
 
 @mixin style-h3 {
@@ -1353,6 +1360,7 @@ h1 {
     padding-right: $mobile-margin;
     width: 100%;
     bottom: auto;
+    height: 70px;
     &:before {
       content: "";
       position: absolute;
@@ -1438,6 +1446,20 @@ h1 {
   z-index: 100;
 }
 
+.layout-mobile {
+  .navbar__label {
+    line-height: 1.6;
+  }
+}
+.mobile-navbar-is-open {
+  .mobile-navbar-open__close {
+    display: block;
+  }
+  .mobile-navbar-open__line {
+    display: none;
+  }
+}
+
 .mobile-navbar__content {
   margin-top: 70px;
   padding-left: $mobile-margin;
@@ -1457,6 +1479,10 @@ h1 {
     display: block;
   }
 }
+.mobile-navbar-open__close {
+  display: none;
+}
+
 .mobile-navbar-open__line {
   height: 1px;
   background: black;
@@ -1564,7 +1590,7 @@ h1 {
   }
 }
 .mobile-project__title {
-  font-size: 18px;
+  font-size: 14px;
   line-height: 100%;
 }
 .mobile__contact {
@@ -1577,7 +1603,7 @@ h1 {
 }
 .mobile__contact-header {
   margin-top: 15px;
-  margin-bottom: 15px;  
+  margin-bottom: 15px;
 }
 .mobile__email-address {
   text-align: center;
@@ -1603,7 +1629,7 @@ h1 {
     float: right;
   }
 }
-// social 
+// social
 .mobile-social {
 
 }
@@ -1615,6 +1641,12 @@ h1 {
   text-align: center;
   border: 1px solid black;
   margin-left: -1px;
+  svg {
+    height: 8px;
+    path, polygon, rect {
+      fill: black;
+    }
+  }
 }
 .mobile__next {
   font-size: 16px;
@@ -1659,7 +1691,9 @@ h1 {
   }
 }
 .navbar__label {
-  padding: 2px 0;
+  .layout-default & {
+    padding: 2px 0;
+  }
   text-decoration: none;
   @include style-h2;
   line-height: 1.1; // 20px too much in this case
@@ -1693,8 +1727,20 @@ h1 {
     &.is-open {
       opacity: 1;
       @include transform(translateX(0px));
-    }    
+    }
   }
+}
+.navbar__dropdown--mobile-contact {
+  padding: 2px 0;
+  text-decoration: none;
+  @include style-h2;
+  line-height: 1.1; // 20px too much in this case
+  color: black;
+  // cursor: pointer;
+  // @include transition(color .2s ease 0s);
+  // &:hover {
+  //   color: black;
+  // }
 }
 
 //content
@@ -1736,9 +1782,10 @@ h1 {
     margin-right: -1 * $desktop-margin;
   }
 }
+
 .swiper-slide {
-  margin-top: 90px;
-  height: calc(100vh - 180px);
+  margin-top: 100px;
+  height: calc(100vh - 200px);
   cursor: pointer;
   @include background-size-cover;
 }
@@ -1811,7 +1858,7 @@ div[js-index-content="index"]{
 //modules
 //modules
 //modules
-// global module 
+// global module
 .module {
   img {
     width: 100%;
@@ -1835,9 +1882,13 @@ div[js-index-content="index"]{
   .js-viewing-full-project & {
     margin-left: -1 * $desktop-margin;
   }
+  .module-image__ratio {
+    overflow: hidden;
+  }
 }
 .module-hero__background {
   @include background-size(cover);
+  background-position: center center;
 }
 
 // image module
@@ -1854,8 +1905,8 @@ div[js-index-content="index"]{
 .module-image__ratio {
   position: relative;
   margin-bottom: 35px;
-  @include rm { 
-    margin-bottom: 8px; 
+  @include rm {
+    margin-bottom: 8px;
   };
   > img {
     position: absolute;
@@ -1923,12 +1974,12 @@ div[js-index-content="index"]{
 
 .module-text__view-full {
   margin-top: 28px;
-  font-size: 14px;
+  @include responsive-14;
   letter-spacing: .02em;
   cursor: pointer;
   span {
     @include transition(color .15s ease 0s);
-    color: $color-gray;    
+    color: $color-gray;
   }
   &:hover {
     span {
@@ -1967,7 +2018,7 @@ div[js-index-content="index"]{
     transform .5s ease 0s,
     opacity .5s ease 0s);
   @include transform(translateX(100px));
-
+  max-width: 700px;
   // .js-viewing-full-project &,
   // .js-viewing-full-project--animating-out {
   //   @include column(3);
@@ -2011,9 +2062,24 @@ div[js-index-content="index"]{
 // images 2up module
 .module-images-2up {
   @include row;
+  .layout-default & {
+    margin-right: -45px !important;
+  }
+  .layout-mobile & {
+    margin-right: -30px !important;
+  }
 }
+
 .module-images-2up__image {
   @include nested-column(3, 6);
+  .layout-default & {
+    &:first-child {
+      padding-right: 17.5px;
+    }
+    &:last-child {
+      padding-left: 17.5px;
+    }
+  }
 }
 .module-images-2up__image-ratio {
 }
@@ -2029,6 +2095,7 @@ div[js-index-content="index"]{
 .module-website-link {
   @include row;
   margin: 70px 0;
+  @include responsive-14;
 }
 .module-website-link__spacer {
   @include nested-column(3, 6);
@@ -2046,7 +2113,7 @@ div[js-index-content="index"]{
   text-decoration: none;
   display: block;
   border: 1px solid black;
-  font-size: 14px;
+  @include responsive-14;
   color: black;
   height: 45px;
   line-height: 45px;
@@ -2087,17 +2154,28 @@ div[js-index-content="index"]{
   margin-top: 70px;
   margin-bottom: 70px;
   @include clearfix;
+  .layout-mobile & {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
 }
 .module-credits__content {
-  -moz-column-count: 2;
-  -webkit-column-count: 2;
-  column-count: 2;
   padding-left: $desktop-gutter/2;
   padding-right: $desktop-gutter/2;
-  .js-viewing-full-project & {
+  @include responsive-14;
+  .layout-desktop & {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+  .layout-desktop .js-viewing-full-project & {
     -moz-column-count: 3;
     -webkit-column-count: 3;
     column-count: 3;
+  }
+  .layout-mobile & {
+    clear: both;
+    margin-top: 20px;
   }
 }
 .module-credits__credit {
@@ -2128,6 +2206,10 @@ div[js-index-content="index"]{
   .js-viewing-full-project & {
     @include column(2);
   }
+  .layout-mobile & {
+    float: none;
+    width: 100%;
+  }
 }
 
 // full project view
@@ -2144,10 +2226,10 @@ div[js-index-content="index"]{
 
 .js-viewing-full-project {
   .index-project {
-    @include container; 
+    @include container;
   }
   .hide-on-full-project {
-    display: none; 
+    display: none;
   }
   .show-on-full-project {
     display: block;
@@ -2186,10 +2268,21 @@ div[js-index-content="index"]{
     padding-bottom: 600px;
   }
   .hover-effect {
-    text-decoration: underline;
     cursor: pointer;
+    position: relative;
+    display: inline-block;
     &:hover {
-      color: $color-gray;
+      &:after {
+        border-color: $color-gray;
+      }
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      right: 0;
+      border-bottom: 1px solid black;
     }
   }
 }
@@ -2242,6 +2335,8 @@ div[js-index-content="index"]{
 .studio__info {
   @include style-h1;
   font-size: 36px;
+  @include responsive-fonts(42px, 50px);
+
   @include rm {
     font-size: 16px;
   }
@@ -2274,7 +2369,7 @@ div[js-index-content="index"]{
 
 // team
 .studio__header-team {
-  margin-top: 140px;  
+  margin-top: 140px;
   @include rm {
     margin-top: 40px;
   }
@@ -2290,8 +2385,9 @@ div[js-index-content="index"]{
 .studio__team-member {
   @include column(4);
   margin-bottom: 70px;
-  font-size: 18px;
   line-height: 20px;
+  font-size: 18px;
+  @include responsive-fonts(22px, 32px);
   &:nth-child(odd) {
     clear: both;
   }
@@ -2304,6 +2400,7 @@ div[js-index-content="index"]{
 }
 .studio__team-img {
   display: block;
+  display: none;
   margin-bottom: 35px;
   height: 300px;
   width: 100%;
@@ -2325,6 +2422,7 @@ div[js-index-content="index"]{
 // services
 .studio__services {
   font-size: 18px;
+  @include responsive-fonts(22px, 32px);
   @include row;
   margin-bottom: 140px;
 
@@ -2442,7 +2540,7 @@ div[js-index-content="index"]{
   padding-top: 0;
   margin-top: 0;
   border-top: none;
-} 
+}
 .index-journal__hero-img {
   display: block;
   width: 100%;
@@ -2609,7 +2707,7 @@ div[js-index-content="index"]{
       path, rect, polygon {
         fill: white;
       }
-    } 
+    }
   }
 }
 .footer__close {
@@ -2632,7 +2730,7 @@ div[js-index-content="index"]{
   padding-left: 35px;
   cursor: pointer;
 }
-.grid-debug-container { 
+.grid-debug-container {
   display: none;
 }
 // animation
