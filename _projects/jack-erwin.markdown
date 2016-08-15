@@ -21,8 +21,8 @@ modules:
     their digital channels. Last, we revamped their e-commerce experience by introducing
     a simplified content strategy, and strong branded elements throughout the website.
     The result was a brand that was confident, aspirational, understated, and truly
-    reflected the men purchasing and wearing JE shoes.\n\n**Art Direction\n**Web Design
-    \n**Brand Strategy \n**Web Development\n**Brand Identity"
+    reflected the men purchasing and wearing JE shoes.\n\n**Art Direction**\n**Web
+    Design** \n**Brand Strategy** \n**Web Development**\n**Brand Identity**"
 - type: image
   images:
   - image: 
