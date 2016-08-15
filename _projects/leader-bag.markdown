@@ -17,6 +17,12 @@ modules:
     To match the back-pack design, we contracted New York based designer Lotta Nieminen to develop a mark and visual system to reflect the quality and values of Leader Bag Co. A recent update to the website, introduced an intuitive e-commerce experience, with a stronger narrative explaining the function of the products, and a modular system that will expand with the brand and their product line.
 
     In the four product launches, Leader Bag has sold out out each time, within the first day.
+
+    \*\*Product Design\*\*
+
+    \*\*Digital\*\*
+
+    \*\*Creative Consulting\*\*
 - type: image
   url: 
   image: "/uploads/Leader_2_20160802.jpg"
