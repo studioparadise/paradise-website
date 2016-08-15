@@ -33,13 +33,10 @@ defaults:
 tagline: Changing the world, one uninspired quote at a time
 url: http://yourwebsite.com
 socialimg: "/img/social.jpg"
-facebook: fbusername
-twitter: twusername
-github: ghusername
-googleplus: gusername
-instagram: igusername
-phone:
-email:
+facebook: studioparadisenyc
+twitter: paradisenewyork
+instagram: studioparadisenyc
+linkedin: Studio-Paradise
 index-slider-images:
 - image: "/uploads/1JE_Home.jpg"
   alt:
@@ -59,6 +56,9 @@ index-slider-images:
 - image: "/uploads/Saturdays_HomepageHero_20160803.jpg"
   alt:
   project: Saturdays
+- image:
+  alt:
+  project:
 gems:
 - jekyll-coffeescript
 exclude:
