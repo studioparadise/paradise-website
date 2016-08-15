@@ -6,8 +6,15 @@ modules:
 - type: hero
   image: "/uploads/Prize_prizehero_20160802.jpg"
 - type: text
-  excerpt: This sentence has to do with prize pins.
-  body: 
+  excerpt: 'Small in size, outrageous in personality. '
+  body: "Prize Pins is the love child of Luke Flynn and Kym Naimo, and a Product of
+    Paradise. After living and working in New York, the two friends were inspired
+    to break their black on black outfits and add a bit of excitement to their daily
+    uniform.  Pins, they thoughts. “Garment Spice,” they nodded. \n\nWith a bold brand,
+    graphic art direction, original collections and curated collaborators, Prize Pins
+    has gained a steady social following, and has been a leader bringing pins to the
+    mainstream. The brand unifies itself with the simple idea of fitting big personality
+    into small detail. "
 - type: image
   image: "/uploads/Prize_main_20160718.jpg"
 - type: image
