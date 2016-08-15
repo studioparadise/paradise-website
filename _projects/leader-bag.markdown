@@ -7,8 +7,8 @@ modules:
   image: "/uploads/Leader_Hero_20160802.jpg"
   alt: 
 - type: text
-  excerpt: "***Designing a contemporary & utilitarian Diaper Bag Brand for the modern
-    family.***"
+  excerpt: Designing a contemporary & utilitarian Diaper Bag Brand for the modern
+    family.
   body: |-
     **Founded in 2013 by three mothers - and sisters - Leader Bag Co. makes premium diaper bags for the modern family. Paradise was engaged to design the diaper bag itself, and since then has evolved as Leader’s creative consultant. In addition to two phases of product design and production, we’ve worked with Leader bag on their product strategy and product offering, managed their branding process and solidified an overarching creative direction, and revamped their website to include e-commerce.**
 
