@@ -8325,6 +8325,9 @@ div[js-index-content="index"] {
       right: 0;
       border-bottom: 1px solid black; }
 
+.js-hover-element {
+  z-index: 10; }
+
 .studio__spacer {
   width: 25%;
   float: left; }
