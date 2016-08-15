@@ -8,19 +8,20 @@ modules:
   alt: 
   title: 
 - type: text
-  excerpt: Capturing the spirit of rebellion with a bold new platform.
-  body: "In early 2015, Pete Maiden set out to merge his two business ventures — media
-    company featuring Aussie’s in the states, Billabout, - and his nolita retail location,
-    B_Space, featuring up and coming Australian brands. Paradise was asked to define
-    the new brand - Convicts - and create a cohesive editorial platform for it to
-    exist on.\n\nKeeping in mind the camaraderie, pioneering nature and burning rebellion
-    of the Convict, we created a clean logo mark inspired by the \"Pheon\" or \"Broad
-    Arrow\" that marked British Government issued convict clothing in the early days
-    of colonial Australia and paired it with flexible, modular and bold visual vernacular.
-    We created a logo and visual system that embodied and could represent the rebellion,
-    camaraderie of those pioneering new creative territory and spicing the world with
-    mischief. \n\n* *Brand Identity*\n* *Visual language*\n* *Website Design*\n* *Content
-    Strategy*\n* *Website Development*\n"
+  excerpt: "***Capturing the spirit of camaraderie and rebellion with a bold brand
+    and editorial website***"
+  body: |-
+    Convicts is an Australian digital media brand that produces original and branded multimedia content including video and events. Born out of the merger of two successful business ventures — media company Billabout, and Nolita boutique B_Space— that feature Australian brands and personalities, Convicts is breaking ground by exploring the relationship between digital content and the event or shop experience. Convicts reached out to Paradise to define their new brand, and to create a functional, beautiful editorial website.
+
+    \
+
+    Keeping in mind the camaraderie, pioneering nature and burning rebellion of the Convict, we created a clean logo mark inspired by the "Pheon" or "Broad Arrow". The three prong mark alludes to British Government issued convict clothing in the early days of colonial Australia. We paired the mark with a bold and modular visual vernacular in a sleek black and white color palette.
+
+    \
+
+    \
+
+    The Convicts website was designed to have a bold aesthetic, a simple and intuitive content strategy and UI/UX and moments of excitement and experimentation. Our main focus was on the Convicts page and Convicts Map. The Convicts pages house a video, interview and content. We created a custom video player to leverage the Convicts brand, and introduced a sticky video player, so that users could listen to the video while skimming through content below. This allowed for a rich viewing experience, while truly speaking to our demographic’s attention span and preventing drop offs. Using the Google Map API, we created custom city-guide for each Convict.
   text: 
   variation: centered
   full-project-title: Convicts
