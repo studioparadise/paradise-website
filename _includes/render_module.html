@@ -84,13 +84,12 @@
 					</div>
 				</div>
 				<div class="module-text__full-project-spacer show-on-full-project">&nbsp;</div>
-					<div class="module-text__body animate-in">
-						{% if module.body %}
-							<div class="module-text__body animate-in">
-								{{ module.body | markdownify }}
-							</div>
-						{% endif %}
-					</div>
+
+					{% if module.body %}
+						<div class="module-text__body animate-in">
+							{{ module.body | markdownify }}
+						</div>
+					{% endif %}
 			{% endif %}
 		</div>
 	{% when 'website-link' %}
