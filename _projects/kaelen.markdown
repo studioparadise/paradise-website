@@ -6,15 +6,10 @@ modules:
 - type: hero
   image: "/uploads/Kaelen_Hero_20160803.jpg"
 - type: text
-  excerpt: Kaelen is a NYC based women’s clothing line created by Kaelen Haworth,
-    selected as 1 of 10 designers of CFDA'S {FASHION INCUBATOR} Class 3.0 The Kaelen
-    collections explore the dichotomies of masculine and feminine, classic and contemporary
-    with an emphasis on subtle detail and textile. Paradise was first engaged to create
-    a print and digital brand book for Kaelen, to send to potential retailers. We
-    were then engaged to adapt this brand book to a larger, more buttoned-up book
-    that would act as her final CFDA submission.[...]
-  body: |2-
-
+  excerpt: 'Capturing a designer''s minimalist design essence and attention to detail
+    in print. '
+  body: |-
+    Kaelen is a NYC based women’s clothing line created by Kaelen Haworth, selected as 1 of 10 designers of CFDA'S {FASHION INCUBATOR} Class 3.0 The Kaelen collections explore the dichotomies of masculine and feminine, classic and contemporary with an emphasis on subtle detail and textile. Paradise was first engaged to create a print and digital brand book for Kaelen, to send to potential retailers. We were then engaged to adapt this brand book to a larger, more buttoned-up book that would act as her final CFDA submission.
 
 
     We created a fun, small brand book that tapped into Kaelen’s more cheeky, fun brand voice. Layouts were clean, juxtaposing themes of each collection and emphasizing her textile choices and the details. We contrasted the clean spreads with collage styles pages printed on pink paper at the heart of the book. This section was used introduced the Kaelen story, weaving together images of her inspiration, travels and process. We created a bold and simple user interface to house the lookbook online, playing with arrow cursors to update page number previews.  
