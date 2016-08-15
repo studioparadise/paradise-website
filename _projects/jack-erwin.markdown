@@ -7,8 +7,8 @@ modules:
   image: "/uploads/JE_Hero_20160802_B.jpg"
   alt: 
 - type: text
-  excerpt: Rethinking Jack Erwin brand, art direction digital experience to tell the
-    story of the contemporary cobbler .
+  excerpt: Rethinking Jack Erwin brand, art direction and digital experience to tell
+    the story of the contemporary cobbler .
   body: |-
     **Founded in 2013, Jack Erwin is a direct-to-consumer luxury mens shoe brands. Their point of differentiation: handmade italian shoes, at an affordable price. After two years of quick growth and success, we were engaged to hone Jack Erwin’s brand story, which meant rethinking their branded materials and digital experience as a holistic system.**
 
