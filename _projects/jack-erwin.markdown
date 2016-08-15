@@ -10,9 +10,10 @@ modules:
   excerpt: Rethinking Jack Erwin brand, art direction and digital experience to tell
     the story of the contemporary cobbler .
   body: |-
-    **Founded in 2013, Jack Erwin is a direct-to-consumer luxury mens shoe brands. Their point of differentiation: handmade italian shoes, at an affordable price. After two years of quick growth and success, we were engaged to hone Jack Erwin’s brand story, which meant rethinking their branded materials and digital experience as a holistic system.**
+    **Founded in 2013, Jack Erwin is a direct-to-consumer luxury mens shoe brands. Their point of   differentiation: handmade italian shoes, at an affordable price. After two years of quick growth and success, we were engaged to hone Jack Erwin’s brand story, which meant rethinking their branded materials and digital experience as a holistic system.**
 
-    \
+
+
     In order to create a brand that modern men could relate to, we needed to create a vision that provoked the same trust between cobbler and man: Guarantee quality, product - and lifestyle. We evolved the logo mark, introduced consistent color and texture across printed material and store design. We art directed Spring and Fall campaign, and direct the use of these assets across their digital channels. Last, we revamped their e-commerce experience by introducing a simplified content strategy, and strong branded elements throughout the website. The result was a brand that was confident, aspirational, understated, and truly reflected the men purchasing and wearing JE shoes.
 
     * *Art Direction*
