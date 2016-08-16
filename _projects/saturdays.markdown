@@ -7,7 +7,15 @@ modules:
   image: "/uploads/Saturdays_Hero_20160718.jpg"
 - type: text
   excerpt: 'Creating consistency across all branded materials. '
-  body: 
+  body: "Saturdays is a lifestyle clothing brand born from the rituals of surfing:
+    clothing, conversation, coffee and curation. Saturdays & Paradise have collaborated
+    on a series of small projects that has posed an interested, and relevant, design
+    challenge: how do we create consistency for a brand while constantly evolving
+    the system across multiple channels. Our work with Saturdays includes art directing
+    for season lookbooks, curating and designing Issue 4 of the Saturdays Magazine,
+    creating the Saturdays Coffee packaging and curating an artist-collaboration series
+    and digital design to accompany it. \n\n* Art Direction\n* Digital \n* Branded
+    Collateral "
 - type: image
   image: "/uploads/Saturdays_HomepageHero_20160718.jpg"
   dimensions: 2400x1400

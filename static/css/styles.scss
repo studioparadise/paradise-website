@@ -2286,6 +2286,9 @@ div[js-index-content="index"]{
     }
   }
 }
+.js-hover-element {
+  z-index: 10;
+}
 .studio__spacer {
   @include column(2);
   @include rm {
