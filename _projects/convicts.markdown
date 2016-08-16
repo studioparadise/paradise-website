@@ -18,7 +18,7 @@ modules:
 
 
 
-    The Convicts website was designed to have a bold aesthetic, a simple and intuitive content strategy and UI/UX and moments of excitement and experimentation. Our main focus was on the Convicts page and Convicts Map. The Convicts pages house a video, interview and content. We created a custom video player to leverage the Convicts brand, and introduced a sticky video player, so that users could listen to the video while skimming through content below. This allowed for a rich viewing experience, while truly speaking to our demographic’s attention span and preventing drop offs. Using the Google Map API, we created custom city-guide for each Convict.
+    The Convicts website was designed to have a bold aesthetic, a simple and intuitive content strategy and UI/UX and moments of excitement and experimentation. Our main focus was on the Convicts page and Convicts Map. The Convicts pages house a video, interview and content. We created a custom video player, that, scroll, becomes sticky, so that users could listen to the video while skimming through content below. This allowed for a rich viewing experience. For the convicts map, we created a custom city-guide for each featured Convict with a Google Maps integration.
   text: 
   variation: centered
   full-project-title: Convicts
