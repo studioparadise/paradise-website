@@ -17,7 +17,6 @@ modules:
     Keeping in mind the camaraderie, pioneering nature and burning rebellion of the Convict, we created a clean logo mark inspired by the "Pheon" or "Broad Arrow", seen on convict clothing in the early colonial Australia as issued by the British Government. We paired the mark with a bold and modular visual vernacular in a sleek black and white color palette.
 
 
-
     The Convicts website was designed to have a bold aesthetic, a simple and intuitive content strategy and UI/UX and moments of excitement and experimentation. Our main focus was on the Convicts page and Convicts Map. The Convicts pages house a video, interview and content. We created a custom video player, that, scroll, becomes sticky, so that users could listen to the video while skimming through content below. This allowed for a rich viewing experience. For the convicts map, we created a custom city-guide for each featured Convict with a Google Maps integration.
   text: 
   variation: centered
