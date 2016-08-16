@@ -14,7 +14,7 @@ modules:
     Convicts is an Australian digital media brand that produces original and branded multimedia content including video and events. Born out of the merger of two successful business ventures — media company Billabout, and Nolita boutique B_Space— that feature Australian brands and personalities, Convicts is breaking ground by exploring the relationship between digital content and the event or shop experience. Convicts reached out to Paradise to define their new brand, and to create a functional, beautiful editorial website.
 
 
-    Keeping in mind the camaraderie, pioneering nature and burning rebellion of the Convict, we created a clean logo mark inspired by the "Pheon" or "Broad Arrow". The three prong mark alludes to British Government issued convict clothing in the early days of colonial Australia. We paired the mark with a bold and modular visual vernacular in a sleek black and white color palette.
+    Keeping in mind the camaraderie, pioneering nature and burning rebellion of the Convict, we created a clean logo mark inspired by the "Pheon" or "Broad Arrow", seen on convict clothing in the early colonial Australia as issued by the British Government. We paired the mark with a bold and modular visual vernacular in a sleek black and white color palette.
 
 
 
