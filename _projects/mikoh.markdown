@@ -1,7 +1,7 @@
 ---
 title: Mikoh
 date: 2016-05-28 04:19:00 Z
-position: 4
+position: 5
 modules:
 - type: hero
   image: "/uploads/Mikoh_Hero_20160718.jpg"

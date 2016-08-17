@@ -1,7 +1,7 @@
 ---
 title: Prize
 date: 2016-05-28 05:01:00 Z
-position: 5
+position: 4
 modules:
 - type: hero
   image: "/uploads/Prize_prizehero_20160802.jpg"
