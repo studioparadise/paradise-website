@@ -1,7 +1,7 @@
 ---
 title: Kaelen
 date: 2016-05-28 05:01:00 Z
-position: 4
+position: 1
 modules:
 - type: hero
   image: "/uploads/Kaelen_Hero_20160803.jpg"
