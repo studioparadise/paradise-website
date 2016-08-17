@@ -1,7 +1,7 @@
 ---
 title: Convicts
 date: 2016-05-28 04:03:00 Z
-position: 1
+position: 2
 modules:
 - type: hero
   image: "/uploads/Convicts_Hero_20160802.jpg"
@@ -13,15 +13,11 @@ modules:
   body: |-
     Convicts is an Australian digital media brand that produces original and branded multimedia content including video and events. Born out of the merger of two successful business ventures — media company Billabout, and Nolita boutique B_Space— that feature Australian brands and personalities, Convicts is breaking ground by exploring the relationship between digital content and the event or shop experience. Convicts reached out to Paradise to define their new brand, and to create a functional, beautiful editorial website.
 
-    \
 
-    Keeping in mind the camaraderie, pioneering nature and burning rebellion of the Convict, we created a clean logo mark inspired by the "Pheon" or "Broad Arrow". The three prong mark alludes to British Government issued convict clothing in the early days of colonial Australia. We paired the mark with a bold and modular visual vernacular in a sleek black and white color palette.
+    Keeping in mind the camaraderie, pioneering nature and burning rebellion of the Convict, we created a clean logo mark inspired by the "Pheon" or "Broad Arrow", seen on convict clothing in the early colonial Australia as issued by the British Government. We paired the mark with a bold and modular visual vernacular in a sleek black and white color palette.
 
-    \
 
-    \
-
-    The Convicts website was designed to have a bold aesthetic, a simple and intuitive content strategy and UI/UX and moments of excitement and experimentation. Our main focus was on the Convicts page and Convicts Map. The Convicts pages house a video, interview and content. We created a custom video player to leverage the Convicts brand, and introduced a sticky video player, so that users could listen to the video while skimming through content below. This allowed for a rich viewing experience, while truly speaking to our demographic’s attention span and preventing drop offs. Using the Google Map API, we created custom city-guide for each Convict.
+    The Convicts website was designed to have a bold aesthetic, a simple and intuitive content strategy and UI/UX and moments of excitement and experimentation. Our main focus was on the Convicts page and Convicts Map. The Convicts pages house a video, interview and content. We created a custom video player, that, scroll, becomes sticky, so that users could listen to the video while skimming through content below. This allowed for a rich viewing experience. For the convicts map, we created a custom city-guide for each featured Convict with a Google Maps integration.
   text: 
   variation: centered
   full-project-title: Convicts

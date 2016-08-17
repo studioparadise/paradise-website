@@ -1,7 +1,7 @@
 ---
 title: Mikoh
 date: 2016-05-28 04:19:00 Z
-position: 3
+position: 5
 modules:
 - type: hero
   image: "/uploads/Mikoh_Hero_20160718.jpg"
@@ -9,12 +9,18 @@ modules:
 - type: text
   excerpt: |
     An adventurous new category for the endless summer wonders
-  body: |-
-    Mikoh is a colorful and luxurious swimwear brand created by and inspired by the lives of sister duo Oleema and Kalani Miller. Mikoh reached out to Paradise to create seasonal textile patterns, and with a clear understanding of the brand, to create their introductory eyewear line. \
-     \
-    Each season, we collaborate with Mikoh to create 5-10 swimwear patterns. We draw inspiration from what is the essence of the Mikoh brand: the textures, patterns, colors and beautiful nuances of the ocean and flora found at the beach.
-
-    We also worked with Mikoh to expand their product line, and launch their first eyewear collection. We created three unique styles: two bold, 60’s inspired frames in sleek black, khaki and beige acetate. The glasses were unified with consistent details: silver plating on the left side of the sunglasses arms and a silver plate for branding. All lenses are polarized for maximum UV protection and clarity.
+  body: "Mikoh is a colorful and luxurious swimwear brand created by and inspired
+    by the lives of sister duo Oleema and Kalani Miller. Mikoh reached out to Paradise
+    to create seasonal textile patterns, and to create styles for their introductory
+    eyewear line. \n\n\nEach season, we collaborate with Mikoh to create 5-10 swimwear
+    patterns. We draw inspiration from what is the essence of the Mikoh brand: the
+    textures, patterns, colors and beautiful nuances of the ocean and flora found
+    at the beach.\n\n\nWe also worked with Mikoh to expand their product line, and
+    launch their first eyewear collection. We created three unique styles: two bold,
+    60’s inspired frames in sleek black, khaki and beige acetate. The glasses were
+    unified with consistent details: silver plating on the left side of the sunglass
+    arms and a silver plate for branding. All lenses are polarized for maximum UV
+    protection and clarity."
 - type: image
   image: "/uploads/Mikoh_9_20160715.jpg"
 - type: images-2up
