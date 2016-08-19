@@ -27,7 +27,7 @@ modules:
   image: "/uploads/Prize_lookbook2_20160802.jpg"
   dimensions: 2400x1951
 - type: image
-  image: "/uploads/Prize_Cards_20160802.jpg"
+  image: "/uploads/Prize_cards_20160819_MLP_A.jpg"
   dimensions: 2400x1600
 - type: image
   image: "/uploads/Prize_Tati_Pins_20160802.jpg"
