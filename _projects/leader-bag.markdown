@@ -7,19 +7,20 @@ modules:
   image: "/uploads/Leader_Hero_20160802.jpg"
   alt: 
 - type: text
-  excerpt: Designing a contemporary & utilitarian Diaper Bag Brand for the modern
-    family.
-  body: "Founded in 2013 by three mothers - and sisters - Leader Bag Co. makes premium
-    diaper bags for the modern family. Paradise was engaged to design the diaper bag
-    itself, and since then has evolved as Leader’s creative consultant. In addition
-    to two phases of product design and production, we’ve worked with Leader Bag on
-    their product strategy and offering, managed their branding process while solidifying
-    an overarching creative direction, and revamped their website to include e-commerce.
-    In just two short years in market Leader Bag Co.'s brand strength has allowed
-    them to successfully transition into a predominantly pre-sale based sales model.
-    \n\nThe ultimate goal for the Leader Bag Co. brand is to celebrate Moms and Dads,
-    and to ease and facilitate the shared role of parenting. The bag design needed
-    to reflect this. The inside of the bag was designed for function: pockets of different
+  excerpt: |
+    Designing a contemporary & utilitarian diaper bag brand for the modern family
+  body: "Founded in 2013 by three mothers - and sisters - Leader Bag Co. gives modern
+    parents a contemporary and stylish choice in an otherwise uninspiring sea of unicorns,
+    polka dots and rainbows. Paradise was engaged to design this diaper bag and has
+    since evolved into Leader’s creative consultant. In addition to two phases of
+    product design and production, we’ve worked with Leader Bag Co on their product
+    strategy and offering, managed their branding process while solidifying an overarching
+    creative direction, and revamped their website to include e-commerce. With only
+    two short years in market and Leader Bag Co.'s brand strength has allowed them
+    to successfully transition into a predominantly pre-sale based sales model. \n\nThe
+    ultimate goal for the Leader Bag Co. brand is to celebrate Moms and Dads, and
+    to ease and facilitate the shared role of parenting. The bag design needed to
+    reflect this. The inside of the bag was designed for function: pockets of different
     sizes, mesh elastic holders, water-repellent & wipe-clean fabrics and a pouch
     insert to hold a changing a Leader Bag changing mat & diapers. On the outside,
     the backpack is designed to be contemporary & gender neutral: waxed-canvas with
