@@ -41,13 +41,18 @@ modules:
   dimensions: 2400x1415
 - type: image
   image: "/uploads/Mikoh_6_20160715.jpg"
+  dimensions: 2400x1600
 - type: image
   image: "/uploads/Mikoh_Lookbook_07_082016_JO_A.jpg"
+  dimensions: 2400x1600
 - type: image
   image: "/uploads/Mikoh_Lookbook_02_082016_JO_A.jpg"
+  dimensions: 2400x1600
 - type: image
   image: "/uploads/Mikoh_Lookbook_05_082016_JO_A.jpg"
+  dimensions: 2400x1600
 - type: image
   image: "/uploads/Mikoh_Lookbook_04_082016_JO_A.jpg"
+  dimensions: 2400x1600
 ---
 
