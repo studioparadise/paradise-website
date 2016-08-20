@@ -29,9 +29,9 @@ modules:
     to develop a mark and visual system to reflect the quality and values of Leader
     Bag Co. Our recent update to the website introduces an intuitive e-commerce experience
     with a stronger narrative explaining the function of the products & modular system
-    that will expand with the brand and their product line.\n\n\n* Business Strategy\n\n*
-    Brand Strategy\n\n* Creative Direction\n\n* Product Design\n\n* Web Design\n\n*
-    Web Development\n\n* Production sourcing and management\n"
+    that will expand with the brand and their product line.\n\n\n* Brand Strategy\n\n*
+    Creative Direction\n\n* Product Design\n\n* Web Design\n\n* Web Development\n\n*
+    Production Sourcing and Management\n"
 - type: image
   url: 
   image: "/uploads/Leader_2_20160802.jpg"
