@@ -59,7 +59,7 @@ modules:
   credits:
   - url: http://www.lottanieminen.com/
     emphasis: Branding
-    name: Lotta nieminen
+    name: Lotta Nieminen
   - url: 
     emphasis: Creative Direction
     name: Paradise
