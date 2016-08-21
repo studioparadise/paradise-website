@@ -57,17 +57,13 @@ modules:
 - type: website link
   url:
   - http://shop.mikoh.com/collections/sun
-- Key:
-  - emphasis: Eyewear Design
+- type: credits
+  credits:
+  - url: 
+    emphasis: Eyewear Design
     name: Paradise
-  - emphasis: Print Design
+  - url: 
+    emphasis: Packaging Design
     name: Paradise
-  - emphasis: Packaging Design
-    name: Paradise
-  - emphasis: Lookbook Design
-    name: Paradise
-  - emphasis: Product Sourcing & Manufacturing
-    name: Paradise
-  type: credits
 ---
 
