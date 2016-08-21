@@ -4,7 +4,7 @@ date: 2016-05-28 04:03:00 Z
 position: 2
 modules:
 - type: hero
-  image: "/uploads/Convicts_Hero_20160802.jpg"
+  image: "/uploads/Convicts_Hero_20160819-f4b03e.jpg"
   alt: 
   title: 
 - type: text
