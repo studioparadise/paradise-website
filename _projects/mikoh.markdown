@@ -54,6 +54,9 @@ modules:
 - type: image
   image: "/uploads/Mikoh_Lookbook_04_082016_JO_A.jpg"
   dimensions: 2400x1600
+- type: website link
+  url:
+  - http://shop.mikoh.com/collections/sun
 - Key:
   - emphasis: Eyewear Design
     name: Paradise
