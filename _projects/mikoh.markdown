@@ -25,6 +25,12 @@ modules:
     partners in Japan to the highest quality standards. "
 - type: image
   image: "/uploads/Mikoh_9_20160715.jpg"
+- type: text
+  text: 
+  excerpt: 
+  body: 'Seasonally we draw inspiration for the swim prints from what is the essence
+    of the Mikoh brand: the textures, patterns, colors and beautiful nuances of the
+    ocean and flora found in an eternally aquatic lifestyle.'
 - type: images-2up
   images:
   - image: "/uploads/Mikoh_2_20160715.jpg"
@@ -54,11 +60,5 @@ modules:
 - type: image
   image: "/uploads/Mikoh_Lookbook_04_082016_JO_A.jpg"
   dimensions: 2400x1600
-- type: text
-  text: 
-  excerpt: 'Seasonally we draw inspiration for the swim prints from what is the essence
-    of the Mikoh brand: the textures, patterns, colors and beautiful nuances of the
-    ocean and flora found in an eternally aquatic lifestyle.'
-  body: 
 ---
 
