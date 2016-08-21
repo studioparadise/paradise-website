@@ -56,6 +56,7 @@ modules:
   dimensions: 2400x1600
 - type:
     text: 
+  text: 
   excerpt: 'Seasonally we draw inspiration for the swim prints from what is the essence
     of the Mikoh brand: the textures, patterns, colors and beautiful nuances of the
     ocean and flora found in an eternally aquatic lifestyle.'
