@@ -26,7 +26,7 @@ modules:
   alt: 
   caption: 
 - type: image
-  image: "/uploads/COn_Branding.gif"
+  image: "/uploads/CONVICTSGIF_20160822.gif"
 - type: image
   url: 
   image: "/uploads/Con_Branding.jpg"
