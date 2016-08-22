@@ -3,8 +3,27 @@ title: Prize
 date: 2016-05-28 05:01:00 Z
 position: 4
 modules:
-- type: hero
+- type: credits
   image: "/uploads/Prize_Hero_20160822-f6eac5.jpg"
+  credits:
+  - emphasis: Art Direction
+    name: Paradise
+  - emphasis: Photography
+    name: Capture this
+  - emphasis: 'Photography '
+    name: Paradise
+  - emphasis: Photography
+    name: 'Zak Bush '
+  - emphasis: Product Design
+    name: Paradise
+  - emphasis: Artist Collaboration
+    name: Jean Andre
+  - emphasis: Artist Collaboration
+    name: Stef Mitchell
+  - emphasis: Artist Collaboration
+    name: Tim Lahan
+  - emphasis: Artist Collaboration
+    name: Tati Compton
 - type: text
   excerpt: 'Small in size, outrageous in personality. '
   body: "Prize Pins is the love child of Luke Flynn and Kym Naimo, and a Product of
