@@ -57,11 +57,23 @@ modules:
 - type: credits
   credits:
   - url: 
-    emphasis: 'Photographer '
+    emphasis: Photographer  1
     name: Bjorn Looss
   - url: 
-    emphasis: Photographer
+    emphasis: Photographer 2
     name: Joss Mckinley
+  - url: 
+    emphasis: Art Direction
+    name: Paradise
+  - url: 
+    emphasis: 'Digital Design '
+    name: Paradise
+  - url: 
+    emphasis: Branding
+    name: Paradise
+  - url: 
+    emphasis: 'Print Design '
+    name: Paradise
   Key: 
 ---
 
