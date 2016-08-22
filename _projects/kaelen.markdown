@@ -10,8 +10,10 @@ modules:
     name: Paradise
   - emphasis: Production
     name: Paradise
-  - emphasis: " b"
-    name: 
+  - emphasis: Digital Design
+    name: Paradise
+  - emphasis: Detail Photography
+    name: Tom Law
 - type: text
   excerpt: 'Capturing a designer''s minimalist design essence and attention to detail
     in print. '
