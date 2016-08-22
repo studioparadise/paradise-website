@@ -3,8 +3,13 @@ title: Saturdays
 date: 2016-05-28 05:01:00 Z
 position: 6
 modules:
-- type: hero
+- type: credits
   image: "/uploads/Saturdays_Hero_20160718.jpg"
+  credits:
+  - 
+  - url: 
+    emphasis: Art Direction
+    name: Paradise
 - type: text
   excerpt: 'Creating consistency across all branded materials. '
   body: "Saturdays is a lifestyle clothing brand born from the rituals of surfing:
