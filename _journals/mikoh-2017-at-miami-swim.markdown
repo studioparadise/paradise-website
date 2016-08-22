@@ -1,7 +1,7 @@
 ---
 title: Mikoh 2017 at Miami Swim
 date: 2016-08-22 08:16:00 Z
-position: 2
+position: 3
 image: "/uploads/576806980-1024x680.jpg"
 images:
 - image: "/uploads/IMG_1140-1024x683.jpg"
