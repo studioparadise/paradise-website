@@ -54,17 +54,17 @@ modules:
   url: http://convicts.nyc/
 - type: credits
   credits:
-  - url: http://google.com
+  - url: 
     emphasis: Photography
-    name: Yuji Tomita
+    name: Tom Law
   - url: 
-    emphasis: Logo Design
-    name: Some Someone
+    emphasis: Brand Design
+    name: Paradise
   - url: 
-    emphasis: Model
-    name: Gina Powell
+    emphasis: Digital Design
+    name: Paradise
   - url: 
     emphasis: Development
-    name: Eric Wang
+    name: Paradise
 ---
 
