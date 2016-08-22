@@ -18,7 +18,7 @@ modules:
     * Visual Identity
     * Digital
 - type: image
-  image: "/uploads/JE_LogoGIf_20160822.gif"
+  image: "/uploads/JE_LogoGIf_20160822_B.gif"
 - type: image
   image: "/uploads/2JE_Logo.jpg"
 - type: image
