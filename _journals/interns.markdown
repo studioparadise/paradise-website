@@ -1,7 +1,7 @@
 ---
 title: Interns
 date: 2016-07-23 21:10:00 Z
-position: 1
+position: 3
 image: "/uploads/SP_Site_Journal_0001_Interns_160710.jpg"
 ---
 
