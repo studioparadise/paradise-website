@@ -36,6 +36,8 @@ modules:
   image: "/uploads/Prize_Tati2__20160802.jpg"
 - type: image
   image: "/uploads/Prize_Tati1_20160802.jpp.jpg"
+- type: image
+  image: "/uploads/Prize_Detail_20160822.jpg"
 - type: images-2up
   image: "/uploads/Prize_MonsterLookbook3__20160802.jpg"
   dimensions: 1200x1650
