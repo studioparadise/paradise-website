@@ -5,19 +5,6 @@ position: 4
 modules:
 - type: credits
   image: "/uploads/Prize_Hero_20160822-f6eac5.jpg"
-  credits:
-  - emphasis: 'Product Design '
-    name: Paradise
-  - emphasis: Photography
-    name: Capture This
-  - emphasis: Photography
-    name: Zak Bush
-  - emphasis: 'Photography '
-    name: Paradise
-  - emphasis: Brand Design
-    name: Paradise
-  - emphasis: Art Direction
-    name: Paradise
 - type: text
   excerpt: 'Small in size, outrageous in personality. '
   body: "Prize Pins is the love child of Luke Flynn and Kym Naimo, and a Product of
