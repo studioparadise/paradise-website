@@ -22,7 +22,7 @@ modules:
   variation: centered
   full-project-title: Convicts
 - type: image
-  image: "/uploads/Con_Logo.png"
+  image: "/uploads/Convicts_logo_20160822.png"
   alt: 
   caption: 
 - type: image
