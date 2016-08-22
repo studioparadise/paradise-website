@@ -2,12 +2,14 @@
 title: Upton Belts
 date: 2016-07-10 22:15:00 Z
 position: 1
+image: "/uploads/casual_lookbook_gallery_6-9ea25f.jpg"
 images:
 - image: "/uploads/sport_gallery_image_black_2_1024x1024.jpg"
   alt: 
 - image: "/uploads/casual_lookbook_gallery_4.jpg"
-- image: "/uploads/casual_lookbook_gallery_6-9ea25f.jpg"
+- image: "/uploads/sport_lookbook_gallery_8.jpg"
 - image: "/uploads/casual_gallery_image_black_1_1024x1024.jpg"
+- image: "/uploads/casual_lookbook_gallery_9.jpg"
 ---
 
 Some beautiful shots by our mates at [Wedge & Lever](http://www.wedgeandlever.com/) of a sleek contemporary line of belts we designed for the recently launched online belt startup [Upton](http://uptonbelts.com/).
