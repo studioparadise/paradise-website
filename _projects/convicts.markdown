@@ -39,6 +39,9 @@ modules:
   dimensions: 2343x3705
   image: "/uploads/Convicts_WebArticle_20160802.jpg"
 - type: image
+  image: "/uploads/Convicts_WebVideoPlayer_20160802.jpg"
+  dimensions: 2382x1606
+- type: image
   image:
   - "/uploads/Convicts_WebMap_20160802.jpg"
   dimensions: 2382x1606
