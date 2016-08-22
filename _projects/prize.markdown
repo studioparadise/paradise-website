@@ -4,7 +4,7 @@ date: 2016-05-28 05:01:00 Z
 position: 4
 modules:
 - type: hero
-  image: "/uploads/Prize_prizehero_20160802.jpg"
+  image: "/uploads/Prize_Hero_20160822.jpg"
 - type: text
   excerpt: 'Small in size, outrageous in personality. '
   body: "Prize Pins is the love child of Luke Flynn and Kym Naimo, and a Product of
