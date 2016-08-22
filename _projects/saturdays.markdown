@@ -6,10 +6,22 @@ modules:
 - type: credits
   image: "/uploads/Saturdays_Hero_20160718.jpg"
   credits:
-  - 
-  - url: 
-    emphasis: Art Direction
+  - emphasis: Art Direction
     name: Paradise
+  - emphasis: Digital Design
+    name: Paradise
+  - emphasis: Photography 1
+    name: Zak Bush
+  - emphasis: Photography 2
+    name: Bjorn Iooss
+  - emphasis: Photography 3
+    name: Benny Horne
+  - emphasis: Graphic Design
+    name: Paradise
+  - emphasis: Layout
+    name: Paradise
+  - emphasis: Creative Direction
+    name: 'Collin Tunstall '
 - type: text
   excerpt: 'Creating consistency across all branded materials. '
   body: "Saturdays is a lifestyle clothing brand born from the rituals of surfing:
