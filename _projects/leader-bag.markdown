@@ -60,7 +60,7 @@ modules:
 - type: credits
   credits:
   - url: http://www.lottanieminen.com/
-    emphasis: Branding
+    emphasis: Branding Design
     name: Lotta Nieminen
   - url: 
     emphasis: Creative Direction
