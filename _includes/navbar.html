@@ -1,7 +1,7 @@
 
 <div class="navbar" js-controller="navbar2" js-args="{ mobile: {% if include.mobile 0 %}true{% else %}false{% endif %}}">
-	<div class="navbar__logo" js-navbar-logo>
-		<a href="/">
+	<div class="navbar__logo">
+		<a href="/" js-navbar-logo>
 			{% include svg.html type='logo--word' %}
 		</a>
 	</div>
@@ -97,7 +97,12 @@
 				    {% capture nmonth %}{{ post.next.date | date: '%Y %b' }}{% endcapture %}
 				    {% if month != nmonth %}
 						<div class="navbar__item">
-							<div class="navbar__label" js-item-label js-args="{overlay: 'journal', mobileURL: '/mobile_journal.html#{{ post.date | '%Y-%B' }}" js-scrollspy-nav="{{ post.date | date: '%Y-%B' }}">
+							<div class="navbar__label" js-item-label js-args="{
+								overlay: 'journal',
+								mobileURL: '/mobile_journal.html#{{ post.date | '%Y-%B' }}',
+							    scrollAlignToNav: true,
+							    scrollAlignToNavOffset: 60
+							}" js-scrollspy-nav="{{ post.date | date: '%Y-%B' }}">
 								{{post.date | date:"%B"}}
 							</div>
 						</div>

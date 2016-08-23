@@ -7,6 +7,11 @@ root.globalAPI = {}
 root.globalAPI.isMobile = ->
     return $("body").hasClass 'layout-mobile'
 
+root.globalAPI.exitFPV = ->
+  $project = $("[js-index-project]:in-viewport:first")
+  projectAPI = $project.data 'js-controller'
+  projectAPI.toggleFullProjectView()
+
 root.controllers.indexSwiper = ($element, args) ->
   swiper = root.components.swiper $element,
     loop: true
@@ -60,14 +65,15 @@ root.controllers.project = ($element, args) ->
         $projectRowsBefore = $projectRows.filter ":lt(#{index})"
         $projectRowsBefore.hide()
 
+      $itemsToFade = $(".navbar__items")
 
       @fadeOutNav = (cb) ->
-        $result = $(".navbar").animate opacity: 0, 500, 'easeInOutExpo'
+        $result = $itemsToFade.animate opacity: 0, 500, 'easeInOutExpo'
         if cb
           $result.promise().then cb
 
       @fadeInNav = (cb) ->
-        $result = $(".navbar").animate opacity: 1, 500, 'easeInOutExpo'
+        $result = $itemsToFade.animate opacity: 1, 500, 'easeInOutExpo'
         if cb
           $result.promise().then cb
 
@@ -251,13 +257,19 @@ root.controllers.navbar2 = ($element, args) ->
     $logo = $element.find('[js-navbar-logo]')
     # show slider on logo click
     $logo.on 'click', (ev) ->
-      if root.globalAPI.isMobile()
+      if not root.globalAPI.isMobile()
         ev.preventDefault()
+        if root.globalAPI.fullProjectView
+          console.log 'exiting FPV'
+          root.globalAPI.exitFPV()
+          return false
+
         $el = $("[js-index-content=\"index\"]")
         api.hideAllContentAndFadeInOne $el
         api.clearNavbarState()
         window.location.hash = '#'
         return false
+
 
   showDropdown = ($dropdown, apply) ->
     if root.globalAPI.isMobile()
@@ -338,6 +350,7 @@ root.controllers.navbar2 = ($element, args) ->
             if args.scrollAlignToNav
               position = $('.navbar__item.is-active:first').position().top
               offset = $target.offset().top - position + 5  # compensate for font heights
+              offset = offset + (Number(args.scrollAlignToNavOffset) or 0)
             else
               offset = $target.offset().top
 
@@ -521,6 +534,7 @@ root.controllers.navbar2 = ($element, args) ->
         root.globalAPI.showContactBar()
         $showContact.data 'shown', true
 
+
     $(window).on 'scroll', _.throttle onScroll, 50
     $(".index-projects-wrapper").on 'scroll', _.throttle onScroll, 50
     window.recalculateCurrentProjectScrollSpy = onScroll
@@ -557,6 +571,12 @@ root.controllers.footer = ($element, args) ->
         cb()
   close = ->
     $element.slideUp 'slow', 'easeInOutExpo'
+
+    # allow popup to be shown again via scroll Xs after closing
+    _.delay ->
+      $("[js-show-contact-info-if-visible]").data('shown', false)
+    , 1500
+
 
   open = ->
     $element.slideDown 'slow', 'easeInOutExpo'

@@ -1,9 +1,3 @@
-<!--
-<ul>
-	<li>Module type:{{ module.type }}</li>
-	<li>Module data {{ module }}</li>
-</ul>
--->
 {% capture cls %}module-{{ module.type }}{% endcapture %}
 
 <div class="debug-element">{{ cls | default: "" }} variation: {{ module.variation | default: ""}}</div>
@@ -57,7 +51,7 @@
 	{% when 'text' %}
 		<div class="row">
 			<div class="module-text__spacer">
-				<span class="show-on-full-project fade-in-on-full-project">
+				<span class="show-on-full-project fade-in-on-full-project module-text__title">
 					<!-- {{ module['full-project-title'] | default: ""}} -->
 					{{ project.title }}
 				</span>
@@ -78,7 +72,7 @@
 							{% include svg.html type="arrow--right" %}
 						</span>
 						<span class="show-on-full-project">
-							AH! Take me Back!
+							Exit Full Project View
 							{% include svg.html type="arrow--right" %}
 						</span>
 					</div>
