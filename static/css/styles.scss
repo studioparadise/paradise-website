@@ -85,7 +85,7 @@ $medium: 565px;
 $large: 566px;
 
 
-$desktop: 850px;
+$desktop: 500px;
 $desktop-1: $desktop - 1;
 // IF YOU CHANGE THIS, And referral active, change the JS window responsive width in progress bar controller, for KickOffLbas Share page.
 
@@ -1611,14 +1611,18 @@ h1 {
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
   padding: 0 0 20px 0;
-
   margin-top: 35px;
   margin-bottom: 35px;
+  @include style-body;
+}
+.mobile__contact--isolated {
+  border-top: 0;
+  margin-top: 0;
 }
 .mobile__contact-header {
   margin-top: 15px;
   margin-bottom: 15px;
-  @include style-body;
+  @include style-mobile-header;
 }
 .mobile__email-address {
   text-align: center;
@@ -1627,7 +1631,7 @@ h1 {
   text-decoration: none;
   color: black;
   display: block;
-  font-size: 12px;
+  @include style-body;
 }
 .mobile__addresses {
   padding: 20px 0;
@@ -1649,20 +1653,32 @@ h1 {
 
 }
 .mobile-social__item {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   display: inline-block;
-  line-height: 30px;
+  line-height: 50px;
   text-align: center;
   border: 1px solid black;
   margin-left: -1px;
   svg {
-    height: 8px;
+    height: 12px;
+    vertical-align: 0;
     path, polygon, rect {
       fill: black;
     }
   }
 }
+.mobile-social__item--linkedin {
+  svg {
+    vertical-align: 1px;
+  }
+}
+.mobile-social__item--twitter {
+  svg {
+    vertical-align: 0px;
+  }
+}
+
 .mobile__next {
   font-size: 16px;
   text-decoration: none;
@@ -1748,6 +1764,9 @@ h1 {
       opacity: 1;
       @include transform(translateX(0px));
     }
+  }
+  @include rm {
+    display: none !important;
   }
 }
 .navbar__dropdown--mobile-contact {
@@ -1931,6 +1950,9 @@ div[js-index-content="index"]{
     .module__image-caption {
       margin-left: $desktop-margin;
     }
+  }
+  @include rm {
+    margin-bottom: $mobile-gutter;
   }
 }
 
@@ -2505,7 +2527,9 @@ div[js-index-content="index"]{
   // font-size: 18px;
   // @include responsive-fonts(22px, 32px);
   @include style-body;
-  @include row;
+  @include rd {
+    @include row;
+  }
   margin-top: 140px;
   @include rm {
     margin-top: 80px;
@@ -2518,8 +2542,10 @@ div[js-index-content="index"]{
     padding: 0;
     margin: 0;
   }
-  .studio__services-column {
-    @include column(4);
+  @include rd {
+    .studio__services-column {
+      @include column(4);
+    }
   }
 }
 .studio__services-summary {
@@ -2533,6 +2559,8 @@ div[js-index-content="index"]{
   margin-bottom: 70px;
   @include column(8);
   @include rm {
+    @include clearfix;
+    float: none;
     margin-bottom: 40px;
     margin-top: 60px;
     font-weight: 500;
@@ -2557,6 +2585,7 @@ div[js-index-content="index"]{
   @include rm {
     @include column(8);
     @include style-body;
+    float: none;
   }
   p {
     margin: 0;
@@ -2678,9 +2707,15 @@ div[js-index-content="index"]{
   @include style-h2;
   margin-top: 0;
   margin-bottom: 5px;
+  @include rm {
+    @include style-body;
+  }
 }
 .index-journal__title {
   @include style-h1;
+  @include rm {
+    @include style-mobile-header;
+  }
   font-weight: normal;
   margin: 0;
   margin-top: 5px;
@@ -2696,8 +2731,28 @@ div[js-index-content="index"]{
   p:last-child {
     margin-bottom: 0;
   }
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    &:hover {
+      &:after {
+        border-color: $color-gray;
+      }
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      border-bottom: 1px solid black;
+    }
+  }
   @include rm {
     @include column(8);
+    @include style-body;
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 16px;

@@ -132,7 +132,7 @@
   .layout-mobile .hide-on-desktop {
     display: block; }
 
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 500px) {
   .hide-on-mobile {
     display: none; } }
 
@@ -1718,7 +1718,7 @@ input[type="search"]::-webkit-search-decoration {
   .layout-mobile .container-row {
     padding-left: 20px;
     padding-right: 20px; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .container-row {
       padding-left: 25px;
       padding-right: 25px; } }
@@ -1747,7 +1747,7 @@ input[type="search"]::-webkit-search-decoration {
 .layout-mobile .row, .layout-mobile .grid, .layout-mobile .grid--rev, .layout-mobile .grid--full {
   margin-left: -10px;
   margin-right: -10px; }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 500px) {
   .row, .grid, .grid--rev, .grid--full {
     margin-left: -10px;
     margin-right: -10px; } }
@@ -1760,7 +1760,7 @@ input[type="search"]::-webkit-search-decoration {
 .g1 {
   width: 12.5%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .g1 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -1780,7 +1780,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 0%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g1-1 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -1809,7 +1809,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 12.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g1-2 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -1838,7 +1838,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 25%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g1-3 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -1867,7 +1867,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 37.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g1-4 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -1896,7 +1896,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 50%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g1-5 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -1925,7 +1925,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 62.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g1-6 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -1954,7 +1954,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 75%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g1-7 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -1983,7 +1983,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 87.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g1-8 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2012,7 +2012,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 100%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g1-9 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2041,7 +2041,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 112.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g1-10 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2070,7 +2070,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 125%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g1-11 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2099,7 +2099,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 137.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g1-12 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2123,7 +2123,7 @@ input[type="search"]::-webkit-search-decoration {
 .g2 {
   width: 25%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .g2 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2143,7 +2143,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 0%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g2-1 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2172,7 +2172,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 12.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g2-2 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2201,7 +2201,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 25%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g2-3 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2230,7 +2230,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 37.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g2-4 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2259,7 +2259,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 50%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g2-5 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2288,7 +2288,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 62.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g2-6 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2317,7 +2317,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 75%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g2-7 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2346,7 +2346,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 87.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g2-8 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2375,7 +2375,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 100%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g2-9 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2404,7 +2404,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 112.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g2-10 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2433,7 +2433,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 125%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g2-11 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2462,7 +2462,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 137.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g2-12 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2486,7 +2486,7 @@ input[type="search"]::-webkit-search-decoration {
 .g3 {
   width: 37.5%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .g3 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2506,7 +2506,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 0%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g3-1 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2535,7 +2535,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 12.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g3-2 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2564,7 +2564,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 25%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g3-3 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2593,7 +2593,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 37.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g3-4 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2622,7 +2622,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 50%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g3-5 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2651,7 +2651,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 62.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g3-6 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2680,7 +2680,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 75%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g3-7 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2709,7 +2709,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 87.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g3-8 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2738,7 +2738,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 100%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g3-9 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2767,7 +2767,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 112.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g3-10 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2796,7 +2796,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 125%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g3-11 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2825,7 +2825,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 137.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g3-12 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2849,7 +2849,7 @@ input[type="search"]::-webkit-search-decoration {
 .g4 {
   width: 50%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .g4 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2869,7 +2869,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 0%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g4-1 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2898,7 +2898,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 12.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g4-2 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2927,7 +2927,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 25%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g4-3 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2956,7 +2956,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 37.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g4-4 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -2985,7 +2985,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 50%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g4-5 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3014,7 +3014,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 62.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g4-6 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3043,7 +3043,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 75%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g4-7 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3072,7 +3072,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 87.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g4-8 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3101,7 +3101,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 100%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g4-9 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3130,7 +3130,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 112.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g4-10 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3159,7 +3159,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 125%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g4-11 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3188,7 +3188,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 137.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g4-12 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3212,7 +3212,7 @@ input[type="search"]::-webkit-search-decoration {
 .g5 {
   width: 62.5%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .g5 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3232,7 +3232,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 0%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g5-1 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3261,7 +3261,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 12.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g5-2 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3290,7 +3290,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 25%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g5-3 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3319,7 +3319,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 37.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g5-4 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3348,7 +3348,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 50%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g5-5 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3377,7 +3377,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 62.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g5-6 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3406,7 +3406,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 75%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g5-7 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3435,7 +3435,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 87.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g5-8 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3464,7 +3464,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 100%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g5-9 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3493,7 +3493,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 112.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g5-10 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3522,7 +3522,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 125%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g5-11 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3551,7 +3551,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 137.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g5-12 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3575,7 +3575,7 @@ input[type="search"]::-webkit-search-decoration {
 .g6 {
   width: 75%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .g6 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3595,7 +3595,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 0%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g6-1 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3624,7 +3624,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 12.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g6-2 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3653,7 +3653,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 25%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g6-3 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3682,7 +3682,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 37.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g6-4 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3711,7 +3711,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 50%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g6-5 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3740,7 +3740,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 62.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g6-6 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3769,7 +3769,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 75%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g6-7 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3798,7 +3798,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 87.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g6-8 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3827,7 +3827,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 100%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g6-9 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3856,7 +3856,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 112.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g6-10 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3885,7 +3885,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 125%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g6-11 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3914,7 +3914,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 137.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g6-12 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3938,7 +3938,7 @@ input[type="search"]::-webkit-search-decoration {
 .g7 {
   width: 87.5%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .g7 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3958,7 +3958,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 0%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g7-1 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -3987,7 +3987,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 12.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g7-2 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4016,7 +4016,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 25%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g7-3 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4045,7 +4045,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 37.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g7-4 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4074,7 +4074,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 50%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g7-5 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4103,7 +4103,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 62.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g7-6 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4132,7 +4132,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 75%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g7-7 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4161,7 +4161,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 87.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g7-8 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4190,7 +4190,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 100%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g7-9 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4219,7 +4219,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 112.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g7-10 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4248,7 +4248,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 125%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g7-11 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4277,7 +4277,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 137.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g7-12 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4301,7 +4301,7 @@ input[type="search"]::-webkit-search-decoration {
 .g8 {
   width: 100%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .g8 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4321,7 +4321,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 0%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g8-1 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4350,7 +4350,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 12.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g8-2 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4379,7 +4379,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 25%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g8-3 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4408,7 +4408,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 37.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g8-4 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4437,7 +4437,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 50%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g8-5 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4466,7 +4466,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 62.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g8-6 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4495,7 +4495,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 75%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g8-7 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4524,7 +4524,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 87.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g8-8 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4553,7 +4553,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 100%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g8-9 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4582,7 +4582,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 112.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g8-10 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4611,7 +4611,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 125%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g8-11 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4640,7 +4640,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 137.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g8-12 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4664,7 +4664,7 @@ input[type="search"]::-webkit-search-decoration {
 .g9 {
   width: 112.5%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .g9 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4684,7 +4684,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 0%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g9-1 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4713,7 +4713,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 12.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g9-2 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4742,7 +4742,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 25%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g9-3 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4771,7 +4771,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 37.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g9-4 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4800,7 +4800,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 50%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g9-5 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4829,7 +4829,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 62.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g9-6 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4858,7 +4858,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 75%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g9-7 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4887,7 +4887,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 87.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g9-8 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4916,7 +4916,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 100%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g9-9 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4945,7 +4945,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 112.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g9-10 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -4974,7 +4974,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 125%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g9-11 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5003,7 +5003,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 137.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g9-12 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5027,7 +5027,7 @@ input[type="search"]::-webkit-search-decoration {
 .g10 {
   width: 125%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .g10 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5047,7 +5047,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 0%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g10-1 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5076,7 +5076,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 12.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g10-2 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5105,7 +5105,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 25%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g10-3 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5134,7 +5134,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 37.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g10-4 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5163,7 +5163,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 50%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g10-5 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5192,7 +5192,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 62.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g10-6 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5221,7 +5221,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 75%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g10-7 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5250,7 +5250,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 87.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g10-8 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5279,7 +5279,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 100%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g10-9 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5308,7 +5308,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 112.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g10-10 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5337,7 +5337,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 125%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g10-11 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5366,7 +5366,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 137.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g10-12 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5390,7 +5390,7 @@ input[type="search"]::-webkit-search-decoration {
 .g11 {
   width: 137.5%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .g11 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5410,7 +5410,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 0%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g11-1 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5439,7 +5439,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 12.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g11-2 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5468,7 +5468,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 25%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g11-3 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5497,7 +5497,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 37.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g11-4 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5526,7 +5526,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 50%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g11-5 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5555,7 +5555,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 62.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g11-6 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5584,7 +5584,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 75%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g11-7 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5613,7 +5613,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 87.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g11-8 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5642,7 +5642,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 100%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g11-9 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5671,7 +5671,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 112.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g11-10 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5700,7 +5700,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 125%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g11-11 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5729,7 +5729,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 137.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g11-12 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5753,7 +5753,7 @@ input[type="search"]::-webkit-search-decoration {
 .g12 {
   width: 150%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .g12 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5773,7 +5773,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 0%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g12-1 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5802,7 +5802,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 12.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g12-2 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5831,7 +5831,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 25%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g12-3 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5860,7 +5860,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 37.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g12-4 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5889,7 +5889,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 50%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g12-5 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5918,7 +5918,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 62.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g12-6 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5947,7 +5947,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 75%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g12-7 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -5976,7 +5976,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 87.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g12-8 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6005,7 +6005,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 100%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g12-9 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6034,7 +6034,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 112.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g12-10 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6063,7 +6063,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 125%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g12-11 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6092,7 +6092,7 @@ input[type="search"]::-webkit-search-decoration {
   float: left;
   margin-left: 137.5%;
   margin-right: -100%; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .isolation-g12-12 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6116,7 +6116,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-1-4 {
   width: 25%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-1-4 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6127,7 +6127,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-2-4 {
   width: 50%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-2-4 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6138,7 +6138,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-3-4 {
   width: 75%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-3-4 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6149,7 +6149,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-4-4 {
   width: 100%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-4-4 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6160,7 +6160,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-1-5 {
   width: 20%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-1-5 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6171,7 +6171,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-2-5 {
   width: 40%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-2-5 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6182,7 +6182,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-3-5 {
   width: 60%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-3-5 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6193,7 +6193,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-4-5 {
   width: 80%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-4-5 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6204,7 +6204,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-5-5 {
   width: 100%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-5-5 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6215,7 +6215,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-1-6 {
   width: 16.66667%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-1-6 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6226,7 +6226,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-2-6 {
   width: 33.33333%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-2-6 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6237,7 +6237,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-3-6 {
   width: 50%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-3-6 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6248,7 +6248,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-4-6 {
   width: 66.66667%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-4-6 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6259,7 +6259,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-5-6 {
   width: 83.33333%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-5-6 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6270,7 +6270,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-6-6 {
   width: 100%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-6-6 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6281,7 +6281,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-1-7 {
   width: 14.28571%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-1-7 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6292,7 +6292,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-2-7 {
   width: 28.57143%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-2-7 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6303,7 +6303,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-3-7 {
   width: 42.85714%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-3-7 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6314,7 +6314,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-4-7 {
   width: 57.14286%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-4-7 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6325,7 +6325,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-5-7 {
   width: 71.42857%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-5-7 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6336,7 +6336,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-6-7 {
   width: 85.71429%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-6-7 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6347,7 +6347,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-7-7 {
   width: 100%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-7-7 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6358,7 +6358,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-1-8 {
   width: 12.5%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-1-8 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6369,7 +6369,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-2-8 {
   width: 25%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-2-8 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6380,7 +6380,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-3-8 {
   width: 37.5%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-3-8 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6391,7 +6391,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-4-8 {
   width: 50%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-4-8 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6402,7 +6402,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-5-8 {
   width: 62.5%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-5-8 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6413,7 +6413,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-6-8 {
   width: 75%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-6-8 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6424,7 +6424,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-7-8 {
   width: 87.5%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-7-8 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6435,7 +6435,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-8-8 {
   width: 100%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-8-8 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6446,7 +6446,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-1-9 {
   width: 11.11111%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-1-9 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6457,7 +6457,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-2-9 {
   width: 22.22222%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-2-9 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6468,7 +6468,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-3-9 {
   width: 33.33333%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-3-9 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6479,7 +6479,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-4-9 {
   width: 44.44444%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-4-9 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6490,7 +6490,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-5-9 {
   width: 55.55556%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-5-9 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6501,7 +6501,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-6-9 {
   width: 66.66667%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-6-9 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6512,7 +6512,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-7-9 {
   width: 77.77778%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-7-9 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6523,7 +6523,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-8-9 {
   width: 88.88889%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-8-9 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6534,7 +6534,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-9-9 {
   width: 100%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-9-9 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6545,7 +6545,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-1-10 {
   width: 10%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-1-10 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6556,7 +6556,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-2-10 {
   width: 20%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-2-10 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6567,7 +6567,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-3-10 {
   width: 30%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-3-10 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6578,7 +6578,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-4-10 {
   width: 40%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-4-10 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6589,7 +6589,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-5-10 {
   width: 50%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-5-10 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6600,7 +6600,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-6-10 {
   width: 60%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-6-10 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6611,7 +6611,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-7-10 {
   width: 70%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-7-10 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6622,7 +6622,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-8-10 {
   width: 80%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-8-10 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6633,7 +6633,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-9-10 {
   width: 90%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-9-10 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6644,7 +6644,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-10-10 {
   width: 100%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-10-10 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6655,7 +6655,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-1-11 {
   width: 9.09091%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-1-11 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6666,7 +6666,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-2-11 {
   width: 18.18182%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-2-11 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6677,7 +6677,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-3-11 {
   width: 27.27273%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-3-11 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6688,7 +6688,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-4-11 {
   width: 36.36364%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-4-11 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6699,7 +6699,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-5-11 {
   width: 45.45455%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-5-11 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6710,7 +6710,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-6-11 {
   width: 54.54545%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-6-11 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6721,7 +6721,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-7-11 {
   width: 63.63636%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-7-11 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6732,7 +6732,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-8-11 {
   width: 72.72727%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-8-11 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6743,7 +6743,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-9-11 {
   width: 81.81818%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-9-11 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6754,7 +6754,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-10-11 {
   width: 90.90909%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-10-11 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6765,7 +6765,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-11-11 {
   width: 100%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-11-11 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6776,7 +6776,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-1-12 {
   width: 8.33333%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-1-12 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6787,7 +6787,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-2-12 {
   width: 16.66667%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-2-12 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6798,7 +6798,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-3-12 {
   width: 25%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-3-12 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6809,7 +6809,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-4-12 {
   width: 33.33333%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-4-12 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6820,7 +6820,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-5-12 {
   width: 41.66667%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-5-12 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6831,7 +6831,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-6-12 {
   width: 50%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-6-12 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6842,7 +6842,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-7-12 {
   width: 58.33333%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-7-12 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6853,7 +6853,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-8-12 {
   width: 66.66667%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-8-12 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6864,7 +6864,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-9-12 {
   width: 75%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-9-12 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6875,7 +6875,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-10-12 {
   width: 83.33333%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-10-12 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6886,7 +6886,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-11-12 {
   width: 91.66667%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-11-12 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -6897,7 +6897,7 @@ input[type="search"]::-webkit-search-decoration {
 .col-12-12 {
   width: 100%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .col-12-12 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -7285,7 +7285,7 @@ h1 {
   .layout-mobile .navbar {
     padding-left: 20px;
     padding-right: 20px; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .navbar {
       padding-left: 25px;
       padding-right: 25px; } }
@@ -7510,15 +7510,22 @@ h1 {
   border-bottom: 1px solid #eee;
   padding: 0 0 20px 0;
   margin-top: 35px;
-  margin-bottom: 35px; }
-
-.mobile__contact-header {
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 35px;
   font-size: 18px;
   line-height: 1.3;
   letter-spacing: .01em;
   font-weight: 400; }
+
+.mobile__contact--isolated {
+  border-top: 0;
+  margin-top: 0; }
+
+.mobile__contact-header {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 100%; }
 
 .mobile__email-address {
   text-align: center;
@@ -7527,7 +7534,10 @@ h1 {
   text-decoration: none;
   color: black;
   display: block;
-  font-size: 12px; }
+  font-size: 18px;
+  line-height: 1.3;
+  letter-spacing: .01em;
+  font-weight: 400; }
 
 .mobile__addresses {
   padding: 20px 0; }
@@ -7546,17 +7556,24 @@ h1 {
     float: right; }
 
 .mobile-social__item {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   display: inline-block;
-  line-height: 30px;
+  line-height: 50px;
   text-align: center;
   border: 1px solid black;
   margin-left: -1px; }
   .mobile-social__item svg {
-    height: 8px; }
+    height: 12px;
+    vertical-align: 0; }
     .mobile-social__item svg path, .mobile-social__item svg polygon, .mobile-social__item svg rect {
       fill: black; }
+
+.mobile-social__item--linkedin svg {
+  vertical-align: 1px; }
+
+.mobile-social__item--twitter svg {
+  vertical-align: 0px; }
 
 .mobile__next {
   font-size: 16px;
@@ -7631,6 +7648,8 @@ h1 {
       -ms-transform: translateX(0px);
       -webkit-transform: translateX(0px);
       transform: translateX(0px); }
+  .layout-mobile .navbar__dropdown {
+    display: none !important; }
 
 .navbar__dropdown--mobile-contact {
   padding: 2px 0;
@@ -7661,7 +7680,7 @@ h1 {
   overflow: hidden;
   width: 25%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .content-navbar-grid-spacer {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -7683,7 +7702,7 @@ h1 {
   width: 75%;
   float: left;
   position: relative; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .index-swiper {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -7708,7 +7727,7 @@ h1 {
 
 .index-projects {
   overflow: hidden; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .index-projects {
       margin-bottom: -35px; } }
 
@@ -7800,6 +7819,8 @@ div[js-index-content="index"] {
     margin-left: -35px; }
     .js-viewing-full-project .module-image .module__image-caption {
       margin-left: 35px; }
+  .layout-mobile .module-image {
+    margin-bottom: 20px; }
 
 .module-image__ratio {
   position: relative;
@@ -7853,7 +7874,7 @@ div[js-index-content="index"] {
   .js-viewing-full-project .module-text__spacer {
     width: 12.5%;
     float: left; }
-    @media screen and (min-width: 850px) {
+    @media screen and (min-width: 500px) {
       .js-viewing-full-project .module-text__spacer {
         padding-left: 10px;
         padding-right: 10px; } }
@@ -7869,7 +7890,7 @@ div[js-index-content="index"] {
     overflow: auto;
     width: 12.5%;
     float: left; }
-    @media screen and (min-width: 850px) {
+    @media screen and (min-width: 500px) {
       .js-viewing-full-project .module-text__full-project-spacer {
         padding-left: 10px;
         padding-right: 10px; } }
@@ -7897,7 +7918,7 @@ div[js-index-content="index"] {
   .js-viewing-full-project .module-text__excerpt {
     width: 37.5%;
     float: left; }
-    @media screen and (min-width: 850px) {
+    @media screen and (min-width: 500px) {
       .js-viewing-full-project .module-text__excerpt {
         padding-left: 10px;
         padding-right: 10px; } }
@@ -7958,7 +7979,7 @@ div[js-index-content="index"] {
   line-height: 1.3;
   letter-spacing: .01em;
   font-weight: 400; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .module-text__body {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -7992,7 +8013,7 @@ div[js-index-content="index"] {
   transform: translateX(0);
   width: 100%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .module-text__body--mobile {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -8007,7 +8028,7 @@ div[js-index-content="index"] {
 .layout-mobile .module-images-2up {
   margin-left: -10px;
   margin-right: -10px; }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 500px) {
   .module-images-2up {
     margin-left: -10px;
     margin-right: -10px; } }
@@ -8032,7 +8053,7 @@ div[js-index-content="index"] {
 
 .module-website-link {
   margin: 70px 0; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .module-website-link:after {
       content: "";
       display: table;
@@ -8040,7 +8061,7 @@ div[js-index-content="index"] {
     .layout-mobile .module-website-link {
       margin-left: -10px;
       margin-right: -10px; } }
-@media screen and (min-width: 850px) and (min-width: 850px) {
+@media screen and (min-width: 500px) and (min-width: 500px) {
   .module-website-link {
     margin-left: -10px;
     margin-right: -10px; } }
@@ -8054,7 +8075,7 @@ div[js-index-content="index"] {
   .js-viewing-full-project .module-website-link__spacer {
     width: 62.5%;
     float: left; }
-    @media screen and (min-width: 850px) {
+    @media screen and (min-width: 500px) {
       .js-viewing-full-project .module-website-link__spacer {
         padding-left: 10px;
         padding-right: 10px; } }
@@ -8062,7 +8083,7 @@ div[js-index-content="index"] {
       padding-left: 10px;
       padding-right: 10px; }
 
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 500px) {
   .module-website-link__column {
     width: 50%;
     float: left;
@@ -8072,11 +8093,11 @@ div[js-index-content="index"] {
     .js-viewing-full-project .module-website-link__column {
       width: 37.5%;
       float: left; } }
-    @media screen and (min-width: 850px) and (min-width: 850px) {
+    @media screen and (min-width: 500px) and (min-width: 500px) {
       .js-viewing-full-project .module-website-link__column {
         padding-left: 10px;
         padding-right: 10px; } }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 500px) {
       .layout-mobile .js-viewing-full-project .module-website-link__column {
         padding-left: 10px;
         padding-right: 10px; } }
@@ -8122,7 +8143,7 @@ div[js-index-content="index"] {
   .layout-mobile .module-credits {
     margin-left: -10px;
     margin-right: -10px; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .module-credits {
       margin-left: -10px;
       margin-right: -10px; } }
@@ -8173,7 +8194,7 @@ div[js-index-content="index"] {
     -moz-column-count: 3;
     -webkit-column-count: 3;
     column-count: 3; }
-    @media screen and (min-width: 850px) {
+    @media screen and (min-width: 500px) {
       .js-viewing-full-project .layout-default .module-credits__content {
         padding-left: 10px;
         padding-right: 10px; } }
@@ -8206,7 +8227,7 @@ div[js-index-content="index"] {
   width: 100%;
   float: left;
   float: none; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .module-credits__line-container {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -8227,7 +8248,7 @@ div[js-index-content="index"] {
   .js-viewing-full-project .module-credits__column {
     width: 25%;
     float: left; }
-    @media screen and (min-width: 850px) {
+    @media screen and (min-width: 500px) {
       .js-viewing-full-project .module-credits__column {
         padding-left: 10px;
         padding-right: 10px; } }
@@ -8285,7 +8306,7 @@ div[js-index-content="index"] {
   .layout-mobile .studio {
     padding-left: 20px;
     padding-right: 20px; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .studio {
       padding-left: 25px;
       padding-right: 25px; } }
@@ -8314,7 +8335,7 @@ div[js-index-content="index"] {
 .studio__spacer {
   width: 25%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .studio__spacer {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -8328,7 +8349,7 @@ div[js-index-content="index"] {
   width: 75%;
   float: left;
   position: relative; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .studio__content {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -8338,7 +8359,7 @@ div[js-index-content="index"] {
   .layout-mobile .studio__content {
     width: 100%;
     float: left; }
-    @media screen and (min-width: 850px) {
+    @media screen and (min-width: 500px) {
       .layout-mobile .studio__content {
         padding-left: 10px;
         padding-right: 10px; } }
@@ -8441,7 +8462,7 @@ div[js-index-content="index"] {
   .layout-mobile .studio__team {
     margin-left: -10px;
     margin-right: -10px; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .studio__team {
       margin-left: -10px;
       margin-right: -10px; } }
@@ -8456,7 +8477,7 @@ div[js-index-content="index"] {
   letter-spacing: .01em;
   font-weight: 400;
   margin-bottom: 40px; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .studio__team-member {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -8491,17 +8512,19 @@ div[js-index-content="index"] {
   letter-spacing: .01em;
   font-weight: 400;
   margin-top: 140px; }
-  .studio__services:after {
-    content: "";
-    display: table;
-    clear: both; }
-  .layout-mobile .studio__services {
-    margin-left: -10px;
-    margin-right: -10px; }
-  @media screen and (min-width: 850px) {
-    .studio__services {
+  @media screen and (min-width: 500px) {
+    .studio__services:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .layout-mobile .studio__services {
       margin-left: -10px;
       margin-right: -10px; } }
+@media screen and (min-width: 500px) and (min-width: 500px) {
+  .studio__services {
+    margin-left: -10px;
+    margin-right: -10px; } }
+
   .layout-mobile .studio__services {
     margin-top: 80px;
     margin-bottom: 0;
@@ -8510,16 +8533,18 @@ div[js-index-content="index"] {
 .studio__services--2up .studio__service-header {
   padding: 0;
   margin: 0; }
-.studio__services--2up .studio__services-column {
-  width: 50%;
-  float: left; }
-  @media screen and (min-width: 850px) {
+@media screen and (min-width: 500px) {
+  .studio__services--2up .studio__services-column {
+    width: 50%;
+    float: left; } }
+  @media screen and (min-width: 500px) and (min-width: 500px) {
     .studio__services--2up .studio__services-column {
       padding-left: 10px;
       padding-right: 10px; } }
-  .layout-mobile .studio__services--2up .studio__services-column {
-    padding-left: 10px;
-    padding-right: 10px; }
+@media screen and (min-width: 500px) {
+    .layout-mobile .studio__services--2up .studio__services-column {
+      padding-left: 10px;
+      padding-right: 10px; } }
 
 .layout-mobile .studio__services-summary {
   -moz-column-count: 2;
@@ -8530,7 +8555,7 @@ div[js-index-content="index"] {
   margin-bottom: 70px;
   width: 100%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .studio__service-header {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -8538,9 +8563,14 @@ div[js-index-content="index"] {
     padding-left: 10px;
     padding-right: 10px; }
   .layout-mobile .studio__service-header {
+    float: none;
     margin-bottom: 40px;
     margin-top: 60px;
     font-weight: 500; }
+    .layout-mobile .studio__service-header:after {
+      content: "";
+      display: table;
+      clear: both; }
 
 .studio__header {
   font-weight: 500; }
@@ -8550,15 +8580,15 @@ div[js-index-content="index"] {
 
 .studio__service-group {
   margin-bottom: 40px; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .studio__service-group {
       width: 50%;
       float: left; } }
-  @media screen and (min-width: 850px) and (min-width: 850px) {
+  @media screen and (min-width: 500px) and (min-width: 500px) {
     .studio__service-group {
       padding-left: 10px;
       padding-right: 10px; } }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
       .layout-mobile .studio__service-group {
         padding-left: 10px;
         padding-right: 10px; }
@@ -8570,8 +8600,9 @@ div[js-index-content="index"] {
     font-size: 18px;
     line-height: 1.3;
     letter-spacing: .01em;
-    font-weight: 400; }
-    @media screen and (min-width: 850px) {
+    font-weight: 400;
+    float: none; }
+    @media screen and (min-width: 500px) {
       .layout-mobile .studio__service-group {
         padding-left: 10px;
         padding-right: 10px; } }
@@ -8599,7 +8630,7 @@ div[js-index-content="index"] {
   .layout-mobile .studio__clients {
     margin-left: -10px;
     margin-right: -10px; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .studio__clients {
       margin-left: -10px;
       margin-right: -10px; } }
@@ -8609,7 +8640,7 @@ div[js-index-content="index"] {
 .studio__clients-column {
   width: 50%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .studio__clients-column {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -8644,24 +8675,24 @@ div[js-index-content="index"] {
     font-size: 16px;
     line-height: 1.1; }
 
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 500px) {
   .index-journal {
     width: 62.5%;
     float: left;
     float: right;
     padding-top: 43vh; } }
-  @media screen and (min-width: 850px) and (min-width: 850px) {
+  @media screen and (min-width: 500px) and (min-width: 500px) {
     .index-journal {
       padding-left: 10px;
       padding-right: 10px; } }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 500px) {
     .layout-mobile .index-journal {
       padding-left: 10px;
       padding-right: 10px; } }
 .layout-mobile .index-journal {
   width: 100%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .layout-mobile .index-journal {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -8710,6 +8741,11 @@ div[js-index-content="index"] {
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 5px; }
+  .layout-mobile .index-journal__date {
+    font-size: 18px;
+    line-height: 1.3;
+    letter-spacing: .01em;
+    font-weight: 400; }
 
 .index-journal__title {
   font-size: 26px;
@@ -8726,6 +8762,10 @@ div[js-index-content="index"] {
     .index-journal__title {
       font-size: 50px;
       line-height: 1.2; } }
+  .layout-mobile .index-journal__title {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 100%; }
 
 .index-journal__content {
   font-size: 26px;
@@ -8748,13 +8788,31 @@ div[js-index-content="index"] {
     margin-top: 0; }
   .index-journal__content p:last-child {
     margin-bottom: 0; }
+  .index-journal__content a {
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    display: inline-block; }
+    .index-journal__content a:hover:after {
+      border-color: #818181; }
+    .index-journal__content a:after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      border-bottom: 1px solid black; }
   .layout-mobile .index-journal__content {
     width: 100%;
     float: left;
+    font-size: 18px;
+    line-height: 1.3;
+    letter-spacing: .01em;
+    font-weight: 400;
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 16px; }
-    @media screen and (min-width: 850px) {
+    @media screen and (min-width: 500px) {
       .layout-mobile .index-journal__content {
         padding-left: 10px;
         padding-right: 10px; } }
@@ -8831,7 +8889,7 @@ div[js-index-content="index"] {
   line-height: 1.3;
   letter-spacing: .01em;
   font-weight: 400; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .footer__address1 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -8846,7 +8904,7 @@ div[js-index-content="index"] {
   line-height: 1.3;
   letter-spacing: .01em;
   font-weight: 400; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .footer__address2 {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -8857,7 +8915,7 @@ div[js-index-content="index"] {
 .footer__spacer {
   width: 12.5%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .footer__spacer {
       padding-left: 10px;
       padding-right: 10px; } }
@@ -8868,7 +8926,7 @@ div[js-index-content="index"] {
 .footer__email {
   width: 25%;
   float: left; }
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 500px) {
     .footer__email {
       padding-left: 10px;
       padding-right: 10px; } }

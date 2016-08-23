@@ -308,8 +308,8 @@ root.controllers.navbar2 = ($element, args) ->
       $dropdown = $item.closest('.navbar__dropdown')
       height = $item.parent().height()
       top = $item.position().top
-      console.log 'top: ', top, ' height:', height
-      console.log 'dropdown css is -', top, $dropdown
+      # console.log 'top: ', top, ' height:', height
+      # console.log 'dropdown css is -', top, $dropdown
 
       if top > 200
         console.log 'top > 200.. can\'t be right'
@@ -345,7 +345,6 @@ root.controllers.navbar2 = ($element, args) ->
             , 750, 'easeInOutExpo', ->
               api.scrolling = false
               activateItem $item
-
         else
             if args.scrollAlignToNav
               position = $('.navbar__item.is-active:first').position().top
@@ -384,6 +383,10 @@ root.controllers.navbar2 = ($element, args) ->
           $el = $("[js-index-content=\"studio\"]")
           api.hideAllContentAndFadeInOne $el
 
+          for index in [1..7]
+            $img = new Image()
+            $img.src = "/static/img/hover-#{index}.jpg"
+
         when 'journal'
           $el = $("[js-index-content=\"journal\"]")
           api.hideAllContentAndFadeInOne $el
@@ -415,6 +418,7 @@ root.controllers.navbar2 = ($element, args) ->
         $nextItem = $item.find '.navbar__item:first'
         $nextItem.addClass 'is-active'
         scrollTo $nextItem
+        window.location.hash = $nextItem.find('[js-scrollspy-nav]:first').attr 'js-scrollspy-nav'
 
         # reset shown state
         $("[js-show-contact-info-if-visible]").data('shown', false)
@@ -437,6 +441,7 @@ root.controllers.navbar2 = ($element, args) ->
     initItem $(item)
 
   do handleDirectLoadViaHash = (hash = '') ->
+    console.log 'loading direct from hash'
     if not hash
         hash = window.location.hash
 
@@ -528,7 +533,7 @@ root.controllers.navbar2 = ($element, args) ->
 
       # show contact element if a show contact div is in viewport.
       $showContact = $("[js-show-contact-info-if-visible]:in-viewport:visible:first")
-      console.log "show contact element: ", $showContact, $showContact.is(':visible')
+      # console.log "show contact element: ", $showContact, $showContact.is(':visible')
 
       if ($showContact.length > 0) and not $showContact.data('shown')
         root.globalAPI.showContactBar()
@@ -652,14 +657,14 @@ root.controllers.layoutDefault = ($element, args) ->
 
       $img = getOrCreateHoverEl(index)
       $img.css
-        width: (Math.random() * 200) + 500
+        width: (Math.random() * 200) + 250
         opacity: 0
       $img.show()
       imgW = $img.width()
       imgH = $img.height()
 
-      top = Math.random() * (wh - imgH)
-      left = Math.random() * (ww - imgW)
+      top = Math.random() * (wh - imgH - 200)
+      left = Math.random() * (ww - imgW - 200)
 
       # imgRight = imgW + left
 

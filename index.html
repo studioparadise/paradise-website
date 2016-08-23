@@ -379,7 +379,7 @@ excerpt: Studio Paradise
 
 
 					{% capture id %}{{ post.date | date: '%Y-%B' }}-{{ post.title }}{% endcapture %}
-					<div class="index-journal__journal {% if images.size > 0 %}with-image {% endif %}" id="{{ id }}" js-scrollspy="{{ id }}">
+					<div class="index-journal__journal {% if images.size > 0 %}with-image {% endif %}">
 						<div class="index-journal__header">
 							<div class="index-journal__date">
 								{{ post.date | date: "%B %d %Y" }}
