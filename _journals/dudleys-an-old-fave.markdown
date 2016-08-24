@@ -1,6 +1,6 @@
 ---
 title: Dudleys, an old fave
-date: 2016-08-24 18:15:00 Z
+date: 2016-01-13 18:15:00 Z
 image: "/uploads/Dudleys_Instagrams_20160804.jpg"
 images:
 - image: "/uploads/20131010_DUDLEYS_web.jpg"
