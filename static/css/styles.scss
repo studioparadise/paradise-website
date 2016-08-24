@@ -2052,6 +2052,7 @@ div[js-index-content="index"]{
 
 .module-text__excerpt {
   @include style-h1;
+  @include responsive-fonts(30px, 50px);
   @include nested-column(3, 6);
   min-height: 95px;
   strong {

@@ -7916,6 +7916,14 @@ div[js-index-content="index"] {
   float: left;
   padding: 0 10px;
   min-height: 95px; }
+  @media screen and (min-width: 1400px) and (max-width: 1799px) {
+    .module-text__excerpt {
+      font-size: 30px;
+      line-height: 1.2; } }
+  @media screen and (min-width: 1800px) {
+    .module-text__excerpt {
+      font-size: 50px;
+      line-height: 1.2; } }
   .layout-mobile .module-text__excerpt {
     padding: 0 10px; }
   .module-text__excerpt strong {
