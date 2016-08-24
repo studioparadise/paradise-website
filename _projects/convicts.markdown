@@ -22,11 +22,11 @@ modules:
   variation: centered
   full-project-title: Convicts
 - type: image
-  image: "/uploads/Con_Logo.png"
+  image: "/uploads/Convicts_logo_20160822.png"
   alt: 
   caption: 
 - type: image
-  image: "/uploads/COn_Branding.gif"
+  image: "/uploads/CONVICTSGIF_20160822_A.gif"
 - type: image
   url: 
   image: "/uploads/Con_Branding.jpg"
@@ -38,6 +38,9 @@ modules:
 - type: image
   dimensions: 2343x3705
   image: "/uploads/Convicts_WebArticle_20160802.jpg"
+- type: image
+  image: "/uploads/Convicts_WebVideoPlayer_20160802.jpg"
+  dimensions: 2382x1606
 - type: image
   image:
   - "/uploads/Convicts_WebMap_20160802.jpg"
@@ -54,17 +57,17 @@ modules:
   url: http://convicts.nyc/
 - type: credits
   credits:
-  - url: http://google.com
+  - url: 
     emphasis: Photography
-    name: Yuji Tomita
+    name: Tom Law
   - url: 
-    emphasis: Logo Design
-    name: Some Someone
+    emphasis: Brand Design
+    name: Paradise
   - url: 
-    emphasis: Model
-    name: Gina Powell
+    emphasis: Digital Design
+    name: Paradise
   - url: 
     emphasis: Development
-    name: Eric Wang
+    name: Paradise
 ---
 

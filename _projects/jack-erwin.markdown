@@ -4,7 +4,7 @@ date: 2016-05-28 05:00:00 Z
 position: 0
 modules:
 - type: hero
-  image: "/uploads/JE_Hero_20160802_B.jpg"
+  image: "/uploads/JE_Hero_3_20160822-50951c.jpg"
   alt: 
 - type: text
   excerpt: Honing Jack Erwin's brand experience to tell the story of the contemporary
@@ -18,11 +18,9 @@ modules:
     * Visual Identity
     * Digital
 - type: image
-  images:
-  - image: 
-    alt: 
-    caption: 
-  image: "/uploads/3JE_Logo2.jpg"
+  image: "/uploads/JE_logoGrey_20160822-564ee6.jpg"
+- type: image
+  image: "/uploads/JE_Logo_GId_20180822_MLP_A.gif"
 - type: image
   image: "/uploads/2JE_Logo.jpg"
 - type: image
@@ -59,11 +57,23 @@ modules:
 - type: credits
   credits:
   - url: 
-    emphasis: 'Photographer '
+    emphasis: Photographer  1
     name: Bjorn Looss
   - url: 
-    emphasis: Photographer
+    emphasis: Photographer 2
     name: Joss Mckinley
+  - url: 
+    emphasis: Art Direction
+    name: Paradise
+  - url: 
+    emphasis: 'Digital Design '
+    name: Paradise
+  - url: 
+    emphasis: Branding
+    name: Paradise
+  - url: 
+    emphasis: 'Print Design '
+    name: Paradise
   Key: 
 ---
 

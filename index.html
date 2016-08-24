@@ -69,15 +69,8 @@ excerpt: Studio Paradise
 		{% assign projects = site.projects | sort: "position" %}
 		{% for project in projects %}
 			<div class="index-project-row" js-scrollspy="{{ project.title | slugify }}">
-				<!-- <div class="content-navbar-grid-spacer">&nbsp;</div> -->
 				<div class="index-project" js-index-project="{{ project.title | slugify }}" js-controller="project">
 					<div class="index-project__inner">
-						<!-- <span class="index-project-debug">
-							{{ project.title }}
-							<a href="{{ project.url }}">
-								Open Project
-							</a>
-						</span> -->
 						{% for module in project.modules %}
 							{% include render_module.html %}
 						{% endfor %}
@@ -86,7 +79,9 @@ excerpt: Studio Paradise
 			</div>
 		{% endfor %}
 	</div>
+	<div class="global-contact-overlay-spacer">&nbsp;</div>
 	<div js-show-contact-info-if-visible>&nbsp;</div>
+
 </div>
 
 
@@ -140,19 +135,17 @@ excerpt: Studio Paradise
 				</p>
 			</div>
 
-
-			<section class="studio__services">
+			<section class="studio__services"  js-scrollspy="different">
+				<div class="style-studio-header  studio__service-header style-studio-header--different">
+					— What Makes Us Different
+				</div>
 				<div class="studio__services-column">
-					<div class="style-studio-header  studio__service-header style-studio-header--different" js-scrollspy="different">
-						— What Makes Us Different
-					</div>
-
 					<div class="studio__service-group">
 						<p>
 							<span class="studio__service-title">
 								In the Trenches.
 							</span>
-							Our time spent in-house has given us insights into the customer feedback loop that many agencies never get access to. Launching award winning product lines with some of the most innovative marketing, sales, design and operations teams has taught us the complex balancing act of brand and business.
+							Our time spent in-house has given us insights into the customer feedback loop that many agencies never get access to. Launching award winning product lines with some of the most innovative marketing, sales, design and operations teams has taught us the complex balancing act of brand and business
 						</p>
 					</div>
 
@@ -172,18 +165,23 @@ excerpt: Studio Paradise
 							We've built our own brands from the ground up. And we’re still doing it. We've had successes, but more importantly failures. We’ve bounced back bigger and badder than ever. We feel your pain and understand the ever-changing landscape because we live and learn in it everyday.
 						</p>
 					</div>
-				</div>
-				<div class="studio__services-column">
-					<img class="studio__services-column-image" src="">
+					<div class="studio__service-group">
+						<p>
+							<span class="studio__service-title">
+								Skin In The Game.
+							</span>
+							We've built our own brands from the ground up. And we’re still doing it. We've had successes, but more importantly failures. We’ve bounced back bigger and badder than ever. We feel your pain and understand the ever-changing landscape because we live and learn in it everyday.
+						</p>
+					</div>
 				</div>
 			</section>
 
-			<section js-scrollspy="team">
-				<div class="style-studio-header style-studio-header--who-we-are">
+			<section class="studio__services"  js-scrollspy="team">
+				<div class="style-studio-header  studio__service-header style-studio-header--different">
 					— Who We Are
 				</div>
-				<div class="studio__team">
-					<div class="studio__team-member">
+				<div class="studio__services-column">
+					<div class="studio__service-group">
 						<img class="studio__team-img" />
 						<div class="studio__team-info">
 							<span class="studio__team-title">
@@ -194,8 +192,10 @@ excerpt: Studio Paradise
 						<p class="studio__team-bio">
 							Jay spent more than 10 years on product design and management teams at action sports and lifestyle brands RVCA, Nixon, Billabong, Tsovet and RAEN before starting a freelance consultancy and becoming a partner in Leader Bag Co. where he is currently the Director of Product and Design. He co-founded Paradise in 2014.
 						</p>
+
 					</div>
-					<div class="studio__team-member">
+
+					<div class="studio__service-group">
 						<img class="studio__team-img" />
 						<div class="studio__team-info">
 							<span class="studio__team-title">
@@ -207,8 +207,7 @@ excerpt: Studio Paradise
 							In 2013 Luke used the knowledge he gathered working as Art Director for Saturdays NYC and designing for NY based agencies Imprint Projects and Common Space — to co-found the accessories company Prize NYC in 2014. He co-founded Paradise in 2014.
 						</p>
 					</div>
-
-					<div class="studio__team-member">
+					<div class="studio__service-group">
 						<img class="studio__team-img" />
 						<div class="studio__team-info">
 							<span class="studio__team-title">
@@ -221,7 +220,7 @@ excerpt: Studio Paradise
 						</p>
 					</div>
 
-					<div class="studio__team-member">
+					<div class="studio__service-group">
 						<img class="studio__team-img" />
 						<div class="studio__team-info">
 							<span class="studio__team-title">
@@ -233,22 +232,34 @@ excerpt: Studio Paradise
 							Yuji manages all things digital and development at Paradise. He started a winery in Argentina and helped launch Grovemade, a wood products company based in Portland. He co-founded Paradise in 2014.
 						</p>
 					</div>
-
 				</div>
 			</section>
 
-			<section class="studio__services" js-scrollspy="services">
+			<div class="studio__services studio__services--2up" js-scrollspy="services">
 				<div class="studio__services-column">
 					<div class="style-studio-header  studio__service-header">
 						— What We Do
 					</div>
-					<div class="studio__services-summary">
-						Visual Identity<br>
-						Art Direction<br>
-						Product Design<br>
-						Digital<br>
+				</div>
+				<div class="studio__services-column">
+					<div class="studio__service-clients">
+						<a class="studio__service-client" target="_blank">
+							Visual Identity
+						</a>
+						<a class="studio__service-client" target="_blank">
+							Art Direction
+						</a>
+						<a class="studio__service-client" target="_blank">
+							Product Design
+						</a>
+						<a class="studio__service-client" target="_blank">
+							Digital
+						</a>
 					</div>
 				</div>
+			</div>
+
+			<section class="studio__services" js-scrollspy="">
 				<div class="studio__services-column">
 					<div class="style-studio-header studio__service-header">
 						— How We Do It
@@ -288,7 +299,7 @@ excerpt: Studio Paradise
 				</div>
 			</section>
 
-			<div class="studio__services" js-scrollspy="clients">
+			<div class="studio__services studio__services--2up" js-scrollspy="clients">
 				<div class="studio__services-column">
 					<div class="style-studio-header  studio__service-header">
 						— Who We Work With
@@ -340,9 +351,11 @@ excerpt: Studio Paradise
 						</a>
 					</div>
 				</div>
-				<div js-show-contact-info-if-visible>&nbsp;</div>
-				<div style="height: 50vh;"></div>
 			</div>
+			<div class="global-contact-overlay-spacer">&nbsp;</div>
+			<div js-show-contact-info-if-visible>&nbsp;</div>
+
+
 		</div>
 	</div>
 </div>
@@ -352,16 +365,21 @@ excerpt: Studio Paradise
 		<div class="row">
 			<div class="content-navbar-grid-spacer">&nbsp;</div>
 			<div class="index-journal">
+
 				{% assign posts = site.journals %}
 
 				{% for post in posts reversed %}
 				    {% capture month %}{{ post.date | date: '%Y %b' }}{% endcapture %}
 				    {% capture nmonth %}{{ post.next.date | date: '%Y %b' }}{% endcapture %}
+					{% assign images = post['images'] %}
+
 				    {% if month != nmonth %}
 						<div class="index-journal__month" js-scrollspy="{{ post.date | date: '%Y-%B' }}">
 					{% endif %}
-					<div class="index-journal__journal">
-						<img class="index-journal__hero-img" src="{{ post['image'] }}" />
+
+
+					{% capture id %}{{ post.date | date: '%Y-%B' }}-{{ post.title }}{% endcapture %}
+					<div class="index-journal__journal {% if images.size > 0 %}with-image {% endif %}">
 						<div class="index-journal__header">
 							<div class="index-journal__date">
 								{{ post.date | date: "%B %d %Y" }}
@@ -372,6 +390,9 @@ excerpt: Studio Paradise
 								</h1>
 							{% endunless %}
 						</div>
+
+						<img class="index-journal__hero-img" src="{{ post['image'] }}" />
+
 						{% if post.content.size > 5 %}
 							<div class="row">
 								<div class="index-journal__content">
@@ -379,10 +400,12 @@ excerpt: Studio Paradise
 								</div>
 							</div>
 						{% endif %}
-						{% assign images = post['images'] %}
+
 						{% if images.size > 0 %}
 							{% for image in images %}
-								<img class="index-journal__img lazyload" data-src="{{ image.image }}" alt="{{ image.alt | default: '' }}" />
+								{% if image.image != '' %}
+									<img class="index-journal__img lazyload" data-src="{{ image.image }}" alt="{{ image.alt | default: '' }}" />
+								{% endif %}
 							{% endfor %}
 						{% endif %}
 					</div>
@@ -393,5 +416,6 @@ excerpt: Studio Paradise
 			</div>
 		</div>
 	</div>
+	<div class="global-contact-overlay-spacer">&nbsp;</div>
 	<div js-show-contact-info-if-visible>&nbsp;</div>
 </div>

@@ -4,10 +4,11 @@ layout: mobile
 
 {% assign project = page %}
 <div class="mobile">
-	{% for module in project.modules %}
-		{% include render_module.html mobile=true %}
-	{% endfor %}
-
+	<div class="mobile-project-detail">
+		{% for module in project.modules %}
+			{% include render_module.html mobile=true %}
+		{% endfor %}
+	</div>
 	<div class="mobile-more-projects">
 		<div class="mobile-more-projects__title">
 			More Projects

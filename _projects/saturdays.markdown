@@ -40,5 +40,23 @@ modules:
 - type: image
   image: "/uploads/Saturdays_Web2_20160802.jpg"
   dimensions: 2343x1544
+- type: credits
+  credits:
+  - emphasis: Art Direction
+    name: Paradise
+  - emphasis: Digital Design
+    name: Paradise
+  - emphasis: Photography 1
+    name: Zak Bush
+  - emphasis: Photography 2
+    name: Bjorn Iooss
+  - emphasis: Photography 3
+    name: Benny Horne
+  - emphasis: Graphic Design
+    name: Paradise
+  - emphasis: Layout
+    name: Paradise
+  - emphasis: Creative Direction
+    name: 'Collin Tunstall '
 ---
 

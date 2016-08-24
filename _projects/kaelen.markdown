@@ -4,7 +4,7 @@ date: 2016-05-28 05:01:00 Z
 position: 1
 modules:
 - type: hero
-  image: "/uploads/Kaelen_Hero_20160803.jpg"
+  image: "/uploads/Kaelen_HomepageHero_20160803.jpg"
 - type: text
   excerpt: 'Capturing a designer''s minimalist design essence and attention to detail
     in print. '
@@ -59,6 +59,15 @@ modules:
   image: "/uploads/Kaelen_5_20160803.jpg"
 - type: website-link
   image: http://hi.kaelennyc.com/
-Key: 
+- type: credits
+  credits:
+  - emphasis: Design
+    name: Paradise
+  - emphasis: Production
+    name: Paradise
+  - emphasis: Digital Design
+    name: Paradise
+  - emphasis: Detail Photography
+    name: Tom Law
 ---
 

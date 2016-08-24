@@ -85,7 +85,7 @@ $medium: 565px;
 $large: 566px;
 
 
-$desktop: 850px;
+$desktop: 500px;
 $desktop-1: $desktop - 1;
 // IF YOU CHANGE THIS, And referral active, change the JS window responsive width in progress bar controller, for KickOffLbas Share page.
 
@@ -358,7 +358,8 @@ html, body {
   font-family: Arial;
 }
 
-html.navbar-mobile-open {
+html.navbar-mobile-open,
+html.js-viewing-full-project {
   position: relative;
   height: 100%;
   overflow: hidden;
@@ -368,7 +369,6 @@ html.navbar-mobile-open {
     height: 100%;
     overflow: hidden;
   }
-
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
@@ -1305,11 +1305,11 @@ h1 {
   @include style-h1;
 }
 @mixin style-h2 {
-  font-size: 14px;
-  @include responsive-fonts(16px, 18px);
-  line-height: 1.42;
+  font-size: 18px;
+  // @include responsive-fonts(16px, 18px);
+  line-height: 1.3;
   letter-spacing: .01em;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 @mixin responsive-14 {
@@ -1337,6 +1337,12 @@ h1 {
   color: #a6a6a6;
 }
 
+@mixin style-mobile-header {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 100%;
+}
+
 .navbar__items {
   @include rm {
     @include transition(transform .3s ease 0s);
@@ -1344,6 +1350,9 @@ h1 {
   }
   .mobile-navbar-is-open & {
     @include transform(translateX(0));
+  }
+  .js-viewing-full-project & {
+    display: none;
   }
 }
 .navbar {
@@ -1420,16 +1429,16 @@ h1 {
 	top: 35px;
 	left: 35px;
   svg {
-    width: 100px;
-    height: 25px;
+    width: 115px;
+    // height: 25px;
   }
   .layout-mobile & {
     position: absolute;
-    top: 24px; // 30px above and below visually aligned
+    top: 20px; // 30px above and below visually aligned
     left: 20px;
     svg {
-      width: 77.5px;
-      height: 19.3px;
+      width: 110px;
+      height: 29px;
     }
 
   }
@@ -1471,9 +1480,9 @@ h1 {
 .mobile-navbar-open {
   display: none;
   position: absolute;
-  top: 25px;
+  top: 27px;
   right: 20px;
-  width: 13px;
+  width: 28px;
   z-index: 1000;
   @include rm {
     display: block;
@@ -1487,7 +1496,7 @@ h1 {
   height: 1px;
   background: black;
   &:not(:last-child) {
-    margin-bottom: 4px;
+    margin-bottom: 8px;
   }
 }
 
@@ -1570,19 +1579,21 @@ h1 {
   }
 }
 .mobile-more-projects {
-
+  margin-top: 40px;
 }
 .mobile-more-projects__title {
   margin: 40px 0;
+  @include style-mobile-header;
+  font-weight: 500;
 }
 .mobile-project {
   text-decoration: none;
   color: inherit;
   display: block;
   .module-image__ratio {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 .mobile-project--index {
   .module-image__ratio {
@@ -1590,20 +1601,28 @@ h1 {
   }
 }
 .mobile-project__title {
-  font-size: 14px;
-  line-height: 100%;
+  @include style-mobile-header;
+  .mobile-project-detail & {
+    font-weight: 500;
+    margin-top: 15px;
+  }
 }
 .mobile__contact {
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
   padding: 0 0 20px 0;
-
   margin-top: 35px;
   margin-bottom: 35px;
+  @include style-body;
+}
+.mobile__contact--isolated {
+  border-top: 0;
+  margin-top: 0;
 }
 .mobile__contact-header {
   margin-top: 15px;
   margin-bottom: 15px;
+  @include style-mobile-header;
 }
 .mobile__email-address {
   text-align: center;
@@ -1612,7 +1631,7 @@ h1 {
   text-decoration: none;
   color: black;
   display: block;
-  font-size: 12px;
+  @include style-body;
 }
 .mobile__addresses {
   padding: 20px 0;
@@ -1634,20 +1653,32 @@ h1 {
 
 }
 .mobile-social__item {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   display: inline-block;
-  line-height: 30px;
+  line-height: 50px;
   text-align: center;
   border: 1px solid black;
   margin-left: -1px;
   svg {
-    height: 8px;
+    height: 12px;
+    vertical-align: 0;
     path, polygon, rect {
       fill: black;
     }
   }
 }
+.mobile-social__item--linkedin {
+  svg {
+    vertical-align: 1px;
+  }
+}
+.mobile-social__item--twitter {
+  svg {
+    vertical-align: 0px;
+  }
+}
+
 .mobile__next {
   font-size: 16px;
   text-decoration: none;
@@ -1681,10 +1712,11 @@ h1 {
   &.is-active {
     > .navbar__label {
       color: black;
+      font-weight: 500;
     }
   }
   @include rm {
-    width: 80px !important;  // override js
+    width: 100px !important;  // override js
     padding: 0;
     margin-left: 0;
     margin-right: 10px;
@@ -1692,16 +1724,20 @@ h1 {
 }
 .navbar__label {
   .layout-default & {
-    padding: 2px 0;
+    // padding: 2px 0;
   }
   text-decoration: none;
   @include style-h2;
-  line-height: 1.1; // 20px too much in this case
+  line-height: 1.3; // 20px too much in this case
   color: #999;
   cursor: pointer;
   @include transition(color .2s ease 0s);
   &:hover {
     color: black;
+  }
+  @include rm {
+    @include style-mobile-header;
+    line-height: 1.6;
   }
 }
 .navbar__dropdown {
@@ -1728,6 +1764,9 @@ h1 {
       opacity: 1;
       @include transform(translateX(0px));
     }
+  }
+  @include rm {
+    display: none !important;
   }
 }
 .navbar__dropdown--mobile-contact {
@@ -1784,7 +1823,7 @@ h1 {
 }
 
 .swiper-slide {
-  margin-top: 100px;
+  margin-top: 115px;
   height: calc(100vh - 200px);
   cursor: pointer;
   @include background-size-cover;
@@ -1794,6 +1833,10 @@ h1 {
 //projects
 .index-projects {
   overflow: hidden;
+  @include rd {
+    // allow footer popup to match perfectly
+    margin-bottom: -35px;
+  }
 }
 .index-projects-wrapper {
   position: fixed;
@@ -1802,12 +1845,20 @@ h1 {
   bottom: 0;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
+
   @include transition(width .6s ease 0s);
   width: calc(75% - 23px);  // 6 cols/8 and visually match grid.
 }
-
+.index-project-row {
+  &:last-child {
+    .index-project {
+      margin-bottom: 0;
+    }
+  }
+}
 .index-project {
   margin-bottom: 60px;
+
   position: relative;
   width: 100%;
   padding-right: 35px;
@@ -1900,6 +1951,9 @@ div[js-index-content="index"]{
       margin-left: $desktop-margin;
     }
   }
+  @include rm {
+    margin-bottom: $mobile-gutter;
+  }
 }
 
 .module-image__ratio {
@@ -1945,6 +1999,9 @@ div[js-index-content="index"]{
     margin-right: 0;
   }
 }
+.module-text__title {
+  font-weight: 500;
+}
 .module-text__spacer {
   @include nested-column(2, 6);
   @include style-body;
@@ -1974,8 +2031,7 @@ div[js-index-content="index"]{
 
 .module-text__view-full {
   margin-top: 28px;
-  @include responsive-14;
-  letter-spacing: .02em;
+  @include style-body;
   cursor: pointer;
   span {
     @include transition(color .15s ease 0s);
@@ -2036,10 +2092,15 @@ div[js-index-content="index"]{
   // }
 
   @include style-body;
+
+
   p {
     margin: 28px 0;
     &:first-child {
       margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
     }
   }
   ul {
@@ -2093,10 +2154,12 @@ div[js-index-content="index"]{
 
 // website link module
 .module-website-link {
-  @include row;
+  @include rd {
+    @include row;
+  }
   margin: 70px 0;
-  @include responsive-14;
 }
+
 .module-website-link__spacer {
   @include nested-column(3, 6);
   .js-viewing-full-project & {
@@ -2104,19 +2167,21 @@ div[js-index-content="index"]{
   }
 }
 .module-website-link__column {
-  @include nested-column(3, 6);
-  .js-viewing-full-project & {
-    @include column(3);
+  @include rd {
+    @include nested-column(3, 6);
+    .js-viewing-full-project & {
+      @include column(3);
+    }
   }
 }
 .module-website-link__button {
+  @include style-body;
   text-decoration: none;
   display: block;
   border: 1px solid black;
-  @include responsive-14;
   color: black;
   height: 45px;
-  line-height: 45px;
+  line-height: 44px;
   padding-left: 20px;
   position: relative;
   @include transition(all .15s ease 0s);
@@ -2137,8 +2202,8 @@ div[js-index-content="index"]{
   bottom: 0;
   right: 20px;
   svg {
-    width: 9px;
-    height: 9px;
+    width: 10px;
+    height: 10px;
   }
 }
 
@@ -2149,6 +2214,11 @@ div[js-index-content="index"]{
 }
 .module-credits__title {
   @include style-h2;
+
+  @include rm {
+    @include style-mobile-header;
+    font-weight: 500;
+  }
 }
 .module-credits__credits {
   margin-top: 70px;
@@ -2162,13 +2232,18 @@ div[js-index-content="index"]{
 .module-credits__content {
   padding-left: $desktop-gutter/2;
   padding-right: $desktop-gutter/2;
-  @include responsive-14;
-  .layout-desktop & {
+  @include style-body;
+
+  .layout-default & {
     -moz-column-count: 2;
     -webkit-column-count: 2;
     column-count: 2;
+    @include nested-column(4, 6);
+    float: right;
   }
-  .layout-desktop .js-viewing-full-project & {
+  .js-viewing-full-project .layout-default & {
+    @include column(6);
+    float: right;
     -moz-column-count: 3;
     -webkit-column-count: 3;
     column-count: 3;
@@ -2182,14 +2257,14 @@ div[js-index-content="index"]{
   text-decoration: none;
   color: inherit;
   display: block;
-  line-height: 18px;
-  @include style-h4;
+  @include style-body;
   &:visited, &:hover, &:active {
     color: inherit;
   }
 }
 .module-credits__emphasis {
-  @include style-h3;
+  @include style-body;
+  font-style: italic;
 }
 .module-credits__line-container {
   @include column(8);
@@ -2249,7 +2324,7 @@ div[js-index-content="index"]{
   //   // background: red;
   // }
   .navbar {
-    display: none;
+    // display: none;
   }
 }
 
@@ -2304,32 +2379,53 @@ div[js-index-content="index"]{
 }
 .studio__locations {
   position: absolute;
-  top: 35px;
+  top: 33px;
   left: 0;
   right: 0;
   @include style-h2;
+  line-height: 1.15;
   z-index: 2;
 }
 .studio__locations--index {
   margin-top: -3px;
+  @include at-query($max, 950px) {
+    margin-top: 10px;
+  }
 }
 .studio__location {
-  @include nested-column(2, 6);
+  // @include nested-column(2, 6);
+  // width: 300px;
+  &:first-child {
+    padding-right: 40px;
+
+    @include at-query($min, 935px) {
+      padding-left: $desktop-gutter/2;
+    }
+  }
+  float: left;
 }
 .studio__city {
-  @include at-query($min, 950px) {
     float: left;
     display: inline-block;
-  }
+    padding-right: 20px;
+  // @include at-query($min, 950px) {
+  //   float: left;
+  //   display: inline-block;
+  // }
 }
 .studio__day-and-time {
-  @include at-query($min, 950px) {
     float: left;
-    margin-left: 25px;
-  }
+    display: inline-block;
+  // @include at-query($min, 950px) {
+  //   float: left;
+  //   margin-left: 25px;
+  // }
 }
 .studio__day {
   color: #b3b3b3;
+  @include at-query($max, 950px) {
+    display: none;
+  }
 }
 .studio__time {
   color: #b3b3b3;
@@ -2338,10 +2434,11 @@ div[js-index-content="index"]{
 .studio__info {
   @include style-h1;
   font-size: 36px;
-  @include responsive-fonts(42px, 50px);
-
   @include rm {
-    font-size: 16px;
+    margin-top: 20px;
+    @include style-mobile-header;
+    line-height: 1.3;
+
   }
   p:first-child {
     margin-top: 0;
@@ -2355,20 +2452,20 @@ div[js-index-content="index"]{
     line-height: 1.1;
   }
 }
-.style-studio-header--who-we-are {
-  margin-top: 140px;
-  margin-bottom: 70px;
-  @include rm {
-    margin: 40px 0;
-  }
-}
-.style-studio-header--different {
-  margin-top: 140px;
-  margin-bottom: 70px;
-  @include rm {
-    margin: 40px 0;
-  }
-}
+// .style-studio-header--who-we-are {
+//   margin-top: 140px;
+//   margin-bottom: 70px;
+//   @include rm {
+//     margin: 40px 0;
+//   }
+// }
+// .style-studio-header--different {
+//   margin-top: 140px;
+//   margin-bottom: 70px;
+//   @include rm {
+//     margin: 40px 0;
+//   }
+// }
 
 // team
 .studio__header-team {
@@ -2379,7 +2476,7 @@ div[js-index-content="index"]{
 }
 .studio__team {
   margin-top: 0;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
   @include row;
   @include rm {
     margin-bottom: 0;
@@ -2387,19 +2484,19 @@ div[js-index-content="index"]{
 }
 .studio__team-member {
   @include column(4);
-  margin-bottom: 70px;
-  line-height: 20px;
-  font-size: 18px;
-  @include responsive-fonts(22px, 32px);
+  @include style-body;
+  margin-bottom: 40px;
+
   &:nth-child(odd) {
     clear: both;
   }
-  @include rm {
-    @include column(8);
-    margin-bottom: 20px;
-    font-size: 16px;
-    line-height: 1.1;
-  }
+
+  // @include rm {
+  //   @include column(8);
+  //   margin-bottom: 20px;
+  //   font-size: 16px;
+  //   line-height: 1.1;
+  // }
 }
 .studio__team-img {
   display: block;
@@ -2413,25 +2510,42 @@ div[js-index-content="index"]{
   }
 }
 .studio__team-info {
-  font-style: italic;
+  // font-style: italic;
 }
 .studio__team-title {
   font-weight: 500;
   font-style: normal;
 }
 .studio__team-bio {
+  padding-right: 20px;
+  margin: 0;
+  margin-top: 1em;
 }
 
 // services
 .studio__services {
-  font-size: 18px;
-  @include responsive-fonts(22px, 32px);
-  @include row;
-  margin-bottom: 140px;
-
+  // font-size: 18px;
+  // @include responsive-fonts(22px, 32px);
+  @include style-body;
+  @include rd {
+    @include row;
+  }
+  margin-top: 140px;
   @include rm {
+    margin-top: 80px;
     margin-bottom: 0;
     font-size: 16px;
+  }
+}
+.studio__services--2up {
+  .studio__service-header {
+    padding: 0;
+    margin: 0;
+  }
+  @include rd {
+    .studio__services-column {
+      @include column(4);
+    }
   }
 }
 .studio__services-summary {
@@ -2441,17 +2555,16 @@ div[js-index-content="index"]{
     column-count: 2;
   }
 }
-.studio__services-column {
-  @include column(4);
-  @include rm {
-    @include column(8);
-  }
-}
 .studio__service-header {
   margin-bottom: 70px;
+  @include column(8);
   @include rm {
+    @include clearfix;
+    float: none;
     margin-bottom: 40px;
-    margin-top: 40px;
+    margin-top: 60px;
+    font-weight: 500;
+
   }
 }
 .studio__header {
@@ -2461,12 +2574,25 @@ div[js-index-content="index"]{
   font-weight: 500;
 }
 .studio__service-group {
-  margin-bottom: 70px;
-  &:last-child {
-    margin-bottom: 0;
+  margin-bottom: 40px;
+
+  @include rd {
+    @include column(4);
+    &:nth-last-of-type(-n+2) {
+      margin-bottom: 0;
+    }
   }
   @include rm {
-    margin-bottom: 40px;
+    @include column(8);
+    @include style-body;
+    float: none;
+  }
+  p {
+    margin: 0;
+    padding-right: 25px;
+  }
+  &:nth-child(odd) {
+    clear: both;
   }
 }
 .studio__header {
@@ -2474,9 +2600,6 @@ div[js-index-content="index"]{
 }
 .studio__service-title {
   font-weight: 500;
-}
-.studio__service-group {
-  margin-bottom: 70px;
 }
 
 
@@ -2519,16 +2642,27 @@ div[js-index-content="index"]{
 // journal
 // journal
 .index-journal {
-  @include column(6);
-  padding-bottom: 500px;
+  @include rd {
+    @include column(5);
+    float: right;
+    padding-top: 43vh;
+  }
   @include rm {
     @include column(8);
   }
 }
 .index-journal__journal {
   padding-top: 35px;
-  margin-top: 35px;
   border-top: 1px solid rgba(black, .1);
+
+  padding-bottom: 35px;
+
+  // if it has images below, then last one needs margin below.
+  // &.with-image {
+  //   .index-journal__img:last-child {
+  //     margin-bottom: 35px;
+  //   }
+  // }
   a {
     color: black;
     &:active, &:visited {
@@ -2540,15 +2674,19 @@ div[js-index-content="index"]{
   }
 }
 .index-journal .index-journal__month:first-child .index-journal__journal {
-  padding-top: 0;
-  margin-top: 0;
+  // padding-top: 0;
+  // margin-top: 0;
   border-top: none;
 }
 .index-journal__hero-img {
   display: block;
   width: 100%;
+  margin-top: 35px;
   .layout-default & {
-    margin-right: -35px;
+    position: relative;
+    right: -35px;
+    left: 0;
+    width: calc(100% + 35px);
   }
 
 }
@@ -2557,30 +2695,64 @@ div[js-index-content="index"]{
 .index-journal__img {
   width: 100%;
   display: block;
+  margin-top: 35px;
   .layout-default & {
-    margin-right: -35px;
-  }
-  &:not(:last-child) {
-    margin-bottom: 35px;
+    position: relative;
+    left: 0;
+    right: -35px;
+    width: calc(100% + 35px);
   }
 }
 .index-journal__date {
   @include style-h2;
-  margin-top: 20px;
+  margin-top: 0;
+  margin-bottom: 5px;
+  @include rm {
+    @include style-body;
+  }
 }
 .index-journal__title {
   @include style-h1;
+  @include rm {
+    @include style-mobile-header;
+  }
   font-weight: normal;
   margin: 0;
   margin-top: 5px;
+  margin-bottom: 25px;
 }
 .index-journal__content {
   @include style-h1;
-  @include nested-column(4, 6);
+  @include nested-column(5, 6);
   margin-top: 35px;
-  margin-bottom: 35px;
+  p:first-child {
+    margin-top: 0;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    &:hover {
+      &:after {
+        border-color: $color-gray;
+      }
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      border-bottom: 1px solid black;
+    }
+  }
   @include rm {
     @include column(8);
+    @include style-body;
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 16px;
@@ -2590,6 +2762,10 @@ div[js-index-content="index"]{
 //footer
 //footer
 //footer
+.global-contact-overlay-spacer {
+  // when the element below this element becomes visible, show the footer.
+  height: 250px;
+}
 .footer-contact {
   position: fixed;
   bottom: 35px;
@@ -2597,8 +2773,8 @@ div[js-index-content="index"]{
   cursor: pointer;
   z-index: 105;
   @include style-h2;
-  @include transition(color .15s ease 0s);
   font-weight: 500;
+  @include transition(color .15s ease 0s);
   &:hover {
     color: rgba(black, .3);
   }
