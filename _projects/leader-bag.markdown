@@ -38,6 +38,8 @@ modules:
   url: 
   image: "/uploads/Leader_2_20160802.jpg"
 - type: image
+  image: "/uploads/leader_deatil_final-logo.jpg"
+- type: image
   image: "/uploads/Leader_10_20160802.jpg"
 - type: image
   image: "/uploads/Leader_4_20160802.jpg"
@@ -47,11 +49,13 @@ modules:
     caption: 
   - image: "/uploads/Leader_9_20160715-bee9f3.jpg"
 - type: image
-  image: "/uploads/Leader_6_20160715.jpg"
+  image: "/uploads/leader_deatil_final-front2.jpg"
 - type: image
   image: "/uploads/Leader_4_20160802-deedb9.jpg"
   alt: 
   caption: 
+- type: 
+  image: "/uploads/leader_deatil_final-icon-145903.jpg"
 - type: image
   image: "/uploads/Leader_1_20160802.jpg"
 - type: image
