@@ -35,6 +35,8 @@ modules:
     Product Design\n\n* Web Design\n\n* Web Development\n\n* Production Sourcing and
     Management\n"
 - type: image
+  image: "/uploads/leader_deatil_final-logo.jpg"
+- type: image
   url: 
   image: "/uploads/Leader_2_20160802.jpg"
 - type: image
@@ -52,6 +54,8 @@ modules:
   image: "/uploads/Leader_4_20160802-deedb9.jpg"
   alt: 
   caption: 
+- type: 
+  image: "/uploads/leader_deatil_final-icon-145903.jpg"
 - type: image
   image: "/uploads/Leader_1_20160802.jpg"
 - type: image
