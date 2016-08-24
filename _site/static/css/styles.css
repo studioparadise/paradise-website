@@ -7244,14 +7244,6 @@ body {
 h1 {
   font-size: 26px;
   line-height: 1.07; }
-  @media screen and (min-width: 1400px) and (max-width: 1799px) {
-    h1 {
-      font-size: 30px;
-      line-height: 1.2; } }
-  @media screen and (min-width: 1800px) {
-    h1 {
-      font-size: 50px;
-      line-height: 1.2; } }
 
 .layout-mobile .navbar__items {
   -webkit-transition: transform 0.3s ease 0s;
@@ -7924,14 +7916,6 @@ div[js-index-content="index"] {
   float: left;
   padding: 0 10px;
   min-height: 95px; }
-  @media screen and (min-width: 1400px) and (max-width: 1799px) {
-    .module-text__excerpt {
-      font-size: 30px;
-      line-height: 1.2; } }
-  @media screen and (min-width: 1800px) {
-    .module-text__excerpt {
-      font-size: 50px;
-      line-height: 1.2; } }
   .layout-mobile .module-text__excerpt {
     padding: 0 10px; }
   .module-text__excerpt strong {
@@ -8475,14 +8459,6 @@ div[js-index-content="index"] {
   font-size: 26px;
   line-height: 1.07;
   font-size: 36px; }
-  @media screen and (min-width: 1400px) and (max-width: 1799px) {
-    .studio__info {
-      font-size: 30px;
-      line-height: 1.2; } }
-  @media screen and (min-width: 1800px) {
-    .studio__info {
-      font-size: 50px;
-      line-height: 1.2; } }
   .layout-mobile .studio__info {
     margin-top: 20px;
     font-size: 22px;
@@ -8495,14 +8471,6 @@ div[js-index-content="index"] {
 .style-studio-header {
   font-size: 26px;
   line-height: 1.07; }
-  @media screen and (min-width: 1400px) and (max-width: 1799px) {
-    .style-studio-header {
-      font-size: 30px;
-      line-height: 1.2; } }
-  @media screen and (min-width: 1800px) {
-    .style-studio-header {
-      font-size: 50px;
-      line-height: 1.2; } }
   .layout-mobile .style-studio-header {
     font-size: 22px;
     line-height: 1.1; }
@@ -8728,14 +8696,6 @@ p.studio__team-bio {
   display: block;
   text-decoration: none;
   color: inherit; }
-  @media screen and (min-width: 1400px) and (max-width: 1799px) {
-    .studio__service-client {
-      font-size: 30px;
-      line-height: 1.2; } }
-  @media screen and (min-width: 1800px) {
-    .studio__service-client {
-      font-size: 50px;
-      line-height: 1.2; } }
   .layout-mobile .studio__service-client {
     font-size: 16px;
     line-height: 1.1; }
@@ -8824,14 +8784,6 @@ p.studio__team-bio {
   margin: 0;
   margin-top: 5px;
   margin-bottom: 25px; }
-  @media screen and (min-width: 1400px) and (max-width: 1799px) {
-    .index-journal__title {
-      font-size: 30px;
-      line-height: 1.2; } }
-  @media screen and (min-width: 1800px) {
-    .index-journal__title {
-      font-size: 50px;
-      line-height: 1.2; } }
   .layout-mobile .index-journal__title {
     font-size: 22px;
     font-weight: 400;
@@ -8844,14 +8796,6 @@ p.studio__team-bio {
   float: left;
   padding: 0 10px;
   margin-top: 35px; }
-  @media screen and (min-width: 1400px) and (max-width: 1799px) {
-    .index-journal__content {
-      font-size: 30px;
-      line-height: 1.2; } }
-  @media screen and (min-width: 1800px) {
-    .index-journal__content {
-      font-size: 50px;
-      line-height: 1.2; } }
   .layout-mobile .index-journal__content {
     padding: 0 10px; }
   .index-journal__content p:first-child {

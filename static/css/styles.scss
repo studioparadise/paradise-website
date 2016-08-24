@@ -1295,11 +1295,11 @@ body {
 @mixin style-h1 {
   font-size: 26px;
   line-height: 1.07;
-  @include responsive-fonts(30px, 50px);
+  // @include responsive-fonts(30px, 50px);
 }
 @mixin style-studio-heading {
   font-size: 36px;
-  @include responsive-fonts(42px, 50px);
+  // @include responsive-fonts(42px, 50px);
 }
 h1 {
   @include style-h1;
@@ -1314,7 +1314,7 @@ h1 {
 
 @mixin responsive-14 {
   font-size: 14px;
-  @include responsive-fonts(16px, 18px);
+  // @include responsive-fonts(16px, 18px);
 }
 
 @mixin style-h3 {
