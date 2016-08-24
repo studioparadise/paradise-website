@@ -59,13 +59,23 @@
 			</div>
 			{% if include.mobile %}
 				{% if module.body %}
-					<div class="module-text__body module-text__body--mobile">
-						{{ module.body | markdownify }}
+					<div class="mobile-module-text" js-controller="mobileProjectBody">
+						<div class="mobile-module-text__excerpt">
+							{{ module.excerpt | default: "" | markdownify }}
+						</div>
+
+						<div class="mobile-module-text__read-more" js-mobile-module-read-more>
+							Read More
+						</div>
+
+						<div class="mobile-module-text__body" js-mobile-module-body>
+							{{ module.body | markdownify }}
+						</div>
 					</div>
 				{% endif %}
 			{% else %}
 				<div class="module-text__excerpt">
-					{{ module.excerpt | default: "" }}
+					{{ module.excerpt | default: "" | markdownify }}
 					<div class="module-text__view-full" js-index-view-full-project>
 						<span class="hide-on-full-project">
 							View Full Project
@@ -77,8 +87,8 @@
 						</span>
 					</div>
 				</div>
-				<div class="module-text__full-project-spacer show-on-full-project">&nbsp;</div>
 
+				<div class="module-text__full-project-spacer show-on-full-project">&nbsp;</div>
 					{% if module.body %}
 						<div class="module-text__body animate-in">
 							{{ module.body | markdownify }}

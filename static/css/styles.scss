@@ -1464,7 +1464,8 @@ h1 {
   .mobile-navbar-open__close {
     display: block;
   }
-  .mobile-navbar-open__line {
+  .mobile-navbar-open__line,
+  .mobile-navbar-open__open {
     display: none;
   }
 }
@@ -1490,8 +1491,17 @@ h1 {
 }
 .mobile-navbar-open__close {
   display: none;
+  svg {
+    width: 20px;
+    height: 20px;
+  }
 }
-
+.mobile-navbar-open__open {
+  svg {
+    width: 28px;
+    height: 28px;
+  }
+}
 .mobile-navbar-open__line {
   height: 1px;
   background: black;
@@ -1546,13 +1556,13 @@ h1 {
   font-weight: 500;
   letter-spacing: .01em;
   overflow-x: hidden;
-  padding: 0 20px 50px 20px;
+  padding: 0 20px 0 20px;
   // text
   .module-text__spacer {
     display: none;
   }
   .module-text {
-    margin: 20px 0 40px 0;
+    margin: 20px 0 20px 0;
   }
 
   .module-text__excerpt {
@@ -1607,13 +1617,24 @@ h1 {
     margin-top: 15px;
   }
 }
+.mobile-contact-quote {
+  font-weight: 300;
+  margin: .8em 0;
+  margin-bottom: 0;
+
+}
 .mobile__contact {
   border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  padding: 0 0 20px 0;
+  // border-bottom: 1px solid #eee;
+  padding: 15px 0 0 0;
   margin-top: 35px;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
   @include style-body;
+
+  a {
+    color: inherit !important;
+  }
+
 }
 .mobile__contact--isolated {
   border-top: 0;
@@ -1631,10 +1652,11 @@ h1 {
   text-decoration: none;
   color: black;
   display: block;
+  margin: 30px 0;
   @include style-body;
 }
 .mobile__addresses {
-  padding: 20px 0;
+  margin: 30px 0;
   @include clearfix;
 }
 .mobile__address {
@@ -1714,6 +1736,10 @@ h1 {
       color: black;
       font-weight: 500;
     }
+  }
+
+  @include rd {
+    max-width: 140px !important;
   }
   @include rm {
     width: 100px !important;  // override js
@@ -1850,11 +1876,14 @@ h1 {
   width: calc(75% - 23px);  // 6 cols/8 and visually match grid.
 }
 .index-project-row {
-  &:last-child {
-    .index-project {
-      margin-bottom: 0;
-    }
-  }
+  // &:last-child {
+  //   .index-project {
+  //     margin-bottom: 0;
+  //   }
+  // }
+}
+[js-project-link] {
+  cursor: pointer;
 }
 .index-project {
   margin-bottom: 60px;
@@ -1953,6 +1982,7 @@ div[js-index-content="index"]{
   }
   @include rm {
     margin-bottom: $mobile-gutter;
+    margin-right: -1 * $mobile-gutter;
   }
 }
 
@@ -2024,8 +2054,15 @@ div[js-index-content="index"]{
   @include style-h1;
   @include nested-column(3, 6);
   min-height: 95px;
+  strong {
+    font-weight: 500;
+  }
   .js-viewing-full-project & {
     @include column(3);
+  }
+  // p added by markdown
+  p {
+    margin: 0;
   }
 }
 
@@ -2120,6 +2157,38 @@ div[js-index-content="index"]{
   @include transform(translateX(0));
   @include column(8);
 }
+
+
+.mobile-module-text {
+  @include column(8);
+  @include style-body;
+}
+.mobile-module-text__excerpt {
+  strong {
+    font-weight: normal;
+  }
+}
+.mobile-module-text__read-more {
+  margin-top: 1em;
+  margin-bottom: .5em;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid black;
+  }
+
+}
+
+.mobile-module-text__body {
+  display: none;
+}
+
 // images 2up module
 .module-images-2up {
   @include row;
@@ -2340,7 +2409,10 @@ div[js-index-content="index"]{
   background: white;
   @include container-row;
   @include rm {
-    padding-bottom: 600px;
+    padding-bottom: 20px;
+    .hover-effect {
+      display: none;
+    }
   }
   .hover-effect {
     cursor: pointer;
@@ -2516,10 +2588,12 @@ div[js-index-content="index"]{
   font-weight: 500;
   font-style: normal;
 }
-.studio__team-bio {
-  padding-right: 20px;
+p.studio__team-bio {
   margin: 0;
   margin-top: 1em;
+  @include rd {
+    padding-right: 20px;
+  }
 }
 
 // services
@@ -2564,7 +2638,7 @@ div[js-index-content="index"]{
     margin-bottom: 40px;
     margin-top: 60px;
     font-weight: 500;
-
+    padding-left: 0;
   }
 }
 .studio__header {
@@ -2586,8 +2660,11 @@ div[js-index-content="index"]{
     @include column(8);
     @include style-body;
     float: none;
+    p:not(.studio__team-bio) {
+      padding-right: 0;
+    }
   }
-  p {
+  p:not(.studio__team-bio) {
     margin: 0;
     padding-right: 25px;
   }
@@ -2688,6 +2765,12 @@ div[js-index-content="index"]{
     left: 0;
     width: calc(100% + 35px);
   }
+  .layout-mobile & {
+    position: relative;
+    left: 0;
+    right: -20px;
+    width: calc(100% + 20px);
+  }
 
 }
 .index-journal__header {
@@ -2755,7 +2838,6 @@ div[js-index-content="index"]{
     @include style-body;
     margin-top: 20px;
     margin-bottom: 20px;
-    font-size: 16px;
   }
 }
 

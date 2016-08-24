@@ -1,0 +1,18 @@
+<div class="studio__services studio__services--2up" js-scrollspy="clients">
+	<div class="studio__services-column">
+		<div class="style-studio-header  studio__service-header">
+			— Who We Work With
+		</div>
+	</div>
+	<div class="studio__services-column">
+		<div class="studio__service-clients">
+			{% for client in site.studio.clients %}
+				<a class="studio__service-client" target="_blank"
+					{% if client.project %}js-project-link="{{ client.project | slugify }}"{% endif %}
+				>
+					{{ client.name }}
+				</a>
+			{% endfor %}
+		</div>
+	</div>
+</div>

@@ -22,11 +22,16 @@ root.controllers.indexSwiper = ($element, args) ->
     },
     speed: 500
     onInit: (swiper) ->
-      $triggers = $element.find '[js-index-slider-project-link]'
-      $triggers.on 'click', ->
-        projectHash = $(this).attr 'js-index-slider-project-link'
-        window.location.hash = projectHash
-        root.globalAPI.desktopDirectLoadOnHash('#' + projectHash)
+
+
+root.controllers.projects = ($element, args) ->
+  do handleProjectLinks = ->
+    $triggers = $ '[js-project-link]'
+    $triggers.on 'click', ->
+      projectHash = $(this).attr 'js-project-link'
+      window.location.hash = projectHash
+      root.globalAPI.desktopDirectLoadOnHash('#' + projectHash)
+
 
 root.controllers.project = ($element, args) ->
   api = {}
@@ -41,6 +46,7 @@ root.controllers.project = ($element, args) ->
 
   do handleViewFullProject = ->
     $scrollingContainer = $("[js-index-content=\"projects\"]")
+    # $scrollingContainer = $("html, body'")
 
     $trigger = $element.find '[js-index-view-full-project]'
 
@@ -352,6 +358,8 @@ root.controllers.navbar2 = ($element, args) ->
               offset = offset + (Number(args.scrollAlignToNavOffset) or 0)
             else
               offset = $target.offset().top
+
+            console.log 'scrolling to offset: ', offset
 
             $("html, body").stop(true, true).animate
               scrollTop: offset
@@ -689,3 +697,8 @@ root.controllers.layoutDefault = ($element, args) ->
       try mouseEnter(ev) catch ex
 
 
+root.controllers.mobileProjectBody = ($element, args) ->
+  $readMore = $element.find('[js-mobile-module-read-more]')
+  $readMore.on 'click', =>
+    $readMore.slideUp ->
+      $element.find('[js-mobile-module-body]').slideDown 'slow', 'easeInOutExpo'
