@@ -1841,7 +1841,7 @@ h1 {
 //index
 //index
 .index-swiper {
-	@include column(6);
+	@include column(8);
   position: relative;
   @include rm {
     width: 100%;
