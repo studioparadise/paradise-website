@@ -1,5 +1,5 @@
 ---
-title: Offsite in Barbados
+title: Offsite | Barbados
 date: 2016-03-16 02:40:00 Z
 position: 1
 image: "/uploads/Barbados_7_20160803.jpg"
@@ -28,4 +28,5 @@ images:
   alt: 
 ---
 
-At Paradise we have a few ideas of how to focus. Sometimes it means packing up shop and going to Barbados.
+At Paradise we have a few ideas of how to focus.
+Sometimes it means packing up shop and going to Barbados.
