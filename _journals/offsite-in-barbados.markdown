@@ -29,4 +29,6 @@ images:
 ---
 
 At Paradise we have a few ideas of how to focus.
-Sometimes it means packing up shop and going to Barbados.
+Sometimes it means packing up shop and hitting Barbados for a week.
+
+Highlights from our offsite in March.
