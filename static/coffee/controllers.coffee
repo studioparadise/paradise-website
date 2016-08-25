@@ -391,9 +391,11 @@ root.controllers.navbar2 = ($element, args) ->
           $el = $("[js-index-content=\"studio\"]")
           api.hideAllContentAndFadeInOne $el
 
-          for index in [1..7]
-            $img = new Image()
-            $img.src = "/static/img/hover-#{index}.jpg"
+          if not root.globalAPI.hoverImagesLoaded
+            for index in [1..7]
+              $img = new Image()
+              $img.src = "/static/img/hover-#{index}.jpg"
+            root.globalAPI.hoverImagesLoaded = true
 
         when 'journal'
           $el = $("[js-index-content=\"journal\"]")
