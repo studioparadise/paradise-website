@@ -1,0 +1,23 @@
+
+<div class="index-projects-wrapper" js-index-content="projects" js-controller="projects">
+	<div class="index-projects">
+		<div class="index-project__close show-on-full-project" js-index-project-close>
+			{% include svg.html type="x" %}
+		</div>
+		{% assign projects = site.projects | sort: "position" %}
+		{% for project in projects %}
+			<div class="index-project-row" js-scrollspy="{{ project.title | slugify }}">
+				<div class="index-project" js-index-project="{{ project.title | slugify }}" js-controller="project">
+					<div class="index-project__inner">
+						{% for module in project.modules %}
+							{% include render_module.html %}
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+	<div class="global-contact-overlay-spacer">&nbsp;</div>
+	<div js-show-contact-info-if-visible>&nbsp;</div>
+
+</div>

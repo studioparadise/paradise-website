@@ -14,7 +14,9 @@ root.globalAPI.exitFPV = ->
 
 root.controllers.indexSwiper = ($element, args) ->
   swiper = root.components.swiper $element,
-    loop: true
+    # loop: true
+    lazyLoading: true
+    lazyLoadingInPrevNext: true
     autoplay: 3000,
     effect: 'fade',
     fade: {
@@ -704,3 +706,7 @@ root.controllers.mobileProjectBody = ($element, args) ->
   $readMore.on 'click', =>
     $readMore.slideUp ->
       $element.find('[js-mobile-module-body]').slideDown 'slow', 'easeInOutExpo'
+
+
+root.controllers.lazyLoadBg = ($element, args) ->
+  $element.on ''

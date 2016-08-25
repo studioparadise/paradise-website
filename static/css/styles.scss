@@ -2885,21 +2885,26 @@ p.studio__team-bio {
   text-decoration: none;
   color: inherit;
   @include style-h2;
+  color: $color-gray;
   &:hover {
-    color: rgba(black, .3);
+    color: black;
   }
 }
 .footer__address1 {
-	@include column(1);
+	@include column(1.5);
   @include style-h2;
 }
 .footer__address2 {
-	@include column(1);
+	@include column(1.5);
   @include style-h2;
 }
 .footer__spacer {
 	@include column(1);
 }
+.footer__spacer--2 {
+  @include column(.2);
+}
+
 .footer__email {
 	@include column(2);
 }
@@ -2926,8 +2931,9 @@ p.studio__team-bio {
   padding-bottom: 10px;
   font-family: 'C';
   @include style-h2;
+  color: black;
   @include placeholder {
-    color: black;
+    color: $color-gray;
     font-family: 'C';
     font-weight: 500;
     @include style-h2;

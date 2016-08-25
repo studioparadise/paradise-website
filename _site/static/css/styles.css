@@ -8897,12 +8897,13 @@ p.studio__team-bio {
   font-size: 18px;
   line-height: 1.3;
   letter-spacing: .01em;
-  font-weight: 400; }
+  font-weight: 400;
+  color: #818181; }
   .footer__email-address:hover {
-    color: rgba(0, 0, 0, 0.3); }
+    color: black; }
 
 .footer__address1 {
-  width: 12.5%;
+  width: 18.75%;
   float: left;
   font-size: 18px;
   line-height: 1.3;
@@ -8917,7 +8918,7 @@ p.studio__team-bio {
     padding-right: 10px; }
 
 .footer__address2 {
-  width: 12.5%;
+  width: 18.75%;
   float: left;
   font-size: 18px;
   line-height: 1.3;
@@ -8939,6 +8940,17 @@ p.studio__team-bio {
       padding-left: 10px;
       padding-right: 10px; } }
   .layout-mobile .footer__spacer {
+    padding-left: 10px;
+    padding-right: 10px; }
+
+.footer__spacer--2 {
+  width: 2.5%;
+  float: left; }
+  @media screen and (min-width: 500px) {
+    .footer__spacer--2 {
+      padding-left: 10px;
+      padding-right: 10px; } }
+  .layout-mobile .footer__spacer--2 {
     padding-left: 10px;
     padding-right: 10px; }
 
@@ -8977,10 +8989,11 @@ p.studio__team-bio {
   line-height: 1.3;
   letter-spacing: .01em;
   font-weight: 400;
+  color: black;
   border-bottom: 1px solid black;
   width: 100%; }
   .footer-signup__input::-webkit-input-placeholder {
-    color: black;
+    color: #818181;
     font-family: 'C';
     font-weight: 500;
     font-size: 18px;
@@ -8989,7 +9002,7 @@ p.studio__team-bio {
     font-weight: 400; }
   .footer-signup__input:-moz-placeholder {
     /* Firefox 18- */
-    color: black;
+    color: #818181;
     font-family: 'C';
     font-weight: 500;
     font-size: 18px;
@@ -8998,7 +9011,7 @@ p.studio__team-bio {
     font-weight: 400; }
   .footer-signup__input::-moz-placeholder {
     /* Firefox 19+ */
-    color: black;
+    color: #818181;
     font-family: 'C';
     font-weight: 500;
     font-size: 18px;
@@ -9006,7 +9019,7 @@ p.studio__team-bio {
     letter-spacing: .01em;
     font-weight: 400; }
   .footer-signup__input:-ms-input-placeholder {
-    color: black;
+    color: #818181;
     font-family: 'C';
     font-weight: 500;
     font-size: 18px;

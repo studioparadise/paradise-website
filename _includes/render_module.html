@@ -17,7 +17,7 @@
 					{{ project.title }}
 				</div>
 			{% else %}
-				<div class="module-hero__background" style="background-image: url({{ module.image }});">
+				<div class="module-hero__background lazyload" data-bg="{{ module.image }}">
 				</div>
 				<!--
 				<div class="module-image__ratio" data-responsive-image-dimensions="{{ module.dimensions | default: '2400x755' }}">
