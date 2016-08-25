@@ -1,5 +1,5 @@
 ---
-title: Escape to Italy
+title: Offsite | Italy
 date: 2016-07-25 18:36:00 Z
 image: "/uploads/14940030-web.jpg"
 images:
@@ -13,4 +13,4 @@ images:
   alt: 
 ---
 
-Change of scene and a new desk for a week. Italy offered calm water, a warm sun and some new inspiration. 
+Change of scenery and some new desks for a week. Italy offered calm water, warm sun, and a new perspective. Food comas optional.
