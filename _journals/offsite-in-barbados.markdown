@@ -28,7 +28,7 @@ images:
   alt: 
 ---
 
-At Paradise we have a few ideas of how to focus.
+At Paradise we have a few ideas on how to focus.
 Sometimes it means packing up shop and hitting Barbados for a week.
 
 Highlights from our offsite in March.
