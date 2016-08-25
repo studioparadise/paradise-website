@@ -1491,6 +1491,11 @@ h1 {
 }
 .mobile-navbar-open__close {
   display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 28px;
+  z-index: 1000;
   svg {
     width: 20px;
     height: 20px;
@@ -1502,13 +1507,13 @@ h1 {
     height: 28px;
   }
 }
-.mobile-navbar-open__line {
-  height: 1px;
-  background: black;
-  &:not(:last-child) {
-    margin-bottom: 8px;
-  }
-}
+// .mobile-navbar-open__line {
+//   height: 1px;
+//   background: black;
+//   &:not(:last-child) {
+//     margin-bottom: 8px;
+//   }
+// }
 
 .fixed-content-wrapper {
   @include transition(transform .3s ease 0s);
@@ -1924,6 +1929,13 @@ h1 {
 
 div[js-index-content] {
   display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: calc(75% - 23px);  // 6 cols/8 and visually match grid.
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 div[js-index-content="index"]{
   display: block;
@@ -2444,7 +2456,7 @@ div[js-index-content="index"]{
   }
 }
 .studio__content {
-  @include column(6);
+  @include column(8);
   position: relative;
   @include rm {
     @include column(8);
@@ -2719,9 +2731,8 @@ p.studio__team-bio {
 // journal
 .index-journal {
   @include rd {
-    @include column(5);
+    @include nested-column(5, 6);
     float: right;
-    padding-top: 43vh;
   }
   @include rm {
     @include column(8);
@@ -2758,6 +2769,11 @@ p.studio__team-bio {
   display: block;
   width: 100%;
   margin-top: 35px;
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+
   .layout-default & {
     position: relative;
     right: -35px;
@@ -2778,6 +2794,10 @@ p.studio__team-bio {
   width: 100%;
   display: block;
   margin-top: 35px;
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
   .layout-default & {
     position: relative;
     left: 0;

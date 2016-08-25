@@ -7392,7 +7392,12 @@ h1 {
     display: block; }
 
 .mobile-navbar-open__close {
-  display: none; }
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 28px;
+  z-index: 1000; }
   .mobile-navbar-open__close svg {
     width: 20px;
     height: 20px; }
@@ -7400,12 +7405,6 @@ h1 {
 .mobile-navbar-open__open svg {
   width: 28px;
   height: 28px; }
-
-.mobile-navbar-open__line {
-  height: 1px;
-  background: black; }
-  .mobile-navbar-open__line:not(:last-child) {
-    margin-bottom: 8px; }
 
 .fixed-content-wrapper {
   -webkit-transition: transform 0.3s ease 0s;
@@ -7786,7 +7785,14 @@ h1 {
       fill: black; }
 
 div[js-index-content] {
-  display: none; }
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: calc(75% - 23px);
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch; }
 
 div[js-index-content="index"] {
   display: block; }
@@ -8398,7 +8404,7 @@ div[js-index-content="index"] {
     display: none; }
 
 .studio__content {
-  width: 75%;
+  width: 100%;
   float: left;
   position: relative; }
   @media screen and (min-width: 500px) {
@@ -8708,18 +8714,12 @@ p.studio__team-bio {
 
 @media screen and (min-width: 500px) {
   .index-journal {
-    width: 62.5%;
+    width: 83.33333%;
     float: left;
-    float: right;
-    padding-top: 43vh; } }
-  @media screen and (min-width: 500px) and (min-width: 500px) {
-    .index-journal {
-      padding-left: 10px;
-      padding-right: 10px; } }
-@media screen and (min-width: 500px) {
+    padding: 0 10px;
+    float: right; }
     .layout-mobile .index-journal {
-      padding-left: 10px;
-      padding-right: 10px; } }
+      padding: 0 10px; } }
 .layout-mobile .index-journal {
   width: 100%;
   float: left; }
@@ -8748,7 +8748,10 @@ p.studio__team-bio {
 .index-journal__hero-img {
   display: block;
   width: 100%;
-  margin-top: 35px; }
+  margin-top: 35px;
+  overflow: hidden; }
+  .index-journal__hero-img img {
+    width: 100%; }
   .layout-default .index-journal__hero-img {
     position: relative;
     right: -35px;
@@ -8763,7 +8766,10 @@ p.studio__team-bio {
 .index-journal__img {
   width: 100%;
   display: block;
-  margin-top: 35px; }
+  margin-top: 35px;
+  overflow: hidden; }
+  .index-journal__img img {
+    width: 100%; }
   .layout-default .index-journal__img {
     position: relative;
     left: 0;

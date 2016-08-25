@@ -128,7 +128,7 @@
 							<div class="navbar__label" js-item-label js-args="{
 								overlay: 'journal',
 								mobileURL: '/mobile_journal.html#{{ post.date | '%Y-%B' }}',
-							    scrollAlignToNav: true,
+							    scrollAlignToNav: {% if forloop.first %}false{% else %}true{% endif %},
 							    scrollAlignToNavOffset: 60
 							}" js-scrollspy-nav="{{ post.date | date: '%Y-%B' }}">
 								{{post.date | date:"%B"}}
