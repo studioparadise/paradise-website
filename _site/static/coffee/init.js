@@ -347,6 +347,7 @@
   root.responsiveImages = function() {
     return $("[data-responsive-image-dimensions]").each(function() {
       var dimPairs, dims, error, ex, height, width;
+      $(this).wrapInner("<div class='image-background'/>");
       try {
         dims = $(this).attr('data-responsive-image-dimensions');
         dimPairs = dims.split('x');

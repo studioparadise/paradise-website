@@ -9086,6 +9086,9 @@ p.studio__team-bio {
 .grid-debug-container {
   display: none; }
 
+.image-background {
+  background: rgba(0, 0, 0, 0.2); }
+
 .supports-js {
   /* fade image in after load */ }
   .supports-js .lazyload,

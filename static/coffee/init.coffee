@@ -383,6 +383,9 @@ root.effects.handleFadeInOnLoad = ->
 
 root.responsiveImages = ->
   $("[data-responsive-image-dimensions]").each ->
+
+    $(this).wrapInner("<div class='image-background'/>");
+
     try
       dims = $(this).attr 'data-responsive-image-dimensions'
       dimPairs = dims.split 'x'
