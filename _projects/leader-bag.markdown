@@ -5,7 +5,7 @@ position: 3
 modules:
 - type: hero
   image: "/uploads/Leader_Hero_20160802.jpg"
-  alt:
+  alt: 
 - type: text
   excerpt: |
     Designing a contemporary & utilitarian diaper bag brand for the modern family
@@ -37,7 +37,7 @@ modules:
 - type: image
   image: "/uploads/leader_deatil_final-logo.jpg"
 - type: image
-  url:
+  url: 
   image: "/uploads/Leader_2_20160802.jpg"
 - type: image
   image: "/uploads/Leader_10_20160802.jpg"
@@ -46,15 +46,15 @@ modules:
 - type: images-2up
   images:
   - image: "/uploads/Leader_8_20160802.jpg"
-    caption:
+    caption: 
   - image: "/uploads/Leader_9_20160715-bee9f3.jpg"
 - type: image
   image: "/uploads/leader_deatil_final-front2.jpg"
 - type: image
   image: "/uploads/Leader_4_20160802-deedb9.jpg"
-  alt:
-  caption:
-- type:
+  alt: 
+  caption: 
+- type: 
   image: "/uploads/leader_deatil_final-icon-145903.jpg"
 - type: image
   image: "/uploads/Leader_1_20160802.jpg"
@@ -66,19 +66,19 @@ modules:
   - url: http://www.lottanieminen.com/
     emphasis: Branding Design
     name: Lotta Nieminen
-  - url:
+  - url: 
     emphasis: Creative Direction
     name: Paradise
-  - url:
+  - url: 
     emphasis: Brand Strategy
     name: Paradise
-  - url:
+  - url: 
     emphasis: Product Design & Manufacturing
     name: Paradise
-  - url:
+  - url: 
     emphasis: Web Design
     name: Paradise
-  - url:
+  - url: 
     emphasis: Web Development
     name: Paradise
 ---
