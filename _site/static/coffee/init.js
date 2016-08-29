@@ -346,7 +346,12 @@
 
   root.responsiveImages = function() {
     $("[data-responsive-image-color]").each(function() {
-      return $(this).css('background-color', $(this).attr('data-responsive-image-color'));
+      var color;
+      color = $(this).attr('data-responsive-image-color');
+      if (!color) {
+        color = 'rgba(0, 0, 0, .1)';
+      }
+      return $(this).css('background-color', color);
     });
     return $("[data-responsive-image-dimensions]").each(function() {
       var dimPairs, dims, error, ex, height, width;

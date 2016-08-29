@@ -383,7 +383,10 @@ root.effects.handleFadeInOnLoad = ->
 
 root.responsiveImages = ->
   $("[data-responsive-image-color]").each ->
-    $(this).css 'background-color', $(this).attr('data-responsive-image-color')
+    color = $(this).attr('data-responsive-image-color')
+    if not color
+      color = 'rgba(0, 0, 0, .1)'
+    $(this).css 'background-color', color
 
   $("[data-responsive-image-dimensions]").each ->
     $(this).wrapInner("<div class='image-background'/>");
