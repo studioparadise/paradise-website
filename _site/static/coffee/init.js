@@ -345,6 +345,9 @@
   };
 
   root.responsiveImages = function() {
+    $("[data-responsive-image-color]").each(function() {
+      return $(this).css('background-color', $(this).attr('data-responsive-image-color'));
+    });
     return $("[data-responsive-image-dimensions]").each(function() {
       var dimPairs, dims, error, ex, height, width;
       $(this).wrapInner("<div class='image-background'/>");
@@ -355,7 +358,8 @@
         width = Number(dimPairs[1]);
         $(this).css({
           paddingBottom: (width / height) * 100 + '%',
-          position: 'relative'
+          position: 'relative',
+          'background-color': $(this).attr('data-responsive-image-color')
         });
         return $(this).find('> img').css({
           position: 'absolute',

@@ -7,6 +7,11 @@ root.globalAPI = {}
 root.globalAPI.isMobile = ->
     return $("body").hasClass 'layout-mobile'
 
+root.globalAPI.handleHeroAlign = ->
+    if not root.globalAPI.isMobile() and not root.globalAPI.fullProjectView and root.globalAPI.currentOverlay == 'projects'
+        targetHeight = $(".navbar__items").offset().top - 75
+        $('.module-hero__background').height targetHeight
+
 root.globalAPI.toggleFPV = ->
   $project = $("[js-index-project]:in-viewport:first")
   projectAPI = $project.data 'js-controller'
@@ -37,13 +42,9 @@ root.controllers.projects = ($element, args) ->
 
 root.controllers.project = ($element, args) ->
   api = {}
-  do handleHeroAlign = ->
-    if not root.globalAPI.isMobile() and not root.globalAPI.fullProjectView and root.globalAPI.currentOverlay == 'projects'
-        targetHeight = $(".navbar__items").offset().top - 75
-        $element.find('.module-hero__background').height targetHeight
 
   $(window).on 'resize', (ev) ->
-    handleHeroAlign()
+    root.globalAPI.handleHeroAlign()
 
   do handleViewFullProject = ->
     $scrollingContainer = $("[js-index-content=\"projects\"]")
@@ -337,6 +338,8 @@ root.controllers.navbar2 = ($element, args) ->
         $scrollingContainer = $("[js-index-content=\"#{args.overlay}\"]")
 
         if args.overlay == 'projects'
+            root.globalAPI.handleHeroAlign()
+
             $projectsContainer = $("[js-index-content=\"projects\"]")
 
             if args.scrollAlignToNav
@@ -344,6 +347,7 @@ root.controllers.navbar2 = ($element, args) ->
               offset = $target.offset().top - position + 5  # compensate for font heights
             else
               offset = $target.offset().top
+
 
             # offset is relative to current container scrollTop. Adjust final by current scrollTop
             projectsScrollTop =  $projectsContainer.scrollTop()
@@ -579,7 +583,7 @@ root.controllers.studioContent = ($element, args) ->
 
   do updatePadding = ->
     $element.css
-      paddingTop: $navItem.offset().top - $(window).scrollTop() - 10
+      paddingTop: $navItem.offset().top - $(window).scrollTop() - 25
 
   $(window).on 'resize', _.throttle(updatePadding, 500)
 

@@ -9087,7 +9087,12 @@ p.studio__team-bio {
   display: none; }
 
 .image-background {
-  background: rgba(0, 0, 0, 0.2); }
+  background: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
 
 .supports-js {
   /* fade image in after load */ }

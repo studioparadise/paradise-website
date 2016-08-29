@@ -10,14 +10,14 @@
 				<!-- <div class="module-image__ratio" data-responsive-image-dimensions="{{ module.dimensions | default: '2400x755' }}">
 					<img class="hero__img lazyload" data-src="{{ module.mobile_image }}" alt="{{ module.alt | default: '' }}" />
 				</div>-->
-				<div class="module-image__ratio" data-responsive-image-dimensions="{{ module.dimensions | default: '2400x755' }}">
+				<div class="module-image__ratio" data-responsive-image-dimensions="{{ module.dimensions | default: '2400x755' }}" data-responsive-image-color="{{ project.color }}">
 					<img class="hero__img lazyload" data-src="{{ module.image }}" alt="{{ module.alt | default: '' }}" />
 				</div>
 				<div class="mobile-project__title">
 					{{ project.title }}
 				</div>
 			{% else %}
-				<div class="module-hero__background lazyload" data-bg="{{ module.image }}">
+				<div class="module-hero__background lazyload" data-bg="{{ module.image }}" data-responsive-image-color="{{ project.color }}">
 				</div>
 				<!--
 				<div class="module-image__ratio" data-responsive-image-dimensions="{{ module.dimensions | default: '2400x755' }}">
@@ -28,7 +28,7 @@
 		</div>
 	{% when 'image' %}
 		<div class="module-image__ratio" data-responsive-image-dimensions="{{ module.dimensions | default: '2400x1600' }}">
-			<img class="module-image__img lazyload {% if module.caption.size > 0 %}module-image__img--with-caption{% endif %}" data-src="{{ module.image }}" alt="{{ module.alt | default: '' }}" />
+			<img class="module-image__img lazyload {% if module.caption.size > 0 %}module-image__img--with-caption{% endif %}" data-src="{{ module.image }}" alt="{{ module.alt | default: '' }}" data-responsive-image-color="{{ project.color }}"/>
 		</div>
 		{% if module.caption.size > 0 %}
 			<div class="module__image-caption">
@@ -38,7 +38,7 @@
 	{% when 'images-2up' %}
 		{% for image in module.images %}
 			<div class="module-images-2up__image">
-				<div class="module-image__ratio" data-responsive-image-dimensions="{{ image.dimensions | default: '1200x1600' }}">
+				<div class="module-image__ratio" data-responsive-image-dimensions="{{ image.dimensions | default: '1200x1600' }}" data-responsive-image-color="{{ project.color }}">
 					<img class="module-images-2up__img lazyload" data-src="{{ image.image }}" alt="{{ image.alt | default: '' }}"/>
 				</div>
 				{% if image.caption.size > 0 %}

@@ -382,10 +382,11 @@ root.effects.handleFadeInOnLoad = ->
 
 
 root.responsiveImages = ->
+  $("[data-responsive-image-color]").each ->
+    $(this).css 'background-color', $(this).attr('data-responsive-image-color')
+
   $("[data-responsive-image-dimensions]").each ->
-
     $(this).wrapInner("<div class='image-background'/>");
-
     try
       dims = $(this).attr 'data-responsive-image-dimensions'
       dimPairs = dims.split 'x'
@@ -394,6 +395,8 @@ root.responsiveImages = ->
       $(this).css
         paddingBottom: (width/height)*100 + '%'
         position: 'relative'
+        'background-color': $(this).attr('data-responsive-image-color')
+
       $(this).find('> img').css
         position: 'absolute'
         bottom: 0

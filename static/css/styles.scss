@@ -3024,7 +3024,12 @@ p.studio__team-bio {
 // animation
 // animation
 .image-background {
-  background: rgba(black, .2);
+  background: rgba(black, .1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .supports-js {
