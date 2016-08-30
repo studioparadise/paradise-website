@@ -93,6 +93,8 @@ modules:
     name: Tati Compton
   - emphasis: Artist Collaboration
     name: Tim Lahan
+- type: image
+  image: "/uploads/Prize_WebGif_20160830.gif"
 color: "#f2f2f2"
 ---
 
