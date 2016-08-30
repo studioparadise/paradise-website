@@ -81,5 +81,6 @@ modules:
   - url: 
     emphasis: Web Development
     name: Paradise
+color: "#cdd8dd"
 ---
 
