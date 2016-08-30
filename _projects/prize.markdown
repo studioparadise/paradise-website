@@ -91,6 +91,6 @@ modules:
     name: Tati Compton
   - emphasis: Artist Collaboration
     name: Tim Lahan
-Field name: 
+color: "#f2f2f2"
 ---
 
