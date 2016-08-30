@@ -3,9 +3,9 @@ title: Offsite | Italy
 date: 2016-07-25 18:36:00 Z
 image:
   image: "/uploads/ItalyOffsite_1_20160830.jpg"
-  dimensions: 2400x1592
 images:
 - image: "/uploads/ItalyOffsite_4_20160830.jpg"
+  alt: 
   dimensions: 2000x1327
 - image: "/uploads/ItalyOffsite_3_20160830.jpg"
   dimensions: 2400x1592
