@@ -2,11 +2,10 @@
 title: Upton Belts
 date: 2016-07-10 22:15:00 Z
 position: 2
-image:
-  image: "/uploads/Upton_1_20180830.jpg"
-  dimensions: 1500x800
+image: "/uploads/Upton_1_20180830.jpg"
 images:
 - image: "/uploads/Upton_2_20180830.jpg"
+  alt: 
   dimensions: 1024x842
 - image: "/uploads/Upton_3_20180830.jpg"
   dimensions: 2400x1067
