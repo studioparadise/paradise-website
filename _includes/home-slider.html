@@ -1,0 +1,52 @@
+<div class="content-wrapper" js-index-content="index">
+	<div class="content">
+		<div class="row index-slider">
+			<div class="content-navbar-grid-spacer">&nbsp;</div>
+			<div class="index-swiper">
+				<div class="studio__locations studio__locations--index">
+					<div class="studio__location" js-controller="studioLocation" js-args="{location: 'nyc'}">
+						<div class="studio__city">
+							New York, USA
+						</div>
+						<div class="studio__day-and-time">
+							<div class="studio__day" js-date>
+								Thursday April 28
+							</div>
+							<div class="studio__time" js-time>
+								12:00pm
+							</div>
+						</div>
+					</div>
+					<div class="studio__location" js-controller="studioLocation" js-args="{location: 'sydney'}">
+						<div class="studio__city">
+							Sydney, Australia
+						</div>
+						<div class="studio__day-and-time">
+							<div class="studio__day" js-date>
+								Fri April 29
+							</div>
+							<div class="studio__time" js-time>
+								1:59am
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-container" js-controller="indexSwiper" js-args="{}">
+					<div class="swiper-wrapper">
+						{% assign images = site.index-slider-images %}
+						{% for image in images %}
+							<div class="swiper-slide swiper-lazy"
+								data-background="{{ image.image }}"
+								{% comment %}style="background-image: url({{ image.image }});" {% endcomment %}
+								{% if image.project %}js-project-link="{{ image.project | slugify }}"{% endif %}
+							>
+
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

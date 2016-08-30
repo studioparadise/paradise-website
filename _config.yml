@@ -36,7 +36,31 @@ socialimg: "/img/social.jpg"
 facebook: studioparadisenyc
 twitter: paradisenewyork
 instagram: studioparadisenyc
-linkedin: Studio-Paradise
+linkedin: studio-paradise
+behance: studioparadise
+studio:
+  clients:
+  - name: Jack Erwin
+    project: Jack Erwin
+  - name: Saturdays
+    project: Saturdays
+  - name: Mikoh
+    project: Mikoh
+  - name: Dudleys
+  - name: Express
+  - name: Convicts
+    project: Convicts
+  - name: Kaelen
+    project: Kaelen
+  - name: Flower Shop
+    project: Flower Shop
+  - name: Abbott
+  - name: Well Well
+  - name: Tsovet
+  - name: FLWR
+  - name: Raen
+  - name: Leader Bag Co.
+    project: Leader Bag
 index-slider-images:
 - image: "/uploads/1JE_Home.jpg"
   alt: 
@@ -56,9 +80,6 @@ index-slider-images:
 - image: "/uploads/Saturdays_HomepageHero_20160803.jpg"
   alt: 
   project: Saturdays
-- image: 
-  alt: 
-  project: 
 gems:
 - jekyll-coffeescript
 exclude:

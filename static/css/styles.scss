@@ -1295,11 +1295,11 @@ body {
 @mixin style-h1 {
   font-size: 26px;
   line-height: 1.07;
-  @include responsive-fonts(30px, 50px);
+  // @include responsive-fonts(30px, 50px);
 }
 @mixin style-studio-heading {
   font-size: 36px;
-  @include responsive-fonts(42px, 50px);
+  // @include responsive-fonts(42px, 50px);
 }
 h1 {
   @include style-h1;
@@ -1314,7 +1314,7 @@ h1 {
 
 @mixin responsive-14 {
   font-size: 14px;
-  @include responsive-fonts(16px, 18px);
+  // @include responsive-fonts(16px, 18px);
 }
 
 @mixin style-h3 {
@@ -1464,7 +1464,8 @@ h1 {
   .mobile-navbar-open__close {
     display: block;
   }
-  .mobile-navbar-open__line {
+  .mobile-navbar-open__line,
+  .mobile-navbar-open__open {
     display: none;
   }
 }
@@ -1490,15 +1491,29 @@ h1 {
 }
 .mobile-navbar-open__close {
   display: none;
-}
-
-.mobile-navbar-open__line {
-  height: 1px;
-  background: black;
-  &:not(:last-child) {
-    margin-bottom: 8px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 28px;
+  z-index: 1000;
+  svg {
+    width: 20px;
+    height: 20px;
   }
 }
+.mobile-navbar-open__open {
+  svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+// .mobile-navbar-open__line {
+//   height: 1px;
+//   background: black;
+//   &:not(:last-child) {
+//     margin-bottom: 8px;
+//   }
+// }
 
 .fixed-content-wrapper {
   @include transition(transform .3s ease 0s);
@@ -1546,13 +1561,13 @@ h1 {
   font-weight: 500;
   letter-spacing: .01em;
   overflow-x: hidden;
-  padding: 0 20px 50px 20px;
+  padding: 0 20px 0 20px;
   // text
   .module-text__spacer {
     display: none;
   }
   .module-text {
-    margin: 20px 0 40px 0;
+    margin: 20px 0 20px 0;
   }
 
   .module-text__excerpt {
@@ -1607,13 +1622,24 @@ h1 {
     margin-top: 15px;
   }
 }
+.mobile-contact-quote {
+  font-weight: 300;
+  margin: .8em 0;
+  margin-bottom: 0;
+
+}
 .mobile__contact {
   border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  padding: 0 0 20px 0;
+  // border-bottom: 1px solid #eee;
+  padding: 15px 0 0 0;
   margin-top: 35px;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
   @include style-body;
+
+  a {
+    color: inherit !important;
+  }
+
 }
 .mobile__contact--isolated {
   border-top: 0;
@@ -1631,10 +1657,11 @@ h1 {
   text-decoration: none;
   color: black;
   display: block;
+  margin: 30px 0;
   @include style-body;
 }
 .mobile__addresses {
-  padding: 20px 0;
+  margin: 30px 0;
   @include clearfix;
 }
 .mobile__address {
@@ -1714,6 +1741,10 @@ h1 {
       color: black;
       font-weight: 500;
     }
+  }
+
+  @include rd {
+    max-width: 140px !important;
   }
   @include rm {
     width: 100px !important;  // override js
@@ -1810,7 +1841,7 @@ h1 {
 //index
 //index
 .index-swiper {
-	@include column(6);
+	@include column(8);
   position: relative;
   @include rm {
     width: 100%;
@@ -1850,11 +1881,14 @@ h1 {
   width: calc(75% - 23px);  // 6 cols/8 and visually match grid.
 }
 .index-project-row {
-  &:last-child {
-    .index-project {
-      margin-bottom: 0;
-    }
-  }
+  // &:last-child {
+  //   .index-project {
+  //     margin-bottom: 0;
+  //   }
+  // }
+}
+[js-project-link] {
+  cursor: pointer;
 }
 .index-project {
   margin-bottom: 60px;
@@ -1895,6 +1929,14 @@ h1 {
 
 div[js-index-content] {
   display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding-left: 0;
+  width: calc(75% - 23px);  // 6 cols/8 and visually match grid.
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 div[js-index-content="index"]{
   display: block;
@@ -1903,6 +1945,9 @@ div[js-index-content="index"]{
 .layout-mobile {
   div[js-index-content] {
     display: block;
+    width: 100%;
+    position: static;
+    overflow: auto;
   }
 }
 
@@ -1953,6 +1998,7 @@ div[js-index-content="index"]{
   }
   @include rm {
     margin-bottom: $mobile-gutter;
+    margin-right: -1 * $mobile-gutter;
   }
 }
 
@@ -2022,10 +2068,18 @@ div[js-index-content="index"]{
 
 .module-text__excerpt {
   @include style-h1;
+  @include responsive-fonts(30px, 50px);
   @include nested-column(3, 6);
   min-height: 95px;
+  strong {
+    font-weight: 500;
+  }
   .js-viewing-full-project & {
     @include column(3);
+  }
+  // p added by markdown
+  p {
+    margin: 0;
   }
 }
 
@@ -2120,6 +2174,38 @@ div[js-index-content="index"]{
   @include transform(translateX(0));
   @include column(8);
 }
+
+
+.mobile-module-text {
+  @include column(8);
+  @include style-body;
+}
+.mobile-module-text__excerpt {
+  strong {
+    font-weight: normal;
+  }
+}
+.mobile-module-text__read-more {
+  margin-top: 1em;
+  margin-bottom: .5em;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid black;
+  }
+
+}
+
+.mobile-module-text__body {
+  display: none;
+}
+
 // images 2up module
 .module-images-2up {
   @include row;
@@ -2340,7 +2426,10 @@ div[js-index-content="index"]{
   background: white;
   @include container-row;
   @include rm {
-    padding-bottom: 600px;
+    padding-bottom: 20px;
+    .hover-effect {
+      display: none;
+    }
   }
   .hover-effect {
     cursor: pointer;
@@ -2371,7 +2460,7 @@ div[js-index-content="index"]{
   }
 }
 .studio__content {
-  @include column(6);
+  @include column(8);
   position: relative;
   @include rm {
     @include column(8);
@@ -2500,9 +2589,7 @@ div[js-index-content="index"]{
 }
 .studio__team-img {
   display: block;
-  display: none;
   margin-bottom: 35px;
-  height: 300px;
   width: 100%;
   background: black;
   @include rm {
@@ -2516,10 +2603,12 @@ div[js-index-content="index"]{
   font-weight: 500;
   font-style: normal;
 }
-.studio__team-bio {
-  padding-right: 20px;
+p.studio__team-bio {
   margin: 0;
   margin-top: 1em;
+  @include rd {
+    padding-right: 20px;
+  }
 }
 
 // services
@@ -2564,7 +2653,7 @@ div[js-index-content="index"]{
     margin-bottom: 40px;
     margin-top: 60px;
     font-weight: 500;
-
+    padding-left: 0;
   }
 }
 .studio__header {
@@ -2586,8 +2675,11 @@ div[js-index-content="index"]{
     @include column(8);
     @include style-body;
     float: none;
+    p:not(.studio__team-bio) {
+      padding-right: 0;
+    }
   }
-  p {
+  p:not(.studio__team-bio) {
     margin: 0;
     padding-right: 25px;
   }
@@ -2632,6 +2724,7 @@ div[js-index-content="index"]{
   display: block;
   text-decoration: none;
   color: inherit;
+
   @include rm {
     font-size: 16px;
     line-height: 1.1;
@@ -2643,9 +2736,8 @@ div[js-index-content="index"]{
 // journal
 .index-journal {
   @include rd {
-    @include column(5);
+    @include nested-column(5, 6);
     float: right;
-    padding-top: 43vh;
   }
   @include rm {
     @include column(8);
@@ -2682,11 +2774,22 @@ div[js-index-content="index"]{
   display: block;
   width: 100%;
   margin-top: 35px;
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+
   .layout-default & {
     position: relative;
     right: -35px;
     left: 0;
     width: calc(100% + 35px);
+  }
+  .layout-mobile & {
+    position: relative;
+    left: 0;
+    right: -20px;
+    width: calc(100% + 20px);
   }
 
 }
@@ -2696,11 +2799,21 @@ div[js-index-content="index"]{
   width: 100%;
   display: block;
   margin-top: 35px;
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
   .layout-default & {
     position: relative;
     left: 0;
     right: -35px;
     width: calc(100% + 35px);
+  }
+  .layout-mobile & {
+    position: relative;
+    left: 0;
+    right: -20px;
+    width: calc(100% + 20px);
   }
 }
 .index-journal__date {
@@ -2755,7 +2868,6 @@ div[js-index-content="index"]{
     @include style-body;
     margin-top: 20px;
     margin-bottom: 20px;
-    font-size: 16px;
   }
 }
 
@@ -2804,21 +2916,26 @@ div[js-index-content="index"]{
   text-decoration: none;
   color: inherit;
   @include style-h2;
+  color: $color-gray;
   &:hover {
-    color: rgba(black, .3);
+    color: black;
   }
 }
 .footer__address1 {
-	@include column(1);
+	@include column(1.5);
   @include style-h2;
 }
 .footer__address2 {
-	@include column(1);
+	@include column(1.5);
   @include style-h2;
 }
 .footer__spacer {
 	@include column(1);
 }
+.footer__spacer--2 {
+  @include column(.2);
+}
+
 .footer__email {
 	@include column(2);
 }
@@ -2845,8 +2962,9 @@ div[js-index-content="index"]{
   padding-bottom: 10px;
   font-family: 'C';
   @include style-h2;
+  color: black;
   @include placeholder {
-    color: black;
+    color: $color-gray;
     font-family: 'C';
     font-weight: 500;
     @include style-h2;
@@ -2915,6 +3033,15 @@ div[js-index-content="index"]{
 // animation
 // animation
 // animation
+.image-background {
+  background: rgba(black, .1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .supports-js {
   /* fade image in after load */
   .lazyload,

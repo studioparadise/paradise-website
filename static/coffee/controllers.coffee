@@ -7,14 +7,21 @@ root.globalAPI = {}
 root.globalAPI.isMobile = ->
     return $("body").hasClass 'layout-mobile'
 
-root.globalAPI.exitFPV = ->
+root.globalAPI.handleHeroAlign = ->
+    if not root.globalAPI.isMobile() and not root.globalAPI.fullProjectView and root.globalAPI.currentOverlay == 'projects'
+        targetHeight = $(".navbar__items").offset().top - 75
+        $('.module-hero__background').height targetHeight
+
+root.globalAPI.toggleFPV = ->
   $project = $("[js-index-project]:in-viewport:first")
   projectAPI = $project.data 'js-controller'
   projectAPI.toggleFullProjectView()
 
 root.controllers.indexSwiper = ($element, args) ->
   swiper = root.components.swiper $element,
-    loop: true
+    # loop: true
+    lazyLoading: true
+    lazyLoadingInPrevNext: true
     autoplay: 3000,
     effect: 'fade',
     fade: {
@@ -22,25 +29,26 @@ root.controllers.indexSwiper = ($element, args) ->
     },
     speed: 500
     onInit: (swiper) ->
-      $triggers = $element.find '[js-index-slider-project-link]'
-      $triggers.on 'click', ->
-        projectHash = $(this).attr 'js-index-slider-project-link'
-        window.location.hash = projectHash
-        root.globalAPI.desktopDirectLoadOnHash('#' + projectHash)
+
+
+root.controllers.projects = ($element, args) ->
+  do handleProjectLinks = ->
+    $triggers = $ '[js-project-link]'
+    $triggers.on 'click', ->
+      projectHash = $(this).attr 'js-project-link'
+      window.location.hash = projectHash
+      root.globalAPI.desktopDirectLoadOnHash('#' + projectHash)
+
 
 root.controllers.project = ($element, args) ->
   api = {}
-  do handleHeroAlign = ->
-    if not root.globalAPI.isMobile() and not root.globalAPI.fullProjectView
-        targetHeight = $(".navbar__items").offset().top - 75
-        console.log 'handling hero align', targetHeight
-        $element.find('.module-hero__background').height targetHeight
 
   $(window).on 'resize', (ev) ->
-    handleHeroAlign()
+    root.globalAPI.handleHeroAlign()
 
   do handleViewFullProject = ->
     $scrollingContainer = $("[js-index-content=\"projects\"]")
+    # $scrollingContainer = $("html, body'")
 
     $trigger = $element.find '[js-index-view-full-project]'
 
@@ -261,7 +269,7 @@ root.controllers.navbar2 = ($element, args) ->
         ev.preventDefault()
         if root.globalAPI.fullProjectView
           console.log 'exiting FPV'
-          root.globalAPI.exitFPV()
+          root.globalAPI.toggleFPV()
           return false
 
         $el = $("[js-index-content=\"index\"]")
@@ -327,7 +335,11 @@ root.controllers.navbar2 = ($element, args) ->
       if scrollSpyTarget
         $target = $("[js-scrollspy=\"#{scrollSpyTarget}\"]")
 
+        $scrollingContainer = $("[js-index-content=\"#{args.overlay}\"]")
+
         if args.overlay == 'projects'
+            root.globalAPI.handleHeroAlign()
+
             $projectsContainer = $("[js-index-content=\"projects\"]")
 
             if args.scrollAlignToNav
@@ -335,6 +347,7 @@ root.controllers.navbar2 = ($element, args) ->
               offset = $target.offset().top - position + 5  # compensate for font heights
             else
               offset = $target.offset().top
+
 
             # offset is relative to current container scrollTop. Adjust final by current scrollTop
             projectsScrollTop =  $projectsContainer.scrollTop()
@@ -353,7 +366,12 @@ root.controllers.navbar2 = ($element, args) ->
             else
               offset = $target.offset().top
 
-            $("html, body").stop(true, true).animate
+            # offset is relative to current container scrollTop. Adjust final by current scrollTop
+            scrollingContainerScrollTop =  $scrollingContainer.scrollTop()
+            offset = scrollingContainerScrollTop + offset
+            console.log 'scrolling to offset: ', offset
+
+            $scrollingContainer.stop(true, true).animate
               scrollTop: offset
             , 750, 'easeInOutExpo', ->
               api.scrolling = false
@@ -383,9 +401,11 @@ root.controllers.navbar2 = ($element, args) ->
           $el = $("[js-index-content=\"studio\"]")
           api.hideAllContentAndFadeInOne $el
 
-          for index in [1..7]
-            $img = new Image()
-            $img.src = "/static/img/hover-#{index}.jpg"
+          if not root.globalAPI.hoverImagesLoaded
+            for index in [1..7]
+              $img = new Image()
+              $img.src = "/static/img/hover-#{index}.jpg"
+            root.globalAPI.hoverImagesLoaded = true
 
         when 'journal'
           $el = $("[js-index-content=\"journal\"]")
@@ -397,7 +417,7 @@ root.controllers.navbar2 = ($element, args) ->
         # is root node - misnamed arg
         api.clearNavbarState()
         $('html, body').scrollTop(0)
-        $("[js-index-content=\"projects\"]").scrollTop(0)
+        $("[js-index-content]").scrollTop(0)
 
       showDropdown $dropdown, true
 
@@ -411,7 +431,10 @@ root.controllers.navbar2 = ($element, args) ->
 
       scrollSpy = $label.attr('js-scrollspy-nav')
       if scrollSpy
-        window.location.hash = scrollSpy
+        hash = scrollSpy
+        if root.globalAPI.fullProjectView
+          hash = hash + ":full-project-view"
+        window.location.hash = hash
 
       if args.rootNode and not root.globalAPI.isMobile()
         # is root node - misnamed arg
@@ -449,6 +472,11 @@ root.controllers.navbar2 = ($element, args) ->
       return
 
     hash = hash.substr 1
+    if hash.indexOf(':') > 0
+      splits = hash.split ':'
+      hash = splits[0]
+      action = splits[1]
+
     $scrollSpyNav = $("[js-scrollspy-nav=\"#{hash}\"]")
     if $scrollSpyNav
       #  click parent
@@ -459,6 +487,12 @@ root.controllers.navbar2 = ($element, args) ->
         $scrollSpyNav.click()
         console.log 'clicking scrollspy nav', $scrollSpyNav
       , 500
+
+      switch action
+        when 'full-project-view'
+          _.delay ->
+            root.globalAPI.toggleFPV()
+          , 1600
 
   root.globalAPI.desktopDirectLoadOnHash = handleDirectLoadViaHash
 
@@ -541,7 +575,7 @@ root.controllers.navbar2 = ($element, args) ->
 
 
     $(window).on 'scroll', _.throttle onScroll, 50
-    $(".index-projects-wrapper").on 'scroll', _.throttle onScroll, 50
+    $("[js-index-content]").on 'scroll', _.throttle onScroll, 50
     window.recalculateCurrentProjectScrollSpy = onScroll
 
 root.controllers.studioContent = ($element, args) ->
@@ -549,7 +583,7 @@ root.controllers.studioContent = ($element, args) ->
 
   do updatePadding = ->
     $element.css
-      paddingTop: $navItem.offset().top - $(window).scrollTop() - 10
+      paddingTop: $navItem.offset().top - $(window).scrollTop() - 25
 
   $(window).on 'resize', _.throttle(updatePadding, 500)
 
@@ -601,28 +635,28 @@ root.controllers.footer = ($element, args) ->
 
 
 root.controllers.mobileStudio = ($element, args) ->
-  do handleDirectLoadViaHash = ->
-    hash = window.location.hash
-    if not hash
-      return
-    $("body").removeClass 'mobile-navbar-is-open'
-    _.delay ->
-      hash = hash.substr 1
-      if not hash
-        offset = 1
-      else
-        if hash == 'manifesto'
-          adjustment = 100
-        else
-          adjustment = 50
-        $target = $("[js-scrollspy=\"#{hash}\"]")
-        offset = $target.offset().top - (adjustment)
-      $("html, body").animate
-        scrollTop: offset
-      , 1000, 'easeInOutExpo'
-    , 500
+  # do handleDirectLoadViaHash = ->
+  #   hash = window.location.hash
+  #   if not hash
+  #     return
+  #   $("body").removeClass 'mobile-navbar-is-open'
+  #   _.delay ->
+  #     hash = hash.substr 1
+  #     if not hash
+  #       offset = 1
+  #     else
+  #       if hash == 'manifesto'
+  #         adjustment = 100
+  #       else
+  #         adjustment = 50
+  #       $target = $("[js-scrollspy=\"#{hash}\"]")
+  #       offset = $target.offset().top - (adjustment)
+  #     $("html, body").animate
+  #       scrollTop: offset
+  #     , 1000, 'easeInOutExpo'
+  #   , 500
 
-  window.onhashchange = handleDirectLoadViaHash
+  # window.onhashchange = handleDirectLoadViaHash
 
 
 root.controllers.layoutDefault = ($element, args) ->
@@ -689,3 +723,12 @@ root.controllers.layoutDefault = ($element, args) ->
       try mouseEnter(ev) catch ex
 
 
+root.controllers.mobileProjectBody = ($element, args) ->
+  $readMore = $element.find('[js-mobile-module-read-more]')
+  $readMore.on 'click', =>
+    $readMore.slideUp ->
+      $element.find('[js-mobile-module-body]').slideDown 'slow', 'easeInOutExpo'
+
+
+root.controllers.lazyLoadBg = ($element, args) ->
+  $element.on ''

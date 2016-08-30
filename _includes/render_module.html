@@ -10,14 +10,16 @@
 				<!-- <div class="module-image__ratio" data-responsive-image-dimensions="{{ module.dimensions | default: '2400x755' }}">
 					<img class="hero__img lazyload" data-src="{{ module.mobile_image }}" alt="{{ module.alt | default: '' }}" />
 				</div>-->
-				<div class="module-image__ratio" data-responsive-image-dimensions="{{ module.dimensions | default: '2400x755' }}">
+				<div class="module-image__ratio" data-responsive-image-dimensions="{{ module.dimensions | default: '2400x755' }}" data-responsive-image-color="{{ project.color }}">
 					<img class="hero__img lazyload" data-src="{{ module.image }}" alt="{{ module.alt | default: '' }}" />
 				</div>
 				<div class="mobile-project__title">
 					{{ project.title }}
 				</div>
 			{% else %}
-				<div class="module-hero__background" style="background-image: url({{ module.image }});">
+				<div data-responsive-image-color="{{ project.color }}">
+					<div class="module-hero__background lazyload" data-bg="{{ module.image }}">
+					</div>
 				</div>
 				<!--
 				<div class="module-image__ratio" data-responsive-image-dimensions="{{ module.dimensions | default: '2400x755' }}">
@@ -27,7 +29,7 @@
 			{% endif %}
 		</div>
 	{% when 'image' %}
-		<div class="module-image__ratio" data-responsive-image-dimensions="{{ module.dimensions | default: '2400x1600' }}">
+		<div class="module-image__ratio" data-responsive-image-dimensions="{{ module.dimensions | default: '2400x1600' }}" data-responsive-image-color="{{ project.color }}">
 			<img class="module-image__img lazyload {% if module.caption.size > 0 %}module-image__img--with-caption{% endif %}" data-src="{{ module.image }}" alt="{{ module.alt | default: '' }}" />
 		</div>
 		{% if module.caption.size > 0 %}
@@ -38,8 +40,8 @@
 	{% when 'images-2up' %}
 		{% for image in module.images %}
 			<div class="module-images-2up__image">
-				<div class="module-image__ratio" data-responsive-image-dimensions="{{ image.dimensions | default: '1200x1600' }}">
-					<img class="module-images-2up__img lazyload" data-src="{{ image.image }}" alt="{{ image.alt | default: '' }}"/>
+				<div class="module-image__ratio" data-responsive-image-dimensions="{{ image.dimensions | default: '1200x1600' }}" data-responsive-image-color="{{ project.color }}">
+					<img class="module-images-2up__img lazyload" data-src="{{ image.image }}" alt="{{ image.alt | default: '' }}" />
 				</div>
 				{% if image.caption.size > 0 %}
 					<div class="module__image-caption">
@@ -59,13 +61,23 @@
 			</div>
 			{% if include.mobile %}
 				{% if module.body %}
-					<div class="module-text__body module-text__body--mobile">
-						{{ module.body | markdownify }}
+					<div class="mobile-module-text" js-controller="mobileProjectBody">
+						<div class="mobile-module-text__excerpt">
+							{{ module.excerpt | default: "" | markdownify }}
+						</div>
+
+						<div class="mobile-module-text__read-more" js-mobile-module-read-more>
+							Read More
+						</div>
+
+						<div class="mobile-module-text__body" js-mobile-module-body>
+							{{ module.body | markdownify }}
+						</div>
 					</div>
 				{% endif %}
 			{% else %}
 				<div class="module-text__excerpt">
-					{{ module.excerpt | default: "" }}
+					{{ module.excerpt | default: "" | markdownify }}
 					<div class="module-text__view-full" js-index-view-full-project>
 						<span class="hide-on-full-project">
 							View Full Project
@@ -77,8 +89,8 @@
 						</span>
 					</div>
 				</div>
-				<div class="module-text__full-project-spacer show-on-full-project">&nbsp;</div>
 
+				<div class="module-text__full-project-spacer show-on-full-project">&nbsp;</div>
 					{% if module.body %}
 						<div class="module-text__body animate-in">
 							{{ module.body | markdownify }}

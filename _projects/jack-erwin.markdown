@@ -2,12 +2,13 @@
 title: Jack Erwin
 date: 2016-05-28 05:00:00 Z
 position: 0
+color: "#1c384d"
 modules:
 - type: hero
   image: "/uploads/JE_Hero_3_20160822-50951c.jpg"
   alt: 
 - type: text
-  excerpt: Honing Jack Erwin's brand experience to tell the story of the contemporary
+  excerpt: Honing **Jack Erwin**'s brand experience to tell the story of the contemporary
     cobbler.
   body: |
     Founded in 2013, Jack Erwin is a direct-to-consumer luxury mens shoe brand. Their point of differentiation: handmade Italian shoes at an affordable price. After two years of quick growth and success, we were engaged to hone Jack Erwin’s brand story, which meant rethinking their branded materials and digital experience as a holistic system.
@@ -23,6 +24,7 @@ modules:
   image: "/uploads/JE_Logo_GId_20180822_MLP_A.gif"
 - type: image
   image: "/uploads/2JE_Logo.jpg"
+  dimensions: 2400x1591
 - type: image
   url: 
   image: "/uploads/JE_2_20160718.jpg"
