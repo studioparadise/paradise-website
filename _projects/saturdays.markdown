@@ -6,7 +6,7 @@ modules:
 - type: hero
   image: "/uploads/Saturdays_Hero_20160718.jpg"
 - type: text
-  excerpt: 'Creating consistency across all branded materials. '
+  excerpt: 'Creating consistency across all branded materials with **Saturdays**. '
   body: "Saturdays is a lifestyle clothing brand born from the rituals of surfing:
     clothing, conversation, coffee and curation. Saturdays & Paradise have collaborated
     on a series of small projects that has posed an interested, and relevant, design
