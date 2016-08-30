@@ -59,7 +59,7 @@ modules:
 - type: image
   image: "/uploads/Kaelen_5_20160803.jpg"
 - type: website-link
-  image: http://hi.kaelennyc.com/
+  url: http://hi.kaelennyc.com/
 - type: credits
   credits:
   - emphasis: Design
