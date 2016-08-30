@@ -67,6 +67,8 @@ modules:
   image: "/uploads/Prize_TimLahan_20160802.jpg"
 - type: image
   image: "/uploads/Prize_TimLookbook_20160802.jpg"
+- type: website-link
+  url: https://prizepins.com
 - type: credits
   credits:
   - emphasis: Brand Design
