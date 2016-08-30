@@ -1,7 +1,7 @@
 ---
 title: Abbott Sneak Peak
 date: 2016-08-24 18:29:00 Z
-image: "/uploads/2016_04_11_Abbott3544.jpg"
+image: "/uploads/Abbott_Hero_20160830.jpg"
 images:
 - image: "/uploads/Abbott_Campaign_Telluride_20160830.jpg"
   alt: 
