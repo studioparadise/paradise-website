@@ -69,5 +69,6 @@ modules:
   - url: 
     emphasis: Development
     name: Paradise
+color: "#000000"
 ---
 
