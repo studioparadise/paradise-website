@@ -3,9 +3,10 @@ title: Abbott Sneak Peak
 date: 2016-08-24 18:29:00 Z
 image:
   image: "/uploads/2016_04_11_Abbott3544.jpg"
-  dimensions: 2400x1450
+  dimensions: 
 images:
 - image: "/uploads/Abbott_Campaign_Telluride_20160830.jpg"
+  alt: 
   dimensions: 2400x1450
 - image: "/uploads/Abbott_Campaign_Sequioa_20160830.jpg"
   dimensions: 2400x1450
