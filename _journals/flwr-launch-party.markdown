@@ -6,7 +6,7 @@ position: 4
 image: "/uploads/Flower_Hero.jpg"
 images:
 - image: "/uploads/FLWR-Invite_Web_20160822.jpg"
-  alt: 2400x3227
+  dimensions: 2400x3227
 ---
 
 Our friends at FLWR are getting out in the big wide world. Come join the party at Convicts over on Mulberry St. 
