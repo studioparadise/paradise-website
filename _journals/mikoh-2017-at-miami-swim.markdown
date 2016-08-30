@@ -5,7 +5,7 @@ position: 5
 image: "/uploads/Mikoh_1_20160830.jpg"
 images:
 - image: "/uploads/Mikoh_2_20160830.jpg"
-  alt: 
+  dimensions: 2400x2728
 - image: "/uploads/Mikoh_3_20160830.jpg"
   alt: 
 - image: "/uploads/Mikoh_4_20160830.jpg"
