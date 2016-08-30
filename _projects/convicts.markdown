@@ -9,8 +9,8 @@ modules:
   alt: 
   title: 
 - type: text
-  excerpt: Capturing the spirit of camaraderie and rebellion with a bold brand and
-    editorial website.
+  excerpt: Capturing the spirit of camaraderie and rebellion of **Convicts** with
+    a bold brand and editorial website.
   body: |-
     Convicts is an Australian digital media brand that produces original and branded multimedia content including video and events. Born out of the merger of two successful business ventures — media company Billabout, and Nolita boutique B_Space— that feature Australian brands and personalities, Convicts is breaking ground by exploring the relationship between digital content and the event or shop experience. Convicts reached out to Paradise to define their new brand, and to create a functional, beautiful editorial website.
 
