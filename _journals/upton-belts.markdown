@@ -2,7 +2,7 @@
 title: Upton Belts
 date: 2016-07-10 22:15:00 Z
 position: 2
-image: "/uploads/Upton_1_20180830.jpg"
+image: "/uploads/Upton_1_20180830-07ab6e.jpg"
 images:
 - image: "/uploads/Upton_2_20180830.jpg"
   alt: 
