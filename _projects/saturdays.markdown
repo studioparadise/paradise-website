@@ -58,5 +58,6 @@ modules:
     name: Paradise
   - emphasis: Creative Direction
     name: 'Collin Tunstall '
+color: "#00bfff"
 ---
 
