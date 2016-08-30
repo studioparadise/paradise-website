@@ -8,7 +8,7 @@ modules:
   alt: 
 - type: text
   excerpt: |
-    Designing a contemporary & utilitarian diaper bag brand for the modern family
+    Designing a contemporary & utilitarian diaper bag that fits the modern family for **Leader Bag Co.**
   body: "Founded in 2013 by three mothers - and sisters - Leader Bag Co. gives modern
     parents a contemporary and stylish choice in an otherwise uninspiring sea of unicorns,
     polka dots and rainbows. Paradise was engaged to design this diaper bag and has
