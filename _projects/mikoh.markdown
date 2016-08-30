@@ -2,6 +2,7 @@
 title: Mikoh
 date: 2016-05-28 04:19:00 Z
 position: 5
+color: "#d5c5b1"
 modules:
 - type: hero
   image: "/uploads/Mikoh_Hero_20160718.jpg"
@@ -74,6 +75,5 @@ modules:
   - url: 
     emphasis: Sourcing & Manufacturing
     name: Paradise
-color: "#d5c5b1"
 ---
 
