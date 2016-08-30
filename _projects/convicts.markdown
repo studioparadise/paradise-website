@@ -2,6 +2,7 @@
 title: Convicts
 date: 2016-05-28 04:03:00 Z
 position: 2
+color: "#000000"
 modules:
 - type: hero
   image: "/uploads/Convicts_Hero_20160819-f4b03e.jpg"

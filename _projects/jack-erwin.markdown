@@ -2,7 +2,7 @@
 title: Jack Erwin
 date: 2016-05-28 05:00:00 Z
 position: 0
-color: "#222267"
+color: "#1c384d"
 modules:
 - type: hero
   image: "/uploads/JE_Hero_3_20160822-50951c.jpg"
