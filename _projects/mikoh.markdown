@@ -74,5 +74,6 @@ modules:
   - url: 
     emphasis: Sourcing & Manufacturing
     name: Paradise
+color: "#d5c5b1"
 ---
 
