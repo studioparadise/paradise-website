@@ -1,15 +1,17 @@
 ---
 title: Abbott Sneak Peak
 date: 2016-08-24 18:29:00 Z
-image: "/uploads/2016_04_11_Abbott3544.jpg"
+image:
+  image: "/uploads/2016_04_11_Abbott3544.jpg"
+  dimensions: 2400x1389
 images:
-- image: "/uploads/2016_04_11_Abbott3234_HERO-1.jpg"
+- image: "/uploads/Abbott_Campaign_Telluride_20160830.jpg"
   alt: 
-- image: "/uploads/2016_04_11_Abbott3321_HERO-2.jpg"
+- image: "/uploads/Abbott_Campaign_Sequioa_20160830.jpg"
   alt: 
-- image: "/uploads/2016_04_11_Abbott3457_HERO-4.jpg"
+- image: "/uploads/Abbott_Campaign_TheCape_20160830.jpg"
   alt: 
-- image: "/uploads/2016_04_11_Abbott3393_HERO-3.jpg"
+- image: "/uploads/Abbott_Campaign_Mojave_20160830.jpg"
   alt: 
 ---
 
