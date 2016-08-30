@@ -2805,6 +2805,12 @@ p.studio__team-bio {
     right: -35px;
     width: calc(100% + 35px);
   }
+  .layout-mobile & {
+    position: relative;
+    left: 0;
+    right: -20px;
+    width: calc(100% + 20px);
+  }
 }
 .index-journal__date {
   @include style-h2;

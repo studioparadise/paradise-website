@@ -8775,6 +8775,11 @@ p.studio__team-bio {
     left: 0;
     right: -35px;
     width: calc(100% + 35px); }
+  .layout-mobile .index-journal__img {
+    position: relative;
+    left: 0;
+    right: -20px;
+    width: calc(100% + 20px); }
 
 .index-journal__date {
   font-size: 18px;
