@@ -51,10 +51,6 @@ modules:
   - "/uploads/Convicts_WebNews_20160802.jpg"
   dimensions: 2400x1633
 - type: website-link
-  credits:
-  - url: 
-    emphasis: 
-    name: 
   url: http://convicts.nyc/
 - type: credits
   credits:
