@@ -34,6 +34,7 @@ modules:
     dimensions: 1200x1049
 - type: image
   image: "/uploads/Mikoh_5_20160715.jpg"
+  dimensions: 2400x1514
 - type: image
   image: "/uploads/Mikoh_4_20160716.jpg"
   dimensions: 2400x1702
