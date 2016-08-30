@@ -1933,6 +1933,7 @@ div[js-index-content] {
   top: 0;
   right: 0;
   bottom: 0;
+  padding-left: 0;
   width: calc(75% - 23px);  // 6 cols/8 and visually match grid.
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
@@ -1944,6 +1945,9 @@ div[js-index-content="index"]{
 .layout-mobile {
   div[js-index-content] {
     display: block;
+    width: 100%;
+    position: static;
+    overflow: auto;
   }
 }
 
