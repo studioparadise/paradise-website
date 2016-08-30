@@ -41,7 +41,7 @@ excerpt: Studio Paradise
 					{% if images.size > 0 %}
 						{% for image in images %}
 							{% if image.image != '' %}
-								<img class="index-journal__img lazyload" data-src="{{ image.image }}" alt="{{ image.alt | default: '' }}" />
+								<img class="index-journal__img" src="{{ image.image }}" alt="{{ image.alt | default: '' }}" />
 							{% endif %}
 						{% endfor %}
 					{% endif %}
