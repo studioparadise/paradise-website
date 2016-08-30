@@ -13,7 +13,7 @@ images:
   dimensions: 2000x1067
 - image: "/uploads/Upton_5_20180830.jpg"
   dimensions: 1024x842
-- image: "/uploads/Upton_6_20180830.jpg"
+- image: "/uploads/Upton_6_20180830-fb7643.jpg"
   dimensions: 1500x800
 ---
 
