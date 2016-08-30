@@ -60,7 +60,7 @@ modules:
   image: "/uploads/Leader_1_20160802.jpg"
 - type: image
   image: "/uploads/Leader_Web_20160802.jpg"
-  dimensions: 2400x3378
+  dimensions: 2400x2501
 - type: credits
   credits:
   - url: http://www.lottanieminen.com/
