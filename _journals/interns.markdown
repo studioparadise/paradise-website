@@ -2,7 +2,7 @@
 title: Interns
 date: 2016-07-23 21:10:00 Z
 position: 3
-image: "/uploads/SP_Site_Journal_0001_Interns_160710.jpg"
+image: "/uploads/SummerInterns.jpg"
 ---
 
 Looking for a turbo-learning design freak to intern with us for the rest of the summer. If you are interested in interesting stuff, know how to use some adobe programs and are down to nerd out with us please tell us a little about yourself and why you are keen at hiring@studioparadise.com.
