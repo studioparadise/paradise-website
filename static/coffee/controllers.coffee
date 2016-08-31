@@ -40,6 +40,10 @@ root.controllers.projects = ($element, args) ->
       root.globalAPI.desktopDirectLoadOnHash('#' + projectHash)
 
 
+root.handlers ?= {}
+
+
+
 root.controllers.project = ($element, args) ->
   api = {}
 
@@ -174,6 +178,8 @@ root.controllers.project = ($element, args) ->
         projectAPI.toggleFullProjectView()
 
       $close.data 'js-loaded', true
+
+    # end full project view
 
   return api
 
@@ -313,7 +319,6 @@ root.controllers.navbar2 = ($element, args) ->
     $("[js-item-dropdown]").css
       marginTop: 0
 
-  lastActiveItem = null
   initItem = ($item) ->
     # console.log 'initializing item', $item
     $label = $item.find '[js-item-label]:first'
@@ -342,64 +347,41 @@ root.controllers.navbar2 = ($element, args) ->
 
       if scrollSpyTarget
         $target = $("[js-scrollspy=\"#{scrollSpyTarget}\"]")
-
         $scrollingContainer = $("[js-index-content=\"#{args.overlay}\"]")
 
-        if args.overlay == 'projects'
-            $projectsContainer = $("[js-index-content=\"projects\"]")
-
-            if args.scrollAlignToNav
-              position = $('.navbar__item.is-active:first').position().top
-              offset = $target.offset().top - position + 5  # compensate for font heights
-            else
-              offset = $target.offset().top
-
-
-            # offset is relative to current container scrollTop. Adjust final by current scrollTop
-            projectsScrollTop =  $projectsContainer.scrollTop()
-            offset = projectsScrollTop + offset
-
-            $projectsContainer.stop(true, true).animate
-              scrollTop: offset
-            , 750, 'easeInOutExpo', ->
-              api.scrolling = false
-              activateItem $item
+        if args.scrollAlignToNav
+          position = $('.navbar__item.is-active:first').position().top
+          offset = $target.offset().top - position + 5  # compensate for font heights
+          offset = offset + (Number(args.scrollAlignToNavOffset) or 0)
         else
-            if args.scrollAlignToNav
-              position = $('.navbar__item.is-active:first').position().top
-              offset = $target.offset().top - position + 5  # compensate for font heights
-              offset = offset + (Number(args.scrollAlignToNavOffset) or 0)
-            else
-              offset = $target.offset().top
+          offset = $target.offset().top
 
-            # offset is relative to current container scrollTop. Adjust final by current scrollTop
-            scrollingContainerScrollTop =  $scrollingContainer.scrollTop()
-            offset = scrollingContainerScrollTop + offset
-            console.log 'scrolling to offset: ', offset
+        # offset is relative to current container scrollTop. Adjust final by current scrollTop
+        scrollingContainerScrollTop =  $scrollingContainer.scrollTop()
+        offset = scrollingContainerScrollTop + offset
 
-            $scrollingContainer.stop(true, true).animate
-              scrollTop: offset
-            , 750, 'easeInOutExpo', ->
-              api.scrolling = false
-              activateItem $item
+        $scrollingContainer.stop(true, true).animate
+          scrollTop: offset
+        , 750, 'easeInOutExpo', ->
+          api.scrolling = false
+          activateItem $item
 
     activateItem = ($item, preventAlign = false) ->
       $dropdown = $item.find '[js-item-dropdown]:first'
       args = root.utils.getArgs($label)
-
-      if root.globalAPI.isMobile()
-        if args.mobileURL
-          window.location.href = args.mobileURL
-          return false
-
       root.globalAPI.currentOverlay = args.overlay
 
-      switch args.overlay
+      # no longer have mobile subnav
+      # if root.globalAPI.isMobile()
+      #   if args.mobileURL
+      #     window.location.href = args.mobileURL
+      #     return false
 
+      # load appropriate overlay, and any init necessary
+      switch args.overlay
         when 'index'
           $el = $("[js-index-content=\"index\"]")
           api.hideAllContentAndFadeInOne $el
-
         when 'projects'
           $el = $("[js-index-content=\"projects\"]")
           api.hideAllContentAndFadeInOne $el
@@ -408,11 +390,12 @@ root.controllers.navbar2 = ($element, args) ->
           $el = $("[js-index-content=\"studio\"]")
           api.hideAllContentAndFadeInOne $el
 
-          if not root.globalAPI.hoverImagesLoaded
-            for index in [1..7]
-              $img = new Image()
-              $img.src = "/static/img/hover-#{index}.jpg"
-            root.globalAPI.hoverImagesLoaded = true
+          do preloadHoverImages = =>
+            if not root.globalAPI.hoverImagesLoaded
+              for index in [1..7]
+                $img = new Image()
+                $img.src = "/static/img/hover-#{index}.jpg"
+              root.globalAPI.hoverImagesLoaded = true
 
         when 'journal'
           $el = $("[js-index-content=\"journal\"]")
@@ -420,13 +403,8 @@ root.controllers.navbar2 = ($element, args) ->
         else
           console.log "Not Found", args.overlay
 
+      # especially handle root nodes by clearing out other navs, and scrolling to the top.
       if args.rootNode
-        # is root node - misnamed arg
-        # for dropdown in $element.find('[js-item-dropdown]')
-        #   $(dropdown).hide()
-        # $element.find('.is-active').removeClass 'is-active'
-        # $element.find('.is-open').removeClass 'is-open'
-
         api.clearNavbarState()
         # api.clearNavbarState2()
         $('html, body').scrollTop(0)
@@ -437,16 +415,17 @@ root.controllers.navbar2 = ($element, args) ->
           $dropdown.show().addClass 'is-open'
       showDropdown $dropdown, true
       # showDropdown2 $dropdown, true
-      console.log($dropdown)
 
+      # update sibling active states + add label active state
       $siblingItems.removeClass 'is-active'
       $item.addClass 'is-active'
 
-      lastActiveItem = $item
+      # vertically align child with parent selection if child.
       if not args.rootNode and not preventAlign
-        console.log 'args.rootNode is false AND preventAlign is not true'
         alignItemWithParent($item)
 
+
+      # update hash for direct link.
       scrollSpy = $label.attr('js-scrollspy-nav')
       if scrollSpy
         hash = scrollSpy
@@ -454,16 +433,22 @@ root.controllers.navbar2 = ($element, args) ->
           hash = hash + ":full-project-view"
         window.location.hash = hash
 
+      # if root node
       if args.rootNode and not root.globalAPI.isMobile()
-        # is root node - misnamed arg
+        # activate first item
         $nextItem = $item.find '.navbar__item:first'
         $nextItem.addClass 'is-active'
+
+        # scroll to it
         scrollTo $nextItem
+
+        # update hash to it
         window.location.hash = $nextItem.find('[js-scrollspy-nav]:first').attr 'js-scrollspy-nav'
 
-        # reset shown state
-        $("[js-show-contact-info-if-visible]").data('shown', false)
+        # reset shown state of contact bar on new page loads
+        # $("[js-show-contact-info-if-visible]").data('shown', false)
 
+    # on click, activate item and scroll to the item
     $label.on 'click', ->
       scroll = activateItem $item
       if scroll == false
@@ -471,16 +456,18 @@ root.controllers.navbar2 = ($element, args) ->
 
       scrollTo $item
 
+    # if not mobile, when scrollspy activates a nav label, activate item.
     if not root.globalAPI.isMobile()
       $label.on 'scrollspy:activate', ->
         if not api.scrolling
-          activateItem $item, false
+          activateItem $item, false  # activate nav, but do not scroll
 
-
+  # initialize nav item handlers
   $items = $element.find '.navbar__item'
   for item in $items
     initItem $(item)
 
+  # handle hash load on direct hits.
   do handleDirectLoadViaHash = (hash = '') ->
     console.log 'loading direct from hash'
     if not hash
