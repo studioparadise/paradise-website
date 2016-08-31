@@ -24,6 +24,7 @@ modules:
   image: "/uploads/JE_Logo_GId_20180822_MLP_A.gif"
 - type: image
   image: "/uploads/2JE_Logo.jpg"
+  dimensions: 2400x1591
 - type: image
   url: 
   image: "/uploads/JE_2_20160718.jpg"
@@ -36,10 +37,10 @@ modules:
 - type: images-2up
   images:
   - image: "/uploads/7JE_AD_01.jpg"
-    alt: 
+    dimensions: 1200x1574
     caption: 
   - image: "/uploads/7JE_AD_02.jpg"
-    alt: 
+    dimensions: 1200x1574
     caption: 
 - type: image
   image: "/uploads/JE_2_20160716-502b71.jpg"
