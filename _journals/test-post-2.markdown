@@ -1,5 +1,5 @@
 ---
-title: Paradise in Sydney
+title: News | Paradise in Sydney
 date: 2016-08-24 21:36:00 Z
 published: false
 position: 0
