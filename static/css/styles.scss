@@ -1449,7 +1449,6 @@ h1 {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
   height: 70px;
   background: white;
   z-index: 100;
@@ -1480,10 +1479,12 @@ h1 {
 }
 .mobile-navbar-open {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 27px;
-  right: 20px;
-  width: 28px;
+  left: 0;
+  width: 100vw;
+  padding-right: 20px;
+  text-align: right;
   z-index: 1000;
   @include transition(none);
   @include rm {
@@ -1503,7 +1504,7 @@ h1 {
   display: none;
   position: absolute;
   top: 0;
-  right: 0;
+  right: 20px;
   width: 28px;
   z-index: 1000;
   svg {
@@ -1512,6 +1513,8 @@ h1 {
   }
 }
 .mobile-navbar-open__open {
+  width: 28px;
+  display: inline-block;
   svg {
     width: 28px;
     height: 28px;
