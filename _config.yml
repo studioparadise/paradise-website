@@ -30,9 +30,9 @@ defaults:
     type: projects
   values:
     layout: project
-tagline:
+tagline: 
 url: http://studioparadise.com
-social-image:
+social-image: 
 facebook: studioparadisenyc
 twitter: paradisenewyork
 instagram: studioparadisenyc
@@ -63,22 +63,22 @@ studio:
     project: Leader Bag
 index-slider-images:
 - image: "/uploads/1JE_Home.jpg"
-  alt:
+  alt: 
   project: Jack Erwin
 - image: "/uploads/Mikoh_HomepageHero_20160803.jpg"
-  alt:
+  alt: 
   project: miko
 - image: "/uploads/Kaelen_HomepageHero_20160803.jpg"
-  alt:
+  alt: 
   project: Kaelen
 - image: "/uploads/Leader_HomepageHero_20160803.jpg"
-  alt:
+  alt: 
   project: Leader Bag
 - image: "/uploads/Prize_HomepageHero_20160803.jpg"
-  alt:
+  alt: 
   project: Prize
 - image: "/uploads/Saturdays_HomepageHero_20160803.jpg"
-  alt:
+  alt: 
   project: Saturdays
 gems:
 - jekyll-coffeescript
