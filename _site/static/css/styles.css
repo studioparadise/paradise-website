@@ -9083,6 +9083,10 @@ p.studio__team-bio {
   -webkit-transition: background 0.15s ease 0s;
   -moz-transition: background 0.15s ease 0s;
   -o-transition: background 0.15s ease 0s; }
+  .footer-social__item a {
+    display: block;
+    height: 100%;
+    width: 100%; }
   .footer-social__item svg {
     height: 10px; }
     .footer-social__item svg path, .footer-social__item svg rect, .footer-social__item svg polygon {

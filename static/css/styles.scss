@@ -3006,6 +3006,11 @@ p.studio__team-bio {
   text-align: center;
   border: 1px solid black;
   margin-left: -1px;
+  a {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
   svg {
     height: 10px;
     path, rect, polygon {
