@@ -15,13 +15,13 @@
 	<title>Paradise</title>
 	<meta name="description" content="Studio Paradise">
 	<link rel="icon" type="image/png" href="/favicon.png">
-	
+
 	<!-- Google+ -->
 	<link rel="publisher" href="https://plus.google.com/"/>
 	<meta itemprop="name" content="Studio Paradise">
 	<meta itemprop="description" content="Studio Paradise">
 	<meta itemprop="image" content="http://yourwebsite.com/img/social.jpg">
-	
+
 	<!-- Facebook -->
 	<meta property="og:type" content="website"/>
 	<meta property="og:title" content="Studio Paradise"/>
@@ -29,18 +29,18 @@
 	<meta property="og:image" content="http://yourwebsite.com/img/social.jpg"/>
 	<meta property="og:url" content="http://yourwebsite.com/"/>
 	<meta property="og:site_name" content="Paradise "/>
-	
+
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Studio Paradise">
 	<meta name="twitter:description" content="Studio Paradise">
 	<meta name="twitter:image" content="http://yourwebsite.com/img/social.jpg">
 	<meta name="twitter:url" content="http://yourwebsite.com/">
-	
+
 	<link rel="stylesheet" href="/static/css/libraries_aggregated.min.css">
 	<!-- CSS & fonts -->
 	<link rel="stylesheet" href="/static/css/styles.css">
-	
+
 	<script src="/static/js/modernizr.min.js"></script>
 
 	<script type="text/javascript">
@@ -49,14 +49,37 @@
 		  (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4)))check = true})(navigator.userAgent||navigator.vendor||window.opera);
 		  return check;
 		}
-	</script>	
+	</script>
+
+	<script src="/static/js/jquery.min.js"></script>
 <script type="text/javascript">
 	// # Design calls for an adaptive site, on a platform that doesn't support it. We'll use a JS redirect.
-	if (window.mobilecheck()) {
-		window.location.href = '/mobile_index.html';
-	} else {
+	$(function() {
+		function getMobileURL() {
+			// try matching known urls
+			var hash = window.location.hash;
+			var url = '/mobile_index.html';
+			if (hash) {
+				var hash = hash.substr(1);
+				var splits = hash.split(':');
+				var slug = splits[0];
 
-	}
+				var scrollSpyNav = $("[js-scrollspy-nav=\"" + slug + "\"]");
+				if (scrollSpyNav.length) {
+					var args = eval('('+scrollSpyNav.attr('js-args')+')');
+					if (args.mobileURL) {
+						url = args.mobileURL;
+					}
+				}
+			}
+			return url
+		}
+		if (window.mobilecheck()) {
+			window.location.href = getMobileURL();
+		} else {
+			console.log(getMobileURL());
+		}
+	})
 </script>
 </head>
 	<body class="layout-default" js-controller="layoutDefault">
@@ -542,7 +565,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="#1c384d">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1591" data-responsive-image-color="#1c384d">
 			<img class="module-image__img lazyload " data-src="/uploads/2JE_Logo.jpg" alt="" />
 		</div>
 		
@@ -600,14 +623,14 @@
 	
 		
 			<div class="module-images-2up__image">
-				<div class="module-image__ratio" data-responsive-image-dimensions="1200x1600" data-responsive-image-color="#1c384d">
+				<div class="module-image__ratio" data-responsive-image-dimensions="1200x1574" data-responsive-image-color="#1c384d">
 					<img class="module-images-2up__img lazyload" data-src="/uploads/7JE_AD_01.jpg" alt="" />
 				</div>
 				
 			</div>
 		
 			<div class="module-images-2up__image">
-				<div class="module-image__ratio" data-responsive-image-dimensions="1200x1600" data-responsive-image-color="#1c384d">
+				<div class="module-image__ratio" data-responsive-image-dimensions="1200x1574" data-responsive-image-color="#1c384d">
 					<img class="module-images-2up__img lazyload" data-src="/uploads/7JE_AD_02.jpg" alt="" />
 				</div>
 				
@@ -817,7 +840,7 @@
 			</div>
 			
 				<div class="module-text__excerpt">
-					<p>Capturing a designer’s minimalist design essence and attention to detail in print.</p>
+					<p>Capturing <strong>Kaelen</strong>’s minimalist design essence and attention to detail in print.</p>
 
 					<div class="module-text__view-full" js-index-view-full-project>
 						<span class="hide-on-full-project">
@@ -1044,7 +1067,7 @@
 	
 		<div class="module-website-link__spacer">&nbsp;</div>
 		<div class="module-website-link__column">
-			<a class="module-website-link__button" href="" target="_blank">
+			<a class="module-website-link__button" href="http://hi.kaelennyc.com/" target="_blank">
 				Visit the Website
 				<span class="module-website-link__icon">
 					
@@ -1166,7 +1189,7 @@
 			</div>
 			
 				<div class="module-text__excerpt">
-					<p>Capturing the spirit of camaraderie and rebellion with a bold brand and editorial website.</p>
+					<p>Capturing the spirit of camaraderie and rebellion of <strong>Convicts</strong> with a bold brand and editorial website.</p>
 
 					<div class="module-text__view-full" js-index-view-full-project>
 						<span class="hide-on-full-project">
@@ -1235,7 +1258,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="#000000">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1591" data-responsive-image-color="#000000">
 			<img class="module-image__img lazyload " data-src="/uploads/Con_Branding.jpg" alt="" />
 		</div>
 		
@@ -1249,7 +1272,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2343x3705" data-responsive-image-color="#000000">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2343x3703" data-responsive-image-color="#000000">
 			<img class="module-image__img lazyload " data-src="/uploads/Convicts_Web_20160802.jpg" alt="" />
 		</div>
 		
@@ -1263,7 +1286,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2343x3705" data-responsive-image-color="#000000">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2343x3703" data-responsive-image-color="#000000">
 			<img class="module-image__img lazyload " data-src="/uploads/Convicts_WebArticle_20160802.jpg" alt="" />
 		</div>
 		
@@ -1277,7 +1300,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2382x1606" data-responsive-image-color="#000000">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2382x1633" data-responsive-image-color="#000000">
 			<img class="module-image__img lazyload " data-src="/uploads/Convicts_WebVideoPlayer_20160802.jpg" alt="" />
 		</div>
 		
@@ -1291,7 +1314,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2382x1606" data-responsive-image-color="#000000">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2382x1633" data-responsive-image-color="#000000">
 			<img class="module-image__img lazyload " data-src="/uploads/Convicts_WebMap_20160802.jpg" alt="" />
 		</div>
 		
@@ -1305,7 +1328,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1618" data-responsive-image-color="#000000">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1633" data-responsive-image-color="#000000">
 			<img class="module-image__img lazyload " data-src="/uploads/Convicts_WebNews_20160802.jpg" alt="" />
 		</div>
 		
@@ -1412,7 +1435,7 @@
 	
 		<div class="hero__column">
 			
-				<div data-responsive-image-color="">
+				<div data-responsive-image-color="#cdd8dd">
 					<div class="module-hero__background lazyload" data-bg="/uploads/Leader_Hero_20160802.jpg">
 					</div>
 				</div>
@@ -1443,7 +1466,7 @@
 			</div>
 			
 				<div class="module-text__excerpt">
-					<p>Designing a contemporary &amp; utilitarian diaper bag brand for the modern family</p>
+					<p>Designing a contemporary &amp; utilitarian diaper bag that fits the modern family for <strong>Leader Bag Co.</strong></p>
 
 					<div class="module-text__view-full" js-index-view-full-project>
 						<span class="hide-on-full-project">
@@ -1505,7 +1528,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="#cdd8dd">
 			<img class="module-image__img lazyload " data-src="/uploads/leader_deatil_final-logo.jpg" alt="" />
 		</div>
 		
@@ -1519,7 +1542,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="#cdd8dd">
 			<img class="module-image__img lazyload " data-src="/uploads/Leader_2_20160802.jpg" alt="" />
 		</div>
 		
@@ -1533,7 +1556,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="#cdd8dd">
 			<img class="module-image__img lazyload " data-src="/uploads/Leader_10_20160802.jpg" alt="" />
 		</div>
 		
@@ -1547,7 +1570,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="#cdd8dd">
 			<img class="module-image__img lazyload " data-src="/uploads/Leader_4_20160802.jpg" alt="" />
 		</div>
 		
@@ -1563,14 +1586,14 @@
 	
 		
 			<div class="module-images-2up__image">
-				<div class="module-image__ratio" data-responsive-image-dimensions="1200x1600" data-responsive-image-color="">
+				<div class="module-image__ratio" data-responsive-image-dimensions="1200x1600" data-responsive-image-color="#cdd8dd">
 					<img class="module-images-2up__img lazyload" data-src="/uploads/Leader_8_20160802.jpg" alt="" />
 				</div>
 				
 			</div>
 		
 			<div class="module-images-2up__image">
-				<div class="module-image__ratio" data-responsive-image-dimensions="1200x1600" data-responsive-image-color="">
+				<div class="module-image__ratio" data-responsive-image-dimensions="1200x1600" data-responsive-image-color="#cdd8dd">
 					<img class="module-images-2up__img lazyload" data-src="/uploads/Leader_9_20160715-bee9f3.jpg" alt="" />
 				</div>
 				
@@ -1586,7 +1609,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="#cdd8dd">
 			<img class="module-image__img lazyload " data-src="/uploads/leader_deatil_final-front2.jpg" alt="" />
 		</div>
 		
@@ -1600,7 +1623,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="#cdd8dd">
 			<img class="module-image__img lazyload " data-src="/uploads/Leader_4_20160802-deedb9.jpg" alt="" />
 		</div>
 		
@@ -1623,7 +1646,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="#cdd8dd">
 			<img class="module-image__img lazyload " data-src="/uploads/Leader_1_20160802.jpg" alt="" />
 		</div>
 		
@@ -1637,7 +1660,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x3378" data-responsive-image-color="">
+		<div class="module-image__ratio" data-responsive-image-dimensions="1800x2501" data-responsive-image-color="#cdd8dd">
 			<img class="module-image__img lazyload " data-src="/uploads/Leader_Web_20160802.jpg" alt="" />
 		</div>
 		
@@ -1737,7 +1760,7 @@
 	
 		<div class="hero__column">
 			
-				<div data-responsive-image-color="">
+				<div data-responsive-image-color="#f2f2f2">
 					<div class="module-hero__background lazyload" data-bg="/uploads/Prize_Hero_20160822-f6eac5.jpg">
 					</div>
 				</div>
@@ -1768,7 +1791,7 @@
 			</div>
 			
 				<div class="module-text__excerpt">
-					<p>Small in size, outrageous in personality.</p>
+					<p><strong>Prize Pins</strong>: Small in size, outrageous in personality.</p>
 
 					<div class="module-text__view-full" js-index-view-full-project>
 						<span class="hide-on-full-project">
@@ -1807,7 +1830,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1400" data-responsive-image-color="#f2f2f2">
 			<img class="module-image__img lazyload " data-src="/uploads/Prize_main_20160718.jpg" alt="" />
 		</div>
 		
@@ -1821,7 +1844,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1951" data-responsive-image-color="">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1951" data-responsive-image-color="#f2f2f2">
 			<img class="module-image__img lazyload " data-src="/uploads/Prize_lookbook1_20160802.jpg" alt="" />
 		</div>
 		
@@ -1835,7 +1858,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="#f2f2f2">
 			<img class="module-image__img lazyload " data-src="/uploads/Prize_PrizeCollection_20160802.jpg" alt="" />
 		</div>
 		
@@ -1849,7 +1872,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1951" data-responsive-image-color="">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1951" data-responsive-image-color="#f2f2f2">
 			<img class="module-image__img lazyload " data-src="/uploads/Prize_lookbook2_20160802.jpg" alt="" />
 		</div>
 		
@@ -1863,7 +1886,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="#f2f2f2">
 			<img class="module-image__img lazyload " data-src="/uploads/Prize_cards_20160819_MLP_A.jpg" alt="" />
 		</div>
 		
@@ -1877,7 +1900,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="#f2f2f2">
 			<img class="module-image__img lazyload " data-src="/uploads/Prize_Tati_Pins_20160802.jpg" alt="" />
 		</div>
 		
@@ -1891,7 +1914,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="#f2f2f2">
 			<img class="module-image__img lazyload " data-src="/uploads/Prize_Tati2__20160802.jpg" alt="" />
 		</div>
 		
@@ -1905,7 +1928,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="#f2f2f2">
 			<img class="module-image__img lazyload " data-src="/uploads/Prize_Tati1_20160802.jpp.jpg" alt="" />
 		</div>
 		
@@ -1939,7 +1962,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="#f2f2f2">
 			<img class="module-image__img lazyload " data-src="/uploads/Prize_Stephpins__20160802.jpg" alt="" />
 		</div>
 		
@@ -1955,14 +1978,14 @@
 	
 		
 			<div class="module-images-2up__image">
-				<div class="module-image__ratio" data-responsive-image-dimensions="1200x2000" data-responsive-image-color="">
+				<div class="module-image__ratio" data-responsive-image-dimensions="1200x2000" data-responsive-image-color="#f2f2f2">
 					<img class="module-images-2up__img lazyload" data-src="/uploads/Prize_2up1_20160718.jpg" alt="" />
 				</div>
 				
 			</div>
 		
 			<div class="module-images-2up__image">
-				<div class="module-image__ratio" data-responsive-image-dimensions="1200x2000" data-responsive-image-color="">
+				<div class="module-image__ratio" data-responsive-image-dimensions="1200x2000" data-responsive-image-color="#f2f2f2">
 					<img class="module-images-2up__img lazyload" data-src="/uploads/Prize_2up2_20160718.jpg" alt="" />
 				</div>
 				
@@ -1978,7 +2001,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1745" data-responsive-image-color="">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1745" data-responsive-image-color="#f2f2f2">
 			<img class="module-image__img lazyload " data-src="/uploads/Prize_MonsterLookbook1__20160802.jpg" alt="" />
 		</div>
 		
@@ -1992,7 +2015,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="#f2f2f2">
 			<img class="module-image__img lazyload " data-src="/uploads/Prize_JeanPins__20160802.jpg" alt="" />
 		</div>
 		
@@ -2008,14 +2031,14 @@
 	
 		
 			<div class="module-images-2up__image">
-				<div class="module-image__ratio" data-responsive-image-dimensions="1200x1471" data-responsive-image-color="">
+				<div class="module-image__ratio" data-responsive-image-dimensions="1200x1471" data-responsive-image-color="#f2f2f2">
 					<img class="module-images-2up__img lazyload" data-src="/uploads/Prize_2up1b_20160718.jpg" alt="" />
 				</div>
 				
 			</div>
 		
 			<div class="module-images-2up__image">
-				<div class="module-image__ratio" data-responsive-image-dimensions="1200x1471" data-responsive-image-color="">
+				<div class="module-image__ratio" data-responsive-image-dimensions="1200x1471" data-responsive-image-color="#f2f2f2">
 					<img class="module-images-2up__img lazyload" data-src="/uploads/Prize_2up2B_20160718.jpg" alt="" />
 				</div>
 				
@@ -2031,7 +2054,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="#f2f2f2">
 			<img class="module-image__img lazyload " data-src="/uploads/Prize_TimLahan_20160802.jpg" alt="" />
 		</div>
 		
@@ -2045,10 +2068,45 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="#f2f2f2">
 			<img class="module-image__img lazyload " data-src="/uploads/Prize_TimLookbook_20160802.jpg" alt="" />
 		</div>
 		
+	
+</div>
+
+						
+							
+
+<div class="debug-element">module-image variation: </div>
+
+<div class="module module-image module-image--">
+	
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="#f2f2f2">
+			<img class="module-image__img lazyload " data-src="/uploads/Prize_WebGif_20160830.gif" alt="" />
+		</div>
+		
+	
+</div>
+
+						
+							
+
+<div class="debug-element">module-website-link variation: </div>
+
+<div class="module module-website-link module-website-link--">
+	
+		<div class="module-website-link__spacer">&nbsp;</div>
+		<div class="module-website-link__column">
+			<a class="module-website-link__button" href="https://prizepins.com" target="_blank">
+				Visit the Website
+				<span class="module-website-link__icon">
+					
+	<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.05 9.05"><title>Paradise_FinalDesign_160428_MLP_A_DEVNOTES</title><polygon points="9.05 6 9.04 0 3.05 0 3.05 1 7.34 1 0 8.34 0.71 9.05 8.04 1.72 8.05 6 9.05 6"/></svg>
+
+				</span>
+			</a>
+		</div>
 	
 </div>
 
@@ -2211,7 +2269,7 @@
 			</div>
 			
 				<div class="module-text__excerpt">
-					<p>The introduction of an adventurous new category for the endless summer wonders</p>
+					<p>The introduction of <strong>Mikoh</strong>’s adventurous new category for the endless summer wonders</p>
 
 					<div class="module-text__view-full" js-index-view-full-project>
 						<span class="hide-on-full-project">
@@ -2291,7 +2349,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1600" data-responsive-image-color="#d5c5b1">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1514" data-responsive-image-color="#d5c5b1">
 			<img class="module-image__img lazyload " data-src="/uploads/Mikoh_5_20160715.jpg" alt="" />
 		</div>
 		
@@ -2491,7 +2549,7 @@
 	
 		<div class="hero__column">
 			
-				<div data-responsive-image-color="">
+				<div data-responsive-image-color="#00bfff">
 					<div class="module-hero__background lazyload" data-bg="/uploads/Saturdays_Hero_20160718.jpg">
 					</div>
 				</div>
@@ -2522,7 +2580,7 @@
 			</div>
 			
 				<div class="module-text__excerpt">
-					<p>Creating consistency across all branded materials.</p>
+					<p>Creating consistency across all branded materials with <strong>Saturdays</strong>.</p>
 
 					<div class="module-text__view-full" js-index-view-full-project>
 						<span class="hide-on-full-project">
@@ -2565,7 +2623,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1400" data-responsive-image-color="">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1400" data-responsive-image-color="#00bfff">
 			<img class="module-image__img lazyload " data-src="/uploads/Saturdays_HomepageHero_20160718.jpg" alt="" />
 		</div>
 		
@@ -2579,7 +2637,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1400" data-responsive-image-color="">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1400" data-responsive-image-color="#00bfff">
 			<img class="module-image__img lazyload " data-src="/uploads/Saturdays_Mag_20160718.jpg" alt="" />
 		</div>
 		
@@ -2593,7 +2651,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1123" data-responsive-image-color="">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1123" data-responsive-image-color="#00bfff">
 			<img class="module-image__img lazyload " data-src="/uploads/Saturdays_Mag2_20160803.jpg" alt="" />
 		</div>
 		
@@ -2607,7 +2665,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1400" data-responsive-image-color="">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2400x1400" data-responsive-image-color="#00bfff">
 			<img class="module-image__img lazyload " data-src="/uploads/Saturdays_Mag3_20160718.jpg" alt="" />
 		</div>
 		
@@ -2623,14 +2681,14 @@
 	
 		
 			<div class="module-images-2up__image">
-				<div class="module-image__ratio" data-responsive-image-dimensions="1200x4265" data-responsive-image-color="">
+				<div class="module-image__ratio" data-responsive-image-dimensions="1200x4265" data-responsive-image-color="#00bfff">
 					<img class="module-images-2up__img lazyload" data-src="/uploads/Saturdays_Mailer_1_20160803.jpg" alt="" />
 				</div>
 				
 			</div>
 		
 			<div class="module-images-2up__image">
-				<div class="module-image__ratio" data-responsive-image-dimensions="1200x3539" data-responsive-image-color="">
+				<div class="module-image__ratio" data-responsive-image-dimensions="1200x3539" data-responsive-image-color="#00bfff">
 					<img class="module-images-2up__img lazyload" data-src="/uploads/Saturdays_Mailer_2_20160803.jpg" alt="" />
 				</div>
 				
@@ -2646,7 +2704,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="1800x2909" data-responsive-image-color="">
+		<div class="module-image__ratio" data-responsive-image-dimensions="1800x2909" data-responsive-image-color="#00bfff">
 			<img class="module-image__img lazyload " data-src="/uploads/Saturdays_Web1_20160802-1b87d3.jpg" alt="" />
 		</div>
 		
@@ -2660,7 +2718,7 @@
 
 <div class="module module-image module-image--">
 	
-		<div class="module-image__ratio" data-responsive-image-dimensions="2343x1544" data-responsive-image-color="">
+		<div class="module-image__ratio" data-responsive-image-dimensions="2343x1544" data-responsive-image-color="#00bfff">
 			<img class="module-image__img lazyload " data-src="/uploads/Saturdays_Web2_20160802.jpg" alt="" />
 		</div>
 		
@@ -3133,7 +3191,7 @@
 							
 						</div>
 						<div class="index-journal__hero-img" data-responsive-image-dimensions="450x300">
-							<img class="lazyload" data-src="/uploads/2016_04_11_Abbott3544.jpg" />
+							<img class="lazyload" data-src="/uploads/Abbott_Hero_20160830.jpg" />
 						</div>
 
 						
@@ -3150,26 +3208,26 @@
 						
 							
 								
-									<div class="index-journal__img " data-responsive-image-dimensions="450x300">
-										<img class="lazyload" data-src="/uploads/2016_04_11_Abbott3234_HERO-1.jpg" alt="" />
+									<div class="index-journal__img " data-responsive-image-dimensions="2400x1450">
+										<img class="lazyload" data-src="/uploads/Abbott_Campaign_Telluride_20160830.jpg" alt="" />
 									</div>
 								
 							
 								
-									<div class="index-journal__img " data-responsive-image-dimensions="450x300">
-										<img class="lazyload" data-src="/uploads/2016_04_11_Abbott3321_HERO-2.jpg" alt="" />
+									<div class="index-journal__img " data-responsive-image-dimensions="2400x1450">
+										<img class="lazyload" data-src="/uploads/Abbott_Campaign_Sequioa_20160830.jpg" alt="" />
 									</div>
 								
 							
 								
-									<div class="index-journal__img " data-responsive-image-dimensions="450x300">
-										<img class="lazyload" data-src="/uploads/2016_04_11_Abbott3457_HERO-4.jpg" alt="" />
+									<div class="index-journal__img " data-responsive-image-dimensions="2400x1450">
+										<img class="lazyload" data-src="/uploads/Abbott_Campaign_TheCape_20160830.jpg" alt="" />
 									</div>
 								
 							
 								
-									<div class="index-journal__img " data-responsive-image-dimensions="450x300">
-										<img class="lazyload" data-src="/uploads/2016_04_11_Abbott3393_HERO-3.jpg" alt="" />
+									<div class="index-journal__img " data-responsive-image-dimensions="2400x1450">
+										<img class="lazyload" data-src="/uploads/Abbott_Campaign_Mojave_20160830.jpg" alt="" />
 									</div>
 								
 							
@@ -3201,7 +3259,7 @@
 							
 						</div>
 						<div class="index-journal__hero-img" data-responsive-image-dimensions="450x300">
-							<img class="lazyload" data-src="/uploads/14940030-web.jpg" />
+							<img class="lazyload" data-src="/uploads/ItalyOffsite_1_20160830.jpg" />
 						</div>
 
 						
@@ -3216,26 +3274,26 @@
 						
 							
 								
-									<div class="index-journal__img " data-responsive-image-dimensions="450x300">
-										<img class="lazyload" data-src="/uploads/14940034-web.jpg" alt="" />
+									<div class="index-journal__img " data-responsive-image-dimensions="2000x1327">
+										<img class="lazyload" data-src="/uploads/ItalyOffsite_4_20160830.jpg" alt="" />
 									</div>
 								
 							
 								
-									<div class="index-journal__img " data-responsive-image-dimensions="450x300">
-										<img class="lazyload" data-src="/uploads/14940017-web.jpg" alt="" />
+									<div class="index-journal__img " data-responsive-image-dimensions="2400x1592">
+										<img class="lazyload" data-src="/uploads/ItalyOffsite_3_20160830.jpg" alt="" />
 									</div>
 								
 							
 								
-									<div class="index-journal__img " data-responsive-image-dimensions="450x300">
-										<img class="lazyload" data-src="/uploads/14940038-web.jpg" alt="" />
+									<div class="index-journal__img " data-responsive-image-dimensions="2400x1592">
+										<img class="lazyload" data-src="/uploads/ItalyOffsite_2_20160830.jpg" alt="" />
 									</div>
 								
 							
 								
-									<div class="index-journal__img " data-responsive-image-dimensions="450x300">
-										<img class="lazyload" data-src="/uploads/14940004-web.jpg" alt="" />
+									<div class="index-journal__img " data-responsive-image-dimensions="2400x1592">
+										<img class="lazyload" data-src="/uploads/ItalyOffsite_5_20160830.jpg" alt="" />
 									</div>
 								
 							
@@ -3265,7 +3323,7 @@
 							
 						</div>
 						<div class="index-journal__hero-img" data-responsive-image-dimensions="450x300">
-							<img class="lazyload" data-src="/uploads/SP_Site_Journal_0001_Interns_160710.jpg" />
+							<img class="lazyload" data-src="/uploads/SummerInterns.jpg" />
 						</div>
 
 						
@@ -3307,7 +3365,7 @@
 							
 						</div>
 						<div class="index-journal__hero-img" data-responsive-image-dimensions="450x300">
-							<img class="lazyload" data-src="/uploads/576806980-1024x680.jpg" />
+							<img class="lazyload" data-src="/uploads/Mikoh_1_20160830.jpg" />
 						</div>
 
 						
@@ -3324,26 +3382,26 @@
 						
 							
 								
-									<div class="index-journal__img " data-responsive-image-dimensions="450x300">
-										<img class="lazyload" data-src="/uploads/IMG_1137-768x1152.jpg" alt="" />
+									<div class="index-journal__img " data-responsive-image-dimensions="2400x2728">
+										<img class="lazyload" data-src="/uploads/Mikoh_2_20160830.jpg" alt="" />
 									</div>
 								
 							
 								
 									<div class="index-journal__img " data-responsive-image-dimensions="450x300">
-										<img class="lazyload" data-src="/uploads/IMG_1140-1024x683.jpg" alt="" />
+										<img class="lazyload" data-src="/uploads/Mikoh_3_20160830.jpg" alt="" />
 									</div>
 								
 							
 								
 									<div class="index-journal__img " data-responsive-image-dimensions="450x300">
-										<img class="lazyload" data-src="/uploads/IMG_1136-1024x683.jpg" alt="" />
+										<img class="lazyload" data-src="/uploads/Mikoh_4_20160830.jpg" alt="" />
 									</div>
 								
 							
 								
 									<div class="index-journal__img " data-responsive-image-dimensions="450x300">
-										<img class="lazyload" data-src="/uploads/576807226-1024x681.jpg" alt="" />
+										<img class="lazyload" data-src="/uploads/Mikoh_5_20160830.jpg" alt="" />
 									</div>
 								
 							
@@ -3371,7 +3429,7 @@
 							
 						</div>
 						<div class="index-journal__hero-img" data-responsive-image-dimensions="450x300">
-							<img class="lazyload" data-src="/uploads/casual_lookbook_gallery_6-9ea25f.jpg" />
+							<img class="lazyload" data-src="/uploads/Upton_1_20180830-07ab6e.jpg" />
 						</div>
 
 						
@@ -3391,32 +3449,32 @@
 						
 							
 								
-									<div class="index-journal__img " data-responsive-image-dimensions="450x300">
-										<img class="lazyload" data-src="/uploads/sport_gallery_image_black_2_1024x1024.jpg" alt="" />
+									<div class="index-journal__img " data-responsive-image-dimensions="1024x842">
+										<img class="lazyload" data-src="/uploads/Upton_2_20180830.jpg" alt="" />
 									</div>
 								
 							
 								
-									<div class="index-journal__img " data-responsive-image-dimensions="450x300">
-										<img class="lazyload" data-src="/uploads/casual_lookbook_gallery_4.jpg" alt="" />
+									<div class="index-journal__img " data-responsive-image-dimensions="2400x1067">
+										<img class="lazyload" data-src="/uploads/Upton_3_20180830.jpg" alt="" />
 									</div>
 								
 							
 								
-									<div class="index-journal__img " data-responsive-image-dimensions="450x300">
-										<img class="lazyload" data-src="/uploads/sport_lookbook_gallery_8.jpg" alt="" />
+									<div class="index-journal__img " data-responsive-image-dimensions="2000x1067">
+										<img class="lazyload" data-src="/uploads/Upton_4_20180830.jpg" alt="" />
 									</div>
 								
 							
 								
-									<div class="index-journal__img " data-responsive-image-dimensions="450x300">
-										<img class="lazyload" data-src="/uploads/casual_gallery_image_black_1_1024x1024.jpg" alt="" />
+									<div class="index-journal__img " data-responsive-image-dimensions="1024x842">
+										<img class="lazyload" data-src="/uploads/Upton_5_20180830.jpg" alt="" />
 									</div>
 								
 							
 								
-									<div class="index-journal__img " data-responsive-image-dimensions="450x300">
-										<img class="lazyload" data-src="/uploads/casual_lookbook_gallery_9.jpg" alt="" />
+									<div class="index-journal__img " data-responsive-image-dimensions="1500x800">
+										<img class="lazyload" data-src="/uploads/Upton_6_20180830-fb7643.jpg" alt="" />
 									</div>
 								
 							
@@ -3557,7 +3615,7 @@ Sometimes it means packing up shop and hitting Barbados for a week.</p>
 							
 						</div>
 						<div class="index-journal__hero-img" data-responsive-image-dimensions="450x300">
-							<img class="lazyload" data-src="/uploads/Dudleys_Instagrams_20160804.jpg" />
+							<img class="lazyload" data-src="/uploads/Dudleys_1_20160830.jpg" />
 						</div>
 
 						
@@ -3575,31 +3633,31 @@ Sometimes it means packing up shop and hitting Barbados for a week.</p>
 							
 								
 									<div class="index-journal__img " data-responsive-image-dimensions="450x300">
-										<img class="lazyload" data-src="/uploads/20131010_DUDLEYS_web.jpg" alt="" />
+										<img class="lazyload" data-src="/uploads/Dudleys_2_20160830.jpg" alt="" />
 									</div>
 								
 							
 								
 									<div class="index-journal__img " data-responsive-image-dimensions="450x300">
-										<img class="lazyload" data-src="/uploads/Dudleys_Instagram2_20160804.jpg" alt="" />
+										<img class="lazyload" data-src="/uploads/Dudleys_3_20160830.jpg" alt="" />
 									</div>
 								
 							
 								
 									<div class="index-journal__img " data-responsive-image-dimensions="450x300">
-										<img class="lazyload" data-src="/uploads/20131010a_DUDLEYS_web.jpg" alt="" />
+										<img class="lazyload" data-src="/uploads/Dudleys_4_20160830.jpg" alt="" />
 									</div>
 								
 							
 								
 									<div class="index-journal__img " data-responsive-image-dimensions="450x300">
-										<img class="lazyload" data-src="/uploads/Dudleys_Instagram1_20160804.jpg" alt="" />
+										<img class="lazyload" data-src="/uploads/Dudleys_5_20160830.jpg" alt="" />
 									</div>
 								
 							
 								
 									<div class="index-journal__img " data-responsive-image-dimensions="450x300">
-										<img class="lazyload" data-src="/uploads/20131010_DUDLEYS_115.jpg" alt="" />
+										<img class="lazyload" data-src="/uploads/Dudleys_6_20160830.jpg" alt="" />
 									</div>
 								
 							
@@ -3709,16 +3767,16 @@ Sometimes it means packing up shop and hitting Barbados for a week.</p>
 </footer>
 
 		
-<!-- 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+<!--
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 -->
-<script src="/static/js/jquery.min.js"></script>
+
 
 <script type="text/javascript" src="/static/js/libraries-aggregated.min.js"></script>
 <script type="text/javascript" src="/static/coffee/init.js"></script>
 <script type="text/javascript" src="/static/coffee/controllers.js"></script>
 <script type="text/javascript" src="/static/coffee/components.js"></script>
-		
+
 		
 	</body>
 </html>

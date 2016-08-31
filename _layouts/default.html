@@ -6,14 +6,35 @@
 <html class="no-js">
 <!--<![endif]-->
 <head>
-{% include head.html %}	
+{% include head.html %}
 <script type="text/javascript">
 	// # Design calls for an adaptive site, on a platform that doesn't support it. We'll use a JS redirect.
-	if (window.mobilecheck()) {
-		window.location.href = '/mobile_index.html';
-	} else {
+	$(function() {
+		function getMobileURL() {
+			// try matching known urls
+			var hash = window.location.hash;
+			var url = '/mobile_index.html';
+			if (hash) {
+				var hash = hash.substr(1);
+				var splits = hash.split(':');
+				var slug = splits[0];
 
-	}
+				var scrollSpyNav = $("[js-scrollspy-nav=\"" + slug + "\"]");
+				if (scrollSpyNav.length) {
+					var args = eval('('+scrollSpyNav.attr('js-args')+')');
+					if (args.mobileURL) {
+						url = args.mobileURL;
+					}
+				}
+			}
+			return url
+		}
+		if (window.mobilecheck()) {
+			window.location.href = getMobileURL();
+		} else {
+			console.log(getMobileURL());
+		}
+	})
 </script>
 </head>
 	<body class="layout-default" js-controller="layoutDefault">
@@ -23,7 +44,7 @@
 		{% include navbar.html %}
 		{{ content }}
 		{% include footer.html %}
-		{% include footer_scripts.html %}		
+		{% include footer_scripts.html %}
 		{% comment %}{% include debug_bar.html %}{% endcomment %}
 	</body>
 </html>

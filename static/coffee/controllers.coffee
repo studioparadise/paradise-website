@@ -331,7 +331,7 @@ root.controllers.navbar2 = ($element, args) ->
         console.log 'top > 200.. can\'t be right'
         return
 
-      $item.parent().animate
+      $item.parent().stop(true).animate
         marginTop: "-#{top}px"
       , 600
 
