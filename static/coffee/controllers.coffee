@@ -385,7 +385,7 @@ root.controllers.navbar2 = ($element, args) ->
     activateItem = ($item, preventAlign = false) ->
       $dropdown = $item.find '[js-item-dropdown]:first'
       args = root.utils.getArgs($label)
-
+      console.log 'activating item'
       if root.globalAPI.isMobile()
         console.log 'is mobile'
         if args.mobileURL
