@@ -428,15 +428,16 @@ root.controllers.navbar2 = ($element, args) ->
         # $element.find('.is-active').removeClass 'is-active'
         # $element.find('.is-open').removeClass 'is-open'
 
-        api.clearNavbarState2()
+        api.clearNavbarState()
+        # api.clearNavbarState2()
         $('html, body').scrollTop(0)
         $("[js-index-content]").scrollTop(0)
 
       showDropdown2 = (apply) ->
         if apply
           $dropdown.show().addClass 'is-open'
-      # showDropdown $dropdown, true
-      showDropdown2 $dropdown, true
+      showDropdown $dropdown, true
+      # showDropdown2 $dropdown, true
       console.log($dropdown)
 
       $siblingItems.removeClass 'is-active'
