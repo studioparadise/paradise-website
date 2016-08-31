@@ -1,10 +1,11 @@
 ---
-title: Mikoh 2017 at Miami Swim
+title: Preview | Mikoh in Miami
 date: 2016-07-21 08:16:00 Z
 position: 5
 image: "/uploads/Mikoh_1_20160830.jpg"
 images:
 - image: "/uploads/Mikoh_2_20160830.jpg"
+  alt: 
   dimensions: 2400x2728
 - image: "/uploads/Mikoh_3_20160830.jpg"
   alt: 
