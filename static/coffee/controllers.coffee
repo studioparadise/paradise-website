@@ -387,9 +387,12 @@ root.controllers.navbar2 = ($element, args) ->
       args = root.utils.getArgs($label)
 
       if root.globalAPI.isMobile()
+        console.log 'is mobile'
         if args.mobileURL
+          console.log 'has url'
           window.location.href = args.mobileURL
-          return true
+          console.log 'moving', args.mobileURL
+          return false  # scroll param
 
       root.globalAPI.currentOverlay = args.overlay
 
