@@ -1,5 +1,5 @@
 ---
-title: Abbott Sneak Peak
+title: Preview | Abbott NYC
 date: 2016-08-24 18:29:00 Z
 image: "/uploads/Abbott_Hero_20160830.jpg"
 images:
@@ -14,6 +14,8 @@ images:
   dimensions: 2400x1450
 ---
 
-Abbott is a new direct to consumer men's fragrance company that will revolutionise the industry on price and presentation. Abbott works with the best scent-makers in the world to capture the spirit of experience. Each one informed by the owners favourite destinations—as a daily reminder live fully. 
+Here is a sneak peak of the bottles we designed and developed for Abbott NYC- a new men's fragrance company that aims to demystify the fragrance industry and make fine fragrance accessible to all- which will be officially launching in October.
 
-Here is a sneak peak of the photographs for each scent. Branding, package design and art direction by Paradise.
+Easily one of our largest projects to date, this entire brand was touched on by Paradise- everything from strategy, naming and identity, through to the campaign art direction and design & development of their website. We couldn't be prouder. Stay tuned for a full case study after the official brand launch.
+
+In the meantime you can see a brand teaser over at [abbottnyc.com](http://abbottnyc.com)
