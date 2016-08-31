@@ -1,17 +1,17 @@
 ---
 title: Archive | Dudley's
 date: 2016-01-13 18:15:00 Z
-image: "/uploads/Dudleys_Instagrams_20160804.jpg"
+image: "/uploads/Dudleys_1_20160830.jpg"
 images:
-- image: "/uploads/20131010_DUDLEYS_web.jpg"
+- image: "/uploads/Dudleys_2_20160830.jpg"
   alt: 
-- image: "/uploads/Dudleys_Instagram2_20160804.jpg"
+- image: "/uploads/Dudleys_3_20160830.jpg"
   alt: 
-- image: "/uploads/20131010a_DUDLEYS_web.jpg"
+- image: "/uploads/Dudleys_4_20160830.jpg"
   alt: 
-- image: "/uploads/Dudleys_Instagram1_20160804.jpg"
+- image: "/uploads/Dudleys_5_20160830.jpg"
   alt: 
-- image: "/uploads/20131010_DUDLEYS_115.jpg"
+- image: "/uploads/Dudleys_6_20160830.jpg"
   alt: 
 ---
 

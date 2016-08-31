@@ -7,7 +7,7 @@ modules:
 - type: hero
   image: "/uploads/Kaelen_HomepageHero_20160803.jpg"
 - type: text
-  excerpt: 'Capturing a designer''s minimalist design essence and attention to detail
+  excerpt: 'Capturing **Kaelen**''s minimalist design essence and attention to detail
     in print. '
   body: "Kaelen is a NYC based women’s clothing line created by Kaelen Haworth, selected
     as 1 of 10 designers of CFDA'S {FASHION INCUBATOR} Class 3.0 The Kaelen collections
@@ -59,7 +59,7 @@ modules:
 - type: image
   image: "/uploads/Kaelen_5_20160803.jpg"
 - type: website-link
-  image: http://hi.kaelennyc.com/
+  url: http://hi.kaelennyc.com/
 - type: credits
   credits:
   - emphasis: Design

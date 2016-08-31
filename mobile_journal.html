@@ -16,6 +16,7 @@ excerpt: Studio Paradise
 			    {% if month != nmonth %}
 					<div class="index-journal__month" js-scrollspy="{{ post.date | date: '%Y-%B' }}">
 				{% endif %}
+				{% assign images = post['images'] %}
 				<div class="index-journal__journal {% if images.size > 0 %}with-image {% endif %}">
 					<div class="index-journal__header">
 						<div class="index-journal__date">
@@ -27,8 +28,9 @@ excerpt: Studio Paradise
 							</h1>
 						{% endunless %}
 					</div>
-
-					<img class="index-journal__hero-img" src="{{ post['image'] }}" />
+					<div class="index-journal__hero-img" data-responsive-image-dimensions="{{ post.image_dimensions | default: "450x300" }}">
+						<img class="lazyload" data-src="{{ post['image'] }}" />
+					</div>
 
 					{% if post.content.size > 5 %}
 						<div class="row">
@@ -41,7 +43,9 @@ excerpt: Studio Paradise
 					{% if images.size > 0 %}
 						{% for image in images %}
 							{% if image.image != '' %}
-								<img class="index-journal__img" src="{{ image.image }}" alt="{{ image.alt | default: '' }}" />
+								<div class="index-journal__img " data-responsive-image-dimensions="{{ image.dimensions | default: "450x300" }}">
+									<img class="lazyload" data-src="{{ image.image }}" alt="{{ image.alt | default: '' }}" />
+								</div>
 							{% endif %}
 						{% endfor %}
 					{% endif %}

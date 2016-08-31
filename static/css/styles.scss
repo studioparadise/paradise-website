@@ -1428,6 +1428,7 @@ h1 {
 	position: absolute;
 	top: 35px;
 	left: 35px;
+  z-index: 1000;
   svg {
     width: 115px;
     // height: 25px;
@@ -1449,7 +1450,6 @@ h1 {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
   height: 70px;
   background: white;
   z-index: 100;
@@ -1480,20 +1480,32 @@ h1 {
 }
 .mobile-navbar-open {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 27px;
-  right: 20px;
-  width: 28px;
+  left: 0;
+  width: 100vw;
+  padding-right: 20px;
+  text-align: right;
   z-index: 1000;
+  @include transition(none);
   @include rm {
     display: block;
+  }
+}
+.mobile-navbar-open__line {
+  height: 1px;
+  width: 100%;
+  background: black;
+  @include transition(none);
+  &:not(:last-child) {
+    margin-bottom: 8px;
   }
 }
 .mobile-navbar-open__close {
   display: none;
   position: absolute;
   top: 0;
-  right: 0;
+  right: 20px;
   width: 28px;
   z-index: 1000;
   svg {
@@ -1502,6 +1514,8 @@ h1 {
   }
 }
 .mobile-navbar-open__open {
+  width: 28px;
+  display: inline-block;
   svg {
     width: 28px;
     height: 28px;
@@ -2814,6 +2828,7 @@ p.studio__team-bio {
     left: 0;
     right: -20px;
     width: calc(100% + 20px);
+    margin-top: 20px;
   }
 }
 .index-journal__date {

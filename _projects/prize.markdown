@@ -6,7 +6,7 @@ modules:
 - type: hero
   image: "/uploads/Prize_Hero_20160822-f6eac5.jpg"
 - type: text
-  excerpt: 'Small in size, outrageous in personality. '
+  excerpt: "**Prize Pins**: Small in size, outrageous in personality. "
   body: "Prize Pins is the love child of Luke Flynn and Kym Naimo, and a Product of
     Paradise. After living and working in New York, the two friends were inspired
     to break their black on black outfits and add a bit of excitement to their daily
@@ -67,6 +67,10 @@ modules:
   image: "/uploads/Prize_TimLahan_20160802.jpg"
 - type: image
   image: "/uploads/Prize_TimLookbook_20160802.jpg"
+- type: image
+  image: "/uploads/Prize_WebGif_20160830.gif"
+- type: website-link
+  url: https://prizepins.com
 - type: credits
   credits:
   - emphasis: Brand Design
@@ -91,6 +95,6 @@ modules:
     name: Tati Compton
   - emphasis: Artist Collaboration
     name: Tim Lahan
-Field name: 
+color: "#f2f2f2"
 ---
 

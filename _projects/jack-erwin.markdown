@@ -3,6 +3,8 @@ title: Jack Erwin
 date: 2016-05-28 05:00:00 Z
 position: 0
 color: "#1c384d"
+social-image: "/uploads/JE_Hero_3_20160822-50951c.jpg"
+social-description: Jack Erwin
 modules:
 - type: hero
   image: "/uploads/JE_Hero_3_20160822-50951c.jpg"
