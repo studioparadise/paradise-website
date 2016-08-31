@@ -30,9 +30,9 @@ defaults:
     type: projects
   values:
     layout: project
-tagline: Changing the world, one uninspired quote at a time
+tagline: 
 url: http://yourwebsite.com
-socialimg: "/img/social.jpg"
+social-image: 
 facebook: studioparadisenyc
 twitter: paradisenewyork
 instagram: studioparadisenyc
