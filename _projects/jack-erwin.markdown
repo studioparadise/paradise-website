@@ -7,7 +7,7 @@ social-image: "/uploads/JE_Hero_3_20160822-50951c.jpg"
 modules:
 - type: hero
   image: "/uploads/JE_Hero_3_20160822-50951c.jpg"
-  alt:
+  alt: 
 - type: text
   excerpt: Honing **Jack Erwin**'s brand experience to tell the story of the contemporary
     cobbler.
@@ -27,22 +27,22 @@ modules:
   image: "/uploads/2JE_Logo.jpg"
   dimensions: 2400x1591
 - type: image
-  url:
+  url: 
   image: "/uploads/JE_2_20160718.jpg"
-  dimensions:
+  dimensions: 
 - type: image
   image: "/uploads/JE_1_20160716.jpg"
-  dimensions:
+  dimensions: 
 - type: image
   image: "/uploads/JE_3_20160718-cbf066.jpg"
 - type: images-2up
   images:
   - image: "/uploads/7JE_AD_01.jpg"
     dimensions: 1200x1574
-    caption:
+    caption: 
   - image: "/uploads/7JE_AD_02.jpg"
     dimensions: 1200x1574
-    caption:
+    caption: 
 - type: image
   image: "/uploads/JE_2_20160716-502b71.jpg"
   dimensions: 2400x1556
@@ -59,24 +59,24 @@ modules:
   url: http://jackerwin.com
 - type: credits
   credits:
-  - url:
+  - url: 
     emphasis: Photographer  1
     name: Bjorn Looss
-  - url:
+  - url: 
     emphasis: Photographer 2
     name: Joss Mckinley
-  - url:
+  - url: 
     emphasis: Art Direction
     name: Paradise
-  - url:
+  - url: 
     emphasis: 'Digital Design '
     name: Paradise
-  - url:
+  - url: 
     emphasis: Branding
     name: Paradise
-  - url:
+  - url: 
     emphasis: 'Print Design '
     name: Paradise
-  Key:
+  Key: 
 ---
 
