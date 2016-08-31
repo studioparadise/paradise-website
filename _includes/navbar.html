@@ -1,18 +1,19 @@
-<div class="mobile-navbar-open">
-	<div class="mobile-navbar-open__open" js-mobile-navbar-open>
-		<div class="mobile-navbar-open__line"></div>
-		<div class="mobile-navbar-open__line"></div>
-		<div class="mobile-navbar-open__line"></div>
-	</div>
-	<div class="mobile-navbar-open__close" js-mobile-navbar-open>
-		<?xml version="1.0" encoding="utf-8"?>
-		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-			 viewBox="0 0 9.9 9.9" style="enable-background:new 0 0 9.9 9.9;" xml:space="preserve">
-		<polygon points="9.9,0.6 9.4,0 5,4.4 0.6,0 0,0.6 4.4,5 0,9.4 0.6,9.9 5,5.5 9.4,9.9 9.9,9.4 5.5,5 "/>
-		</svg>
-	</div>
-</div>
 <div class="navbar" js-controller="navbar2" js-args="{ mobile: {% if include.mobile 0 %}true{% else %}false{% endif %}}">
+	<div class="mobile-navbar-open">
+		<div class="mobile-navbar-open__open" js-mobile-navbar-open>
+			<div class="mobile-navbar-open__line"></div>
+			<div class="mobile-navbar-open__line"></div>
+			<div class="mobile-navbar-open__line"></div>
+		</div>
+		<div class="mobile-navbar-open__close" js-mobile-navbar-open>
+			<?xml version="1.0" encoding="utf-8"?>
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				 viewBox="0 0 9.9 9.9" style="enable-background:new 0 0 9.9 9.9;" xml:space="preserve">
+			<polygon points="9.9,0.6 9.4,0 5,4.4 0.6,0 0,0.6 4.4,5 0,9.4 0.6,9.9 5,5.5 9.4,9.9 9.9,9.4 5.5,5 "/>
+			</svg>
+		</div>
+	</div>
+
 	<div class="navbar__logo">
 		<a href="/" js-navbar-logo>
 			{% include svg.html type='logo--word' %}
@@ -59,7 +60,7 @@
 								{{ project.title }}
 							</a>
 						{% else %}
-							<div class="navbar__label" js-item-label js-navbar-project="{{ project.title | slugify }}" js-args="{overlay: 'projects'}" js-scrollspy-nav="{{ project.title | slugify }}">
+							<div class="navbar__label" js-item-label js-navbar-project="{{ project.title | slugify }}" js-args="{overlay: 'projects', mobileURL: '/projects/{{ project.title | slugify }}.html'}" js-scrollspy-nav="{{ project.title | slugify }}">
 								{{ project.title }}
 							</div>
 						{% endif %}

@@ -1,6 +1,5 @@
 ---
 ---
-
 root = exports ? this
 
 root.globalAPI = {}
@@ -346,8 +345,6 @@ root.controllers.navbar2 = ($element, args) ->
         $scrollingContainer = $("[js-index-content=\"#{args.overlay}\"]")
 
         if args.overlay == 'projects'
-            root.globalAPI.handleHeroAlign()
-
             $projectsContainer = $("[js-index-content=\"projects\"]")
 
             if args.scrollAlignToNav
@@ -397,6 +394,7 @@ root.controllers.navbar2 = ($element, args) ->
       root.globalAPI.currentOverlay = args.overlay
 
       switch args.overlay
+
         when 'index'
           $el = $("[js-index-content=\"index\"]")
           api.hideAllContentAndFadeInOne $el
@@ -404,7 +402,7 @@ root.controllers.navbar2 = ($element, args) ->
         when 'projects'
           $el = $("[js-index-content=\"projects\"]")
           api.hideAllContentAndFadeInOne $el
-
+          root.globalAPI.handleHeroAlign()
         when 'studio'
           $el = $("[js-index-content=\"studio\"]")
           api.hideAllContentAndFadeInOne $el
