@@ -1485,8 +1485,18 @@ h1 {
   right: 20px;
   width: 28px;
   z-index: 1000;
+  @include transition(none);
   @include rm {
     display: block;
+  }
+}
+.mobile-navbar-open__line {
+  height: 1px;
+  width: 100%;
+  background: black;
+  @include transition(none);
+  &:not(:last-child) {
+    margin-bottom: 8px;
   }
 }
 .mobile-navbar-open__close {
@@ -2814,6 +2824,7 @@ p.studio__team-bio {
     left: 0;
     right: -20px;
     width: calc(100% + 20px);
+    margin-top: 20px;
   }
 }
 .index-journal__date {

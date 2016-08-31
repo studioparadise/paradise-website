@@ -281,26 +281,34 @@ root.controllers.navbar2 = ($element, args) ->
 
   showDropdown = ($dropdown, apply) ->
     if root.globalAPI.isMobile()
-      if apply and not $dropdown.hasClass 'is-open'
-        $dropdown.show()
-      else
-        $dropdown.hide()
-        $dropdown.find('.is-active').removeClass 'is-active'
+      # no more mobile navbar
+      # if apply and not $dropdown.hasClass 'is-open'
+      #   $dropdown.show()
+      # else
+      #   $dropdown.hide()
+      #   $dropdown.find('.is-active').removeClass 'is-active'
     else
-      if apply and not $dropdown.hasClass 'is-open'
+      if apply # and not $dropdown.hasClass 'is-open'
         $dropdown.show()
         _.delay ->  $dropdown.addClass 'is-open', 100
       else
         $dropdown.removeClass 'is-open'
-        _.delay ->
-          if not $dropdown.hasClass 'is-open'
-            $dropdown.hide()
-        , 600
+        $dropdown.hide()
+        # _.delay ->
+        #   if not $dropdown.hasClass 'is-open'
+        #     $dropdown.hide()
+        # , 600
         $dropdown.find('.is-active').removeClass 'is-active'
+
+  api.clearNavbarState2 = ->
+    console.log "Claering navbar state"
+    $dropdowns = $element.find '.navbar__dropdown'
+    $dropdowns.removeClass('is-open').hide()
 
   api.clearNavbarState = ->
     for dropdown in $element.find('[js-item-dropdown]')
       showDropdown $(dropdown), false
+
     $element.find('.is-active').removeClass 'is-active'
     $("[js-item-dropdown]").css
       marginTop: 0
@@ -323,7 +331,7 @@ root.controllers.navbar2 = ($element, args) ->
         console.log 'top > 200.. can\'t be right'
         return
 
-      $item.parent().stop(true).animate
+      $item.parent().animate
         marginTop: "-#{top}px"
       , 600
 
@@ -415,11 +423,21 @@ root.controllers.navbar2 = ($element, args) ->
 
       if args.rootNode
         # is root node - misnamed arg
-        api.clearNavbarState()
+        # for dropdown in $element.find('[js-item-dropdown]')
+        #   $(dropdown).hide()
+        # $element.find('.is-active').removeClass 'is-active'
+        # $element.find('.is-open').removeClass 'is-open'
+
+        api.clearNavbarState2()
         $('html, body').scrollTop(0)
         $("[js-index-content]").scrollTop(0)
 
-      showDropdown $dropdown, true
+      showDropdown2 = (apply) ->
+        if apply
+          $dropdown.show().addClass 'is-open'
+      # showDropdown $dropdown, true
+      showDropdown2 $dropdown, true
+      console.log($dropdown)
 
       $siblingItems.removeClass 'is-active'
       $item.addClass 'is-active'

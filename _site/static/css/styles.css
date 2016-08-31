@@ -7387,9 +7387,22 @@ h1 {
   top: 27px;
   right: 20px;
   width: 28px;
-  z-index: 1000; }
+  z-index: 1000;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none; }
   .layout-mobile .mobile-navbar-open {
     display: block; }
+
+.mobile-navbar-open__line {
+  height: 1px;
+  width: 100%;
+  background: black;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none; }
+  .mobile-navbar-open__line:not(:last-child) {
+    margin-bottom: 8px; }
 
 .mobile-navbar-open__close {
   display: none;
@@ -8783,7 +8796,8 @@ p.studio__team-bio {
     position: relative;
     left: 0;
     right: -20px;
-    width: calc(100% + 20px); }
+    width: calc(100% + 20px);
+    margin-top: 20px; }
 
 .index-journal__date {
   font-size: 18px;
