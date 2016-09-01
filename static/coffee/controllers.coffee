@@ -1,6 +1,6 @@
 ---
 ---
-root = exports ? this
+root = window
 
 root.globalAPI = {}
 root.globalAPI.isMobile = ->
