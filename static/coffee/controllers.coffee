@@ -475,13 +475,15 @@ root.controllers.navbar2 = ($element, args) ->
         # reset shown state
         $("[js-show-contact-info-if-visible]").data('shown', false)
 
+      console.log 'activate item returning true'
       return true
 
     $label.on 'click', ->
       scroll = activateItem $item
       if not scroll
+        console.log 'not scroll, skipping scrollTo'
         return
-
+      console.log 'scrolling to'
       scrollTo $item
 
     if not root.globalAPI.isMobile()
