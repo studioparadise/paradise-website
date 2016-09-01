@@ -1,6 +1,6 @@
 ---
 ---
-root = window
+root = exports ? this
 
 root.globalAPI = {}
 root.globalAPI.isMobile = ->
@@ -300,11 +300,13 @@ root.controllers.navbar2 = ($element, args) ->
         $dropdown.find('.is-active').removeClass 'is-active'
 
   api.clearNavbarState2 = ->
-    console.log "Claering navbar state"
+    console.log "Clearing navbar state"
     $dropdowns = $element.find '.navbar__dropdown'
     $dropdowns.removeClass('is-open').hide()
 
   api.clearNavbarState = ->
+    api.disableScrollingCallbacks = false
+
     for dropdown in $element.find('[js-item-dropdown]')
       showDropdown $(dropdown), false
 
@@ -335,11 +337,11 @@ root.controllers.navbar2 = ($element, args) ->
       , 600
 
     scrollTo = ($item) ->
-      api.scrolling = true
       scrollSpyTarget = $label.attr 'js-scrollspy-nav'
       args = root.utils.getArgs($label)
 
       if scrollSpyTarget
+        api.disableScrollingCallbacks = true
         $target = $("[js-scrollspy=\"#{scrollSpyTarget}\"]")
 
         $scrollingContainer = $("[js-index-content=\"#{args.overlay}\"]")
@@ -361,7 +363,7 @@ root.controllers.navbar2 = ($element, args) ->
             $projectsContainer.stop(true, true).animate
               scrollTop: offset
             , 750, 'easeInOutExpo', ->
-              api.scrolling = false
+              api.disableScrollingCallbacks = false
               activateItem $item
         else
             if args.scrollAlignToNav
@@ -379,19 +381,18 @@ root.controllers.navbar2 = ($element, args) ->
             $scrollingContainer.stop(true, true).animate
               scrollTop: offset
             , 750, 'easeInOutExpo', ->
-              api.scrolling = false
+              api.disableScrollingCallbacks = false
               activateItem $item
 
     activateItem = ($item, preventAlign = false) ->
       $dropdown = $item.find '[js-item-dropdown]:first'
       args = root.utils.getArgs($label)
-      console.log 'activating item'
+      # console.log 'activating item'
       if root.globalAPI.isMobile()
-        console.log 'is mobile'
+        # console.log 'is mobile'
         if args.mobileURL
-          console.log 'has url'
           window.location.href = args.mobileURL
-          console.log 'moving', args.mobileURL
+          # console.log 'moving', args.mobileURL
           return false  # scroll param
 
       root.globalAPI.currentOverlay = args.overlay
@@ -428,25 +429,24 @@ root.controllers.navbar2 = ($element, args) ->
         #   $(dropdown).hide()
         # $element.find('.is-active').removeClass 'is-active'
         # $element.find('.is-open').removeClass 'is-open'
-
         api.clearNavbarState()
         # api.clearNavbarState2()
         $('html, body').scrollTop(0)
-        $("[js-index-content]").scrollTop(0)
+        $("[js-index-content]").scrollTop(1).scrollTop(0)
 
       showDropdown2 = (apply) ->
         if apply
           $dropdown.show().addClass 'is-open'
+
       showDropdown $dropdown, true
       # showDropdown2 $dropdown, true
-      console.log($dropdown)
+      # console.log($dropdown)
 
       $siblingItems.removeClass 'is-active'
       $item.addClass 'is-active'
 
       lastActiveItem = $item
       if not args.rootNode and not preventAlign
-        console.log 'args.rootNode is false AND preventAlign is not true'
         alignItemWithParent($item)
 
       scrollSpy = $label.attr('js-scrollspy-nav')
@@ -460,7 +460,6 @@ root.controllers.navbar2 = ($element, args) ->
         # is root node - misnamed arg
         $nextItem = $item.find '.navbar__item:first'
         $nextItem.addClass 'is-active'
-        scrollTo $nextItem
         window.location.hash = $nextItem.find('[js-scrollspy-nav]:first').attr 'js-scrollspy-nav'
 
         # reset shown state
@@ -468,14 +467,15 @@ root.controllers.navbar2 = ($element, args) ->
 
     $label.on 'click', ->
       scroll = activateItem $item
-      if scroll == false
+      if not scroll
         return
 
       scrollTo $item
 
     if not root.globalAPI.isMobile()
       $label.on 'scrollspy:activate', ->
-        if not api.scrolling
+        # console.log("api.disableScrollingCallbacks: ", api.disableScrollingCallbacks);
+        if not api.disableScrollingCallbacks
           activateItem $item, false
 
 
@@ -515,62 +515,10 @@ root.controllers.navbar2 = ($element, args) ->
           , 1600
 
   root.globalAPI.desktopDirectLoadOnHash = handleDirectLoadViaHash
-
-
-  # do handleSecondaryNav = ->
-  #   $navs = $element.find '[js-navbar-project]'
-  #   navLinkActiveClass = 'navbar__link--active'
-
-  #   getCurrentProject = ->
-  #     tolerance = $(window).height() * .3
-  #     $project = $("[js-index-project]:in-viewport(#{tolerance}):first")
-
-  #     projectSlug = $project.attr('js-index-project')
-  #     debug projectSlug
-  #     return projectSlug
-
-  #   activateSecondaryNav = (project) ->
-  #     $nav = $navs.filter("[js-navbar-project=\"#{project}\"]:first")
-  #     # $navs.removeClass navLinkActiveClass
-  #     # $nav.addClass navLinkActiveClass
-  #     window.location.hash = project
-
-
-  #   getProject = (project) ->
-  #     return $("[js-index-project=\"#{project}\"]")
-
-  #   scrollToProject = (project) ->
-  #     $project = getProject project
-  #     debug "scrolling to project #{project}"
-  #     console.log $project
-
-  #     $('html, body').animate
-  #       scrollTop: $project.offset().top
-  #     , 1000, 'easeInOutExpo'
-
-  #   do initialLoadHash = ->
-  #     if window.location.hash
-  #       project = window.location.hash.substr(1)
-  #       console.log 'Found project. scrolling to ', project
-  #       $project = getProject project
-  #       if $project
-  #         scrollToProject project
-
-  #   $navs.on 'click', (ev) ->
-  #     ev.preventDefault()
-  #     scrollToProject($(this).attr 'js-navbar-project')
-
-  #   onScroll = ->
-  #     project = getCurrentProject()
-  #     if project
-  #       activateSecondaryNav project
-  #   $(window).on 'scroll', _.throttle onScroll, 100
-
+  # console.log 'pre handle scrollspy'
   do handleScrollSpy = ->
+    # console.log 'handling scrollspy'
     onScroll = ->
-      # if root.globalAPI.currentOverlay == 'projects'
-      #   $spiesInViewport = $("[js-scrollspy]:in-viewport(500, .index-projects-wrapper):visible:first")
-      # else
       $spiesInViewport = $("[js-scrollspy]:in-viewport(500):visible:first")
       # console.log 'spies in viweport: ', $spiesInViewport
       target = $spiesInViewport.attr 'js-scrollspy'
@@ -579,7 +527,7 @@ root.controllers.navbar2 = ($element, args) ->
 
       if root.globalAPI.fullProjectView and root.globalAPI.allowScrollSpyAnimateInBody
         if $spiesInViewport.hasClass 'index-project-row'
-          console.log 'spies in VP - loading project body in'
+          # console.log 'spies in VP - loading project body in'
           # is a project
           $project = $spiesInViewport.find('[js-index-project]')
           projectAPI = $project.data 'js-controller'
@@ -589,14 +537,12 @@ root.controllers.navbar2 = ($element, args) ->
       $showContact = $("[js-show-contact-info-if-visible]:in-viewport:visible:first")
       # console.log "show contact element: ", $showContact, $showContact.is(':visible')
 
-      if ($showContact.length > 0) and not $showContact.data('shown')
+      if ($showContact.length > 0) and not $showContact.data('shown') and root.globalAPI.showContactBar
         root.globalAPI.showContactBar()
         $showContact.data 'shown', true
 
-
-    $(window).on 'scroll', _.throttle onScroll, 50
-    $("[js-index-content]").on 'scroll', _.throttle onScroll, 50
-    window.recalculateCurrentProjectScrollSpy = onScroll
+    # $(window).on 'scroll', _.throttle onScroll, 50
+    $("[js-index-content]").on 'scroll', _.throttle(onScroll, 50)
 
 root.controllers.studioContent = ($element, args) ->
   $navItem = $("[js-navbar-studio]")
