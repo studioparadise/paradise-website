@@ -8,8 +8,10 @@ root.globalAPI.isMobile = ->
 
 root.globalAPI.handleHeroAlign = ->
     if not root.globalAPI.isMobile() and not root.globalAPI.fullProjectView and root.globalAPI.currentOverlay == 'projects'
-        targetHeight = $(".navbar__items").offset().top - 75
-        $('.module-hero__background').height targetHeight
+      targetHeight = $(".navbar__items").offset().top - 75
+      if targetHeight < 200
+        return
+      $('.module-hero__background').height targetHeight
 
 root.globalAPI.toggleFPV = ->
   $project = $("[js-index-project]:in-viewport:first")
@@ -306,11 +308,10 @@ root.controllers.navbar2 = ($element, args) ->
 
   api.clearNavbarState = ->
     api.disableScrollingCallbacks = false
-
     for dropdown in $element.find('[js-item-dropdown]')
       showDropdown $(dropdown), false
 
-    $element.find('.is-active').removeClass 'is-active'
+    $('.navbar__item').removeClass 'is-active'
     $("[js-item-dropdown]").css
       marginTop: 0
 
@@ -340,49 +341,54 @@ root.controllers.navbar2 = ($element, args) ->
       scrollSpyTarget = $label.attr 'js-scrollspy-nav'
       args = root.utils.getArgs($label)
 
+      console.log 'scrolling to.. target', scrollSpyTarget
       if scrollSpyTarget
         api.disableScrollingCallbacks = true
         $target = $("[js-scrollspy=\"#{scrollSpyTarget}\"]")
 
         $scrollingContainer = $("[js-index-content=\"#{args.overlay}\"]")
-
-        if args.overlay == 'projects'
-            $projectsContainer = $("[js-index-content=\"projects\"]")
-
-            if args.scrollAlignToNav
-              position = $('.navbar__item.is-active:first').position().top
-              offset = $target.offset().top - position + 5  # compensate for font heights
-            else
-              offset = $target.offset().top
-
-
-            # offset is relative to current container scrollTop. Adjust final by current scrollTop
-            projectsScrollTop =  $projectsContainer.scrollTop()
-            offset = projectsScrollTop + offset
-
-            $projectsContainer.stop(true, true).animate
-              scrollTop: offset
-            , 750, 'easeInOutExpo', ->
-              api.disableScrollingCallbacks = false
-              activateItem $item
+        if args.scrollAlignToNav
+          # align to first tier navbar active
+          position = $("[js-navbar-item-root].is-active").position().top
+          console.log("Align to nav.. position: ", position)
+          offset = $target.offset().top - position + 5  # compensate for font heights
+          offset = offset + (Number(args.scrollAlignToNavOffset) or 0)
+          console.log("Align to nav.. position2: ", position)
         else
-            if args.scrollAlignToNav
-              position = $('.navbar__item.is-active:first').position().top
-              offset = $target.offset().top - position + 5  # compensate for font heights
-              offset = offset + (Number(args.scrollAlignToNavOffset) or 0)
-            else
-              offset = $target.offset().top
+          console.log 'not align', $target
+          offset = $target.offset().top
 
-            # offset is relative to current container scrollTop. Adjust final by current scrollTop
-            scrollingContainerScrollTop =  $scrollingContainer.scrollTop()
-            offset = scrollingContainerScrollTop + offset
-            console.log 'scrolling to offset: ', offset
+        # offset is relative to current container scrollTop. Adjust final by current scrollTop
+        scrollingContainerScrollTop =  $scrollingContainer.scrollTop()
+        offset = scrollingContainerScrollTop + offset
+        console.log 'scrolling to offset: ', offset
 
-            $scrollingContainer.stop(true, true).animate
-              scrollTop: offset
-            , 750, 'easeInOutExpo', ->
-              api.disableScrollingCallbacks = false
-              activateItem $item
+        $scrollingContainer.stop(true, true).animate
+          scrollTop: offset
+        , 750, 'easeInOutExpo', ->
+          api.disableScrollingCallbacks = false
+          activateItem $item
+
+        # if args.overlay == 'projects'
+        #     $projectsContainer = $("[js-index-content=\"projects\"]")
+
+        #     if args.scrollAlignToNav
+        #       position = $('.navbar__item.is-active:first').position().top
+        #       offset = $target.offset().top - position + 5  # compensate for font heights
+        #     else
+        #       offset = $target.offset().top
+
+        #     # offset is relative to current container scrollTop. Adjust final by current scrollTop
+        #     projectsScrollTop =  $projectsContainer.scrollTop()
+        #     offset = projectsScrollTop + offset
+
+        #     $projectsContainer.stop(true, true).animate
+        #       scrollTop: offset
+        #     , 750, 'easeInOutExpo', ->
+        #       api.disableScrollingCallbacks = false
+        #       activateItem $item
+        # else
+          # console.log "non project scorll'"
 
     activateItem = ($item, preventAlign = false) ->
       $dropdown = $item.find '[js-item-dropdown]:first'
@@ -423,8 +429,10 @@ root.controllers.navbar2 = ($element, args) ->
         else
           console.log "Not Found", args.overlay
 
+
       if args.rootNode
         # is root node - misnamed arg
+        console.log 'is root node'
         # for dropdown in $element.find('[js-item-dropdown]')
         #   $(dropdown).hide()
         # $element.find('.is-active').removeClass 'is-active'
@@ -433,6 +441,7 @@ root.controllers.navbar2 = ($element, args) ->
         # api.clearNavbarState2()
         $('html, body').scrollTop(0)
         $("[js-index-content]").scrollTop(1).scrollTop(0)
+
 
       showDropdown2 = (apply) ->
         if apply
@@ -464,6 +473,8 @@ root.controllers.navbar2 = ($element, args) ->
 
         # reset shown state
         $("[js-show-contact-info-if-visible]").data('shown', false)
+
+      return true
 
     $label.on 'click', ->
       scroll = activateItem $item
@@ -542,7 +553,7 @@ root.controllers.navbar2 = ($element, args) ->
         $showContact.data 'shown', true
 
     # $(window).on 'scroll', _.throttle onScroll, 50
-    $("[js-index-content]").on 'scroll', _.throttle(onScroll, 50)
+    $("[js-index-content]").on 'scroll', _.throttle(onScroll, 70)
 
 root.controllers.studioContent = ($element, args) ->
   $navItem = $("[js-navbar-studio]")
