@@ -61,6 +61,9 @@ modules:
 - type: image
   image: "/uploads/Leader_Web_20160802.jpg"
   dimensions: 1800x2501
+- type: image
+  image: "/uploads/Leader_Web_PDP_160904-aa4391.jpg"
+  dimensions: 1800 x 3824
 - type: credits
   credits:
   - url: http://www.lottanieminen.com/
@@ -81,9 +84,6 @@ modules:
   - url: 
     emphasis: Web Development
     name: Paradise
-- type: image
-  image: "/uploads/Leader_Web_PDP_160904-aa4391.jpg"
-  dimensions: 1800 x 3824
 color: "#cdd8dd"
 ---
 
