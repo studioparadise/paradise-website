@@ -63,7 +63,7 @@ modules:
   dimensions: 1800x2501
 - type: image
   image: "/uploads/Leader_Web_PDP_160904-cf15f7.jpg"
-  dimensions: 1800 x 3824
+  dimensions: 1800 x 3881
 - type: credits
   credits:
   - url: http://www.lottanieminen.com/
