@@ -1,5 +1,5 @@
 ---
-title: Leader Bag
+title: Leader Bag Co.
 date: 2016-05-28 04:03:00 Z
 position: 3
 modules:
