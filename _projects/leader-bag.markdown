@@ -62,7 +62,7 @@ modules:
   image: "/uploads/Leader_Web_20160802.jpg"
   dimensions: 1800x2501
 - type: image
-  image: "/uploads/Leader_Web_PDP_160904-aa4391.jpg"
+  image: "/uploads/Leader_Web_PDP_160904-cf15f7.jpg"
   dimensions: 1800 x 3824
 - type: credits
   credits:
