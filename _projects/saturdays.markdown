@@ -32,8 +32,8 @@ modules:
   images:
   - image: "/uploads/Saturdays_Mailer_1_20160803.jpg"
     dimensions: 1200x4265
-  - image: "/uploads/Saturdays_Mailer_2_20160803.jpg"
-    dimensions: 1200x3539
+  - image: "/uploads/Saturdays_Mailer_2_20160904.jpg"
+    dimensions: 1200x4265
 - type: image
   image: "/uploads/Saturdays_Web1_20160802-1b87d3.jpg"
   dimensions: 1800x2909
