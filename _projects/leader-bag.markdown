@@ -81,6 +81,9 @@ modules:
   - url: 
     emphasis: Web Development
     name: Paradise
+- type: image
+  image: "/uploads/Leader_Web_PDP_160904-aa4391.jpg"
+  dimensions: 1800 x 3824
 color: "#cdd8dd"
 ---
 
