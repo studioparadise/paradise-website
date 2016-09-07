@@ -358,6 +358,14 @@ html, body {
   font-family: Arial;
 }
 
+// ::-webkit-scrollbar {
+//   display: none;
+// }
+// div[js-index-content]::-webkit-scrollbar {
+//   display: block;
+// }
+
+
 html.navbar-mobile-open,
 html.js-viewing-full-project {
   position: relative;
