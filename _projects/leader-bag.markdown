@@ -1,5 +1,5 @@
 ---
-title: Leader Bag
+title: Leader Bag Co.
 date: 2016-05-28 04:03:00 Z
 position: 3
 modules:
@@ -61,6 +61,9 @@ modules:
 - type: image
   image: "/uploads/Leader_Web_20160802.jpg"
   dimensions: 1800x2501
+- type: image
+  image: "/uploads/Leader_Web_PDP_160904-cf15f7.jpg"
+  dimensions: 1800 x 3881
 - type: credits
   credits:
   - url: http://www.lottanieminen.com/
