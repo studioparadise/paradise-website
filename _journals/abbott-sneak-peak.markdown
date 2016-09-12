@@ -14,7 +14,7 @@ images:
   dimensions: 2400x1450
 ---
 
-Here is a sneak peak of the bottles we designed and developed for Abbott NYC- a new men's fragrance company that aims to demystify the fragrance industry and make fine fragrance accessible to all- which will be officially launching in October.
+Here is a sneak peek of the bottles we designed and developed for Abbott NYC- a new men's fragrance company that aims to demystify the fragrance industry and make fine fragrance accessible to all- which will be officially launching in October.
 
 Easily one of our largest projects to date, this entire brand was touched on by Paradise- everything from strategy, naming and identity, through to the campaign art direction and design & development of their website. And we couldn't be prouder. Stay tuned for a full case study after the official brand launch. In the meantime you can see their teaser site over at [abbottnyc.com](http://abbottnyc.com)
 
