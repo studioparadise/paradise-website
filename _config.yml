@@ -64,15 +64,15 @@ studio:
   - name: Leader Bag Co.
     project: Leader Bag
 index-slider-images:
+- image: "/uploads/Kaelen_HomepageHero_20160803.jpg"
+  alt: 
+  project: Kaelen
 - image: "/uploads/1JE_Home.jpg"
   alt: 
   project: Jack Erwin
 - image: "/uploads/Mikoh_HomepageHero_20160803.jpg"
   alt: 
   project: Mikoh
-- image: "/uploads/Kaelen_HomepageHero_20160803.jpg"
-  alt: 
-  project: Kaelen
 - image: "/uploads/Leader_HomepageHero_20160803.jpg"
   alt: 
   project: Leader Bag
