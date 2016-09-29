@@ -14,4 +14,4 @@ images:
   alt: 
 ---
 
-A quick little lookbook for our buddies at Mara & Mine. 
+A preview of the look book we did with Mara & Mine, showcasing the elegant, minimalistic designs. This collection looks at the Italian heritage of the leathers and styles of the collection touching on the European sophistication, the collection is timeless in style with impulsive details.
