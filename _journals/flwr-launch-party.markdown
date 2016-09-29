@@ -19,6 +19,8 @@ images:
   dimensions: 2343x1881
 ---
 
-Our friends at FLWR are getting out in the big wide world. Come join the party at Convicts over on Mulberry St.
+A small website to showcase the beautiful work FLWR - a botanical studio specializing in creative consultation and floral design. Check it out [here].(http://www.flwrstudio.com/)
 
-Invitation design, branding and photography by Paradise. Case Study to come, stay tuned.
+
+Branding and photography also done by Paradise. Case Study to come, stay tuned.
+
