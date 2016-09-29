@@ -14,9 +14,6 @@ images:
 - image: "/uploads/FLWR_Instagram_20160927.jpg"
   alt: 
   dimensions: 
-- image: "/uploads/FLWR-Invite_Web_20160822.jpg"
-  alt: 
-  dimensions: 2400x3227
 ---
 
 Our friends at FLWR are getting out in the big wide world. Come join the party at Convicts over on Mulberry St.
