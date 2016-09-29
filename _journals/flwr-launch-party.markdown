@@ -3,7 +3,7 @@ title: Preview | FLWR Launch
 date: 2016-06-28 16:41:00 Z
 published: false
 position: 4
-image: "/uploads/FLWR_homepage_CollectionsPage_20160927.jpg"
+image: "/uploads/Flower_Hero.jpg"
 images:
 - image: "/uploads/FLWR_Web_Collections_20160927.jpg"
   alt: 
