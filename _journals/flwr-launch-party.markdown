@@ -11,6 +11,9 @@ images:
 - image: "/uploads/FLWR_Web_CollectionsPage_20160927.jpg"
   alt: 
   dimensions: 2343x7139
+- image: "/uploads/FLWR_Instagram_20160927.jpg"
+  alt: 
+  dimensions: 
 - image: "/uploads/FLWR-Invite_Web_20160822.jpg"
   alt: 
   dimensions: 2400x3227
