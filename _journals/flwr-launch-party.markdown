@@ -13,7 +13,7 @@ images:
   dimensions: 2343x3475
 - image: "/uploads/FLWR_Web_CollectionsPage_20160927.jpg"
   alt: 
-  dimensions: 2343x7139
+  dimensions: 2343x7140
 - image: "/uploads/FLWR_Instagram_20160927.jpg"
   alt: 
   dimensions: 2343x1881
