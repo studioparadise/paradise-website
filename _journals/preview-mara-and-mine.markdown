@@ -4,7 +4,7 @@ date: 2016-09-28 20:11:00 Z
 published: false
 image: "/uploads/maraMine_lookbook2_20160928_AP_B.jpg"
 images:
-- image: "/uploads/maramine_lookbook3_20160928_AP_A.jpg"
+- image: "/uploads/MaraMine_lookbook_20160930_MLP_A.jpg"
   alt: 
 - image: "/uploads/maramine_lookbook4_20160928_AP_A.jpg"
   alt: 
