@@ -13,9 +13,7 @@ images:
   dimensions: 2400x1550
 - image: "/uploads/Sylvr_Behance_20161003_MLP_A-356840.gif"
   dimensions: 2400x1550
-- image: "/uploads/Sylvr_Behance_20161003_MLP_A_5.jpg"
-  dimensions: 2400x1600
-- image: "/uploads/SYLVR_Brand_R3_160914_MLP_C.jpg"
+- image: "/uploads/SYLVR_Brand_R3_160914_MLP_C-f4ee00.jpg"
   alt: 2400x1553
 ---
 
