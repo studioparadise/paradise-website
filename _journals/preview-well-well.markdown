@@ -2,13 +2,13 @@
 title: Preview | Well Well
 date: 2016-10-03 19:55:00 Z
 published: false
-image: "/uploads/bottles_linedup.jpg"
+image: "/uploads/wellwell_buy01-1600.jpg"
 images:
 - image: "/uploads/WellWell_1_20161003_MLP_A.gif"
   alt: 
 - image: "/uploads/WellWell_2_20161003_MLP_A.gif"
   alt: 
-- image: "/uploads/wellwell_buy01-1600.jpg"
+- image: "/uploads/bottles_linedup.jpg"
   dimensions: 2171x1600
 - image: "/uploads/Photos1.gif"
   dimensions: 1000x563
