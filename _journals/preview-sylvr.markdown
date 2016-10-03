@@ -17,4 +17,4 @@ images:
   alt: 2400x949
 ---
 
-Sylvr is a female-focused lifestyle media platform that uses VR & emerging technology to inform and inspire women’s journeys.
+A quick preview of a brand we are so excited to be working with. Introducing Sylvr, a a female-focused lifestyle media platform that uses VR & emerging technology to inform and inspire women’s journeys. Ladies, be on the look-out in 2017, because Sylvr is about to shake things up. 
