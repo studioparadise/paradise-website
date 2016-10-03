@@ -2,7 +2,7 @@
 title: Preview | Well Well
 date: 2016-10-03 19:55:00 Z
 published: false
-image: "/uploads/Photos2.gif"
+image: "/uploads/bottles_linedup.jpg"
 images:
 - image: "/uploads/WellWell_1_20161003_MLP_A.gif"
   alt: 
@@ -14,6 +14,8 @@ images:
   alt: 1000x563
 - image: "/uploads/WellWell_Web_20161003.jpg"
   alt: 
+- image: "/uploads/Photos2.gif"
+  alt: 1000x563
 ---
 
 We didn’t just want WellWell; we needed it. You do too. This vital, cold-pressured, organic juice delivers intentional nutrition and deliciousness. It kicks your body's natural recovery process into overdrive so you can keep crushing your goals at the gym, in the boardroom, and on the go.
