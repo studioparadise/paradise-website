@@ -13,8 +13,8 @@ images:
   dimensions: 2400x1550
 - image: "/uploads/Sylvr_Behance_20161003_MLP_A-356840.gif"
   dimensions: 2400x1550
-- image: "/uploads/SYLVR_Brand_R3_160914_MLP_C-f4ee00.jpg"
-  alt: 2400x1553
+- image: "/uploads/SYLVR_Brand_R3_160914_MLP_C_Cropped.jpg"
+  alt: 2400x949
 ---
 
 Sylvr is a female-focused lifestyle media platform that uses VR & emerging technology to inform and inspire women’s journeys.
