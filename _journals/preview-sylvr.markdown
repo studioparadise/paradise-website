@@ -7,9 +7,9 @@ images:
 - image: "/uploads/Sylvr_Behance_20161003_MLP_A_3.jpg"
   alt: 
   dimensions: 2400x1550
-- image: "/uploads/Sylvr_Behance_20161003_MLP_A_Type.gif"
-  dimensions: 2400x1550
 - image: "/uploads/Sylvr_Behance_20161003_MLP_A_6.jpg"
+  dimensions: 2400x1550
+- image: "/uploads/Sylvr_Behance_20161003_MLP_A_Type.gif"
   dimensions: 2400x1550
 - image: "/uploads/Sylvr_Behance_20161003_MLP_A-356840.gif"
   dimensions: 2400x1550
