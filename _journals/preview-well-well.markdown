@@ -9,7 +9,7 @@ images:
 - image: "/uploads/WellWell_W_20161003_MLP_A.gif"
   alt: 
 - image: "/uploads/bottles_linedup.jpg"
-  dimensions: 2171x1600
+  dimensions: 2048x1368
 - image: "/uploads/Photos1.gif"
   dimensions: 1000x563
 - image: "/uploads/WellWell_Web_20161003.jpg"
