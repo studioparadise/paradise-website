@@ -9,13 +9,13 @@ images:
 - image: "/uploads/WellWell_2_20161003_MLP_A.gif"
   alt: 
 - image: "/uploads/wellwell_buy01-1600.jpg"
-  alt: 2171x1600
+  dimensions: 2171x1600
 - image: "/uploads/Photos1.gif"
-  alt: 1000x563
+  dimensions: 1000x563
 - image: "/uploads/WellWell_Web_20161003.jpg"
-  alt: 
+  dimensions: 2343x1517
 - image: "/uploads/Photos2.gif"
-  alt: 1000x563
+  dimensions: 1000x563
 ---
 
 We didn’t just want WellWell; we needed it. You do too. This vital, cold-pressured, organic juice delivers intentional nutrition and deliciousness. It kicks your body's natural recovery process into overdrive so you can keep crushing your goals at the gym, in the boardroom, and on the go.
