@@ -2,7 +2,7 @@
 title: Preview | Sylvr
 date: 2016-10-03 18:53:00 Z
 published: false
-image: "/uploads/Sylvr_Behance_20161003_MLP_A-356840.gif"
+image: "/uploads/Sylvr_Behance_20161003_MLP_A_Clouds.jpg"
 images:
 - image: "/uploads/Sylvr_Behance_20161003_MLP_A_3.jpg"
   alt: 
@@ -11,12 +11,12 @@ images:
   dimensions: 2400x1550
 - image: "/uploads/Sylvr_Behance_20161003_MLP_A_6.jpg"
   dimensions: 2400x1550
-- image: "/uploads/Sylvr_Behance_20161003_MLP_A_Clouds.jpg"
+- image: "/uploads/Sylvr_Behance_20161003_MLP_A-356840.gif"
   dimensions: 2400x1550
 - image: "/uploads/Sylvr_Behance_20161003_MLP_A_5.jpg"
   dimensions: 2400x1600
 - image: "/uploads/SYLVR_Brand_R3_160914_MLP_C.jpg"
-  alt: 2400x999
+  alt: 2400x1553
 ---
 
 Sylvr is a female-focused lifestyle media platform that uses VR & emerging technology to inform and inspire women’s journeys.
