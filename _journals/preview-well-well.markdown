@@ -13,7 +13,7 @@ images:
 - image: "/uploads/Photos1.gif"
   dimensions: 1000x563
 - image: "/uploads/WellWell_Web2_20161004.jpg"
-  dimensions: 2343x1517
+  dimensions: 2343x1595
 - image: "/uploads/Photos2.gif"
   dimensions: 1000x563
 ---
