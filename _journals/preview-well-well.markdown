@@ -18,4 +18,6 @@ images:
   dimensions: 1000x563
 ---
 
-We didn’t just want WellWell; we needed it. You do too. This vital, cold-pressured, organic juice delivers intentional nutrition and deliciousness. It kicks your body's natural recovery process into overdrive so you can keep crushing your goals at the gym, in the boardroom, and on the go.
+Well Well is vital hydration for a life in motion- engineered from organic ingredients- watermelon, lemon and tart cherry- and it's goddamn delicious.
+
+We worked with the team at Well Well on naming, branding, a splash page and motion graphics.
