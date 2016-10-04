@@ -18,6 +18,8 @@ images:
   dimensions: 1000x563
 ---
 
-Well Well is vital hydration for a life in motion- engineered from organic ingredients- watermelon, lemon and tart cherry- and it's goddamn delicious.
+[Well Well](http://drinkwellwell.com) is vital hydration for a life in motion and is engineered from organic ingredients- watermelon, lemon and tart cherry. 
 
-We worked with the team at Well Well on naming, branding, a splash page and motion graphics.
+And it's goddamn delicious. We haven't had one delivery last more than a day in the fridge.
+
+We worked with the crew at Well Well on naming, branding, a splash page and motion graphics. 
