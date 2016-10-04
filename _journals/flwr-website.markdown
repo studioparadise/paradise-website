@@ -1,5 +1,5 @@
 ---
-title: Preview | FLWR Launch
+title: Preview | FLWR Website
 date: 2016-09-29 16:41:00 Z
 published: false
 position: 4
@@ -19,7 +19,7 @@ images:
   dimensions: 2343x1890
 ---
 
-A preview of a small website we designed to showcase the beautiful work of FLWR - a New York based botanical studio specializing in creative consultation and floral design. Check it out [here](http://www.flwrstudio.com/).
+A preview of branding and a small website we designed to showcase the beautiful work of FLWR - a New York based botanical studio specializing in creative consultation and floral design. Check it out [here](http://www.flwrstudio.com/).
 
-Branding also by Paradise. Case study to come, stay tuned.
+Branding and website by Paradise. Case study to come, stay tuned.
 
