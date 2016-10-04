@@ -2,18 +2,14 @@
 title: Preview | Sylvr
 date: 2016-10-03 18:53:00 Z
 published: false
-image: "/uploads/Sylvr_Behance_20161003_MLP_A_Clouds.jpg"
+image: "/uploads/Sylvr_Journal_JustClouds_20161003_MLP_A-694a3a.jpg"
 images:
 - image: "/uploads/Sylvr_Behance_20161003_MLP_A_3.jpg"
   alt: 
   dimensions: 2400x1550
-- image: "/uploads/Sylvr_Behance_20161003_MLP_A_6.jpg"
+- image: "/uploads/Sylvr_Journal_20161004_MLP_A.jpg"
   dimensions: 2400x1550
-- image: "/uploads/Sylvr_Behance_20161003_MLP_A_Type.gif"
-  dimensions: 2400x1550
-- image: "/uploads/Sylvr_Behance_20161003_MLP_A-356840.gif"
-  dimensions: 2400x1550
-- image: "/uploads/SYLVR_Brand_R3_160914_MLP_C_Cropped.jpg"
+- image: "/uploads/SYLVr_Brand_R3_Final_20160818_MLP_A.jpg"
   dimensions: 2400x949
 ---
 
