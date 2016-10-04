@@ -22,4 +22,4 @@ images:
 
 And it's goddamn delicious. We haven't had one delivery last more than a day in the fridge.
 
-We worked with the crew at Well Well on naming, branding, a splash page and motion graphics. 
+We worked with the crew at Well Well on naming, branding, a splash page and motion graphics. Special shout out Collin Hughes [http://collin-hughes.com/] for the photos. 
