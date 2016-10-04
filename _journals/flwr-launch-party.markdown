@@ -19,8 +19,7 @@ images:
   dimensions: 2343x1890
 ---
 
-A small website to showcase the beautiful work FLWR - a botanical studio specializing in creative consultation and floral design. Check it out [here](http://www.flwrstudio.com/).
+A preview of a small website we designed to showcase the beautiful work of FLWR - a New York based botanical studio specializing in creative consultation and floral design. Check it out [here](http://www.flwrstudio.com/).
 
-
-Branding and photography also done by Paradise. Case Study to come, stay tuned.
+Branding also by Paradise. Case study to come, stay tuned.
 
