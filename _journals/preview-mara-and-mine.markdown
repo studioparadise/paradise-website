@@ -8,9 +8,9 @@ images:
   alt: 
 - image: "/uploads/maramine_lookbook3_20160928_AP_B.jpg"
   alt: 
-- image: "/uploads/maramine_lookbook5_20160928_AP_A.jpg"
+- image: "/uploads/maramine_lookbook8_20161004_AP_B.jpg"
   alt: 
-- image: "/uploads/maramine_lookbook6_20160928_AP_A.jpg"
+- image: "/uploads/maramine_lookbook6_20161004_AP_B.jpg"
   alt: 
 - image: "/uploads/maramine_lookbook3_20161004_AP_A.jpg"
   dimensions: 2400x1800
