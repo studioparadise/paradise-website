@@ -18,4 +18,4 @@ Introducing Sylvr, a female-focused lifestyle media platform that uses VR & emer
 
 Excuse us while we kiss the sky. 
 
-(Image credit: Julia Noni)
+*image credit: Julia Noni
