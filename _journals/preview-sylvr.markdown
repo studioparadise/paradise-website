@@ -1,8 +1,7 @@
 ---
 title: Preview | Sylvr
-date: 2016-10-03 18:53:00 Z
-published: false
-image: "/uploads/Clouds_Small.gif"
+date: 2016-10-07 18:53:00 Z
+image: "/uploads/Sylvr_Journal_JustClouds_20161003_MLP_A-694a3a.jpg"
 images:
 - image: "/uploads/Sylvr_LogoLghtGrey_20161003_MLP_A-89bdb4.jpg"
   alt: 
@@ -19,4 +18,4 @@ Introducing Sylvr, a female-focused lifestyle media platform that uses VR & emer
 
 Excuse us while we kiss the sky. 
 
-(Image credit: Julia Noni)
+*image credit: Julia Noni

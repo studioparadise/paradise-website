@@ -6,7 +6,7 @@ image: "/uploads/wellwell_buy01-1600.jpg"
 images:
 - image: "/uploads/WellWell_1_20161003_MLP_A.gif"
   alt: 
-- image: "/uploads/WellWell_Documentation_20161004_MLP_A.gif"
+- image: "/uploads/WellWell_Documentation_20161007_MLP_A.gif"
   alt: 
 - image: "/uploads/bottles_linedup.jpg"
   dimensions: 2048x1368
