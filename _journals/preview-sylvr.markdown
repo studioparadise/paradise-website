@@ -18,4 +18,4 @@ Introducing Sylvr, a female-focused lifestyle media platform that uses VR & emer
 
 Excuse us while we kiss the sky. 
 
-*image credit: Julia Noni
+Naming, strategy, branding, art direction and digital design by Paradise. *image credit: Julia Noni
