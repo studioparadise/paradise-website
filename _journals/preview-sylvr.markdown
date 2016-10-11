@@ -1,24 +1,21 @@
 ---
 title: Preview | Sylvr
-date: 2016-10-03 18:53:00 Z
-published: false
-image: "/uploads/Sylvr_Behance_20161003_MLP_A_Clouds.jpg"
+date: 2016-10-07 18:53:00 Z
+image: "/uploads/Sylvr_Journal_JustClouds_20161003_MLP_A-694a3a.jpg"
 images:
-- image: "/uploads/Sylvr_Behance_20161003_MLP_A_3.jpg"
+- image: "/uploads/Sylvr_LogoLghtGrey_20161003_MLP_A-89bdb4.jpg"
   alt: 
   dimensions: 2400x1550
-- image: "/uploads/Sylvr_Behance_20161003_MLP_A_6.jpg"
+- image: "/uploads/Sylvr_Journal_20161004_MLP_A.jpg"
   dimensions: 2400x1550
-- image: "/uploads/Sylvr_Behance_20161003_MLP_A_Type.gif"
-  dimensions: 2400x1550
-- image: "/uploads/Sylvr_Behance_20161003_MLP_A-356840.gif"
-  dimensions: 2400x1550
-- image: "/uploads/SYLVR_Brand_R3_160914_MLP_C_Cropped.jpg"
-  dimensions: 2400x949
+- image: "/uploads/SYLVr_Brand_R3_Final_20160818_MLP_A.jpg"
+  dimensions: 2400x1553
 ---
 
 A quick preview of one of our most exciting projects for 2016. 
 
-Introducing Sylvr, a female-focused lifestyle media platform that uses VR & emerging technology to inform and inspire women’s journeys. Ladies, be on the look-out in 2017, because Sylvr is about to shake things up. Splash page here [http://sylvrmedia.com]
+Introducing Sylvr, a female-focused lifestyle media platform that uses VR & emerging technology to inform and inspire women’s journeys. Ladies, be on the look-out in 2017, because Sylvr is about to shake things up. Splash page [here](http://sylvrmedia.com).
 
-Excuse us while we kiss the sky.
+Excuse us while we kiss the sky. 
+
+Naming, strategy, branding, art direction and digital design by Paradise. *image credit: Julia Noni

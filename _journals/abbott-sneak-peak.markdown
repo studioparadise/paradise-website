@@ -18,4 +18,4 @@ Here is a sneak peek of the bottles we designed and developed for Abbott NYC- a 
 
 Easily one of our largest projects to date, this entire brand was touched on by Paradise- everything from strategy, naming and identity, through to the campaign art direction and design & development of their website. And we couldn't be prouder. Stay tuned for a full case study after the official brand launch. In the meantime you can see their teaser site over at [abbottnyc.com](http://abbottnyc.com)
 
-Packaging design and art direction by Paradise. Still life photography by [Stephen Johnson](http://stephenkentjohnson.com/).
+Packaging design, branding and art direction by Paradise. Still life photography by [Stephen Johnson](http://stephenkentjohnson.com/).
