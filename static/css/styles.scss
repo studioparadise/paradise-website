@@ -2792,6 +2792,20 @@ p.studio__team-bio {
   // margin-top: 0;
   border-top: none;
 }
+.index-journal__hero-offset {
+  .layout-default & {
+    position: relative;
+    // right: -35px;
+    left: 0;
+    width: calc(100% + 35px);
+  }
+  .layout-mobile & {
+    position: relative;
+    left: 0;
+    // right: -20px;
+    width: calc(100% + 20px);
+  }
+}
 .index-journal__hero-img {
   display: block;
   width: 100%;
@@ -2800,22 +2814,24 @@ p.studio__team-bio {
   img {
     width: 100%;
   }
+}
+.index-journal__header {
+}
+.index-journal__img-offset {
+  position: relative;
 
   .layout-default & {
-    position: relative;
-    right: -35px;
-    left: 0;
+    // right: -35px;
     width: calc(100% + 35px);
   }
+
   .layout-mobile & {
     position: relative;
     left: 0;
-    right: -20px;
+    // right: -20px;
     width: calc(100% + 20px);
+    margin-top: 20px;
   }
-
-}
-.index-journal__header {
 }
 .index-journal__img {
   width: 100%;
@@ -2826,17 +2842,8 @@ p.studio__team-bio {
     width: 100%;
   }
   .layout-default & {
-    position: relative;
-    left: 0;
-    right: -35px;
-    width: calc(100% + 35px);
   }
   .layout-mobile & {
-    position: relative;
-    left: 0;
-    right: -20px;
-    width: calc(100% + 20px);
-    margin-top: 20px;
   }
 }
 .index-journal__date {
@@ -3091,4 +3098,10 @@ p.studio__team-bio {
       opacity: 0;
     }
   }
+}
+
+
+/* Change the white to any color ;) */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
