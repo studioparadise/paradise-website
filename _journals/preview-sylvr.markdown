@@ -1,7 +1,7 @@
 ---
 title: Preview | Sylvr
 date: 2016-10-07 18:53:00 Z
-image: "/uploads/Sylvr_Behance_20161003_MLP_A_Clouds.jpg"
+image: "/uploads/BannerImage_20161011_MLPA.jpg"
 images:
 - image: "/uploads/Sylvr_LogoLghtGrey_20161003_MLP_A-89bdb4.jpg"
   alt: 
