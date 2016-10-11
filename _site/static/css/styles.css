@@ -8767,6 +8767,15 @@ p.studio__team-bio {
 .index-journal .index-journal__month:first-child .index-journal__journal {
   border-top: none; }
 
+.layout-default .index-journal__hero-offset {
+  position: relative;
+  left: 0;
+  width: calc(100% + 35px); }
+.layout-mobile .index-journal__hero-offset {
+  position: relative;
+  left: 0;
+  width: calc(100% + 20px); }
+
 .index-journal__hero-img {
   display: block;
   width: 100%;
@@ -8774,16 +8783,16 @@ p.studio__team-bio {
   overflow: hidden; }
   .index-journal__hero-img img {
     width: 100%; }
-  .layout-default .index-journal__hero-img {
-    position: relative;
-    right: -35px;
-    left: 0;
+
+.index-journal__img-offset {
+  position: relative; }
+  .layout-default .index-journal__img-offset {
     width: calc(100% + 35px); }
-  .layout-mobile .index-journal__hero-img {
+  .layout-mobile .index-journal__img-offset {
     position: relative;
     left: 0;
-    right: -20px;
-    width: calc(100% + 20px); }
+    width: calc(100% + 20px);
+    margin-top: 20px; }
 
 .index-journal__img {
   width: 100%;
@@ -8792,17 +8801,6 @@ p.studio__team-bio {
   overflow: hidden; }
   .index-journal__img img {
     width: 100%; }
-  .layout-default .index-journal__img {
-    position: relative;
-    left: 0;
-    right: -35px;
-    width: calc(100% + 35px); }
-  .layout-mobile .index-journal__img {
-    position: relative;
-    left: 0;
-    right: -20px;
-    width: calc(100% + 20px);
-    margin-top: 20px; }
 
 .index-journal__date {
   font-size: 18px;
