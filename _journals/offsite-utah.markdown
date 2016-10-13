@@ -1,6 +1,6 @@
 ---
 title: Offsite | Utah
-date: 2016-10-13 21:52:00 Z
+date: 2016-09-01 21:52:00 Z
 published: false
 image: "/uploads/14950018.jpg"
 images:
