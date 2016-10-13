@@ -1,7 +1,6 @@
 ---
 title: Preview | FLWR Website
 date: 2016-09-29 16:41:00 Z
-published: false
 position: 4
 image: "/uploads/Flower_Hero.jpg"
 images:
