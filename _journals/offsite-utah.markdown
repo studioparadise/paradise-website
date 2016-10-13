@@ -1,7 +1,6 @@
 ---
 title: Offsite | Utah
 date: 2016-10-01 21:52:00 Z
-published: false
 image: "/uploads/14950018.jpg"
 images:
 - image: "/uploads/14950010.jpg"
@@ -20,4 +19,4 @@ images:
   alt: 
 ---
 
-Scouting at High Altitudes and Smooth Salt Flats 
+Scouting at High Altitudes and Smooth Salt Flats. Utah is a weird and wonderful place with so much geographic diversity. 
