@@ -8393,21 +8393,20 @@ div[js-index-content="index"] {
     padding-right: 10px; }
   .layout-mobile .studio {
     padding-bottom: 20px; }
-    .layout-mobile .studio .hover-effect {
-      display: none; }
-  .studio .hover-effect {
-    cursor: pointer;
-    position: relative;
-    display: inline-block; }
-    .studio .hover-effect:hover:after {
-      border-color: #818181; }
-    .studio .hover-effect:after {
-      content: "";
-      position: absolute;
-      bottom: -3px;
-      left: 0;
-      right: 0;
-      border-bottom: 1px solid black; }
+  @media screen and (min-width: 500px) {
+    .studio .hover-effect {
+      cursor: pointer;
+      position: relative;
+      display: inline-block; }
+      .studio .hover-effect:hover:after {
+        border-color: #818181; }
+      .studio .hover-effect:after {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        right: 0;
+        border-bottom: 1px solid black; } }
 
 .js-hover-element {
   z-index: 10; }
