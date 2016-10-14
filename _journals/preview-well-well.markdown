@@ -1,7 +1,6 @@
 ---
-title: Preview | Well Well
+title: Archive | Well Well
 date: 2016-10-03 19:55:00 Z
-published: false
 image: "/uploads/wellwell_buy01-1600.jpg"
 images:
 - image: "/uploads/WellWell_1_20161003_MLP_A.gif"

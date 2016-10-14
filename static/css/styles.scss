@@ -2449,26 +2449,25 @@ div[js-index-content="index"]{
   @include container-row;
   @include rm {
     padding-bottom: 20px;
-    .hover-effect {
-      display: none;
-    }
   }
-  .hover-effect {
-    cursor: pointer;
-    position: relative;
-    display: inline-block;
-    &:hover {
-      &:after {
-        border-color: $color-gray;
+  @include rd {
+    .hover-effect {
+      cursor: pointer;
+      position: relative;
+      display: inline-block;
+      &:hover {
+        &:after {
+          border-color: $color-gray;
+        }
       }
-    }
-    &:after {
-      content: "";
-      position: absolute;
-      bottom: -3px;
-      left: 0;
-      right: 0;
-      border-bottom: 1px solid black;
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        right: 0;
+        border-bottom: 1px solid black;
+      }
     }
   }
 }
