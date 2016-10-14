@@ -19,4 +19,4 @@ images:
   alt: 
 ---
 
-Scouting at High Altitudes and Smooth Salt Flats. Utah is a weird and wonderful place with so much geographic diversity. 
+Scouting in the weird and wonderful world of Utah, a place with so much geographic diversity: from magnificent views at high altitudes to the vast smooth salt flats of Bonneville.
