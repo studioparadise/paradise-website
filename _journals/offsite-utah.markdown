@@ -1,21 +1,22 @@
 ---
 title: Offsite | Utah
 date: 2016-10-01 21:52:00 Z
-image: "/uploads/14950018.jpg"
+image: "/uploads/Utah_1_20161017_A.jpg"
 images:
-- image: "/uploads/14950010.jpg"
+- image: "/uploads/Utah_2_20161017_A.jpg"
+  alt: 
   dimensions: 2400x1592
-- image: "/uploads/14950012s.jpg"
+- image: "/uploads/Utah_3_20161017_A.jpg"
+  dimensions: 2400x1579
+- image: "/uploads/Utah_4_20161017_A.jpg"
   dimensions: 2400x1592
-- image: "/uploads/14950036.jpg"
+- image: "/uploads/Utah_5_20161017_A.jpg"
   dimensions: 2400x1592
-- image: "/uploads/14960012.jpg"
+- image: "/uploads/Utah_6_20161017_A.jpg"
   dimensions: 2400x1592
-- image: "/uploads/14960008.jpg"
+- image: "/uploads/Utah_7_20161017_A.jpg"
   dimensions: 2400x1592
-- image: "/uploads/14960009.jpg"
-  dimensions: 2400x1592
-- image: "/uploads/14960003.jpg"
+- image: "/uploads/Utah_8_20161017_A.jpg"
   dimensions: 2400x1592
 ---
 
