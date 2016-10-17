@@ -17,4 +17,4 @@ images:
 
 A preview of the latest look book we designed with [Mara & Mine](http://maraandmine.com/), showcasing their cheeky yet elegant and minimalistic footwear designs. 
 
-This season looks at the Italian heritage of the leathers and styles of the collection touching on the European sophistication. The collection is timeless in style with impulsive details and the stunning photography by _____ makes us want to head straight back to Italy.
+This season looks at the Italian heritage of the leathers and styles of the collection touching on the European sophistication. The collection is timeless in style with impulsive details and the stunning photography makes us want to head straight back to Italy.
