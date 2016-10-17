@@ -8,8 +8,6 @@ images:
   dimensions: 2400x1550
 - image: "/uploads/Sylvr_Journal_20161004_MLP_A.jpg"
   dimensions: 2400x1550
-- image: "/uploads/SYLVr_Brand_R3_Final_20160818_MLP_A.jpg"
-  dimensions: 2400x1553
 ---
 
 A quick preview of one of our most exciting projects for 2016. 
