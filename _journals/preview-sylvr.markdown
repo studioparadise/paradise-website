@@ -6,7 +6,7 @@ images:
 - image: "/uploads/Sylvr_LogoLghtGrey_20161003_MLP_A-89bdb4.jpg"
   alt: 
   dimensions: 2400x1550
-- image: "/uploads/Sylvr_Journal_20161004_MLP_A.jpg"
+- image: "/uploads/Sylvr_WebsiteScreen_20161017.jpg"
   dimensions: 2400x1550
 ---
 
