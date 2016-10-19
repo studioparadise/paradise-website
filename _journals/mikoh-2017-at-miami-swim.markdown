@@ -1,6 +1,7 @@
 ---
 title: Preview | Mikoh in Miami
 date: 2016-07-21 08:16:00 Z
+published: false
 position: 5
 image: "/uploads/Mikoh_1_20160830.jpg"
 images:
