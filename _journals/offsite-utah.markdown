@@ -7,7 +7,7 @@ images:
   alt: 
   dimensions: 2400x1592
 - image: "/uploads/Utah_3_20161017_A.jpg"
-  dimensions: 2400x1592
+  dimensions: 2400x1579
 - image: "/uploads/Utah_4_20161017_A.jpg"
   dimensions: 2400x1592
 - image: "/uploads/Utah_5_20161017_A.jpg"
