@@ -20,4 +20,4 @@ images:
   dimensions: 2550x1550
 ---
 
-When we got together for a quarterly year meeting in Sydney, we decided to take a break by doing a surf trip down the coast of NSW in the national park. An unsuccessful surf session but a nice road trip for some much needed inspiration.
+After our 3 quarter year meeting in Sydney, we decided to take a break with a surf trip down the coast of NSW towards the national park. An unsuccessful surf session but a nice road trip for some much-needed inspiration.
