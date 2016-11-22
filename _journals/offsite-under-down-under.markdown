@@ -5,7 +5,7 @@ image: "/uploads/93520005_web-08fe91.jpg"
 images:
 - image: "/uploads/93520006_web.jpg"
   alt: 
-  dimensions: 2400x1000
+  dimensions: 2400x1550
 - image: "/uploads/93520008_web.jpg"
   dimensions: 2400x1550
 - image: "/uploads/93520009_web.jpg"
