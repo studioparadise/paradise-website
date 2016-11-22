@@ -4,7 +4,7 @@ date: 2016-10-20 20:23:00 Z
 image: "/uploads/93520014_web.jpg"
 images:
 - image: "/uploads/93520006_web.jpg"
-  dimensions: 2400x1550
+  dimensions: 2400x1000
 - image: "/uploads/93520008_web.jpg"
   dimensions: 2400x1550
 - image: "/uploads/93520009_web.jpg"
