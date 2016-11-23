@@ -1,5 +1,5 @@
 ---
-title: Offsite | Under Down Under
+title: Offsite | Plunder Down Under
 date: 2016-10-20 20:23:00 Z
 image: "/uploads/93520005_web-08fe91.jpg"
 images:
@@ -20,4 +20,4 @@ images:
   dimensions: 2550x1550
 ---
 
-After our 3 quarter year meeting in Sydney, we decided to take a break with a surf trip down the coast of NSW towards the national park. An unsuccessful surf session but a nice road trip for some much-needed inspiration.
+After our quarterly meeting in Sydney we loaded up the 4x4 and headed south in search of swell. An unsuccessful surf session but a goddamn gorgeous road trip for some much-needed inspiration.
