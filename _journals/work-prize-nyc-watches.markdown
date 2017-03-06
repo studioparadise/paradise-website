@@ -23,9 +23,9 @@ images:
   alt: 
 ---
 
-Special introduction to the "Weekend Watches" collection that we designed and launched on [Prize NYC](http://prizenyc.com) this week. Say hello to "Kickin It" and "Paradise City".
+Special introduction to the ["Weekend Watches"](https://prizenyc.com/collections/watches) collection that we designed and launched on [Prize NYC](http://prizenyc.com) this week. Say hello to "Kickin It" and "Paradise City".
 
-We designed these to be fun and fresh while also maintaining the high quality that Prize have established in their pin line. Brushed and polished stainless steel cases, high quality Japanese movements, Horween leather straps and the funnest hands in the business. Each watch is sold with a matching pin. 
+We designed these to be fun and fresh while also maintaining the high quality that we established in the pin and throw rug collections. Brushed and polished stainless steel cases, high quality Japanese movements, Horween leather straps and the funnest hands in the business. Each watch is sold with a matching pin. 
 
 Treat yourself.
 
