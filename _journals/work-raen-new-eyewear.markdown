@@ -1,7 +1,6 @@
 ---
 title: Work | RAEN Spring '17 Eyewear
 date: 2017-02-15 03:05:00 Z
-published: false
 categories:
 - product design
 tags:
