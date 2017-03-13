@@ -1,7 +1,7 @@
 ---
 title: Saturdays
 date: 2016-05-28 05:01:00 Z
-position: 6
+position: 3
 modules:
 - type: hero
   image: "/uploads/Saturdays_Hero_20160718.jpg"
