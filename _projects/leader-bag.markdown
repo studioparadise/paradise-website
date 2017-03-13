@@ -1,7 +1,7 @@
 ---
 title: Leader Bag Co.
 date: 2016-05-28 04:03:00 Z
-position: 4
+position: 2
 modules:
 - type: hero
   image: "/uploads/Leader_Hero_20160802.jpg"
