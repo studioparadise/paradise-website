@@ -1,7 +1,7 @@
 ---
 title: Mikoh
 date: 2016-05-28 04:19:00 Z
-position: 5
+position: 1
 color: "#d5c5b1"
 modules:
 - type: hero

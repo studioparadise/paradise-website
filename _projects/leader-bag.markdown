@@ -7,8 +7,10 @@ modules:
   image: "/uploads/Leader_Hero_20160802.jpg"
   alt: 
 - type: text
-  excerpt: |
-    Designing a contemporary & utilitarian diaper bag that fits the modern family for **Leader Bag Co.**
+  excerpt: 'Designing a contemporary & utilitarian diaper bag that fits the modern
+    family for **Leader Bag Co.**
+
+'
   body: "Founded in 2013 by three mothers - and sisters - Leader Bag Co. gives modern
     parents a contemporary and stylish choice in an otherwise uninspiring sea of unicorns,
     polka dots and rainbows. Paradise was engaged to design this diaper bag and has
@@ -35,12 +37,12 @@ modules:
     Product Design\n\n* Web Design\n\n* Web Development\n\n* Production Sourcing and
     Management\n"
 - type: image
-  image: "/uploads/leader_deatil_final-logo.jpg"
+  image: "/uploads/Leader_10_20160802.jpg"
 - type: image
   url: 
   image: "/uploads/Leader_2_20160802.jpg"
 - type: image
-  image: "/uploads/Leader_10_20160802.jpg"
+  image: "/uploads/leader_deatil_final-logo.jpg"
 - type: image
   image: "/uploads/Leader_4_20160802.jpg"
 - type: images-2up
@@ -66,17 +68,17 @@ modules:
   dimensions: 1800 x 3881
 - type: credits
   credits:
+  - url: 
+    emphasis: Product Design & Manufacturing
+    name: Paradise
   - url: http://www.lottanieminen.com/
-    emphasis: Branding Design
+    emphasis: Visual Identity
     name: Lotta Nieminen
   - url: 
     emphasis: Creative Direction
     name: Paradise
   - url: 
     emphasis: Brand Strategy
-    name: Paradise
-  - url: 
-    emphasis: Product Design & Manufacturing
     name: Paradise
   - url: 
     emphasis: Web Design
