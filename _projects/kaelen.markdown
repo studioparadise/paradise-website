@@ -1,7 +1,7 @@
 ---
 title: Kaelen
 date: 2016-05-28 05:01:00 Z
-position: 1
+position: 6
 color: "#d4aaa7"
 modules:
 - type: hero

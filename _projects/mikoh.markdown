@@ -1,15 +1,14 @@
 ---
 title: Mikoh
 date: 2016-05-28 04:19:00 Z
-position: 5
+position: 1
 color: "#d5c5b1"
 modules:
 - type: hero
   image: "/uploads/Mikoh_Hero_20160718.jpg"
   alt: 
 - type: text
-  excerpt: The introduction of **Mikoh**'s adventurous new category for the endless
-    summer wonders
+  excerpt: Introducing eyewear to **Mikoh**'s lineup of stellar summer essentials.
   body: "Mikoh is a colorful and luxurious swimwear brand created by and inspired
     by the lives of sister duo Oleema and Kalani Miller. Paradise have a longstanding
     relationship with Mikoh collaborating on seasonal textile prints, and in 2015
