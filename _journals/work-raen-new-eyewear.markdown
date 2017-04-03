@@ -6,9 +6,9 @@ categories:
 tags:
 - eyewear
 - raen
-image: "/uploads/ed0179f8-b657-44aa-9d4b-1fb8a5392d7a.jpg"
+image: "/uploads/raen1.jpg"
 images:
-- image: "/uploads/db_file_img_17961_1000xauto.jpg"
+- image: "/uploads/raen2.jpg"
   dimensions: 1000x5000
 ---
 
