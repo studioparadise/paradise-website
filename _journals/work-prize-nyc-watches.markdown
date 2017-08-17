@@ -2,7 +2,6 @@
 title: Work | Prize NYC Watches
 date: 2016-12-20 09:00:00 Z
 permalink: prizewatches
-published: false
 categories:
 - product design
 - art direction
