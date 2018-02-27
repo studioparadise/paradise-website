@@ -42,6 +42,14 @@ linkedin: studio-paradise
 behance: studioparadise
 studio:
   clients:
+  - name: Thom Browne
+  - name: Merrell
+  - name: The 5th
+  - name: Temme Media
+  - name: Marc Jacobs
+  - name: RVCA
+  - name: Nixon
+  - name: Akin Creative
   - name: Jack Erwin
     project: Jack Erwin
   - name: Saturdays
