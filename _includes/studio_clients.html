@@ -8,7 +8,7 @@
 		<div class="studio__service-clients">
 			{% for client in site.studio.clients %}
 				<a class="studio__service-client" target="_blank"
-					{% if client.project %}js-project-link="{{ client.project | slugify }}"{% endif %}
+					{% if client.project-nomore %}js-project-link="{{ client.project | slugify }}"{% endif %}
 				>
 					{{ client.name }}
 				</a>
