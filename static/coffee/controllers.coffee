@@ -712,3 +712,4 @@ root.controllers.mobileProjectBody = ($element, args) ->
 
 root.controllers.lazyLoadBg = ($element, args) ->
   $element.on ''
+
