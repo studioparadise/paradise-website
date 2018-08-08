@@ -1922,8 +1922,16 @@ h1 {
   top: 50%;
   transform: translateY(-50%);
 
+  // visual letter align
   span {
     margin-left: -0.10em;
+  }
+
+  p {
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }    
   }
 }
 
