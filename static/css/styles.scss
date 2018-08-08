@@ -176,6 +176,18 @@ $socialIconFontStack: 'icons';
     font-style: normal;
 }
 
+
+@font-face {
+    font-family: 'Domaine Display Condensed';
+    src: url('../fonts/DomaineDisplayCondensedWeb-Medium.eot');
+    src: url('../fonts/DomaineDisplayCondensedWeb-Medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DomaineDisplayCondensedWeb-Medium.woff2') format('woff'),
+         url('../fonts/DomaineDisplayCondensedWeb-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 @mixin font-face($filename-without-extension, $name, $weight: 'normal', $style: 'normal') {
   @font-face {
       font-family: $name;
@@ -191,6 +203,7 @@ $socialIconFontStack: 'icons';
 }
 
 @include font-face('apercu_light', 'Apercu', 'normal', 'normal');
+
 
 @font-face {
     font-family: 'Apercu';
@@ -1363,15 +1376,14 @@ h1 {
     display: none;
   }
 }
+
 .navbar {
-	// @include column-no-pad(2);
-	// padding-left: $desktop-margin;
-	@include container-row;
-	position: fixed;
-	left: 0;
-	top: 0;
-	bottom: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
   z-index: 100;
+	@include container-row;
   @include rm {
     padding-left: $mobile-margin;
     padding-right: $mobile-margin;
@@ -1390,7 +1402,27 @@ h1 {
     }
   }
 }
-
+.page-index {
+  .index-enter-element {
+    opacity: 0;
+    transition: all .4s ease 1.7s;
+  }
+  .index-enter-element--initial {
+    transition: all .7s ease 1s;
+  }
+  .index-enter-element--from-left {
+    transform: translateX(-20px);
+  }
+  .index-enter-element--from-top {
+    transform: translateY(-20px);
+  }
+  &.is-loaded {
+    .index-enter-element {
+      opacity: 1;
+      transform: translateX(0) translateY(0);
+    }
+  }
+}
 .navbar__items {
   @include rm {
     margin-top: 0 !important;
@@ -1859,12 +1891,47 @@ h1 {
 	height: 100vh;
 	padding: 60px 0;
 }
+
+.typed-cursor,
+.typed-fade-out {
+  display: none;  
+}
+
+
 //index
 //index
 //index
+.index-message {
+  margin-right: -1 * $desktop-margin;  
+
+  padding-left: 11px;
+  opacity: 0;
+  transition: all 1s ease .5s;
+
+  font-family: "Domaine Display Condensed";
+
+  line-height: 1.1;
+  font-size: 7vw;
+  min-height: calc(7 * 1.1 * 3vw);
+
+  .is-loaded & {
+    opacity: 1;
+  }
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  span {
+    margin-left: -0.10em;
+  }
+}
+
 .index-swiper {
 	@include column(8);
   position: relative;
+  height: 100vh;
+
   @include rm {
     width: 100%;
     display: none;
@@ -2492,14 +2559,16 @@ div[js-index-content="index"]{
   top: 33px;
   left: 0;
   right: 0;
+  margin-top: -3px;
   @include style-h2;
   line-height: 1.15;
   z-index: 2;
 }
 .studio__locations--index {
-  margin-top: -3px;
+  margin-left: 10px;
   @include at-query($max, 950px) {
     margin-top: 10px;
+    margin-left: 10px;
   }
 }
 .studio__location {

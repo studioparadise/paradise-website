@@ -3,7 +3,12 @@
 		<div class="row index-slider">
 			<div class="content-navbar-grid-spacer">&nbsp;</div>
 			<div class="index-swiper">
-				<div class="studio__locations studio__locations--index">
+				<div class="
+					studio__locations
+					studio__locations--index
+					index-enter-element
+					index-enter-element--from-top
+				">
 					<div class="studio__location" js-controller="studioLocation" js-args="{location: 'nyc'}">
 						<div class="studio__city">
 							New York, USA
@@ -31,13 +36,26 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="
+					index-message
+				" js-controller="indexTypedText">
+					<p class="
+					index-enter-element
+					index-enter-element--initial">
+						<span>We</span> build products,<br>
+						brands and experiences<br>
+						for the world you live in.
+					</p>
+				</div>
+
+				{% comment %}
 				<div class="swiper-container" js-controller="indexSwiper" js-args="{}">
 					<div class="swiper-wrapper">
 						{% assign images = site.index-slider-images %}
 						{% for image in images %}
 							<div class="swiper-slide swiper-lazy"
 								data-background="{{ image.image }}"
-								{% comment %}style="background-image: url({{ image.image }});" {% endcomment %}
 								{% if image.project %}js-project-link="{{ image.project | slugify }}"{% endif %}
 							>
 
@@ -45,6 +63,7 @@
 						{% endfor %}
 					</div>
 				</div>
+				{% endcomment %}
 			</div>
 		</div>
 	</div>
