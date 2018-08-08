@@ -1783,7 +1783,8 @@ h1 {
   }
 }
 
-.navbar__item {
+.navbar__item,
+.navbar__item-label-only {
   width: 200px;
 
   position: relative;
@@ -1807,6 +1808,7 @@ h1 {
     margin-right: 10px;
   }
 }
+
 .navbar__label {
   .layout-default & {
     // padding: 2px 0;
@@ -1824,6 +1826,11 @@ h1 {
     @include style-mobile-header;
     line-height: 1.6;
   }
+}
+
+.navbar__label--year {
+  pointer-events: none;
+  margin-top: 10px;
 }
 .navbar__dropdown {
   display: none;
